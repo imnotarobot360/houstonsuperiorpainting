@@ -131,6 +131,17 @@ export function InteriorLanding() {
                   Answer a few quick questions and see your ballpark price instantly — then book your own time, no
                   waiting for a callback.
                 </p>
+                <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-medium text-foreground">
+                  <span>About 60 seconds</span>
+                  <span aria-hidden="true" className="text-muted-foreground">
+                    &middot;
+                  </span>
+                  <span>Free estimate</span>
+                  <span aria-hidden="true" className="text-muted-foreground">
+                    &middot;
+                  </span>
+                  <span>No obligation</span>
+                </p>
               </div>
 
               <InteriorEstimator />
