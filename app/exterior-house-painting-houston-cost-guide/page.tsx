@@ -24,7 +24,7 @@ export default function ExteriorHousePaintingHoustonCostGuide() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "Exterior House Painting Houston Cost Guide 2026", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@id": "https://houstonsuperiorpainting.com/#business" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide" },
+        { "@type": "Article", "headline": "Exterior House Painting Houston Cost Guide 2026", "author": { "@type": "Person", "name": "Juan Serra" }, "publisher": { "@id": "https://houstonsuperiorpainting.com/#organization" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Exterior Painting", "item": "https://houstonsuperiorpainting.com/exterior-painting-houston-tx" }, { "@type": "ListItem", "position": 3, "name": "Cost Guide", "item": "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },

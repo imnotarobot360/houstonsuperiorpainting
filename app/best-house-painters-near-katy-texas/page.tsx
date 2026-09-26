@@ -30,8 +30,7 @@ export default function BestHousePaintersKatyTexas() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "LocalBusiness", "name": "Houston Superior Painting \u2013 Katy", "url": "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas", "telephone": "+1-346-594-5960", "address": { "@type": "PostalAddress", "addressLocality": "Katy", "addressRegion": "TX", "addressCountry": "US" }, "geo": { "@type": "GeoCoordinates", "latitude": 29.7858, "longitude": -95.8245 }, "parentOrganization": { "@id": "https://houstonsuperiorpainting.com/#business" } },
-        { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Katy Painters", "item": "https://houstonsuperiorpainting.com/painters-katy-tx" }, { "@type": "ListItem", "position": 3, "name": "Best House Painters Katy", "item": "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas" }] },
+                { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Katy Painters", "item": "https://houstonsuperiorpainting.com/painters-katy-tx" }, { "@type": "ListItem", "position": 3, "name": "Best House Painters Katy", "item": "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
       ] }) }} />
@@ -64,7 +63,7 @@ export default function BestHousePaintersKatyTexas() {
               { title: "Premium Products Only", desc: "Sherwin-Williams Duration and Emerald, Benjamin Moore Regal Select and Aura. No builder-grade paint." },
               { title: "Background-Checked Team", desc: "W-2 employees only. Every team member is background-checked and drug-tested." },
               { title: "5-Year Written Warranty", desc: "Written 5-year warranty on all work \u2014 exterior, interior, and cabinets." },
-              { title: "Owner On Every Job", desc: "JJ Semo personally oversees every Katy project from estimate to final walkthrough." },
+              { title: "Owner On Every Job", desc: "Juan Serra personally oversees every Katy project from estimate to final walkthrough." },
             ].map(item => (
               <div key={item.title} className="bg-card border border-border rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
@@ -129,7 +128,7 @@ export default function BestHousePaintersKatyTexas() {
 
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">Ready for Katy&apos;s Best Painters?</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">Ready to Paint Your Katy Home?</h2>
           <p className="text-lg opacity-90 mb-8">Free estimates, premium products, 5-year warranty. See why Katy homeowners rate us 4.9/5 on Google.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors">Call {BUSINESS.phone}</a>

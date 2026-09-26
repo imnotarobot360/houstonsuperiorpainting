@@ -31,7 +31,7 @@ export default function ResidentialPaintersHouston() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "Residential Painters Houston – Full-Service Home Painting Experts", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/residential-painters-houston" },
+        { "@type": "Article", "headline": "Residential Painters Houston – Full-Service Home Painting Experts", "author": { "@type": "Person", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/residential-painters-houston" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Residential Painters Houston", "item": "https://houstonsuperiorpainting.com/residential-painters-houston" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
@@ -64,7 +64,7 @@ export default function ResidentialPaintersHouston() {
             {[
               { title: "Prep-First Philosophy", desc: "We spend 60-70% of project time on preparation: washing, scraping, sanding, caulking, and priming. This is why our paint lasts 8-10 years while others fail in 3-4." },
               { title: "Premium Products Only", desc: "Sherwin-Williams Duration, Emerald, and SuperPaint. Benjamin Moore Aura and Regal Select. We never use contractor-grade or big-box store paint." },
-              { title: "Owner Oversight", desc: "JJ Semo personally visits every project for quality control. You work with the owner, not a project manager or subcontractor." },
+              { title: "Owner Oversight", desc: "Juan Serra personally visits every project for quality control. You work with the owner, not a project manager or subcontractor." },
             ].map(item => (
               <div key={item.title} className="bg-card rounded-lg p-6 border border-border">
                 <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>

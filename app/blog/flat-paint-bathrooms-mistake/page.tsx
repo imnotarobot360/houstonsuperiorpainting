@@ -47,8 +47,8 @@ const jsonLd = {
       "@type": "Article",
       headline: "Why Flat Paint Should Never Be Used in Bathrooms",
       description: "Flat paint in bathrooms leads to mold, peeling, and staining in Houston's humid climate.",
-      author: { "@type": "Person", name: "JJ Semo", jobTitle: "Owner" },
-      publisher: { "@type": "LocalBusiness", name: "Houston Superior Painting" },
+      author: { "@type": "Person", name: "Juan Serra", jobTitle: "Owner" },
+      publisher: { "@id": "https://houstonsuperiorpainting.com/#organization" },
       datePublished: "2026-05-19",
       dateModified: "2026-05-19",
     },
@@ -104,7 +104,7 @@ export default function FlatPaintBathroomsMistakePage() {
               The #1 mistake we see in Houston bathrooms - and how to fix it before mold takes over.
             </p>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>By JJ Semo</span>
+              <span>By Juan Serra</span>
               <span>|</span>
               <span>May 19, 2026</span>
               <span>|</span>

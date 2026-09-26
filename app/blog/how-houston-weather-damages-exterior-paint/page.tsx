@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-05-25T00:00:00.000Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [{
       url: "https://houstonsuperiorpainting.com/images/blog/houston-weather-paint-damage.png",
       width: 1200,
@@ -64,7 +64,7 @@ export default function HoustonWeatherDamagesExteriorPaint() {
             "image": "https://houstonsuperiorpainting.com/images/blog/houston-weather-paint-damage.png",
             "author": {
               "@type": "Person",
-              "name": "JJ Semo"
+              "name": "Juan Serra"
             },
             "publisher": {
               "@type": "Organization",
@@ -166,7 +166,7 @@ export default function HoustonWeatherDamagesExteriorPaint() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
-                  <span>JJ Semo</span>
+                  <span>Juan Serra</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />

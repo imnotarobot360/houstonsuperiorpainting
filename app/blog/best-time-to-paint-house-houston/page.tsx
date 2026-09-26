@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Season-by-season guide to optimal painting conditions in Houston, TX.",
     type: "article",
     publishedTime: "2026-05-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/best-time-paint-houston.jpg"],
   },
   twitter: {
@@ -76,7 +76,7 @@ export default function BestTimeToPaintHoustonPage() {
     <BlogPostTemplate
       title="Best Time to Paint Your House in Houston: Season-by-Season Guide"
       excerpt="Houston's unique climate—hot summers, mild winters, and year-round humidity—affects when and how you should paint. This comprehensive guide covers the ideal conditions for both interior and exterior painting, helping you plan your project for optimal results."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="May 7, 2026"
       readTime="10 min read"

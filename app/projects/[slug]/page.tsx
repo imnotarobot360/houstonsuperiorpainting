@@ -81,7 +81,7 @@ export default async function ProjectPage({
       "@type": "Service",
       name: project.service,
       areaServed: project.neighborhood,
-      provider: { "@type": "LocalBusiness", name: BUSINESS.name },
+      provider: { "@id": "https://houstonsuperiorpainting.com/#organization" },
     },
   }
 

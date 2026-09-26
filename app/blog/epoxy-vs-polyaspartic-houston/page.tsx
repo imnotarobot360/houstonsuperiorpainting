@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-08-08T08:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [
       {
         url: "https://houstonsuperiorpainting.com/images/blog/epoxy-vs-polyaspartic-houston.png",
@@ -124,7 +124,7 @@ export default function EpoxyVsPolyasparticHoustonPage() {
       slug="epoxy-vs-polyaspartic-houston"
       title="Epoxy vs Polyaspartic Floor Coating in Houston: Which One Actually Lasts?"
       excerpt="Polyaspartic costs 30–60% more than epoxy — and in Houston's humidity, that premium buys you a coating that won't yellow, won't delaminate off a damp slab, and lasts nearly twice as long."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="August 8, 2026"
       readTime="12 min read"

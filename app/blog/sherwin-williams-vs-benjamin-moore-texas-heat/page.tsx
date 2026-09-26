@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "An honest comparison from a Houston painter with years of experience using both brands extensively.",
     type: "article",
     publishedTime: "2026-04-01",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -36,7 +36,7 @@ export default function SherwinVsBenjaminMoorePage() {
     <BlogPostTemplate slug="sherwin-williams-vs-benjamin-moore-texas-heat"
       title="Sherwin-Williams vs Benjamin Moore: Which Is Better for Texas Heat?"
       excerpt="We've used both brands extensively across hundreds of Houston homes. Here's our honest comparison of how Sherwin-Williams and Benjamin Moore perform in Texas conditions."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="April 1, 2026"
       readTime="10 min read"

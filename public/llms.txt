@@ -2,7 +2,7 @@
 # Houston Superior Painting — Professional painting services in Greater Houston, TX
 
 > Houston Superior Painting is a fully insured painting contractor founded in 2019
-> by JJ Semo, serving Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland,
+> by Juan Serra, serving Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland,
 > Memorial, The Heights, Bellaire, and The Woodlands TX. We specialize in interior painting,
 > exterior painting, cabinet refinishing, drywall repair, pressure washing, limewash, brick
 > painting, and load-bearing wall removal. 5-year exterior warranty.
@@ -52,7 +52,7 @@ All painting work carries the same 5-year written warranty.
 - Cabinet Refinishing: 5-year warranty
 
 ## About
-Houston Superior Painting was founded in 2019 by JJ Semo. The company has completed
+Houston Superior Painting was founded in 2019 by Juan Serra. The company has completed
 500+ residential painting projects across Greater Houston. We focus on old-school
 preparation techniques that ensure long-lasting results in Houston's challenging
 climate of heat, humidity, and heavy rains. No upfront payment required.

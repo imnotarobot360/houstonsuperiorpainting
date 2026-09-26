@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-07-16T08:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [
       {
         url: "https://houstonsuperiorpainting.com/images/blog/diy-vs-professional-painting-houston.png",
@@ -90,7 +90,7 @@ export default function DiyVsProPaintingHoustonPage() {
       slug="diy-vs-professional-painting-cost-houston"
       title="DIY vs. Hiring a Pro Painter in Houston: The Real Cost (2026)"
       excerpt="DIY painting looks cheaper — and sometimes it genuinely is. But the honest math includes tools, time, and the cost of redoing work. Here's how DIY really compares to a professional quote in Houston."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="July 16, 2026"
       readTime="9 min read"

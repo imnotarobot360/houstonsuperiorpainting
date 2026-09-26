@@ -1,7 +1,8 @@
-// Comprehensive structured data for Houston Superior Painting
-// Includes LocalBusiness, Service, Organization, WebSite, FAQPage, Person, HowTo, and Speakable schemas
+// Structured data for Houston Superior Painting.
+// Organization/WebSite/Person: homepage only. LocalBusiness: one per office, on /locations/[slug].
 
-import { BUSINESS, SERVICE_AREAS } from "@/lib/business"
+import { BUSINESS, SAME_AS_URLS, SERVICE_AREAS } from "@/lib/business"
+import { LOCATIONS, locationUrl, type OfficeLocation } from "@/lib/locations"
 
 // Places in SERVICE_AREAS that are neighborhoods / master-planned communities
 // rather than incorporated or census-designated places. Typing River Oaks or
@@ -40,231 +41,127 @@ const AREA_SERVED = SERVICE_AREAS.map(({ name }) => ({
     : {}),
 }))
 
-// Canonical HQ coordinates. Previously three different lat/long pairs were
-// hardcoded across this file and the city pages; conflicting geo in schema
-// muddies the local-ranking signal, so everything now reads from one place.
-const HQ_GEO = {
-  latitude: BUSINESS.primaryAddress.latitude,
-  longitude: BUSINESS.primaryAddress.longitude,
-}
-
-// Canonical @id for the JJ Semo Person entity. Same class of bug as HQ_GEO:
-// the codebase referenced this person under TWO different @ids — the full
-// definition lives at `/about#jjsemo` (jjSemoPersonSchema, emitted on every
-// page by <StructuredData /> in the root layout), but `founder` here, the
-// Organization `founder`, and the blog post template all pointed at
-// `/#jjsemo`, an @id nothing ever defines. The result was one real person
-// described as two entities with conflicting job titles, which splits author
-// and founder authority rather than consolidating it onto one entity.
-const JJ_SEMO_ID = "https://houstonsuperiorpainting.com/about#jjsemo"
-
-// Canonical postal address + hours as schema.org nodes. Extracted for the same
-// reason as HQ_GEO: these were inlined per-schema, and any copy that drifted
-// produced conflicting NAP across pages, which weakens local ranking signals
-// instead of reinforcing them. Google wants the SAME name/address/phone
-// everywhere; service-area coverage is expressed via `areaServed`, not by
-// varying the address per page.
-const HQ_ADDRESS = {
-  "@type": "PostalAddress",
-  streetAddress: BUSINESS.primaryAddress.street,
-  addressLocality: BUSINESS.primaryAddress.city,
-  addressRegion: BUSINESS.primaryAddress.state,
-  postalCode: BUSINESS.primaryAddress.zip,
-  addressCountry: BUSINESS.primaryAddress.country,
-} as const
+const ORG_ID = `${BUSINESS.url}/#organization`
+const OWNER_ID = `${BUSINESS.url}/about#juan-serra`
 
 const OPENING_HOURS = [
   {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "07:00",
-    closes: "19:00",
+    opens: BUSINESS.hours.monday.open,
+    closes: BUSINESS.hours.monday.close,
   },
   {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: "Saturday",
-    opens: "08:00",
-    closes: "16:00",
+    opens: BUSINESS.hours.saturday.open,
+    closes: BUSINESS.hours.saturday.close,
   },
 ] as const
 
-export const businessInfo = {
-  name: "Houston Superior Painting",
-  legalName: "Houston Superior Painting LLC",
-  alternateName: ["Houston Superior Painting LLC", "JJ Semo Painting"],
-  url: "https://houstonsuperiorpainting.com",
-  telephone: "+1-346-594-5960",
-  email: "info@houstonsuperiorpainting.com",
-  foundingDate: "2019",
-  priceRange: "$$",
-  address: {
-    street: "14150 Huffmeister Rd, Suite 410",
-    city: "Cypress",
-    state: "TX",
-    zip: "77429",
-    country: "US"
-  },
-  geo: HQ_GEO,
-  socialProfiles: [
-    "https://www.google.com/maps/place/Houston+Superior+Painting/@29.7143308,-95.4349558,17z/data=!4m8!3m7!1s0x1c94ce195628f7bf:0xcc8b6e63c1c05fe7!8m2!3d29.7143308!4d-95.4349558!9m1!1b1!16s%2Fg%2F11y71l36d3",
-    "https://www.facebook.com/houstonsuperiorpainting",
-    "https://www.instagram.com/houstonsuperiorpainting",
-    "https://www.yelp.com/biz/houston-superior-painting",
-    "https://www.bbb.org/us/tx/cypress/profile/painting-contractors/houston-superior-painting"
-  ]
-}
-
-// 9.1 LocalBusiness + PaintingContractor (Homepage) - Primary Schema
-export const homepageGraphSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "HousePainter", "PaintingService"],
-      "@id": "https://houstonsuperiorpainting.com/#business",
-      "name": "Houston Superior Painting",
-      "alternateName": ["Houston Superior Painting LLC", "JJ Semo Painting"],
-      "description": "Professional interior, exterior, cabinet, and commercial painting contractor serving Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands TX. Founded 2019 by JJ Semo. 5-year exterior warranty.",
-      "url": "https://houstonsuperiorpainting.com",
-      "logo": "https://houstonsuperiorpainting.com/images/logo.png",
-      "image": "https://houstonsuperiorpainting.com/images/og-cover.jpg",
-      "telephone": "+1-346-594-5960",
-      "email": "info@houstonsuperiorpainting.com",
-      "priceRange": "$$",
-      "currenciesAccepted": "USD",
-      "paymentAccepted": "Cash, Check, Credit Card, ACH, Financing",
-      "founder": {
-        "@type": "Person",
-        "@id": JJ_SEMO_ID,
-        "name": "JJ Semo",
-        "jobTitle": "Founder & Lead Painter",
-        "worksFor": { "@id": "https://houstonsuperiorpainting.com/#business" },
-        "image": "https://houstonsuperiorpainting.com/images/jj-semo.jpg",
-        "knowsAbout": ["Interior Painting", "Exterior Painting", "Cabinet Refinishing", "Limewash", "Drywall Repair", "Houston Climate Coatings"]
-      },
-      "foundingDate": "2019",
-      "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 5, "maxValue": 15 },
-      "address": HQ_ADDRESS,
-      "geo": {
-        "@type": "GeoCoordinates",
-        ...HQ_GEO
-      },
-      "openingHoursSpecification": OPENING_HOURS,
-      "areaServed": AREA_SERVED,
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": { "@type": "GeoCoordinates", ...HQ_GEO },
-        "geoRadius": "60000"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Painting & Remodeling Services",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting", "url": "https://houstonsuperiorpainting.com/interior-painting-houston-tx" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior Painting", "url": "https://houstonsuperiorpainting.com/exterior-painting-houston-tx" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cabinet Refinishing", "url": "https://houstonsuperiorpainting.com/cabinet-refinishing-houston-tx" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drywall Repair", "url": "https://houstonsuperiorpainting.com/drywall-repair-houston-tx" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pressure Washing", "url": "https://houstonsuperiorpainting.com/pressure-washing-houston-tx" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limewash & Brick Painting", "url": "https://houstonsuperiorpainting.com/limewash-brick-painting-houston-tx" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting", "url": "https://houstonsuperiorpainting.com/commercial-painting-houston-tx" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Load Bearing Wall Removal", "url": "https://houstonsuperiorpainting.com/load-bearing-wall-removal-houston-tx" } }
-        ]
-      },
-      "sameAs": [
-        "https://share.google/7dcztUU2XgDoOiWDf",
-        "https://www.google.com/maps/place/Houston+Superior+Painting/@29.7143308,-95.4349558,17z/data=!4m8!3m7!1s0x1c94ce195628f7bf:0xcc8b6e63c1c05fe7!8m2!3d29.7143308!4d-95.4349558!9m1!1b1!16s%2Fg%2F11y71l36d3",
-        "https://www.facebook.com/profile.php?id=61572995980133",
-        "https://www.instagram.com/houstonsuperiorpainting/",
-        "https://www.yelp.com/biz/houston-superior-painting",
-        "https://www.bbb.org/us/tx/cypress/profile/painting-contractors/houston-superior-painting"
-      ],
-      "knowsLanguage": ["en", "es"],
-      "slogan": "Old-School Preparation. Premium Long-Lasting Results."
-    },
-    // 9.9 WebSite Schema
-    {
-      "@type": "WebSite",
-      "@id": "https://houstonsuperiorpainting.com/#website",
-      "url": "https://houstonsuperiorpainting.com",
-      "name": "Houston Superior Painting",
-      "publisher": { "@id": "https://houstonsuperiorpainting.com/#organization" },
-      "inLanguage": "en-US"
-    },
-    // 9.4 BreadcrumbList — REMOVED, deliberately.
-    //
-    // This node was labelled "(Homepage)" but homepageGraphSchema is rendered by
-    // <StructuredData /> in the ROOT LAYOUT, so it shipped on all ~131 pages
-    // carrying a single item: "Home". That is wrong two ways:
-    //   1. A one-item breadcrumb conveys no hierarchy, so it can never earn a
-    //      breadcrumb rich result — it is pure noise on every page.
-    //   2. On pages that emit a real trail (blog posts render
-    //      Home > Blog > Title), this shipped a SECOND, contradictory
-    //      BreadcrumbList claiming the same page has no ancestry.
-    //
-    // Pages that want a breadcrumb call generateBreadcrumbSchema() with their
-    // real trail. The homepage needs none: it is the root, and Google ignores a
-    // trail whose only entry is the page itself.
-    // 9.5 Speakable Schema
-    {
-      "@type": "WebPage",
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": [".quick-answer", ".hero-h1", ".pricing-snippet", ".warranty-snippet"]
-      }
-    }
-  ]
-}
-
-// NOTE: The homepage FAQPage is intentionally NOT part of this sitewide graph.
-// The homepage renders its own content-matching FAQPage via <FAQ items={homeFaqs} />
-// in app/page.tsx. Keeping a second FAQPage here would (a) duplicate FAQPage markup
-// on the homepage and (b) inject an unrelated FAQPage on every route through the
-// sitewide layout, which violates Google's FAQ rich-result guidelines.
-
-// 9.7 Organization Schema
+// Brand entity. Rendered on the homepage only. It carries no street address:
+// each office is its own LocalBusiness on /locations/[slug] and hangs off this
+// node through `department` / `parentOrganization`.
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://houstonsuperiorpainting.com/#organization",
-  "name": "Houston Superior Painting",
-  "url": "https://houstonsuperiorpainting.com",
-  "logo": "https://houstonsuperiorpainting.com/images/logo.png",
-  "sameAs": [
-    "https://www.facebook.com/houstonsuperiorpainting",
-    "https://www.instagram.com/houstonsuperiorpainting",
-    "https://www.google.com/maps/place/Houston+Superior+Painting/@29.7143308,-95.4349558,17z/data=!4m8!3m7!1s0x1c94ce195628f7bf:0xcc8b6e63c1c05fe7"
-  ],
-  "founder": { "@id": JJ_SEMO_ID },
-  "foundingDate": "2019",
-  "foundingLocation": { "@type": "Place", "name": "Cypress, Texas" }
+  "@id": ORG_ID,
+  name: BUSINESS.name,
+  legalName: BUSINESS.legalName,
+  url: BUSINESS.url,
+  logo: { "@type": "ImageObject", url: BUSINESS.logo },
+  image: BUSINESS.ogImage,
+  telephone: BUSINESS.phoneE164,
+  email: BUSINESS.email,
+  slogan: BUSINESS.slogan,
+  foundingDate: String(BUSINESS.founded),
+  foundingLocation: { "@type": "Place", name: "Cypress, Texas" },
+  founder: { "@id": OWNER_ID },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: BUSINESS.phoneE164,
+    contactType: "customer service",
+    areaServed: "US-TX",
+    availableLanguage: ["English", "Spanish"],
+  },
+  areaServed: AREA_SERVED,
+  department: LOCATIONS.map((loc) => ({ "@id": locationBusinessId(loc) })),
+  sameAs: SAME_AS_URLS,
 }
 
-// 9.6 Person Schema (JJ Semo)
-export const jjSemoPersonSchema = {
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${BUSINESS.url}/#website`,
+  url: BUSINESS.url,
+  name: BUSINESS.name,
+  publisher: { "@id": ORG_ID },
+  inLanguage: "en-US",
+}
+
+export const ownerPersonSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://houstonsuperiorpainting.com/about#jjsemo",
-  "name": "JJ Semo",
-  "givenName": "JJ",
-  "familyName": "Semo",
-  "jobTitle": "Founder & Lead Painter",
-  "worksFor": { "@id": "https://houstonsuperiorpainting.com/#business" },
-  "founderOf": { "@id": "https://houstonsuperiorpainting.com/#business" },
-  "image": "https://houstonsuperiorpainting.com/images/jj-semo.jpg",
-  "url": "https://houstonsuperiorpainting.com/about",
-  "knowsAbout": [
+  "@id": OWNER_ID,
+  name: BUSINESS.founder.name,
+  givenName: "Juan",
+  familyName: "Serra",
+  jobTitle: BUSINESS.founder.jobTitle,
+  worksFor: { "@id": ORG_ID },
+  url: `${BUSINESS.url}/about`,
+  description: BUSINESS.founder.bio,
+  knowsAbout: [
     "Interior Painting",
     "Exterior Painting",
     "Cabinet Refinishing",
-    "Limewash and German Smear Techniques",
-    "Drywall Repair and Texture Matching",
-    "Houston Climate Coatings",
-    "Sherwin-Williams Premium Products",
-    "Benjamin Moore Premium Products"
+    "Surface Preparation",
+    "Coatings for Humid Climates",
   ],
-  "alumniOf": "Painting Industry Apprenticeship",
-  "description": "JJ Semo founded Houston Superior Painting in 2019 in Cypress, TX. With years of hands-on experience in residential and commercial painting, JJ leads the company's prep-first philosophy and personally oversees quality control on every project.",
-  "areaServed": "Greater Houston, Texas"
 }
+
+export function locationBusinessId(loc: OfficeLocation): string {
+  return `${locationUrl(loc)}#localbusiness`
+}
+
+/**
+ * One LocalBusiness per Google Business Profile office. Rendered only on that
+ * office's /locations/[slug] page. `hasMap` and `sameAs` appear only when the
+ * office has a GBP link we have confirmed is ours; `geo` only when verified.
+ */
+export function generateOfficeSchema(loc: OfficeLocation) {
+  const url = locationUrl(loc)
+  return {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "HousePainter"],
+    "@id": locationBusinessId(loc),
+    name: loc.gbpName,
+    url,
+    telephone: loc.phoneE164,
+    email: BUSINESS.email,
+    image: `${BUSINESS.url}${loc.photo.src}`,
+    logo: BUSINESS.logo,
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: loc.street,
+      addressLocality: loc.city,
+      addressRegion: loc.state,
+      postalCode: loc.zip,
+      addressCountry: "US",
+    },
+    ...(loc.latitude !== null && loc.longitude !== null
+      ? { geo: { "@type": "GeoCoordinates", latitude: loc.latitude, longitude: loc.longitude } }
+      : {}),
+    openingHoursSpecification: OPENING_HOURS,
+    areaServed: [
+      { "@type": "City", name: loc.city },
+      ...loc.neighborhoods.map((name) => ({ "@type": "Place", name })),
+    ],
+    parentOrganization: { "@id": ORG_ID },
+    ...(loc.gbpUrl ? { hasMap: loc.gbpUrl, sameAs: [loc.gbpUrl] } : {}),
+  }
+}
+
 
 // 9.2 Service Schema Generator
 export function generateServiceSchema(options: {
@@ -283,7 +180,7 @@ export function generateServiceSchema(options: {
     "name": options.name,
     "description": options.description,
     "serviceType": options.serviceType,
-    "provider": { "@id": "https://houstonsuperiorpainting.com/#business" },
+    "provider": { "@id": ORG_ID },
     "areaServed": [
       { "@type": "City", "name": "Houston" },
       { "@type": "City", "name": "Katy" },
@@ -444,72 +341,35 @@ export const howToSchemas = {
   })
 }
 
-// 9.4 BreadcrumbList Schema Generator
 /**
- * LocalBusiness schema for a single city/neighborhood landing page.
+ * Service node for a city/neighborhood landing page (/painters-*-tx).
  *
- * The city pages each hand-rolled this block inline, which is how two of them
- * (`painters-houston-tx`, `painters-missouri-city-tx`) ended up shipping with no
- * LocalBusiness at all while their 19 siblings had one — and why the hardcoded
- * copies drifted from BUSINESS (several still inline the phone number as a
- * literal). Reads NAP from BUSINESS so a phone or address change propagates.
- *
- * Emits a node that MERGES INTO the canonical "#business" entity rather than a
- * standalone per-city business. See the comment in the function body for why.
- * `address` is not restated here: it resolves from the canonical node, which is
- * present on the same page via <StructuredData /> in the root layout.
+ * City pages are service-area pages, not offices, so they must NOT emit a
+ * LocalBusiness — that would claim a branch at an address we don't have there.
+ * The real offices are the five LocalBusiness nodes on /locations/[slug].
  */
 export function generateLocationBusinessSchema(options: {
-  /** Display name of the city, e.g. "Missouri City". */
   city: string
-  /** Route slug without a leading slash, e.g. "painters-missouri-city-tx". */
   slug: string
   description?: string
-  /**
-   * Optional explicit list of served place names. Use when a page covers
-   * several distinct municipalities rather than one — e.g. the Memorial
-   * Villages page legitimately serves Bunker Hill Village, Piney Point
-   * Village, Hedwig Village, Hunters Creek Village and Spring Valley Village.
-   * Defaults to `[city]`.
-   */
   areas?: readonly string[]
 }) {
-  const { city, description, areas } = options
+  const { city, slug, description, areas } = options
   const servedNames = areas && areas.length > 0 ? areas : [city]
   const areaServed = servedNames.map((name) => ({
     "@type": NEIGHBORHOOD_AREAS.has(name) ? ("Neighborhood" as const) : ("City" as const),
     name,
     containedInPlace: { "@type": "State" as const, name: "Texas" },
   }))
-
-  // A REFERENCE to the one canonical business entity, not a second copy of it.
-  //
-  // This previously emitted a page-scoped entity (@id ".../{slug}#business")
-  // carrying a full duplicate of the name, address, geo, hours, phone, logo and
-  // sameAs on all 23 city pages. That produced 23 distinct LocalBusiness
-  // entities with byte-identical NAP — which reads as 23 branch locations for a
-  // business that has exactly one office, and dilutes the entity Google should
-  // be consolidating signals onto.
-  //
-  // Reusing the canonical "#business" @id makes this a JSON-LD node reference:
-  // the canonical node (with address, geo, hours, aggregateRating) is already on
-  // every page via <StructuredData /> in the root layout, and same-@id nodes
-  // merge into one entity. So the required `address` still resolves — it is
-  // simply inherited from the canonical node rather than restated 23 times.
-  //
-  // Only the genuinely page-specific facts are stated here.
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "HousePainter"],
-    "@id": `${businessInfo.url}/#business`,
-    name: businessInfo.name,
-    description: description ?? `Professional house painting services in ${city}, TX`,
+    "@type": "Service",
+    "@id": `${BUSINESS.url}/${slug}#service`,
+    name: `House Painting in ${city}, TX`,
+    serviceType: "House Painting",
+    description: description ?? `Interior and exterior house painting in ${city}, TX`,
+    provider: { "@id": ORG_ID },
     areaServed: areaServed.length === 1 ? areaServed[0] : areaServed,
-
-    // NOTE: aggregateRating is intentionally absent. The site-wide review score
-    // lives on the canonical entity (ratingSchema), which merges in by @id.
-    // Restating it per city page would claim each area was independently
-    // reviewed, risking a manual action under Google's review-snippet policy.
   }
 }
 
@@ -557,13 +417,10 @@ export function generateWebPageSchema(options: {
 // which prohibit review markup on pages that don't show the reviews to users.
 export const ratingSchema = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "HousePainter"],
-  "@id": "https://houstonsuperiorpainting.com/#business",
-  "name": "Houston Superior Painting",
-  "url": "https://houstonsuperiorpainting.com",
-  // Sourced from BUSINESS.trust so the rating can never drift from the rest of
-  // the site. This is still hand-maintained: update BUSINESS.trust whenever the
-  // real Google Business Profile numbers change, or wire it to the Places API.
+  "@type": "Organization",
+  "@id": ORG_ID,
+  "name": BUSINESS.name,
+  "url": BUSINESS.url,
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": String(BUSINESS.trust.googleRating),
@@ -598,58 +455,36 @@ export function ReviewStructuredData() {
   )
 }
 
-// Component to inject all schemas
-export function StructuredData() {
+// Homepage-only brand graph: Organization + WebSite + owner + services.
+// Deliberately NOT in the root layout — per-office LocalBusiness nodes live on
+// /locations/[slug], and a sitewide business node would collide with them.
+export function HomepageStructuredData() {
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationSchema,
+      websiteSchema,
+      ownerPersonSchema,
+      ...Object.values(serviceSchemas),
+      {
+        "@type": "WebPage",
+        "@id": `${BUSINESS.url}/#webpage`,
+        url: BUSINESS.url,
+        about: { "@id": ORG_ID },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: [".quick-answer", ".hero-h1"],
+        },
+      },
+    ].map((node) => {
+      const { ["@context"]: _ctx, ...rest } = node as Record<string, unknown>
+      return rest
+    }),
+  }
   return (
-    <>
-      {/* Homepage Graph Schema with LocalBusiness, WebSite, BreadcrumbList, and Speakable */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageGraphSchema) }}
-      />
-      {/* Organization Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      {/* Person Schema for JJ Semo */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jjSemoPersonSchema) }}
-      />
-      {/* Service Schemas */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemas.interiorPainting) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemas.exteriorPainting) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemas.cabinetRefinishing) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemas.drywallRepair) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemas.pressureWashing) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemas.limewashBrickPainting) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemas.commercialPainting) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemas.loadBearingWallRemoval) }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
+    />
   )
 }

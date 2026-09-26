@@ -78,7 +78,7 @@ const serviceSchema = {
   "name": "Wood Rot Repair in Houston, TX",
   "description": "Exterior wood rot repair and replacement including fascia, soffits, trim, siding, window sills, columns, and millwork. Moisture-source correction, structural epoxy repair, primed rot-resistant replacement, and seamless repainting.",
   "serviceType": "Wood Rot Repair",
-  "provider": { "@id": "https://houstonsuperiorpainting.com/#business" },
+  "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

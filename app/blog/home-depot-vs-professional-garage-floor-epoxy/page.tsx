@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-07-25T08:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [
       {
         url: "https://houstonsuperiorpainting.com/images/blog/home-depot-vs-professional-epoxy.png",
@@ -105,7 +105,7 @@ export default function HomeDepotVsProfessionalEpoxyPage() {
       slug="home-depot-vs-professional-garage-floor-epoxy"
       title="Home Depot Epoxy vs. Professional Garage Floor Epoxy: What's the Real Difference?"
       excerpt="Spending a couple hundred dollars on a DIY kit sounds smart — until you learn what most homeowners discover too late. The biggest difference isn't the epoxy itself."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="July 25, 2026"
       readTime="9 min read"

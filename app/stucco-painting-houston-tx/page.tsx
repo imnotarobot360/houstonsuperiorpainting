@@ -78,7 +78,7 @@ const serviceSchema = {
   "name": "Stucco Painting & Repair in Houston, TX",
   "description": "Professional stucco painting and crack repair including elastomeric coatings, hairline-to-structural crack repair, spall and patch repair, and waterproofing for traditional cement stucco and synthetic EIFS systems.",
   "serviceType": "Stucco Painting and Repair",
-  "provider": { "@id": "https://houstonsuperiorpainting.com/#business" },
+  "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

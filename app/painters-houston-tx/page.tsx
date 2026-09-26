@@ -138,7 +138,7 @@ We're proud to be a Houston-based company employing local crews who live and wor
   ],
 
   testimonial: {
-    quote: "We've used Houston Superior Painting for both our Heights bungalow and our rental property in Montrose. Both times, the results were absolutely flawless. JJ and his team are true professionals who take pride in their work. The attention to detail on our trim work was exceptional.",
+    quote: "We've used Houston Superior Painting for both our Heights bungalow and our rental property in Montrose. Both times, the results were absolutely flawless. Juan and his team are true professionals who take pride in their work. The attention to detail on our trim work was exceptional.",
     author: "Michael & Jennifer T.",
     location: "The Heights, Houston"
   },

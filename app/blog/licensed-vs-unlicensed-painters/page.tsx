@@ -51,8 +51,8 @@ const jsonLd = {
       "@type": "Article",
       headline: "Licensed vs Unlicensed Painting Contractors: What Houston Homeowners Need to Know",
       description: "The difference between licensed and unlicensed painters in Texas.",
-      author: { "@type": "Person", name: "JJ Semo", jobTitle: "Owner" },
-      publisher: { "@type": "LocalBusiness", name: "Houston Superior Painting" },
+      author: { "@type": "Person", name: "Juan Serra", jobTitle: "Owner" },
+      publisher: { "@id": "https://houstonsuperiorpainting.com/#organization" },
       datePublished: "2026-05-19",
       dateModified: "2026-05-19",
     },
@@ -108,7 +108,7 @@ export default function LicensedVsUnlicensedPaintersPage() {
               The real cost difference isn&apos;t the quote - it&apos;s what happens when something goes wrong.
             </p>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>By JJ Semo</span>
+              <span>By Juan Serra</span>
               <span>|</span>
               <span>May 19, 2026</span>
               <span>|</span>

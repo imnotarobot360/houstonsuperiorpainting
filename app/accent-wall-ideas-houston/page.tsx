@@ -47,8 +47,8 @@ export default function AccentWallIdeasHouston() {
               {
                 "@type": "Article",
                 "headline": "Accent Wall Ideas Houston \u2013 Bold & Beautiful Designs",
-                "author": { "@type": "Person", "name": "JJ Semo" },
-                "publisher": { "@id": "https://houstonsuperiorpainting.com/#business" },
+                "author": { "@type": "Person", "name": "Juan Serra" },
+                "publisher": { "@id": "https://houstonsuperiorpainting.com/#organization" },
                 "datePublished": "2026-05-16",
                 "dateModified": "2026-05-16",
                 "image": "/images/og-interior-painting.jpg",

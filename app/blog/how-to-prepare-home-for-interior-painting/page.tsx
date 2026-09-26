@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "What to do before interior painters arrive, what your painter handles, and what to expect during and after the job.",
     type: "article",
     publishedTime: "2026-06-17",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -66,7 +66,7 @@ export default function PrepareHomeInteriorPaintingPage() {
     <BlogPostTemplate
       title="How to Prepare Your Home for Interior Painting in Houston TX"
       excerpt="Hiring a professional painter is the easy part. Getting your home ready — and knowing what to expect before, during, and after — is what sets the stage for a smooth job and a great result."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Professional Painting Contractor"
       publishDate="June 17, 2026"
       readTime="9 min read"

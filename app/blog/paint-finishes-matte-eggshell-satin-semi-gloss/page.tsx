@@ -57,18 +57,11 @@ const jsonLd = {
       description: "Which paint finish is best for your Houston home? Compare matte, eggshell, satin, and semi-gloss sheens.",
       author: {
         "@type": "Person",
-        name: "JJ Semo",
+        name: "Juan Serra",
         jobTitle: "Owner",
-        worksFor: {
-          "@type": "LocalBusiness",
-          name: "Houston Superior Painting",
-        },
+        worksFor: { "@id": "https://houstonsuperiorpainting.com/#organization" },
       },
-      publisher: {
-        "@type": "LocalBusiness",
-        name: "Houston Superior Painting",
-        url: "https://houstonsuperiorpainting.com",
-      },
+      publisher: { "@id": "https://houstonsuperiorpainting.com/#organization" },
       datePublished: "2026-05-19",
       dateModified: "2026-05-19",
     },
@@ -120,7 +113,7 @@ export default function PaintFinishesGuidePage() {
               The complete guide to choosing the right paint sheen for every room in your Houston home.
             </p>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>By JJ Semo</span>
+              <span>By Juan Serra</span>
               <span>|</span>
               <span>May 19, 2026</span>
               <span>|</span>

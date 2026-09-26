@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "Real 2026 exterior painting prices in Houston by home size, siding type, and stories — plus what every quote should include.",
     type: "article",
     publishedTime: "2026-06-11",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/exterior-painting-cost-houston-tx-2026.png"],
   },
   twitter: {
@@ -94,7 +94,7 @@ export default function ExteriorPaintingCostHoustonPage() {
     <BlogPostTemplate
       title="How Much Does Exterior Painting Cost in Houston TX in 2026?"
       excerpt="Exterior painting in Houston TX costs $3,500–$9,500 for most homes in 2026, or roughly $1.75–$4.00 per square foot of paintable surface. Here's the full breakdown by home size, siding type, and stories."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 11, 2026"
       readTime="11 min read"

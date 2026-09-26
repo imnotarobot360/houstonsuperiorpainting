@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Expert recommendations for exterior paints that withstand Houston's brutal humidity, UV rays, and storms.",
     type: "article",
     publishedTime: "2026-04-15",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -36,7 +36,7 @@ export default function BestExteriorPaintsHoustonPage() {
     <BlogPostTemplate slug="best-exterior-paints-houston-humidity"
       title="Best Exterior Paints for Houston Humidity: A Complete Guide"
       excerpt="Discover which exterior paints stand up best to Houston's brutal humidity, intense UV rays, and unpredictable storms. Our years of local experience reveal the top performers."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="April 15, 2026"
       readTime="8 min read"

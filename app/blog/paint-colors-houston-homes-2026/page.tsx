@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "2026 color trends working in Houston homes, mistakes local homeowners make, and a room-by-room framework you won't regret.",
     type: "article",
     publishedTime: "2026-06-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/paint-colors-houston-homes-2026.png"],
   },
   twitter: {
@@ -79,7 +79,7 @@ export default function PaintColorsHoustonHomes2026Page() {
     <BlogPostTemplate
       title="How to Pick Paint Colors for Houston Homes (2026 Trends)"
       excerpt="Houston's warm southern light, local architecture, and HOA requirements make color selection harder than it looks. This guide covers the 2026 trends actually working in Houston homes, the mistakes locals make most often, and a room-by-room framework for choices you won't regret."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
       readTime="12 min read"

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "The most popular paint colors for Houston homes in 2026, curated by local painting experts.",
     type: "article",
     publishedTime: "2026-05-11",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/paint-color-trends-2026.jpg"],
   },
   twitter: {
@@ -76,7 +76,7 @@ export default function HoustonPaintColorTrends2026Page() {
     <BlogPostTemplate
       title="Houston Paint Color Trends 2026: Interior & Exterior"
       excerpt="Paint colors set the mood for your entire home. Discover what's trending in Houston for 2026—from warm, enveloping neutrals to bold statement colors—and learn how to choose colors that work beautifully in our unique Texas light."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="May 11, 2026"
       readTime="10 min read"

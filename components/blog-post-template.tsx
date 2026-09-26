@@ -66,30 +66,19 @@ export function BlogPostTemplate({
     "datePublished": isoDate,
     "dateModified": isoDate,
     // Author is a REFERENCE to the single canonical Person entity, which the
-    // root layout emits on every page via <StructuredData /> (jjSemoPersonSchema,
-    // @id .../about#jjsemo). It previously inlined a *second* Person under the
-    // @id ".../#jjsemo" with a different jobTitle ("Owner & Lead Estimator" vs
+    // root layout emits on every page via <StructuredData /> (jjSerraPersonSchema,
+    // @id .../about#juan-serra). It previously inlined a *second* Person under the
+    // @id ".../about#juan-serra" with a different jobTitle ("Owner & Lead Estimator" vs
     // "Founder & Lead Painter"), so every blog post described two different
     // people with the same name — which splits author authority instead of
     // consolidating it. Name is kept inline so the node is still readable
     // standalone; everything else resolves through the @id.
     "author": {
       "@type": "Person",
-      "@id": "https://houstonsuperiorpainting.com/about#jjsemo",
-      "name": "JJ Semo"
+      "@id": "https://houstonsuperiorpainting.com/about#juan-serra",
+      "name": "Juan Serra"
     },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://houstonsuperiorpainting.com/#business",
-      "name": "Houston Superior Painting",
-      "logo": {
-        "@type": "ImageObject",
-        // /logo.png is a 404 — the real asset is /images/logo.png. Google must
-        // be able to fetch publisher.logo or the Article is ineligible for
-        // rich results, so this silently disqualified every post using it.
-        "url": "https://houstonsuperiorpainting.com/images/logo.png"
-      }
-    },
+    "publisher": { "@id": "https://houstonsuperiorpainting.com/#organization" },
     "articleSection": category,
     "wordCount": 1500,
     "inLanguage": "en-US",
@@ -103,10 +92,10 @@ export function BlogPostTemplate({
   // Author Schema — a REFERENCE, not a redefinition.
   //
   // This used to emit a full second Person node under the @id
-  // ".../#jjsemo" while the canonical Person (jjSemoPersonSchema, @id
-  // ".../about#jjsemo") is already emitted on EVERY page by <StructuredData />
+  // ".../about#juan-serra" while the canonical Person (jjSerraPersonSchema, @id
+  // ".../about#juan-serra") is already emitted on EVERY page by <StructuredData />
   // in the root layout. So each blog post described two different people named
-  // JJ Semo with conflicting facts — "Owner & Lead Estimator" here vs
+  // Juan Serra with conflicting facts — "Owner & Lead Estimator" here vs
   // "Founder & Lead Painter" there, plus a different description and a
   // LinkedIn URL that appears nowhere else. That splits author authority
   // across two entities instead of consolidating it onto one, which is the
@@ -118,8 +107,8 @@ export function BlogPostTemplate({
   const authorSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://houstonsuperiorpainting.com/about#jjsemo",
-    "name": "JJ Semo"
+    "@id": "https://houstonsuperiorpainting.com/about#juan-serra",
+    "name": "Juan Serra"
   }
 
   // FAQPage Schema (only if FAQs provided)
@@ -196,7 +185,7 @@ export function BlogPostTemplate({
             <div className="flex flex-wrap items-center gap-6 text-sm text-primary-foreground/80">
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
-                <span itemProp="author">JJ Semo</span>
+                <span itemProp="author">Juan Serra</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
@@ -308,10 +297,10 @@ export function BlogPostTemplate({
                 <User className="w-8 h-8 text-primary" />
               </div>
               <div>
-                <p className="font-semibold text-foreground" itemProp="name">JJ Semo</p>
+                <p className="font-semibold text-foreground" itemProp="name">Juan Serra</p>
                 <p className="text-sm text-muted-foreground" itemProp="jobTitle">Owner & Lead Estimator at Houston Superior Painting</p>
                 <p className="text-sm text-foreground/70 mt-2" itemProp="description">
-                  JJ founded Houston Superior Painting in 2019 and has completed over 500 residential and commercial painting projects across the Greater Houston area. He specializes in helping homeowners choose the right colors and finishes for Houston&apos;s unique climate.
+                  Juan founded Houston Superior Painting in 2019 and has completed over 500 residential and commercial painting projects across the Greater Houston area. He specializes in helping homeowners choose the right colors and finishes for Houston&apos;s unique climate.
                 </p>
               </div>
             </div>

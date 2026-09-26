@@ -81,7 +81,7 @@ const serviceSchema = {
   "name": "Interior Painting in Houston, TX",
   "description": "Professional interior painting services including walls, ceilings, trim, doors, closets, built-ins, and accent walls. Spray + back-roll technique for smooth, factory-quality finishes.",
   "serviceType": "Interior Painting",
-  "provider": { "@id": "https://houstonsuperiorpainting.com/#business" },
+  "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

@@ -4,7 +4,7 @@ import { PaintingSiteChrome } from '@/components/painting-site-chrome'
 import { SiteMain } from '@/components/site-main'
 import { Inter, Playfair_Display, Cormorant_Garamond, Manrope } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-import { StructuredData } from '@/components/structured-data'
+
 import { StickyMobileCTA } from '@/components/sticky-mobile-cta'
 import { StickyCTA } from '@/components/sticky-cta'
 import { ExitIntent } from '@/components/exit-intent'
@@ -112,7 +112,6 @@ export default function RootLayout({
             dedupe does NOT override them from a child route — without this gate
             the painting favicon and painting hrefLang leak onto /epoxy. */}
         <PaintingSiteChrome>
-          <StructuredData />
           <link rel="icon" href="/favicon.png" type="image/png" />
           <link rel="apple-touch-icon" href="/favicon.png" />
           <link rel="alternate" hrefLang="en-us" href="https://houstonsuperiorpainting.com/" />

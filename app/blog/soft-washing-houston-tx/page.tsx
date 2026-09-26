@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "A gentle, low-pressure cleaning method that removes algae, mildew, and grime from Houston exteriors without the damage high-pressure washing can cause.",
     type: "article",
     publishedTime: "2026-06-19",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -68,7 +68,7 @@ export default function SoftWashingHoustonBlogPage() {
     <BlogPostTemplate
       title="Soft Washing in Houston TX: What It Is and When to Use It"
       excerpt="Soft washing is a gentle, low-pressure cleaning method that removes algae, mildew, and grime from your home's exterior without the damage high-pressure washing can cause — and it's one of the best ways to prep for paint."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Professional Painting Contractor"
       publishDate="June 19, 2026"
       readTime="9 min read"

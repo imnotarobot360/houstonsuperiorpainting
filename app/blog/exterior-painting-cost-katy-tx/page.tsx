@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "Real 2026 exterior painting prices in Katy TX by home size, siding type, and prep needed — plus red flags to avoid.",
     type: "article",
     publishedTime: "2026-06-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/exterior-painting-cost-katy-tx.png"],
   },
   twitter: {
@@ -84,7 +84,7 @@ export default function ExteriorPaintingCostKatyPage() {
     <BlogPostTemplate
       title="How Much Does Exterior Painting Cost in Katy TX?"
       excerpt="Katy homeowners face extreme summer heat, HOA color restrictions, and constant humidity that demands premium coatings. This guide gives you accurate 2026 numbers — not the lowball figures that lead to overpriced change orders."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
       readTime="12 min read"

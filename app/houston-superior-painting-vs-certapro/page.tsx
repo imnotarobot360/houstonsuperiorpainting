@@ -112,7 +112,7 @@ const faqs = [
   },
   {
     question: "Can I meet the owner at Houston Superior Painting?",
-    answer: "Yes, owner JJ Semo personally meets with every client during the estimate process and remains involved throughout the project. This direct relationship ensures accountability and communication that franchise models can't match."
+    answer: "Yes, owner Juan Serra personally meets with every client during the estimate process and remains involved throughout the project. This direct relationship ensures accountability and communication that franchise models can't match."
   }
 ]
 
@@ -224,7 +224,7 @@ export default function HSPvsCertaProPage() {
                 <Users className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Direct Owner Involvement</h3>
                 <p className="text-muted-foreground mb-4">
-                  At Houston Superior Painting, owner JJ Semo personally meets with every client. 
+                  At Houston Superior Painting, owner Juan Serra personally meets with every client. 
                   You&apos;re not just another number—you&apos;re working directly with the person whose 
                   reputation is on the line.
                 </p>
@@ -395,7 +395,7 @@ export default function HSPvsCertaProPage() {
             "description": "Compare Houston Superior Painting vs CertaPro Painters. See differences in pricing, warranty, local ownership, and customer reviews.",
             "author": {
               "@type": "Person",
-              "name": "JJ Semo",
+              "name": "Juan Serra",
               "jobTitle": "Owner & Lead Estimator"
             },
             "publisher": {

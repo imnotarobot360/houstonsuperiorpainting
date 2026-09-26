@@ -23,7 +23,7 @@ const serviceSchema = {
   "name": "Drywall Repair in Houston, TX",
   "description": "Expert drywall repair services including crack repair, hole patching, water damage repair, and texture matching (orange peel, knockdown, smooth) before painting.",
   "serviceType": "Drywall Repair",
-  "provider": { "@id": "https://houstonsuperiorpainting.com/#business" },
+  "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

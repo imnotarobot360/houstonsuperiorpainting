@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Learn real costs, prep tips, and how to choose the best painters in Houston.",
     type: "article",
     publishedTime: "2026-04-22",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -42,7 +42,7 @@ export default function InteriorPaintingHoustonGuidePage() {
     <BlogPostTemplate slug="interior-painting-houston-tx-guide"
       title="Interior Painting Houston TX: What Homeowners Need to Know Before Hiring a Painter"
       excerpt="If you're thinking about repainting your home in Houston, discover real costs, prep tips, and how to choose the best painters near you."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="April 22, 2026"
       readTime="7 min read"
@@ -254,21 +254,7 @@ export default function InteriorPaintingHoustonGuidePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Houston Superior Painting",
-            "telephone": "+1-346-594-5960",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "2617 Bissonnet St",
-              "addressLocality": "Houston",
-              "addressRegion": "TX",
-              "postalCode": "77005",
-              "addressCountry": "US"
-            },
-            "areaServed": ["Houston TX", "Katy TX", "Cypress TX"]
-          })
+          __html: JSON.stringify({ "@context": "https://schema.org", "@type": "WebPage", "about": { "@id": "https://houstonsuperiorpainting.com/#organization" } })
         }}
       />
     </BlogPostTemplate>

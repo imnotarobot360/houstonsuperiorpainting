@@ -2,7 +2,8 @@ import { Fragment } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react"
-import { BUSINESS, PHONE_HREF, MAIL_HREF, serviceHref, isExternalHref, SERVICE_AREAS } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, MAIL_HREF, serviceHref, isExternalHref, SERVICE_AREAS, OFFICIAL_SITE_DISCLAIMER } from "@/lib/business"
+import { LOCATIONS } from "@/lib/locations"
 import { TrustBadges } from "@/components/trust-badges"
 
 export function Footer() {
@@ -133,42 +134,45 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info - NAP Block */}
-          <div itemScope itemType="https://schema.org/LocalBusiness">
+          {/* Contact + offices. Schema lives in JSON-LD, not microdata. */}
+          <div>
             <h3 className="font-manrope text-xs font-semibold uppercase tracking-[0.22em] text-gold mb-5">Contact Us</h3>
-            <meta itemProp="name" content={BUSINESS.name} />
-            <ul className="space-y-3">
-              <li>
-                <a 
-                  href={PHONE_HREF} 
-                  itemProp="telephone" 
-                  aria-label={`Call ${BUSINESS.name} at ${BUSINESS.phone}`} 
-                  className="flex items-center gap-2 text-background/70 hover:text-background transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  {BUSINESS.phone}
-                </a>
-              </li>
-              <li>
-                <a 
-                  href={MAIL_HREF} 
-                  itemProp="email" 
-                  aria-label={`Email ${BUSINESS.name}`} 
-                  className="flex items-center gap-2 text-background/70 hover:text-background transition-colors"
-                >
-                  <Mail className="h-4 w-4" />
-                  {BUSINESS.email}
-                </a>
-              </li>
-              <li className="flex items-start gap-2 text-background/70" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
-                <span>
-                  <span itemProp="streetAddress">{BUSINESS.primaryAddress.street}</span><br />
-                  <span itemProp="addressLocality">{BUSINESS.primaryAddress.city}</span>, <span itemProp="addressRegion">{BUSINESS.primaryAddress.state}</span> <span itemProp="postalCode">{BUSINESS.primaryAddress.zip}</span>
-                </span>
-              </li>
+            <div className="flex flex-col gap-3">
+              <a
+                href={PHONE_HREF}
+                aria-label={`Call ${BUSINESS.name} at ${BUSINESS.phone}`}
+                className="flex items-center gap-2 text-background/70 hover:text-background transition-colors"
+              >
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                {BUSINESS.phone}
+              </a>
+              <a
+                href={MAIL_HREF}
+                aria-label={`Email ${BUSINESS.name}`}
+                className="flex items-center gap-2 text-background/70 hover:text-background transition-colors"
+              >
+                <Mail className="h-4 w-4" aria-hidden="true" />
+                {BUSINESS.email}
+              </a>
+            </div>
+            <p className="mt-6 mb-2 flex items-center gap-2 font-medium text-sm text-background/80">
+              <MapPin className="h-4 w-4" aria-hidden="true" />
+              Offices
+            </p>
+            <ul className="flex flex-col gap-2 text-sm">
+              {LOCATIONS.map((loc) => (
+                <li key={loc.slug}>
+                  <Link
+                    href={`/locations/${loc.slug}`}
+                    className="text-background/70 hover:text-background transition-colors"
+                  >
+                    <span className="font-medium text-background/90">{loc.city}</span>
+                    <span className="block text-background/60">{loc.street}, {loc.city}, {loc.state} {loc.zip}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
-            <div className="mt-4 text-background/60 text-sm">
+            <div className="mt-6 text-background/60 text-sm">
               <p className="font-medium text-background/80 mb-1">Hours:</p>
               {BUSINESS.hoursSummary.map((h) => (
                 <p key={h.label}>
@@ -176,7 +180,6 @@ export function Footer() {
                 </p>
               ))}
             </div>
-            <meta itemProp="url" content={BUSINESS.url} />
           </div>
         </div>
 
@@ -220,6 +223,10 @@ export function Footer() {
               </Link>
             </div>
           </div>
+
+          <p className="mt-8 mx-auto max-w-3xl text-center text-background/60 text-xs leading-relaxed text-pretty">
+            {OFFICIAL_SITE_DISCLAIMER}
+          </p>
 
           {/* Marketing & Design Credit */}
           <div className="mt-8 pt-6 border-t border-background/10 flex items-center justify-center text-center">

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "How to vet, hire, and avoid being burned by Houston painters — with the 8 questions you must ask before signing anything.",
     type: "article",
     publishedTime: "2026-06-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/best-painters-houston-tx.png"],
   },
   twitter: {
@@ -84,7 +84,7 @@ export default function BestPaintersHoustonPage() {
     <BlogPostTemplate
       title="Best Painters in Houston TX: How to Find & Vet Them"
       excerpt="Houston has more painting contractors than almost any city in Texas. This guide teaches you the vetting process that separates painters who'll protect your home from those who'll damage it."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
       readTime="11 min read"
