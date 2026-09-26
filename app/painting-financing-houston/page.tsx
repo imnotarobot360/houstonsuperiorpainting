@@ -28,7 +28,7 @@ const serviceSchema = {
   description:
     "Flexible financing and monthly payment plans for interior painting, exterior painting, and cabinet refinishing projects across the Greater Houston area.",
   serviceType: "Home Improvement Financing",
-  provider: { "@id": "https://houstonsuperiorpainting.com/#business" },
+  provider: { "@id": "https://houstonsuperiorpainting.com/#organization" },
   areaServed: [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

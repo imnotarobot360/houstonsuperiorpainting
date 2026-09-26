@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "2026 Katy TX painting costs, the 5 questions that reveal a legitimate painter, and the red flags that cost homeowners thousands.",
     type: "article",
     publishedTime: "2026-06-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/painters-near-me-katy-tx.png"],
   },
   twitter: {
@@ -110,7 +110,7 @@ export default function PaintersNearMeKatyTxPage() {
     <BlogPostTemplate
       title="Painters Near Me in Katy TX: Costs, What to Ask, Red Flags"
       excerpt="Search 'painters near me in Katy TX' and you'll get 15–30 results, most with 4.5+ stars claiming to be professional and reliable. Most are not. Here's what painting actually costs in 2026, how to vet a local painter, and the red flags that cost homeowners thousands."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
       readTime="11 min read"

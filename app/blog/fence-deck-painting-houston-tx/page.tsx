@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "Paint vs. stain, pressure-treated wood timing, prep requirements, and how long fence and deck coatings last in Houston's climate.",
     type: "article",
     publishedTime: "2026-06-15",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -66,7 +66,7 @@ export default function FenceDeckPaintingHoustonPage() {
     <BlogPostTemplate
       title="Fence and Deck Painting in Houston TX: What Homeowners Should Know"
       excerpt="Houston's heat, humidity, and rainfall age wood fences and decks faster than most homeowners expect. Here's how to choose between paint and stain, prep correctly, and keep your coating lasting in our climate."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Professional Painting Contractor"
       publishDate="June 15, 2026"
       readTime="10 min read"

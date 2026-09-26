@@ -30,7 +30,7 @@ const faqs = [
   { q: "Are you insured?", a: "Yes. Houston Superior Painting carries $2M general liability insurance. We are bonded for your protection and provide certificates of insurance upon request. Note that Texas does not issue a state license for residential painting contractors, so insurance is the credential that actually matters." },
   { q: "How fast can you start a project?", a: "Most projects can be scheduled within 1-2 weeks of the estimate. Emergency or small projects can often be accommodated within a few days. We always confirm start dates in writing." },
   { q: "Do you provide free estimates?", a: "Absolutely. We provide free, detailed, written estimates that include itemized costs, product specifications, timeline, and warranty terms. No hidden fees ever." },
-  { q: "What makes you different from other painting companies?", a: "Six things: (1) Owner JJ Semo personally oversees every project. (2) Background-checked, W-2 employees only. (3) Premium Sherwin-Williams and Benjamin Moore products. (4) 5-year exterior warranty. (5) 4.9/5 Google rating with 200+ reviews. (6) Founded in 2019 in Cypress, TX \u2014 we live where we work." },
+  { q: "What makes you different from other painting companies?", a: "Six things: (1) Owner Juan Serra personally oversees every project. (2) Background-checked, W-2 employees only. (3) Premium Sherwin-Williams and Benjamin Moore products. (4) 5-year exterior warranty. (5) 4.9/5 Google rating with 200+ reviews. (6) Founded in 2019 in Cypress, TX \u2014 we live where we work." },
   { q: "Do you offer warranties?", a: "Yes. Every painting project carries a written 5-year warranty — exterior, interior, and cabinet refinishing alike. It covers peeling, blistering, chipping, and adhesion failure under normal conditions." },
   { q: "What areas do you serve?", a: "We serve the entire Greater Houston area: Houston, Katy, Cypress, Sugar Land, The Woodlands, Pearland, Missouri City, Richmond, Fulshear, Rosenberg, Bellaire, Memorial, The Heights, River Oaks, Energy Corridor, and all surrounding communities within 45 miles." },
   { q: "Can I see examples of your work?", a: "Yes! Visit our portfolio page or check our Google Business Profile for 150+ photos of completed projects across Houston, Katy, and Cypress. We also bring a physical portfolio to every estimate appointment." },
@@ -45,20 +45,6 @@ export default function PaintingCompanyNearMe() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
-              {
-                "@type": "LocalBusiness",
-                "name": "Houston Superior Painting",
-                "description": "Professional painting company serving Houston, Katy, Cypress, Sugar Land, and the Greater Houston area. Interior, exterior, cabinet, and commercial painting.",
-                "url": "https://houstonsuperiorpainting.com/",
-                "telephone": "+1-346-594-5960",
-                "email": "info@houstonsuperiorpainting.com",
-                "priceRange": "$$",
-                "address": { "@type": "PostalAddress", "streetAddress": "14150 Huffmeister Rd, Suite 410", "addressLocality": "Cypress", "addressRegion": "TX", "postalCode": "77429", "addressCountry": "US" },
-                "geo": { "@type": "GeoCoordinates", "latitude": BUSINESS.primaryAddress.latitude, "longitude": BUSINESS.primaryAddress.longitude },
-                "founder": { "@type": "Person", "name": "JJ Semo" },
-                "foundingDate": "2019",
-                "areaServed": ["Houston", "Katy", "Cypress", "Sugar Land", "The Woodlands", "Pearland", "Missouri City", "Richmond", "Fulshear", "Rosenberg", "Bellaire", "Memorial", "The Heights"],
-              },
               {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
@@ -85,7 +71,7 @@ export default function PaintingCompanyNearMe() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold mb-3">Quick Answer</h2>
           <p className="text-lg leading-relaxed">
-            Houston Superior Painting is a top-rated local painting company serving Houston, Katy, Cypress, Sugar Land, The Woodlands, and all surrounding areas. Founded in 2019 by JJ Semo, we offer interior painting ($2.50-$4.50/sqft), exterior painting ($3,500-$12,000), cabinet refinishing, drywall repair, and more. 4.9/5 Google rating, 200+ reviews, 5-year exterior warranty. Call{" "}
+            Houston Superior Painting is a top-rated local painting company serving Houston, Katy, Cypress, Sugar Land, The Woodlands, and all surrounding areas. Founded in 2019 by Juan Serra, we offer interior painting ($2.50-$4.50/sqft), exterior painting ($3,500-$12,000), cabinet refinishing, drywall repair, and more. 4.9/5 Google rating, 200+ reviews, 5-year exterior warranty. Call{" "}
             <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a> for a free estimate.
           </p>
         </div>
@@ -117,7 +103,7 @@ export default function PaintingCompanyNearMe() {
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-10 text-center">Why Choose Houston Superior Painting?</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: "Owner on Every Job", desc: "JJ Semo personally oversees every project from estimate through final walkthrough. You never deal with a random crew." },
+              { title: "Owner on Every Job", desc: "Juan Serra personally oversees every project from estimate through final walkthrough. You never deal with a random crew." },
               { title: "Background-Checked W-2 Team", desc: "Our painters are employees, not subcontractors. All background-checked and drug-tested for your peace of mind." },
               { title: "Premium Products Only", desc: "We use Sherwin-Williams Duration, SuperPaint, and Emerald lines plus Benjamin Moore Regal and Aura. No cheap paint, ever." },
               { title: "5-Year Written Warranty", desc: "We stand behind our work with a written 5-year warranty on every painting project — exterior, interior, and cabinets." },

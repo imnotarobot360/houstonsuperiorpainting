@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Save thousands on your kitchen remodel. Compare refinishing vs replacement costs in Houston.",
     type: "article",
     publishedTime: "2026-05-09",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/cabinet-refinishing-vs-replacement.jpg"],
   },
   twitter: {
@@ -76,7 +76,7 @@ export default function CabinetRefinishingVsReplacementPage() {
     <BlogPostTemplate
       title="Cabinet Refinishing vs Replacement in Houston: Complete Cost Comparison"
       excerpt="Updating your kitchen cabinets is one of the best investments in your home. But should you refinish your existing cabinets or replace them entirely? This comprehensive guide compares costs, timelines, and results to help Houston homeowners make the right choice."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="May 9, 2026"
       readTime="12 min read"

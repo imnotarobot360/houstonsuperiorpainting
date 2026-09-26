@@ -155,7 +155,7 @@ export default function BestInteriorPaintColorsHoustonHomes() {
                 </span>
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  Juan Serra
                 </span>
               </div>
               

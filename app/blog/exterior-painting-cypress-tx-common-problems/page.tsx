@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-05-25T00:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [{
       url: "https://houstonsuperiorpainting.com/images/blog/exterior-painting-cypress-problems.jpg",
       width: 1200,
@@ -162,7 +162,7 @@ export default function ExteriorPaintingCypressProblemsBlog() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  Juan Serra
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />

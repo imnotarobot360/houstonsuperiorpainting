@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "What a legitimate paint warranty covers, what it excludes, the red flags to avoid, and how to make a claim in Texas.",
     type: "article",
     publishedTime: "2026-06-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/paint-warranty-texas.png"],
   },
   twitter: {
@@ -84,7 +84,7 @@ export default function PaintWarrantyTexasPage() {
     <BlogPostTemplate
       title="What Does a 5-Year Paint Warranty Actually Cover in Texas?"
       excerpt="Most painting warranties in Texas are essentially meaningless. This guide explains what a legitimate paint warranty covers, what it should exclude, the red flags to watch for, and what you're entitled to when a paint job fails."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
       readTime="11 min read"

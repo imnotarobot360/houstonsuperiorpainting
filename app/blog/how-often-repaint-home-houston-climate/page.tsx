@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Expert advice on repainting schedules for Houston homes, based on years of local experience.",
     type: "article",
     publishedTime: "2026-04-08",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -36,7 +36,7 @@ export default function HowOftenRepaintHoustonPage() {
     <BlogPostTemplate slug="how-often-repaint-home-houston-climate"
       title="How Often Should You Repaint Your Home in Houston's Climate?"
       excerpt="Houston's unique weather patterns affect paint differently than other regions. Learn the signs that indicate it's time to repaint and how to extend your paint's lifespan."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="April 8, 2026"
       readTime="6 min read"

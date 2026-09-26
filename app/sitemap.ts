@@ -3,6 +3,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { execFileSync } from 'node:child_process'
 import { PROJECTS } from '@/lib/projects'
+import { LOCATIONS } from '@/lib/locations'
 import CONTENT_DATES from '@/lib/content-dates.json'
 import nextConfig from '../next.config.mjs'
 
@@ -281,6 +282,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ...(projectsPageDate ? { lastModified: projectsPageDate } : {}),
       changeFrequency: 'monthly',
       priority: 0.7,
+    })
+  }
+
+  const locationsPageDate = contentDateFor(
+    'locations/[slug]',
+    path.join(appDir, 'locations', '[slug]', 'page.tsx'),
+  )
+  for (const location of LOCATIONS) {
+    entries.push({
+      url: `${baseUrl}/locations/${location.slug}`,
+      ...(locationsPageDate ? { lastModified: locationsPageDate } : {}),
+      changeFrequency: 'monthly',
+      priority: 0.9,
     })
   }
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Expert guide to exterior paint longevity in Houston's challenging climate.",
     type: "article",
     publishedTime: "2026-05-10",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/exterior-paint-durability-houston.jpg"],
   },
   twitter: {
@@ -76,7 +76,7 @@ export default function ExteriorPaintDurabilityHoustonPage() {
     <BlogPostTemplate
       title="How Long Does Exterior Paint Last in Houston? Complete Durability Guide"
       excerpt="Houston's intense sun, humidity, and storms create unique challenges for exterior paint. Learn how long you can expect your paint to last, what causes premature failure, and how to maximize the lifespan of your exterior paint job."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="May 10, 2026"
       readTime="11 min read"

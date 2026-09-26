@@ -37,7 +37,7 @@ const serviceSchema = {
   "name": "Limewash & Brick Painting in Houston, TX",
   "description": "Authentic limewash and German smear finishes for brick homes in Houston. Also offering solid brick painting and specialty decorative finishes. Breathable, elegant, European-style results.",
   "serviceType": "Limewash & Decorative Finishes",
-  "provider": { "@id": "https://houstonsuperiorpainting.com/#business" },
+  "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

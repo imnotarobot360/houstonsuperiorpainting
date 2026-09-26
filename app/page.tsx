@@ -15,7 +15,7 @@ import {
 } from "@/components/luxury/sections"
 import { LocationsSection } from "@/components/locations-section"
 import FAQ from "@/components/faq"
-import { ReviewStructuredData } from "@/components/structured-data"
+import { HomepageStructuredData, ReviewStructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   alternates: {
@@ -84,6 +84,7 @@ export default function Home() {
         (bg-white) so no two adjacent sections share a background.
       */}
       <LocationsSection />
+      <HomepageStructuredData />
       <ReviewStructuredData />
       <FAQ items={homeFaqs} variant="default" />
       <LuxuryCTA />

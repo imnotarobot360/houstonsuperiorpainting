@@ -125,11 +125,10 @@ export default function PaintersNearMeHoustonPage() {
     inLanguage: "en-US",
     author: {
       "@type": "Person",
-      "@id": "https://houstonsuperiorpainting.com/about#jjsemo",
-      name: "JJ Semo",
+      "@id": "https://houstonsuperiorpainting.com/about#juan-serra",
+      name: "Juan Serra",
       jobTitle: "Founder & Lead Painter",
       url: "https://houstonsuperiorpainting.com/about",
-      image: "https://houstonsuperiorpainting.com/images/jj-semo.jpg",
       worksFor: {
         "@type": "Organization",
         name: "Houston Superior Painting",
@@ -233,7 +232,7 @@ export default function PaintersNearMeHoustonPage() {
               <div className="flex flex-wrap items-center gap-4 mt-6 text-white/80">
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
-                  <span>JJ Semo</span>
+                  <span>Juan Serra</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
@@ -423,7 +422,7 @@ export default function PaintersNearMeHoustonPage() {
 
             <h2>Why Choose Houston Superior Painting?</h2>
             <p>
-              Houston Superior Painting is a Houston-based painting contractor founded in 2019 by JJ Semo, serving Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, Bellaire, and The Woodlands. We specialize in old-school preparation built for Gulf Coast climate.
+              Houston Superior Painting is a Houston-based painting contractor founded in 2019 by Juan Serra, serving Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, Bellaire, and The Woodlands. We specialize in old-school preparation built for Gulf Coast climate.
             </p>
 
             <h3>What Makes Us Different</h3>

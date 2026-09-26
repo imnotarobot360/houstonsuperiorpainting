@@ -77,29 +77,7 @@ const faqSchema = {
   ]
 }
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Houston Superior Painting",
-  "telephone": "346-594-5960",
-  "email": "info@houstonsuperiorpainting.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "14150 Huffmeister Rd, Suite 410",
-    "addressLocality": "Cypress",
-    "addressRegion": "TX",
-    "postalCode": "77429",
-    "addressCountry": "US"
-  },
-  "areaServed": ["Houston TX", "Katy TX", "Cypress TX"],
-  "serviceType": [
-    "Interior Painting",
-    "Exterior Painting",
-    "Cabinet Painting",
-    "Drywall Repair",
-    "Pressure Washing"
-  ]
-}
+const localBusinessSchema = { "@context": "https://schema.org", "@type": "WebPage", "about": { "@id": "https://houstonsuperiorpainting.com/#organization" } }
 
 const services = [
   "Interior Painting",

@@ -20,17 +20,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Exterior Painting",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Houston Superior Painting",
-    "telephone": "346-594-5960",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Cypress",
-      "addressRegion": "TX",
-      "postalCode": "77429"
-    }
-  },
+  "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": ["Houston TX", "Katy TX", "Cypress TX"],
   "description": "Professional exterior house painting services in Houston with weather-resistant finishes designed for Texas climate."
 }

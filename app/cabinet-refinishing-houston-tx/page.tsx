@@ -37,7 +37,7 @@ const serviceSchema = {
   "name": "Cabinet Refinishing & Painting in Houston, TX",
   "description": "Professional kitchen and bathroom cabinet refinishing in Houston, Katy, Cypress and surrounding TX cities. Factory-finish spray techniques, grain filling, premium cabinet-grade enamels, 5-year warranty.",
   "serviceType": "Cabinet Refinishing",
-  "provider": { "@id": "https://houstonsuperiorpainting.com/#business" },
+  "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

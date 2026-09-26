@@ -1,7 +1,7 @@
 // app/about/page.tsx
 // Houston Superior Painting — About page
-// Fixes applied: self-referencing canonical, correct OG, geo Cypress HQ,
-// meta-keywords removed, Person schema JJ Semo + Organization + AboutPage + Breadcrumb
+// Person (Juan Serra) + AboutPage + Breadcrumb. The Organization node lives on
+// the homepage; this page references it by @id instead of redefining it.
 
 import Link from "next/link";
 import Image from "next/image";
@@ -14,17 +14,17 @@ import { ReviewStructuredData } from "@/components/structured-data";
 
 export const metadata: Metadata = {
   title:
-    "About Houston Superior Painting — Meet JJ Semo & The Team",
+    "About Houston Superior Painting | Owner Juan Serra",
   description:
-    "Founded 2019 by JJ Semo in Cypress, TX. 500+ homes painted across Greater Houston. Background-checked crew, 5-year warranty, prep-first philosophy.",
+    "Juan Serra founded Houston Superior Painting in Cypress in 2019. Prep-first, humidity-aware painting from five offices across Greater Houston, backed by a 5-year warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/about",
   },
   openGraph: {
     title:
-      "About Houston Superior Painting — Meet JJ Semo & The Team",
+      "About Houston Superior Painting | Owner Juan Serra",
     description:
-      "Founded 2019 by JJ Semo. 500+ homes painted across Greater Houston. Background-checked crew, 5-year warranty.",
+      "Owned by Juan Serra since 2019. Prep-first, humidity-aware painting from five Houston-area offices. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/about",
     type: "website",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         url: "/images/og-about.jpg",
         width: 1200,
         height: 630,
-        alt: "JJ Semo, founder of Houston Superior Painting, with his crew",
+        alt: "Houston Superior Painting, owned by Juan Serra",
       },
     ],
     locale: "en_US",
@@ -41,16 +41,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "About Houston Superior Painting — Meet JJ Semo & The Team",
+      "About Houston Superior Painting | Owner Juan Serra",
     description:
-      "Founded 2019 by JJ Semo. 500+ homes painted across Greater Houston.",
+      "Owned by Juan Serra since 2019. Five offices across Greater Houston.",
     images: ["/images/og-about.jpg"],
-  },
-  other: {
-    "geo.region": "US-TX",
-    "geo.placename": "Cypress",
-    "geo.position": "29.9012;-95.6293",
-    ICBM: "29.9012, -95.6293",
   },
   robots: {
     index: true,
@@ -72,15 +66,14 @@ export const metadata: Metadata = {
 const PERSON_JSONLD = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://houstonsuperiorpainting.com/about#jjsemo",
-  name: "JJ Semo",
-  givenName: "JJ",
-  familyName: "Semo",
-  jobTitle: "Founder & Lead Painter",
+  "@id": "https://houstonsuperiorpainting.com/about#juan-serra",
+  name: "Juan Serra",
+  givenName: "Juan",
+  familyName: "Serra",
+  jobTitle: "Owner",
   description:
-    "JJ Semo founded Houston Superior Painting in 2019 in Cypress, TX. With years of hands-on painting experience, JJ personally oversees quality control on every project and leads the company's prep-first philosophy.",
+    "Juan Serra owns Houston Superior Painting, founded in 2019 in Cypress, TX. He walks estimates, sets the prep plan for every job, and does the final walkthrough with the homeowner.",
   url: "https://houstonsuperiorpainting.com/about",
-  image: "https://houstonsuperiorpainting.com/images/jj-semo.jpg",
   worksFor: {
     "@type": "Organization",
     "@id": "https://houstonsuperiorpainting.com/#organization",
@@ -102,64 +95,10 @@ const PERSON_JSONLD = {
     "Spray Application Techniques",
     "Color Consultation",
   ],
-  alumniOf: "Painting Industry Apprenticeship",
   areaServed: {
     "@type": "AdministrativeArea",
     name: "Greater Houston, Texas",
   },
-};
-
-const ORGANIZATION_JSONLD = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://houstonsuperiorpainting.com/#organization",
-  name: "Houston Superior Painting",
-  legalName: "Houston Superior Painting LLC",
-  url: "https://houstonsuperiorpainting.com",
-  logo: {
-    "@type": "ImageObject",
-    url: "https://houstonsuperiorpainting.com/images/logo.png",
-    width: 600,
-    height: 60,
-  },
-  image: "https://houstonsuperiorpainting.com/images/og-cover.jpg",
-  description:
-    "Professional interior, exterior, cabinet, drywall, pressure washing, and limewash painting contractor serving Greater Houston since 2019. Prep-first philosophy. 5-year warranty.",
-  foundingDate: "2019",
-  founder: { "@id": "https://houstonsuperiorpainting.com/about#jjsemo" },
-  foundingLocation: {
-    "@type": "Place",
-    name: "Cypress, Texas",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Cypress",
-      addressRegion: "TX",
-      postalCode: "77429",
-      addressCountry: "US",
-    },
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "14150 Huffmeister Rd, Suite 410",
-    addressLocality: "Cypress",
-    addressRegion: "TX",
-    postalCode: "77429",
-    addressCountry: "US",
-  },
-  telephone: "+1-346-594-5960",
-  email: "info@houstonsuperiorpainting.com",
-  numberOfEmployees: {
-    "@type": "QuantitativeValue",
-    minValue: 5,
-    maxValue: 15,
-  },
-  slogan: "Old-School Preparation. Premium Long-Lasting Results.",
-  knowsLanguage: ["en", "es"],
-  sameAs: [
-    "https://www.google.com/maps/place/Houston+Superior+Painting../@29.7143308,-95.4349558,17z/data=!4m8!3m7!1s0x1c94ce195628f7bf:0xcc8b6e63c1c05fe7",
-    "https://www.facebook.com/houstonsuperiorpainting",
-    "https://www.instagram.com/houstonsuperiorpainting",
-  ]
 };
 
 const ABOUTPAGE_JSONLD = {
@@ -167,11 +106,11 @@ const ABOUTPAGE_JSONLD = {
   "@type": "AboutPage",
   "@id": "https://houstonsuperiorpainting.com/about#webpage",
   url: "https://houstonsuperiorpainting.com/about",
-  name: "About Houston Superior Painting — Meet JJ Semo & The Team",
+  name: "About Houston Superior Painting | Owner Juan Serra",
   inLanguage: "en-US",
   isPartOf: { "@id": "https://houstonsuperiorpainting.com/#website" },
   about: { "@id": "https://houstonsuperiorpainting.com/#organization" },
-  mainEntity: { "@id": "https://houstonsuperiorpainting.com/about#jjsemo" },
+  mainEntity: { "@id": "https://houstonsuperiorpainting.com/about#juan-serra" },
 };
 
 const BREADCRUMB_JSONLD = {
@@ -252,10 +191,6 @@ export default function AboutPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_JSONLD) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ABOUTPAGE_JSONLD) }}
       />
       <script
@@ -265,7 +200,7 @@ export default function AboutPage() {
       <ReviewStructuredData />
 
 
-      <main className="bg-white text-foreground">
+      <main className="bg-background text-foreground">
         {/* ─── HERO ─── */}
         <section className="relative bg-muted py-16 md:py-24 border-b border-border">
           <div className="mx-auto max-w-6xl px-4">
@@ -276,57 +211,44 @@ export default function AboutPage() {
                     Home
                   </Link>
                 </li>
-                <li>›</li>
+                <li aria-hidden="true">›</li>
                 <li className="text-foreground">About</li>
               </ol>
             </nav>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 bg-muted text-gold-deep font-manrope text-xs font-semibold uppercase tracking-[0.22em] px-4 py-2 rounded-full mb-5">
-                  <span aria-hidden>🏠</span>
-                  <span>Founded 2019 in Cypress, TX</span>
-                </div>
+                <p className="kicker mb-5">Founded 2019 in Cypress, TX</p>
 
-                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.05]">
-                  About Houston Superior Painting
+                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.05] text-balance">
+                  Juan Serra&apos;s painting company, built on prep
                 </h1>
 
-                <p className="mt-6 text-xl text-foreground/75 leading-relaxed">
-                  Since 2019, we&apos;ve been transforming Houston homes with
-                  quality craftsmanship, honest service, and a commitment to
-                  doing things right. Meet JJ Semo and the team behind 500+
-                  successful projects across Greater Houston.
+                <p className="mt-6 text-xl text-foreground/75 leading-relaxed text-pretty">
+                  Houston Superior Painting is owned by Juan Serra. We paint homes across Greater
+                  Houston from five offices: Cypress, Houston, Katy, Sugar Land and Magnolia. Every
+                  job starts the same way: moisture readings, wash, scrape, repair and prime, before
+                  any finish coat goes on.
                 </p>
 
                 <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-foreground/75">
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-accent">✓</span> 500+ Homes
-                    Painted
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-accent">✓</span> Background-Checked
-                    Crew
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-accent">✓</span> 5-Year Warranty
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-accent">✓</span> BBB Accredited
-                  </li>
+                  <li>Owner-walked estimates</li>
+                  <li>Background-checked crew</li>
+                  <li>5-year written warranty</li>
+                  <li>English &amp; Spanish</li>
                 </ul>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
                   <Link
-                    href="/contact"
+                    href="/contact#quote"
                     className="inline-flex items-center justify-center px-6 py-4 bg-foreground hover:bg-foreground/90 text-background font-semibold rounded-lg text-base shadow-md transition"
                   >
-                    Get My Free Estimate →
+                    Get a free estimate
                   </Link>
                   <a
                     href="tel:+13465945960"
                     aria-label="Call Houston Superior Painting at 346-594-5960"
-                    className="inline-flex items-center justify-center px-6 py-4 bg-foreground hover:bg-foreground/90 text-white font-semibold rounded-lg text-base transition"
+                    className="inline-flex items-center justify-center px-6 py-4 border border-foreground text-foreground hover:bg-foreground hover:text-background font-semibold rounded-lg text-base transition"
                   >
                     (346) 594-5960
                   </a>
@@ -335,8 +257,8 @@ export default function AboutPage() {
 
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-muted">
                 <Image
-                  src="/images/jj-semo.jpg"
-                  alt="JJ Semo, founder of Houston Superior Painting in Cypress, TX"
+                  src="/images/exterior-after-1.jpg"
+                  alt="Exterior repaint completed by Houston Superior Painting"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 600px"
@@ -347,70 +269,50 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── FOUNDER'S STORY ─── */}
-        <section className="py-16 md:py-24 bg-white">
+        {/* ─── OWNER'S STORY ─── */}
+        <section className="py-16 md:py-24 bg-background">
           <div className="mx-auto max-w-3xl px-4">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
-              From One Man with a Brush to Houston&apos;s Trusted Painting Team
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-8 text-balance">
+              Why we start with prep
             </h2>
 
-            <div className="prose prose-lg max-w-none text-foreground/75 space-y-5 leading-relaxed">
+            <div className="flex flex-col gap-5 text-lg text-foreground/75 leading-relaxed">
               <p>
-                My name is <strong>JJ Semo</strong>, and I started Houston
-                Superior Painting in 2019 with nothing but a ladder, some
-                brushes, and a determination to do things differently than the
-                painters I&apos;d seen cut corners throughout my career.
+                I&apos;m <strong className="text-foreground">Juan Serra</strong>. I started Houston
+                Superior Painting in Cypress in 2019 after years of working for other painting
+                contractors around Houston.
               </p>
-
               <p>
-                Before starting Houston Superior Painting, I spent years working
-                in the painting industry and learning the trade from experienced
-                craftsmen. But I also saw too many contractors who viewed
-                customers as just another job number—rushing through projects,
-                using cheap materials, and disappearing when problems arose.
+                Most of the peeling I was sent to fix was not bad paint. It was paint put on wet
+                siding, chalky stucco nobody washed, or bare wood nobody primed. Houston humidity
+                finds every shortcut. A job that looks fine in March can bubble by August.
               </p>
-
               <p>
-                I knew there had to be a better way. When I started my own
-                company, I made a simple promise:{" "}
-                <strong>
-                  treat every home like it was my own family&apos;s home.
-                </strong>{" "}
-                That means using premium paints, taking time for proper prep
-                work, protecting your belongings like they&apos;re priceless,
-                and standing behind our work long after the final brushstroke.
+                So we changed the order of the work. Before anything gets painted, we take moisture
+                readings, pressure wash and let it dry fully, scrape and sand, replace soft wood,
+                caulk, and spot-prime. We schedule exterior coats around dew point and afternoon
+                storms, not just the calendar. It takes longer up front. It is also why we can
+                write a 5-year warranty.
               </p>
-
               <p>
-                That approach has grown Houston Superior Painting from just me
-                to a skilled team of professionals who share my values.
-                We&apos;ve painted{" "}
-                <strong>500+ homes across the Greater Houston area</strong>, and
-                many of our customers have become friends who call us back year
-                after year.
+                I still walk estimates myself, and I do the final walkthrough with you before we
+                call a job done. If something is not right, call the office and it comes back to me.
               </p>
-
-              <p>
-                When you hire us, you&apos;re not just getting painters —
-                you&apos;re getting a team that genuinely cares about making
-                your home beautiful and your experience stress-free.
-              </p>
-
-              <p className="text-foreground font-semibold pt-4 border-t border-border mt-8">
-                — JJ Semo, Founder
+              <p className="text-foreground font-semibold pt-4 border-t border-border mt-4">
+                Juan Serra, Owner
               </p>
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <Link
-                href="/contact"
+                href="/contact#offices"
                 className="inline-flex items-center justify-center px-6 py-3 bg-foreground hover:bg-foreground/90 text-background font-semibold rounded-lg transition"
               >
-                Get Your Free Estimate →
+                Find your nearest office
               </Link>
               <a
                 href="tel:+13465945960"
-                className="inline-flex items-center justify-center px-6 py-3 bg-foreground hover:bg-foreground/90 text-white font-semibold rounded-lg transition"
+                className="inline-flex items-center justify-center px-6 py-3 border border-foreground text-foreground hover:bg-foreground hover:text-background font-semibold rounded-lg transition"
               >
                 (346) 594-5960
               </a>

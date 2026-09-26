@@ -45,7 +45,7 @@ export default function InteriorPaintersKatyTX() {
               {
                 "@type": "Article",
                 "headline": "Interior Painters Katy TX – Flawless Interior House Painting",
-                "author": { "@type": "Person", "name": "JJ Semo" },
+                "author": { "@type": "Person", "name": "Juan Serra" },
                 "publisher": { "@type": "Organization", "name": "Houston Superior Painting" },
                 "datePublished": "2026-05-16",
                 "dateModified": "2026-05-16",
@@ -106,7 +106,7 @@ export default function InteriorPaintersKatyTX() {
             Katy&apos;s rapid growth has brought thousands of new homes to the area, but even newer construction needs repainting after 5-7 years. Builder-grade paint fades, scuffs easily, and does not hold up to active families. Our interior painting process transforms Katy homes with premium products that resist Houston&apos;s humidity, last longer, and look better.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-8">
-            Founded in 2019 by JJ Semo, Houston Superior Painting has completed hundreds of interior projects across Katy, from single accent walls in Cinco Ranch to full whole-home repaints in Grand Lakes. We understand the open floor plans, high ceilings, and neutral palettes popular in Katy master-planned communities.
+            Founded in 2019 by Juan Serra, Houston Superior Painting has completed hundreds of interior projects across Katy, from single accent walls in Cinco Ranch to full whole-home repaints in Grand Lakes. We understand the open floor plans, high ceilings, and neutral palettes popular in Katy master-planned communities.
           </p>
 
           <h3 className="text-xl font-semibold mb-4">What&apos;s Included in Our Interior Painting</h3>

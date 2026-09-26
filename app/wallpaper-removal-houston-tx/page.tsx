@@ -78,7 +78,7 @@ const serviceSchema = {
   "name": "Wallpaper Removal in Houston, TX",
   "description": "Professional wallpaper removal including controlled steam removal, adhesive cleanup, drywall repair and skim coating, priming, and a flawless painted finish for Houston homes.",
   "serviceType": "Wallpaper Removal",
-  "provider": { "@id": "https://houstonsuperiorpainting.com/#business" },
+  "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

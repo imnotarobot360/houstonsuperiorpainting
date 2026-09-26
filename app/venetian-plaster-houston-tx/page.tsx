@@ -115,7 +115,7 @@ const serviceSchema = {
   "name": "Venetian Plaster in Houston, TX",
   "description": "Authentic hand-troweled Venetian plaster and polished plaster finishes including feature walls, ceilings, fireplace surrounds, and full-room applications using lime-based artisan plaster for Houston luxury interiors.",
   "serviceType": "Venetian Plaster and Polished Plaster Finishes",
-  "provider": { "@id": "https://houstonsuperiorpainting.com/#business" },
+  "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

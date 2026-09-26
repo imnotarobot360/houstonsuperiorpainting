@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "2026 Venetian plaster pricing, the hand-applied process, where it works in Houston homes, and how it holds up in humidity.",
     type: "article",
     publishedTime: "2026-06-13",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -77,7 +77,7 @@ export default function VenetianPlasterHoustonPage() {
     <BlogPostTemplate
       title="Venetian Plaster in Houston TX: Cost, Process & Where to Use It"
       excerpt="Venetian plaster is the hand-applied, lime-based finish that makes people stop and ask what's on the walls. Here's what it costs in Houston, where it works, how it handles humidity, and what a professional application actually involves."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Professional Painting Contractor"
       publishDate="June 13, 2026"
       readTime="12 min read"

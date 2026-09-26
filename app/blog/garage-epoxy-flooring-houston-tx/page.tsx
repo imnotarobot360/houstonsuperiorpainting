@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-07-16T08:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [
       {
         url: "https://houstonsuperiorpainting.com/images/blog/garage-epoxy-flooring-houston.png",
@@ -105,7 +105,7 @@ export default function GarageEpoxyFlooringHoustonPage() {
       slug="garage-epoxy-flooring-houston-tx"
       title="Your Living Room Is 200 Square Feet. Your Garage Is 400. Why Are You Hiding It?"
       excerpt="Most homeowners take pride in their living room but neglect the largest room in the house. Here's why professional garage epoxy flooring is one of the smartest upgrades you can make in Houston."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="July 16, 2026"
       readTime="8 min read"

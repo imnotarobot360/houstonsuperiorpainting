@@ -145,7 +145,7 @@ export default function BestPaintingCompanyKatyTX() {
               <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
-                  <span>JJ Semo</span>
+                  <span>Juan Serra</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />

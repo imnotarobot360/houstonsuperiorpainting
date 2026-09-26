@@ -37,17 +37,7 @@ const SERVICE_JSONLD = {
   description:
     "Full-service load bearing wall removal in Houston, Katy, Cypress, Sugar Land and surrounding TX cities. Includes structural engineer assessment, City of Houston permits, temporary support, wall demo, beam or LVL installation, electrical/plumbing re-routing coordination, drywall repair, texture match, and paint.",
   serviceType: "Load Bearing Wall Removal",
-  provider: {
-    "@type": "LocalBusiness",
-    "@id": "https://houstonsuperiorpainting.com/#business",
-    name: "Houston Superior Painting",
-    telephone: "+1-346-594-5960", email: "info@houstonsuperiorpainting.com",
-    url: "https://houstonsuperiorpainting.com",
-    image: "https://houstonsuperiorpainting.com/images/og-cover.jpg",
-    priceRange: "$$$$",
-    address: { "@type": "PostalAddress", streetAddress: "14150 Huffmeister Rd, Suite 410", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77429", addressCountry: "US" },
-    geo: { "@type": "GeoCoordinates", latitude: 29.9012, longitude: -95.6293 }
-  },
+  provider: { "@id": "https://houstonsuperiorpainting.com/#organization" },
   areaServed: [
     { "@type": "City", name: "Houston" }, { "@type": "City", name: "Katy" }, { "@type": "City", name: "Cypress" },
     { "@type": "City", name: "Sugar Land" }, { "@type": "City", name: "Richmond" }, { "@type": "City", name: "Pearland" },

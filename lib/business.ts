@@ -31,11 +31,12 @@ export const BUSINESS = {
   },
 
   // ─── Owner (for Person schema + EEAT) ──────────────────
+  // No `image`: the existing portrait files are stock/AI images, not Juan.
+  // Add one only when a real photo of him is available.
   founder: {
-    name: "JJ Semo",
-    jobTitle: "Founder & Lead Painter",
-    image: "https://houstonsuperiorpainting.com/images/jj-semo.jpg",
-    bio: "JJ Semo founded Houston Superior Painting in 2019 in Cypress, TX. He personally oversees quality on every project and leads the company's prep-first philosophy.",
+    name: "Juan Serra",
+    jobTitle: "Owner",
+    bio: "Juan Serra owns Houston Superior Painting, founded in 2019 in Cypress, TX. He walks estimates, sets the prep plan for every job, and does the final walkthrough with the homeowner.",
   },
 
   // ─── Primary Address (HQ — used in LocalBusiness root) ─
@@ -188,13 +189,12 @@ export const BUSINESS = {
   paintPartners: ["Sherwin-Williams", "Benjamin Moore"],
 
   // ─── Social / SameAs (for Organization schema) ─────────
+  // Brand-level profiles only. Google Business Profiles are per office and
+  // live in lib/locations.ts. Yelp and BBB were removed: neither URL could be
+  // confirmed as our listing. Re-add them only once confirmed.
   social: {
-    googleMaps:
-      "https://www.google.com/maps/place/Houston+Superior+Painting../@29.7143308,-95.4349558,17z/data=!4m8!3m7!1s0x1c94ce195628f7bf:0xcc8b6e63c1c05fe7!8m2!3d29.7143308!4d-95.4349558!9m1!1b1!16s%2Fg%2F11y71l36d3",
     facebook: "https://www.facebook.com/houstonsuperiorpainting",
     instagram: "https://www.instagram.com/houstonsuperiorpainting",
-    yelp: "https://www.yelp.com/biz/houston-superior-painting",
-    bbb: "https://www.bbb.org/us/tx/cypress/profile/painting-contractors/houston-superior-painting",
   },
 } as const;
 
@@ -206,6 +206,9 @@ export const MAIL_HREF  = `mailto:${BUSINESS.email}`;
 export const FULL_ADDRESS = `${BUSINESS.primaryAddress.street}, ${BUSINESS.primaryAddress.city}, ${BUSINESS.primaryAddress.state} ${BUSINESS.primaryAddress.zip}`;
 
 export const SAME_AS_URLS = Object.values(BUSINESS.social);
+
+export const OFFICIAL_SITE_DISCLAIMER =
+  "houstonsuperiorpainting.com is the only official website of Houston Superior Painting, owned by Juan Serra. Our five offices are in Cypress, Houston, Katy, Sugar Land and Magnolia, Texas, and all of them use (346) 594-5960. We are not affiliated with any other painting company using a similar name, in Houston or anywhere else.";
 
 /**
  * Garage Epoxy is its own brand on its own domain (see lib/epoxy.ts).

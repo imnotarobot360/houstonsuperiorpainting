@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Complete pricing guide for interior and exterior painting in Houston. Updated for 2026 with real local prices.",
     type: "article",
     publishedTime: "2026-05-12",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/house-painting-cost-houston.jpg"],
   },
   twitter: {
@@ -76,7 +76,7 @@ export default function HousePaintingCostHoustonPage() {
     <BlogPostTemplate
       title="How Much Does House Painting Cost in Houston? 2026 Price Guide"
       excerpt="Understanding painting costs in Houston helps you budget accurately and avoid surprises. This comprehensive guide covers interior and exterior pricing, what affects costs, and how to get the best value for your investment."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="May 12, 2026"
       readTime="12 min read"
