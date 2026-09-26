@@ -444,7 +444,7 @@ export default function PaintersNearMeKatyTxPage() {
         </li>
       </ul>
       <p>
-        Free estimates. No money until you approve. 5-year workmanship guarantee. Explore our{" "}
+        Free estimates. No upfront payment. 5-year workmanship guarantee. Explore our{" "}
         <Link href="/interior-painting-houston-tx">interior painting</Link> and{" "}
         <Link href="/exterior-painting-houston-tx">exterior painting</Link> services, or compare prices in our{" "}
         <Link href="/blog/exterior-painting-cost-katy-tx">Katy exterior painting cost guide</Link>.

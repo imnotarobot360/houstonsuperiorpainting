@@ -77,7 +77,7 @@ export function LuxuryHero() {
             {[
               "Fully Insured",
               `${BUSINESS.trust.warrantyYears}-Year Warranty`,
-              "No Money Until You Approve",
+              "No Upfront Payment",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-gold" aria-hidden="true" />

@@ -191,7 +191,7 @@ export default function InteriorPaintingHoustonGuidePage() {
 
       <ul>
         <li>Free estimates within 24 hours</li>
-        <li>No money until you approve the estimate</li>
+        <li>No upfront payment: nothing is due until you approve the estimate</li>
         <li>Professional, clean work every time</li>
       </ul>
 

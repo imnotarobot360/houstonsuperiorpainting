@@ -22,7 +22,7 @@ const badges = [
     // 4.9 / 200+ figure belongs to one Google Business Profile (Houston).
     // Each office page links to its own Google reviews instead.
     icon: Star,
-    title: "No Money Until You Approve",
+    title: "No Upfront Payment",
     subtitle: BUSINESS.paymentPolicy.badgeSubtitle,
   },
 ]

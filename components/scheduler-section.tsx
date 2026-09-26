@@ -23,7 +23,7 @@ export function SchedulerSection() {
             <div className="space-y-4">
               {[
                 { icon: Clock, text: "Takes less than 2 minutes to submit" },
-                { icon: Shield, text: "No obligation - No money until you approve" },
+                { icon: Shield, text: "No obligation - No upfront payment" },
                 { icon: CheckCircle, text: "Fast turnaround - quote sent straight to you" },
               ].map((benefit) => (
                 <div key={benefit.text} className="flex items-center gap-3">

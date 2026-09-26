@@ -13,7 +13,7 @@ const uspPoints = [
   },
   {
     icon: CreditCard,
-    title: "No Money Until You Approve",
+    title: "No Upfront Payment",
     description: "Your estimate is free and nothing is collected until you approve it. A down payment then schedules the job, and the balance is due after the final walkthrough."
   },
   {

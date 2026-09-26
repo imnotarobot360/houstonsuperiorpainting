@@ -368,7 +368,7 @@ export default function BestPaintersHoustonPage() {
           <strong>Written detailed estimates</strong> — line-itemed with specific products and prep scope
         </li>
         <li>
-          <strong>No money until you approve</strong> — the estimate is free; a down payment is due only after you approve it
+          <strong>No upfront payment</strong> — the estimate is free; a down payment is due only after you approve it
         </li>
         <li>
           <strong>5-year workmanship guarantee</strong> — in writing, covering all labor

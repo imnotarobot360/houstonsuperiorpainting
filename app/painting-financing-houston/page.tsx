@@ -74,7 +74,7 @@ const benefits = [
   },
   {
     icon: ShieldCheck,
-    title: "No Money Until You Approve",
+    title: "No Upfront Payment",
     description: "Financing lets you spread the cost over time; ask about terms at your estimate.",
   },
 ]

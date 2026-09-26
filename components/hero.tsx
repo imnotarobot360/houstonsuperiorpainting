@@ -80,7 +80,7 @@ export function Hero() {
 
             {/* Trust Points */}
             <div className="flex flex-wrap gap-4">
-              {["Fully Insured", "5-Year Exterior Warranty", "No Money Until You Approve"].map((point) => (
+              {["Fully Insured", "5-Year Exterior Warranty", "No Upfront Payment"].map((point) => (
                 <div key={point} className="flex items-center gap-2 text-foreground">
                   <CheckCircle className="h-5 w-5 text-primary" />
                   <span className="font-medium">{point}</span>

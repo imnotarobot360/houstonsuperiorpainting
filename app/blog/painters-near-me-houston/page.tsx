@@ -414,7 +414,7 @@ export default function PaintersNearMeHoustonPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <span><strong>No money until you approve.</strong> Free estimate; a down payment is due only after you approve it.</span>
+                <span><strong>No upfront payment.</strong> Free estimate; a down payment is due only after you approve it.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
@@ -458,10 +458,10 @@ export default function PaintersNearMeHoustonPage() {
             <Card className="my-12 border-l-4 border-l-primary bg-muted/50 not-prose">
               <CardContent className="p-8">
                 <h2 className="text-2xl font-bold mb-4">
-                  Get a Free Quote in 24 Hours &mdash; No Money Until You Approve
+                  Get a Free Quote in 24 Hours &mdash; No Upfront Payment
                 </h2>
                 <p className="mb-4 text-muted-foreground">
-                  Houston Superior Painting offers free, itemized estimates within 24 hours. No money until you approve. 5-year warranty. Serving Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, Bellaire, and The Woodlands.
+                  Houston Superior Painting offers free, itemized estimates within 24 hours. No upfront payment. 5-year warranty. Serving Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, Bellaire, and The Woodlands.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" asChild>

@@ -494,7 +494,7 @@ export default function ExteriorPaintingCostKatyPage() {
         <li>HOA color guidance at no charge</li>
       </ul>
       <p>
-        <strong>No money until you approve the estimate.</strong>
+        <strong>No upfront payment: nothing is due until you approve the estimate.</strong>
       </p>
       <p>
         Call or text <strong>(346) 594-5960</strong> — available 7 days a week. Learn more about our{" "}

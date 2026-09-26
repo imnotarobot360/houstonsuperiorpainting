@@ -156,7 +156,7 @@ export default function HSPvsCertaProPage() {
               </div>
               <div className="bg-card p-6 rounded-xl shadow-sm text-center">
                 <DollarSign className="w-10 h-10 text-primary mx-auto mb-3" />
-                <h3 className="font-semibold text-lg mb-2">No Money Until You Approve</h3>
+                <h3 className="font-semibold text-lg mb-2">No Upfront Payment</h3>
                 <p className="text-muted-foreground text-sm">Free estimate · down payment only after approval</p>
               </div>
               <div className="bg-card p-6 rounded-xl shadow-sm text-center">
