@@ -74,13 +74,13 @@ const relatedPosts = [
     title: "Why DIY Cabinet Painting Fails in Houston",
     href: "/blog/why-diy-cabinet-painting-fails-houston-tx",
     excerpt: "The common mistakes that lead to peeling, sticky, and streaky cabinets — and how pros avoid them.",
-    image: "/images/blog/why-diy-cabinet-painting-fails.png",
+    image: "/images/blog/diy-cabinet-painting-fails.png",
   },
   {
     title: "Cabinet Color Transformations in Katy & Sugar Land",
     href: "/blog/cabinet-color-transformations-katy-sugar-land-tx",
     excerpt: "Real before-and-after cabinet projects and the colors Houston-area homeowners are choosing.",
-    image: "/images/blog/cabinet-color-transformations.jpg",
+    image: "/images/blog/cabinet-transformations-katy-sugar-land.png",
   },
 ]
 

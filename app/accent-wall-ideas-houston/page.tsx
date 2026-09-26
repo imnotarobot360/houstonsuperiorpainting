@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Bold accent wall designs for Houston homes. Limewash, color-blocking, textured finishes, and more.",
     url: "https://houstonsuperiorpainting.com/accent-wall-ideas-houston",
     type: "article",
-    images: [{ url: "/images/og-interior-painting.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/og/og-interior-painting.jpg", width: 1200, height: 630 }],
   },
   other: {
     "geo.region": "US-TX",
@@ -51,7 +51,7 @@ export default function AccentWallIdeasHouston() {
                 "publisher": { "@id": "https://houstonsuperiorpainting.com/#organization" },
                 "datePublished": "2026-05-16",
                 "dateModified": "2026-05-16",
-                "image": "/images/og-interior-painting.jpg",
+                "image": "/images/og/og-interior-painting.jpg",
                 "mainEntityOfPage": "https://houstonsuperiorpainting.com/accent-wall-ideas-houston",
               },
               {

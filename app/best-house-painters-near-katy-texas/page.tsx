@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Top-rated house painters near Katy TX. Interior, exterior, cabinet painting. Free estimates. (346) 594-5960.",
     url: "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas",
     type: "website",
-    images: [{ url: "/images/og-exterior-painting.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/og/og-exterior-painting.jpg", width: 1200, height: 630 }],
   },
   other: { "geo.region": "US-TX", "geo.placename": "Katy", "geo.position": "29.7858;-95.8245", ICBM: "29.7858, -95.8245" },
 };

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Houston Superior Painting vs CertaPro Painters: 2026 Comparison",
     description: "Detailed comparison of local vs franchise painting companies in Houston.",
     type: "website",
-    images: ["/images/hsp-vs-certapro.jpg"],
+    images: ["/images/og-cover.jpg"],
   },
   twitter: {
     card: "summary_large_image",

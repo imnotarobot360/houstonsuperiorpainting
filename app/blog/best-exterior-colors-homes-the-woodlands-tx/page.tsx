@@ -51,7 +51,7 @@ const relatedPosts = [
     title: "Painters in The Woodlands TX",
     href: "/painters-the-woodlands-tx",
     excerpt: "Professional painting services for The Woodlands homeowners.",
-    image: "/images/og/og-painters-the-woodlands.jpg"
+    image: "/images/og/og-painters-woodlands.jpg"
   },
   {
     title: "Houston Paint Color Trends 2026",
@@ -63,7 +63,7 @@ const relatedPosts = [
     title: "How Long Does Exterior Paint Last in Houston?",
     href: "/blog/how-long-does-exterior-paint-last-houston",
     excerpt: "Understanding paint durability in Houston's climate.",
-    image: "/images/blog/exterior-paint-longevity.jpg"
+    image: "/images/blog/exterior-paint-durability-houston.jpg"
   }
 ]
 

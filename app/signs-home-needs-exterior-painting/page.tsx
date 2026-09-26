@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "10 Signs Your Home Needs Exterior Painting in Houston TX",
   description: "Clear warning signs that your Houston home needs exterior painting before storm season. Peeling, fading, chalking, wood rot, and more.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/signs-home-needs-exterior-painting" },
-  openGraph: { title: "10 Signs Your Home Needs Exterior Painting", description: "Don\u2019t wait for storm damage. Spot these 10 warning signs before it\u2019s too late.", url: "https://houstonsuperiorpainting.com/signs-home-needs-exterior-painting", type: "article", images: [{ url: "/images/og-exterior-painting.jpg", width: 1200, height: 630 }] },
+  openGraph: { title: "10 Signs Your Home Needs Exterior Painting", description: "Don\u2019t wait for storm damage. Spot these 10 warning signs before it\u2019s too late.", url: "https://houstonsuperiorpainting.com/signs-home-needs-exterior-painting", type: "article", images: [{ url: "/images/og/og-exterior-painting.jpg", width: 1200, height: 630 }] },
   other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },
 };
 

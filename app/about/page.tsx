@@ -120,9 +120,7 @@ export default function AboutPage() {
         {/* ─── OWNER ─── */}
         <section className="container mx-auto px-4 max-w-4xl mb-14" id="juan-serra">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Who runs Houston Superior Painting</h2>
-          {/* TODO(juan): add a real photo of Juan Serra at /public/images/juan-serra.jpg, render it here with
-              alt="Juan Serra, owner of Houston Superior Painting", and set BUSINESS.founder.image in lib/business.ts.
-              Do not use a stock or AI-generated face. */}
+          {/* No owner photo on the site, by choice. */}
           <div className="space-y-4 text-lg leading-relaxed text-foreground/85">
             <p>
               <strong className="text-foreground">{BUSINESS.founder.name}</strong> founded Houston Superior Painting

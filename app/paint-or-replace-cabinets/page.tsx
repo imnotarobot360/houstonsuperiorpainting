@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Should You Paint or Replace Cabinets? Cost & Expert Guide",
   description: "Paint vs replace cabinets \u2013 professional analysis showing how to save 60-70% with quality refinishing. Side-by-side cost comparison.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/paint-or-replace-cabinets" },
-  openGraph: { title: "Paint or Replace Cabinets? Complete Guide", description: "Save 60-70% by painting instead of replacing cabinets. Expert breakdown.", url: "https://houstonsuperiorpainting.com/paint-or-replace-cabinets", type: "article", images: [{ url: "/images/og-cabinet-refinishing.jpg", width: 1200, height: 630 }] },
+  openGraph: { title: "Paint or Replace Cabinets? Complete Guide", description: "Save 60-70% by painting instead of replacing cabinets. Expert breakdown.", url: "https://houstonsuperiorpainting.com/paint-or-replace-cabinets", type: "article", images: [{ url: "/images/og/og-cabinet-refinishing.jpg", width: 1200, height: 630 }] },
   other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },
 };
 

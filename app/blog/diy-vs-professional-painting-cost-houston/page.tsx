@@ -74,13 +74,13 @@ const relatedPosts = [
     title: "What to Expect From a Painting Estimate",
     href: "/blog/what-to-expect-painting-estimate",
     excerpt: "How professional estimates work, what should be included, and how to compare quotes fairly.",
-    image: "/images/blog/what-to-expect-painting-estimate.jpg",
+    image: "/images/blog/painting-estimate-guide.jpg",
   },
   {
     title: "How to Choose the Best Painters in Houston",
     href: "/questions-to-ask-before-hiring-painters",
     excerpt: "The questions to ask and red flags to avoid when hiring a painting contractor.",
-    image: "/images/blog/how-to-choose-best-painters-houston.jpg",
+    image: "/images/blog/choose-best-painters-houston.jpg",
   },
 ]
 

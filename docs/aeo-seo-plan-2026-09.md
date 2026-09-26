@@ -119,7 +119,7 @@ GBP descriptions + landing URLs (Oct 26), GBP photos/posts/Q&As (Oct 27), Yelp/A
 Done in code: everything in the Sep 28 – Oct 23 calendar (redirects, canonical fix, About, Organization + 5 office LocalBusiness schema, cost-figure alignment, Quick Answers, llms.txt, robots, og:image on all pages, short titles, "2024" title, 8 cannibal 301s, Drafts 1–3, 4 service pages, 5 office city pages, /faq hub, 5-office contact + footer Locations, estimate page in header CTA, internal-linking map). The retired "JJ Semo" persona is replaced by Juan Serra sitewide.
 
 Still needed from Juan (search the code for `TODO(juan)` / `TODO(gbp)`):
-- Real photo of Juan → public/images/juan-serra.jpg, then set BUSINESS.founder.image. (public/images/jj-semo.jpg is an AI-generated face; it is no longer referenced — delete it.)
+- No photo of Juan on the site (his choice). The AI-generated jj-semo.jpg was removed from the repo.
 - Each office's GBP share link → BUSINESS.locations[].mapsUrl (hasMap + "See reviews on Google"). Until then a Maps search for the exact address is used.
 - Lat/long for the Sugar Land and Magnolia offices from their GBP pins.
 - 2–3 real jobs with photos for Katy, Sugar Land, Magnolia in lib/projects.ts (neighborhood "X, City") — the "Recent [City] projects" section renders automatically.

@@ -80,7 +80,7 @@ const relatedPosts = [
     title: "Paint Preparation for Houston's Climate",
     href: "/blog/paint-preparation-houston-climate",
     excerpt: "Why prep — not application method — is what really determines how long your paint lasts.",
-    image: "/images/blog/paint-preparation-houston-climate.jpg",
+    image: "/images/blog/paint-preparation-houston.jpg",
   },
 ]
 

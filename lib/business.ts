@@ -31,11 +31,8 @@ export const BUSINESS = {
   },
 
   // ─── Owner (for Person schema + EEAT) ──────────────────
-  // Juan Serra is the real owner. The site previously named a "JJ Semo" persona
-  // with an AI-generated headshot; both were removed. Add a real photo at
-  // /public/images/juan-serra.jpg and set `image` to its URL — until then no
-  // image is emitted, because a stock or generated face attached to a real
-  // person's name is worse for trust than no photo at all.
+  // Juan Serra is the owner. No photo of him is used on the site, by choice,
+  // so Person schema carries no image.
   founder: {
     name: "Juan Serra",
     givenName: "Juan",

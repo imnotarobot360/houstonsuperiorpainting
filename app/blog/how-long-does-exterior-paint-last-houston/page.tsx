@@ -55,13 +55,13 @@ const relatedPosts = [
     title: "Exterior House Painting Houston: Everything You Need to Know",
     href: "/blog/exterior-house-painting-houston-guide",
     excerpt: "Complete guide to exterior painting in Houston.",
-    image: "/images/blog/exterior-painting-houston.jpg"
+    image: "/images/blog/exterior-house-painting-guide.jpg"
   },
   {
     title: "Best Exterior Paints for Houston Humidity",
     href: "/blog/best-exterior-paints-houston-humidity",
     excerpt: "Top paint products for Houston's challenging climate.",
-    image: "/images/blog/best-exterior-paints-houston.jpg"
+    image: "/images/blog/exterior-paint-houston-humidity.jpg"
   },
   {
     title: "How Much Does House Painting Cost in Houston?",

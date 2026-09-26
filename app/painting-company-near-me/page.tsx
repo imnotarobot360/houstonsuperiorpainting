@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "Trusted local painting company serving Houston, Katy, Cypress, Sugar Land & beyond. Free estimates. (346) 594-5960.",
     url: "https://houstonsuperiorpainting.com/painting-company-near-me",
     type: "website",
-    images: [{ url: "/images/og-interior-painting.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/og/og-interior-painting.jpg", width: 1200, height: 630 }],
   },
   other: {
     "geo.region": "US-TX",

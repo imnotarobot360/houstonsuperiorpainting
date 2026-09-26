@@ -61,13 +61,13 @@ const relatedPosts = [
     title: "Exterior House Painting in Houston: Everything Homeowners Need to Know",
     href: "/blog/exterior-house-painting-houston-guide",
     excerpt: "Comprehensive guide to exterior painting in Houston's climate.",
-    image: "/images/blog/exterior-painting-houston.jpg"
+    image: "/images/blog/exterior-house-painting-guide.jpg"
   },
   {
     title: "How to Choose the Best Painters in Houston",
     href: "/questions-to-ask-before-hiring-painters",
     excerpt: "Tips for finding reliable, quality painters in Houston.",
-    image: "/images/blog/choose-painters-houston.jpg"
+    image: "/images/blog/choose-best-painters-houston.jpg"
   }
 ]
 
