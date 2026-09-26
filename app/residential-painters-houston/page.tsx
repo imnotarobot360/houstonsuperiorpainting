@@ -52,7 +52,7 @@ export default function ResidentialPaintersHouston() {
       <section data-speakable="true" className="quick-answer bg-secondary/10 border-l-4 border-secondary py-6">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
-          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting provides full-service residential painting across Greater Houston. Interior painting: $2.50-$4.50/sq ft. Exterior: $3,500-$12,000. Cabinets: $3,000-$6,500 per kitchen. We serve Houston, Katy, Cypress, Sugar Land, The Woodlands, and surrounding areas. Insured, 5-year workmanship warranty, no deposit. Call (346) 594-5960.</p>
+          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting provides full-service residential painting across Greater Houston. Interior painting: $2.50-$4.50/sq ft. Exterior: $3,500-$12,000. Cabinets: $3,000-$6,500 per kitchen. We serve Houston, Katy, Cypress, Sugar Land, The Woodlands, and surrounding areas. Insured, 5-year workmanship warranty, no money until you approve the estimate. Call (346) 594-5960.</p>
         </div>
       </section>
 
@@ -106,7 +106,7 @@ export default function ResidentialPaintersHouston() {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary-foreground mb-4">Ready to Transform Your Home?</h2>
-          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">Request your free residential painting quote. No deposit required. 5-year workmanship warranty.</p>
+          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">Request your free residential painting quote. No money until you approve the estimate. 5-year workmanship warranty.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors"><Phone className="h-5 w-5" /> Call {BUSINESS.phone}</a>
             <a href={SMS_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors"><MessageSquare className="h-5 w-5" /> Text Us</a>

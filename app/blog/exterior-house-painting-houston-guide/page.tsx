@@ -149,7 +149,7 @@ export default function ExteriorHousePaintingGuidePage() {
       <h2>Why Homeowners Choose Houston Superior Painting</h2>
 
       <p>
-        Houston Superior Painting provides detailed preparation, professional crews, premium coatings, a 5-year workmanship warranty, no deposit, organized jobsites, and excellent communication.
+        Houston Superior Painting provides detailed preparation, professional crews, premium coatings, a 5-year workmanship warranty, no money until you approve the estimate, organized jobsites, and excellent communication.
       </p>
 
       <p>

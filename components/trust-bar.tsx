@@ -50,7 +50,7 @@ export function TrustBar({ hideRating = false }: { hideRating?: boolean } = {}) 
           </div>
           <span className="hidden lg:inline text-primary-foreground/50">|</span>
           <div className="hidden lg:flex items-center gap-1.5">
-            <span className="font-semibold text-secondary">No Upfront Payment</span>
+            <span className="font-semibold text-secondary">No Money Until You Approve</span>
           </div>
         </div>
       </div>

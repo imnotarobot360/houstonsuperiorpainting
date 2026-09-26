@@ -23,7 +23,7 @@ const rows = [
   },
   {
     feature: "Payment",
-    us: "No upfront payment — pay when satisfied",
+    us: "Nothing collected until you approve the estimate; down payment after approval",
     them: "Large deposit required before work starts",
   },
   {

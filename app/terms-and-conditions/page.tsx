@@ -50,8 +50,10 @@ export default function TermsAndConditionsPage() {
 
             <h2>Payment Terms</h2>
             <ul>
-              <li>No upfront payment is required before work begins.</li>
-              <li>Payment is due upon completion of the project and your satisfaction with the work.</li>
+              {/* TODO(juan): make sure the signed contract states the same payment terms. */}
+              <li>Estimates are free. No payment is collected before you approve the written estimate.</li>
+              <li>Upon your written approval, a down payment is due to schedule the project.</li>
+              <li>The balance is due upon completion of the project and the final walkthrough.</li>
               <li>We accept cash, check, credit cards, and electronic payment methods.</li>
               <li>For larger projects, a payment schedule may be arranged and outlined in the project agreement.</li>
             </ul>

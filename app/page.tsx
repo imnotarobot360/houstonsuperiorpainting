@@ -63,7 +63,7 @@ const homeFaqs = [
   },
   {
     q: "Do you require payment upfront?",
-    a: "No. We don't take a deposit or any upfront payment. You pay when the final walkthrough is done and you're satisfied with the work. We accept all major credit cards and checks, and offer financing options for larger projects.",
+    a: "Not before you approve the estimate. Estimates are free and we don't collect any money until you approve the written estimate. After you approve, we collect a down payment to schedule the job, and the balance is due after the final walkthrough. We accept all major credit cards and checks, and offer financing options for larger projects.",
   },
 ]
 

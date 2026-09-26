@@ -367,7 +367,7 @@ export default function ExteriorPaintDurabilityHoustonPage() {
         <li>Premium Sherwin-Williams or Benjamin Moore paint</li>
         <li>Two full coats for optimal coverage and durability</li>
         <li>Professional application by experienced crews</li>
-        <li>5-year workmanship warranty and no deposit</li>
+        <li>5-year workmanship warranty and no money until you approve the estimate</li>
       </ul>
 
       <p>

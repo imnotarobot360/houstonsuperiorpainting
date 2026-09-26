@@ -499,7 +499,7 @@ const blogPosts = [
   {
     slug: "painters-near-me-houston",
     title: "Painters Near Me in Houston: Costs, Timing & How to Hire the Right Crew",
-    excerpt: "The best painters near me in Houston offer 5-year warranties, no upfront payment, and proper prep. Get costs, timing, and a free 24-hour quote.",
+    excerpt: "The best painters near me in Houston offer 5-year warranties, free written estimates, and proper prep. Get costs, timing, and a free 24-hour quote.",
     category: "Finding Painters",
     author: "Houston Superior Painting",
     publishDate: "April 28, 2026",

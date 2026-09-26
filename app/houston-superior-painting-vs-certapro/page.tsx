@@ -58,10 +58,10 @@ const comparisonData = [
     hspBetter: true,
   },
   {
-    feature: "Deposit Required",
-    hsp: "No deposit required",
-    certapro: "Deposit typically required",
-    hspBetter: true,
+    feature: "Payment Timing",
+    hsp: "Nothing collected until you approve the estimate; down payment after approval",
+    certapro: "Varies by franchise location",
+    hspBetter: null,
   },
   {
     feature: "Estimate Response",
@@ -92,7 +92,7 @@ const comparisonData = [
 const faqs = [
   {
     question: "Is Houston Superior Painting better than CertaPro?",
-    answer: "Houston Superior Painting offers several advantages over CertaPro for Houston homeowners: longer warranty (5 years vs 1-2 years), no deposit required, owner involvement in every project, and competitive pricing without franchise fees. Our 4.9-star Google rating with 200+ reviews reflects our commitment to quality."
+    answer: "Houston Superior Painting offers several advantages over CertaPro for Houston homeowners: longer warranty (5 years vs 1-2 years), nothing collected until you approve the written estimate, owner involvement in every project, and competitive pricing without franchise fees. Our 4.9-star Google rating with 200+ reviews reflects our commitment to quality."
   },
   {
     question: "Why choose a local painter over a franchise?",
@@ -156,8 +156,8 @@ export default function HSPvsCertaProPage() {
               </div>
               <div className="bg-card p-6 rounded-xl shadow-sm text-center">
                 <DollarSign className="w-10 h-10 text-primary mx-auto mb-3" />
-                <h3 className="font-semibold text-lg mb-2">No Deposit Required</h3>
-                <p className="text-muted-foreground text-sm">Pay only after completion</p>
+                <h3 className="font-semibold text-lg mb-2">No Money Until You Approve</h3>
+                <p className="text-muted-foreground text-sm">Free estimate · down payment only after approval</p>
               </div>
               <div className="bg-card p-6 rounded-xl shadow-sm text-center">
                 <Star className="w-10 h-10 text-primary mx-auto mb-3" />

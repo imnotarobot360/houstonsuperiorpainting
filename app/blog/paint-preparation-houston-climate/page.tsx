@@ -154,7 +154,7 @@ export default function PaintPreparationHoustonPage() {
       </p>
 
       <p>
-        We offer free estimates, professional communication, detailed preparation, high-end finishes, a 5-year workmanship warranty, and no deposit.
+        We offer free estimates, professional communication, detailed preparation, high-end finishes, a 5-year workmanship warranty, and no money until you approve the estimate.
       </p>
 
       <p>

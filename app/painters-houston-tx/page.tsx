@@ -64,7 +64,7 @@ const FAQS = [
   },
   {
     q: "Do you require a deposit?",
-    a: "No. You pay when the walkthrough is done and you're satisfied.",
+    a: "Only after you approve the estimate. The estimate is free and we collect nothing before you approve it. Once you approve, a down payment schedules the job, and the balance is due after the final walkthrough.",
   },
   {
     q: "What does the 5-year warranty cover?",
@@ -171,7 +171,7 @@ export default function PaintersHoustonTX() {
             items={[
               {
                 title: "Estimate",
-                text: "on-site walkthrough, written scope with square footage, product, and coat count. No upfront payment.",
+                text: "on-site walkthrough, written scope with square footage, product, and coat count. Free, and nothing is due until you approve it.",
               },
               {
                 title: "Prep",
@@ -280,7 +280,7 @@ export default function PaintersHoustonTX() {
           <Link href={ESTIMATE_PATH} className="underline">
             request an estimate online
           </Link>
-          . Written scope in 24 hours, no upfront payment, 5-year warranty.
+          . Written scope in 24 hours, nothing due until you approve, 5-year warranty.
         </CtaBlock>
 
         <AuthorByline />

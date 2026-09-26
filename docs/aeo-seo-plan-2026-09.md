@@ -116,6 +116,8 @@ GBP descriptions + landing URLs (Oct 26), GBP photos/posts/Q&As (Oct 27), Yelp/A
 
 ## Implementation status (code shipped Sep 26, 2026)
 
+Payment policy (confirmed by Juan): free estimate, nothing collected until the customer approves the written estimate, then a down payment; balance after final walkthrough.
+
 Done in code: everything in the Sep 28 – Oct 23 calendar (redirects, canonical fix, About, Organization + 5 office LocalBusiness schema, cost-figure alignment, Quick Answers, llms.txt, robots, og:image on all pages, short titles, "2024" title, 8 cannibal 301s, Drafts 1–3, 4 service pages, 5 office city pages, /faq hub, 5-office contact + footer Locations, estimate page in header CTA, internal-linking map). The retired "JJ Semo" persona is replaced by Juan Serra sitewide.
 
 Still needed from Juan (search the code for `TODO(juan)` / `TODO(gbp)`):

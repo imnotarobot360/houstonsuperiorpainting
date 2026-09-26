@@ -218,8 +218,9 @@ export default function AboutPage() {
             <li className="flex gap-3">
               <ClipboardList className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
               <span>
-                <strong className="text-foreground">No upfront payment.</strong> You pay after the final walkthrough,
-                once you have inspected the work with the crew lead.
+                <strong className="text-foreground">No money until you approve.</strong> The estimate is free and nothing is
+                collected until you approve it in writing. A down payment then schedules the job, and the balance is
+                due after the final walkthrough with the crew lead.
               </span>
             </li>
             <li className="flex gap-3">

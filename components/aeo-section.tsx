@@ -32,7 +32,7 @@ export function AEOSection() {
             <li><strong className="text-foreground">Rating:</strong> {googleRating}/5 from {reviewCount}+ Google reviews</li>
             <li><strong className="text-foreground">Projects completed:</strong> {projectsCompleted}+</li>
             <li><strong className="text-foreground">Warranty:</strong> {warrantyYears}-year written warranty on all painting work</li>
-            <li><strong className="text-foreground">Payment:</strong> No upfront payment required</li>
+            <li><strong className="text-foreground">Payment:</strong> {BUSINESS.paymentPolicy.sentence}</li>
             <li><strong className="text-foreground">Insurance:</strong> Fully insured with {liabilityCoverage} general liability</li>
             <li><strong className="text-foreground">Paints used:</strong> Sherwin-Williams &amp; Benjamin Moore exclusively</li>
             <li><strong className="text-foreground">Areas served:</strong> Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, The Woodlands</li>

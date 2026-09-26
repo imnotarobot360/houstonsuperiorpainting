@@ -150,7 +150,7 @@ function buildFaqs(d: OfficeCityPageData, office: Office): FaqItem[] {
     },
     {
       q: `Do you offer free estimates in ${city}?`,
-      a: `Yes. Estimates in ${city} are free. You get a written scope and price within 24 hours, no upfront payment, and a ${BUSINESS.trust.warrantyYears}-year workmanship warranty on the finished job. Call ${BUSINESS.phone} or request one online.`,
+      a: `Yes. Estimates in ${city} are free. You get a written scope and price within 24 hours, nothing due until you approve it, and a ${BUSINESS.trust.warrantyYears}-year workmanship warranty on the finished job. Call ${BUSINESS.phone} or request one online.`,
     },
   ]
 }

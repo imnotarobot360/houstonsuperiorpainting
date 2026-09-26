@@ -40,7 +40,7 @@ export function LuxuryHero() {
             {BUSINESS.name} is a residential and commercial painting contractor founded in {BUSINESS.founded} by{" "}
             {BUSINESS.founder.name}, headquartered in Cypress, TX, and serving Greater Houston from five offices:
             Cypress, Houston, Katy, Sugar Land, and Magnolia. {BUSINESS.trust.liabilityCoverage} insured,{" "}
-            {BUSINESS.trust.warrantyYears}-year workmanship warranty, no upfront payment.{" "}
+            {BUSINESS.trust.warrantyYears}-year workmanship warranty, free estimates, no money until you approve the estimate.{" "}
             <a href={PHONE_HREF} className="font-semibold text-gold hover:underline">
               {BUSINESS.phone}
             </a>
@@ -77,7 +77,7 @@ export function LuxuryHero() {
             {[
               "Fully Insured",
               `${BUSINESS.trust.warrantyYears}-Year Warranty`,
-              "No Upfront Payment",
+              "No Money Until You Approve",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-gold" aria-hidden="true" />

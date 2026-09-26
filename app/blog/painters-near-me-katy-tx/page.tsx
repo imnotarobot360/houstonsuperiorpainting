@@ -131,7 +131,7 @@ export default function PaintersNearMeKatyTxPage() {
           <strong>$3,500–$12,000</strong> for an exterior, depending on size and prep. Because Texas requires no painting
           license, vetting matters: verify insurance by calling the carrier, confirm the crew are direct employees (not
           subcontractors), and get a line-item written estimate with a warranty. Houston Superior Painting has served Katy
-          since 2019 with no upfront payment and a 5-year workmanship guarantee — call or text (346) 594-5960.
+          since 2019 with free estimates, no money until you approve, and a 5-year workmanship guarantee — call or text (346) 594-5960.
         </p>
       </div>
 
@@ -444,7 +444,7 @@ export default function PaintersNearMeKatyTxPage() {
         </li>
       </ul>
       <p>
-        No upfront payment. Free estimates. 5-year workmanship guarantee. Explore our{" "}
+        Free estimates. No money until you approve. 5-year workmanship guarantee. Explore our{" "}
         <Link href="/interior-painting-houston-tx">interior painting</Link> and{" "}
         <Link href="/exterior-painting-houston-tx">exterior painting</Link> services, or compare prices in our{" "}
         <Link href="/blog/exterior-painting-cost-katy-tx">Katy exterior painting cost guide</Link>.

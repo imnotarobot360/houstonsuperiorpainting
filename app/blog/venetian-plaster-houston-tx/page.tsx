@@ -507,8 +507,8 @@ export default function VenetianPlasterHoustonPage() {
         <li>Warranty documentation</li>
       </ul>
       <p>
-        Call or text <strong>(346) 594-5960</strong>, or schedule your free estimate online. No upfront payment, free
-        estimates, and we&apos;ll show you what it looks like before you commit.
+        Call or text <strong>(346) 594-5960</strong>, or schedule your free estimate online. Free estimates, no money until
+        you approve, and we&apos;ll show you what it looks like before you commit.
       </p>
     </BlogPostTemplate>
   )

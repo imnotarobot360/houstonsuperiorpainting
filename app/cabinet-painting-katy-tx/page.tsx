@@ -102,7 +102,7 @@ export default function CabinetPaintingKatyTX() {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary-foreground mb-4">Ready to Transform Your Katy Kitchen?</h2>
-          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">Request your free cabinet painting quote today. Standard deposit required upon acceptance to secure your project date. 100% satisfaction guarantee.</p>
+          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">Request your free cabinet painting quote today. Nothing due until you approve the estimate; a down payment then secures your project date. 100% satisfaction guarantee.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors"><Phone className="h-5 w-5" /> Call {BUSINESS.phone}</a>
             <a href={SMS_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors"><MessageSquare className="h-5 w-5" /> Text Us</a>

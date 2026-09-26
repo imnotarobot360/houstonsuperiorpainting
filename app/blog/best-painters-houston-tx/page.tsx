@@ -55,7 +55,7 @@ const faqs = [
   {
     question: "What is a fair deposit for a painting project in Houston?",
     answer:
-      "A professional Houston painting company should not require more than 10–15% upfront for materials on very large projects. On standard projects, no deposit is required until work begins. Anything over 50% upfront is a major red flag.",
+      "A professional Houston painting company should not ask for money before you approve a written estimate. After you approve, a modest down payment to schedule the job is normal, with the balance due on completion. Anything over 50% upfront is a major red flag.",
   },
 ]
 
@@ -233,7 +233,7 @@ export default function BestPaintersHoustonPage() {
 
       <h3>7. What&apos;s your payment schedule?</h3>
       <p>
-        <strong>Acceptable:</strong> Nothing upfront or a small materials deposit (10–15%), balance on completion
+        <strong>Acceptable:</strong> Nothing before you approve the written estimate, a modest down payment after approval, balance on completion
         <br />
         <strong>Red flag:</strong> 50%+ required before work begins
       </p>
@@ -368,7 +368,7 @@ export default function BestPaintersHoustonPage() {
           <strong>Written detailed estimates</strong> — line-itemed with specific products and prep scope
         </li>
         <li>
-          <strong>No upfront payment</strong> — we don&apos;t ask for a deposit before work begins
+          <strong>No money until you approve</strong> — the estimate is free; a down payment is due only after you approve it
         </li>
         <li>
           <strong>5-year workmanship guarantee</strong> — in writing, covering all labor

@@ -11,7 +11,7 @@ import { Calendar, Clock, User, ArrowLeft, Phone, CheckCircle, MessageSquare } f
 export const metadata: Metadata = {
   title: "Painters Near Me in Houston: Costs, Timing & Hiring",
   description:
-    "The best painters near me in Houston offer 5-year warranties, no upfront payment, and proper prep. Get costs, timing, and a free 24-hour quote.",
+    "The best painters near me in Houston offer 5-year warranties, free written estimates, and proper prep. Get costs, timing, and a free 24-hour quote.",
   robots: {
     index: true,
     follow: true,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "article",
     title: "Painters Near Me in Houston: Costs, Timing & How to Hire the Right Crew",
     description:
-      "The best painters near me in Houston offer 5-year warranties, no upfront payment, and proper prep. Get costs, timing, and a free 24-hour quote.",
+      "The best painters near me in Houston offer 5-year warranties, free written estimates, and proper prep. Get costs, timing, and a free 24-hour quote.",
     url: "https://houstonsuperiorpainting.com/blog/painters-near-me-houston",
     siteName: "Houston Superior Painting",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Painters Near Me in Houston: Costs, Timing & How to Hire the Right Crew",
     description:
-      "The best painters near me in Houston offer 5-year warranties, no upfront payment, and proper prep. Get costs, timing, and a free 24-hour quote.",
+      "The best painters near me in Houston offer 5-year warranties, free written estimates, and proper prep. Get costs, timing, and a free 24-hour quote.",
   },
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/painters-near-me-houston",
@@ -47,12 +47,12 @@ const faqs = [
   {
     question: "How much do painters charge in Houston?",
     answer:
-      "Painters in Houston charge $2.50\u2013$4.50 per square foot for interiors and $1.50\u2013$4 per square foot for exteriors in 2026. A 2,500 sq ft home runs $4,000\u2013$8,000 inside and $5,500\u2013$9,000 outside for a two-story. A single room runs $300\u2013$800, and cabinet refinishing $3,000\u2013$6,500 per kitchen. Drywall repair $200\u2013$1,500. Houston Superior Painting provides free, line-item written quotes within 24 hours with no upfront deposit.",
+      "Painters in Houston charge $2.50\u2013$4.50 per square foot for interiors and $1.50\u2013$4 per square foot for exteriors in 2026. A 2,500 sq ft home runs $4,000\u2013$8,000 inside and $5,500\u2013$9,000 outside for a two-story. A single room runs $300\u2013$800, and cabinet refinishing $3,000\u2013$6,500 per kitchen. Drywall repair $200\u2013$1,500. Houston Superior Painting provides free, line-item written quotes within 24 hours, and nothing is due until you approve the estimate.",
   },
   {
     question: "Who are the best painters near me in Houston?",
     answer:
-      "The best painters near you in Houston offer a 5-year written warranty, no upfront deposit, a documented preparation process, full liability and workers\u2019 compensation insurance, and Houston-specific climate expertise. Houston Superior Painting checks all five boxes \u2014 500+ projects completed since 2019, BBB Accredited, $2M insured with workers\u2019 compensation, and a 5-year workmanship warranty. Always verify Google reviews, BBB rating, and proof of insurance before hiring any contractor.",
+      "The best painters near you in Houston offer a 5-year written warranty, no money due before you approve a written estimate, a documented preparation process, full liability and workers\u2019 compensation insurance, and Houston-specific climate expertise. Houston Superior Painting checks all five boxes \u2014 500+ projects completed since 2019, BBB Accredited, $2M insured with workers\u2019 compensation, and a 5-year workmanship warranty. Always verify Google reviews, BBB rating, and proof of insurance before hiring any contractor.",
   },
   {
     question: "When is the best time to paint a house in Houston?",
@@ -72,7 +72,7 @@ const faqs = [
   {
     question: "Do Houston painters require a deposit?",
     answer:
-      "Reputable Houston painters do not require large upfront deposits. Houston Superior Painting requires no upfront payment \u2014 you pay only after the work is completed and you\u2019ve signed off on the walkthrough. Be very cautious of any contractor who asks for 25%, 50%, or more before starting work \u2014 that\u2019s a common red flag for under-funded operators who use your money to start someone else\u2019s job.",
+      "Reputable Houston painters do not require large upfront deposits. Houston Superior Painting collects nothing until you approve the written estimate \u2014 after you approve, a down payment schedules the job and the balance is due after the final walkthrough. Be very cautious of any contractor who asks for 25%, 50%, or more before starting work \u2014 that\u2019s a common red flag for under-funded operators who use your money to start someone else\u2019s job.",
   },
   {
     question: "How long does exterior paint last in Houston?",
@@ -111,7 +111,7 @@ export default function PaintersNearMeHoustonPage() {
     "@id": "https://houstonsuperiorpainting.com/blog/painters-near-me-houston#article",
     headline: "Painters Near Me in Houston: Costs, Timing & How to Hire the Right Crew",
     description:
-      "The best painters near me in Houston offer 5-year warranties, no upfront payment, and proper prep. Get costs, timing, and a free 24-hour quote.",
+      "The best painters near me in Houston offer 5-year warranties, free written estimates, and proper prep. Get costs, timing, and a free 24-hour quote.",
     image: {
       "@type": "ImageObject",
       url: "https://houstonsuperiorpainting.com/images/blog/painters-near-me-houston.jpg",
@@ -234,7 +234,7 @@ export default function PaintersNearMeHoustonPage() {
             {/* Direct Answer Summary - Snippet Target */}
             <div className="bg-muted/50 border-l-4 border-l-primary p-6 rounded-r-lg mb-8 not-prose quick-answer">
               <p className="text-lg">
-                <strong>Quick answer:</strong> The best painters near you in Houston offer a 5-year exterior warranty, no upfront deposit, and a documented preparation process. Expect to pay $4,000&ndash;$8,000 to repaint a 2,500 sq ft interior and $3,500&ndash;$12,000 for exteriors, depending on home size and prep needs. Houston Superior Painting offers all three. Call <a href="tel:+13465945960" className="text-primary font-semibold hover:underline">(346) 594-5960</a> for a free 24-hour quote.
+                <strong>Quick answer:</strong> The best painters near you in Houston offer a 5-year exterior warranty, no money due before you approve a written estimate, and a documented preparation process. Expect to pay $4,000&ndash;$8,000 to repaint a 2,500 sq ft interior and $3,500&ndash;$12,000 for exteriors, depending on home size and prep needs. Houston Superior Painting offers all three. Call <a href="tel:+13465945960" className="text-primary font-semibold hover:underline">(346) 594-5960</a> for a free 24-hour quote.
               </p>
             </div>
 
@@ -321,7 +321,7 @@ export default function PaintersNearMeHoustonPage() {
               <li><strong>Verify reviews and insurance</strong> &mdash; check Google, BBB, and proof of insurance.</li>
               <li><strong>Ask about preparation</strong> &mdash; require pressure washing, scraping, caulking, and priming in writing.</li>
               <li><strong>Demand a 5-year exterior warranty</strong> in writing.</li>
-              <li><strong>Refuse large upfront deposits</strong> &mdash; pay on completion.</li>
+              <li><strong>Refuse large upfront deposits</strong> &mdash; nothing should be due before you approve a written estimate.</li>
               <li><strong>Confirm Houston weather expertise</strong> &mdash; the painter must schedule around humidity and storms.</li>
             </ol>
             <p>
@@ -414,7 +414,7 @@ export default function PaintersNearMeHoustonPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <span><strong>No upfront payment.</strong> You pay only when satisfied.</span>
+                <span><strong>No money until you approve.</strong> Free estimate; a down payment is due only after you approve it.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
@@ -458,10 +458,10 @@ export default function PaintersNearMeHoustonPage() {
             <Card className="my-12 border-l-4 border-l-primary bg-muted/50 not-prose">
               <CardContent className="p-8">
                 <h2 className="text-2xl font-bold mb-4">
-                  Get a Free Quote in 24 Hours &mdash; No Deposit Required
+                  Get a Free Quote in 24 Hours &mdash; No Money Until You Approve
                 </h2>
                 <p className="mb-4 text-muted-foreground">
-                  Houston Superior Painting offers free, itemized estimates within 24 hours. No deposit. 5-year warranty. Serving Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, Bellaire, and The Woodlands.
+                  Houston Superior Painting offers free, itemized estimates within 24 hours. No money until you approve. 5-year warranty. Serving Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, Bellaire, and The Woodlands.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" asChild>

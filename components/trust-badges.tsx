@@ -1,4 +1,5 @@
 import { ShieldCheck, BadgeCheck, Award, Star } from "lucide-react"
+import { BUSINESS } from "@/lib/business"
 
 const badges = [
   {
@@ -21,8 +22,8 @@ const badges = [
     // 4.9 / 200+ figure belongs to one Google Business Profile (Houston).
     // Each office page links to its own Google reviews instead.
     icon: Star,
-    title: "No Upfront Payment",
-    subtitle: "Pay after the final walkthrough",
+    title: "No Money Until You Approve",
+    subtitle: BUSINESS.paymentPolicy.badgeSubtitle,
   },
 ]
 

@@ -252,7 +252,7 @@ export default function HoustonPaintingCostGuidePage() {
           <Link href={ESTIMATE_PATH} className="underline">
             request an estimate
           </Link>
-          . Written quote in 24 hours, no upfront payment, 5-year warranty.
+          . Written quote in 24 hours, nothing due until you approve, 5-year warranty.
         </CtaBlock>
 
         <AuthorByline extra="Prices reviewed quarterly." />

@@ -43,7 +43,7 @@ const FAQS = [
     q: "How much insurance should a painter carry?",
     a: "At least $1M general liability. Houston Superior Painting carries $2M plus workers' compensation.",
   },
-  { q: "Is it normal to pay a deposit?", a: "Common, but not required. We take no upfront payment." },
+  { q: "Is it normal to pay a deposit?", a: "Yes, a down payment after you approve the written estimate is normal. We collect nothing before you approve." },
   { q: "How many quotes should I get?", a: "Three. Compare prep and product, not just the total." },
   {
     q: "Should I hire a painter who uses subcontractors?",
@@ -98,7 +98,7 @@ export default function HowToHireAPainterHoustonPage() {
             items={[
               <>Ask for the insurance certificate, not a verbal &ldquo;yes we&apos;re insured&rdquo;</>,
               <>Get prep, product, and coats in writing; that&apos;s where cheap quotes cut corners</>,
-              <>Never pay in full upfront; 0–30% deposit is normal, we charge none</>,
+              <>Never pay in full upfront; a down payment after you approve the estimate is normal, and nothing should be due before you approve.</>,
             ]}
           />
         </Section>

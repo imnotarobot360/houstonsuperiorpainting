@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     q: "Do you require a deposit?",
-    a: "No. You pay when the walkthrough is done and you're satisfied.",
+    a: "Only after you approve the estimate. The estimate is free and we collect nothing before you approve it. Once you approve, a down payment schedules the job, and the balance is due after the final walkthrough.",
   },
   {
     q: "How do I get an estimate?",

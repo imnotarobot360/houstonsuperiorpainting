@@ -225,6 +225,16 @@ export const BUSINESS = {
     bbbAccredited: true,
   },
 
+  // Payment policy confirmed by Juan (2026-09). Never state a deposit
+  // percentage — none has been set. Never claim "no deposit" or "pay only
+  // after completion": a down payment is collected once the estimate is approved.
+  paymentPolicy: {
+    short: "No money until you approve",
+    badgeSubtitle: "Free estimate · down payment only after approval",
+    sentence:
+      "Estimates are free and we don't collect any money until you approve the written estimate. After you approve, we collect a down payment to schedule the job, and the balance is due after the final walkthrough.",
+  },
+
   // ─── Brands / partners ─────────────────────────────────
   paintPartners: ["Sherwin-Williams", "Benjamin Moore"],
 
