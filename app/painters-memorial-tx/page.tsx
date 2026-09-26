@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 export default function PaintersMemorialTX() {
   return (
     <>
-      <TrustBar />
+      <TrustBar hideRating />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -60,9 +60,9 @@ export default function PaintersMemorialTX() {
         <LocationPageTemplate
           city="Memorial"
           state="TX"
-          heroHeadline="Memorial's Premier House Painters"
+          heroHeadline="House Painters in Memorial, Houston"
           heroDescription="Serving the Memorial Villages, Bunker Hill, Piney Point, and Hedwig Village with premium painting services befitting Houston's most prestigious addresses. Luxury materials, expert craftsmanship, and white-glove service."
-          quickAnswer="Houston Superior Painting provides premium painting services throughout Memorial TX including Memorial Villages, Bunker Hill, Piney Point, and Hedwig Village. Interior painting costs $3.50-$6.00/sq ft, exterior painting $10,000-$25,000+. We specialize in luxury homes with tall ceilings, detailed millwork, and specialty finishes. Premium Sherwin-Williams and Benjamin Moore products included. 5-year warranty. Call (346) 594-5960 for a free estimate."
+          quickAnswer="Houston Superior Painting provides premium painting services throughout Memorial TX including Memorial Villages, Bunker Hill, Piney Point, and Hedwig Village. Interior painting costs $2.50–$4.50/sq ft ($7,000–$14,000 for homes over 4,000 sq ft) and a two-story exterior over 4,000 sq ft typically runs $8,500–$14,000. We specialize in luxury homes with tall ceilings, detailed millwork, and specialty finishes. Premium Sherwin-Williams and Benjamin Moore products included. 5-year warranty. Call (346) 594-5960 for a free estimate."
           aboutCity={`Memorial is home to some of Houston's most prestigious addresses. The Memorial Villages—Bunker Hill, Piney Point, Hedwig Village, Hilshire Village, Hunters Creek, and Spring Valley—represent the pinnacle of Houston living with their wooded lots, custom architecture, and commitment to excellence.
 
 These aren't ordinary homes, and they don't receive ordinary painting services. Memorial's estate properties demand painters who understand luxury: tall ceilings that require specialized equipment, intricate millwork that needs careful attention, specialty finishes that must be expertly applied, and landscapes that must be protected.
@@ -73,7 +73,7 @@ We understand that Memorial homeowners value their privacy and their time. Our p
 
 Whether you're refreshing an existing finish, transforming a recent acquisition, or completing new construction, Houston Superior Painting delivers results worthy of Memorial's distinguished reputation. Our 5-year warranty and meticulous attention to detail have made us the trusted choice for discerning Memorial homeowners.`}
           whyChooseUs={[
-            "45+ Memorial projects completed including estate homes over 10,000 sq ft",
+            "Estate-home experience: large floor plans, tall ceilings, and detailed millwork",
             "Luxury home expertise: tall ceilings, detailed millwork, specialty finishes",
             "Premium products only: Sherwin-Williams Emerald, Benjamin Moore Aura",
             "White-glove service: punctual, clean, respectful of your home",
@@ -148,7 +148,7 @@ Whether you're refreshing an existing finish, transforming a recent acquisition,
           faqs={[
             {
               question: "How much does it cost to paint a house in Memorial?",
-              answer: "Interior painting in Memorial typically costs $3.50-$6.00 per square foot. For a 5,000 sq ft home, expect $17,500-$30,000. Exterior painting ranges from $10,000-$25,000+ based on size and complexity."
+              answer: "Interior painting in Memorial typically costs $2.50–$4.50 per square foot; homes over 4,000 sq ft generally run $7,000–$14,000 inside. A two-story exterior over 4,000 sq ft typically runs $8,500–$14,000, and larger estates with extensive millwork are quoted after a walkthrough. We provide free detailed estimates."
             },
             {
               question: "Do you have experience with large Memorial estates?",

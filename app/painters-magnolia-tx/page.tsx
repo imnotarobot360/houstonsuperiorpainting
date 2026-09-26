@@ -1,161 +1,54 @@
-import type { Metadata } from "next"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { LocationPageTemplate } from "@/components/location-page-template"
-import { generateLocationBusinessSchema } from "@/components/structured-data"
+import { BUSINESS } from "@/lib/business"
+import { OfficeCityPage, officeCityMetadata, type OfficeCityPageData } from "@/components/aeo/office-city-page"
 
-export const metadata: Metadata = {
-  title: "Painters Magnolia TX — Houston Superior Painting",
-  description: "Professional painters in Magnolia TX. Interior, exterior, cabinet painting for acreage homes, Woodforest, Decker Prairie. 5-year warranty. Free estimates.",
-  alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/painters-magnolia-tx',
+export const metadata = officeCityMetadata({
+  city: "Magnolia",
+  slug: "painters-magnolia-tx",
+  title: "House Painters in Magnolia TX | Houston Superior Painting",
+  description:
+    "House painters from our Magnolia office on Cottontop Mtn. Interior, exterior, cabinets. $2M insured, 5-year warranty. Free estimates: (346) 594-5960.",
+  // No Magnolia-specific OG image exists; the site cover is used.
+})
+
+// TODO(juan): add 2–3 real Magnolia jobs with photos to lib/projects.ts (neighborhood like "Audubon, Magnolia");
+// the "Recent Magnolia projects" section renders automatically when they exist.
+const DATA: OfficeCityPageData = {
+  city: "Magnolia",
+  slug: "painters-magnolia-tx",
+  areasPhrase: "Magnolia, Pinehurst, and Montgomery",
+  serviceBlurbs: {
+    "interior-painting-houston-tx": "Full interior repaints for Magnolia homes, from one room to the whole house.",
+    "exterior-painting-houston-tx": "Exterior repaints for wood siding, brick, and acreage homes, with full prep.",
+    "cabinet-refinishing-houston-tx": "Sprayed cabinet finishes that update a Magnolia kitchen without a remodel.",
+    "drywall-repair-houston-tx": "Cracks, nail pops, and water damage patched and texture-matched before paint.",
+    "limewash-brick-painting-houston-tx": "Limewash or painted brick for a softer look on Magnolia brick homes.",
+    "soft-washing-houston-tx": "Low-pressure washing that removes pine pollen, sap film, and mildew before paint.",
   },
-  openGraph: {
-    title: "Painters Magnolia TX — Houston Superior Painting",
-    description: "Professional painters in Magnolia TX. Interior, exterior, cabinet painting for acreage homes, Woodforest, Decker Prairie. 5-year warranty.",
-    url: "https://houstonsuperiorpainting.com/painters-magnolia-tx",
-    siteName: "Houston Superior Painting",
-    type: "website",
-    images: [{
-      url: "https://houstonsuperiorpainting.com/images/og/og-painters-magnolia.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Painters Magnolia TX - Houston Superior Painting",
-    }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Painters Magnolia TX — Houston Superior Painting",
-    description: "Professional painters in Magnolia TX. Interior, exterior, cabinet painting for acreage homes, Woodforest, Decker Prairie.",
-    images: ["https://houstonsuperiorpainting.com/images/og/og-painters-magnolia.jpg"],
-  },
+  neighborhoods: [
+    { name: "Audubon", note: "A newer master-planned community in Magnolia with HOA design guidelines for exterior colors." },
+    { name: "Woodtrace", note: "A wooded master-planned community on the Magnolia–Pinehurst side with mostly newer homes." },
+    { name: "Mostyn Manor", note: "A large-lot Magnolia community where homes sit among mature trees." },
+    { name: "Magnolia Ridge", note: "A Magnolia neighborhood of larger lots, where exterior prep often starts with washing off pollen and mildew." },
+    { name: "High Meadow Ranch", note: "An acreage community with wooded lots and custom homes." },
+    { name: "Escondido", note: "A gated Magnolia community of larger homes on wooded lots." },
+    { name: "Lake Windcrest", note: "A wooded lakeside community with larger lots and a mix of brick and siding homes." },
+    { name: "Downtown Magnolia", note: "The older part of town, with more wood-sided homes and trim that often needs repair before paint." },
+    { name: "Decker Prairie", note: "The area around Magnolia and Pinehurst with a mix of acreage homes and smaller subdivisions." },
+    { name: "Woodforest (Montgomery)", note: "A large master-planned community in Montgomery, served from our Magnolia office." },
+  ],
+  prep: [
+    "Magnolia homes sit on bigger, more wooded lots than most of Greater Houston, and the pines leave pollen and sap on siding, trim, and gutters every spring. Paint does not stick to that film, so we soft-wash the whole exterior and let it dry before any prep or primer goes on.",
+    "There is also more wood siding and more acreage homes here, often with barns, fences, or detached garages. Bare or weathered wood needs scraping and an oil- or bonding primer before the finish coats, and we plan the schedule around the extra square footage so nothing sits primed and unpainted.",
+  ],
+  areasAnswer:
+    "All of Magnolia, including Audubon, Woodtrace, Mostyn Manor, Magnolia Ridge, High Meadow Ranch, Escondido, Lake Windcrest, Downtown Magnolia, and Decker Prairie. From the Magnolia office we also cover Pinehurst, Montgomery, Tomball, and The Woodlands.",
+  // The previous version of this page said 2–3 weeks; kept to avoid over-promising.
+  startAnswer:
+    "We typically book Magnolia jobs 2–3 weeks out. Acreage properties with several buildings can take more planning. We confirm the exact start date at the estimate.",
+  nearby: ["painters-tomball-tx", "painters-the-woodlands-tx", "painters-cypress-tx", "painters-champions-forest-tx"],
+  officeNote: BUSINESS.officialSiteDisclaimer,
 }
 
 export default function PaintersMagnoliaTX() {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateLocationBusinessSchema({
-  city: "Magnolia",
-  slug: "painters-magnolia-tx",
-  description: "Professional house painting services in Magnolia, TX",
-          }))
-        }}
-      />
-      <Header />
-      <main>
-        <LocationPageTemplate
-          city="Magnolia"
-          state="TX"
-          heroHeadline="Expert House Painters for Magnolia, Texas"
-          heroDescription="Magnolia's countryside charm deserves painters who understand acreage properties, custom homes, and rural Texas living. Our experienced crews deliver exceptional results for Magnolia homeowners."
-          aboutCity={`Magnolia is one of the fastest-growing areas in the Houston metro, and for good reason. The combination of rural charm, larger lots, excellent schools, and easy access to The Woodlands and Houston makes it an ideal place to call home. As Magnolia grows, homeowners need painters who understand the unique demands of this community.
-
-We've built a strong reputation among Magnolia homeowners—from the established ranches along FM 1488 to the newer master-planned communities like Woodforest and Lake Windcrest. Our crews are experienced with the variety of home styles here: traditional Texas ranch homes, modern farmhouses, brick estates, and everything in between.
-
-Magnolia's climate presents specific challenges. The Texas sun is intense, humidity is high, and sudden storms are common. We select paints and coatings specifically formulated for these conditions, ensuring your investment lasts. Our thorough preparation process addresses the dust, pollen, and debris common in rural areas, creating the clean surface needed for paint to bond properly.
-
-Whether you're refreshing an existing home, updating a new construction property, or painting a barn or outbuilding, we bring the same level of professionalism and attention to detail to every project in Magnolia.`}
-          whyChooseUs={[
-            "Magnolia expertise: Trusted by homeowners throughout the area",
-            "Acreage property experience: We handle large homes and outbuildings",
-            "Rural Texas knowledge: Proper prep for dust, pollen, and climate",
-            "Premium materials: Coatings built for Texas heat and humidity",
-            "Flexible scheduling: We work around your rural lifestyle",
-            "5-year warranty: Complete confidence in our work"
-          ]}
-          services={[
-            {
-              title: "Interior Painting",
-              description: "Transform your Magnolia home's interior with flawless walls and expert trim work. Perfect for updating builder-grade finishes or refreshing your space.",
-              href: "/interior-painting-houston-tx"
-            },
-            {
-              title: "Exterior House Painting",
-              description: "Protect your Magnolia home from intense Texas sun, humidity, and storms. Our premium coatings maintain their beauty for years.",
-              href: "/exterior-painting-houston-tx"
-            },
-            {
-              title: "Cabinet Refinishing",
-              description: "Update your Magnolia kitchen with factory-smooth cabinet finishes at a fraction of replacement cost.",
-              href: "/cabinet-refinishing-houston-tx"
-            },
-            {
-              title: "Drywall Repair",
-              description: "Fix cracks, settling damage, and imperfections before painting for flawless results.",
-              href: "/drywall-repair-houston-tx"
-            },
-            {
-              title: "Pressure Washing",
-              description: "Professional pressure washing for Magnolia homes. Clean driveways, siding, and patios before painting.",
-              href: "/pressure-washing-houston-tx"
-            },
-            {
-              title: "Limewash Brick",
-              description: "Transform your Magnolia brick home with elegant European limewash finishes that breathe and age beautifully.",
-              href: "/limewash-brick-painting-houston-tx"
-            },
-            {
-              title: "Commercial Painting",
-              description: "Professional painting for Magnolia businesses along FM 1488, FM 2978, and surrounding commercial areas.",
-              href: "/commercial-painting-houston-tx"
-            },
-            {
-              title: "Garage Floor Epoxy",
-              description: "Durable epoxy coatings for Magnolia garages and workshops that resist stains and last for years.",
-              href: "https://houstonsuperiorepoxy.com/"
-            }
-          ]}
-          neighborhoods={[
-            "Downtown Magnolia",
-            "Woodforest",
-            "Lake Windcrest",
-            "Decker Prairie",
-            "Pinehurst",
-            "Mostyn Manor",
-            "Augusta Pines",
-            "Magnolia Ridge",
-            "Westwood Magnolia",
-            "Dobbin",
-            "Todd Mission",
-            "Stagecoach"
-          ]}
-          testimonial={{
-            quote: "We have a large property with a main house, guest house, and barn. Finding painters willing to take on the whole project was tough until we found these guys. Professional, efficient, and the results are outstanding. Our Woodforest neighbors keep asking who we used.",
-            author: "Mike and Jennifer T.",
-            location: "Woodforest, Magnolia"
-          }}
-          faqs={[
-            {
-              question: "Do you paint homes on acreage properties in Magnolia?",
-              answer: "Absolutely. Many of our Magnolia clients have larger properties with main homes, guest houses, barns, and outbuildings. We're equipped to handle these comprehensive projects and can provide package pricing for multiple structures."
-            },
-            {
-              question: "How do you handle the dust and pollen common in rural Magnolia?",
-              answer: "Rural properties face more airborne debris than suburban homes. Our preparation process includes thorough cleaning with commercial equipment and we schedule painting during optimal conditions when possible. Proper prep is key to paint adhesion and longevity."
-            },
-            {
-              question: "What's the typical investment for painting a Magnolia home?",
-              answer: "Magnolia homes vary widely in size and complexity. Interior painting typically runs $2-4 per square foot; exteriors range from $4,000-$15,000+ depending on size. Larger acreage properties with multiple structures require custom estimates."
-            },
-            {
-              question: "How far in advance should I schedule?",
-              answer: "We recommend booking 2-3 weeks ahead for typical projects. Larger acreage properties with multiple structures may require more planning. Contact us early for the best scheduling flexibility."
-            },
-            {
-              question: "Do you serve the newer Magnolia communities like Woodforest?",
-              answer: "Yes! We work throughout Magnolia including Woodforest, Lake Windcrest, Augusta Pines, Mostyn Manor, and all surrounding areas. Whether you're in a new master-planned community or an established rural property, we've got you covered."
-            },
-            {
-              question: "Can you work around my horses, livestock, or outdoor pets?",
-              answer: "Absolutely. Many Magnolia properties have animals, and our crews are experienced working around them. We use low-VOC paints, contain our work areas carefully, and communicate with you about any concerns for your animals' safety and comfort."
-            }
-          ]}
-        />
-      </main>
-      <Footer />
-    </>
-  )
+  return <OfficeCityPage data={DATA} />
 }

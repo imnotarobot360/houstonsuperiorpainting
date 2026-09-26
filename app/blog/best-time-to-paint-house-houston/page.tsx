@@ -4,7 +4,7 @@ import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
   title: "Best Time to Paint a House in Houston | Seasonal Guide",
-  description: "When is the best time to paint in Houston? Fall (Oct-Nov) and spring (Mar-Apr) offer ideal conditions.",
+  description: "The best time to paint a house exterior in Houston is October through April. A season-by-season guide to heat, humidity, and rain from a Houston painter.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/best-time-to-paint-house-houston',
   },
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     description: "Season-by-season guide to optimal painting conditions in Houston, TX.",
     type: "article",
     publishedTime: "2026-05-07",
-    authors: ["JJ Semo"],
-    images: ["/images/blog/best-time-paint-houston.jpg"],
+    authors: ["Juan Serra"],
+    images: [{ url: "https://houstonsuperiorpainting.com/images/blog/best-time-paint-houston.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
@@ -64,8 +64,8 @@ const relatedPosts = [
     image: "/images/blog/exterior-painting-houston.jpg"
   },
   {
-    title: "How Much Does House Painting Cost in Houston?",
-    href: "/blog/house-painting-cost-houston-2026",
+    title: "Houston Painting Cost Guide 2026",
+    href: "/houston-painting-cost-guide",
     excerpt: "Complete pricing guide for interior and exterior painting.",
     image: "/images/blog/house-painting-cost-houston.jpg"
   }
@@ -76,8 +76,8 @@ export default function BestTimeToPaintHoustonPage() {
     <BlogPostTemplate
       title="Best Time to Paint Your House in Houston: Season-by-Season Guide"
       excerpt="Houston's unique climate—hot summers, mild winters, and year-round humidity—affects when and how you should paint. This comprehensive guide covers the ideal conditions for both interior and exterior painting, helping you plan your project for optimal results."
-      author="JJ Semo"
-      authorRole="Owner & Lead Estimator"
+      author="Juan Serra"
+      authorRole="Owner"
       publishDate="May 7, 2026"
       readTime="10 min read"
       category="Planning"
@@ -90,10 +90,10 @@ export default function BestTimeToPaintHoustonPage() {
       <div className="quick-answer bg-secondary/10 border-l-4 border-secondary p-6 rounded-r-lg mb-8" data-speakable="true">
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
-          The best time for <strong>exterior painting in Houston is fall (October-November)</strong> and 
-          <strong>spring (March-April)</strong>—moderate temperatures, lower humidity, and minimal rain. 
-          <strong>Interior painting can be done year-round</strong> since it&apos;s climate-controlled. 
-          Summer and winter painting are possible but require more careful scheduling.
+          The best time for <strong>exterior painting in Houston is October through April</strong>. Within that
+          window, <strong>fall (October-November)</strong> and <strong>spring (March-April)</strong> are the sweet spots:
+          moderate temperatures, lower humidity, and minimal rain. Summer afternoons are too hot and humid for paint to
+          cure properly. <strong>Interior painting can be done year-round</strong> since it&apos;s climate-controlled.
         </p>
       </div>
 
@@ -419,8 +419,9 @@ export default function BestTimeToPaintHoustonPage() {
       </p>
 
       <p>
-        Contact us at (346) 594-5960 or <Link href="/contact" className="text-primary underline">request your free estimate</Link> to 
-        start planning your painting project.
+        Contact us at (346) 594-5960 or <Link href="/painting-estimate-houston" className="text-primary underline">request your free estimate</Link> to 
+        start planning your painting project. To budget ahead of the October-through-April window, see our{" "}
+        <Link href="/houston-painting-cost-guide" className="text-primary underline">Houston painting cost guide</Link>.
       </p>
 
       <p>

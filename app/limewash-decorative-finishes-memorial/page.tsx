@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/limewash-decorative-finishes-memorial',
   },
-  title: "Limewash & Decorative Finishes Memorial",
+  title: "Limewash & Decorative Finishes Memorial | Free Estimates",
   description: "Premium limewash and decorative finishes in Memorial, Houston. European-style elegance for your home. Free quote — call (346) 594-5960.",
 }
 

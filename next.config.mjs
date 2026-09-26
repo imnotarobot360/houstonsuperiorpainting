@@ -175,7 +175,7 @@ const nextConfig = {
       { source: '/commercial-interior-painting', destination: '/commercial-painting-houston-tx', permanent: true },
       { source: '/trim-painting', destination: '/interior-painting-houston-tx', permanent: true },
       { source: '/garage-door-painting', destination: '/exterior-painting-houston-tx', permanent: true },
-      { source: '/faq', destination: '/#faq', permanent: true },
+      // /faq is now a real page (the FAQ hub) — the old '/faq' -> '/#faq' rule was removed.
       { source: '/about-us', destination: '/about', permanent: true },
       { source: '/contact-us', destination: '/contact', permanent: true },
       { source: '/services', destination: '/', permanent: true },
@@ -200,6 +200,20 @@ const nextConfig = {
       { source: '/luxury-house-painters-houston-tx', destination: '/luxury-house-painters-houston', permanent: true },
       { source: '/luxury-interior-painting-houston-tx', destination: '/luxury-house-painters-houston', permanent: true },
       { source: '/luxury-exterior-painting-houston-tx', destination: '/luxury-house-painters-houston', permanent: true },
+
+      // ─── AEO plan, Sep 2026: consolidate cannibalizing posts ─────────
+      // Each loser 301s to the page that owns the query, so one URL per intent.
+      // See docs/aeo-seo-plan-2026-09.md.
+      { source: '/painting-houston', destination: '/painters-houston-tx', permanent: true },
+      { source: '/blog/house-painting-cost-houston-2026', destination: '/houston-painting-cost-guide', permanent: true },
+      { source: '/blog/interior-painting-cost-houston-tx', destination: '/interior-painting-cost-houston', permanent: true },
+      { source: '/blog/exterior-painting-cost-houston-tx-2026', destination: '/exterior-house-painting-houston-cost-guide', permanent: true },
+      { source: '/blog/best-time-to-paint-houston-home-exterior', destination: '/blog/best-time-to-paint-house-houston', permanent: true },
+      { source: '/blog/how-to-choose-best-painters-houston', destination: '/questions-to-ask-before-hiring-painters', permanent: true },
+      { source: '/blog/licensed-vs-unlicensed-painters', destination: '/questions-to-ask-before-hiring-painters', permanent: true },
+      // Garage epoxy content belongs to the epoxy brand's own domain.
+      { source: '/blog/garage-epoxy-coating-houston-tx', destination: 'https://houstonsuperiorepoxy.com/', permanent: true },
+      { source: '/blog/garage-epoxy-flooring-houston-tx', destination: 'https://houstonsuperiorepoxy.com/', permanent: true },
 
       // Cypress interior page renamed to the community-scoped canonical URL.
       { source: '/interior-painting-cypress-tx', destination: '/interior-painting-cypress-bridgeland', permanent: true },

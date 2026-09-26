@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     question: "How long does an exterior paint job last in Katy TX?",
-    answer: "With proper prep and quality paint products, a professional exterior paint job in the Katy area typically lasts 8–12 years. Houston's heat and humidity can shorten that if inferior products or rushed prep work is used."
+    answer: "With proper prep and quality paint products, plan to repaint a Katy exterior every 5–7 years; shaded, protected walls can last longer. Houston's heat and humidity can shorten that if inferior products or rushed prep work is used."
   },
   {
     question: "Should I pressure wash my house before painters arrive?",
@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     question: "What's the best time of year to paint the exterior of a home in Katy TX?",
-    answer: "Late February through May and again in September through November tend to offer the most ideal conditions — lower humidity, moderate temperatures, and fewer afternoon storms. Many homeowners book spring appointments months in advance."
+    answer: "October through April offers the most ideal conditions — lower humidity, moderate temperatures, and fewer afternoon storms. Many homeowners book spring appointments months in advance."
   },
   {
     question: "How many coats of paint should a professional apply?",
@@ -145,7 +145,7 @@ export default function BestPaintingCompanyKatyTX() {
               <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
-                  <span>JJ Semo</span>
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
@@ -192,7 +192,7 @@ export default function BestPaintingCompanyKatyTX() {
               </p>
               
               <p>
-                This guide walks you through exactly what to look for before you hire anyone to paint your home&apos;s exterior. No fluff, no runaround — just the honest things that separate a quality painter from one who&apos;ll cost you more in the long run.
+                This guide walks you through exactly what to look for before you hire anyone to paint your home&apos;s exterior. No fluff, no runaround — just the honest things that separate a quality painter from one who&apos;ll cost you more in the long run. (If you&apos;d rather skip straight to a local crew, our <Link href="/painters-katy-tx" className="text-primary hover:underline">painters in Katy TX</Link> page has office details, and our <Link href="/exterior-painting-houston-tx" className="text-primary hover:underline">exterior painting service</Link> page explains our prep process.)
               </p>
 
               <h2 className="text-2xl font-serif font-bold text-foreground mt-10 mb-4">
@@ -475,7 +475,7 @@ export default function BestPaintingCompanyKatyTX() {
               </h2>
               
               <p>
-                Pricing varies based on square footage, number of stories, prep complexity, and the products used. What you&apos;re really paying for is the longevity of the job. A well-prepped, properly applied exterior paint job in Katy should last 8–12 years with basic maintenance.
+                Pricing varies based on square footage, number of stories, prep complexity, and the products used. What you&apos;re really paying for is the longevity of the job. A well-prepped, properly applied exterior paint job in Katy should carry you through the full 5–7 year repaint cycle with basic maintenance.
               </p>
               
               <p>

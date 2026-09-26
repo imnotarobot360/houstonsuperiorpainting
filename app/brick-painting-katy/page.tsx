@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/brick-painting-katy",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Brick Painting Katy TX — Houston Superior Painting",
     description: "Professional brick painting in Katy, TX. Transform dated brick with modern colors. Cinco Ranch, Cross Creek, Elyson. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/brick-painting-katy",

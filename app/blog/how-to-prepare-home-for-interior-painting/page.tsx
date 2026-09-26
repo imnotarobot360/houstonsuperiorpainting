@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/how-to-prepare-home-for-interior-painting",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "How to Prepare Your Home for Interior Painting in Houston TX",
     description:
       "What to do before interior painters arrive, what your painter handles, and what to expect during and after the job.",
     type: "article",
     publishedTime: "2026-06-17",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -66,7 +66,7 @@ export default function PrepareHomeInteriorPaintingPage() {
     <BlogPostTemplate
       title="How to Prepare Your Home for Interior Painting in Houston TX"
       excerpt="Hiring a professional painter is the easy part. Getting your home ready — and knowing what to expect before, during, and after — is what sets the stage for a smooth job and a great result."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Professional Painting Contractor"
       publishDate="June 17, 2026"
       readTime="9 min read"
@@ -256,8 +256,11 @@ export default function PrepareHomeInteriorPaintingPage() {
       <p>
         At Houston Superior Painting, we take the prep work seriously — because that&apos;s what makes the result last.
         We&apos;ll walk your home, explain what we&apos;re going to do before the first coat touches your walls, and give
-        you a realistic schedule so you can plan around the project. Request your free estimate and let&apos;s get your
-        rooms looking their best.
+        you a realistic schedule so you can plan around the project. Our{" "}
+        <a href="/interior-painting-cost-houston" className="text-primary underline">interior painting cost in Houston</a>{" "}
+        guide shows typical 2026 prices, and our{" "}
+        <a href="/painters-sugar-land-tx" className="text-primary underline">painters in Sugar Land TX</a> and Houston
+        offices can walk your home and quote it. Request your free estimate and let&apos;s get your rooms looking their best.
       </p>
     </BlogPostTemplate>
   )

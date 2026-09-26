@@ -1,18 +1,19 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
-  title: "Best Exterior Paints for Houston Humidity",
+  title: "Best Exterior Paints for Houston Humidity (2026 Guide)",
   description: "Which exterior paints perform best in Houston's humid climate? Expert picks from local experience — Sherwin-Williams, Benjamin Moore & more.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/best-exterior-paints-houston-humidity',
   },
-  openGraph: {
-    title: "Best Exterior Paints for Houston Humidity",
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "Best Exterior Paints for Houston Humidity (2026 Guide)",
     description: "Expert recommendations for exterior paints that withstand Houston's brutal humidity, UV rays, and storms.",
     type: "article",
     publishedTime: "2026-04-15",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -36,7 +37,7 @@ export default function BestExteriorPaintsHoustonPage() {
     <BlogPostTemplate slug="best-exterior-paints-houston-humidity"
       title="Best Exterior Paints for Houston Humidity: A Complete Guide"
       excerpt="Discover which exterior paints stand up best to Houston's brutal humidity, intense UV rays, and unpredictable storms. Our years of local experience reveal the top performers."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="April 15, 2026"
       readTime="8 min read"
@@ -88,7 +89,7 @@ export default function BestExteriorPaintsHoustonPage() {
       </ul>
 
       <p>
-        In our experience, Duration typically lasts 10-15 years on Houston homes when properly applied, compared to 5-7 years for standard paints.
+        In our experience, Duration holds up through the full 5–7 year Houston repaint cycle when properly applied, and often longer on shaded elevations, while standard paints often start failing in 3–4 years.
       </p>
 
       <h3>2. Benjamin Moore Aura Exterior</h3>
@@ -194,11 +195,11 @@ export default function BestExteriorPaintsHoustonPage() {
       <h2>The Bottom Line</h2>
 
       <p>
-        Investing in premium exterior paint like Sherwin-Williams Duration or Benjamin Moore Aura may cost 20-30% more upfront, but you&apos;ll easily recoup that investment through longer-lasting results. A cheap paint job that needs redoing in 4 years costs more in the long run than a quality job that lasts 10-15 years.
+        Investing in premium exterior paint like Sherwin-Williams Duration or Benjamin Moore Aura may cost 20-30% more upfront, but you&apos;ll easily recoup that investment through longer-lasting results. A cheap paint job that needs redoing in 3–4 years costs more in the long run than a quality job that lasts the full 5–7 year cycle. Our <Link href="/exterior-house-painting-houston-cost-guide">exterior house painting cost guide</Link> shows what the premium-paint upgrade adds to a typical quote.
       </p>
 
       <p>
-        If you&apos;re planning an exterior painting project for your Houston home, I&apos;d be happy to discuss your specific situation and recommend the best approach. Every home is different, and factors like your siding material, sun exposure, and proximity to the coast all influence the best paint choice.
+        If you&apos;re planning <Link href="/exterior-painting-houston-tx">exterior painting for your Houston home</Link>, whether in town or with our <Link href="/painters-cypress-tx">painters in Cypress TX</Link>, I&apos;d be happy to discuss your specific situation and recommend the best approach. Every home is different, and factors like your siding material, sun exposure, and proximity to the coast all influence the best paint choice.
       </p>
 
     </BlogPostTemplate>

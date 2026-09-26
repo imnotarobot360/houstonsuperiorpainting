@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-05-28T00:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [{
       url: "https://houstonsuperiorpainting.com/images/blog/cabinet-transformations-katy-sugar-land.png",
       width: 1200,
@@ -114,7 +114,7 @@ export default function CabinetTransformationsBlog() {
                 "name": "Is cabinet painting a good investment before selling in Katy or Sugar Land TX?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Consistently yes. Professional cabinet painting in a current, neutral color directly improves listing photos and buyer perception. The investment typically costs $1,500–$3,500 and can affect buyer offers meaningfully."
+                  "text": "Consistently yes. Professional cabinet painting in a current, neutral color directly improves listing photos and buyer perception. The investment typically runs $3,000–$6,500 for most kitchens and can affect buyer offers meaningfully."
                 }
               },
               {
@@ -162,7 +162,7 @@ export default function CabinetTransformationsBlog() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
@@ -218,7 +218,7 @@ export default function CabinetTransformationsBlog() {
             </p>
 
             <p>
-              Professional cabinet painting changes that. Completely. And for Katy and Sugar Land homeowners, the right color choice transforms a kitchen from dated to distinctive — without a renovation budget or a construction timeline. This article covers the most popular cabinet color transformations we&apos;re seeing in these two markets right now, what makes each one work, and how to decide which direction is right for your home.
+              Professional cabinet painting changes that. Completely. And for Katy and Sugar Land homeowners, the right color choice transforms a kitchen from dated to distinctive — without a renovation budget or a construction timeline. This article covers the most popular cabinet color transformations we&apos;re seeing in these two markets right now, what makes each one work, and how to decide which direction is right for your home. For budgets, see our breakdown of the <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">cost to paint kitchen cabinets in Houston</Link>, and for local scheduling, our <Link href="/painters-katy-tx">painters in Katy TX</Link> and <Link href="/painters-sugar-land-tx">painters in Sugar Land TX</Link> pages list each office.
             </p>
 
             <h2>Why Katy and Sugar Land Kitchens Are Prime Candidates for Cabinet Painting</h2>
@@ -226,7 +226,7 @@ export default function CabinetTransformationsBlog() {
               Both communities have large concentrations of homes built during the same era with similar design signatures: raised-panel cabinet doors, warm wood finishes, dark granite countertops, and tile backsplashes in beige and earth tones. These kitchens were beautiful and current when they were built. Today, they need a refresh.
             </p>
             <p>
-              The good news: the cabinet boxes in most of these homes are extremely well-built. The storage is functional. The layouts often include islands and pantries that newer homes charge premiums to provide. There is nothing wrong with the structure — only the surface. A professional <Link href="/cabinet-painting-houston-tx">cabinet painting</Link> job addresses the surface and nothing else. Which is exactly the point.
+              The good news: the cabinet boxes in most of these homes are extremely well-built. The storage is functional. The layouts often include islands and pantries that newer homes charge premiums to provide. There is nothing wrong with the structure — only the surface. A professional <Link href="/cabinet-refinishing-houston-tx">cabinet painting</Link> job addresses the surface and nothing else. Which is exactly the point.
             </p>
 
             <h2>The Most Requested Cabinet Color Transformations</h2>
@@ -350,7 +350,7 @@ export default function CabinetTransformationsBlog() {
 
             <h3>Is cabinet painting a good investment before selling in Katy or Sugar Land TX?</h3>
             <p>
-              Consistently yes. A dated-looking kitchen is one of the top objections buyers have in the Houston suburb resale market. Professional cabinet painting in a current, neutral color directly improves listing photos, buyer perception, and sometimes sale price. The investment typically costs $1,500–$3,500 and can affect buyer offers meaningfully.
+              Consistently yes. A dated-looking kitchen is one of the top objections buyers have in the Houston suburb resale market. Professional cabinet painting in a current, neutral color directly improves listing photos, buyer perception, and sometimes sale price. The investment typically runs $3,000–$6,500 for most kitchens and can affect buyer offers meaningfully.
             </p>
 
             <h3>How do I pick between white, navy, and greige for my cabinets?</h3>

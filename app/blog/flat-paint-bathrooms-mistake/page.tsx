@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/flat-paint-bathrooms-mistake",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Why Flat Paint Should Never Be Used in Bathrooms",
     description: "Flat paint in bathrooms leads to mold, peeling, and staining. Learn why semi-gloss is the only finish that works.",
     url: "https://houstonsuperiorpainting.com/blog/flat-paint-bathrooms-mistake",
@@ -47,8 +47,8 @@ const jsonLd = {
       "@type": "Article",
       headline: "Why Flat Paint Should Never Be Used in Bathrooms",
       description: "Flat paint in bathrooms leads to mold, peeling, and staining in Houston's humid climate.",
-      author: { "@type": "Person", name: "JJ Semo", jobTitle: "Owner" },
-      publisher: { "@type": "LocalBusiness", name: "Houston Superior Painting" },
+      author: { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", name: "Juan Serra" },
+      publisher: { "@id": "https://houstonsuperiorpainting.com/#organization" },
       datePublished: "2026-05-19",
       dateModified: "2026-05-19",
     },
@@ -104,7 +104,7 @@ export default function FlatPaintBathroomsMistakePage() {
               The #1 mistake we see in Houston bathrooms - and how to fix it before mold takes over.
             </p>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>By JJ Semo</span>
+              <span>By <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link></span>
               <span>|</span>
               <span>May 19, 2026</span>
               <span>|</span>
@@ -186,7 +186,7 @@ export default function FlatPaintBathroomsMistakePage() {
               For bathroom walls in Houston, we use Sherwin-Williams Duration or SuperPaint in semi-gloss. Both have excellent mold and mildew resistance built into the formula, not just added as an afterthought.
             </p>
             <p>
-              Combined with proper surface prep and a moisture-blocking primer, these paints will last 8-10 years in a bathroom - vs. 1-2 years for flat paint.
+              Combined with proper surface prep and a moisture-blocking primer, these paints will last 7-10 years in a bathroom - vs. 1-2 years for flat paint.
             </p>
 
             <h2>What If Your Bathroom Already Has Flat Paint?</h2>
@@ -194,7 +194,7 @@ export default function FlatPaintBathroomsMistakePage() {
               If you already see water stains, peeling, or mold spots, the paint needs to be removed and the surface treated before repainting. Simply painting over the problem traps moisture and mold underneath.
             </p>
             <p>
-              Our <Link href="/interior-painting-houston-tx" className="text-primary hover:underline">interior painting process</Link> includes mold treatment, proper priming, and the right finish to prevent this cycle from repeating.
+              Our <Link href="/interior-painting-houston-tx" className="text-primary hover:underline">interior painting process</Link> includes mold treatment, proper priming, and the right finish to prevent this cycle from repeating. A single bathroom typically falls in the $300–$800 single-room range in our <Link href="/interior-painting-cost-houston" className="text-primary hover:underline">interior painting cost in Houston</Link> guide, and our <Link href="/painters-sugar-land-tx" className="text-primary hover:underline">painters in Sugar Land TX</Link> and Houston offices can fix it in a day or two.
             </p>
           </div>
 

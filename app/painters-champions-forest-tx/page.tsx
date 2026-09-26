@@ -6,13 +6,13 @@ import { generateLocationBusinessSchema } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   title: "House Painters Champions Forest TX | Interior & Exterior",
-  description: "Professional house painters serving Champions Forest, Champions, and Northwest Houston. Expert interior and exterior painting with 5-star reviews.",
+  description: "Professional house painters serving Champions Forest, Champions, and Northwest Houston. Interior, exterior, and cabinet painting. Insured, 5-year warranty.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-champions-forest-tx',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Champions Forest TX | Houston Superior Painting",
-    description: "Professional painting services for Champions Forest homeowners. 5-star rated, premium materials, 5-year warranty.",
+    description: "Professional painting services for Champions Forest homeowners. Premium materials, insured crews, 5-year warranty.",
     type: "website",
   },
 }
@@ -116,7 +116,7 @@ Whether you're maintaining a home your family has lived in for decades or recent
           faqs={[
             {
               question: "How much does house painting cost in Champions Forest?",
-              answer: "Interior painting in Champions Forest typically costs $2.50-4.00 per square foot. Exterior painting ranges from $4,500-10,000 depending on home size and condition. We provide free detailed estimates."
+              answer: "Interior painting in Champions Forest typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
             },
             {
               question: "Do you work with Champions Forest HOA?",

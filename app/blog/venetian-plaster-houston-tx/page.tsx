@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/venetian-plaster-houston-tx",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Venetian Plaster Houston TX: Cost, Process & Uses",
     description:
       "2026 Venetian plaster pricing, the hand-applied process, where it works in Houston homes, and how it holds up in humidity.",
     type: "article",
     publishedTime: "2026-06-13",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -77,7 +77,7 @@ export default function VenetianPlasterHoustonPage() {
     <BlogPostTemplate
       title="Venetian Plaster in Houston TX: Cost, Process & Where to Use It"
       excerpt="Venetian plaster is the hand-applied, lime-based finish that makes people stop and ask what's on the walls. Here's what it costs in Houston, where it works, how it handles humidity, and what a professional application actually involves."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Professional Painting Contractor"
       publishDate="June 13, 2026"
       readTime="12 min read"
@@ -493,8 +493,10 @@ export default function VenetianPlasterHoustonPage() {
         Ready to move from research to a real quote? See our{" "}
         <Link href="/venetian-plaster-houston-tx">Venetian plaster service page</Link> for pricing, our process, and how
         we apply authentic hand-troweled finishes. Houston Superior Painting offers specialty decorative finishes
-        including Venetian plaster, limewash, and microcement throughout Greater Houston — including Katy, Cypress, Sugar
-        Land, The Woodlands, Bellaire, Pearland, and Richmond.
+        including Venetian plaster, limewash, and microcement throughout Greater Houston — including Katy,{" "}
+        <Link href="/painters-cypress-tx">Cypress</Link>, Sugar Land, The Woodlands, Bellaire, Pearland, and Richmond.
+        If you&apos;re repainting the surrounding rooms at the same time, our{" "}
+        <Link href="/interior-painting-cost-houston">interior painting prices for Houston</Link> cover the standard walls.
       </p>
       <p>Every specialty finish estimate includes:</p>
       <ul>

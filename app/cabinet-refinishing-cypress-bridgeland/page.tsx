@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/cabinet-refinishing-cypress-bridgeland',
   },
-  title: "Cabinet Refinishing Cypress & Bridgeland",
+  title: "Cabinet Refinishing Cypress & Bridgeland | Free Estimates",
   description: "Premium cabinet refinishing in Cypress and Bridgeland, TX. Transform your kitchen. Free quote — call (346) 594-5960.",
 }
 

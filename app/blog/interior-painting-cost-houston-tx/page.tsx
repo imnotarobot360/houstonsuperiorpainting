@@ -12,16 +12,16 @@ export const metadata: Metadata = {
   title: "Interior Painting Cost in Houston TX | What to Expect",
   description: "Wondering what interior painting costs in Houston TX? Here's an honest breakdown of pricing, what affects your quote, and how to hire right.",
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/blog/interior-painting-cost-houston-tx',
+    canonical: 'https://houstonsuperiorpainting.com/interior-painting-cost-houston',
   },
   openGraph: {
     title: "Interior Painting Cost in Houston TX | What to Expect",
     description: "Wondering what interior painting costs in Houston TX? Here's an honest breakdown of pricing, what affects your quote, and how to hire right.",
-    url: "https://houstonsuperiorpainting.com/blog/interior-painting-cost-houston-tx",
+    url: "https://houstonsuperiorpainting.com/interior-painting-cost-houston",
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-05-26T08:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [{
       url: "https://houstonsuperiorpainting.com/images/blog/interior-painting-cost-houston.png",
       width: 1200,
@@ -95,7 +95,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com" },
     { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://houstonsuperiorpainting.com/blog" },
-    { "@type": "ListItem", "position": 3, "name": "Interior Painting Cost in Houston TX: What Homeowners Should Expect", "item": "https://houstonsuperiorpainting.com/blog/interior-painting-cost-houston-tx" }
+    { "@type": "ListItem", "position": 3, "name": "Interior Painting Cost in Houston TX: What Homeowners Should Expect", "item": "https://houstonsuperiorpainting.com/interior-painting-cost-houston" }
   ]
 }
 
@@ -128,7 +128,7 @@ export default function InteriorPaintingCostHoustonTX() {
             "dateModified": "2026-05-26",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://houstonsuperiorpainting.com/blog/interior-painting-cost-houston-tx"
+              "@id": "https://houstonsuperiorpainting.com/interior-painting-cost-houston"
             },
             "image": "https://houstonsuperiorpainting.com/images/blog/interior-painting-cost-houston.png"
           })
@@ -186,7 +186,7 @@ export default function InteriorPaintingCostHoustonTX() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
-                  <span>JJ Semo</span>
+                  <span>Juan Serra</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />

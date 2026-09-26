@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-the-heights-tx',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters The Heights TX — Houston Superior Painting",
     description: "Professional painters in The Heights TX. Interior, exterior, cabinet painting for historic bungalows and new construction. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/painters-the-heights-tx",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function PaintersTheHeightsTX() {
   return (
     <>
-      <TrustBar />
+      <TrustBar hideRating />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -50,7 +50,7 @@ export default function PaintersTheHeightsTX() {
           state="TX"
           heroHeadline="The Heights' Trusted House Painters"
           heroDescription="From century-old bungalows to modern new builds, we understand what makes Heights homes special. Expert craftsmanship, premium materials, and deep respect for this neighborhood's unique character."
-          quickAnswer="Houston Superior Painting provides professional painting services throughout The Heights, Houston. Interior painting costs $2.75-$4.50/sq ft, exterior painting $4,500-$10,000. We specialize in historic bungalows with wood siding and detailed trim, as well as modern Heights construction. Premium Sherwin-Williams and Benjamin Moore products included. 5-year warranty. Call (346) 594-5960 for a free estimate."
+          quickAnswer="Houston Superior Painting provides professional painting services throughout The Heights, Houston. Interior painting costs $2.50–$4.50/sq ft ($4,000–$8,000 for a 2,500 sq ft home) and exterior painting $3,500–$12,000 per home. We specialize in historic bungalows with wood siding and detailed trim, as well as modern Heights construction. Premium Sherwin-Williams and Benjamin Moore products included. 5-year warranty. Call (346) 594-5960 for a free estimate."
           aboutCity={`The Heights is Houston's most beloved historic neighborhood, where century-old bungalows sit alongside modern townhomes on tree-lined streets. This isn't just where we work—it's a neighborhood we love, and we treat every Heights home with the respect it deserves.
 
 Historic Heights homes present unique painting challenges: original wood siding that needs careful preparation, detailed trim and millwork that demands patience, pier-and-beam foundations that create specific moisture considerations, and architectural character that must be preserved while providing modern protection.
@@ -61,7 +61,7 @@ We've built relationships with Heights homeowners who return to us project after
 
 The Heights community is tight-knit, and reputation matters. We've earned ours through consistent quality, fair pricing, and genuine care for the homes we paint.`}
           whyChooseUs={[
-            "40+ Heights projects including pre-1920 historic bungalows",
+            "Historic bungalow experience, including pre-1920 homes",
             "Wood siding expertise: proper prep, premium primers, lasting protection",
             "Historic trim skills: hand-brushed details, perfect lines, period-appropriate techniques",
             "New construction experience: modern townhomes and custom builds",
@@ -134,7 +134,7 @@ The Heights community is tight-knit, and reputation matters. We've earned ours t
           faqs={[
             {
               question: "How much does it cost to paint a Heights bungalow?",
-              answer: "Interior painting for Heights homes costs $2.75-$4.50 per square foot. A typical 2,000 sq ft bungalow runs $5,500-$9,000. Exterior painting ranges $4,500-$10,000 depending on condition."
+              answer: "Interior painting in The Heights typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
             },
             {
               question: "Do you specialize in Heights historic homes?",

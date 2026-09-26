@@ -299,7 +299,7 @@ export function LuxuryTestimonials() {
 const insights = [
   {
     title: "What Exterior Painting Costs in Houston in 2026",
-    href: "/blog/exterior-painting-cost-houston-tx-2026",
+    href: "/exterior-house-painting-houston-cost-guide",
     img: "/images/luxury/project-exterior.png",
     cat: "Exterior",
   },

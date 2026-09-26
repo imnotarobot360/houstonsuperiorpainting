@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "2026 Katy TX painting costs, the 5 questions that reveal a legitimate painter, and the red flags that cost homeowners thousands.",
     type: "article",
     publishedTime: "2026-06-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/painters-near-me-katy-tx.png"],
   },
   twitter: {
@@ -110,7 +110,7 @@ export default function PaintersNearMeKatyTxPage() {
     <BlogPostTemplate
       title="Painters Near Me in Katy TX: Costs, What to Ask, Red Flags"
       excerpt="Search 'painters near me in Katy TX' and you'll get 15–30 results, most with 4.5+ stars claiming to be professional and reliable. Most are not. Here's what painting actually costs in 2026, how to vet a local painter, and the red flags that cost homeowners thousands."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
       readTime="11 min read"
@@ -127,7 +127,7 @@ export default function PaintersNearMeKatyTxPage() {
       >
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
-          Painting a home in Katy TX in 2026 typically costs <strong>$4,500–$8,500</strong> for a 3-bedroom interior and{" "}
+          Painting a home in Katy TX in 2026 typically costs <strong>$3,000–$5,500</strong> for a 3-bedroom interior and{" "}
           <strong>$3,500–$12,000</strong> for an exterior, depending on size and prep. Because Texas requires no painting
           license, vetting matters: verify insurance by calling the carrier, confirm the crew are direct employees (not
           subcontractors), and get a line-item written estimate with a warranty. Houston Superior Painting has served Katy
@@ -144,7 +144,8 @@ export default function PaintersNearMeKatyTxPage() {
         <strong>Most of them are not.</strong>
       </p>
       <p>
-        This guide tells you what professional painting in Katy TX actually costs in 2026, exactly how to vet a local
+        This guide tells you what professional painting in Katy TX actually costs in 2026 (the same ranges as our{" "}
+        <Link href="/houston-painting-cost-guide">Houston painting cost guide</Link>), exactly how to vet a local
         painter before letting them in your home, and the specific red flags that should send you looking elsewhere.
       </p>
 
@@ -162,22 +163,22 @@ export default function PaintersNearMeKatyTxPage() {
           <tbody>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Single room (walls + ceiling)</td>
-              <td className="py-3">$400 – $900</td>
+              <td className="py-3">$300 – $800</td>
             </tr>
             <tr className="border-b border-border">
-              <td className="py-3 pr-4">3-bedroom home</td>
-              <td className="py-3">$4,500 – $8,500</td>
-            </tr>
-            <tr className="border-b border-border">
-              <td className="py-3 pr-4">4-bedroom home</td>
-              <td className="py-3">$5,500 – $10,000</td>
+              <td className="py-3 pr-4">3-bedroom home (about 1,500 sq ft)</td>
+              <td className="py-3">$3,000 – $5,500</td>
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Full home interior (2,500 sq ft)</td>
-              <td className="py-3">$7,500 – $14,000</td>
+              <td className="py-3">$4,000 – $8,000</td>
             </tr>
             <tr className="border-b border-border">
-              <td className="py-3 pr-4">Per square foot (walls)</td>
+              <td className="py-3 pr-4">Large home (4,000+ sq ft)</td>
+              <td className="py-3">$7,000 – $14,000</td>
+            </tr>
+            <tr className="border-b border-border">
+              <td className="py-3 pr-4">Per square foot (floor area)</td>
               <td className="py-3">$2.50 – $4.50</td>
             </tr>
           </tbody>
@@ -196,15 +197,15 @@ export default function PaintersNearMeKatyTxPage() {
           <tbody>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Single-story (1,500–2,000 sq ft home)</td>
-              <td className="py-3">$3,500 – $7,000</td>
+              <td className="py-3">$2,500 – $5,500</td>
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Two-story (2,000–3,000 sq ft home)</td>
-              <td className="py-3">$6,500 – $12,000</td>
+              <td className="py-3">$4,500 – $10,500</td>
             </tr>
             <tr className="border-b border-border">
-              <td className="py-3 pr-4">Full repaint with all trim, doors, shutters</td>
-              <td className="py-3">$7,000 – $15,000</td>
+              <td className="py-3 pr-4">Large two-story (4,000+ sq ft home)</td>
+              <td className="py-3">$8,500 – $14,000</td>
             </tr>
           </tbody>
         </table>
@@ -222,7 +223,7 @@ export default function PaintersNearMeKatyTxPage() {
           <tbody>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Cabinet painting / refinishing</td>
-              <td className="py-3">$2,500 – $6,000</td>
+              <td className="py-3">$3,000 – $6,500</td>
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Drywall repair (small area)</td>
@@ -393,7 +394,7 @@ export default function PaintersNearMeKatyTxPage() {
         </li>
       </ul>
       <p>
-        We&apos;ve completed hundreds of projects in Katy TX since 2019. We know the common siding types, the most popular
+        We&apos;ve painted homes across Katy TX since 2019. We know the common siding types, the most popular
         HOA palettes, and the specific prep challenges that come from Katy&apos;s humidity exposure.
       </p>
 

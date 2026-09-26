@@ -1,13 +1,14 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
-  title: "Exterior House Painting in Houston: A Guide",
+  title: "Exterior House Painting in Houston: A Guide (2026 Guide)",
   description: "Complete guide to exterior painting in Houston: preparation, best paints, timelines, and why professional work protects your home from Texas weather.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/exterior-house-painting-houston-guide',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Exterior House Painting in Houston: Complete Guide",
     description: "Everything homeowners need to know about exterior painting in Houston.",
     type: "article",
@@ -20,7 +21,7 @@ const relatedPosts = [
   {
     title: "Why Proper Paint Preparation Matters",
     href: "/blog/paint-preparation-houston-climate",
-    excerpt: "The secret to paint that lasts 10+ years in Houston weather.",
+    excerpt: "The secret to paint that lasts its full repaint cycle in Houston weather.",
     image: "/images/blog/paint-preparation-houston.jpg"
   },
   {
@@ -46,7 +47,7 @@ export default function ExteriorHousePaintingGuidePage() {
       relatedPosts={relatedPosts}
     >
       <p>
-        At Houston Superior Painting, we specialize in professional exterior painting designed specifically for Texas weather conditions.
+        At Houston Superior Painting, we specialize in professional <Link href="/exterior-painting-houston-tx">exterior painting in Houston</Link> designed specifically for Texas weather conditions.
       </p>
 
       <h2>Why Exterior Paint Matters</h2>
@@ -120,17 +121,17 @@ export default function ExteriorHousePaintingGuidePage() {
       <h2>How Often Should Houston Homes Be Painted?</h2>
 
       <p>
-        Typical repaint timelines:
+        Plan to repaint a Houston exterior every 5–7 years. Typical timelines by surface:
       </p>
 
       <ul>
-        <li><strong>Stucco:</strong> 8–12 years</li>
-        <li><strong>Wood siding:</strong> 5–8 years</li>
+        <li><strong>Stucco:</strong> 5–7 years (longer with elastomeric coatings on shaded walls)</li>
+        <li><strong>Wood siding:</strong> 5–7 years</li>
         <li><strong>Trim and fascia:</strong> 5–7 years</li>
       </ul>
 
       <p>
-        Proper preparation significantly extends paint life.
+        Proper preparation significantly extends paint life. To budget the next repaint, our <Link href="/exterior-house-painting-houston-cost-guide">exterior house painting cost guide</Link> has 2026 prices by home size.
       </p>
 
       <h2>Signs Your Home Needs Exterior Painting</h2>
@@ -148,11 +149,11 @@ export default function ExteriorHousePaintingGuidePage() {
       <h2>Why Homeowners Choose Houston Superior Painting</h2>
 
       <p>
-        Houston Superior Painting provides detailed preparation, professional crews, premium coatings, exterior warranties, organized jobsites, and excellent communication.
+        Houston Superior Painting provides detailed preparation, professional crews, premium coatings, a 5-year workmanship warranty, no deposit, organized jobsites, and excellent communication.
       </p>
 
       <p>
-        We proudly paint homes throughout Houston, Katy, Cypress, Richmond, Sugar Land, and Fulshear. Contact us today for a free estimate.
+        We proudly paint homes throughout Houston, <Link href="/painters-katy-tx">Katy</Link>, Cypress, Richmond, Sugar Land, and Fulshear. Contact us today for a free estimate.
       </p>
     </BlogPostTemplate>
   )

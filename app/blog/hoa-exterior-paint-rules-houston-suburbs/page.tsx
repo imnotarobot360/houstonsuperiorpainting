@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Clock, User, Calendar, Phone, ClipboardCheck, FileText, CheckCircle2, AlertTriangle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "HOA Exterior Paint Rules in Houston Suburbs",
+  title: "HOA Exterior Paint Rules in Houston Suburbs (2026 Guide)",
   description: "HOA painting rules in Houston suburbs can be tricky. Here's what homeowners in Katy, Sugar Land, Cypress, and The Woodlands need to know before they paint.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/hoa-exterior-paint-rules-houston-suburbs',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-05-27T00:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [{
       url: "https://houstonsuperiorpainting.com/images/blog/hoa-paint-rules-houston.png",
       width: 1200,
@@ -162,7 +162,7 @@ export default function HOAPaintRulesBlog() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
@@ -229,7 +229,7 @@ export default function HOAPaintRulesBlog() {
               These standards exist to protect property values — which benefits everyone in the community, even when the approval process feels like an obstacle. Homes that maintain consistent, attractive exteriors support the value of every neighboring home.
             </p>
             <p>
-              For painters, HOA constraints aren&apos;t a problem — they&apos;re just part of the project scope. A good <Link href="/exterior-painting-houston">exterior painting contractor</Link> will factor your HOA requirements into the planning process from the start.
+              For painters, HOA constraints aren&apos;t a problem — they&apos;re just part of the project scope. A good <Link href="/exterior-painting-houston-tx">exterior painting contractor</Link> will factor your HOA requirements into the planning process from the start, and an HOA-driven color change costs the same as any repaint; see the <Link href="/exterior-house-painting-houston-cost-guide">exterior house painting cost guide</Link> for 2026 ranges.
             </p>
 
             <h2>How HOA Color Approval Generally Works in Houston Suburbs</h2>

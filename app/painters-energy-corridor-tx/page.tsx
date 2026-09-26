@@ -5,14 +5,14 @@ import { LocationPageTemplate } from "@/components/location-page-template"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "House Painters in Energy Corridor Houston TX",
-  description: "Professional house painters serving the Energy Corridor in Houston, TX. Expert interior and exterior painting for Briar Forest, Westchase, and surrounding...",
+  title: "House Painters in Energy Corridor Houston TX | Free Estimates",
+  description: "Professional house painters serving the Energy Corridor in Houston, TX. Interior, exterior, and cabinet painting for Briar Forest and Westchase homes.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-energy-corridor-tx',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Energy Corridor TX | Houston Superior Painting",
-    description: "Professional painting services for Energy Corridor homeowners. 5-star rated, premium materials, 5-year warranty.",
+    description: "Professional painting services for Energy Corridor homeowners. Premium materials, insured crews, 5-year warranty.",
     type: "website",
   },
 }
@@ -116,7 +116,7 @@ Whether you're updating a home you've lived in for years, preparing a property f
           faqs={[
             {
               question: "How much does house painting cost in the Energy Corridor?",
-              answer: "Interior painting in the Energy Corridor typically costs $2.50-4.50 per square foot. Exterior painting ranges from $5,000-12,000 depending on home size and condition. We provide free detailed estimates."
+              answer: "Interior painting in the Energy Corridor typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
             },
             {
               question: "Do you paint condos and townhomes in the Energy Corridor?",

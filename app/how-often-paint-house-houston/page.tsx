@@ -8,18 +8,18 @@ import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "How Often Should You Paint a House in Houston? Expert Guide",
-  description: "Learn the ideal painting schedule for Houston homes due to extreme weather conditions. Interior every 5-7 years, exterior every 5-8 years.",
+  description: "How often to paint a house in Houston: exteriors every 5–7 years, interiors every 7–10 years. Schedules by surface, warning signs, and how to extend paint life.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/how-often-paint-house-houston" },
-  openGraph: { title: "How Often Should You Paint a House in Houston?", description: "Expert guide on painting frequency for Houston homes. Interior and exterior schedules.", url: "https://houstonsuperiorpainting.com/how-often-paint-house-houston", type: "article" },
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }], title: "How Often Should You Paint a House in Houston?", description: "Expert guide on painting frequency for Houston homes. Interior and exterior schedules.", url: "https://houstonsuperiorpainting.com/how-often-paint-house-houston", type: "article" },
   other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },
 }
 
 const faqs = [
-  { q: "How often should you paint the exterior of a house in Houston?", a: "Every 5-8 years with premium paint and proper preparation. South and west-facing walls may need attention sooner due to UV exposure. Builder-grade paint may fail in 3-4 years." },
-  { q: "How often should you paint interior walls in Houston?", a: "Every 5-7 years for most rooms. High-traffic areas (hallways, kid rooms, kitchens) may need repainting every 3-5 years. Premium paints with washable finishes extend this timeline." },
+  { q: "How often should you paint the exterior of a house in Houston?", a: "Every 5-7 years with premium paint and proper preparation. South and west-facing walls may need attention sooner due to UV exposure. Builder-grade paint may fail in 3-4 years." },
+  { q: "How often should you paint interior walls in Houston?", a: "Every 7-10 years for most rooms. High-traffic areas (hallways, kid rooms, kitchens) may need repainting every 3-5 years. Premium paints with washable finishes extend this timeline." },
   { q: "What signs indicate my Houston home needs repainting?", a: "Peeling, cracking, chalking, bubbling, fading, mildew growth, caulk failure, and visible bare wood or substrate. If you see any of these, schedule a free inspection before the problem spreads." },
   { q: "Does Houston humidity cause paint to fail faster?", a: "Yes. Houston humidity (75-90%) accelerates paint failure by causing moisture to penetrate underneath coatings, leading to blistering, peeling, and mildew growth. Proper preparation and moisture-resistant products mitigate this." },
-  { q: "How does siding material affect painting frequency in Houston?", a: "Wood siding: every 5-7 years. HardiePlank/fiber cement: every 8-12 years. Brick: every 15-20 years (if painted). Stucco: every 5-8 years. Vinyl: rarely needs painting but can be refreshed." },
+  { q: "How does siding material affect painting frequency in Houston?", a: "Wood siding: every 5-7 years. HardiePlank/fiber cement: every 5-7 years, sometimes longer on shaded elevations. Brick: every 10-15 years (if painted). Stucco: every 5-7 years. Vinyl: rarely needs painting but can be refreshed." },
   { q: "Can I extend the life of my Houston exterior paint?", a: "Yes. Annual pressure washing, prompt caulk repair, addressing moisture sources (sprinklers hitting walls, poor drainage), and trimming vegetation away from walls all extend paint life significantly." },
   { q: "Is it cheaper to repaint before the paint completely fails?", a: "Yes, significantly. Maintenance repainting over intact paint costs 30-40% less than repainting over failed surfaces that require extensive scraping, sanding, and priming of bare substrate." },
   { q: "What is the best time of year to paint a house in Houston?", a: "October through April is ideal for exteriors. Low humidity, mild temperatures, and minimal rain. Interior painting can be done year-round. Avoid exterior painting in peak summer heat (June-August)." },
@@ -30,7 +30,7 @@ export default function HowOftenPaintHouseHouston() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "How Often Should You Paint a House in Houston?", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/how-often-paint-house-houston" },
+        { "@type": "Article", "headline": "How Often Should You Paint a House in Houston?", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/how-often-paint-house-houston" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "How Often Paint House Houston", "item": "https://houstonsuperiorpainting.com/how-often-paint-house-houston" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
@@ -47,7 +47,7 @@ export default function HowOftenPaintHouseHouston() {
       <section data-speakable="true" className="quick-answer bg-secondary/10 border-l-4 border-secondary py-6">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
-          <p className="text-foreground/80 leading-relaxed text-lg">In Houston, exterior painting should be done every 5-8 years with premium paint (3-4 years with builder-grade). Interior painting lasts 5-7 years for most rooms. High-traffic areas need attention every 3-5 years. Siding material, sun exposure, and paint quality are the biggest factors. Proactive maintenance repainting costs 30-40% less than waiting for paint failure.</p>
+          <p className="text-foreground/80 leading-relaxed text-lg">Exteriors every 5–7 years, interiors every 7–10 years. That is the repaint schedule for Houston homes with premium paint and proper prep; builder-grade exterior paint often fails in 3–4 years, and high-traffic rooms may need a refresh every 3–5 years. Sun exposure, siding material, and paint quality are the biggest factors, and repainting before paint fails costs less than waiting.</p>
         </div>
       </section>
 
@@ -60,11 +60,11 @@ export default function HowOftenPaintHouseHouston() {
               <tbody>
                 {[
                   ["Exterior – Wood Siding", "5–7 years", "3–4 years"],
-                  ["Exterior – HardiePlank", "8–12 years", "5–7 years"],
-                  ["Exterior – Stucco", "5–8 years", "3–5 years"],
-                  ["Exterior – Brick (painted)", "15–20 years", "8–12 years"],
+                  ["Exterior – HardiePlank", "5–7 years", "3–5 years"],
+                  ["Exterior – Stucco", "5–7 years", "3–5 years"],
+                  ["Exterior – Brick (painted)", "10–15 years", "6–8 years"],
                   ["Exterior – Trim & Fascia", "5–7 years", "3–4 years"],
-                  ["Interior – Living Areas", "5–7 years", "3–5 years"],
+                  ["Interior – Living Areas", "7–10 years", "4–6 years"],
                   ["Interior – High-Traffic", "3–5 years", "2–3 years"],
                   ["Interior – Bathrooms", "4–6 years", "2–4 years"],
                   ["Interior – Ceilings", "8–10 years", "5–7 years"],
@@ -76,13 +76,15 @@ export default function HowOftenPaintHouseHouston() {
             </table>
           </div>
 
+          <p className="text-foreground/80 leading-relaxed mb-10">When the calendar says it is time, our <Link href="/exterior-painting-houston-tx" className="text-primary underline">exterior painting in Houston</Link> includes the pressure wash, caulk, and primer that make the next cycle last. To budget ahead, the <Link href="/houston-painting-cost-guide" className="text-primary underline">Houston painting cost guide</Link> has 2026 prices by home size, and crews work out of our offices serving <Link href="/painters-houston-tx" className="text-primary underline">painters in Houston TX</Link> and <Link href="/painters-cypress-tx" className="text-primary underline">Cypress TX</Link>.</p>
+
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Factors That Affect Painting Frequency in Houston</h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {[
               { title: "Sun Exposure", desc: "South and west-facing walls receive the most UV. These walls fade and chalk 30-40% faster than north-facing walls. Consider repainting these sides first." },
               { title: "Humidity & Moisture", desc: "Houston humidity above 75% drives moisture into paint films. Poor ventilation, sprinklers hitting walls, and clogged gutters accelerate failure." },
               { title: "Paint Quality", desc: "100% acrylic premium paints (SW Duration, BM Aura) last 2-3x longer than builder-grade vinyl acrylic. The extra cost per gallon pays for itself." },
-              { title: "Surface Preparation", desc: "Proper washing, scraping, sanding, caulking, and priming add 3-5 years to paint life. Skipping prep is the #1 reason paint fails early." },
+              { title: "Surface Preparation", desc: "Proper washing, scraping, sanding, caulking, and priming add 3-5 years to paint life. Skipping prep is the most common reason paint fails early." },
               { title: "Color Choice", desc: "Dark colors fade faster than light colors due to UV absorption. If you love dark colors, use products with iron oxide pigments for better fade resistance." },
               { title: "Storm Damage", desc: "Houston hurricanes and severe storms can damage paint through driving rain, flying debris, and standing water. Inspect after every major storm." },
             ].map(item => (

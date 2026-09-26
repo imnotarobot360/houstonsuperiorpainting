@@ -15,7 +15,8 @@ import {
 } from "@/components/luxury/sections"
 import { LocationsSection } from "@/components/locations-section"
 import FAQ from "@/components/faq"
-import { ReviewStructuredData } from "@/components/structured-data"
+import Link from "next/link"
+import { OFFICE_PAGES } from "@/lib/business"
 
 export const metadata: Metadata = {
   alternates: {
@@ -26,11 +27,11 @@ export const metadata: Metadata = {
 const homeFaqs = [
   {
     q: "How much does it cost to paint a house in Houston?",
-    a: "Interior painting in Houston typically costs $2.50–$4.50 per square foot. A 2,500 sq ft home averages $6,250–$11,250 for full interior. Exterior painting ranges from $3,500–$12,000 depending on size, siding type, stories, and condition. We provide free detailed estimates with itemized costs and no hidden fees.",
+    a: "Interior painting in Houston typically costs $2.50–$4.50 per square foot of floor area, and a full interior on a 2,500 sq ft home runs $4,000–$8,000 in 2026. Exterior painting runs $1.50–$4 per square foot of floor area ($3,500–$12,000 per home) depending on size, siding type, stories, and condition; a 2,500 sq ft two-story exterior typically runs $5,500–$9,000. We provide free detailed estimates with itemized costs and no hidden fees.",
   },
   {
     q: "How long does exterior paint last in Houston's climate?",
-    a: "With proper preparation and premium coatings, exterior paint lasts 8 to 10 years in Houston's humid subtropical climate. We use Sherwin-Williams Duration and SuperPaint specifically formulated for maximum durability against Houston's high humidity, intense UV exposure, and sudden temperature changes. Our 5-year warranty covers any workmanship issues.",
+    a: "Plan to repaint a Houston exterior every 5 to 7 years, and interiors every 7 to 10. Proper preparation and premium coatings are what get you to the long end of that range in Houston's humid subtropical climate. We use Sherwin-Williams Duration and Emerald, formulated for maximum durability against Houston's high humidity, intense UV exposure, and sudden temperature changes. Our 5-year warranty covers any workmanship issues.",
   },
   {
     q: "Do you offer free estimates in Katy, Cypress, and Sugar Land?",
@@ -46,11 +47,11 @@ const homeFaqs = [
   },
   {
     q: "How long does it take to paint a house interior?",
-    a: "A typical 2,500 sq ft home interior takes 4-6 days for a complete paint job including walls, ceilings, trim, and doors. Smaller projects like single rooms take 1-2 days. We work efficiently while never rushing preparation—proper prep is what makes paint last. We'll provide a specific timeline in your estimate.",
+    a: "A typical 2,500 sq ft home interior takes 3–5 days with a crew of three for a complete paint job including walls, ceilings, trim, and doors. Smaller projects like single rooms take 1-2 days. We work efficiently while never rushing preparation—proper prep is what makes paint last. We'll provide a specific timeline in your estimate.",
   },
   {
     q: "What paint brands do you use?",
-    a: "We exclusively use premium paints from Sherwin-Williams and Benjamin Moore. For interiors, we recommend Duration Home or SuperPaint. For exteriors in Houston's climate, we use Duration Exterior or Emerald. For cabinets, we use specialized coatings like Emerald Urethane Trim Enamel for a factory-smooth finish.",
+    a: "We exclusively use premium paints from Sherwin-Williams and Benjamin Moore. For interiors, we use Benjamin Moore Aura or Regal Select. For exteriors in Houston's climate, we use Sherwin-Williams Duration or Emerald. For cabinets, we use Benjamin Moore Advance or Sherwin-Williams Emerald Urethane Trim Enamel for a factory-smooth finish.",
   },
   {
     q: "Do I need to move furniture before you paint?",
@@ -62,7 +63,7 @@ const homeFaqs = [
   },
   {
     q: "Do you require payment upfront?",
-    a: "No upfront payment required. We collect a small deposit (typically 10-20%) after you accept the estimate and schedule a start date, with the balance due upon completion and your satisfaction. We accept all major credit cards, checks, and offer financing options for larger projects. This protects you and ensures we deliver quality work.",
+    a: "No. We don't take a deposit or any upfront payment. You pay when the final walkthrough is done and you're satisfied with the work. We accept all major credit cards and checks, and offer financing options for larger projects.",
   },
 ]
 
@@ -84,10 +85,59 @@ export default function Home() {
         (bg-white) so no two adjacent sections share a background.
       */}
       <LocationsSection />
-      <ReviewStructuredData />
+      <HomeKeyLinks />
       <FAQ items={homeFaqs} variant="default" />
       <LuxuryCTA />
       <Footer />
     </>
+  )
+}
+
+/**
+ * Compact internal-link block for the homepage linking map
+ * (docs/aeo-seo-plan-2026-09.md): the five office city pages with keyword
+ * anchors, plus the cost guide, About, and the estimate page. The six core
+ * service pages are already linked from LuxuryServices above.
+ */
+function HomeKeyLinks() {
+  return (
+    <section aria-labelledby="home-key-links" className="bg-background py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 md:grid-cols-2">
+        <div>
+          <h2 id="home-key-links" className="font-display text-2xl text-foreground mb-4">
+            Our five painting offices
+          </h2>
+          <ul className="space-y-2 font-manrope text-base">
+            {OFFICE_PAGES.map((o) => (
+              <li key={o.slug}>
+                <Link href={`/${o.slug}`} className="text-foreground underline-offset-4 hover:text-gold-deep hover:underline">
+                  House painters in {o.name.replace(" (HQ)", "")}, TX{o.name.includes("(HQ)") ? " (headquarters)" : ""}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 className="font-display text-2xl text-foreground mb-4">Plan your painting project</h2>
+          <ul className="space-y-2 font-manrope text-base">
+            <li>
+              <Link href="/houston-painting-cost-guide" className="text-foreground underline-offset-4 hover:text-gold-deep hover:underline">
+                Houston painting cost guide (2026 prices)
+              </Link>
+            </li>
+            <li>
+              <Link href="/painting-estimate-houston" className="text-foreground underline-offset-4 hover:text-gold-deep hover:underline">
+                Free painting estimate in Houston
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="text-foreground underline-offset-4 hover:text-gold-deep hover:underline">
+                About Houston Superior Painting and owner Juan Serra
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   )
 }

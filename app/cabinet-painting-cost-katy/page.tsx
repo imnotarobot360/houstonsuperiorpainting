@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "How Much Does Cabinet Painting Cost in Katy TX? 2026 Guide",
   description: "Cabinet painting costs in Katy TX typically range $30-$60 per linear foot or $3,000-$8,000 for a full kitchen. Save 60-70% vs replacement. Call 346-594-5960.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/cabinet-painting-cost-katy" },
-  openGraph: { title: "Cabinet Painting Cost Katy TX 2026 | Full Price Guide", description: "Cabinet painting in Katy TX: $3,000-$8,000 for a full kitchen. Complete price breakdown.", url: "https://houstonsuperiorpainting.com/cabinet-painting-cost-katy", type: "article" },
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }], title: "Cabinet Painting Cost Katy TX 2026 | Full Price Guide", description: "Cabinet painting in Katy TX: $3,000-$8,000 for a full kitchen. Complete price breakdown.", url: "https://houstonsuperiorpainting.com/cabinet-painting-cost-katy", type: "article" },
   other: { "geo.region": "US-TX", "geo.placename": "Katy", "geo.position": "29.7858;-95.8245", ICBM: "29.7858, -95.8245" },
 }
 
@@ -30,7 +30,7 @@ export default function CabinetPaintingCostKaty() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "How Much Does Cabinet Painting Cost in Katy TX?", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/cabinet-painting-cost-katy" },
+        { "@type": "Article", "headline": "How Much Does Cabinet Painting Cost in Katy TX?", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/cabinet-painting-cost-katy" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Cabinet Painting Cost Katy", "item": "https://houstonsuperiorpainting.com/cabinet-painting-cost-katy" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },

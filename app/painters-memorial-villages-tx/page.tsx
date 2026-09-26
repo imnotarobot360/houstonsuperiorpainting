@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-memorial-villages-tx',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Memorial Villages TX | Houston Superior Painting",
     description: "Premium painting services for Memorial Villages homeowners. Serving Bunker Hill, Piney Point, Hedwig Village, and more.",
     type: "website",
@@ -117,7 +117,7 @@ Whether you're in a cozy Hedwig Village cottage or a sprawling Piney Point estat
           faqs={[
             {
               question: "How much does painting cost in the Memorial Villages?",
-              answer: "Interior painting in the Memorial Villages typically costs $3.00-5.00 per square foot. Exterior painting ranges from $8,000-25,000+ depending on home size and architectural details. We provide free detailed estimates."
+              answer: "Interior painting in the Memorial Villages typically costs $2.50–$4.50 per square foot; homes over 4,000 sq ft generally run $7,000–$14,000 inside. A two-story exterior over 4,000 sq ft typically runs $8,500–$14,000, and larger estates with extensive millwork are quoted after a walkthrough. We provide free detailed estimates."
             },
             {
               question: "Do you serve all six Memorial Villages?",

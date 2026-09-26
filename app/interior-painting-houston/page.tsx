@@ -5,7 +5,7 @@ import { ServicePageTemplate } from '@/components/service-page-template'
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/interior-painting-houston',
+    canonical: 'https://houstonsuperiorpainting.com/interior-painting-houston-tx',
   },
   title: 'Interior Painting Houston TX | Professional Home Painters | Houston Superior Painting',
   description: 'Expert interior painting services in Houston, Katy & Cypress TX. Walls, ceilings, trim, and accent walls. Factory-finish spray techniques. Free estimates. Call (346) 594-5960.',
@@ -20,17 +20,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Interior Painting",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Houston Superior Painting",
-    "telephone": "346-594-5960",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Cypress",
-      "addressRegion": "TX",
-      "postalCode": "77429"
-    }
-  },
+  "provider": { "@type": "Organization", "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": ["Houston TX", "Katy TX", "Cypress TX"],
   "description": "Professional interior painting services for homes in Houston, including walls, ceilings, trim, and accent walls."
 }

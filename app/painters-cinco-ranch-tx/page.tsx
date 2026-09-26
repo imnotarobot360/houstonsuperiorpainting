@@ -6,13 +6,13 @@ import { generateLocationBusinessSchema } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   title: "House Painters Cinco Ranch TX | Interior & Exterior",
-  description: "Professional house painters serving Cinco Ranch, Katy TX. Expert interior and exterior painting with 5-star reviews. Free estimates, 5-year warranty.",
+  description: "Professional house painters serving Cinco Ranch, Katy TX. Interior, exterior, and cabinet painting with HOA color help. Free estimates, 5-year warranty.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-cinco-ranch-tx',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Cinco Ranch TX | Houston Superior Painting",
-    description: "Professional painting services for Cinco Ranch homeowners. 5-star rated, premium materials, 5-year warranty.",
+    description: "Professional painting services for Cinco Ranch homeowners. Premium materials, insured crews, 5-year warranty.",
     type: "website",
   },
 }
@@ -39,13 +39,13 @@ export default function PaintersCincoRanchTX() {
           heroDescription="Cinco Ranch's premier painting professionals. From lakeside estates to family homes throughout this beautiful master-planned community, we deliver exceptional results with every project."
           aboutCity={`Cinco Ranch is one of Katy's most desirable master-planned communities, known for its excellent schools, resort-style amenities, and beautiful homes surrounding Lake LaCenterra. Homeowners here take pride in their properties, and they deserve painting services that match their standards.
 
-We've painted hundreds of homes throughout Cinco Ranch—from Cinco Ranch South and Cinco Ranch North to the sections of Greenway Village, Lakes of Cinco Ranch, and beyond. Our crews know this community well, from its HOA requirements to the specific challenges of painting in Katy's climate.
+We've painted homes throughout Cinco Ranch—from Cinco Ranch South and Cinco Ranch North to the sections of Greenway Village, Lakes of Cinco Ranch, and beyond. Our crews know this community well, from its HOA requirements to the specific challenges of painting in Katy's climate.
 
 Many Cinco Ranch homes are now reaching the age where exterior repainting becomes necessary. Texas sun, humidity, and storms take their toll, and a fresh coat of quality paint both protects your investment and dramatically improves curb appeal. We use premium Sherwin-Williams and Benjamin Moore products specifically formulated for these conditions.
 
-For interiors, whether you're updating builder-grade paint, adding personality with accent walls, or preparing your home for sale, our expert crews deliver smooth, flawless results. Our 5-year warranty and 5-star reviews demonstrate our commitment to Cinco Ranch homeowners.`}
+For interiors, whether you're updating builder-grade paint, adding personality with accent walls, or preparing your home for sale, our expert crews deliver smooth, flawless results. Our 5-year workmanship warranty backs our commitment to Cinco Ranch homeowners.`}
           whyChooseUs={[
-            "Cinco Ranch specialists: Hundreds of homes painted in this community",
+            "Cinco Ranch focus: familiar with the community's homes and HOA process",
             "HOA expertise: Familiar with all Cinco Ranch color requirements",
             "Premium materials: Sherwin-Williams and Benjamin Moore paints",
             "Weather-smart scheduling: We plan around Katy's conditions",
@@ -116,7 +116,7 @@ For interiors, whether you're updating builder-grade paint, adding personality w
           faqs={[
             {
               question: "How much does house painting cost in Cinco Ranch?",
-              answer: "Interior painting in Cinco Ranch typically costs $2.50-4.50 per square foot. Exterior painting ranges from $4,500-10,000 depending on home size and condition. We provide free detailed estimates."
+              answer: "Interior painting in Cinco Ranch typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
             },
             {
               question: "Do you work with Cinco Ranch HOA requirements?",

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-fulshear",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Interior Painters Fulshear TX — Houston Superior Painting",
     description: "Premium interior painting in Fulshear, TX. Serving Cross Creek Ranch, Fulbrook, Weston Lakes. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/interior-painting-fulshear",

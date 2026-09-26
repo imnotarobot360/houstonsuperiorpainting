@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-07-16T08:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [
       {
         url: "https://houstonsuperiorpainting.com/images/blog/cost-to-paint-kitchen-cabinets-houston.png",
@@ -90,8 +90,8 @@ export default function CabinetPaintingCostHoustonPage() {
       slug="cost-to-paint-kitchen-cabinets-houston-tx"
       title="How Much Does It Cost to Paint Kitchen Cabinets in Houston? (2026)"
       excerpt="Cabinet painting is the single highest-impact upgrade you can make to a Houston kitchen — and a fraction of the cost of replacement. Here's a real 2026 price breakdown, what drives your quote, and when to refinish instead of replace."
-      author="JJ Semo"
-      authorRole="Owner, Houston Superior Painting"
+      author="Juan Serra"
+      authorRole="Owner"
       publishDate="July 16, 2026"
       readTime="9 min read"
       category="Cost Guide"
@@ -237,7 +237,8 @@ export default function CabinetPaintingCostHoustonPage() {
 
       <p>
         At Houston Superior Painting, our cabinet estimates are free, itemized, and walk you through the exact products
-        and process we&apos;ll use. If you&apos;re considering a cabinet transformation, see our{" "}
+        and process we&apos;ll use, whether you&apos;re in Houston or working with our{" "}
+        <a href="/painters-cypress-tx">painters in Cypress TX</a>. If you&apos;re considering a cabinet transformation, see our{" "}
         <a href="/cabinet-refinishing-houston-tx">cabinet refinishing service</a> or{" "}
         <a href="/contact">request a free estimate</a> and we&apos;ll give you a real number for your kitchen.
       </p>

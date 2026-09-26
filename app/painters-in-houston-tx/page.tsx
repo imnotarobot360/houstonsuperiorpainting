@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Painters in Houston TX | Houston Superior Painting",
     description: "Trusted painters in Houston TX for interior, exterior, cabinet painting, pressure washing, and remodeling. Free quote: 346-594-5960.",
-    url: "https://houstonsuperiorpainting.com/painters-in-houston-tx",
+    url: "https://houstonsuperiorpainting.com/painters-houston-tx",
     type: "website",
     images: [{ url: "https://houstonsuperiorpainting.com/images/og-painters-houston.jpg", width: 1200, height: 630 }],
   },
@@ -38,7 +38,7 @@ const faqs = [
   { q: "Can I see examples of your work?", a: "Absolutely. We have hundreds of before-and-after photos from projects across Houston, Katy, Cypress, and Sugar Land. Visit our gallery or check our 200+ five-star Google reviews with real project photos from local homeowners." },
   { q: "How do I get a free estimate?", a: "Call or text us at (346) 594-5960, or fill out our online form. We typically schedule estimates within 1-2 business days and provide a detailed, itemized quote on-site within 24 hours of the visit." },
   { q: "Do you require a deposit?", a: "Yes, a standard deposit is required upon acceptance to secure your project date on our schedule. The remaining balance is due upon completion and your satisfaction. We accept all major credit cards." },
-  { q: "What makes you different from other Houston painters?", a: "Three things: old-school preparation (we never skip steps), premium products only (Sherwin-Williams and Benjamin Moore), and JJ Semo personally oversees every project. We are not a franchise or a lead-generation company. We are a local, owner-operated team with a 4.9/5 Google rating." },
+  { q: "What makes you different from other Houston painters?", a: "Three things: old-school preparation (we never skip steps), premium products only (Sherwin-Williams and Benjamin Moore), and owner Juan Serra personally reviews the prep scope on every estimate. We are not a franchise or a lead-generation company. We are a local, owner-operated team with a 4.9/5 Google rating." },
   { q: "Do you paint in Houston summers?", a: "Yes, but we schedule exterior work during optimal conditions: early morning starts (6-7 AM) and we stop when temperatures exceed safe application ranges. Our paint products are rated for extreme heat and we follow manufacturer temperature guidelines strictly." },
   { q: "Can you match existing paint colors?", a: "Yes. We use spectrophotometer color matching to match any existing color precisely. Whether you need a touch-up or want to replicate a color from another room, we can achieve an exact match." },
   { q: "Do you handle HOA requirements?", a: "Yes. We regularly work with HOAs across Houston, Katy, Cypress, and Sugar Land. We can help with color approval submissions, provide documentation for your HOA board, and ensure all work meets community standards." },
@@ -57,11 +57,11 @@ export default function PaintersInHoustonTX() {
               {
                 "@type": "Article",
                 "headline": "Painters in Houston TX – Professional Residential Painting Experts",
-                "author": { "@type": "Person", "name": "JJ Semo", "jobTitle": "Founder", "worksFor": { "@type": "Organization", "name": "Houston Superior Painting" } },
+                "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" },
                 "publisher": { "@type": "Organization", "name": "Houston Superior Painting", "logo": { "@type": "ImageObject", "url": "https://houstonsuperiorpainting.com/images/logo.png" } },
                 "datePublished": "2026-05-16",
                 "dateModified": "2026-05-16",
-                "mainEntityOfPage": "https://houstonsuperiorpainting.com/painters-in-houston-tx",
+                "mainEntityOfPage": "https://houstonsuperiorpainting.com/painters-houston-tx",
                 "image": "https://houstonsuperiorpainting.com/images/og-painters-houston.jpg",
                 "wordCount": 2800,
               },
@@ -69,7 +69,7 @@ export default function PaintersInHoustonTX() {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                   { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" },
-                  { "@type": "ListItem", "position": 2, "name": "Painters in Houston TX", "item": "https://houstonsuperiorpainting.com/painters-in-houston-tx" },
+                  { "@type": "ListItem", "position": 2, "name": "Painters in Houston TX", "item": "https://houstonsuperiorpainting.com/painters-houston-tx" },
                 ],
               },
               {
@@ -127,7 +127,7 @@ export default function PaintersInHoustonTX() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
           <p className="text-foreground/80 leading-relaxed text-lg">
-            Houston Superior Painting is a trusted local team of painters in Houston TX specializing in high-quality interior, exterior, and cabinet painting. Founded in 2019 by JJ Semo, we use premium Sherwin-Williams and Benjamin Moore products with old-school preparation for Houston&apos;s tough weather. We serve Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, and The Woodlands. Call (346) 594-5960 for your free quote.
+            Houston Superior Painting is a trusted local team of painters in Houston TX specializing in high-quality interior, exterior, and cabinet painting. Founded in 2019 by Juan Serra, we use premium Sherwin-Williams and Benjamin Moore products with old-school preparation for Houston&apos;s tough weather. We serve Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, and The Woodlands. Call (346) 594-5960 for your free quote.
           </p>
         </div>
       </section>
@@ -168,7 +168,7 @@ export default function PaintersInHoustonTX() {
               { name: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx", desc: "Kitchen and bathroom cabinets with HVLP spray technology for factory-finish results." },
               { name: "Drywall Repair", href: "/drywall-repair-houston-tx", desc: "Cracks, holes, water damage, and texture matching before painting." },
               { name: "Pressure Washing", href: "/pressure-washing-houston-tx", desc: "Driveways, siding, fences, and decks cleaned to prepare surfaces for coating." },
-              { name: "Limewash & German Smear", href: "/limewash-houston-tx", desc: "European-style brick finishes for dramatic curb appeal transformations." },
+              { name: "Limewash & German Smear", href: "/limewash-brick-painting-houston-tx", desc: "European-style brick finishes for dramatic curb appeal transformations." },
               { name: "Garage Floor Epoxy", href: "https://houstonsuperiorepoxy.com/", desc: "Durable, chemical-resistant epoxy and polyaspartic coatings for garage floors." },
               { name: "Commercial Painting", href: "/commercial-painting-houston-tx", desc: "Offices, retail, restaurants, and warehouses with after-hours scheduling." },
             ].map((service) => (
@@ -258,7 +258,7 @@ export default function PaintersInHoustonTX() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { title: "Climate Expertise", desc: "We live and work in Houston. We know which products perform in 100-degree heat and 80% humidity. National franchises use one-size-fits-all approaches that fail here." },
-              { title: "Accountability", desc: "JJ Semo personally oversees every project. If something is not right, you call the owner directly, not a call center." },
+              { title: "Accountability", desc: "Owner Juan Serra reviews the prep scope on every estimate. If something is not right, you call the owner directly, not a call center." },
               { title: "Background-Checked Team", desc: "Every crew member is background-checked, drug-tested, and trained in our 8-step process. Your home and family are safe with our team." },
               { title: "200+ Five-Star Reviews", desc: "Real Google reviews from real Houston homeowners. 4.9/5 average rating with detailed reviews from Katy, Cypress, Sugar Land, and The Woodlands clients." },
               { title: "Honest, Transparent Pricing", desc: "Our itemized estimates break down every cost. No surprises, no hidden fees. Standard deposit required upon acceptance to secure your date." },

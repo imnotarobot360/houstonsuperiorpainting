@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
@@ -7,12 +8,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/sherwin-williams-vs-benjamin-moore-texas-heat',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Sherwin-Williams vs Benjamin Moore: Which Is Better for Texas Heat?",
     description: "An honest comparison from a Houston painter with years of experience using both brands extensively.",
     type: "article",
     publishedTime: "2026-04-01",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -36,7 +37,7 @@ export default function SherwinVsBenjaminMoorePage() {
     <BlogPostTemplate slug="sherwin-williams-vs-benjamin-moore-texas-heat"
       title="Sherwin-Williams vs Benjamin Moore: Which Is Better for Texas Heat?"
       excerpt="We've used both brands extensively across hundreds of Houston homes. Here's our honest comparison of how Sherwin-Williams and Benjamin Moore perform in Texas conditions."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="April 1, 2026"
       readTime="10 min read"
@@ -194,7 +195,7 @@ export default function SherwinVsBenjaminMoorePage() {
       <h2>The Bottom Line</h2>
 
       <p>
-        You really can&apos;t go wrong with either Sherwin-Williams or Benjamin Moore. Both make excellent paint that will hold up well in Houston. The differences I&apos;ve described are relatively minor—we&apos;re talking about paint that lasts 12 years vs. 14 years, not 5 years vs. 15 years.
+        You really can&apos;t go wrong with either Sherwin-Williams or Benjamin Moore. Both make excellent paint that will hold up well in Houston. The differences I&apos;ve described are relatively minor—we&apos;re talking about an extra season or two on a shaded wall, not the difference between a 3-year failure and a full 5–7 year repaint cycle. Either brand is what we use for <Link href="/exterior-painting-houston-tx">exterior painting in Houston</Link>, and the premium-paint upgrade is priced out in our <Link href="/exterior-house-painting-houston-cost-guide">exterior painting cost guide</Link>.
       </p>
 
       <p>
@@ -209,7 +210,7 @@ export default function SherwinVsBenjaminMoorePage() {
       </ul>
 
       <p>
-        A well-applied coat of mid-range paint will outperform a poorly applied coat of premium paint every time. If you&apos;re hiring a painter, make sure they&apos;re taking preparation seriously—that&apos;s where the real difference in longevity comes from.
+        A well-applied coat of mid-range paint will outperform a poorly applied coat of premium paint every time. If you&apos;re hiring a painter, whether in Houston or through our <Link href="/painters-katy-tx">painters in Katy TX</Link>, make sure they&apos;re taking preparation seriously—that&apos;s where the real difference in longevity comes from.
       </p>
     </BlogPostTemplate>
   )

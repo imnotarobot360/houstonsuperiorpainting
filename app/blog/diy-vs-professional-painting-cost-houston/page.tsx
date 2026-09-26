@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-07-16T08:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [
       {
         url: "https://houstonsuperiorpainting.com/images/blog/diy-vs-professional-painting-houston.png",
@@ -39,12 +39,12 @@ const faqs = [
   {
     question: "Is it cheaper to paint my house myself in Houston?",
     answer:
-      "On paper, DIY is cheaper because you're not paying for labor. For a single room, DIY might cost $150–$400 in materials versus a $400–$800 professional quote. But once you factor in tools, multiple trips to the store, your time, and the risk of redoing the work, the savings on larger projects shrink quickly — especially on exteriors and cabinets.",
+      "On paper, DIY is cheaper because you're not paying for labor. For a single room, DIY might cost $150–$400 in materials versus a $300–$800 professional quote. But once you factor in tools, multiple trips to the store, your time, and the risk of redoing the work, the savings on larger projects shrink quickly — especially on exteriors and cabinets.",
   },
   {
     question: "How much does professional painting cost in Houston in 2026?",
     answer:
-      "In 2026, expect roughly $400–$800 per room for interior painting, $3,000–$6,500 for a full interior repaint of an average home, and $4,000–$10,000+ for exterior painting depending on size and prep. Cabinets typically run $3,000–$6,500. These prices include labor, quality materials, prep, and usually a workmanship warranty.",
+      "In 2026, expect roughly $300–$800 per room for interior painting, $4,000–$8,000 for a full interior repaint of a 2,500 sq ft home, and $3,500–$12,000 for exterior painting depending on size and prep ($5,500–$9,000 for a 2,500 sq ft two-story). Cabinets typically run $3,000–$6,500. These prices include labor, quality materials, prep, and usually a workmanship warranty.",
   },
   {
     question: "What painting projects are okay to DIY?",
@@ -54,7 +54,7 @@ const faqs = [
   {
     question: "Why is professional painting worth the cost?",
     answer:
-      "You're paying for prep, speed, the right products, proper equipment, insurance, and a warranty. Professionals get the job done in days instead of weekends, and the finish lasts longer because the surface was prepared correctly. For exteriors and cabinets in Houston's climate, that prep is the difference between paint that lasts 8–10 years and paint that fails in two.",
+      "You're paying for prep, speed, the right products, proper equipment, insurance, and a warranty. Professionals get the job done in days instead of weekends, and the finish lasts longer because the surface was prepared correctly. For exteriors and cabinets in Houston's climate, that prep is the difference between paint that lasts the full 5–7 year Houston repaint cycle and paint that fails in two.",
   },
   {
     question: "What hidden costs do people forget with DIY painting?",
@@ -66,7 +66,7 @@ const faqs = [
 const relatedPosts = [
   {
     title: "Interior Painting Cost in Houston TX",
-    href: "/blog/interior-painting-cost-houston-tx",
+    href: "/interior-painting-cost-houston",
     excerpt: "An honest breakdown of what interior painting costs in Houston and what affects your quote.",
     image: "/images/blog/interior-painting-cost-houston.png",
   },
@@ -78,7 +78,7 @@ const relatedPosts = [
   },
   {
     title: "How to Choose the Best Painters in Houston",
-    href: "/blog/how-to-choose-best-painters-houston",
+    href: "/questions-to-ask-before-hiring-painters",
     excerpt: "The questions to ask and red flags to avoid when hiring a painting contractor.",
     image: "/images/blog/how-to-choose-best-painters-houston.jpg",
   },
@@ -90,7 +90,7 @@ export default function DiyVsProPaintingHoustonPage() {
       slug="diy-vs-professional-painting-cost-houston"
       title="DIY vs. Hiring a Pro Painter in Houston: The Real Cost (2026)"
       excerpt="DIY painting looks cheaper — and sometimes it genuinely is. But the honest math includes tools, time, and the cost of redoing work. Here's how DIY really compares to a professional quote in Houston."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="July 16, 2026"
       readTime="9 min read"
@@ -144,17 +144,17 @@ export default function DiyVsProPaintingHoustonPage() {
 
       <h2>Cost Comparison: DIY vs. Professional</h2>
 
-      <p>Here&apos;s roughly how the two stack up across common Houston projects in 2026:</p>
+      <p>Here&apos;s roughly how the two stack up across common Houston projects in 2026 (full ranges are in our <a href="/houston-painting-cost-guide">Houston painting cost guide</a>):</p>
 
       <ul>
         <li>
-          <strong>Single bedroom</strong> — DIY: $150–$400 &nbsp;|&nbsp; Pro: $400–$800
+          <strong>Single bedroom</strong> — DIY: $150–$400 &nbsp;|&nbsp; Pro: $300–$800
         </li>
         <li>
           <strong>Full interior (2,000 sq ft)</strong> — DIY: $800–$1,800 &nbsp;|&nbsp; Pro: $3,500–$6,500
         </li>
         <li>
-          <strong>Exterior (2,000 sq ft)</strong> — DIY: $1,200–$2,500 + equipment &nbsp;|&nbsp; Pro: $4,000–$10,000+
+          <strong>Exterior (2,000 sq ft)</strong> — DIY: $1,200–$2,500 + equipment &nbsp;|&nbsp; Pro: $3,500–$7,500
         </li>
         <li>
           <strong>Kitchen cabinets</strong> — DIY: $300–$700 &nbsp;|&nbsp; Pro: $3,000–$6,500
@@ -209,7 +209,8 @@ export default function DiyVsProPaintingHoustonPage() {
       </p>
 
       <p>
-        <strong>Hire a professional for:</strong> full-home interiors, any exterior work, kitchen cabinets, high or
+        <strong>Hire a professional for:</strong> full-home{" "}
+        <a href="/interior-painting-houston-tx">interior painting in Houston</a>, any exterior work, kitchen cabinets, high or
         vaulted ceilings, homes with significant prep or repair needs, and anytime you want the result to last and come
         with a warranty.
       </p>
@@ -223,7 +224,8 @@ export default function DiyVsProPaintingHoustonPage() {
       </p>
 
       <p>
-        Not sure which camp your project falls into? <a href="/contact">Request a free estimate</a> and we&apos;ll give
+        Not sure which camp your project falls into? <a href="/contact">Request a free estimate</a> from our{" "}
+        <a href="/painters-houston-tx">painters in Houston TX</a> and we&apos;ll give
         you a straight answer — even if that answer is &quot;this one&apos;s an easy DIY.&quot; You can also read{" "}
         <a href="/blog/what-to-expect-painting-estimate">what to expect from a painting estimate</a> before you compare
         quotes.

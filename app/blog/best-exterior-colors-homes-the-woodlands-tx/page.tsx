@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Choosing exterior paint colors in The Woodlands? Here's what works in this community's wooded, natural setting — and what to avoid.",
     type: "article",
     publishedTime: "2026-05-24",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/best-exterior-colors-woodlands.jpg"],
   },
   twitter: {
@@ -72,7 +72,7 @@ export default function BestExteriorColorsWoodlandsTXPage() {
     <BlogPostTemplate
       title="Best Exterior Colors for Homes in The Woodlands TX"
       excerpt="Choosing exterior paint colors is harder than it looks. What seems like the perfect shade on a small paint chip can look completely different stretched across 2,500 square feet of siding under Texas sun. This guide is written specifically for The Woodlands homeowners."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="May 24, 2026"
       readTime="12 min read"
@@ -277,7 +277,7 @@ export default function BestExteriorColorsWoodlandsTXPage() {
       </ul>
 
       <p>
-        A quality exterior painting company will discuss these trade-offs with you when helping you choose a product 
+        A quality <Link href="/exterior-painting-houston-tx" className="text-primary hover:underline">exterior painting company</Link> will discuss these trade-offs with you when helping you choose a product 
         and color — not just apply whatever you select without comment.
       </p>
 
@@ -344,7 +344,7 @@ export default function BestExteriorColorsWoodlandsTXPage() {
 
       <p>
         We offer color consultations and free estimates, and we&apos;d love to help you find a look you&apos;ll love 
-        for years to come.
+        for years to come. If you&apos;re budgeting first, our <Link href="/exterior-house-painting-houston-cost-guide" className="text-primary hover:underline">exterior house painting cost guide</Link> lays out 2026 prices by home size.
       </p>
 
       <p>

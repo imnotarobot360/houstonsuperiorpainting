@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "How to Choose the Best House Painters in Houston",
   description: "What to look for when hiring a painting contractor in Houston — expert tips on finding pros who deliver quality, communication & lasting results.",
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/blog/how-to-choose-best-painters-houston',
+    canonical: 'https://houstonsuperiorpainting.com/questions-to-ask-before-hiring-painters',
   },
   openGraph: {
     title: "How to Choose the Best House Painters in Houston, TX",

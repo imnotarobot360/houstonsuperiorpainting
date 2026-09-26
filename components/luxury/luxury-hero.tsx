@@ -34,9 +34,17 @@ export function LuxuryHero() {
           <h2 className="mt-6 font-manrope text-base sm:text-lg font-medium uppercase tracking-[0.18em] text-soft-white/90 text-balance">
             Interior &amp; Exterior Painters Serving Houston, Katy &amp; Cypress, TX
           </h2>
-          <p className="mt-6 font-cormorant text-xl sm:text-2xl text-soft-white/80 leading-relaxed max-w-2xl">
-            Serving Houston homeowners who expect exceptional craftsmanship, transparent
-            communication, and finishes designed to last a generation.
+          {/* Entity blurb (AEO): who we are in one paragraph, visible above the fold.
+              `.quick-answer` is the Speakable selector. */}
+          <p className="quick-answer mt-6 font-manrope text-base sm:text-lg text-soft-white/90 leading-relaxed max-w-2xl">
+            {BUSINESS.name} is a residential and commercial painting contractor founded in {BUSINESS.founded} by{" "}
+            {BUSINESS.founder.name}, headquartered in Cypress, TX, and serving Greater Houston from five offices:
+            Cypress, Houston, Katy, Sugar Land, and Magnolia. {BUSINESS.trust.liabilityCoverage} insured,{" "}
+            {BUSINESS.trust.warrantyYears}-year workmanship warranty, no upfront payment.{" "}
+            <a href={PHONE_HREF} className="font-semibold text-gold hover:underline">
+              {BUSINESS.phone}
+            </a>
+            .
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Link

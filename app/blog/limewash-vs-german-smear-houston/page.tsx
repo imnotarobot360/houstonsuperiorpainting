@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Expert comparison of limewash and German smear finishes for Houston brick homes.",
     type: "article",
     publishedTime: "2026-05-08",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/limewash-vs-german-smear.jpg"],
   },
   twitter: {
@@ -76,7 +76,7 @@ export default function LimewashVsGermanSmearPage() {
     <BlogPostTemplate
       title="Limewash vs German Smear: Which Brick Finish Is Right for Your Houston Home?"
       excerpt="Transforming your brick exterior can dramatically change your home's curb appeal. Limewash and German smear are two popular options—but they create very different looks and have different maintenance requirements. Here's everything Houston homeowners need to know."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="May 8, 2026"
       readTime="11 min read"
@@ -354,7 +354,8 @@ export default function LimewashVsGermanSmearPage() {
 
       <p>
         Learn more about our <Link href="/limewash-brick-painting-houston-tx" className="text-primary underline">limewash and brick painting services</Link> or 
-        contact us at (346) 594-5960 for a free consultation.
+        contact us at (346) 594-5960 for a free consultation. If you&apos;re repainting trim or siding at the same time, the{" "}
+        <Link href="/exterior-house-painting-houston-cost-guide" className="text-primary underline">Houston exterior painting cost guide</Link> covers those prices.
       </p>
 
       <p>

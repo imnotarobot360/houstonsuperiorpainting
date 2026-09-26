@@ -8,11 +8,11 @@ import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "House Painters Missouri City TX | Interior & Exterior",
-  description: "Professional house painters in Missouri City, TX. Houston Superior Painting offers interior & exterior painting, cabinet refinishing & more. 5-star rated.",
+  description: "Professional house painters in Missouri City, TX. Interior and exterior painting, cabinet refinishing, and drywall repair. Insured crews, 5-year warranty.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-missouri-city-tx',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Missouri City TX | Houston Superior Painting",
     description: "Trusted painting contractors serving Missouri City and Fort Bend County. Quality craftsmanship, 5-year warranty. Get your free estimate today!",
     type: "website",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const missouriCityData = {
   city: "Missouri City",
   state: "TX",
-  heroHeadline: "Missouri City's Premier House Painters",
+  heroHeadline: "House Painters in Missouri City, TX",
   heroDescription: "Trusted painting contractors serving Sienna, Riverstone, Lake Olympia, and all Missouri City neighborhoods with exceptional craftsmanship.",
   
   aboutCity: `Missouri City homeowners deserve painting contractors who understand the unique character of Fort Bend County's premier communities. From the master-planned neighborhoods of Sienna Plantation to the established homes of Quail Valley, Houston Superior Painting delivers results that enhance your home's beauty and protect your investment.
@@ -31,7 +31,7 @@ Our team has extensive experience with Missouri City's diverse housing styles �
 
 Missouri City's subtropical climate presents specific challenges: intense summer heat, high humidity, and occasional severe storms. Our exterior painting solutions use elastomeric and acrylic coatings specifically formulated to withstand these conditions without cracking, peeling, or fading. For interiors, we use low-VOC paints that are safe for your family while delivering exceptional durability.
 
-Whether you're preparing your home for sale, updating a newly purchased property, or simply refreshing your living spaces, we bring the same attention to detail and commitment to excellence that has earned us a 4.9-star rating from homeowners across the Houston area.`,
+Whether you're preparing your home for sale, updating a newly purchased property, or simply refreshing your living spaces, we bring the same attention to detail and commitment to excellence we bring to every home across Greater Houston.`,
 
   neighborhoods: [
     "Sienna Plantation",
@@ -93,7 +93,7 @@ Whether you're preparing your home for sale, updating a newly purchased property
 
   whyChooseUs: [
     "Experienced with all Missouri City neighborhoods",
-    "4.9-star Google rating from local customers",
+    "$2M general liability insurance plus workers' compensation",
     "Premium Sherwin-Williams & Benjamin Moore paints",
     "5-year warranty on residential work",
     "Detailed estimates with no hidden costs",
@@ -115,7 +115,7 @@ Whether you're preparing your home for sale, updating a newly purchased property
     },
     {
       question: "How much does house painting cost in Missouri City?",
-      answer: "Interior painting typically ranges from $2,500-$8,000 depending on home size. Exterior painting ranges from $4,500-$12,000. We provide free, detailed estimates for every project."
+      answer: "Interior painting in Missouri City typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
     },
     {
       question: "How long will my exterior paint last in Missouri City?",
@@ -131,9 +131,8 @@ Whether you're preparing your home for sale, updating a newly purchased property
 export default function PaintersMissouriCityTX() {
   return (
     <>
-      {/* This page shipped with no LocalBusiness schema while 19 of its 21
-          sibling city pages had one. Generated from the shared helper so the
-          NAP stays tied to lib/business.ts. */}
+      {/* No Google Business Profile here, so the shared helper emits an
+          Organization reference with areaServed only (no address). */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

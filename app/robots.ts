@@ -49,6 +49,20 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'anthropic-ai',
         allow: '/',
       },
+      {
+        // Anthropic's search crawler (separate from ClaudeBot, which is training).
+        userAgent: 'Claude-SearchBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Claude-User',
+        allow: '/',
+      },
+      {
+        // Bing's index feeds ChatGPT search and Copilot.
+        userAgent: 'Bingbot',
+        allow: '/',
+      },
     ],
     sitemap: 'https://houstonsuperiorpainting.com/sitemap.xml',
   }

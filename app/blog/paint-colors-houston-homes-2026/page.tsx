@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "2026 color trends working in Houston homes, mistakes local homeowners make, and a room-by-room framework you won't regret.",
     type: "article",
     publishedTime: "2026-06-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/paint-colors-houston-homes-2026.png"],
   },
   twitter: {
@@ -79,7 +79,7 @@ export default function PaintColorsHoustonHomes2026Page() {
     <BlogPostTemplate
       title="How to Pick Paint Colors for Houston Homes (2026 Trends)"
       excerpt="Houston's warm southern light, local architecture, and HOA requirements make color selection harder than it looks. This guide covers the 2026 trends actually working in Houston homes, the mistakes locals make most often, and a room-by-room framework for choices you won't regret."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
       readTime="12 min read"
@@ -161,7 +161,7 @@ export default function PaintColorsHoustonHomes2026Page() {
       </p>
       <ul>
         <li>
-          <strong>Sherwin-Williams Alabaster (SW 7008)</strong> — the #1 requested color in Houston right now. Warm,
+          <strong>Sherwin-Williams Alabaster (SW 7008)</strong> — one of the most requested colors in Houston right now. Warm,
           creamy, reads differently in different light. Universally flattering in Texas homes.
         </li>
         <li>
@@ -411,7 +411,9 @@ export default function PaintColorsHoustonHomes2026Page() {
       <p>
         Explore our <Link href="/interior-painting-houston-tx">interior painting</Link> and{" "}
         <Link href="/exterior-painting-houston-tx">exterior painting</Link> services, or learn{" "}
-        <Link href="/blog/best-painters-houston-tx">how to vet the best painters in Houston</Link> before you hire.
+        <Link href="/blog/best-painters-houston-tx">how to vet the best painters in Houston</Link> before you hire. A
+        color change costs the same as any repaint; see the{" "}
+        <Link href="/houston-painting-cost-guide">Houston painting cost guide</Link> for 2026 prices.
       </p>
       <p>
         <strong>Service areas:</strong> Houston, <Link href="/painters-katy-tx">Katy</Link>,{" "}

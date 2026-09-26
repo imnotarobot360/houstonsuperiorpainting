@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "What a legitimate paint warranty covers, what it excludes, the red flags to avoid, and how to make a claim in Texas.",
     type: "article",
     publishedTime: "2026-06-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/paint-warranty-texas.png"],
   },
   twitter: {
@@ -84,7 +84,7 @@ export default function PaintWarrantyTexasPage() {
     <BlogPostTemplate
       title="What Does a 5-Year Paint Warranty Actually Cover in Texas?"
       excerpt="Most painting warranties in Texas are essentially meaningless. This guide explains what a legitimate paint warranty covers, what it should exclude, the red flags to watch for, and what you're entitled to when a paint job fails."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
       readTime="11 min read"
@@ -210,7 +210,7 @@ export default function PaintWarrantyTexasPage() {
       </p>
       <h3>4. The warranty period is shorter than expected paint life</h3>
       <p>
-        A 1-year warranty on a premium exterior paint job that should last 10–12 years is not a meaningful guarantee.
+        A 1-year warranty on a premium exterior paint job that should last its full 5–7 year Houston repaint cycle is not a meaningful guarantee.
         The period should reflect confidence in the work. 2–3 years minimum for exterior, 1–2 years for interior is the
         minimum floor for legitimate workmanship warranties.
       </p>
@@ -312,7 +312,7 @@ export default function PaintWarrantyTexasPage() {
       <h2>Get a Fully Warranted Paint Job in Houston TX</h2>
       <p>
         Houston Superior Painting provides a 5-year workmanship warranty on all projects — in writing, included with
-        every signed contract. Founded 2019. Hundreds of completed projects across Greater Houston. The same ownership
+        every signed contract, with no deposit. Founded 2019. 500+ completed projects across Greater Houston. The same ownership
         and crew when you need to use your warranty.
       </p>
       <ul>
@@ -326,7 +326,8 @@ export default function PaintWarrantyTexasPage() {
       <p>
         Explore our <Link href="/exterior-painting-houston-tx">exterior painting</Link> and{" "}
         <Link href="/interior-painting-houston-tx">interior painting</Link> services, or see how to{" "}
-        <Link href="/blog/best-painters-houston-tx">vet the best painters in Houston</Link> before you hire.
+        <Link href="/blog/best-painters-houston-tx">vet the best painters in Houston</Link> before you hire. Warranty
+        coverage is included in every price in our <Link href="/houston-painting-cost-guide">Houston painting cost guide</Link>.
       </p>
       <p>
         <strong>Service areas:</strong> Houston, <Link href="/painters-katy-tx">Katy</Link>,{" "}

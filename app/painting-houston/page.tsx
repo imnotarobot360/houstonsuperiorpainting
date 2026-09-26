@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Houston Painting Experts | Houston Superior Painting',
   description: 'Houston Superior Painting is a professional residential painting company serving Houston, Katy, and Cypress, Texas. Get a free estimate today.',
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/painting-houston',
+    canonical: 'https://houstonsuperiorpainting.com/painters-houston-tx',
   },
 }
 
@@ -79,26 +79,9 @@ const faqSchema = {
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Houston Superior Painting",
-  "telephone": "346-594-5960",
-  "email": "info@houstonsuperiorpainting.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "14150 Huffmeister Rd, Suite 410",
-    "addressLocality": "Cypress",
-    "addressRegion": "TX",
-    "postalCode": "77429",
-    "addressCountry": "US"
-  },
-  "areaServed": ["Houston TX", "Katy TX", "Cypress TX"],
-  "serviceType": [
-    "Interior Painting",
-    "Exterior Painting",
-    "Cabinet Painting",
-    "Drywall Repair",
-    "Pressure Washing"
-  ]
+  "@type": "Organization",
+  "@id": "https://houstonsuperiorpainting.com/#organization",
+  "areaServed": ["Houston TX", "Katy TX", "Cypress TX"]
 }
 
 const services = [

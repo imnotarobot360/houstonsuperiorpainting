@@ -23,7 +23,7 @@ export default function PaintOrReplaceCabinets() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "Should You Paint or Replace Cabinets? Complete Guide", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@id": "https://houstonsuperiorpainting.com/#business" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/paint-or-replace-cabinets" },
+        { "@type": "Article", "headline": "Should You Paint or Replace Cabinets? Complete Guide", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@id": "https://houstonsuperiorpainting.com/#organization" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/paint-or-replace-cabinets" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Cabinet Refinishing", "item": "https://houstonsuperiorpainting.com/cabinet-refinishing-houston-tx" }, { "@type": "ListItem", "position": 3, "name": "Paint or Replace", "item": "https://houstonsuperiorpainting.com/paint-or-replace-cabinets" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },

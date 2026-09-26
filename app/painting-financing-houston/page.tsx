@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/painting-financing-houston",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Painting Financing in Houston, TX | Houston Superior Painting",
     description:
       "Paint now and pay over time with flexible monthly payment plans for Houston homeowners. Apply in minutes.",
@@ -28,7 +28,7 @@ const serviceSchema = {
   description:
     "Flexible financing and monthly payment plans for interior painting, exterior painting, and cabinet refinishing projects across the Greater Houston area.",
   serviceType: "Home Improvement Financing",
-  provider: { "@id": "https://houstonsuperiorpainting.com/#business" },
+  provider: { "@id": "https://houstonsuperiorpainting.com/#organization" },
   areaServed: [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

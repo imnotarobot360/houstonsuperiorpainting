@@ -49,7 +49,7 @@ export default function PaintersTheWoodlandsTX() {
         <LocationPageTemplate
           city="The Woodlands"
           state="TX"
-          heroHeadline="Premier House Painters for The Woodlands, Texas"
+          heroHeadline="House Painters for The Woodlands, Texas"
           heroDescription="The Woodlands deserves painting professionals who match its standard of excellence. Our meticulous craftsmanship makes us the choice for discerning homeowners."
           aboutCity={`The Woodlands is one of Houston's most prestigious master-planned communities, and painting homes here requires a special level of care and expertise. The beautiful wooded setting, custom architecture, and high property values mean homeowners expect nothing less than exceptional results.
 
@@ -136,7 +136,7 @@ The Woodlands' strict design standards and architectural review committees mean 
             },
             {
               question: "What's the typical investment for painting a Woodlands home?",
-              answer: "The Woodlands homes often feature custom details that affect pricing. Interior painting typically runs $3-5 per square foot; exteriors range from $5,000-$15,000+ depending on size and complexity. We provide detailed estimates specific to your home."
+              answer: "The Woodlands homes often feature custom details that affect pricing. Interior painting typically runs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exteriors run $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide detailed estimates specific to your home."
             },
             {
               question: "How far in advance should I schedule?",

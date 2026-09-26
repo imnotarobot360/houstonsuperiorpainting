@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 export default function PaintersBellaireTX() {
   return (
     <>
-      <TrustBar />
+      <TrustBar hideRating />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -60,9 +60,9 @@ export default function PaintersBellaireTX() {
         <LocationPageTemplate
           city="Bellaire"
           state="TX"
-          heroHeadline="Bellaire's Premier House Painters"
+          heroHeadline="House Painters in Bellaire, TX"
           heroDescription="From charming mid-century ranches to stunning modern builds, we deliver the quality that this distinguished community expects. Premium materials, meticulous prep, and a 5-year warranty on every project."
-          quickAnswer="Houston Superior Painting provides professional painting services throughout Bellaire TX. Interior painting costs $3.00-$5.00/sq ft, exterior painting $6,000-$15,000+. We specialize in both classic mid-century homes and modern new construction, use Sherwin-Williams and Benjamin Moore premium products, and provide a 5-year warranty. Call (346) 594-5960 for a free estimate."
+          quickAnswer="Houston Superior Painting provides professional painting services throughout Bellaire TX. Interior painting costs $2.50–$4.50/sq ft ($4,000–$8,000 for a 2,500 sq ft home) and exterior painting $3,500–$12,000 per home. We specialize in both classic mid-century homes and modern new construction, use Sherwin-Williams and Benjamin Moore premium products, and provide a 5-year warranty. Call (346) 594-5960 for a free estimate."
           aboutCity={`Bellaire is one of Houston's most desirable inner-loop communities, known for its excellent schools, tree-lined streets, and prime location just minutes from the Medical Center, Galleria, and downtown. The homes here range from charming 1950s ranches to stunning modern architecture, and each deserves painting services that match its quality.
 
 We've been serving Bellaire homeowners since 2019, and we understand what makes this community special. The close-knit neighborhood feel means reputation matters—and we've built ours on consistent quality, fair pricing, and respectful service that Bellaire families appreciate.
@@ -73,7 +73,6 @@ Our crews are experienced with Bellaire's unique characteristics: working effici
 
 We treat every Bellaire project with the care and professionalism this exceptional community deserves. Our bilingual team provides clear communication, our detailed estimates have no hidden fees, and our 5-year warranty ensures your satisfaction.`}
           whyChooseUs={[
-            "35+ Bellaire projects completed since 2019",
             "Mid-century to modern expertise: skilled with all Bellaire architectural styles",
             "Tight-lot experience: efficient work in close-set neighborhoods",
             "Premium materials: Sherwin-Williams Duration and Benjamin Moore Regal standard",
@@ -146,7 +145,7 @@ We treat every Bellaire project with the care and professionalism this exception
           faqs={[
             {
               question: "How much does it cost to paint a house in Bellaire, TX?",
-              answer: "Interior painting in Bellaire typically costs $3.00-5.00 per square foot. Exterior painting for Bellaire homes ranges from $6,000-15,000+ depending on size and condition. We provide free detailed estimates."
+              answer: "Interior painting in Bellaire typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
             },
             {
               question: "Do you paint both older and newer Bellaire homes?",

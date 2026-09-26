@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-05-25T00:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [{
       url: "https://houstonsuperiorpainting.com/images/blog/exterior-painting-cypress-problems.jpg",
       width: 1200,
@@ -114,7 +114,7 @@ export default function ExteriorPaintingCypressProblemsBlog() {
                 "name": "How often should I repaint my home's exterior in Cypress TX?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Most Cypress homeowners should plan on a professional exterior repaint every 7–10 years, depending on the paint products used, the home's sun exposure, and how well the surface has been maintained between paint jobs."
+                  "text": "Most Cypress homeowners should plan on a professional exterior repaint every 5–7 years, depending on the paint products used, the home's sun exposure, and how well the surface has been maintained between paint jobs."
                 }
               },
               {
@@ -162,7 +162,7 @@ export default function ExteriorPaintingCypressProblemsBlog() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
@@ -187,7 +187,7 @@ export default function ExteriorPaintingCypressProblemsBlog() {
                   Quick Answer: Why Exterior Paint Fails in Cypress TX
                 </h2>
                 <p className="text-muted-foreground">
-                  Exterior paint peels in Cypress TX primarily because of moisture intrusion, inadequate prep before the last paint job, or paint products not designed for high-humidity climates. The combination of Gulf Coast humidity (75%+) and intense UV exposure makes Cypress one of the more demanding environments for exterior coatings. Most Cypress homes need professional exterior repainting every 7-10 years.
+                  Exterior paint peels in Cypress TX primarily because of moisture intrusion, inadequate prep before the last paint job, or paint products not designed for high-humidity climates. The combination of Gulf Coast humidity (75%+) and intense UV exposure makes Cypress one of the more demanding environments for exterior coatings. Most Cypress homes need professional exterior repainting every 5-7 years.
                 </p>
               </CardContent>
             </Card>
@@ -382,10 +382,10 @@ export default function ExteriorPaintingCypressProblemsBlog() {
               <strong>A good rule of thumb:</strong> if more than 25–30% of any wall surface is showing paint failure, it&apos;s time to repaint the whole elevation rather than patch it. Partial repaints rarely match in color and sheen, and they don&apos;t address the underlying surface condition.
             </p>
             <p>
-              Most Cypress homes benefit from a professional exterior paint job every 7–10 years. If your home is in that window, it&apos;s worth having a professional assess the current condition before problems worsen.
+              Most Cypress homes benefit from a professional exterior paint job every 5–7 years. If your home is in that window, it&apos;s worth having a professional assess the current condition before problems worsen. Our <Link href="/exterior-painting-houston-tx">exterior painting in Houston and Cypress</Link> includes the wash, scrape, caulk, and primer that stop these problems, and the <Link href="/exterior-house-painting-houston-cost-guide">exterior house painting cost guide</Link> shows what a Cypress repaint typically runs.
             </p>
             <p>
-              Looking for help with <Link href="/interior-painting-cypress-tx">interior painting in Cypress</Link> too? We handle that as well.
+              Looking for help with <Link href="/interior-painting-cypress-bridgeland">interior painting in Cypress</Link> too? We handle that as well.
             </p>
 
             {/* FAQs */}
@@ -403,7 +403,7 @@ export default function ExteriorPaintingCypressProblemsBlog() {
 
             <h3>How often should I repaint my home&apos;s exterior in Cypress TX?</h3>
             <p>
-              Most Cypress homeowners should plan on a professional exterior repaint every 7–10 years, depending on the paint products used, the home&apos;s sun exposure, and how well the surface has been maintained between paint jobs.
+              Most Cypress homeowners should plan on a professional exterior repaint every 5–7 years, depending on the paint products used, the home&apos;s sun exposure, and how well the surface has been maintained between paint jobs.
             </p>
 
             <h3>What causes paint to bubble on the outside of a house?</h3>

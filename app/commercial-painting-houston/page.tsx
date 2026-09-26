@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Commercial Painting Houston TX | Houston Superior Painting',
   description: 'Commercial painting in Houston, Katy & Cypress TX. Offices, retail, restaurants & warehouses. After-hours work available. Free estimates.',
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/commercial-painting-houston',
+    canonical: 'https://houstonsuperiorpainting.com/commercial-painting-houston-tx',
   },
   openGraph: {
     title: 'Commercial Painting Houston TX | Houston Superior Painting',
@@ -23,7 +23,7 @@ const serviceSchema = {
   "name": "Commercial Painting in Houston, TX",
   "description": "Professional commercial painting for offices, retail spaces, restaurants, HOAs, and industrial facilities. After-hours and weekend scheduling available to minimize business disruption.",
   "serviceType": "Commercial Painting",
-  "provider": { "@id": "https://houstonsuperiorpainting.com/#business" },
+  "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

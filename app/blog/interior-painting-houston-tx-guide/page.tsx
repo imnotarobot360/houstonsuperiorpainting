@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
@@ -7,12 +8,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/interior-painting-houston-tx-guide',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Interior Painting Houston TX: Cost & Hiring Guide",
     description: "Learn real costs, prep tips, and how to choose the best painters in Houston.",
     type: "article",
     publishedTime: "2026-04-22",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -42,7 +43,7 @@ export default function InteriorPaintingHoustonGuidePage() {
     <BlogPostTemplate slug="interior-painting-houston-tx-guide"
       title="Interior Painting Houston TX: What Homeowners Need to Know Before Hiring a Painter"
       excerpt="If you're thinking about repainting your home in Houston, discover real costs, prep tips, and how to choose the best painters near you."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="April 22, 2026"
       readTime="7 min read"
@@ -65,7 +66,7 @@ export default function InteriorPaintingHoustonGuidePage() {
 
       <ul>
         <li>A bad paint job can start peeling in under 2 years</li>
-        <li>A properly prepped and painted home can last 8+ years</li>
+        <li>A properly prepped and painted interior can last 7–10 years</li>
       </ul>
 
       <p>
@@ -85,7 +86,7 @@ export default function InteriorPaintingHoustonGuidePage() {
       </ul>
 
       <p>
-        This is why many homes in Katy and Cypress experience peeling paint when prep is skipped.
+        This is why many homes in Katy and <Link href="/painters-cypress-tx">Cypress</Link> experience peeling paint when prep is skipped.
       </p>
 
       <h2>Cost of Interior Painting in Houston TX</h2>
@@ -95,13 +96,13 @@ export default function InteriorPaintingHoustonGuidePage() {
       </p>
 
       <ul>
-        <li><strong>$2.50 – $4.50 per sq ft</strong> for a basic repaint with standard paint</li>
-        <li><strong>$5.00 – $8.00 per sq ft</strong> for a high-end finish with premium paint</li>
-        <li><strong>$6,000 – $15,000+</strong> for a full interior home painting project</li>
+        <li><strong>$2.50 – $4.50 per sq ft</strong> of floor area for most repaints, premium paint included</li>
+        <li><strong>$300 – $800</strong> for a single room, including ceiling and trim</li>
+        <li><strong>$4,000 – $8,000</strong> for a full interior on a 2,500 sq ft home</li>
       </ul>
 
       <p>
-        Be wary of cheap bids—they usually mean shortcuts in preparation work, which leads to paint failure down the road.
+        Be wary of cheap bids—they usually mean shortcuts in preparation work, which leads to paint failure down the road. Room-by-room ranges are in our <Link href="/interior-painting-cost-houston">interior painting cost guide for Houston</Link>.
       </p>
 
       <h2>The #1 Mistake Homeowners Make</h2>
@@ -140,7 +141,7 @@ export default function InteriorPaintingHoustonGuidePage() {
       <h2>Our Professional Painting Process</h2>
 
       <p>
-        At Houston Superior Painting, we follow a thorough 8-step process for every interior painting project:
+        At Houston Superior Painting, we follow a thorough 8-step process for every <Link href="/interior-painting-houston-tx">interior painting project in Houston</Link>:
       </p>
 
       <ol>
@@ -202,7 +203,7 @@ export default function InteriorPaintingHoustonGuidePage() {
 
       <h3>How much does interior painting cost in Houston?</h3>
       <p>
-        Interior painting in Houston typically costs between $2.50 and $8.00 per square foot, depending on the level of preparation required and the quality of paint used. A full interior home painting project usually ranges from $6,000 to $15,000 or more.
+        Interior painting in Houston typically costs $2.50 to $4.50 per square foot of floor area, depending on the level of preparation required and the paint used. A single room runs $300 to $800, and a full interior on a 2,500 sq ft home usually ranges from $4,000 to $8,000.
       </p>
 
       <h3>How long does interior painting take?</h3>
@@ -227,7 +228,7 @@ export default function InteriorPaintingHoustonGuidePage() {
                 "name": "How much does interior painting cost in Houston?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Interior painting in Houston typically costs between $2.50 and $8.00 per square foot."
+                  "text": "Interior painting in Houston typically costs $2.50 to $4.50 per square foot of floor area, depending on the level of preparation required and the paint used. A single room runs $300 to $800, and a full interior on a 2,500 sq ft home usually ranges from $4,000 to $8,000."
                 }
               },
               {
@@ -247,27 +248,6 @@ export default function InteriorPaintingHoustonGuidePage() {
                 }
               }
             ]
-          })
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Houston Superior Painting",
-            "telephone": "+1-346-594-5960",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "2617 Bissonnet St",
-              "addressLocality": "Houston",
-              "addressRegion": "TX",
-              "postalCode": "77005",
-              "addressCountry": "US"
-            },
-            "areaServed": ["Houston TX", "Katy TX", "Cypress TX"]
           })
         }}
       />

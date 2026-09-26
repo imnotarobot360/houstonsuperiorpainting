@@ -10,14 +10,14 @@ import { BUSINESS, PHONE_HREF } from "@/lib/business"
 import { ArrowRight, Phone, Star } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Painting Projects & Before/After Case Studies",
+  title: "Houston Painting Projects: Before & After Case Studies",
   description:
-    "Explore real Houston painting projects from Houston Superior Painting — interior, exterior, cabinet, stucco, and wood rot transformations with before &...",
+    "Real Houston painting projects by Houston Superior Painting: interior, exterior, cabinet, stucco, and wood rot work, with before-and-after photos and details.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/projects",
   },
   openGraph: {
-    title: "Painting Projects & Before/After Case Studies",
+    title: "Houston Painting Projects: Before & After Case Studies",
     description:
       "Real Houston painting transformations — interior, exterior, cabinets, stucco, and more. See the before & after.",
     url: "https://houstonsuperiorpainting.com/projects",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Painting Projects & Before/After Case Studies",
+    title: "Houston Painting Projects: Before & After Case Studies",
     description:
       "Real Houston painting transformations — interior, exterior, cabinets, stucco, and more.",
     images: ["https://houstonsuperiorpainting.com/images/luxury/hero-estate.png"],
@@ -111,7 +111,7 @@ export default function ProjectsPage() {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground"
                 asChild
               >
-                <Link href="/contact">
+                <Link href="/painting-estimate-houston">
                   Start Your Project
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -136,7 +136,10 @@ export default function ProjectsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-center">
             <span className="inline-flex items-center gap-2 font-manrope text-sm text-foreground">
               <Star className="h-4 w-4 text-gold-deep fill-gold-deep" />
-              {BUSINESS.trust.googleRating} Google rating ({BUSINESS.trust.reviewCount}+ reviews)
+              {/* No rating figure: the 4.9 / 200+ number belongs to the Houston GBP. */}
+              <a href={BUSINESS.social.googleMaps} target="_blank" rel="noopener noreferrer" className="hover:text-gold-deep underline underline-offset-4">
+                See reviews on Google
+              </a>
             </span>
             <span className="font-manrope text-sm text-foreground">
               {BUSINESS.trust.projectsCompleted}+ projects completed
@@ -208,7 +211,7 @@ export default function ProjectsPage() {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground"
                 asChild
               >
-                <Link href="/contact">Get Your Free Estimate</Link>
+                <Link href="/painting-estimate-houston">Get a Painting Estimate</Link>
               </Button>
               <Button
                 size="lg"

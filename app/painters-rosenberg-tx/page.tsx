@@ -5,14 +5,14 @@ import { LocationPageTemplate } from "@/components/location-page-template"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "House Painters Rosenberg TX | Interior & Exterior",
+  title: "House Painters Rosenberg TX | Interior & Exterior Painting",
   description: "Professional house painters in Rosenberg, TX. Houston Superior Painting offers expert interior and exterior painting for Rosenberg and Fort Bend County.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-rosenberg-tx',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Rosenberg TX | Houston Superior Painting",
-    description: "Professional interior and exterior painting services for Rosenberg, TX homeowners. 5-star rated, serving since 2019. Get your free estimate today.",
+    description: "Professional interior and exterior painting services for Rosenberg, TX homeowners. Insured crews, 5-year warranty, serving since 2019. Get your free estimate today.",
     type: "website",
   },
 }
@@ -116,7 +116,7 @@ We've built our reputation in the Rosenberg area on quality work, fair pricing, 
           faqs={[
             {
               question: "How much does it cost to paint a house in Rosenberg, TX?",
-              answer: "Interior painting in Rosenberg typically costs $2.00-4.00 per square foot. Exterior painting for an average Rosenberg home runs $4,000-8,000 depending on size and condition. We provide free detailed estimates."
+              answer: "Interior painting in Rosenberg typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
             },
             {
               question: "Do you serve all of Rosenberg and surrounding areas?",

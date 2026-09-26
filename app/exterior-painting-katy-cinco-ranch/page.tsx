@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/exterior-painting-katy-cinco-ranch',
   },
-  title: "Exterior Painting Katy & Cinco Ranch",
+  title: "Exterior Painting Katy & Cinco Ranch | Houston Superior Painting",
   description: "Premium exterior painting in Katy and Cinco Ranch, TX. 5-year warranty, 5-star reviews. Free quote — call (346) 594-5960.",
 }
 

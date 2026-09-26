@@ -3,12 +3,12 @@ import Link from "next/link";
 import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Best House Painters Near Katy Texas",
+  title: "Best House Painters Near Katy Texas | Houston Superior Painting",
   description:
     "Recognized as one of the best house painters near Katy Texas. Premium service in Katy, Fulshear, Richmond & Sugar Land. 4.9/5 Google, free estimates.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas" },
   openGraph: {
-    title: "Best House Painters Near Katy Texas",
+    title: "Best House Painters Near Katy Texas | Houston Superior Painting",
     description: "Top-rated house painters near Katy TX. Interior, exterior, cabinet painting. Free estimates. (346) 594-5960.",
     url: "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas",
     type: "website",
@@ -30,7 +30,7 @@ export default function BestHousePaintersKatyTexas() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "LocalBusiness", "name": "Houston Superior Painting \u2013 Katy", "url": "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas", "telephone": "+1-346-594-5960", "address": { "@type": "PostalAddress", "addressLocality": "Katy", "addressRegion": "TX", "addressCountry": "US" }, "geo": { "@type": "GeoCoordinates", "latitude": 29.7858, "longitude": -95.8245 }, "parentOrganization": { "@id": "https://houstonsuperiorpainting.com/#business" } },
+        { "@type": "Organization", "@id": "https://houstonsuperiorpainting.com/#organization", "areaServed": { "@type": "City", "name": "Katy", "containedInPlace": { "@type": "State", "name": "Texas" } } },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Katy Painters", "item": "https://houstonsuperiorpainting.com/painters-katy-tx" }, { "@type": "ListItem", "position": 3, "name": "Best House Painters Katy", "item": "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
@@ -64,7 +64,7 @@ export default function BestHousePaintersKatyTexas() {
               { title: "Premium Products Only", desc: "Sherwin-Williams Duration and Emerald, Benjamin Moore Regal Select and Aura. No builder-grade paint." },
               { title: "Background-Checked Team", desc: "W-2 employees only. Every team member is background-checked and drug-tested." },
               { title: "5-Year Written Warranty", desc: "Written 5-year warranty on all work \u2014 exterior, interior, and cabinets." },
-              { title: "Owner On Every Job", desc: "JJ Semo personally oversees every Katy project from estimate to final walkthrough." },
+              { title: "Owner On Every Job", desc: "Owner Juan Serra personally reviews the prep scope on every Katy estimate." },
             ].map(item => (
               <div key={item.title} className="bg-card border border-border rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>

@@ -13,17 +13,17 @@ export const metadata: Metadata = {
   description:
     "Thinking about epoxy for your garage floor in Houston? Learn what works, what to avoid, and why prep is everything in our hot, humid climate.",
   alternates: {
-    canonical: "https://houstonsuperiorpainting.com/blog/garage-epoxy-coating-houston-tx",
+    canonical: "https://houstonsuperiorepoxy.com/",
   },
   openGraph: {
     title: "Garage Epoxy Coating in Houston TX: What Homeowners Should Know",
     description:
       "Thinking about epoxy for your garage floor in Houston? Learn what works, what to avoid, and why prep is everything in our hot, humid climate.",
-    url: "https://houstonsuperiorpainting.com/blog/garage-epoxy-coating-houston-tx",
+    url: "https://houstonsuperiorepoxy.com/",
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-06-04T00:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [
       {
         url: "https://houstonsuperiorpainting.com/images/blog/garage-epoxy-coating-houston.png",
@@ -73,7 +73,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com" },
     { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://houstonsuperiorpainting.com/blog" },
-    { "@type": "ListItem", "position": 3, "name": "Garage Epoxy Coating in Houston TX: What Homeowners Should Know", "item": "https://houstonsuperiorpainting.com/blog/garage-epoxy-coating-houston-tx" }
+    { "@type": "ListItem", "position": 3, "name": "Garage Epoxy Coating in Houston TX: What Homeowners Should Know", "item": "https://houstonsuperiorepoxy.com/" }
   ]
 }
 
@@ -107,7 +107,7 @@ export default function GarageEpoxyBlog() {
             dateModified: "2026-06-04",
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": "https://houstonsuperiorpainting.com/blog/garage-epoxy-coating-houston-tx",
+              "@id": "https://houstonsuperiorepoxy.com/",
             },
           }),
         }}
@@ -192,7 +192,7 @@ export default function GarageEpoxyBlog() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  Juan Serra
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
@@ -357,7 +357,7 @@ export default function GarageEpoxyBlog() {
               If there&apos;s one thing to take away from this article, it&apos;s this: the quality of a garage epoxy
               installation is almost entirely determined by surface preparation. The best coating system in the world
               will fail on improperly prepared concrete. It&apos;s the same prep-first principle that determines whether{" "}
-              <Link href="/exterior-painting-houston">exterior paint</Link> lasts in our climate.
+              <Link href="/exterior-painting-houston-tx">exterior paint</Link> lasts in our climate.
             </p>
 
             <h3>Mechanical Grinding vs. Acid Etching</h3>
@@ -501,7 +501,7 @@ export default function GarageEpoxyBlog() {
               Before any epoxy installation, the surrounding walls and any trim or step areas in your garage are worth
               evaluating as well. If you&apos;re investing in a quality floor, it&apos;s a natural time to freshen the
               painted surfaces and concrete walls that frame the space. Houston Superior Painting handles interior garage
-              painting alongside our other services — <Link href="/interior-painting-houston">interior painting</Link>{" "}
+              painting alongside our other services — <Link href="/interior-painting-houston-tx">interior painting</Link>{" "}
               and <Link href="/pressure-washing-houston-tx">pressure washing</Link> are commonly paired with garage floor
               prep work. A clean floor with fresh paint on the walls transforms a utilitarian garage into a functional,
               finished part of your home.
@@ -605,7 +605,7 @@ export default function GarageEpoxyBlog() {
                   </Badge>
                   <h3 className="font-semibold text-foreground mb-2">
                     <Link
-                      href="/blog/best-time-to-paint-houston-home-exterior"
+                      href="/blog/best-time-to-paint-house-houston"
                       className="hover:text-primary transition-colors"
                     >
                       Best Time to Paint Your Houston Home Exterior: A Seasonal Guide

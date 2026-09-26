@@ -8,13 +8,13 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, Clock, User, Calendar, CheckCircle2, Palette, Sun, Home, AlertTriangle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Best Interior Paint Colors for Houston Homes | 2024 Guide",
+  title: "Best Interior Paint Colors for Houston Homes | 2026 Guide",
   description: "Choosing interior paint colors for your Houston home? Here's what works in our light conditions, with our humidity, and in today's market.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/best-interior-paint-colors-houston-homes',
   },
   openGraph: {
-    title: "Best Interior Paint Colors for Houston Homes | 2024 Guide",
+    title: "Best Interior Paint Colors for Houston Homes | 2026 Guide",
     description: "Choosing interior paint colors for your Houston home? Here's what works in our light conditions, with our humidity, and in today's market.",
     url: "https://houstonsuperiorpainting.com/blog/best-interior-paint-colors-houston-homes",
     siteName: "Houston Superior Painting",
@@ -155,7 +155,7 @@ export default function BestInteriorPaintColorsHoustonHomes() {
                 </span>
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
                 </span>
               </div>
               
@@ -214,7 +214,7 @@ export default function BestInteriorPaintColorsHoustonHomes() {
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                This guide focuses on what actually works in Houston homes — considering our natural light conditions, the warm climate palette that tends to feel right here, and the resale market for the Houston metro.
+                This guide focuses on what actually works in Houston homes — considering our natural light conditions, the warm climate palette that tends to feel right here, and the resale market for the Houston metro. Once you&apos;ve chosen, our <Link href="/interior-painting-houston-tx" className="text-primary hover:underline">interior painting in Houston</Link> crews handle the prep and two finish coats, and the <Link href="/interior-painting-cost-houston" className="text-primary hover:underline">interior painting cost in Houston</Link> guide shows what a room or a whole home runs in 2026. Homeowners west of the Beltway can also reach our <Link href="/painters-katy-tx" className="text-primary hover:underline">painters in Katy TX</Link> office directly.
               </p>
 
               {/* Houston Light Section */}

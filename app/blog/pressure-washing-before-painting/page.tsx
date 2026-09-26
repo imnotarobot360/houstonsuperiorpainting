@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/pressure-washing-before-painting',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Pressure Washing Before Painting: Essential Preparation",
     description: "Why pressure washing is the first step to a lasting paint job.",
     type: "article",
@@ -26,7 +27,7 @@ const relatedPosts = [
   {
     title: "Why Proper Paint Preparation Matters",
     href: "/blog/paint-preparation-houston-climate",
-    excerpt: "The secret to paint that lasts 10+ years.",
+    excerpt: "The secret to paint that lasts its full repaint cycle.",
     image: "/images/blog/paint-preparation-houston.jpg"
   }
 ]
@@ -46,7 +47,7 @@ export default function PressureWashingBeforePaintingPage() {
       relatedPosts={relatedPosts}
     >
       <p>
-        At Houston Superior Painting, pressure washing is always included in our exterior painting preparation process.
+        At Houston Superior Painting, pressure washing is always included in our <Link href="/exterior-painting-houston-tx">exterior painting in Houston</Link> preparation process, and it&apos;s already built into the prices in our <Link href="/exterior-house-painting-houston-cost-guide">exterior house painting cost guide</Link>.
       </p>
 
       <h2>Why Pressure Washing Matters</h2>
@@ -103,7 +104,7 @@ export default function PressureWashingBeforePaintingPage() {
       <h2>Standalone Pressure Washing Services</h2>
 
       <p>
-        We also offer pressure washing as a standalone service for:
+        We also offer <Link href="/pressure-washing-houston-tx">pressure washing in Houston</Link> as a standalone service for:
       </p>
 
       <ul>
@@ -117,7 +118,7 @@ export default function PressureWashingBeforePaintingPage() {
       <h2>Schedule Your Pressure Washing</h2>
 
       <p>
-        Houston Superior Painting provides professional pressure washing throughout Houston, Katy, Cypress, Sugar Land, and surrounding areas.
+        Houston Superior Painting provides professional pressure washing throughout Houston, Katy, <Link href="/painters-cypress-tx">Cypress</Link>, Sugar Land, and surrounding areas.
       </p>
 
       <p>

@@ -5,7 +5,7 @@ import { ServicePageTemplate } from '@/components/service-page-template'
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/exterior-painting-houston',
+    canonical: 'https://houstonsuperiorpainting.com/exterior-painting-houston-tx',
   },
   title: 'Exterior Painting Houston TX | House Painters | Houston Superior Painting',
   description: 'Professional exterior house painting in Houston, Katy & Cypress TX. Weather-resistant finishes, power washing, and expert prep work. Free estimates. Call (346) 594-5960.',
@@ -20,17 +20,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Exterior Painting",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Houston Superior Painting",
-    "telephone": "346-594-5960",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Cypress",
-      "addressRegion": "TX",
-      "postalCode": "77429"
-    }
-  },
+  "provider": { "@type": "Organization", "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": ["Houston TX", "Katy TX", "Cypress TX"],
   "description": "Professional exterior house painting services in Houston with weather-resistant finishes designed for Texas climate."
 }

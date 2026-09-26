@@ -2,12 +2,12 @@ import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
 
 export const metadata: Metadata = {
-  title: "Interior Painters The Woodlands TX",
+  title: "Interior Painters The Woodlands TX | Houston Superior Painting",
   description: "Premium interior painting in The Woodlands, TX. Serving Creekside Park, Sterling Ridge, Alden Bridge. 5-year warranty. Free estimates.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-the-woodlands",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Interior Painters The Woodlands TX — Houston Superior Painting",
     description: "Premium interior painting in The Woodlands, TX. Serving Creekside Park, Sterling Ridge, Alden Bridge. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/interior-painting-the-woodlands",

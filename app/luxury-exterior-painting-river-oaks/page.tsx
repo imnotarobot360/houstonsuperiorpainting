@@ -2,12 +2,12 @@ import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
 
 export const metadata: Metadata = {
-  title: "Luxury Exterior Painting River Oaks TX",
+  title: "Luxury Exterior Painting River Oaks TX | Free Estimates",
   description: "Premium exterior painting for River Oaks estates. Historic preservation expertise, custom color matching, master craftsmen. Free consultation.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/luxury-exterior-painting-river-oaks",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Luxury Exterior Painting River Oaks TX — Houston Superior Painting",
     description: "Premium exterior painting for River Oaks estates. Historic preservation expertise, custom color matching, master craftsmen.",
     url: "https://houstonsuperiorpainting.com/luxury-exterior-painting-river-oaks",

@@ -2,12 +2,12 @@ import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
 
 export const metadata: Metadata = {
-  title: "Exterior Painters The Woodlands TX",
+  title: "Exterior Painters The Woodlands TX | Houston Superior Painting",
   description: "Professional exterior painting in The Woodlands, TX. Wood, stucco, brick, hardie board. DRC-compliant colors. 5-year warranty. Free estimates.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/exterior-painting-the-woodlands",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Exterior Painters The Woodlands TX — Houston Superior Painting",
     description: "Professional exterior painting in The Woodlands, TX. Wood, stucco, brick, hardie board. DRC-compliant colors. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/exterior-painting-the-woodlands",

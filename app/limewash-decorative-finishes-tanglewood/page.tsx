@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/limewash-decorative-finishes-tanglewood',
   },
-  title: "Limewash & Decorative Finishes Tanglewood",
+  title: "Limewash & Decorative Finishes Tanglewood | Free Estimates",
   description: "Premium limewash and decorative finishes in Tanglewood, Houston. European-style elegance. Free quote — call (346) 594-5960.",
 }
 

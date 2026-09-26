@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-07-25T08:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [
       {
         url: "https://houstonsuperiorpainting.com/images/blog/home-depot-vs-professional-epoxy.png",
@@ -81,7 +81,7 @@ const faqs = [
 const relatedPosts = [
   {
     title: "Your Garage Is the Biggest Room in Your Home. Why Are You Hiding It?",
-    href: "/blog/garage-epoxy-flooring-houston-tx",
+    href: "https://houstonsuperiorepoxy.com/",
     excerpt: "Why professional garage epoxy flooring is one of the smartest upgrades a Houston homeowner can make.",
     image: "/images/blog/garage-epoxy-flooring-houston.png",
   },
@@ -105,7 +105,7 @@ export default function HomeDepotVsProfessionalEpoxyPage() {
       slug="home-depot-vs-professional-garage-floor-epoxy"
       title="Home Depot Epoxy vs. Professional Garage Floor Epoxy: What's the Real Difference?"
       excerpt="Spending a couple hundred dollars on a DIY kit sounds smart — until you learn what most homeowners discover too late. The biggest difference isn't the epoxy itself."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="July 25, 2026"
       readTime="9 min read"
@@ -372,8 +372,11 @@ export default function HomeDepotVsProfessionalEpoxyPage() {
       </p>
 
       <p>
-        We provide <a href="/blog/garage-epoxy-flooring-houston-tx">professional garage floor coating systems</a>{" "}
-        throughout the Houston area using premium materials and meticulous surface preparation.
+        We provide <a href="https://houstonsuperiorepoxy.com/">professional garage floor coating systems</a>{" "}
+        throughout the Houston area, from <a href="/painters-houston-tx">Houston</a> to the suburbs, using premium
+        materials and meticulous surface preparation. If the garage walls need a refresh too, our{" "}
+        <a href="/interior-painting-houston-tx">interior painting in Houston</a> crews can paint them before the floor
+        goes down; see the <a href="/interior-painting-cost-houston">interior painting cost in Houston</a> guide for pricing.
       </p>
 
       <p>

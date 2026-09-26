@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-cypress-creek-tx',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Cypress Creek TX | Houston Superior Painting",
-    description: "Professional painting services for Cypress Creek area homeowners. 5-star rated, premium materials, 5-year warranty.",
+    description: "Professional painting services for Cypress Creek area homeowners. Premium materials, insured crews, 5-year warranty.",
     type: "website",
   },
 }
@@ -43,7 +43,7 @@ We've been painting homes along Cypress Creek since 2019, and we understand the 
 
 Many homes in the Cypress Creek area were built in the 1980s and 1990s and are now needing their second or third exterior repaint. We specialize in properly preparing these mature homes—addressing weathering, caulk failures, and minor wood damage before applying premium coatings that protect for years to come.
 
-Whether you're in Champions, Klein, Spring, or any of the beautiful neighborhoods along the creek, Houston Superior Painting delivers the quality craftsmanship your home deserves. Our 5-year warranty and hundreds of satisfied local customers speak to our commitment to excellence.`}
+Whether you're in Champions, Klein, Spring, or any of the beautiful neighborhoods along the creek, Houston Superior Painting delivers the quality craftsmanship your home deserves. Our 5-year workmanship warranty backs our commitment to excellence.`}
           whyChooseUs={[
             "Cypress Creek area experts: Familiar with local conditions and challenges",
             "Wooded environment experience: Proper prep for shade and moisture",
@@ -116,7 +116,7 @@ Whether you're in Champions, Klein, Spring, or any of the beautiful neighborhood
           faqs={[
             {
               question: "How much does house painting cost in the Cypress Creek area?",
-              answer: "Interior painting in the Cypress Creek area typically costs $2.50-4.00 per square foot. Exterior painting ranges from $4,000-9,000 depending on home size and condition. We provide free detailed estimates."
+              answer: "Interior painting in the Cypress Creek area typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
             },
             {
               question: "Do you paint homes near the creek with flooding concerns?",

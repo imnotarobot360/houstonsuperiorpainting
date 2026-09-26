@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   title: "Residential Painters Houston | Interior & Exterior",
   description: "Specialized residential painters Houston for complete home transformations built for Houston climate. Interior, exterior, cabinets, drywall. Call 346-594-5960.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/residential-painters-houston" },
-  openGraph: { title: "Residential Painters Houston | Houston Superior Painting", description: "Full-service residential painting experts in Houston, Katy, Cypress, and Sugar Land.", url: "https://houstonsuperiorpainting.com/residential-painters-houston", type: "website" },
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }], title: "Residential Painters Houston | Houston Superior Painting", description: "Full-service residential painting experts in Houston, Katy, Cypress, and Sugar Land.", url: "https://houstonsuperiorpainting.com/residential-painters-houston", type: "website" },
   other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },
 }
 
 const faqs = [
   { q: "What does a residential painter do?", a: "Residential painters handle all painting and surface preparation for homes: interior walls, ceilings, trim, exterior siding, trim, fascia, soffits, cabinet refinishing, drywall repair, pressure washing, and specialty finishes like limewash. Houston Superior Painting is a full-service residential painting company." },
-  { q: "How much do residential painters charge in Houston?", a: "Interior painting costs $2.50-$4.50/sq ft. Exterior painting ranges $3,500-$12,000. Cabinet refinishing runs $3,000-$8,000. Prices depend on surface condition, accessibility, and product choice. We provide free itemized estimates." },
+  { q: "How much do residential painters charge in Houston?", a: "Interior painting costs $2.50-$4.50/sq ft. Exterior painting ranges $3,500-$12,000. Cabinet refinishing runs $3,000-$6,500 per kitchen. Prices depend on surface condition, accessibility, and product choice. We provide free itemized estimates." },
   { q: "How do I choose the right residential painter in Houston?", a: "Look for: verified Google reviews (check for fake patterns), proof of insurance ($1M+ liability), detailed written estimates (not verbal), warranty in writing, and willingness to provide references. Ask to see recent work in your neighborhood." },
   { q: "What is the difference between residential and commercial painting?", a: "Residential painting focuses on homes and uses products rated for living spaces (low-VOC, washable). Commercial painting handles offices, retail, and industrial spaces with specialized coatings (epoxy, fire-rated, anti-microbial). We offer both services." },
   { q: "Do residential painters do drywall repair?", a: "Quality residential painters handle minor to moderate drywall repair as part of painting preparation. This includes filling nail holes, patching cracks, fixing small holes, and texture matching. Major drywall work may require a dedicated drywall specialist." },
@@ -31,7 +31,7 @@ export default function ResidentialPaintersHouston() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "Residential Painters Houston – Full-Service Home Painting Experts", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/residential-painters-houston" },
+        { "@type": "Article", "headline": "Residential Painters Houston – Full-Service Home Painting Experts", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/residential-painters-houston" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Residential Painters Houston", "item": "https://houstonsuperiorpainting.com/residential-painters-houston" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
@@ -52,19 +52,19 @@ export default function ResidentialPaintersHouston() {
       <section data-speakable="true" className="quick-answer bg-secondary/10 border-l-4 border-secondary py-6">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
-          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting provides full-service residential painting across Greater Houston. Interior painting: $2.50-$4.50/sq ft. Exterior: $3,500-$12,000. Cabinets: $3,000-$8,000. We serve Houston, Katy, Cypress, Sugar Land, The Woodlands, and surrounding areas. Fully insured, 5-year warranty. Call (346) 594-5960.</p>
+          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting provides full-service residential painting across Greater Houston. Interior painting: $2.50-$4.50/sq ft. Exterior: $3,500-$12,000. Cabinets: $3,000-$6,500 per kitchen. We serve Houston, Katy, Cypress, Sugar Land, The Woodlands, and surrounding areas. Insured, 5-year workmanship warranty, no deposit. Call (346) 594-5960.</p>
         </div>
       </section>
 
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">What Sets Our Residential Painting Apart</h2>
-          <p className="text-muted-foreground leading-relaxed mb-6">Not all residential painters are the same. Houston has hundreds of painting companies, but most cut corners on preparation, use builder-grade paint, and disappear when problems arise. Houston Superior Painting was founded on the belief that old-school preparation plus premium products equals lasting results.</p>
+          <p className="text-muted-foreground leading-relaxed mb-6">Not all residential painters are the same. Houston has hundreds of painting companies, but most cut corners on preparation, use builder-grade paint, and disappear when problems arise. Houston Superior Painting was founded on the belief that old-school preparation plus premium products equals lasting results. Every quote is itemized against the ranges in our <Link href="/houston-painting-cost-guide" className="text-primary underline">Houston painting cost guide</Link>, whether it is <Link href="/interior-painting-houston-tx" className="text-primary underline">interior painting in Houston</Link> or a whole-home repaint for our <Link href="/painters-katy-tx" className="text-primary underline">painters in Katy TX</Link>.</p>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
-              { title: "Prep-First Philosophy", desc: "We spend 60-70% of project time on preparation: washing, scraping, sanding, caulking, and priming. This is why our paint lasts 8-10 years while others fail in 3-4." },
+              { title: "Prep-First Philosophy", desc: "We spend 60-70% of project time on preparation: washing, scraping, sanding, caulking, and priming. This is why our exteriors make it through Houston's full 5-7 year repaint cycle while others fail in 3-4." },
               { title: "Premium Products Only", desc: "Sherwin-Williams Duration, Emerald, and SuperPaint. Benjamin Moore Aura and Regal Select. We never use contractor-grade or big-box store paint." },
-              { title: "Owner Oversight", desc: "JJ Semo personally visits every project for quality control. You work with the owner, not a project manager or subcontractor." },
+              { title: "Owner Oversight", desc: "Owner Juan Serra reviews the prep scope on every estimate. You deal with the owner-run company, not a franchise or a lead reseller." },
             ].map(item => (
               <div key={item.title} className="bg-card rounded-lg p-6 border border-border">
                 <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
@@ -78,10 +78,10 @@ export default function ResidentialPaintersHouston() {
             {[
               { name: "Interior Painting", href: "/interior-painting-houston-tx", price: "$2.50–$4.50/sq ft" },
               { name: "Exterior Painting", href: "/exterior-painting-houston-tx", price: "$3,500–$12,000" },
-              { name: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx", price: "$3,000–$8,000" },
+              { name: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx", price: "$3,000–$6,500" },
               { name: "Drywall Repair", href: "/drywall-repair-houston-tx", price: "$150–$800/patch" },
               { name: "Pressure Washing", href: "/pressure-washing-houston-tx", price: "$200–$600" },
-              { name: "Limewash & German Smear", href: "/limewash-houston-tx", price: "$4,000–$12,000" },
+              { name: "Limewash & German Smear", href: "/limewash-brick-painting-houston-tx", price: "$4,000–$12,000" },
               { name: "Garage Floor Epoxy", href: "https://houstonsuperiorepoxy.com/", price: "$1,800–$5,000" },
               { name: "Commercial Painting", href: "/commercial-painting-houston-tx", price: "$1.50–$4.00/sq ft" },
             ].map(s => (
@@ -106,7 +106,7 @@ export default function ResidentialPaintersHouston() {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary-foreground mb-4">Ready to Transform Your Home?</h2>
-          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">Request your free residential painting quote. Standard deposit required upon acceptance. 100% satisfaction guarantee.</p>
+          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">Request your free residential painting quote. No deposit required. 5-year workmanship warranty.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors"><Phone className="h-5 w-5" /> Call {BUSINESS.phone}</a>
             <a href={SMS_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors"><MessageSquare className="h-5 w-5" /> Text Us</a>

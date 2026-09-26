@@ -5,7 +5,7 @@ import { ServicePageTemplate } from '@/components/service-page-template'
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/cabinet-refinishing-houston',
+    canonical: 'https://houstonsuperiorpainting.com/cabinet-refinishing-houston-tx',
   },
   title: 'Cabinet Refinishing Houston TX | Kitchen Cabinet Painting | Houston Superior Painting',
   description: 'Professional cabinet refinishing and painting in Houston, Katy & Cypress TX. Factory-finish spray techniques. Transform dated cabinets. Free estimates. Call (346) 594-5960.',
@@ -20,17 +20,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Cabinet Refinishing",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Houston Superior Painting",
-    "telephone": "346-594-5960",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Cypress",
-      "addressRegion": "TX",
-      "postalCode": "77429"
-    }
-  },
+  "provider": { "@type": "Organization", "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": ["Houston TX", "Katy TX", "Cypress TX"],
   "description": "Professional cabinet refinishing and painting services in Houston with factory-finish spray techniques."
 }

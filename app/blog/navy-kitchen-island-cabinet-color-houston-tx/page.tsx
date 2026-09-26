@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-05-29T00:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [{
       url: "https://houstonsuperiorpainting.com/images/blog/navy-kitchen-island-houston.png",
       width: 1200,
@@ -162,7 +162,7 @@ export default function NavyIslandBlog() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
@@ -299,7 +299,7 @@ export default function NavyIslandBlog() {
 
             <h2>Executing the Two-Tone Look: What It Takes to Do It Right</h2>
             <p>
-              This is where professional <Link href="/cabinet-painting-houston-tx">cabinet painting</Link> matters more than on a single-color project. A two-tone kitchen introduces an additional layer of complexity:
+              This is where professional <Link href="/cabinet-refinishing-houston-tx">cabinet painting</Link> matters more than on a single-color project. A two-tone kitchen introduces an additional layer of complexity:
             </p>
             <ul>
               <li><strong>Color management across adjacent surfaces.</strong> The transition between navy island and white uppers needs to be clean and deliberate.</li>
@@ -310,12 +310,13 @@ export default function NavyIslandBlog() {
 
             <h2>Houston-Specific Considerations</h2>
             <p>
-              A few things that apply specifically to Katy, Sugar Land, The Woodlands, and Cypress kitchens:
+              A few things that apply specifically to <Link href="/painters-katy-tx">Katy</Link>, Sugar Land, The Woodlands, and Cypress kitchens:
             </p>
             <ul>
               <li><strong>Light direction.</strong> South or west-facing kitchens receive warm, intense afternoon light that can shift how navy reads. Test a large sample under your kitchen&apos;s actual light at different times of day.</li>
               <li><strong>HOA and resale.</strong> Interior colors aren&apos;t regulated by HOAs — go as bold as you&apos;d like inside. (Exterior colors are a different story; see our <Link href="/blog/hoa-exterior-paint-rules-houston-suburbs">HOA exterior paint rules guide</Link>.) The navy island look is broadly popular with Houston buyers.</li>
               <li><strong>Humidity and kitchen conditions.</strong> A professional cabinet paint product — waterborne alkyd or lacquer-based — handles Houston&apos;s heat, moisture, and daily wear far better than standard wall paint.</li>
+              <li><strong>Budget.</strong> Painting just the island costs a fraction of a full kitchen; a whole kitchen typically runs $3,000–$6,500. See <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">what kitchen cabinet painting costs in Houston</Link> for the per-door math.</li>
             </ul>
 
             <h2>Is the Navy Island Right for Your Kitchen?</h2>

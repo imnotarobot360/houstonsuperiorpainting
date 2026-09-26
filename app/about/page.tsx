@@ -1,707 +1,303 @@
 // app/about/page.tsx
-// Houston Superior Painting — About page
-// Fixes applied: self-referencing canonical, correct OG, geo Cypress HQ,
-// meta-keywords removed, Person schema JJ Semo + Organization + AboutPage + Breadcrumb
+// About Houston Superior Painting — owner Juan Serra, founded 2019, Cypress HQ,
+// five offices. See docs/aeo-seo-plan-2026-09.md ("About" row + linking map).
+//
+// Schema: AboutPage only. The Organization (ORG_ID) and the owner Person
+// (OWNER_ID) are emitted sitewide by the root layout, so this page references
+// them by @id instead of redefining them. No LocalBusiness, no aggregateRating.
 
-import Link from "next/link";
-import Image from "next/image";
-import type { Metadata } from "next";
-import { ReviewStructuredData } from "@/components/structured-data";
+import Link from "next/link"
+import type { Metadata } from "next"
+import { MapPin, Phone, ShieldCheck, Languages, ClipboardList, Star } from "lucide-react"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import {
+  BUSINESS,
+  PHONE_HREF,
+  OFFICE_PAGES,
+  officeForPage,
+  officeAddressLine,
+  officeMapsUrl,
+} from "@/lib/business"
+import { JsonLd, ORG_ID, OWNER_ID, WEBSITE_ID } from "@/components/structured-data"
+import { breadcrumbNode, ESTIMATE_PATH, CtaBlock } from "@/components/aeo/blocks"
 
-/* ────────────────────────────────────────────────────────────
-   1. SEO METADATA
-   ──────────────────────────────────────────────────────────── */
+const PAGE_URL = "https://houstonsuperiorpainting.com/about"
+const TITLE = "About Houston Superior Painting | Juan Serra, Owner, Since 2019"
+const DESCRIPTION =
+  "Houston Superior Painting was founded in 2019 by Juan Serra. Headquartered in Cypress with five Greater Houston offices, $2M insured, 5-year warranty."
 
 export const metadata: Metadata = {
-  title:
-    "About Houston Superior Painting — Meet JJ Semo & The Team",
-  description:
-    "Founded 2019 by JJ Semo in Cypress, TX. 500+ homes painted across Greater Houston. Background-checked crew, 5-year warranty, prep-first philosophy.",
-  alternates: {
-    canonical: "https://houstonsuperiorpainting.com/about",
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
   openGraph: {
-    title:
-      "About Houston Superior Painting — Meet JJ Semo & The Team",
-    description:
-      "Founded 2019 by JJ Semo. 500+ homes painted across Greater Houston. Background-checked crew, 5-year warranty.",
-    url: "https://houstonsuperiorpainting.com/about",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
     type: "website",
-    images: [
-      {
-        url: "/images/og-about.jpg",
-        width: 1200,
-        height: 630,
-        alt: "JJ Semo, founder of Houston Superior Painting, with his crew",
-      },
-    ],
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630 }],
     locale: "en_US",
-    siteName: "Houston Superior Painting",
+    siteName: BUSINESS.name,
   },
-  twitter: {
-    card: "summary_large_image",
-    title:
-      "About Houston Superior Painting — Meet JJ Semo & The Team",
-    description:
-      "Founded 2019 by JJ Semo. 500+ homes painted across Greater Houston.",
-    images: ["/images/og-about.jpg"],
-  },
-  other: {
-    "geo.region": "US-TX",
-    "geo.placename": "Cypress",
-    "geo.position": "29.9012;-95.6293",
-    ICBM: "29.9012, -95.6293",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-  },
-};
+}
 
-/* ────────────────────────────────────────────────────────────
-   2. JSON-LD SCHEMAS
-   ──────────────────────────────────────────────────────────── */
-
-const PERSON_JSONLD = {
+const ABOUT_JSONLD = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://houstonsuperiorpainting.com/about#jjsemo",
-  name: "JJ Semo",
-  givenName: "JJ",
-  familyName: "Semo",
-  jobTitle: "Founder & Lead Painter",
-  description:
-    "JJ Semo founded Houston Superior Painting in 2019 in Cypress, TX. With years of hands-on painting experience, JJ personally oversees quality control on every project and leads the company's prep-first philosophy.",
-  url: "https://houstonsuperiorpainting.com/about",
-  image: "https://houstonsuperiorpainting.com/images/jj-semo.jpg",
-  worksFor: {
-    "@type": "Organization",
-    "@id": "https://houstonsuperiorpainting.com/#organization",
-    name: "Houston Superior Painting",
-    url: "https://houstonsuperiorpainting.com",
-  },
-  founderOf: {
-    "@id": "https://houstonsuperiorpainting.com/#organization",
-  },
-  knowsAbout: [
-    "Interior Painting",
-    "Exterior Painting",
-    "Cabinet Refinishing",
-    "Limewash and German Smear Techniques",
-    "Drywall Repair and Texture Matching",
-    "Houston Climate Coatings",
-    "Sherwin-Williams Premium Products",
-    "Benjamin Moore Premium Products",
-    "Spray Application Techniques",
-    "Color Consultation",
-  ],
-  alumniOf: "Painting Industry Apprenticeship",
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "Greater Houston, Texas",
-  },
-};
-
-const ORGANIZATION_JSONLD = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://houstonsuperiorpainting.com/#organization",
-  name: "Houston Superior Painting",
-  legalName: "Houston Superior Painting LLC",
-  url: "https://houstonsuperiorpainting.com",
-  logo: {
-    "@type": "ImageObject",
-    url: "https://houstonsuperiorpainting.com/images/logo.png",
-    width: 600,
-    height: 60,
-  },
-  image: "https://houstonsuperiorpainting.com/images/og-cover.jpg",
-  description:
-    "Professional interior, exterior, cabinet, drywall, pressure washing, and limewash painting contractor serving Greater Houston since 2019. Prep-first philosophy. 5-year warranty.",
-  foundingDate: "2019",
-  founder: { "@id": "https://houstonsuperiorpainting.com/about#jjsemo" },
-  foundingLocation: {
-    "@type": "Place",
-    name: "Cypress, Texas",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Cypress",
-      addressRegion: "TX",
-      postalCode: "77429",
-      addressCountry: "US",
-    },
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "14150 Huffmeister Rd, Suite 410",
-    addressLocality: "Cypress",
-    addressRegion: "TX",
-    postalCode: "77429",
-    addressCountry: "US",
-  },
-  telephone: "+1-346-594-5960",
-  email: "info@houstonsuperiorpainting.com",
-  numberOfEmployees: {
-    "@type": "QuantitativeValue",
-    minValue: 5,
-    maxValue: 15,
-  },
-  slogan: "Old-School Preparation. Premium Long-Lasting Results.",
-  knowsLanguage: ["en", "es"],
-  sameAs: [
-    "https://www.google.com/maps/place/Houston+Superior+Painting../@29.7143308,-95.4349558,17z/data=!4m8!3m7!1s0x1c94ce195628f7bf:0xcc8b6e63c1c05fe7",
-    "https://www.facebook.com/houstonsuperiorpainting",
-    "https://www.instagram.com/houstonsuperiorpainting",
-  ]
-};
-
-const ABOUTPAGE_JSONLD = {
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "@id": "https://houstonsuperiorpainting.com/about#webpage",
-  url: "https://houstonsuperiorpainting.com/about",
-  name: "About Houston Superior Painting — Meet JJ Semo & The Team",
-  inLanguage: "en-US",
-  isPartOf: { "@id": "https://houstonsuperiorpainting.com/#website" },
-  about: { "@id": "https://houstonsuperiorpainting.com/#organization" },
-  mainEntity: { "@id": "https://houstonsuperiorpainting.com/about#jjsemo" },
-};
-
-const BREADCRUMB_JSONLD = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
+  "@graph": [
     {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://houstonsuperiorpainting.com/",
+      "@type": "AboutPage",
+      "@id": `${PAGE_URL}#webpage`,
+      url: PAGE_URL,
+      name: TITLE,
+      description: DESCRIPTION,
+      inLanguage: "en-US",
+      isPartOf: { "@id": WEBSITE_ID },
+      mainEntity: { "@id": ORG_ID },
+      about: [{ "@id": ORG_ID }, { "@id": OWNER_ID }],
+      author: { "@id": OWNER_ID },
     },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "About",
-      item: "https://houstonsuperiorpainting.com/about",
-    },
+    breadcrumbNode([
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+    ]),
   ],
-};
+}
 
-/* ────────────────────────────────────────────────────────────
-   3. PAGE DATA
-   ──────────────────────────────────────────────────────────── */
+// Offices in OFFICE_PAGES order (HQ first), each resolved to its BUSINESS.locations entry.
+const OFFICES = OFFICE_PAGES.map((p) => ({ page: p, office: officeForPage(p.slug)! }))
 
-const values = [
-  {
-    title: "Integrity First",
-    body: "We do what we say we'll do. No hidden fees, no surprises. Just honest pricing and honest work.",
-  },
-  {
-    title: "Craftsmanship",
-    body: "Every wall, every trim piece, every cabinet gets our full attention. We take pride in the details others miss.",
-  },
-  {
-    title: "Respect",
-    body: "Your home is your sanctuary. We treat it with the same care and respect we'd give our own.",
-  },
-  {
-    title: "Reliability",
-    body: "We show up on time, every time. We finish when we say we will. Your schedule matters to us.",
-  },
-  {
-    title: "Community",
-    body: "Houston is our home. We're proud to make our neighbors' homes more beautiful, one project at a time.",
-  },
-  {
-    title: "Accountability",
-    body: "We stand behind our work with a 5-year warranty. If something's not right, we make it right.",
-  },
-];
-
-const cities = [
-  { name: "Houston", slug: "painters-houston-tx" },
-  { name: "Katy", slug: "painters-katy-tx" },
-  { name: "Cypress", slug: "painters-cypress-tx" },
-  { name: "Sugar Land", slug: "painters-sugar-land-tx" },
-  { name: "Richmond", slug: "painters-richmond-tx" },
-  { name: "Fulshear", slug: "painters-fulshear-tx" },
-  { name: "Pearland", slug: "painters-pearland-tx" },
-  { name: "Memorial", slug: "painters-memorial-tx" },
-  { name: "The Heights", slug: "painters-the-heights-tx" },
-  { name: "Bellaire", slug: "painters-bellaire-tx" },
-  { name: "The Woodlands", slug: "painters-the-woodlands-tx" },
-  { name: "Rosenberg", slug: "painters-rosenberg-tx" },
-];
-
-/* ────────────────────────────────────────────────────────────
-   4. PAGE COMPONENT
-   ──────────────────────────────────────────────────────────── */
+const SERVICES = [
+  { label: "Interior painting", href: "/interior-painting-houston-tx", text: "Walls, ceilings, trim, doors, and accent walls." },
+  { label: "Exterior painting", href: "/exterior-painting-houston-tx", text: "Brick, stucco, HardiePlank, and wood siding." },
+  { label: "Cabinet refinishing", href: "/cabinet-refinishing-houston-tx", text: "Degrease, sand, bonding primer, sprayed enamel." },
+  { label: "Drywall repair", href: "/drywall-repair-houston-tx", text: "Patches, water damage, and texture matching before paint." },
+  { label: "Limewash and brick painting", href: "/limewash-brick-painting-houston-tx", text: "Limewash, German smear, and painted brick." },
+  { label: "Stucco painting and repair", href: "/stucco-painting-houston-tx", text: "Crack repair and elastomeric stucco coatings." },
+  { label: "Soft washing", href: "/soft-washing-houston-tx", text: "Low-pressure mildew removal before exterior painting." },
+]
 
 export default function AboutPage() {
+  const { trust } = BUSINESS
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSONLD) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_JSONLD) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ABOUTPAGE_JSONLD) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSONLD) }}
-      />
-      <ReviewStructuredData />
-
-
-      <main className="bg-white text-foreground">
+      <JsonLd data={ABOUT_JSONLD} />
+      <Header />
+      <main className="bg-background text-foreground">
         {/* ─── HERO ─── */}
-        <section className="relative bg-muted py-16 md:py-24 border-b border-border">
-          <div className="mx-auto max-w-6xl px-4">
-            <nav aria-label="Breadcrumb" className="mb-6 text-sm text-muted-foreground">
+        <section className="relative bg-midnight py-14 md:py-20">
+          <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
+          <div className="container mx-auto px-4 max-w-4xl">
+            <nav aria-label="Breadcrumb" className="mb-6 text-sm text-soft-white/70">
               <ol className="flex items-center gap-2">
                 <li>
-                  <Link href="/" className="hover:underline">
-                    Home
-                  </Link>
+                  <Link href="/" className="hover:text-gold">Home</Link>
                 </li>
-                <li>›</li>
-                <li className="text-foreground">About</li>
+                <li aria-hidden>›</li>
+                <li className="text-soft-white">About</li>
               </ol>
             </nav>
+            <p className="font-manrope text-xs font-semibold uppercase tracking-[0.22em] text-gold mb-4">
+              Founded {BUSINESS.founded} · Headquartered in Cypress, TX
+            </p>
+            <h1 className="hero-h1 font-display text-4xl md:text-5xl font-bold text-soft-white text-balance leading-[1.1]">
+              About Houston Superior Painting
+            </h1>
+          </div>
+        </section>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex items-center gap-2 bg-muted text-gold-deep font-manrope text-xs font-semibold uppercase tracking-[0.22em] px-4 py-2 rounded-full mb-5">
-                  <span aria-hidden>🏠</span>
-                  <span>Founded 2019 in Cypress, TX</span>
-                </div>
+        <div className="container mx-auto px-4 max-w-4xl">
+          <p className="quick-answer text-lg md:text-xl leading-relaxed text-foreground border-l-4 border-gold bg-secondary/10 px-6 py-5 my-10 rounded-r-lg">
+            Houston Superior Painting is a residential and commercial painting contractor founded in{" "}
+            {BUSINESS.founded} by {BUSINESS.founder.name}. We are headquartered in Cypress, TX, and serve Greater
+            Houston from five offices: Cypress, Houston, Katy, Sugar Land, and Magnolia. We carry{" "}
+            {trust.liabilityCoverage} in general liability insurance plus workers&apos; compensation, back every
+            painting job with a {trust.warrantyYears}-year workmanship warranty, and never ask for payment upfront.
+            Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a>.
+          </p>
+        </div>
 
-                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.05]">
-                  About Houston Superior Painting
-                </h1>
+        {/* ─── OWNER ─── */}
+        <section className="container mx-auto px-4 max-w-4xl mb-14" id="juan-serra">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Who runs Houston Superior Painting</h2>
+          {/* TODO(juan): add a real photo of Juan Serra at /public/images/juan-serra.jpg, render it here with
+              alt="Juan Serra, owner of Houston Superior Painting", and set BUSINESS.founder.image in lib/business.ts.
+              Do not use a stock or AI-generated face. */}
+          <div className="space-y-4 text-lg leading-relaxed text-foreground/85">
+            <p>
+              <strong className="text-foreground">{BUSINESS.founder.name}</strong> founded Houston Superior Painting
+              in {BUSINESS.founded} and is the company&apos;s owner. He runs it from our Cypress headquarters,
+              oversees crews across all five Greater Houston offices, and personally reviews the prep scope on
+              every estimate.
+            </p>
+            <p>
+              The company was built on one idea: in Houston&apos;s heat and humidity, paint only lasts as long as the
+              prep underneath it. That is why our estimates spell out the prep work line by line, and why our
+              slogan is &ldquo;{BUSINESS.slogan}&rdquo;
+            </p>
+          </div>
+        </section>
 
-                <p className="mt-6 text-xl text-foreground/75 leading-relaxed">
-                  Since 2019, we&apos;ve been transforming Houston homes with
-                  quality craftsmanship, honest service, and a commitment to
-                  doing things right. Meet JJ Semo and the team behind 500+
-                  successful projects across Greater Houston.
-                </p>
-
-                <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-foreground/75">
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-accent">✓</span> 500+ Homes
-                    Painted
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-accent">✓</span> Background-Checked
-                    Crew
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-accent">✓</span> 5-Year Warranty
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-accent">✓</span> BBB Accredited
-                  </li>
-                </ul>
-
-                <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center justify-center px-6 py-4 bg-foreground hover:bg-foreground/90 text-background font-semibold rounded-lg text-base shadow-md transition"
-                  >
-                    Get My Free Estimate →
+        {/* ─── OFFICES ─── */}
+        <section className="container mx-auto px-4 max-w-4xl mb-14" id="offices">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">Our five offices</h2>
+          <p className="text-lg text-foreground/80 mb-6">
+            Each office has its own Google Business Profile and serves the surrounding suburbs. Hours at every
+            office: {BUSINESS.hoursSummary.map((h) => `${h.label} ${h.value}`).join(" · ")}.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {OFFICES.map(({ page, office }) => (
+              <div key={office.slug} className="bg-card border border-border rounded-xl p-5">
+                <h3 className="font-semibold text-lg text-foreground mb-2">
+                  <Link href={`/${page.slug}`} className="hover:text-primary">
+                    House painters in {office.city}, TX
                   </Link>
-                  <a
-                    href="tel:+13465945960"
-                    aria-label="Call Houston Superior Painting at 346-594-5960"
-                    className="inline-flex items-center justify-center px-6 py-4 bg-foreground hover:bg-foreground/90 text-white font-semibold rounded-lg text-base transition"
-                  >
-                    (346) 594-5960
-                  </a>
-                </div>
-              </div>
-
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-muted">
-                <Image
-                  src="/images/jj-semo.jpg"
-                  alt="JJ Semo, founder of Houston Superior Painting in Cypress, TX"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 600px"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── FOUNDER'S STORY ─── */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="mx-auto max-w-3xl px-4">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
-              From One Man with a Brush to Houston&apos;s Trusted Painting Team
-            </h2>
-
-            <div className="prose prose-lg max-w-none text-foreground/75 space-y-5 leading-relaxed">
-              <p>
-                My name is <strong>JJ Semo</strong>, and I started Houston
-                Superior Painting in 2019 with nothing but a ladder, some
-                brushes, and a determination to do things differently than the
-                painters I&apos;d seen cut corners throughout my career.
-              </p>
-
-              <p>
-                Before starting Houston Superior Painting, I spent years working
-                in the painting industry and learning the trade from experienced
-                craftsmen. But I also saw too many contractors who viewed
-                customers as just another job number—rushing through projects,
-                using cheap materials, and disappearing when problems arose.
-              </p>
-
-              <p>
-                I knew there had to be a better way. When I started my own
-                company, I made a simple promise:{" "}
-                <strong>
-                  treat every home like it was my own family&apos;s home.
-                </strong>{" "}
-                That means using premium paints, taking time for proper prep
-                work, protecting your belongings like they&apos;re priceless,
-                and standing behind our work long after the final brushstroke.
-              </p>
-
-              <p>
-                That approach has grown Houston Superior Painting from just me
-                to a skilled team of professionals who share my values.
-                We&apos;ve painted{" "}
-                <strong>500+ homes across the Greater Houston area</strong>, and
-                many of our customers have become friends who call us back year
-                after year.
-              </p>
-
-              <p>
-                When you hire us, you&apos;re not just getting painters —
-                you&apos;re getting a team that genuinely cares about making
-                your home beautiful and your experience stress-free.
-              </p>
-
-              <p className="text-foreground font-semibold pt-4 border-t border-border mt-8">
-                — JJ Semo, Founder
-              </p>
-            </div>
-
-            <div className="mt-10 flex flex-col sm:flex-row gap-3">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-foreground hover:bg-foreground/90 text-background font-semibold rounded-lg transition"
-              >
-                Get Your Free Estimate →
-              </Link>
-              <a
-                href="tel:+13465945960"
-                className="inline-flex items-center justify-center px-6 py-3 bg-foreground hover:bg-foreground/90 text-white font-semibold rounded-lg transition"
-              >
-                (346) 594-5960
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── MEET THE CREW ─── */}
-        <section className="py-16 md:py-24 bg-muted">
-          <div className="mx-auto max-w-6xl px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div>
-                <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                  Meet Our Crew
-                </h2>
-                <p className="text-foreground/75 text-lg mb-6 leading-relaxed">
-                  Every member of our team is background-checked, trained in our
-                  methods, and committed to delivering exceptional results.
-                </p>
-
-                <h3 className="text-xl font-semibold mb-4">
-                  A Team Built on Trust
+                  {"isHeadquarters" in office && office.isHeadquarters ? (
+                    <span className="ml-2 text-xs font-manrope uppercase tracking-wider text-gold-deep">HQ</span>
+                  ) : null}
                 </h3>
-                <p className="text-foreground/75 mb-4 leading-relaxed">
-                  Hiring someone to work inside your home requires trust.
-                  That&apos;s why we&apos;re extremely selective about who joins
-                  our team. Every crew member goes through:
+                <p className="flex items-start gap-2 text-foreground/85">
+                  <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" aria-hidden />
+                  <span>{officeAddressLine(office)}</span>
                 </p>
-                <ul className="space-y-3 text-foreground mb-6">
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">✓</span>
-                    <span>
-                      <strong>Background checks</strong> — We verify every team
-                      member&apos;s history before they step foot in your home.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">✓</span>
-                    <span>
-                      <strong>Hands-on training</strong> — New painters work
-                      alongside experienced crew members until they meet our
-                      standards.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">✓</span>
-                    <span>
-                      <strong>Ongoing education</strong> — We stay current on
-                      the latest techniques, products, and safety practices.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">✓</span>
-                    <span>
-                      <strong>Customer service focus</strong> — Technical skill
-                      matters, but so does how we treat you and your home.
-                    </span>
-                  </li>
-                </ul>
-                <p className="text-foreground/75 leading-relaxed">
-                  Most of our crew has been with us for{" "}
-                  <strong>3+ years</strong>. Low turnover means you get
-                  experienced professionals who take pride in their work — not
-                  temporary workers learning on your project.
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Serves {office.areaServed.join(", ")}.
                 </p>
-              </div>
-
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-muted">
-                <Image
-                  src="/images/painting-team.jpg"
-                  alt="Houston Superior Painting crew at work in Greater Houston"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 600px"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            <div className="mt-16">
-              <h3 className="text-2xl font-bold mb-6">
-                Craftsmanship You Can See
-              </h3>
-              <p className="text-foreground/75 text-lg mb-6 max-w-3xl leading-relaxed">
-                The difference between an okay paint job and a great one is in
-                the details most people never see — until something goes wrong.
-                Our team is trained to do things right:
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[
-                  "Thorough surface preparation and repair",
-                  "Premium primers matched to your surfaces",
-                  "Factory-finish spray techniques for cabinets",
-                  "Careful masking and protection of your belongings",
-                  "Clean, organized job sites every single day",
-                  "Final walkthrough to ensure your complete satisfaction",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-start gap-2 bg-white border border-border rounded-lg p-4"
-                  >
-                    <span className="text-accent mt-0.5">✓</span>
-                    <span className="text-foreground">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── OUR VALUES ─── */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="mx-auto max-w-6xl px-4">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-4">
-              Our Values
-            </h2>
-            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12 text-lg">
-              These aren&apos;t just words on a wall. They guide every decision
-              we make and every interaction we have.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {values.map((v) => (
-                <div
-                  key={v.title}
-                  className="bg-muted border border-border rounded-xl p-6 hover:shadow-md transition"
+                <a
+                  href={officeMapsUrl(office)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
                 >
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    {v.title}
-                  </h3>
-                  <p className="text-foreground/75 leading-relaxed">{v.body}</p>
-                </div>
-              ))}
-            </div>
+                  <Star className="h-4 w-4" aria-hidden /> {office.label} on Google Maps
+                </a>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* ─── CREDENTIALS / LICENSE & INSURANCE ─── */}
-        <section className="py-16 md:py-24 bg-muted border-t border-border">
-          <div className="mx-auto max-w-6xl px-4">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-                Insured, Bonded &amp; Accredited
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-                When you invite a crew into your home, credentials matter. Texas
-                does not issue a state license for residential painting
-                contractors, so insurance is the credential that actually
-                protects you. Houston Superior Painting is a fully insured,
-                bonded, registered Texas LLC — and we&apos;re happy to provide
-                documentation before any project begins.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "General Liability Insurance",
-                  body: "We carry full general liability coverage on every job. Certificates of insurance are available on request before work starts.",
-                },
-                {
-                  title: "Workers' Compensation",
-                  body: "Our crew is covered by workers' compensation, so you're never exposed to liability for an on-site injury.",
-                },
-                {
-                  title: "Registered Texas Contractor",
-                  body: "Houston Superior Painting LLC is a registered Texas business serving Harris, Fort Bend, and Montgomery counties. Texas does not license residential painters at the state level.",
-                },
-                {
-                  title: "BBB Accredited",
-                  body: "We hold Better Business Bureau accreditation and maintain a track record of resolving any concern quickly and fairly.",
-                },
-                {
-                  title: "Manufacturer Preferred",
-                  body: "As a Sherwin-Williams and Benjamin Moore preferred contractor, we use premium, warrantied products matched to Houston's climate.",
-                },
-                {
-                  title: "5-Year Written Warranty",
-                  body: "Every project is backed by a written 5-year workmanship warranty. If something isn't right, we come back and make it right.",
-                },
-              ].map((cred) => (
-                <div
-                  key={cred.title}
-                  className="bg-white border border-border rounded-xl p-6 hover:shadow-md transition"
-                >
-                  <div className="flex items-start gap-3">
-                    <span className="mt-1 text-accent" aria-hidden>✓</span>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-2">
-                        {cred.title}
-                      </h3>
-                      <p className="text-foreground/75 leading-relaxed">{cred.body}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <p className="mt-8 text-center text-sm text-muted-foreground max-w-2xl mx-auto">
-              Want to see our insurance certificate or references before
-              you book?{" "}
-              <Link href="/contact" className="text-gold-deep font-medium hover:underline">
-                Just ask
-              </Link>{" "}
-              — we&apos;ll send them right over.
-            </p>
-          </div>
-        </section>
-
-        {/* ─── STATS ─── */}
-        <section className="py-12 md:py-16 bg-midnight text-soft-white">
-          <div className="mx-auto max-w-6xl px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              {[
-                { value: "2019", label: "Founded" },
-                { value: "500+", label: "Homes Painted" },
-                { value: "4.9★", label: "Google Rating" },
-                { value: "5 Year", label: "Warranty" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="text-4xl md:text-5xl font-bold mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-soft-white/70 text-sm uppercase tracking-wide">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ─── SERVICE AREAS ─── */}
-        <section className="py-16 md:py-24 bg-muted border-y border-border">
-          <div className="mx-auto max-w-6xl px-4">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-4">
-              Serving All of Greater Houston
-            </h2>
-            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
-              From Cypress to Pearland, Memorial to The Woodlands — we paint
-              homes across all of Greater Houston.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {cities.map((c) => (
-                <Link
-                  key={c.slug}
-                  href={`/${c.slug}`}
-                  className="block bg-white border border-border rounded-lg px-4 py-3 text-center font-medium text-foreground hover:border-gold hover:text-foreground hover:shadow-sm transition"
-                >
-                  {c.name}, TX
+        {/* ─── WHAT WE DO ─── */}
+        <section className="container mx-auto px-4 max-w-4xl mb-14" id="services">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">What we do</h2>
+          <p className="text-lg text-foreground/80 mb-6">
+            Most of our work is full interior repaints, exterior repaints, and kitchen cabinet refinishing for
+            homeowners. We also paint offices, retail, and light commercial buildings.
+          </p>
+          <ul className="grid sm:grid-cols-2 gap-3">
+            {SERVICES.map((s) => (
+              <li key={s.href} className="bg-card border border-border rounded-lg p-4">
+                <Link href={s.href} className="font-semibold text-foreground hover:text-primary">
+                  {s.label}
                 </Link>
-              ))}
-            </div>
-          </div>
+                <p className="text-sm text-muted-foreground mt-1">{s.text}</p>
+              </li>
+            ))}
+          </ul>
         </section>
 
-        {/* ─── CTA ─── */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="mx-auto max-w-4xl px-4 text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Your Home?
-            </h2>
-            <p className="text-foreground/75 text-lg mb-8 max-w-2xl mx-auto">
-              Join the hundreds of Houston homeowners who trust us with their
-              most important investment. Get your free estimate today — no
-              pressure, no obligation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-foreground hover:bg-foreground/90 text-background font-semibold rounded-lg text-base shadow-md transition"
-              >
-                Schedule Free Estimate →
-              </Link>
-              <a
-                href="tel:+13465945960"
-                aria-label="Call Houston Superior Painting at 346-594-5960"
-                className="inline-flex items-center justify-center px-8 py-4 bg-foreground hover:bg-foreground/90 text-white font-semibold rounded-lg text-base transition"
-              >
-                (346) 594-5960
-              </a>
-              <a
-                href="sms:+13465945960"
-                aria-label="Text Houston Superior Painting"
-                className="inline-flex items-center justify-center px-8 py-4 bg-foreground hover:bg-foreground/90 text-white font-semibold rounded-lg text-base transition"
-              >
-                Text Us
-              </a>
-            </div>
-          </div>
+        {/* ─── HOW WE WORK ─── */}
+        <section className="container mx-auto px-4 max-w-4xl mb-14" id="how-we-work">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">How we work</h2>
+          <ul className="space-y-4 text-lg text-foreground/85">
+            <li className="flex gap-3">
+              <ClipboardList className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
+              <span>
+                <strong className="text-foreground">Written scope.</strong> Every estimate lists square footage,
+                product, coat count, and the prep work, so you can compare bids line by line.{" "}
+                <Link href={ESTIMATE_PATH} className="text-primary underline underline-offset-2">
+                  Request a free painting estimate in Houston
+                </Link>
+                .
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <ClipboardList className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
+              <span>
+                <strong className="text-foreground">Prep first.</strong> Pressure washing, scraping, sanding,
+                wood-rot replacement, caulking, and priming come before any finish coat.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <ClipboardList className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
+              <span>
+                <strong className="text-foreground">No upfront payment.</strong> You pay after the final walkthrough,
+                once you have inspected the work with the crew lead.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <ShieldCheck className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
+              <span>
+                <strong className="text-foreground">{trust.warrantyYears}-year workmanship warranty</strong> on all
+                painting.{" "}
+                <Link href="/warranty" className="text-primary underline underline-offset-2">
+                  Read our painting warranty
+                </Link>
+                .
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <ShieldCheck className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
+              <span>
+                <strong className="text-foreground">Insured, not &ldquo;licensed.&rdquo;</strong> We carry{" "}
+                {trust.liabilityCoverage} general liability and workers&apos; compensation, and we will send the
+                certificate of insurance before work starts. Texas does not issue a state license for painting
+                contractors, so we don&apos;t claim one, and you should be wary of any painter who does.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <Languages className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
+              <span>
+                <strong className="text-foreground">English and Spanish.</strong> Our office and crews work in both
+                languages. Hablamos español.
+              </span>
+            </li>
+          </ul>
         </section>
+
+        {/* ─── TRACK RECORD ─── */}
+        <section className="container mx-auto px-4 max-w-4xl mb-14" id="track-record">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Our track record</h2>
+          <p className="text-lg text-foreground/85 leading-relaxed">
+            Since {BUSINESS.founded} we have completed {trust.projectsCompleted}+ painting projects across Greater
+            Houston. See before-and-after photos and the full scope of real jobs in our{" "}
+            <Link href="/projects" className="text-primary underline underline-offset-2">
+              Houston painting projects
+            </Link>
+            , and read what customers say on{" "}
+            <a
+              href={BUSINESS.social.googleMaps}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-2"
+            >
+              our Google reviews
+            </a>
+            . We use Sherwin-Williams and Benjamin Moore products.
+          </p>
+        </section>
+
+        {/* ─── OFFICIAL SITE ─── */}
+        <section className="container mx-auto px-4 max-w-4xl mb-14" id="official-website">
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">Our official website</h2>
+          <p className="text-lg text-foreground/85 leading-relaxed border border-border bg-card rounded-xl p-5">
+            {BUSINESS.officialSiteDisclaimer}
+          </p>
+        </section>
+
+        {/* ─── CONTACT ─── */}
+        <section className="container mx-auto px-4 max-w-4xl mb-10">
+          <p className="flex items-center gap-2 text-lg">
+            <Phone className="h-5 w-5 text-primary" aria-hidden />
+            <a href={PHONE_HREF} className="font-semibold text-foreground hover:text-primary">
+              {BUSINESS.phone}
+            </a>
+            <span className="text-muted-foreground">· {BUSINESS.email}</span>
+          </p>
+        </section>
+
+        <CtaBlock title="Get a free painting estimate from Houston Superior Painting" />
       </main>
+      <Footer />
     </>
-  );
+  )
 }

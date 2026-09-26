@@ -7,13 +7,13 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "House Painters Sienna TX | Missouri City Painting",
+  title: "House Painters in Sienna TX | Houston Superior Painting",
   description:
     "House painters serving Sienna in Missouri City, TX. Interior, exterior, and cabinet painting with HOA architectural review support. Free estimates.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/painters-sienna-tx",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Sienna | Missouri City, TX",
     description:
       "Painting contractors serving Sienna, Missouri City. Stucco and brick expertise, HOA color approval help, 5-year warranty.",
@@ -124,7 +124,7 @@ Sienna's newer construction also means many homes are hitting their first repain
     {
       question: "How much does exterior painting cost in Sienna?",
       answer:
-        "Most Sienna homes fall between $4,500 and $12,000 for exterior work, driven mainly by square footage, stucco versus brick, how much trim and soffit is involved, and the amount of crack repair needed. Every estimate is free and itemized.",
+        "Most Sienna homes fall between $3,500 and $12,000 for exterior work (a 2,500 sq ft two-story is typically $5,500 to $9,000), driven mainly by square footage, stucco versus brick, how much trim and soffit is involved, and the amount of crack repair needed. Every estimate is free and itemized.",
     },
     {
       question: "Why is my builder paint failing after only a few years?",

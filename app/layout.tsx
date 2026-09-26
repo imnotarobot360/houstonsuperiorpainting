@@ -37,7 +37,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: 'Houston Painters | Houston Superior Painting',
+  title: 'Houston Painters Since 2019 | Houston Superior Painting',
   description: 'Houston painters for interior, exterior & cabinet painting, drywall repair & pressure washing in Houston, Katy & Cypress. Prep-first quality. Free estimates.',
   authors: [{ name: 'Houston Superior Painting' }],
   robots: {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: 'Houston Superior Painting',
     locale: 'en_US',
     type: 'website',
-    title: 'Houston Painters | Houston Superior Painting',
+    title: 'Houston Painters Since 2019 | Houston Superior Painting',
     description: 'Professional interior, exterior, cabinet painting, drywall repair & pressure washing in Houston, Katy & Cypress. Prep-first quality. Free estimates.',
     url: 'https://houstonsuperiorpainting.com/',
     images: [

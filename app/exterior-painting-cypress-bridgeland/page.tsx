@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/exterior-painting-cypress-bridgeland',
   },
-  title: "Exterior Painting Cypress & Bridgeland",
+  title: "Exterior Painting Cypress & Bridgeland | Free Estimates",
   description: "Premium exterior painting in Cypress and Bridgeland, TX. 5-year warranty, 5-star reviews. Free quote — call (346) 594-5960.",
 }
 

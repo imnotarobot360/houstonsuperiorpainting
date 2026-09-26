@@ -2,12 +2,12 @@ import { headers } from "next/headers"
 
 /**
  * Gates all Houston Superior Painting-branded chrome (sticky CTAs, exit intent,
- * chat widget offset, and the painting LocalBusiness/PaintingService schema) so
+ * chat widget offset, and the painting Organization/WebSite/Person schema) so
  * none of it leaks onto the Houston Superior Epoxy property.
  *
  * This MUST be a server component. An earlier client-side version still emitted
  * the painting schema into the server HTML and only removed it after hydration,
- * so crawlers saw two competing LocalBusiness entities on the epoxy page —
+ * so crawlers saw two competing business entities on the epoxy page —
  * exactly the problem it was meant to prevent.
  *
  * Detection relies on the `x-epoxy-site` request header set by proxy.ts.

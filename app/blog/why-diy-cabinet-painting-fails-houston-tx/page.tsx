@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-05-30T00:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [{
       url: "https://houstonsuperiorpainting.com/images/blog/diy-cabinet-painting-fails.png",
       width: 1200,
@@ -162,7 +162,7 @@ export default function DIYCabinetBlog() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
@@ -255,7 +255,7 @@ export default function DIYCabinetBlog() {
 
             <h2>What Professionals Do Instead — The Full Process</h2>
             <p>
-              Here&apos;s what a professional <Link href="/cabinet-painting-houston-tx">cabinet painting</Link> job looks like from start to finish:
+              Here&apos;s what a professional <Link href="/cabinet-refinishing-houston-tx">cabinet painting</Link> job looks like from start to finish:
             </p>
 
             {/* Process cards */}
@@ -289,7 +289,7 @@ export default function DIYCabinetBlog() {
 
             <h2>The True Cost of a Failed DIY Attempt</h2>
             <p>
-              The frustration of a DIY result that doesn&apos;t meet expectations is real, but there&apos;s also a concrete financial cost: $150–$400 in paint and supplies, 2–4 weekends of intensive effort, $50–$100/day if renting a sprayer (plus a learning curve and product waste), and — if the result fails — the added labor for a professional to strip and redo it. Many professional painters charge <em>more</em> to repaint cabinets that were DIY-painted over incorrectly than they charge to start from scratch. The economics often end up favoring professional cabinet painting from the start.
+              The frustration of a DIY result that doesn&apos;t meet expectations is real, but there&apos;s also a concrete financial cost: $150–$400 in paint and supplies, 2–4 weekends of intensive effort, $50–$100/day if renting a sprayer (plus a learning curve and product waste), and — if the result fails — the added labor for a professional to strip and redo it. Many professional painters charge <em>more</em> to repaint cabinets that were DIY-painted over incorrectly than they charge to start from scratch. The economics often end up favoring professional cabinet painting from the start; see the real numbers in our guide to the <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">cost to paint kitchen cabinets in Houston TX</Link>, or book a walkthrough with our <Link href="/painters-sugar-land-tx">painters in Sugar Land TX</Link> or Houston offices.
             </p>
 
             <h2>When DIY Cabinet Painting Can Work</h2>

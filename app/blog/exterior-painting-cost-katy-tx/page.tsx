@@ -5,7 +5,7 @@ import { BlogPostTemplate } from "@/components/blog-post-template"
 export const metadata: Metadata = {
   title: "Exterior Painting Cost in Katy TX | 2026 Price Guide",
   description:
-    "Exterior painting in Katy TX costs $3,500–$9,000 for most homes in 2026. Price breakdowns by home size, siding type and prep — plus red flags to avoid.",
+    "Exterior painting in Katy TX costs $3,500–$12,000 for most homes in 2026. Price breakdowns by home size, siding type and prep — plus red flags to avoid.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/exterior-painting-cost-katy-tx",
   },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "Real 2026 exterior painting prices in Katy TX by home size, siding type, and prep needed — plus red flags to avoid.",
     type: "article",
     publishedTime: "2026-06-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/exterior-painting-cost-katy-tx.png"],
   },
   twitter: {
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "How long does exterior painting last in Katy TX?",
     answer:
-      "With quality prep and premium paint, a Katy exterior paint job should last 8–12 years on wood or fiber cement siding, and 10–15 years on brick. Houston Superior Painting offers a 5-year workmanship guarantee on all exterior projects.",
+      "With quality prep and premium paint, plan to repaint a Katy exterior every 5–7 years on wood or fiber cement siding; painted brick and shaded walls can go longer. Houston Superior Painting offers a 5-year workmanship guarantee on all exterior projects.",
   },
   {
     question: "Do I need to pressure wash before exterior painting in Katy?",
@@ -61,7 +61,7 @@ const faqs = [
 const relatedPosts = [
   {
     title: "How Much Does House Painting Cost in Houston? 2026 Price Guide",
-    href: "/blog/house-painting-cost-houston-2026",
+    href: "/houston-painting-cost-guide",
     excerpt: "Complete 2026 guide to interior and exterior painting costs across Greater Houston.",
     image: "/images/blog/house-painting-cost-houston.jpg",
   },
@@ -84,7 +84,7 @@ export default function ExteriorPaintingCostKatyPage() {
     <BlogPostTemplate
       title="How Much Does Exterior Painting Cost in Katy TX?"
       excerpt="Katy homeowners face extreme summer heat, HOA color restrictions, and constant humidity that demands premium coatings. This guide gives you accurate 2026 numbers — not the lowball figures that lead to overpriced change orders."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
       readTime="12 min read"
@@ -101,9 +101,9 @@ export default function ExteriorPaintingCostKatyPage() {
       >
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
-          Exterior painting in Katy TX costs <strong>$3,500–$9,000</strong> for a typical single-story home, and{" "}
-          <strong>$6,500–$15,000</strong> for a two-story home, based on 2026 pricing. Per square foot of paintable
-          surface, expect <strong>$1.50–$3.50</strong> for professional exterior painting. Get a free, detailed estimate
+          Exterior painting in Katy TX costs <strong>$1.50–$4 per square foot</strong> of floor area in 2026. A 2,500
+          sq ft home runs <strong>$4,000–$7,000</strong> single-story and <strong>$5,500–$9,000</strong> two-story, and
+          most Katy homes land between $3,500 and $12,000. Get a free, detailed estimate
           from Houston Superior Painting at (346) 594-5960.
         </p>
       </div>
@@ -129,41 +129,42 @@ export default function ExteriorPaintingCostKatyPage() {
         </thead>
         <tbody>
           <tr>
-            <td className="border border-border p-3">1,000 sq ft living</td>
-            <td className="border border-border p-3">$2,800 – $5,000</td>
-            <td className="border border-border p-3">N/A</td>
-          </tr>
-          <tr className="bg-muted/50">
             <td className="border border-border p-3">1,500 sq ft living</td>
-            <td className="border border-border p-3">$3,500 – $6,500</td>
-            <td className="border border-border p-3">$5,500 – $9,500</td>
-          </tr>
-          <tr>
-            <td className="border border-border p-3">2,000 sq ft living</td>
-            <td className="border border-border p-3">$4,500 – $8,000</td>
-            <td className="border border-border p-3">$7,000 – $12,000</td>
+            <td className="border border-border p-3">$2,500 – $4,500</td>
+            <td className="border border-border p-3">$3,500 – $6,000</td>
           </tr>
           <tr className="bg-muted/50">
-            <td className="border border-border p-3">2,500 sq ft living</td>
-            <td className="border border-border p-3">$5,500 – $9,500</td>
-            <td className="border border-border p-3">$8,500 – $14,000</td>
+            <td className="border border-border p-3">2,000 sq ft living</td>
+            <td className="border border-border p-3">$3,500 – $5,500</td>
+            <td className="border border-border p-3">$4,500 – $7,500</td>
           </tr>
           <tr>
-            <td className="border border-border p-3">3,500 sq ft living</td>
-            <td className="border border-border p-3">$7,500 – $13,000</td>
-            <td className="border border-border p-3">$11,000 – $18,000</td>
+            <td className="border border-border p-3">2,500 sq ft living</td>
+            <td className="border border-border p-3">$4,000 – $7,000</td>
+            <td className="border border-border p-3">$5,500 – $9,000</td>
+          </tr>
+          <tr className="bg-muted/50">
+            <td className="border border-border p-3">3,000 sq ft living</td>
+            <td className="border border-border p-3">$5,000 – $8,000</td>
+            <td className="border border-border p-3">$6,500 – $10,500</td>
+          </tr>
+          <tr>
+            <td className="border border-border p-3">4,000+ sq ft living</td>
+            <td className="border border-border p-3">$6,500 – $10,000</td>
+            <td className="border border-border p-3">$8,500 – $14,000</td>
           </tr>
         </tbody>
       </table>
 
       <p>
         <em>
-          Note: Paintable surface area is typically 1.5–2x the home&apos;s square footage due to walls, eaves, trim,
-          shutters, and architectural details.
+          Note: Prices are per the home&apos;s living (floor) area, the way we quote. They include pressure washing,
+          scraping, caulking, priming, and two coats. The same ranges apply across Greater Houston; see the{" "}
+          <Link href="/exterior-house-painting-houston-cost-guide">exterior house painting cost guide</Link>.
         </em>
       </p>
 
-      <h3>By Surface Area Painted</h3>
+      <h3>By Scope (per sq ft of floor area)</h3>
 
       <table className="w-full border-collapse my-6">
         <thead>
@@ -186,7 +187,7 @@ export default function ExteriorPaintingCostKatyPage() {
           </tr>
           <tr>
             <td className="border border-border p-3">Full exterior (walls, trim, doors, shutters, eaves)</td>
-            <td className="border border-border p-3">$2.50 – $3.50/sq ft</td>
+            <td className="border border-border p-3">$2.50 – $4.00/sq ft</td>
             <td className="border border-border p-3">Complete job</td>
           </tr>
           <tr className="bg-muted/50">
@@ -359,8 +360,8 @@ export default function ExteriorPaintingCostKatyPage() {
         </li>
       </ul>
       <p>
-        Inferior exterior paints in Katy will fail in 3–5 years. Premium coatings last 10–15 years. The price difference
-        per gallon is $30–$50; the difference in longevity is a decade.
+        Inferior exterior paints in Katy can fail in 3–4 years. Premium coatings carry you through the full 5–7 year
+        repaint cycle. The price difference per gallon is $30–$50; the difference in longevity is years.
       </p>
 
       <h3>6. HOA Color Approval in Katy TX</h3>
@@ -500,9 +501,9 @@ export default function ExteriorPaintingCostKatyPage() {
         <Link href="/exterior-painting-houston-tx" className="text-primary underline">
           exterior painting services
         </Link>{" "}
-        or see what makes us the{" "}
+        or meet our{" "}
         <Link href="/painters-katy-tx" className="text-primary underline">
-          trusted painters in Katy TX
+          painters in Katy TX
         </Link>
         .
       </p>

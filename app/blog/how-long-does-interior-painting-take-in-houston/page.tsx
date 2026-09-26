@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "Accurate interior painting timelines for Houston homes by size, scope, and crew size, plus a day-by-day breakdown of what happens.",
     type: "article",
     publishedTime: "2026-06-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/how-long-interior-painting-houston.jpg"],
   },
   twitter: {
@@ -56,7 +56,7 @@ const faqs = [
 const relatedPosts = [
   {
     title: "Interior Painting Cost Houston TX",
-    href: "/blog/interior-painting-cost-houston-tx",
+    href: "/interior-painting-cost-houston",
     excerpt: "Complete 2026 pricing guide for interior painting in Houston.",
     image: "/images/blog/interior-painting-houston-guide.jpg",
   },
@@ -68,7 +68,7 @@ const relatedPosts = [
   },
   {
     title: "How to Choose the Best Painters in Houston",
-    href: "/blog/how-to-choose-best-painters-houston",
+    href: "/questions-to-ask-before-hiring-painters",
     excerpt: "What to look for when hiring a painting contractor in Houston.",
     image: "/images/blog/best-time-paint-houston.jpg",
   },
@@ -79,7 +79,7 @@ export default function HowLongDoesInteriorPaintingTakePage() {
     <BlogPostTemplate
       title="How Long Does It Take to Paint a House Interior in Houston?"
       excerpt="Interior painting in Houston takes 3-8 days depending on home size, scope, crew size, and prep requirements. Here's the complete breakdown, including a day-by-day look at what happens on a professional project."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
       readTime="9 min read"
@@ -380,8 +380,10 @@ export default function HowLongDoesInteriorPaintingTakePage() {
         <a href="/interior-painting-houston-tx">
           schedule your free interior painting estimate
         </a>
-        . Service areas include Houston, Katy, Cypress, Sugar Land, The
-        Woodlands, Richmond, Fulshear, Pearland, Rosenberg, and Bellaire.
+        . Pricing for the same projects is in our{" "}
+        <a href="/interior-painting-cost-houston">interior painting cost in Houston</a> guide. Service areas include
+        Houston, Katy, <a href="/painters-cypress-tx">Cypress</a>, Sugar Land, The Woodlands, Richmond, Fulshear,
+        Pearland, Rosenberg, and Bellaire.
       </p>
     </BlogPostTemplate>
   )

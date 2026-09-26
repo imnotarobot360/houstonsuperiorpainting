@@ -6,6 +6,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, User, ArrowLeft, Share2, Facebook, Linkedin } from "lucide-react"
+import { AUTHOR_REF, PUBLISHER_REF } from "@/components/structured-data"
 
 interface FAQ {
   question: string
@@ -65,31 +66,15 @@ export function BlogPostTemplate({
     "image": `https://houstonsuperiorpainting.com${featuredImage}`,
     "datePublished": isoDate,
     "dateModified": isoDate,
-    // Author is a REFERENCE to the single canonical Person entity, which the
-    // root layout emits on every page via <StructuredData /> (jjSemoPersonSchema,
-    // @id .../about#jjsemo). It previously inlined a *second* Person under the
-    // @id ".../#jjsemo" with a different jobTitle ("Owner & Lead Estimator" vs
-    // "Founder & Lead Painter"), so every blog post described two different
-    // people with the same name — which splits author authority instead of
-    // consolidating it. Name is kept inline so the node is still readable
-    // standalone; everything else resolves through the @id.
-    "author": {
-      "@type": "Person",
-      "@id": "https://houstonsuperiorpainting.com/about#jjsemo",
-      "name": "JJ Semo"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://houstonsuperiorpainting.com/#business",
-      "name": "Houston Superior Painting",
-      "logo": {
-        "@type": "ImageObject",
-        // /logo.png is a 404 — the real asset is /images/logo.png. Google must
-        // be able to fetch publisher.logo or the Article is ineligible for
-        // rich results, so this silently disqualified every post using it.
-        "url": "https://houstonsuperiorpainting.com/images/logo.png"
-      }
-    },
+    // Author is a REFERENCE to the single canonical Person (Juan Serra, @id
+    // OWNER_ID = .../about#juan-serra), which the root layout emits on every
+    // page. Publisher is a reference to the sitewide Organization (ORG_ID).
+    // Never inline a second Person or Organization here: duplicate nodes with
+    // conflicting facts split entity authority instead of consolidating it.
+    // The `author` prop is ignored for schema and display on purpose — the
+    // only author on this site is the owner.
+    "author": AUTHOR_REF,
+    "publisher": PUBLISHER_REF,
     "articleSection": category,
     "wordCount": 1500,
     "inLanguage": "en-US",
@@ -98,28 +83,6 @@ export function BlogPostTemplate({
       "@type": "SpeakableSpecification",
       "cssSelector": [".article-intro", ".quick-answer", "h1", "h2"]
     }
-  }
-
-  // Author Schema — a REFERENCE, not a redefinition.
-  //
-  // This used to emit a full second Person node under the @id
-  // ".../#jjsemo" while the canonical Person (jjSemoPersonSchema, @id
-  // ".../about#jjsemo") is already emitted on EVERY page by <StructuredData />
-  // in the root layout. So each blog post described two different people named
-  // JJ Semo with conflicting facts — "Owner & Lead Estimator" here vs
-  // "Founder & Lead Painter" there, plus a different description and a
-  // LinkedIn URL that appears nowhere else. That splits author authority
-  // across two entities instead of consolidating it onto one, which is the
-  // opposite of what author markup is for.
-  //
-  // Emitting the @id alone is sufficient: Google resolves it to the canonical
-  // node in the same page's markup. Name is retained so the reference stays
-  // human-readable in isolation.
-  const authorSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://houstonsuperiorpainting.com/about#jjsemo",
-    "name": "JJ Semo"
   }
 
   // FAQPage Schema (only if FAQs provided)
@@ -152,10 +115,6 @@ export function BlogPostTemplate({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(authorSchema) }}
       />
       <script
         type="application/ld+json"
@@ -196,7 +155,7 @@ export function BlogPostTemplate({
             <div className="flex flex-wrap items-center gap-6 text-sm text-primary-foreground/80">
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
-                <span itemProp="author">JJ Semo</span>
+                <Link href="/about" rel="author" className="hover:text-gold underline-offset-2 hover:underline">Juan Serra</Link>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
@@ -302,16 +261,18 @@ export function BlogPostTemplate({
           </div>
 
           {/* Author Info */}
-          <div className="mt-8 p-6 bg-muted rounded-xl" itemScope itemType="https://schema.org/Person">
+          <div className="mt-8 p-6 bg-muted rounded-xl">
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <User className="w-8 h-8 text-primary" />
               </div>
               <div>
-                <p className="font-semibold text-foreground" itemProp="name">JJ Semo</p>
-                <p className="text-sm text-muted-foreground" itemProp="jobTitle">Owner & Lead Estimator at Houston Superior Painting</p>
-                <p className="text-sm text-foreground/70 mt-2" itemProp="description">
-                  JJ founded Houston Superior Painting in 2019 and has completed over 500 residential and commercial painting projects across the Greater Houston area. He specializes in helping homeowners choose the right colors and finishes for Houston&apos;s unique climate.
+                <p className="font-semibold text-foreground">
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
+                </p>
+                <p className="text-sm text-muted-foreground">Owner, Houston Superior Painting</p>
+                <p className="text-sm text-foreground/70 mt-2">
+                  Juan Serra founded Houston Superior Painting in 2019 and runs it from the company&apos;s Cypress headquarters, with five offices serving Greater Houston. He reviews the prep scope on every estimate.
                 </p>
               </div>
             </div>

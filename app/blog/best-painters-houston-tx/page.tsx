@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { BUSINESS } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Best Painters in Houston TX: How to Find & Vet Them",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
       "How to vet, hire, and avoid being burned by Houston painters — with the 8 questions you must ask before signing anything.",
     type: "article",
     publishedTime: "2026-06-07",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/best-painters-houston-tx.png"],
   },
   twitter: {
@@ -61,7 +62,7 @@ const faqs = [
 const relatedPosts = [
   {
     title: "How Much Does House Painting Cost in Houston? 2026 Price Guide",
-    href: "/blog/house-painting-cost-houston-2026",
+    href: "/houston-painting-cost-guide",
     excerpt: "Complete 2026 guide to interior and exterior painting costs across Greater Houston.",
     image: "/images/blog/house-painting-cost-houston.jpg",
   },
@@ -84,7 +85,7 @@ export default function BestPaintersHoustonPage() {
     <BlogPostTemplate
       title="Best Painters in Houston TX: How to Find & Vet Them"
       excerpt="Houston has more painting contractors than almost any city in Texas. This guide teaches you the vetting process that separates painters who'll protect your home from those who'll damage it."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
       readTime="11 min read"
@@ -275,7 +276,7 @@ export default function BestPaintersHoustonPage() {
 
       <h2>Step 5: Compare Estimates Correctly</h2>
       <p>
-        Never compare painting quotes by price alone. Compare them by what each quote includes.
+        Never compare painting quotes by price alone. Compare them by what each quote includes, and check both against the 2026 ranges in our <Link href="/houston-painting-cost-guide">Houston painting cost guide</Link>.
       </p>
       <p>
         A <strong>$5,000 quote</strong> that includes:
@@ -298,7 +299,7 @@ export default function BestPaintersHoustonPage() {
         <li>No warranty</li>
       </ul>
       <p>
-        The $5,000 job lasts 10 years. The $3,500 job fails in 2. And you won&apos;t know until it&apos;s too late.
+        The $5,000 job lasts the full 5–7 year Houston repaint cycle. The $3,500 job fails in 2. And you won&apos;t know until it&apos;s too late.
       </p>
 
       <h2>What Separates the Best Houston Painters from the Average</h2>
@@ -382,7 +383,7 @@ export default function BestPaintersHoustonPage() {
         </li>
       </ul>
       <p>
-        We&apos;ve been painting Houston homes since 2019 and hold a 4.9-star rating across 200+ verified reviews. See
+        We&apos;ve completed 500+ projects since 2019; read our <a href={BUSINESS.social.googleMaps} target="_blank" rel="noopener noreferrer">reviews on Google</a>. See
         our full list of <Link href="/questions-to-ask-before-hiring-painters">questions to ask before hiring</Link> or
         explore our <Link href="/interior-painting-houston-tx">interior</Link> and{" "}
         <Link href="/exterior-painting-houston-tx">exterior painting</Link> services.

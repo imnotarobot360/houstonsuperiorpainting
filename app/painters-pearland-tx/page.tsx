@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-pearland-tx',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters Pearland TX — Houston Superior Painting",
     description: "Professional painters in Pearland TX. Interior, exterior, cabinet painting for Silverlake, Shadow Creek Ranch, Southfork. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/painters-pearland-tx",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function PaintersPearlandTX() {
   return (
     <>
-      <TrustBar />
+      <TrustBar hideRating />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -48,9 +48,9 @@ export default function PaintersPearlandTX() {
         <LocationPageTemplate
           city="Pearland"
           state="TX"
-          heroHeadline="Pearland's Top-Rated House Painters"
+          heroHeadline="House Painters in Pearland, TX"
           heroDescription="From Silverlake's established homes to Shadow Creek Ranch's master-planned community, we deliver exceptional painting results backed by our 5-year warranty. HOA-compliant colors and professional service."
-          quickAnswer="Houston Superior Painting provides professional painting services throughout Pearland TX including Silverlake, Shadow Creek Ranch, Southfork, and Southern Trails. Interior painting costs $2.50-$4.00/sq ft, exterior painting $5,000-$12,000. We offer HOA color consultation, use Sherwin-Williams and Benjamin Moore products, and provide a 5-year warranty. Call (346) 594-5960 for a free estimate."
+          quickAnswer="Houston Superior Painting provides professional painting services throughout Pearland TX including Silverlake, Shadow Creek Ranch, Southfork, and Southern Trails. Interior painting costs $2.50–$4.50/sq ft ($4,000–$8,000 for a 2,500 sq ft home) and exterior painting $3,500–$12,000 per home. We offer HOA color consultation, use Sherwin-Williams and Benjamin Moore products, and provide a 5-year warranty. Call (346) 594-5960 for a free estimate."
           aboutCity={`Pearland has grown from a small town into one of Houston's most desirable suburban communities. With its excellent schools, family-friendly neighborhoods, and convenient access to both Houston and Galveston, Pearland attracts homeowners who value quality of life—and quality in their homes.
 
 Whether you live in the established neighborhoods around Silverlake, the master-planned community of Shadow Creek Ranch, the growing Southfork area, or historic Old Pearland, your home deserves painting services that meet your standards.
@@ -61,7 +61,6 @@ Pearland's Gulf Coast location presents the same climate challenges as Greater H
 
 Our familiarity with Pearland's HOA requirements in communities like Shadow Creek Ranch and Silverlake means we can help you navigate color approvals and community standards. We've built relationships with Pearland homeowners who trust us for their ongoing painting needs.`}
           whyChooseUs={[
-            "30+ Pearland projects completed since 2019",
             "HOA expertise: Shadow Creek Ranch, Silverlake, Southfork guidelines",
             "Climate-rated materials: premium paints for Gulf Coast conditions",
             "New and established homes: skilled with all Pearland housing types",
@@ -134,7 +133,7 @@ Our familiarity with Pearland's HOA requirements in communities like Shadow Cree
           faqs={[
             {
               question: "How much does it cost to paint a house in Pearland?",
-              answer: "Interior painting costs $2.50-$4.00/sq ft. A 3,000 sq ft home runs $7,500-$12,000. Exterior painting ranges $5,000-$12,000 based on size and condition."
+              answer: "Interior painting in Pearland typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
             },
             {
               question: "Do you work with Pearland HOAs?",

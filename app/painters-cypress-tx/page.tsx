@@ -1,158 +1,54 @@
-import type { Metadata } from "next"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { LocationPageTemplate } from "@/components/location-page-template"
-import { generateLocationBusinessSchema } from "@/components/structured-data"
+import { OfficeCityPage, officeCityMetadata, type OfficeCityPageData } from "@/components/aeo/office-city-page"
 
-export const metadata: Metadata = {
-  title: "Painters Cypress TX — Houston Superior Painting",
-  description: "Professional painters in Cypress TX. Interior, exterior, cabinet painting for Bridgeland, Towne Lake, Cypress Creek. 5-year warranty. Free estimates.",
-  alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/painters-cypress-tx',
+export const metadata = officeCityMetadata({
+  city: "Cypress",
+  slug: "painters-cypress-tx",
+  title: "House Painters in Cypress TX | Houston Superior Painting",
+  description:
+    "House painters from our Cypress headquarters on Huffmeister Rd. $2M insured, 5-year warranty, free written estimates in 24 hours. Call (346) 594-5960.",
+  ogImage: "https://houstonsuperiorpainting.com/images/og/og-painters-cypress.jpg",
+})
+
+const DATA: OfficeCityPageData = {
+  city: "Cypress",
+  slug: "painters-cypress-tx",
+  areasPhrase: "Cypress, Bridgeland, Towne Lake, and Fairfield",
+  serviceBlurbs: {
+    "interior-painting-houston-tx": "Walls, ceilings, trim, and doors, with furniture protected and floors covered every day.",
+    "exterior-painting-houston-tx": "Wash, scrape, caulk, and prime before two finish coats on brick, siding, and trim.",
+    "cabinet-refinishing-houston-tx": "Sprayed, factory-smooth cabinet finishes for Cypress kitchens without a remodel.",
+    "drywall-repair-houston-tx": "Cracks, nail pops, and water spots patched and texture-matched before paint.",
+    "limewash-brick-painting-houston-tx": "Limewash or mineral paint to update the orange and red brick common in Cypress.",
+    "soft-washing-houston-tx": "Low-pressure washing to kill the mildew that grows on shaded Cypress siding.",
   },
-  openGraph: {
-    title: "Painters Cypress TX — Houston Superior Painting",
-    description: "Professional painters in Cypress TX. Interior, exterior, cabinet painting for Bridgeland, Towne Lake, Cypress Creek. 5-year warranty.",
-    url: "https://houstonsuperiorpainting.com/painters-cypress-tx",
-    siteName: "Houston Superior Painting",
-    type: "website",
-    images: [{
-      url: "https://houstonsuperiorpainting.com/images/og/og-painters-cypress.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Painters Cypress TX - Houston Superior Painting",
-    }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Painters Cypress TX — Houston Superior Painting",
-    description: "Professional painters in Cypress TX. Interior, exterior, cabinet painting for Bridgeland, Towne Lake, Cypress Creek.",
-    images: ["https://houstonsuperiorpainting.com/images/og/og-painters-cypress.jpg"],
-  },
-  other: {
-    'geo.region': 'US-TX',
-    'geo.placename': 'Cypress',
-    'geo.position': '29.9745;-95.6445',
-    'ICBM': '29.9745, -95.6445',
-  },
+  neighborhoods: [
+    { name: "Bridgeland", note: "A large master-planned community west of US-290 with newer homes and HOA design guidelines for exterior colors." },
+    { name: "Towne Lake", note: "A master-planned community built around a large recreational lake, with a mix of brick and fiber-cement homes." },
+    { name: "Fairfield", note: "An established master-planned community off US-290 where many homes are due for their first or second full exterior repaint." },
+    { name: "Cypress Creek Lakes", note: "A lake-oriented master-planned community with an active HOA and architectural review for color changes." },
+    { name: "Coles Crossing", note: "An established Cypress community with mature trees and an HOA that reviews exterior changes." },
+    { name: "Blackhorse Ranch", note: "A neighborhood built around a golf course, with larger two-story homes and plenty of exterior trim." },
+    { name: "Lakes of Fairhaven", note: "A Cypress subdivision with neighborhood lakes and a mix of one- and two-story brick homes." },
+    { name: "Canyon Lakes West", note: "An established Cypress neighborhood where older wood trim often needs repair before repainting." },
+    { name: "Lakewood Forest", note: "An older, heavily wooded neighborhood where shade and moisture make mildew prep a priority." },
+    { name: "Longwood", note: "An established community with mature trees and homes that often need trim and fascia repair before paint." },
+  ],
+  prep: [
+    "Cypress has more tree cover than most of Greater Houston, and shade is hard on paint. North-facing walls and anything under a canopy stay damp after rain and grow mildew, and paint rolled over mildew peels within a couple of seasons. We soft-wash those walls with a mildewcide first, let them dry fully, and prime any bare wood before the finish coats go on.",
+    "Most Cypress homes sit in HOA communities such as Bridgeland, Towne Lake, and Cypress Creek Lakes that restrict exterior colors. We pull the approved color list and submit the ARC form before work starts, so the job is not held up waiting on approval.",
+  ],
+  areasAnswer:
+    "All of Cypress, including Bridgeland, Towne Lake, Fairfield, Cypress Creek Lakes, Coles Crossing, Blackhorse Ranch, Lakes of Fairhaven, Canyon Lakes West, Lakewood Forest, and Longwood. From the Cypress headquarters we also cover Tomball, Champions Forest, Cypress Creek, Spring, and The Woodlands.",
+  nearby: [
+    "painters-tomball-tx",
+    "painters-champions-forest-tx",
+    "painters-cypress-creek-tx",
+    "painters-the-woodlands-tx",
+    "painters-katy-tx",
+    "painters-magnolia-tx",
+  ],
 }
 
 export default function PaintersCypressTX() {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateLocationBusinessSchema({
-  city: "Cypress",
-  slug: "painters-cypress-tx",
-  description: "Professional interior, exterior, and cabinet painting services in Cypress, TX. Serving Bridgeland, Towne Lake, Cypress Creek Lakes, and all Cypress neighborhoods.",
-          }))
-        }}
-      />
-      <Header />
-      <main>
-        <LocationPageTemplate
-          city="Cypress"
-          state="TX"
-          heroHeadline="Trusted House Painters in Cypress, Texas"
-          heroDescription="From Bridgeland to Cypress Creek Lakes, Cypress homeowners trust us for meticulous craftsmanship and reliable service. Experience the difference professional expertise makes."
-          quickAnswer="Houston Superior Painting provides professional house painting in Cypress, TX. Interior painting costs $2.50-4.50/sq ft. Exterior painting costs $3,500-12,000 depending on home size. We serve Bridgeland, Towne Lake, Cypress Creek Lakes, Fairfield, and all Cypress neighborhoods. 5-year exterior warranty, 5-star Google rating, free estimates. Call (346) 594-5960."
-          aboutCity={`Cypress is one of the Houston area's fastest-growing communities, and we've grown right alongside it. From painting new construction homes in Bridgeland to refreshing established properties in Cypress Creek, we know this area inside and out.
-
-Cypress homeowners appreciate quality and value—and that's exactly what we deliver. Our crews understand the unique challenges of painting in Northwest Houston: the intense summer heat that can cause paint to fail prematurely, the humidity that requires proper preparation, and the occasional severe weather that demands durable exterior coatings.
-
-We've built strong relationships with Cypress families over the years, with many customers calling us back for additional projects or referring us to their neighbors. That word-of-mouth reputation means everything to us, and we work hard to earn it on every single job.`}
-          whyChooseUs={[
-            "Cypress specialists: Hundreds of homes painted throughout Northwest Houston",
-            "New construction expertise: We fix builder-grade paint jobs and make them flawless",
-            "Premium durability: Paints and coatings designed to withstand Texas weather",
-            "Flexible scheduling: We work around your family's routine",
-            "Transparent pricing: Detailed estimates with no hidden fees",
-            "Satisfaction guaranteed: We're not done until you're thrilled with the results"
-          ]}
-          services={[
-            {
-              title: "Interior Painting",
-              description: "Elevate your Cypress home's interior with expert color selection and flawless application. From accent walls to whole-home repaints.",
-              href: "/interior-painting-houston-tx"
-            },
-            {
-              title: "Exterior House Painting",
-              description: "Shield your Cypress home from sun, rain, and humidity with premium exterior paints that maintain their beauty for years.",
-              href: "/exterior-painting-houston-tx"
-            },
-            {
-              title: "Cabinet Refinishing",
-              description: "Give your Cypress kitchen a modern update. Our spray-applied finishes create a smooth, durable surface at a fraction of replacement cost.",
-              href: "/cabinet-refinishing-houston-tx"
-            },
-            {
-              title: "Drywall Repair",
-              description: "Fix cracks, nail pops, and settling damage in your Cypress home before painting for flawless results.",
-              href: "/drywall-repair-houston-tx"
-            },
-            {
-              title: "Pressure Washing",
-              description: "Professional pressure washing for Cypress homes. Clean and prep surfaces before painting.",
-              href: "/pressure-washing-houston-tx"
-            },
-            {
-              title: "Limewash Brick",
-              description: "Transform your Cypress brick home with authentic European limewash finishes.",
-              href: "/limewash-brick-painting-houston-tx"
-            },
-            {
-              title: "Commercial Painting",
-              description: "Professional painting for Cypress businesses, offices, and retail spaces. Minimal disruption with maximum impact.",
-              href: "/commercial-painting-houston-tx"
-            },
-            {
-              title: "Garage Floor Epoxy",
-              description: "Durable epoxy coatings for Cypress garages that resist chemicals and look stunning.",
-              href: "https://houstonsuperiorepoxy.com/"
-            }
-          ]}
-          neighborhoods={[
-            "Bridgeland",
-            "Cypress Creek Lakes",
-            "Towne Lake",
-            "Fairfield",
-            "Lakewood Forest",
-            "Cypress Mill",
-            "Longwood",
-            "Cypress Crossing",
-            "Black Horse Ranch",
-            "Riata Ranch",
-            "Preserve at Cypress Creek",
-            "Stone Gate"
-          ]}
-          testimonial={{
-            quote: "Living in Bridgeland, I wanted painters who understood newer homes. They identified and fixed issues with our builder paint job that I hadn't even noticed. The attention to detail was impressive.",
-            author: "Jennifer L.",
-            location: "Bridgeland, Cypress"
-          }}
-          faqs={[
-            {
-              question: "What areas of Cypress do you serve?",
-              answer: "We serve all of Cypress including Bridgeland, Towne Lake, Cypress Creek Lakes, Fairfield, Lakewood Forest, and all surrounding communities. If you're in the Cypress-Tomball area, we can help."
-            },
-            {
-              question: "How do you handle Cypress's hot summers when painting exteriors?",
-              answer: "We schedule exterior work during optimal conditions—early morning or evening in summer—and use high-quality paints rated for extreme heat. We never paint in conditions that could compromise the finish."
-            },
-            {
-              question: "Can you match my existing paint color?",
-              answer: "Absolutely. We use professional color-matching technology to match any existing color. We can also help you select new colors with our complimentary color consultation."
-            },
-            {
-              question: "Do you offer financing for painting projects in Cypress?",
-              answer: "Yes, we offer flexible payment options for larger projects. Ask about our financing plans when you schedule your free estimate."
-            }
-          ]}
-        />
-      </main>
-      <Footer />
-    </>
-  )
+  return <OfficeCityPage data={DATA} />
 }

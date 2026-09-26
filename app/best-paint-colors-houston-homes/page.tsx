@@ -7,10 +7,10 @@ import { Phone, MessageSquare, ChevronRight } from "lucide-react"
 import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
 
 export const metadata: Metadata = {
-  title: "Best Paint Colors for Houston Homes 2026",
+  title: "Best Paint Colors for Houston Homes 2026 | Free Estimates",
   description: "Top paint colors for Houston homes that perform in heat and humidity. Sherwin-Williams and Benjamin Moore picks for interior, exterior, and cabinets.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/best-paint-colors-houston-homes" },
-  openGraph: { title: "Best Paint Colors for Houston Homes 2026", description: "Expert color recommendations for Houston homes from Sherwin-Williams and Benjamin Moore.", url: "https://houstonsuperiorpainting.com/best-paint-colors-houston-homes", type: "article" },
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }], title: "Best Paint Colors for Houston Homes 2026 | Free Estimates", description: "Expert color recommendations for Houston homes from Sherwin-Williams and Benjamin Moore.", url: "https://houstonsuperiorpainting.com/best-paint-colors-houston-homes", type: "article" },
   other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },
 }
 
@@ -30,7 +30,7 @@ export default function BestPaintColorsHoustonHomes() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "Best Paint Colors for Houston Homes in 2026", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/best-paint-colors-houston-homes" },
+        { "@type": "Article", "headline": "Best Paint Colors for Houston Homes in 2026", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/best-paint-colors-houston-homes" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Best Paint Colors Houston", "item": "https://houstonsuperiorpainting.com/best-paint-colors-houston-homes" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },

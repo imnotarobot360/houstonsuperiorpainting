@@ -10,13 +10,13 @@ export const metadata: Metadata = {
     // the page Google ranks for the primary keyword (avoids cannibalization).
     canonical: "https://houstonsuperiorpainting.com/soft-washing-houston-tx",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Soft Washing in Houston TX: What It Is & When to Use It",
     description:
       "A gentle, low-pressure cleaning method that removes algae, mildew, and grime from Houston exteriors without the damage high-pressure washing can cause.",
     type: "article",
     publishedTime: "2026-06-19",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -57,7 +57,7 @@ const relatedPosts = [
   },
   {
     title: "Exterior Painting Cost in Houston TX (2026)",
-    href: "/blog/exterior-painting-cost-houston-tx-2026",
+    href: "/exterior-house-painting-houston-cost-guide",
     excerpt: "Real 2026 pricing for exterior painting projects in Houston.",
     image: "/images/blog/exterior-painting-cost-houston-tx-2026.png",
   },
@@ -68,7 +68,7 @@ export default function SoftWashingHoustonBlogPage() {
     <BlogPostTemplate
       title="Soft Washing in Houston TX: What It Is and When to Use It"
       excerpt="Soft washing is a gentle, low-pressure cleaning method that removes algae, mildew, and grime from your home's exterior without the damage high-pressure washing can cause — and it's one of the best ways to prep for paint."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Professional Painting Contractor"
       publishDate="June 19, 2026"
       readTime="9 min read"
@@ -182,7 +182,7 @@ export default function SoftWashingHoustonBlogPage() {
         A thorough soft wash removes those contaminants and gives your new paint the clean foundation it needs to adhere
         properly and last for years. If you&apos;re weighing a full exterior project, see our{" "}
         <a href="/exterior-painting-houston-tx">exterior painting in Houston</a> services, or get the full picture on
-        cost in our <a href="/blog/exterior-painting-cost-houston-tx-2026">2026 exterior painting cost guide</a>.
+        cost in our <a href="/exterior-house-painting-houston-cost-guide">2026 exterior painting cost guide</a>.
       </p>
 
       <h2>How Much Does Soft Washing Cost in Houston?</h2>
@@ -210,7 +210,8 @@ export default function SoftWashingHoustonBlogPage() {
       <p>
         Soft washing is a safe, effective, and long-lasting way to restore your home&apos;s exterior — and the smart
         first step before any exterior paint project. To learn more about our process, pricing, and service areas, visit
-        our <a href="/soft-washing-houston-tx">soft washing service page</a> or{" "}
+        our <a href="/soft-washing-houston-tx">soft washing service page</a>, reach our{" "}
+        <a href="/painters-sugar-land-tx">painters in Sugar Land TX</a> and Houston offices, or{" "}
         <a href="/contact">contact us</a> for a free estimate.
       </p>
     </BlogPostTemplate>

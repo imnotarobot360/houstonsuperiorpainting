@@ -8,13 +8,13 @@ import { RelatedLinks } from "@/components/luxury/related-links"
 import { CheckCircle, Phone, Star, Shield, Clock, Users, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: 'Stucco Painting & Repair Houston TX',
+  title: 'Stucco Painting & Repair Houston TX | Houston Superior Painting',
   description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings that flex with heat and humidity. 5-year guarantee. Free estimates.',
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/stucco-painting-houston-tx',
   },
   openGraph: {
-    title: 'Stucco Painting & Repair Houston TX',
+    title: 'Stucco Painting & Repair Houston TX | Houston Superior Painting',
     description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings that flex with Houston heat and humidity. 5-year guarantee.',
     url: 'https://houstonsuperiorpainting.com/stucco-painting-houston-tx',
     siteName: 'Houston Superior Painting',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stucco Painting & Repair Houston TX',
+    title: 'Stucco Painting & Repair Houston TX | Houston Superior Painting',
     description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings, crack repair, 5-year guarantee.',
     images: ['https://houstonsuperiorpainting.com/images/og/og-stucco-painting.png'],
   },
@@ -78,7 +78,7 @@ const serviceSchema = {
   "name": "Stucco Painting & Repair in Houston, TX",
   "description": "Professional stucco painting and crack repair including elastomeric coatings, hairline-to-structural crack repair, spall and patch repair, and waterproofing for traditional cement stucco and synthetic EIFS systems.",
   "serviceType": "Stucco Painting and Repair",
-  "provider": { "@id": "https://houstonsuperiorpainting.com/#business" },
+  "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": [
     { "@type": "City", "name": "Houston" },
     { "@type": "City", "name": "Katy" },

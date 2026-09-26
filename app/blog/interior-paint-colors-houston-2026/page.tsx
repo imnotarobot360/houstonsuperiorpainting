@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/interior-paint-colors-houston-2026',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Best Interior Paint Colors for Houston Homes in 2026",
     description: "Trending interior paint colors that Houston homeowners are choosing in 2026.",
     type: "article",
@@ -149,11 +150,11 @@ export default function InteriorPaintColors2026Page() {
       <h2>Professional Interior Painters in Houston</h2>
 
       <p>
-        Houston Superior Painting specializes in interior painting, cabinet painting, trim refinishing, accent walls, luxury finishes, and drywall repair.
+        Houston Superior Painting specializes in <Link href="/interior-painting-houston-tx">interior painting in Houston</Link>, cabinet painting, trim refinishing, accent walls, luxury finishes, and drywall repair.
       </p>
 
       <p>
-        If you are looking for interior painters in Houston, Katy, or Cypress, contact us today for a free estimate.
+        A single room typically runs $300–$800 and a 2,500 sq ft interior $4,000–$8,000; see our <Link href="/interior-painting-cost-houston">Houston interior painting prices</Link> for details. If you are looking for interior painters in Houston, <Link href="/painters-katy-tx">Katy</Link>, or Cypress, contact us today for a free estimate.
       </p>
     </BlogPostTemplate>
   )

@@ -47,17 +47,17 @@ const faqs = [
   {
     question: "How much do painters charge in Houston?",
     answer:
-      "Painters in Houston charge $3,500\u2013$15,000 depending on project type. Interior repaints for a 2,000 sq ft home average $3,500\u2013$7,500 ($2\u2013$4 per square foot). Single-story exteriors run $4,500\u2013$9,000, two-story exteriors $8,000\u2013$15,000. Cabinet refinishing $2,500\u2013$6,000. Drywall repair $200\u2013$1,500. Houston Superior Painting provides free, line-item written quotes within 24 hours with no upfront deposit.",
+      "Painters in Houston charge $2.50\u2013$4.50 per square foot for interiors and $1.50\u2013$4 per square foot for exteriors in 2026. A 2,500 sq ft home runs $4,000\u2013$8,000 inside and $5,500\u2013$9,000 outside for a two-story. A single room runs $300\u2013$800, and cabinet refinishing $3,000\u2013$6,500 per kitchen. Drywall repair $200\u2013$1,500. Houston Superior Painting provides free, line-item written quotes within 24 hours with no upfront deposit.",
   },
   {
     question: "Who are the best painters near me in Houston?",
     answer:
-      "The best painters near you in Houston offer a 5-year written warranty, no upfront deposit, a documented preparation process, full liability and workers\u2019 compensation insurance, and Houston-specific climate expertise. Houston Superior Painting checks all five boxes \u2014 4.9/5 Google rating, 500+ projects completed since 2019, BBB Accredited, licensed and insured. Always verify Google reviews, BBB rating, and proof of insurance before hiring any contractor.",
+      "The best painters near you in Houston offer a 5-year written warranty, no upfront deposit, a documented preparation process, full liability and workers\u2019 compensation insurance, and Houston-specific climate expertise. Houston Superior Painting checks all five boxes \u2014 500+ projects completed since 2019, BBB Accredited, $2M insured with workers\u2019 compensation, and a 5-year workmanship warranty. Always verify Google reviews, BBB rating, and proof of insurance before hiring any contractor.",
   },
   {
     question: "When is the best time to paint a house in Houston?",
     answer:
-      "The best months for exterior painting in Houston are October through early December and late February through April. Humidity drops below 70%, daytime temperatures stay between 60\u00b0F and 85\u00b0F, and storm risk is low \u2014 the ideal window for paint to cure properly and bond to the surface. Interior painting can happen year-round since temperature and humidity are controlled inside the home. We avoid painting exteriors when humidity is above 85% or rain is expected within 24 hours.",
+      "The best months for exterior painting in Houston are October through April. Humidity drops below 70%, daytime temperatures stay between 60\u00b0F and 85\u00b0F, and storm risk is low \u2014 the ideal window for paint to cure properly and bond to the surface. Interior painting can happen year-round since temperature and humidity are controlled inside the home. We avoid painting exteriors when humidity is above 85% or rain is expected within 24 hours.",
   },
   {
     question: "How long does it take to paint a house in Houston?",
@@ -67,7 +67,7 @@ const faqs = [
   {
     question: "Should I paint my house myself or hire a professional?",
     answer:
-      "Small interior rooms \u2014 a single bedroom, accent wall, or closet \u2014 can be reasonable DIY projects. Hire a professional for exterior painting due to ladder work, heat exposure, humidity-sensitive timing, and prep complexity. DIY Houston exteriors typically fail within 1\u20132 years because the surface prep was rushed or wrong; a properly prepped professional exterior lasts 8\u201315 years. The \u201csavings\u201d on materials disappear when you\u2019re repainting in two years.",
+      "Small interior rooms \u2014 a single bedroom, accent wall, or closet \u2014 can be reasonable DIY projects. Hire a professional for exterior painting due to ladder work, heat exposure, humidity-sensitive timing, and prep complexity. DIY Houston exteriors typically fail within 1\u20132 years because the surface prep was rushed or wrong; a properly prepped professional exterior lasts the full 5\u20137 year Houston repaint cycle. The \u201csavings\u201d on materials disappear when you\u2019re repainting in two years.",
   },
   {
     question: "Do Houston painters require a deposit?",
@@ -77,7 +77,7 @@ const faqs = [
   {
     question: "How long does exterior paint last in Houston?",
     answer:
-      "In Houston, premium exterior paint (Sherwin-Williams Duration, Benjamin Moore Aura, properly applied with full prep) lasts 10\u201315 years. Mid-grade paint with good prep lasts 7\u201310 years. Budget paint or skipped prep typically fails in 2\u20134 years with peeling, fading, and chalking. Houston\u2019s combination of heat, humidity, UV exposure, and Gulf Coast storms tests paint harder than almost any climate in the country \u2014 premium products with old-school prep are worth the modest cost difference.",
+      "In Houston, premium exterior paint (Sherwin-Williams Duration, Benjamin Moore Aura, properly applied with full prep) lasts 5\u20137 years before a full repaint, longer on shaded walls. Mid-grade paint with good prep lasts 4\u20136 years. Budget paint or skipped prep typically fails in 2\u20134 years with peeling, fading, and chalking. Houston\u2019s combination of heat, humidity, UV exposure, and Gulf Coast storms tests paint harder than almost any climate in the country \u2014 premium products with old-school prep are worth the modest cost difference.",
   },
   {
     question: "What areas does Houston Superior Painting serve?",
@@ -123,27 +123,7 @@ export default function PaintersNearMeHoustonPage() {
     wordCount: 1850,
     articleSection: "Finding Painters",
     inLanguage: "en-US",
-    author: {
-      "@type": "Person",
-      "@id": "https://houstonsuperiorpainting.com/about#jjsemo",
-      name: "JJ Semo",
-      jobTitle: "Founder & Lead Painter",
-      url: "https://houstonsuperiorpainting.com/about",
-      image: "https://houstonsuperiorpainting.com/images/jj-semo.jpg",
-      worksFor: {
-        "@type": "Organization",
-        name: "Houston Superior Painting",
-        url: "https://houstonsuperiorpainting.com",
-      },
-      knowsAbout: [
-        "Interior Painting",
-        "Exterior Painting",
-        "Cabinet Refinishing",
-        "Houston Climate Coatings",
-        "Sherwin-Williams Premium Products",
-        "Benjamin Moore Premium Products",
-      ],
-    },
+    author: { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", name: "Juan Serra" },
     publisher: {
       "@type": "Organization",
       "@id": "https://houstonsuperiorpainting.com/#organization",
@@ -233,7 +213,7 @@ export default function PaintersNearMeHoustonPage() {
               <div className="flex flex-wrap items-center gap-4 mt-6 text-white/80">
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
-                  <span>JJ Semo</span>
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
@@ -254,25 +234,25 @@ export default function PaintersNearMeHoustonPage() {
             {/* Direct Answer Summary - Snippet Target */}
             <div className="bg-muted/50 border-l-4 border-l-primary p-6 rounded-r-lg mb-8 not-prose quick-answer">
               <p className="text-lg">
-                <strong>Quick answer:</strong> The best painters near you in Houston offer a 5-year exterior warranty, no upfront deposit, and a documented preparation process. Expect to pay $3,500&ndash;$7,500 for interior repaints and $4,500&ndash;$15,000 for exteriors, depending on home size and prep needs. Houston Superior Painting offers all three. Call <a href="tel:+13465945960" className="text-primary font-semibold hover:underline">(346) 594-5960</a> for a free 24-hour quote.
+                <strong>Quick answer:</strong> The best painters near you in Houston offer a 5-year exterior warranty, no upfront deposit, and a documented preparation process. Expect to pay $4,000&ndash;$8,000 to repaint a 2,500 sq ft interior and $3,500&ndash;$12,000 for exteriors, depending on home size and prep needs. Houston Superior Painting offers all three. Call <a href="tel:+13465945960" className="text-primary font-semibold hover:underline">(346) 594-5960</a> for a free 24-hour quote.
               </p>
             </div>
 
             {/* Key Facts Block - Voice & AI Answer Bait */}
             <h2>Key Facts at a Glance</h2>
             <ul>
-              <li><strong>Average interior cost:</strong> $3,500&ndash;$7,500 (2,000 sq ft home)</li>
-              <li><strong>Average exterior cost:</strong> $4,500&ndash;$15,000 (single- to two-story)</li>
-              <li><strong>Cabinet refinishing:</strong> $2,500&ndash;$6,000</li>
+              <li><strong>Average interior cost:</strong> $4,000&ndash;$8,000 (2,500 sq ft home)</li>
+              <li><strong>Average exterior cost:</strong> $3,500&ndash;$12,000 (single- to two-story)</li>
+              <li><strong>Cabinet refinishing:</strong> $3,000&ndash;$6,500</li>
               <li><strong>Project timeline:</strong> 2&ndash;8 working days</li>
               <li><strong>Recommended warranty:</strong> 5 years minimum on exterior</li>
-              <li><strong>Best season:</strong> October&ndash;December &amp; February&ndash;April</li>
+              <li><strong>Best season:</strong> October&ndash;April</li>
               <li><strong>Service areas:</strong> Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, The Woodlands</li>
             </ul>
 
             <h2>How Much Do Painters Charge in Houston?</h2>
             <p>
-              Painters in Houston charge $3,500 to $15,000 depending on project type. Interior repaints average $3,500&ndash;$7,500 for a 2,000 sq ft home, while exteriors range from $4,500 (single-story) to $15,000 (two-story with heavy prep).
+              Painters in Houston charge $2.50&ndash;$4.50 per square foot for interiors and $1.50&ndash;$4 per square foot for exteriors. Interior repaints average $4,000&ndash;$8,000 for a 2,500 sq ft home, while exteriors run $3,500&ndash;$12,000 depending on size and prep. Full tables are in our <Link href="/houston-painting-cost-guide" className="text-primary hover:underline">Houston painting cost guide</Link>.
             </p>
 
             <h3>Houston Painting Cost by Service</h3>
@@ -287,28 +267,28 @@ export default function PaintersNearMeHoustonPage() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-border px-4 py-3">Interior painting (2,000 sq ft)</td>
-                    <td className="border border-border px-4 py-3">$3,500 &ndash; $7,500</td>
+                    <td className="border border-border px-4 py-3">Interior painting (2,500 sq ft)</td>
+                    <td className="border border-border px-4 py-3">$4,000 &ndash; $8,000</td>
                     <td className="border border-border px-4 py-3">2&ndash;5 days</td>
                   </tr>
                   <tr className="bg-muted/50">
                     <td className="border border-border px-4 py-3">Single room</td>
-                    <td className="border border-border px-4 py-3">$400 &ndash; $900</td>
+                    <td className="border border-border px-4 py-3">$300 &ndash; $800</td>
                     <td className="border border-border px-4 py-3">1 day</td>
                   </tr>
                   <tr>
-                    <td className="border border-border px-4 py-3">Exterior painting (single-story)</td>
-                    <td className="border border-border px-4 py-3">$4,500 &ndash; $9,000</td>
+                    <td className="border border-border px-4 py-3">Exterior painting (2,500 sq ft single-story)</td>
+                    <td className="border border-border px-4 py-3">$4,000 &ndash; $7,000</td>
                     <td className="border border-border px-4 py-3">3&ndash;5 days</td>
                   </tr>
                   <tr className="bg-muted/50">
-                    <td className="border border-border px-4 py-3">Exterior painting (two-story)</td>
-                    <td className="border border-border px-4 py-3">$8,000 &ndash; $15,000</td>
+                    <td className="border border-border px-4 py-3">Exterior painting (2,500 sq ft two-story)</td>
+                    <td className="border border-border px-4 py-3">$5,500 &ndash; $9,000</td>
                     <td className="border border-border px-4 py-3">5&ndash;8 days</td>
                   </tr>
                   <tr>
                     <td className="border border-border px-4 py-3">Cabinet refinishing</td>
-                    <td className="border border-border px-4 py-3">$2,500 &ndash; $6,000</td>
+                    <td className="border border-border px-4 py-3">$3,000 &ndash; $6,500</td>
                     <td className="border border-border px-4 py-3">4&ndash;6 days</td>
                   </tr>
                   <tr className="bg-muted/50">
@@ -332,13 +312,13 @@ export default function PaintersNearMeHoustonPage() {
 
             <h2>When Is the Best Time to Paint a House in Houston?</h2>
             <p>
-              The best time to paint a house in Houston is <strong>October to early December</strong> and <strong>late February to April</strong>. Humidity drops below 70%, daytime temperatures stay between 60&deg;F and 85&deg;F, and storm risk is low &mdash; the ideal window for paint to cure properly. Interior painting can happen year-round since climate is controlled.
+              The best time to paint a house in Houston is <strong>October through April</strong>. Humidity drops below 70%, daytime temperatures stay between 60&deg;F and 85&deg;F, and storm risk is low &mdash; the ideal window for paint to cure properly. Interior painting can happen year-round since climate is controlled.
             </p>
 
             <h2>How Do I Find the Best Painters Near Me in Houston?</h2>
             <p>To find the best painters near you in Houston, follow these five steps:</p>
             <ol>
-              <li><strong>Verify reviews and licensing</strong> &mdash; check Google, BBB, and proof of insurance.</li>
+              <li><strong>Verify reviews and insurance</strong> &mdash; check Google, BBB, and proof of insurance.</li>
               <li><strong>Ask about preparation</strong> &mdash; require pressure washing, scraping, caulking, and priming in writing.</li>
               <li><strong>Demand a 5-year exterior warranty</strong> in writing.</li>
               <li><strong>Refuse large upfront deposits</strong> &mdash; pay on completion.</li>
@@ -365,7 +345,7 @@ export default function PaintersNearMeHoustonPage() {
               <li><strong>Prime</strong> all bare wood, stucco, or metal with the correct primer.</li>
               <li><strong>Protect</strong> plants, windows, and walkways before painting begins.</li>
             </ol>
-            <p>Done correctly, this prep extends paint life from 18 months to 8&ndash;10 years in Houston&apos;s climate.</p>
+            <p>Done correctly, this prep extends paint life from 18 months to the full 5&ndash;7 year repaint cycle in Houston&apos;s climate.</p>
 
             <h2>DIY vs Professional Painters in Houston</h2>
             <p>
@@ -414,7 +394,7 @@ export default function PaintersNearMeHoustonPage() {
 
             <h2>5 Mistakes Houston Homeowners Make When Hiring Painters</h2>
             <ol>
-              <li><strong>Picking the cheapest bid.</strong> Lowball quotes mean skipped prep or unlicensed labor.</li>
+              <li><strong>Picking the cheapest bid.</strong> Lowball quotes mean skipped prep or uninsured labor.</li>
               <li><strong>Paying a large upfront deposit.</strong> Reputable Houston painters do not require it.</li>
               <li><strong>Skipping the warranty.</strong> No 5-year warranty = no confidence in the work.</li>
               <li><strong>Accepting verbal estimates.</strong> Always get prep, products, and timeline in writing.</li>
@@ -423,7 +403,7 @@ export default function PaintersNearMeHoustonPage() {
 
             <h2>Why Choose Houston Superior Painting?</h2>
             <p>
-              Houston Superior Painting is a Houston-based painting contractor founded in 2019 by JJ Semo, serving Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, Bellaire, and The Woodlands. We specialize in old-school preparation built for Gulf Coast climate.
+              Houston Superior Painting is a Houston-based painting contractor founded in 2019 by Juan Serra, serving Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, Bellaire, and The Woodlands. We specialize in old-school preparation built for Gulf Coast climate.
             </p>
 
             <h3>What Makes Us Different</h3>
@@ -458,7 +438,7 @@ export default function PaintersNearMeHoustonPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <span><strong>4.9/5 Google rating</strong> from 200+ Houston homeowners.</span>
+                <span><strong>500+ projects</strong> completed across Greater Houston since 2019.</span>
               </li>
             </ul>
 

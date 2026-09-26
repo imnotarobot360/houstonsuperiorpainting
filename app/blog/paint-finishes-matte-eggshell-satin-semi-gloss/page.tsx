@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/paint-finishes-matte-eggshell-satin-semi-gloss",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Paint Finishes Explained: Matte, Eggshell, Satin & Semi-Gloss",
     description: "Which paint finish is best for your Houston home? Compare matte, eggshell, satin, and semi-gloss sheens.",
     url: "https://houstonsuperiorpainting.com/blog/paint-finishes-matte-eggshell-satin-semi-gloss",
@@ -55,20 +55,8 @@ const jsonLd = {
       "@type": "Article",
       headline: "Paint Finishes Explained: Matte, Eggshell, Satin & Semi-Gloss",
       description: "Which paint finish is best for your Houston home? Compare matte, eggshell, satin, and semi-gloss sheens.",
-      author: {
-        "@type": "Person",
-        name: "JJ Semo",
-        jobTitle: "Owner",
-        worksFor: {
-          "@type": "LocalBusiness",
-          name: "Houston Superior Painting",
-        },
-      },
-      publisher: {
-        "@type": "LocalBusiness",
-        name: "Houston Superior Painting",
-        url: "https://houstonsuperiorpainting.com",
-      },
+      author: { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", name: "Juan Serra" },
+      publisher: { "@id": "https://houstonsuperiorpainting.com/#organization" },
       datePublished: "2026-05-19",
       dateModified: "2026-05-19",
     },
@@ -120,7 +108,7 @@ export default function PaintFinishesGuidePage() {
               The complete guide to choosing the right paint sheen for every room in your Houston home.
             </p>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>By JJ Semo</span>
+              <span>By <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link></span>
               <span>|</span>
               <span>May 19, 2026</span>
               <span>|</span>
@@ -198,7 +186,7 @@ export default function PaintFinishesGuidePage() {
             <p>
               Eggshell has a subtle, soft sheen (like an actual eggshell). It&apos;s the most versatile finish because it balances aesthetics with practicality. It hides minor imperfections better than satin while still being washable.
             </p>
-            <p><strong>Why we recommend it:</strong> About 60% of our <Link href="/interior-painting-houston-tx" className="text-primary hover:underline">interior painting projects</Link> use eggshell on walls. It works in almost every room.</p>
+            <p><strong>Why we recommend it:</strong> Most of our <Link href="/interior-painting-houston-tx" className="text-primary hover:underline">interior painting projects</Link> use eggshell on walls. It works in almost every room.</p>
 
             <h2>Satin: Durable and Easy to Clean</h2>
             <p>
@@ -229,7 +217,7 @@ export default function PaintFinishesGuidePage() {
               Houston&apos;s 80%+ humidity levels mean moisture is always a factor. Using flat paint in a bathroom can lead to mildew growth. Using the wrong finish in high-traffic areas means more frequent repainting.
             </p>
             <p>
-              The right finish extends paint life by 2-3 years and keeps your home looking fresh longer. When you request a <Link href="/contact" className="text-primary hover:underline">free estimate</Link>, we&apos;ll recommend the best finish for each room based on your lifestyle and home.
+              The right finish extends paint life by 2-3 years and keeps your home looking fresh longer. When you request a <Link href="/contact" className="text-primary hover:underline">free estimate</Link>, we&apos;ll recommend the best finish for each room based on your lifestyle and home. Finish choice doesn&apos;t change the price much; see our <Link href="/interior-painting-cost-houston" className="text-primary hover:underline">Houston interior painting costs</Link> for 2026 ranges, or reach our <Link href="/painters-cypress-tx" className="text-primary hover:underline">painters in Cypress TX</Link> and Houston offices directly.
             </p>
           </div>
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/brick-painting-memorial",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Brick Painting Memorial TX — Houston Superior Painting",
     description: "Premium brick painting in Memorial, TX. Transform dated brick exteriors. Piney Point, Hunters Creek, Bunker Hill. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/brick-painting-memorial",

@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   title: "Best Exterior Paint for Houston Weather | Top Brands",
   description: "Discover the best exterior paint for Houston's heat, humidity, and storms. Expert recommendations including Sherwin-Williams Duration and Benjamin Moore Aura.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/best-exterior-paint-houston-weather" },
-  openGraph: { title: "Best Exterior Paint for Houston Weather | 2026 Guide", description: "Expert recommendations for the best exterior paint products that survive Houston's extreme climate.", url: "https://houstonsuperiorpainting.com/best-exterior-paint-houston-weather", type: "article" },
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }], title: "Best Exterior Paint for Houston Weather | 2026 Guide", description: "Expert recommendations for the best exterior paint products that survive Houston's extreme climate.", url: "https://houstonsuperiorpainting.com/best-exterior-paint-houston-weather", type: "article" },
   other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },
 }
 
 const faqs = [
-  { q: "What is the best exterior paint for Houston weather?", a: "Sherwin-Williams Duration is our #1 recommendation for Houston exteriors. Its 100% acrylic formula with PermaLast technology resists fading, cracking, and peeling in extreme heat and humidity. Benjamin Moore Aura Exterior is our premium alternative." },
-  { q: "How long does exterior paint last in Houston?", a: "Premium paint with proper preparation lasts 8-10 years in Houston. Builder-grade paint typically fails in 3-4 years. The difference is product quality, surface preparation, and application technique." },
+  { q: "What is the best exterior paint for Houston weather?", a: "Sherwin-Williams Duration is our top recommendation for Houston exteriors. Its 100% acrylic formula with PermaLast technology resists fading, cracking, and peeling in extreme heat and humidity. Benjamin Moore Aura Exterior is our premium alternative." },
+  { q: "How long does exterior paint last in Houston?", a: "Plan to repaint every 5-7 years in Houston with premium paint and proper preparation; shaded, protected elevations can last longer. Builder-grade paint typically fails in 3-4 years. The difference is product quality, surface preparation, and application technique." },
   { q: "Is flat or satin better for Houston exteriors?", a: "Satin or low-lustre finish is best for Houston exteriors. Satin hides minor imperfections while providing better moisture resistance and easier cleaning than flat. We recommend flat only for ceilings and soffits." },
   { q: "Should I use oil-based or latex exterior paint in Houston?", a: "100% acrylic latex is best for Houston. It expands and contracts with temperature changes (critical for 40-100+ degree swings), resists humidity-driven moisture, and has lower VOC. Oil-based paints become brittle in Houston heat." },
   { q: "What about elastomeric paint for Houston?", a: "Elastomeric coatings are excellent for Houston stucco and masonry. They bridge hairline cracks and provide a waterproof membrane. Sherwin-Williams Conflex and Loxon are our preferred elastomeric products." },
@@ -30,7 +30,7 @@ export default function BestExteriorPaintHoustonWeather() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "Best Exterior Paint for Houston Weather – 2026 Guide", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/best-exterior-paint-houston-weather" },
+        { "@type": "Article", "headline": "Best Exterior Paint for Houston Weather – 2026 Guide", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/best-exterior-paint-houston-weather" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Best Exterior Paint Houston", "item": "https://houstonsuperiorpainting.com/best-exterior-paint-houston-weather" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
@@ -40,7 +40,7 @@ export default function BestExteriorPaintHoustonWeather() {
         <div className="container mx-auto px-4 max-w-6xl">
           <nav aria-label="Breadcrumb" className="mb-6"><ol className="flex items-center gap-2 text-sm text-primary-foreground/70"><li><Link href="/" className="hover:text-primary-foreground">Home</Link></li><ChevronRight className="h-3 w-3" /><li className="text-primary-foreground font-medium">Best Exterior Paint Houston</li></ol></nav>
           <h1 className="hero-h1 text-3xl md:text-5xl font-serif font-bold text-primary-foreground mb-6 text-balance">Best Exterior Paint for Houston Weather – 2026 Guide</h1>
-          <p className="text-primary-foreground/90 text-lg md:text-xl max-w-3xl mb-8 leading-relaxed">Expert paint product recommendations from 500+ Houston exterior projects. Which paints survive the heat, humidity, and storms.</p>
+          <p className="text-primary-foreground/90 text-lg md:text-xl max-w-3xl mb-8 leading-relaxed">Paint product recommendations from 500+ Houston painting projects since 2019. Which paints survive the heat, humidity, and storms.</p>
         </div>
       </section>
 
@@ -54,7 +54,7 @@ export default function BestExteriorPaintHoustonWeather() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Why Houston Weather Demands Premium Exterior Paint</h2>
-          <p className="text-muted-foreground leading-relaxed mb-6">Houston is one of the hardest environments for exterior paint in the United States. The combination of extreme UV exposure (200+ sunny days/year), average humidity above 75%, temperatures swinging from 35 to 105 degrees, and severe storm seasons creates conditions that destroy cheap paint within 3-4 years. After 500+ exterior projects, we have learned exactly which products perform and which fail.</p>
+          <p className="text-muted-foreground leading-relaxed mb-6">Houston is one of the hardest environments for exterior paint in the United States. The combination of extreme UV exposure (200+ sunny days/year), average humidity above 75%, temperatures swinging from 35 to 105 degrees, and severe storm seasons creates conditions that destroy cheap paint within 3-4 years. After 500+ Houston projects since 2019, we have learned which products perform and which fail. Premium paint is why our <Link href="/exterior-painting-houston-tx" className="text-primary underline">exterior painting in Houston</Link> holds up to the full 5–7 year repaint cycle, and the <Link href="/exterior-house-painting-houston-cost-guide" className="text-primary underline">exterior house painting cost guide</Link> shows what the upgrade adds to a quote. The same product list goes on homes we paint from our <Link href="/painters-sugar-land-tx" className="text-primary underline">painters in Sugar Land TX</Link> and <Link href="/painters-magnolia-tx" className="text-primary underline">Magnolia TX</Link> offices.</p>
 
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Our Top Exterior Paint Recommendations</h2>
           <div className="pricing-snippet overflow-x-auto mb-8">
@@ -62,13 +62,13 @@ export default function BestExteriorPaintHoustonWeather() {
               <thead><tr className="bg-primary text-primary-foreground"><th className="text-left p-3 font-semibold">Product</th><th className="text-left p-3 font-semibold">Best For</th><th className="text-left p-3 font-semibold">Price/Gal</th><th className="text-left p-3 font-semibold">Durability</th></tr></thead>
               <tbody>
                 {[
-                  ["SW Duration", "Wood siding, HardiePlank", "$65–$75", "10+ years"],
-                  ["SW SuperPaint", "Budget-friendly quality", "$50–$60", "8–10 years"],
-                  ["SW Emerald", "Ultra-premium homes", "$80–$90", "10+ years"],
-                  ["BM Aura Exterior", "Premium color retention", "$75–$85", "10+ years"],
-                  ["BM Regal Select", "Good mid-range", "$55–$65", "8–10 years"],
-                  ["SW Conflex (Elastomeric)", "Stucco & masonry", "$70–$80", "10+ years"],
-                  ["SW Loxon", "Concrete & block", "$55–$65", "8–10 years"],
+                  ["SW Duration", "Wood siding, HardiePlank", "$65–$75", "5–7+ years"],
+                  ["SW SuperPaint", "Budget-friendly quality", "$50–$60", "4–6 years"],
+                  ["SW Emerald", "Ultra-premium homes", "$80–$90", "5–7+ years"],
+                  ["BM Aura Exterior", "Premium color retention", "$75–$85", "5–7+ years"],
+                  ["BM Regal Select", "Good mid-range", "$55–$65", "4–6 years"],
+                  ["SW Conflex (Elastomeric)", "Stucco & masonry", "$70–$80", "5–7+ years"],
+                  ["SW Loxon", "Concrete & block", "$55–$65", "5–7 years"],
                 ].map(([p, best, price, dur]) => (
                   <tr key={p} className="border-b border-border hover:bg-muted/50"><td className="p-3 font-medium">{p}</td><td className="p-3 text-muted-foreground">{best}</td><td className="p-3 text-muted-foreground">{price}</td><td className="p-3 text-muted-foreground">{dur}</td></tr>
                 ))}
@@ -115,7 +115,7 @@ export default function BestExteriorPaintHoustonWeather() {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary-foreground mb-4">Need Help Choosing the Right Paint?</h2>
-          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">We provide free color and product consultation with every exterior painting estimate. Let our 500+ project experience guide your decision.</p>
+          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">We provide free color and product consultation with every exterior painting estimate. Let experience from 500+ Houston projects guide your decision.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors"><Phone className="h-5 w-5" /> Call {BUSINESS.phone}</a>
             <a href={SMS_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors"><MessageSquare className="h-5 w-5" /> Text Us</a>

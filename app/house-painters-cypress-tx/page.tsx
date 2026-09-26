@@ -9,8 +9,8 @@ import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
 export const metadata: Metadata = {
   title: "House Painters Cypress TX | Local Painting Company Cypress",
   description: "Reliable house painters in Cypress TX for interior, exterior, drywall repair, cabinet painting, and more.",
-  alternates: { canonical: "https://houstonsuperiorpainting.com/house-painters-cypress-tx" },
-  openGraph: { title: "House Painters Cypress TX | Houston Superior Painting", description: "Reliable house painters in Cypress TX for interior, exterior, drywall repair, and more.", url: "https://houstonsuperiorpainting.com/house-painters-cypress-tx", type: "website" },
+  alternates: { canonical: "https://houstonsuperiorpainting.com/painters-cypress-tx" },
+  openGraph: { title: "House Painters Cypress TX | Houston Superior Painting", description: "Reliable house painters in Cypress TX for interior, exterior, drywall repair, and more.", url: "https://houstonsuperiorpainting.com/painters-cypress-tx", type: "website" },
   other: { "geo.region": "US-TX", "geo.placename": "Cypress", "geo.position": "29.9691;-95.6972", ICBM: "29.9691, -95.6972" },
 }
 
@@ -18,7 +18,7 @@ const faqs = [
   { q: "How much do house painters in Cypress TX charge?", a: "Interior painting in Cypress costs $2.50-$4.50 per sq ft. Exterior painting for a typical Cypress home ranges $3,500-$12,000 depending on size, stories, and siding type. Cabinet painting runs $3,000-$8,000 for a full kitchen. Free detailed estimates provided." },
   { q: "What Cypress neighborhoods do you serve?", a: "We serve all of Cypress including Bridgeland, Towne Lake, Cypress Creek Lakes, Fairfield, Lakewood Forest, Cypress Falls, Cypress Springs, Longwood, and all communities along 290 and the Grand Parkway. If you are in the Cypress-Tomball area, we can help." },
   { q: "How do you handle Cypress summers for exterior painting?", a: "We start exterior work at 6-7 AM to take advantage of cooler morning temperatures. We stop when surface temperatures exceed manufacturer guidelines. Our paint products (Sherwin-Williams Duration) are rated for extreme heat and we follow strict temperature protocols." },
-  { q: "Are you a local Cypress painting company?", a: "Yes. Houston Superior Painting is headquartered in Cypress, TX. Our founder JJ Semo lives in the Cypress area and personally oversees every project. We are not a franchise or lead-generation company. We are your neighbors." },
+  { q: "Are you a local Cypress painting company?", a: "Yes. Houston Superior Painting is headquartered in Cypress, TX. Owner Juan Serra runs the company from our Cypress headquarters and reviews the prep scope on every estimate. We are not a franchise or lead-generation company. We are your neighbors." },
   { q: "Do you offer free estimates in Cypress?", a: "Yes. Call or text (346) 594-5960 to schedule a free on-site estimate. We typically schedule within 1-2 business days and provide a detailed, itemized quote within 24 hours of the visit." },
   { q: "What services do you offer in Cypress?", a: "We offer interior painting, exterior painting, cabinet refinishing, drywall repair, pressure washing, limewash/German smear, garage floor epoxy, and load-bearing wall removal. From a single room to a complete home transformation, we handle it all." },
   { q: "Do you work with Cypress HOAs?", a: "Yes. We regularly work with HOAs in Bridgeland, Towne Lake, Cypress Creek Lakes, and other Cypress master-planned communities. We can help with color approval submissions and ensure all work meets community standards." },
@@ -30,8 +30,8 @@ export default function HousePaintersCypressTX() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "House Painters Cypress TX – Your Local Residential Painting Team", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/house-painters-cypress-tx" },
-        { "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "House Painters Cypress TX", "item": "https://houstonsuperiorpainting.com/house-painters-cypress-tx" } ] },
+        { "@type": "Article", "headline": "House Painters Cypress TX – Your Local Residential Painting Team", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/painters-cypress-tx" },
+        { "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "House Painters Cypress TX", "item": "https://houstonsuperiorpainting.com/painters-cypress-tx" } ] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
       ] }) }} />
@@ -64,7 +64,7 @@ export default function HousePaintersCypressTX() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Your Neighbors in Cypress</h2>
-          <p className="text-muted-foreground leading-relaxed mb-6">Houston Superior Painting is not just a company that serves Cypress. We are based here. Founded in 2019 by JJ Semo, our office is located in Cypress and our crews live in the communities we paint. We understand the architectural styles, HOA requirements, and climate challenges specific to Northwest Houston.</p>
+          <p className="text-muted-foreground leading-relaxed mb-6">Houston Superior Painting is not just a company that serves Cypress. We are based here. Founded in 2019 by Juan Serra, our office is located in Cypress and our crews live in the communities we paint. We understand the architectural styles, HOA requirements, and climate challenges specific to Northwest Houston.</p>
           <p className="text-muted-foreground leading-relaxed mb-8">Whether your Bridgeland home needs a full exterior repaint to withstand another Houston summer, or your Towne Lake kitchen is due for a cabinet transformation, we are 15 minutes away and ready to help.</p>
 
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Services We Offer in Cypress</h2>
@@ -75,7 +75,7 @@ export default function HousePaintersCypressTX() {
               { name: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx", desc: "Kitchen and bathroom cabinets with HVLP spray." },
               { name: "Drywall Repair", href: "/drywall-repair-houston-tx", desc: "Cracks, holes, water damage, and texture matching." },
               { name: "Pressure Washing", href: "/pressure-washing-houston-tx", desc: "Driveways, siding, fences, and decks." },
-              { name: "Limewash & German Smear", href: "/limewash-houston-tx", desc: "European-style brick finishes." },
+              { name: "Limewash & German Smear", href: "/limewash-brick-painting-houston-tx", desc: "European-style brick finishes." },
               { name: "Garage Floor Epoxy", href: "https://houstonsuperiorepoxy.com/", desc: "Durable epoxy and polyaspartic coatings." },
               { name: "Load-Bearing Wall Removal", href: "/load-bearing-wall-removal-houston-tx", desc: "Open concept conversions." },
             ].map(s => (

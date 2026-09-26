@@ -5,6 +5,16 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+
+// Breadcrumb parent for each service family. Several `${slug}-houston-tx`
+// URLs are 301 sources (see next.config.mjs), so link straight to the hub.
+const SERVICE_HUB: Record<string, string> = {
+  "brick-painting": "/limewash-brick-painting-houston-tx",
+  "limewash-decorative-finishes": "/limewash-brick-painting-houston-tx",
+  "luxury-exterior-painting": "/luxury-house-painters-houston",
+  "luxury-house-painters": "/luxury-house-painters-houston",
+  "luxury-interior-painting": "/luxury-house-painters-houston",
+}
 import { Phone, MessageSquare, CheckCircle, Shield, Award, Clock, Star, Users } from "lucide-react"
 
 interface FAQ {
@@ -163,7 +173,7 @@ export function GeoServicePageTemplate({
               <nav className="mb-6 text-sm text-primary-foreground/70">
                 <Link href="/" className="hover:text-primary-foreground">Home</Link>
                 <span className="mx-2">/</span>
-                <Link href={`/${serviceSlug}-houston-tx`} className="hover:text-primary-foreground">{service}</Link>
+                <Link href={SERVICE_HUB[serviceSlug] ?? `/${serviceSlug}-houston-tx`} className="hover:text-primary-foreground">{service}</Link>
                 <span className="mx-2">/</span>
                 <span>{zone}</span>
               </nav>

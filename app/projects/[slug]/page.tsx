@@ -8,8 +8,34 @@ import { Button } from "@/components/ui/button"
 import { BeforeAfter } from "@/components/luxury/before-after"
 import { Reveal } from "@/components/luxury/reveal"
 import { PROJECTS, getProject, getAllProjectSlugs } from "@/lib/projects"
-import { BUSINESS, PHONE_HREF } from "@/lib/business"
-import { ArrowRight, ArrowLeft, Phone, CheckCircle, Quote } from "lucide-react"
+import { BUSINESS, PHONE_HREF, SERVICE_AREAS } from "@/lib/business"
+import { ORG_ID, PUBLISHER_REF } from "@/components/structured-data"
+import { ArrowLeft, Phone, CheckCircle } from "lucide-react"
+
+const ESTIMATE_PATH = "/painting-estimate-houston"
+
+/**
+ * City page for each project's neighborhood (matched on the text before the
+ * comma in `neighborhood`). West University has no page of its own, so it
+ * points to the Houston office page.
+ */
+const NEIGHBORHOOD_CITY_PAGE: Record<string, string> = {
+  Memorial: "painters-memorial-tx",
+  "River Oaks": "painters-river-oaks-tx",
+  "West University": "painters-houston-tx",
+  Bellaire: "painters-bellaire-tx",
+  "The Heights": "painters-the-heights-tx",
+  Heights: "painters-the-heights-tx",
+  Cypress: "painters-cypress-tx",
+}
+
+function cityPageFor(neighborhood: string): { name: string; slug: string } | undefined {
+  const key = neighborhood.split(",")[0].trim()
+  const slug = NEIGHBORHOOD_CITY_PAGE[key]
+  if (!slug) return undefined
+  const area = SERVICE_AREAS.find((a) => a.slug === slug)
+  return area ? { name: area.name, slug } : undefined
+}
 
 export function generateStaticParams() {
   return getAllProjectSlugs().map((slug) => ({ slug }))
@@ -58,6 +84,7 @@ export default async function ProjectPage({
 
   const url = `https://houstonsuperiorpainting.com/projects/${project.slug}`
   const related = PROJECTS.filter((p) => p.slug !== project.slug).slice(0, 3)
+  const cityPage = cityPageFor(project.neighborhood)
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -66,22 +93,14 @@ export default async function ProjectPage({
     headline: project.title,
     description: project.metaDescription,
     image: [`https://houstonsuperiorpainting.com${project.afterImage}`],
-    author: {
-      "@type": "Organization",
-      name: BUSINESS.name,
-      url: BUSINESS.url,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: BUSINESS.name,
-      logo: { "@type": "ImageObject", url: BUSINESS.logo },
-    },
+    author: { "@type": "Organization", "@id": ORG_ID, name: BUSINESS.name },
+    publisher: PUBLISHER_REF,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     about: {
       "@type": "Service",
       name: project.service,
       areaServed: project.neighborhood,
-      provider: { "@type": "LocalBusiness", name: BUSINESS.name },
+      provider: { "@type": "Organization", "@id": ORG_ID },
     },
   }
 
@@ -227,20 +246,7 @@ export default async function ProjectPage({
           </div>
         </section>
 
-        {/* Testimonial */}
-        {project.testimonial && (
-          <section className="bg-background py-16 sm:py-20">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <Quote className="h-10 w-10 text-gold mx-auto mb-6" />
-              <blockquote className="font-cormorant text-2xl sm:text-3xl text-foreground leading-relaxed text-balance">
-                &ldquo;{project.testimonial.quote}&rdquo;
-              </blockquote>
-              <p className="font-manrope text-sm font-semibold uppercase tracking-[0.18em] text-gold-deep mt-6">
-                {project.testimonial.name}
-              </p>
-            </div>
-          </section>
-        )}
+        {/* Testimonials hidden until they can be matched to real Google reviews (see docs/aeo-seo-plan-2026-09.md). TODO(juan) */}
 
         {/* Service link + CTA */}
         <section className="bg-midnight py-20">
@@ -249,14 +255,39 @@ export default async function ProjectPage({
               Want results like this?
             </h2>
             <p className="font-cormorant text-xl text-soft-white/80 mb-8 leading-relaxed">
-              Explore our{" "}
+              See our{" "}
               <Link
                 href={`/${project.serviceSlug}`}
                 className="text-gold underline underline-offset-4 hover:text-soft-white transition-colors"
               >
-                {project.service.toLowerCase()} service
+                {project.service.toLowerCase()} in Houston
+              </Link>
+              {cityPage && (
+                <>
+                  , our{" "}
+                  <Link
+                    href={`/${cityPage.slug}`}
+                    className="text-gold underline underline-offset-4 hover:text-soft-white transition-colors"
+                  >
+                    painters in {cityPage.name}
+                  </Link>
+                </>
+              )}
+              , and more{" "}
+              <Link
+                href="/projects"
+                className="text-gold underline underline-offset-4 hover:text-soft-white transition-colors"
+              >
+                Houston painting projects
+              </Link>
+              , or{" "}
+              <Link
+                href={ESTIMATE_PATH}
+                className="text-gold underline underline-offset-4 hover:text-soft-white transition-colors"
+              >
+                request a painting estimate
               </Link>{" "}
-              or get a free, detailed estimate for your home.
+              for your home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -264,7 +295,7 @@ export default async function ProjectPage({
                 className="bg-accent hover:bg-accent/90 text-accent-foreground"
                 asChild
               >
-                <Link href="/contact">Get Your Free Estimate</Link>
+                <Link href={ESTIMATE_PATH}>Get a Painting Estimate</Link>
               </Button>
               <Button
                 size="lg"

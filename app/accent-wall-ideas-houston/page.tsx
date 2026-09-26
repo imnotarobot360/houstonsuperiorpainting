@@ -47,8 +47,8 @@ export default function AccentWallIdeasHouston() {
               {
                 "@type": "Article",
                 "headline": "Accent Wall Ideas Houston \u2013 Bold & Beautiful Designs",
-                "author": { "@type": "Person", "name": "JJ Semo" },
-                "publisher": { "@id": "https://houstonsuperiorpainting.com/#business" },
+                "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" },
+                "publisher": { "@id": "https://houstonsuperiorpainting.com/#organization" },
                 "datePublished": "2026-05-16",
                 "dateModified": "2026-05-16",
                 "image": "/images/og-interior-painting.jpg",
@@ -196,7 +196,7 @@ export default function AccentWallIdeasHouston() {
               { label: "Interior Painting Houston", href: "/interior-painting-houston-tx" },
               { label: "Best Paint Colors Houston", href: "/best-paint-colors-houston-homes" },
               { label: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx" },
-              { label: "Limewash & German Smear", href: "/limewash-german-smear-houston-tx" },
+              { label: "Limewash & German Smear", href: "/limewash-brick-painting-houston-tx" },
               { label: "Drywall Repair", href: "/drywall-repair-houston-tx" },
               { label: "Free Estimate", href: "/contact" },
             ].map((link) => (

@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Garage Floor Epoxy Houston TX — Houston Superior Painting",
   description: "Professional garage floor epoxy in Houston TX. Flake, metallic, solid color. Diamond-ground prep. 15-year warranty. $2,500-$8,500. Free estimates.",
   alternates: {
-    canonical: "https://houstonsuperiorpainting.com/garage-epoxy-houston-tx",
+    canonical: "https://houstonsuperiorepoxy.com/",
   },
   openGraph: {
     title: "Garage Floor Epoxy Houston TX — Houston Superior Painting",
     description: "Professional garage floor epoxy in Houston TX. Flake, metallic, solid color. Diamond-ground prep. 15-year warranty.",
-    url: "https://houstonsuperiorpainting.com/garage-epoxy-houston-tx",
+    url: "https://houstonsuperiorepoxy.com/",
     siteName: "Houston Superior Painting",
     type: "website",
     images: [{
@@ -37,30 +37,12 @@ const SERVICE_JSONLD = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id":
-    "https://houstonsuperiorpainting.com/garage-epoxy-houston-tx#service",
+    "https://houstonsuperiorepoxy.com/#service",
   name: "Garage Floor Epoxy & Polyaspartic Coatings in Houston, TX",
   description:
     "Professional garage floor epoxy, polyaspartic, and concrete coating installation in Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands TX. Diamond grind prep, flake systems, metallic finishes, solid color. Built for Houston heat and humidity. 15-year warranty.",
   serviceType: "Garage Floor Coating",
-  provider: {
-    "@type": "LocalBusiness",
-    "@id": "https://houstonsuperiorpainting.com/#business",
-    name: "Houston Superior Painting",
-    telephone: "+1-346-594-5960",
-    email: "info@houstonsuperiorpainting.com",
-    url: "https://houstonsuperiorpainting.com",
-    image: "https://houstonsuperiorpainting.com/images/og-cover.jpg",
-    priceRange: "$$$",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "14150 Huffmeister Rd, Suite 410",
-      addressLocality: "Cypress",
-      addressRegion: "TX",
-      postalCode: "77429",
-      addressCountry: "US",
-    },
-    geo: { "@type": "GeoCoordinates", latitude: 29.9012, longitude: -95.6293 }
-  },
+  provider: { "@type": "Organization", "@id": "https://houstonsuperiorpainting.com/#organization" },
   areaServed: [
     { "@type": "City", name: "Houston" },
     { "@type": "City", name: "Katy" },
@@ -185,15 +167,15 @@ const BREADCRUMB_JSONLD = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://houstonsuperiorpainting.com/" },
     { "@type": "ListItem", position: 2, name: "Services", item: "https://houstonsuperiorpainting.com/#services" },
-    { "@type": "ListItem", position: 3, name: "Garage Epoxy Houston TX", item: "https://houstonsuperiorpainting.com/garage-epoxy-houston-tx" },
+    { "@type": "ListItem", position: 3, name: "Garage Epoxy Houston TX", item: "https://houstonsuperiorepoxy.com/" },
   ],
 };
 
 const SPEAKABLE_JSONLD = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://houstonsuperiorpainting.com/garage-epoxy-houston-tx#webpage",
-  url: "https://houstonsuperiorpainting.com/garage-epoxy-houston-tx",
+  "@id": "https://houstonsuperiorepoxy.com/#webpage",
+  url: "https://houstonsuperiorepoxy.com/",
   name: "Garage Floor Epoxy Houston TX | Houston Superior Painting",
   speakable: { "@type": "SpeakableSpecification", cssSelector: [".hero-h1", ".quick-answer", ".pricing-snippet"] },
   inLanguage: "en-US",
@@ -575,7 +557,7 @@ export default function GarageEpoxyHoustonPage() {
           </div>
         </section>
       </main>
-      <RelatedLinks exclude="/garage-epoxy-houston-tx" />
+      <RelatedLinks exclude="https://houstonsuperiorepoxy.com/" />
     </>
   );
 }

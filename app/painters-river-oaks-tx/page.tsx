@@ -6,13 +6,13 @@ import { generateLocationBusinessSchema } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   title: "House Painters River Oaks Houston TX | Interior & Exterior",
-  description: "Premier house painters serving River Oaks, Houston TX. Expert interior, exterior, and cabinet work for distinguished homes. Free estimates, 5-year warranty.",
+  description: "House painters serving River Oaks, Houston TX. Expert interior, exterior, and cabinet work for distinguished homes. Free estimates, 5-year warranty.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-river-oaks-tx',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in River Oaks TX | Houston Superior Painting",
-    description: "Premium painting services for River Oaks homeowners. Luxury home specialists with 5-star reviews.",
+    description: "Premium painting services for River Oaks homeowners. Luxury home specialists, insured crews, 5-year warranty.",
     type: "website",
   },
 }
@@ -35,7 +35,7 @@ export default function PaintersRiverOaksTX() {
         <LocationPageTemplate
           city="River Oaks"
           state="TX"
-          heroHeadline="Premier House Painters for River Oaks, Houston"
+          heroHeadline="House Painters for River Oaks, Houston"
           heroDescription="Houston's most distinguished neighborhood deserves exceptional painting craftsmanship. We bring the skill, discretion, and attention to detail that River Oaks' finest homes require."
           aboutCity={`River Oaks is Houston's most prestigious residential enclave, home to architectural masterpieces, historic estates, and some of the most valuable real estate in Texas. Painting these exceptional properties requires expertise, meticulous attention to detail, and a deep understanding of luxury home care.
 
@@ -116,7 +116,7 @@ We understand the unique expectations of River Oaks residents: discretion, relia
           faqs={[
             {
               question: "How much does it cost to paint a home in River Oaks?",
-              answer: "River Oaks homes vary significantly in size and architectural complexity. Interior painting typically costs $3.50-6.00 per square foot. Exterior painting for River Oaks estates ranges from $15,000-50,000+. We provide detailed estimates specific to your property."
+              answer: "River Oaks homes vary significantly in size and architectural complexity. Interior painting in River Oaks typically costs $2.50–$4.50 per square foot; homes over 4,000 sq ft generally run $7,000–$14,000 inside. A two-story exterior over 4,000 sq ft typically runs $8,500–$14,000, and larger estates with extensive millwork are quoted after a walkthrough. We provide free detailed estimates."
             },
             {
               question: "Do you have experience with River Oaks' historic homes?",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
@@ -8,13 +9,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/fence-deck-painting-houston-tx",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Fence & Deck Painting Houston TX: What to Know",
     description:
       "Paint vs. stain, pressure-treated wood timing, prep requirements, and how long fence and deck coatings last in Houston's climate.",
     type: "article",
     publishedTime: "2026-06-15",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -66,7 +67,7 @@ export default function FenceDeckPaintingHoustonPage() {
     <BlogPostTemplate
       title="Fence and Deck Painting in Houston TX: What Homeowners Should Know"
       excerpt="Houston's heat, humidity, and rainfall age wood fences and decks faster than most homeowners expect. Here's how to choose between paint and stain, prep correctly, and keep your coating lasting in our climate."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Professional Painting Contractor"
       publishDate="June 15, 2026"
       readTime="10 min read"
@@ -191,7 +192,7 @@ export default function FenceDeckPaintingHoustonPage() {
 
       <h2>Prep Is Everything — Especially in Houston</h2>
       <p>
-        As with exterior house painting, prep determines how long a fence or deck coating lasts in our climate. The steps
+        As with <Link href="/exterior-painting-houston-tx">exterior house painting in Houston</Link>, prep determines how long a fence or deck coating lasts in our climate. The steps
         that cannot be skipped:
       </p>
       <ol>
@@ -255,7 +256,8 @@ export default function FenceDeckPaintingHoustonPage() {
       <h2>Deck Staining Cost in Houston</h2>
       <p>
         Deck staining in Houston typically runs $1–$3 per square foot for application, plus additional cost for prep if the
-        deck needs cleaning, sanding, or brightening before coating.
+        deck needs cleaning, sanding, or brightening before coating. If you&apos;re painting the house at the same time,
+        our <Link href="/exterior-house-painting-houston-cost-guide">exterior painting cost guide</Link> covers the rest of the budget.
       </p>
       <div className="overflow-x-auto my-6">
         <table className="w-full border-collapse text-sm">
@@ -306,7 +308,7 @@ export default function FenceDeckPaintingHoustonPage() {
         At Houston Superior Painting, we apply the same preparation standards to fences and decks that we bring to every
         exterior project. In Houston&apos;s climate, prep is what determines how long the coating lasts — and we&apos;re not
         in the business of doing work twice. Request your free estimate and we&apos;ll recommend the right paint or stain
-        system for your fence and deck.
+        system for your fence and deck, from inside the Beltway out to our <Link href="/painters-magnolia-tx">painters in Magnolia TX</Link>.
       </p>
     </BlogPostTemplate>
   )

@@ -31,12 +31,27 @@ export const BUSINESS = {
   },
 
   // ─── Owner (for Person schema + EEAT) ──────────────────
+  // Juan Serra is the real owner. The site previously named a "JJ Semo" persona
+  // with an AI-generated headshot; both were removed. Add a real photo at
+  // /public/images/juan-serra.jpg and set `image` to its URL — until then no
+  // image is emitted, because a stock or generated face attached to a real
+  // person's name is worse for trust than no photo at all.
   founder: {
-    name: "JJ Semo",
-    jobTitle: "Founder & Lead Painter",
-    image: "https://houstonsuperiorpainting.com/images/jj-semo.jpg",
-    bio: "JJ Semo founded Houston Superior Painting in 2019 in Cypress, TX. He personally oversees quality on every project and leads the company's prep-first philosophy.",
+    name: "Juan Serra",
+    givenName: "Juan",
+    familyName: "Serra",
+    jobTitle: "Owner",
+    image: null as string | null,
+    bio: "Juan Serra founded Houston Superior Painting in 2019. He runs the company from its Cypress headquarters, oversees crews across five Greater Houston offices, and personally reviews the prep scope on every estimate.",
+    url: "https://houstonsuperiorpainting.com/about",
+    id: "https://houstonsuperiorpainting.com/about#juan-serra",
   },
+
+  // The only official website. A third party operates a look-alike domain
+  // (houstonsuperiorpaintingmagnoliatx.com) that is NOT affiliated. The
+  // disclaimer renders on /about and /painters-magnolia-tx only.
+  officialSiteDisclaimer:
+    "houstonsuperiorpainting.com is the only official website of Houston Superior Painting. houstonsuperiorpaintingmagnoliatx.com is not owned or operated by us.",
 
   // ─── Primary Address (HQ — used in LocalBusiness root) ─
   // These coordinates are THE canonical HQ geo. Never hardcode lat/long for the
@@ -54,9 +69,18 @@ export const BUSINESS = {
   },
 
   // ─── All Office Locations (for multi-location schema) ──
+  // Each of these five has its own Google Business Profile. Only these five
+  // city pages emit LocalBusiness schema (see officeLocalBusinessSchema in
+  // components/structured-data.tsx). Address strings must match the GBP
+  // character for character.
   locations: [
     {
       slug: "houston-bissonnet",
+      /** The city page this office's Google Business Profile points to. */
+      pageSlug: "painters-houston-tx",
+      // TODO(gbp): replace with this office's GBP "Share → Copy link" URL.
+      // Until then a Maps search for the exact address is used for hasMap.
+      mapsUrl: null as string | null,
       label: "Houston Office",
       street: "2617 Bissonnet St #443",
       city: "Houston",
@@ -69,6 +93,11 @@ export const BUSINESS = {
     },
     {
       slug: "katy-fm1463",
+      /** The city page this office's Google Business Profile points to. */
+      pageSlug: "painters-katy-tx",
+      // TODO(gbp): replace with this office's GBP "Share → Copy link" URL.
+      // Until then a Maps search for the exact address is used for hasMap.
+      mapsUrl: null as string | null,
       label: "Katy Office",
       street: "3230 FM 1463 APT 3201",
       city: "Katy",
@@ -81,6 +110,11 @@ export const BUSINESS = {
     },
     {
       slug: "cypress-huffmeister",
+      /** The city page this office's Google Business Profile points to. */
+      pageSlug: "painters-cypress-tx",
+      // TODO(gbp): replace with this office's GBP "Share → Copy link" URL.
+      // Until then a Maps search for the exact address is used for hasMap.
+      mapsUrl: null as string | null,
       label: "Cypress Office (Headquarters)",
       street: "14150 Huffmeister Rd, Suite 410",
       city: "Cypress",
@@ -95,6 +129,11 @@ export const BUSINESS = {
     },
     {
       slug: "sugar-land-university",
+      /** The city page this office's Google Business Profile points to. */
+      pageSlug: "painters-sugar-land-tx",
+      // TODO(gbp): replace with this office's GBP "Share → Copy link" URL.
+      // Until then a Maps search for the exact address is used for hasMap.
+      mapsUrl: null as string | null,
       label: "Sugar Land Office",
       street: "18722 University Blvd, Suite 254, 2nd Floor",
       city: "Sugar Land",
@@ -112,6 +151,11 @@ export const BUSINESS = {
     },
     {
       slug: "magnolia-cottontop",
+      /** The city page this office's Google Business Profile points to. */
+      pageSlug: "painters-magnolia-tx",
+      // TODO(gbp): replace with this office's GBP "Share → Copy link" URL.
+      // Until then a Maps search for the exact address is used for hasMap.
+      mapsUrl: null as string | null,
       label: "Magnolia Office",
       street: "14512 Cottontop Mtn",
       city: "Magnolia",
@@ -286,3 +330,52 @@ export const SERVICE_AREAS = [
 export type ServiceArea = (typeof SERVICE_AREAS)[number];
 
 export type Business = typeof BUSINESS;
+
+// ─── Offices ────────────────────────────────────────────────
+export type Office = (typeof BUSINESS.locations)[number]
+
+/** The office whose GBP lands on this city page, or undefined for the 18 no-office city pages. */
+export function officeForPage(pageSlug: string): Office | undefined {
+  return BUSINESS.locations.find((l) => l.pageSlug === pageSlug)
+}
+
+export function officeAddressLine(o: Office): string {
+  return `${o.street}, ${o.city}, ${o.state} ${o.zip}`
+}
+
+/** GBP link when known, otherwise a Maps search for the exact address. */
+export function officeMapsUrl(o: Office): string {
+  return o.mapsUrl ?? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${BUSINESS.name}, ${officeAddressLine(o)}`)}`
+}
+
+/** Office city pages, HQ first — used for the footer Locations list, /contact and llms.txt. */
+export const OFFICE_PAGES = [
+  { name: "Cypress (HQ)", slug: "painters-cypress-tx" },
+  { name: "Houston", slug: "painters-houston-tx" },
+  { name: "Katy", slug: "painters-katy-tx" },
+  { name: "Sugar Land", slug: "painters-sugar-land-tx" },
+  { name: "Magnolia", slug: "painters-magnolia-tx" },
+] as const
+
+/** The six core services every money page links to (skeleton "6 service pages"). */
+export const CORE_SERVICES = [
+  { name: "Interior Painting", slug: "interior-painting-houston-tx" },
+  { name: "Exterior Painting", slug: "exterior-painting-houston-tx" },
+  { name: "Cabinet Refinishing", slug: "cabinet-refinishing-houston-tx" },
+  { name: "Drywall Repair", slug: "drywall-repair-houston-tx" },
+  { name: "Limewash & Brick Painting", slug: "limewash-brick-painting-houston-tx" },
+  { name: "Soft Washing", slug: "soft-washing-houston-tx" },
+] as const
+
+/** One set of 2026 Houston price ranges. Every page reads from here so no two pages disagree. Review quarterly. */
+export const PRICES_2026 = {
+  interiorPerSqFt: "$2.50–$4.50",
+  exteriorPerSqFt: "$1.50–$4",
+  singleRoom: "$300–$800",
+  fullInterior2500: "$4,000–$8,000",
+  exterior2500TwoStory: "$5,500–$9,000",
+  cabinetsPerKitchen: "$3,000–$6,500",
+  cabinetsAverage: "$3,500–$5,500",
+  trimWholeHome: "$1,200–$3,000",
+  exteriorPerHome: "$3,500–$12,000",
+} as const

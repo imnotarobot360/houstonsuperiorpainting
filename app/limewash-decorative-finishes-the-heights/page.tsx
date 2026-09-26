@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/limewash-decorative-finishes-the-heights',
   },
-  title: "Limewash & Decorative Finishes The Heights",
+  title: "Limewash & Decorative Finishes The Heights | Free Estimates",
   description: "Premium limewash and decorative finishes in The Heights, Houston. European-style elegance. Free quote — call (346) 594-5960.",
 }
 

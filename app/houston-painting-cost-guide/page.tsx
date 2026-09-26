@@ -1,527 +1,261 @@
 import type { Metadata } from "next"
-import { TrustBar } from "@/components/trust-bar"
+import Link from "next/link"
+import type { ReactNode } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { SchedulerSection } from "@/components/scheduler-section"
-import { EstimateCalculator } from "@/components/estimate-calculator"
-import { Check, Phone, Calculator, Home, Building2, Paintbrush, DollarSign, Clock, Shield } from "lucide-react"
+import FAQ from "@/components/faq"
+import { JsonLd } from "@/components/structured-data"
+import {
+  PageHero,
+  QuickAnswer,
+  Section,
+  Bullets,
+  PriceTable,
+  CtaBlock,
+  AuthorByline,
+  breadcrumbNode,
+  articleNode,
+  ESTIMATE_PATH,
+} from "@/components/aeo/blocks"
+import { PRICES_2026 } from "@/lib/business"
+
+const PAGE_PATH = "/houston-painting-cost-guide"
+const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
+const TITLE = "Houston Painting Cost Guide 2026 | Interior, Exterior & Cabinets"
+const DESCRIPTION =
+  "What painting costs in Houston in 2026: $2.50–$4.50/sq ft interior, $1.50–$4/sq ft exterior, $3,000–$6,500 for cabinets. Real ranges from 500+ Houston jobs."
+const H1 = "How Much Does Painting Cost in Houston? (2026 Guide)"
 
 export const metadata: Metadata = {
-  title: "Houston Painting Cost Guide 2026 — Prices & Estimates",
-  description: "Complete Houston house painting cost guide. Interior painting $2.50-$4.50/sq ft, exterior $4,000-$15,000. Get accurate estimates for your project. Free quotes.",
-  alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/houston-painting-cost-guide',
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: "Houston Painting Cost Guide 2026 — Prices & Estimates",
-    description: "Complete Houston house painting cost guide. Interior painting $2.50-$4.50/sq ft, exterior $4,000-$15,000. Get accurate estimates.",
-    url: "https://houstonsuperiorpainting.com/houston-painting-cost-guide",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
     siteName: "Houston Superior Painting",
     type: "article",
-    images: [{
-      url: "https://houstonsuperiorpainting.com/images/og/og-interior-painting.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Houston painting cost guide — interior, exterior, and cabinet pricing",
-    }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Houston Painting Cost Guide 2026 — Prices & Estimates",
-    description: "Complete Houston house painting cost guide with accurate 2026 pricing for interior, exterior, and cabinet projects.",
-    images: ["https://houstonsuperiorpainting.com/images/og/og-interior-painting.jpg"],
-  },
-  other: {
-    'geo.region': 'US-TX',
-    'geo.placename': 'Houston',
-    'geo.position': '29.7604;-95.3698',
-    'ICBM': '29.7604, -95.3698',
+    images: [
+      {
+        url: "https://houstonsuperiorpainting.com/images/og/og-interior-painting.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Houston painting cost guide — interior, exterior, and cabinet pricing",
+      },
+    ],
   },
 }
 
-const costGuideSchema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Houston Painting Cost Guide 2026",
-  "description": "Complete guide to house painting costs in Houston, Texas. Interior, exterior, cabinet refinishing prices explained.",
-  "author": {
-    "@type": "Organization",
-    "name": "Houston Superior Painting"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Houston Superior Painting",
-    "url": "https://houstonsuperiorpainting.com"
-  },
-  "datePublished": "2024-01-15",
-  "dateModified": "2026-01-05"
-}
+const linkCls = "text-primary font-medium underline"
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does it cost to paint the interior of a house in Houston?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Interior painting in Houston costs $2.50-$4.50 per square foot. A 2,500 sq ft home typically costs $6,250-$11,250 for complete interior painting including walls, ceilings, and trim."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does exterior house painting cost in Houston?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Exterior house painting in Houston ranges from $4,000-$15,000 depending on size, siding type, stories, and condition. A typical 2,500 sq ft single-story home costs $5,500-$8,500."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does cabinet refinishing cost in Houston?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Cabinet refinishing in Houston costs $3,500-$8,500 for an average kitchen with 20-30 doors. This includes professional spray finish with premium coatings."
-      }
-    }
-  ]
-}
+// Visible answers may carry links; `text` is the exact plain-text rendering used
+// for the FAQPage schema so the two match word for word.
+const FAQS: { q: string; text: string; a?: ReactNode }[] = [
+  {
+    q: "How much does it cost to paint a 2,500 sq ft house in Houston?",
+    text: "$4,000–$8,000 for the interior, $5,500–$9,000 for a two-story exterior, in 2026.",
+  },
+  {
+    q: "Do painters charge per square foot or per hour in Houston?",
+    text: "Most quote per project based on square footage and condition. Expect $2.50–$4.50/sq ft interior. Hourly rates for touch-ups run $45–$75.",
+  },
+  {
+    q: "How much does it cost to paint one room?",
+    text: "$300–$800 for a 12×14 bedroom including ceiling and trim.",
+  },
+  {
+    q: "Does the price include paint?",
+    text: "Yes, ours does. Ask any painter whether product is included; some quote labor only.",
+  },
+  {
+    q: "Why do Houston exteriors cost more than the national average?",
+    text: "More prep. Humidity, mildew, and UV degrade surfaces faster than in dry climates, so washing, scraping, and priming take longer.",
+  },
+  {
+    q: "Is a low quote a red flag?",
+    text: "Below $1.50/sq ft exterior usually means one coat, no primer, or no insurance.",
+  },
+  {
+    q: "How often should I repaint in Houston?",
+    text: "Exteriors every 5–7 years, interiors every 7–10 years. See How Often to Paint a House in Houston.",
+    a: (
+      <p>
+        Exteriors every 5–7 years, interiors every 7–10 years. See{" "}
+        <Link href="/how-often-paint-house-houston" className="text-emerald-700 underline">
+          How Often to Paint a House in Houston
+        </Link>
+        .
+      </p>
+    ),
+  },
+  {
+    q: "Do you offer financing?",
+    text: "Yes. See Painting Financing.",
+    a: (
+      <p>
+        Yes. See{" "}
+        <Link href="/painting-financing-houston" className="text-emerald-700 underline">
+          Painting Financing
+        </Link>
+        .
+      </p>
+    ),
+  },
+]
 
-export default function HoustonPaintingCostGuide() {
+export default function HoustonPaintingCostGuidePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(costGuideSchema) }}
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            articleNode({ path: PAGE_PATH, headline: H1, description: DESCRIPTION }),
+            breadcrumbNode([
+              { name: "Home", path: "/" },
+              { name: "Houston Painting Cost Guide", path: PAGE_PATH },
+            ]),
+          ],
+        }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <TrustBar />
+      {/* One FAQPage block, plain text identical to the visible answers below. */}
+      <FAQ items={FAQS.map((f) => ({ q: f.q, a: f.text }))} schemaOnly />
       <Header />
       <main>
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <Badge variant="secondary" className="mb-4">2026 Price Guide</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Houston Painting Cost Guide
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Complete pricing breakdown for interior, exterior, and cabinet painting in Greater Houston. 
-                Transparent costs with no hidden fees.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" asChild>
-                  <a href="/contact">Get Your Free Estimate</a>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <a href="tel:+13465945960" className="flex items-center gap-2">
-                    <Phone className="h-4 w-4" />
-                    (346) 594-5960
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PageHero h1={H1} eyebrow="2026 Houston pricing" />
 
-        {/* Quick Answer */}
-        <section className="py-8 bg-primary/5 border-y border-border">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-start gap-4">
-              <Calculator className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-              <div>
-                <p className="font-semibold text-foreground mb-2">Quick Answer:</p>
-                <p className="text-muted-foreground">
-                  Interior painting in Houston costs <strong>$2.50-$4.50 per square foot</strong>. 
-                  A typical 2,500 sq ft home costs <strong>$6,250-$11,250</strong>. 
-                  Exterior painting ranges <strong>$4,000-$15,000</strong> based on size and condition. 
-                  Cabinet refinishing runs <strong>$3,500-$8,500</strong> for an average kitchen.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <QuickAnswer>
+          Painting a house in Houston costs $2.50–$4.50 per square foot for interiors and $1.50–$4 per square foot for
+          exteriors in 2026. A 2,500 sq ft home runs $4,000–$8,000 inside and $5,500–$9,000 outside. Kitchen cabinets run
+          $3,000–$6,500. These ranges come from 500+ Houston Superior Painting jobs since 2019 and include labor, prep, and
+          premium paint. Call (346) 594-5960 for a fixed quote.
+        </QuickAnswer>
 
-        {/* Instant Estimate Calculator */}
-        <section id="calculator" className="py-16 md:py-20 scroll-mt-24">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
-                Price your project in 30 seconds
-              </h2>
-              <p className="mt-3 text-lg text-muted-foreground text-pretty">
-                Pick your project to see your ballpark range instantly — calculated from the same
-                2026 Houston rates published on this page.
-              </p>
-            </div>
-            <EstimateCalculator source="cost_guide_calculator" />
-          </div>
-        </section>
+        <Section title="Short answer">
+          <Bullets
+            items={[
+              <>
+                <Link href="/interior-painting-houston-tx">Interior</Link>: {PRICES_2026.interiorPerSqFt}/sq ft of floor
+                area, {PRICES_2026.singleRoom} per room
+              </>,
+              <>
+                <Link href="/exterior-painting-houston-tx">Exterior</Link>: {PRICES_2026.exteriorPerSqFt}/sq ft of floor
+                area, {PRICES_2026.exteriorPerHome} per home
+              </>,
+              <>
+                <Link href="/cabinet-refinishing-houston-tx">Cabinets</Link>: $100–$175 per door and drawer front,{" "}
+                {PRICES_2026.cabinetsPerKitchen} per kitchen
+              </>,
+            ]}
+          />
+        </Section>
 
-        {/* Interior Painting Costs */}
-        <section className="py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <Home className="h-6 w-6 text-blue-600" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold text-foreground">Interior Painting Costs</h2>
-                <p className="text-muted-foreground">Houston pricing for 2026</p>
-              </div>
-            </div>
+        <Section title="Interior painting cost in Houston">
+          <PriceTable
+            head={["Project", "Range", "Typical"]}
+            rows={[
+              ["Single room (12×14)", PRICES_2026.singleRoom, "$500"],
+              ["Accent wall", "$150–$400", "$250"],
+              ["Full interior, 1,500 sq ft", "$3,000–$5,500", "$4,000"],
+              ["Full interior, 2,500 sq ft", PRICES_2026.fullInterior2500, "$6,000"],
+              ["Full interior, 4,000+ sq ft", "$7,000–$14,000", "$10,000"],
+              ["Trim and baseboards, whole home", PRICES_2026.trimWholeHome, "$2,000"],
+              ["Ceilings, whole home", "$1,500–$3,500", "$2,500"],
+            ]}
+          />
+          <p>
+            Prices assume two coats of Sherwin-Williams or Benjamin Moore on walls in fair condition. Heavy patching (see{" "}
+            <Link href="/drywall-repair-houston-tx">drywall repair</Link>), wallpaper removal, or 12-ft ceilings add
+            15–30%. Full detail: <Link href="/interior-painting-cost-houston">Interior Painting Cost in Houston</Link>.
+          </p>
+        </Section>
 
-            <div className="grid lg:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Price Per Square Foot</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">Basic (walls only, 1 color)</span>
-                      <span className="font-semibold">$2.00 - $2.50/sq ft</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">Standard (walls, ceilings, trim)</span>
-                      <span className="font-semibold">$2.50 - $3.50/sq ft</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">Premium (multiple colors, detailed trim)</span>
-                      <span className="font-semibold">$3.50 - $4.50/sq ft</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3">
-                      <span className="text-muted-foreground">Luxury (specialty finishes)</span>
-                      <span className="font-semibold">$4.50 - $6.00+/sq ft</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+        <Section title="Exterior painting cost in Houston">
+          <PriceTable
+            head={["Home size", "1 story", "2 story"]}
+            rows={[
+              ["1,500 sq ft", "$2,500–$4,500", "$3,500–$6,000"],
+              ["2,000 sq ft", "$3,500–$5,500", "$4,500–$7,500"],
+              ["2,500 sq ft", "$4,000–$7,000", PRICES_2026.exterior2500TwoStory],
+              ["3,000 sq ft", "$5,000–$8,000", "$6,500–$10,500"],
+              ["4,000+ sq ft", "$6,500–$10,000", "$8,500–$14,000"],
+            ]}
+          />
+          <p>
+            Includes pressure wash, scrape, caulk, prime, and two coats. Wood rot repair runs $75–$150 per linear foot
+            extra. Stucco crack repair and elastomeric coating add $1–$2/sq ft. Full detail:{" "}
+            <Link href="/exterior-house-painting-houston-cost-guide">Exterior Painting Cost Guide</Link>.
+          </p>
+        </Section>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>By Home Size</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">1,500 sq ft home</span>
-                      <span className="font-semibold">$3,750 - $6,750</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">2,000 sq ft home</span>
-                      <span className="font-semibold">$5,000 - $9,000</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">2,500 sq ft home</span>
-                      <span className="font-semibold">$6,250 - $11,250</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">3,000 sq ft home</span>
-                      <span className="font-semibold">$7,500 - $13,500</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3">
-                      <span className="text-muted-foreground">4,000+ sq ft home</span>
-                      <span className="font-semibold">$10,000 - $18,000+</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+        <Section title="Cabinet painting cost in Houston">
+          <PriceTable
+            head={["Kitchen size", "Range"]}
+            rows={[
+              ["Galley, 10–15 doors", "$2,200–$3,500"],
+              ["Average, 15–25 doors", PRICES_2026.cabinetsAverage],
+              ["Large with island, 25–40 doors", "$6,000–$9,000+"],
+            ]}
+          />
+          <p>
+            Sprayed cabinet enamel, doors removed and finished flat. Full detail:{" "}
+            <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">Cost to Paint Kitchen Cabinets</Link>.
+          </p>
+        </Section>
 
-            <Card className="bg-muted/30">
-              <CardHeader>
-                <CardTitle>What Affects Interior Painting Cost?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {[
-                    "Ceiling height (standard 8-9' vs. 10'+)",
-                    "Wall condition (new drywall vs. repairs needed)",
-                    "Number of colors and accent walls",
-                    "Trim and door painting included",
-                    "Paint quality (good, better, best)",
-                    "Furniture moving and protection",
-                    "Ceiling texture type",
-                    "Closet and pantry interiors",
-                  ].map((factor, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-primary" />
-                      <span className="text-muted-foreground">{factor}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
+        <Section title="What moves the price in Houston">
+          <ol>
+            <li>
+              <strong>Surface condition.</strong> Peeling, chalking, and mildew mean more prep. Prep is 50–60% of labor on
+              Houston exteriors.
+            </li>
+            <li>
+              <strong>Siding type.</strong> Brick and stucco absorb more paint than Hardie. Wood siding needs the most
+              scraping.
+            </li>
+            <li>
+              <strong>Stories and access.</strong> Three-story homes and steep lots add 20–40% for lifts and ladders.
+            </li>
+            <li>
+              <strong>Paint grade.</strong> Sherwin-Williams Duration costs about $30/gal more than SuperPaint and lasts
+              3–5 years longer in Gulf Coast sun.
+            </li>
+            <li>
+              <strong>HOA requirements.</strong> Some Katy and Sugar Land HOAs require specific brands or sheens.
+            </li>
+          </ol>
+        </Section>
 
-        {/* Exterior Painting Costs */}
-        <section className="py-16 md:py-24 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                <Building2 className="h-6 w-6 text-green-600" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold text-foreground">Exterior Painting Costs</h2>
-                <p className="text-muted-foreground">Houston pricing for 2026</p>
-              </div>
-            </div>
+        <Section title="Is it cheaper to paint yourself?">
+          <p>
+            A DIY interior on 2,500 sq ft costs $800–$1,500 in materials and rentals and takes most homeowners two to three
+            weekends. The gap versus a professional is $2,500–$6,000, mostly labor. DIY exteriors in Houston usually fail
+            early because the surface wasn&apos;t washed and primed for humidity.
+          </p>
+          <p>
+            If you hire it out, read{" "}
+            <Link href="/questions-to-ask-before-hiring-painters">how to hire a painter in Houston</Link> before you compare
+            quotes.
+          </p>
+        </Section>
 
-            <div className="grid lg:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardHeader>
-                  <CardTitle>By Home Size (Single Story)</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">1,500 sq ft home</span>
-                      <span className="font-semibold">$3,500 - $5,500</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">2,000 sq ft home</span>
-                      <span className="font-semibold">$4,500 - $7,000</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">2,500 sq ft home</span>
-                      <span className="font-semibold">$5,500 - $8,500</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3">
-                      <span className="text-muted-foreground">3,000+ sq ft home</span>
-                      <span className="font-semibold">$6,500 - $10,000+</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+        <FAQ
+          items={FAQS.map((f) => ({ q: f.q, a: f.a ?? f.text }))}
+          injectSchema={false}
+          title="Frequently asked questions"
+          variant="compact"
+        />
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>Two-Story Premium</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">2,500 sq ft (2-story)</span>
-                      <span className="font-semibold">$7,000 - $10,500</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">3,000 sq ft (2-story)</span>
-                      <span className="font-semibold">$8,500 - $12,500</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">3,500 sq ft (2-story)</span>
-                      <span className="font-semibold">$10,000 - $14,000</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3">
-                      <span className="text-muted-foreground">4,000+ sq ft (2-story)</span>
-                      <span className="font-semibold">$12,000 - $18,000+</span>
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-4">
-                    Two-story homes cost 25-40% more due to scaffolding, ladders, and additional safety requirements.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+        <CtaBlock title="Get a fixed price">
+          Call (346) 594-5960 or{" "}
+          <Link href={ESTIMATE_PATH} className="underline">
+            request an estimate
+          </Link>
+          . Written quote in 24 hours, no upfront payment, 5-year warranty.
+        </CtaBlock>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>By Siding Type</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-semibold mb-2">Wood Siding</h4>
-                    <p className="text-2xl font-bold text-primary mb-2">$4.00 - $6.00/sq ft</p>
-                    <p className="text-sm text-muted-foreground">Requires more prep, priming. Common in Heights, Montrose.</p>
-                  </div>
-                  <div className="p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-semibold mb-2">Hardie Board / Fiber Cement</h4>
-                    <p className="text-2xl font-bold text-primary mb-2">$3.00 - $4.50/sq ft</p>
-                    <p className="text-sm text-muted-foreground">Standard in newer construction. Excellent paint adhesion.</p>
-                  </div>
-                  <div className="p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-semibold mb-2">Stucco / EIFS</h4>
-                    <p className="text-2xl font-bold text-primary mb-2">$3.50 - $5.00/sq ft</p>
-                    <p className="text-sm text-muted-foreground">Textured surface. May need crack repair. Specialty coatings.</p>
-                  </div>
-                  <div className="p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-semibold mb-2">Brick (Paint)</h4>
-                    <p className="text-2xl font-bold text-primary mb-2">$4.00 - $6.00/sq ft</p>
-                    <p className="text-sm text-muted-foreground">Full coverage paint. Permanent decision. Requires proper prep.</p>
-                  </div>
-                  <div className="p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-semibold mb-2">Brick (Limewash)</h4>
-                    <p className="text-2xl font-bold text-primary mb-2">$5.00 - $8.00/sq ft</p>
-                    <p className="text-sm text-muted-foreground">European finish. Breathable. Reversible. Premium option.</p>
-                  </div>
-                  <div className="p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-semibold mb-2">Aluminum/Vinyl Siding</h4>
-                    <p className="text-2xl font-bold text-primary mb-2">$2.50 - $4.00/sq ft</p>
-                    <p className="text-sm text-muted-foreground">Requires special prep and adhesion primers.</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Cabinet Refinishing Costs */}
-        <section className="py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
-                <Paintbrush className="h-6 w-6 text-amber-600" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold text-foreground">Cabinet Refinishing Costs</h2>
-                <p className="text-muted-foreground">Professional spray finish pricing</p>
-              </div>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardHeader>
-                  <CardTitle>By Kitchen Size</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">Small (10-15 doors)</span>
-                      <span className="font-semibold">$2,500 - $4,000</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">Average (20-30 doors)</span>
-                      <span className="font-semibold">$3,500 - $6,000</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3 border-b">
-                      <span className="text-muted-foreground">Large (30-40 doors)</span>
-                      <span className="font-semibold">$5,500 - $8,000</span>
-                    </div>
-                    <div className="flex justify-between items-center py-3">
-                      <span className="text-muted-foreground">Extra Large (40+ doors)</span>
-                      <span className="font-semibold">$7,500 - $12,000+</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>What&apos;s Included</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {[
-                      "Professional spray application (no brush marks)",
-                      "Premium cabinet coatings (Emerald Urethane or equivalent)",
-                      "Door and drawer front removal",
-                      "Thorough cleaning and degreasing",
-                      "Light sanding and surface prep",
-                      "Priming and 2 coats of finish",
-                      "Hardware reinstallation",
-                      "5-year warranty on workmanship",
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
-                        <Check className="h-4 w-4 text-primary" />
-                        <span className="text-muted-foreground">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Prices Vary */}
-        <section className="py-16 md:py-24 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-              Why Painting Prices Vary in Houston
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card>
-                <CardContent className="pt-6">
-                  <DollarSign className="h-10 w-10 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Paint Quality</h3>
-                  <p className="text-muted-foreground mb-4">
-                    We use premium Sherwin-Williams and Benjamin Moore paints. Cheaper contractors 
-                    use contractor-grade paints that fade faster and require repainting sooner.
-                  </p>
-                  <p className="text-sm text-primary font-medium">
-                    Premium paint costs more but lasts 2-3x longer.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-6">
-                  <Clock className="h-10 w-10 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Prep Work</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Proper preparation takes time: pressure washing, scraping, sanding, caulking, 
-                    priming. Cheap quotes often skip these steps, leading to premature failure.
-                  </p>
-                  <p className="text-sm text-primary font-medium">
-                    80% of paint job quality is in the prep.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-6">
-                  <Shield className="h-10 w-10 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Insurance & Warranty</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Insured contractors with written warranties cost more but protect
-                    your investment. Uninsured painters put your home at risk.
-                  </p>
-                  <p className="text-sm text-primary font-medium">
-                    Our 5-year warranty backs every project.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Get Your Exact Price Today
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              These are estimates. Your actual cost depends on your specific home. 
-              Get a free, detailed quote with no obligation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <a href="/contact">Get Free Estimate</a>
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                <a href="tel:+13465945960" className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  (346) 594-5960
-                </a>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        <SchedulerSection />
+        <AuthorByline extra="Prices reviewed quarterly." />
       </main>
       <Footer />
     </>

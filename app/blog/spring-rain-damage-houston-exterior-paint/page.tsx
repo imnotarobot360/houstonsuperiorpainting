@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-05-31T00:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [{
       url: "https://houstonsuperiorpainting.com/images/blog/spring-rain-damage-houston.png",
       width: 1200,
@@ -162,7 +162,7 @@ export default function SpringRainDamageBlog() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
@@ -297,12 +297,12 @@ export default function SpringRainDamageBlog() {
               There&apos;s an important timing reason to address spring rain damage now rather than waiting. Houston&apos;s summer heat is intense — and while it does dry surfaces, it also bakes any moisture that&apos;s trapped beneath compromised paint into the substrate. Wood that&apos;s damp now and not addressed can begin to develop rot through a long, hot summer. Paint edges that are lifting slightly now will be fully peeling by October.
             </p>
             <p>
-              Summer is also the most demanding season for exterior painting conditions — high heat combined with high humidity narrows the window for quality work to early morning hours. Addressing problems now, before peak summer, gives your contractor more flexibility to schedule and execute under better conditions. For the full picture on timing, see our <Link href="/blog/best-time-to-paint-houston-home-exterior">seasonal guide to the best time to paint your Houston home exterior</Link>.
+              Summer is also the most demanding season for exterior painting conditions — high heat combined with high humidity narrows the window for quality work to early morning hours. Addressing problems now, before peak summer, gives your contractor more flexibility to schedule and execute under better conditions. For the full picture on timing, see our <Link href="/blog/best-time-to-paint-house-houston">seasonal guide to the best time to paint your Houston home exterior</Link>.
             </p>
 
             <h2>Get a Professional Assessment Before You Decide</h2>
             <p>
-              It can be hard to tell from a casual walkthrough which issues are surface-level and which indicate something deeper. At Houston Superior Painting, we offer free <Link href="/exterior-painting-houston">exterior painting</Link> assessments throughout <Link href="/painters-katy-tx">Katy</Link>, <Link href="/painters-cypress-tx">Cypress</Link>, <Link href="/painters-sugar-land-tx">Sugar Land</Link>, The Woodlands, and greater Houston. We&apos;ll look at your home with experienced eyes and give you an honest picture of what&apos;s going on — what needs immediate attention, what can wait, and what a proper repair and repaint would involve.
+              It can be hard to tell from a casual walkthrough which issues are surface-level and which indicate something deeper. At Houston Superior Painting, we offer free <Link href="/exterior-painting-houston-tx">exterior painting</Link> assessments throughout <Link href="/painters-katy-tx">Katy</Link>, <Link href="/painters-cypress-tx">Cypress</Link>, <Link href="/painters-sugar-land-tx">Sugar Land</Link>, The Woodlands, and greater Houston. We&apos;ll look at your home with experienced eyes and give you an honest picture of what&apos;s going on — what needs immediate attention, what can wait, and what a proper repair and repaint would involve. Our <Link href="/exterior-house-painting-houston-cost-guide">exterior house painting cost guide</Link> shows what that typically costs in 2026.
             </p>
 
             {/* FAQ Section */}
@@ -368,7 +368,7 @@ export default function SpringRainDamageBlog() {
                 <CardContent className="p-6">
                   <Badge variant="secondary" className="mb-2">Exterior Painting</Badge>
                   <h3 className="font-semibold text-foreground mb-2">
-                    <Link href="/blog/best-time-to-paint-houston-home-exterior" className="hover:text-primary transition-colors">
+                    <Link href="/blog/best-time-to-paint-house-houston" className="hover:text-primary transition-colors">
                       Best Time to Paint Your Houston Home Exterior: A Seasonal Guide
                     </Link>
                   </h3>

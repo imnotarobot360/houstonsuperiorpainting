@@ -6,18 +6,19 @@ import FAQ from "@/components/faq"
 import { EstimateCalculator } from "@/components/estimate-calculator"
 import { Phone, MessageSquare, ChevronRight, CheckCircle2 } from "lucide-react"
 import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
+import { AuthorByline, articleNode, ESTIMATE_PATH } from "@/components/aeo/blocks"
 
 export const metadata: Metadata = {
   title: "Interior Painting Cost in Houston 2026 | Price Guide",
   description: "Transparent 2026 interior painting costs in Houston: $2.50-$4.50 per sq ft. Full breakdown by room, project type, and factors. Free quotes: 346-594-5960.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/interior-painting-cost-houston" },
-  openGraph: { title: "Interior Painting Cost Houston 2026 | Full Price Guide", description: "Transparent 2026 interior painting costs in Houston: $2.50-$4.50 per sq ft.", url: "https://houstonsuperiorpainting.com/interior-painting-cost-houston", type: "article" },
+  openGraph: { title: "Interior Painting Cost Houston 2026 | Full Price Guide", description: "Transparent 2026 interior painting costs in Houston: $2.50-$4.50 per sq ft.", url: "https://houstonsuperiorpainting.com/interior-painting-cost-houston", type: "article", images: [{ url: "https://houstonsuperiorpainting.com/images/og/og-interior-painting.jpg", width: 1200, height: 630 }] },
   other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },
 }
 
 const faqs = [
   { q: "How much does it cost to paint a room in Houston?", a: "A single room (12x14) costs $300-$800 depending on ceiling height, condition, and trim work. This includes walls, ceiling, and trim with two coats of premium paint." },
-  { q: "How much does a whole-house interior paint job cost in Houston?", a: "A full interior repaint for a 2,000-2,500 sq ft Houston home costs $4,000-$8,000. Larger homes (3,000-4,000 sq ft) run $7,000-$12,000. These prices include all walls, ceilings, trim, and doors." },
+  { q: "How much does a whole-house interior paint job cost in Houston?", a: "A full interior repaint for a 2,000-2,500 sq ft Houston home costs $4,000-$8,000. A 3,000 sq ft home runs $5,500-$10,000 and 4,000+ sq ft homes run $7,000-$14,000. These prices include all walls, ceilings, trim, and doors." },
   { q: "Why do interior painting prices vary so much?", a: "Key factors: ceiling height (standard 8ft vs 10-12ft vaulted), surface condition (new drywall vs heavily patched), number of colors, accent walls, trim complexity, furniture moving, and paint product choice." },
   { q: "Is it cheaper to paint yourself in Houston?", a: "DIY saves labor (50-60% of total cost) but takes 3-5x longer, produces inconsistent results, and voids any warranty. Most DIY painters underestimate prep time and material waste. Professional results increase home value." },
   { q: "Does paint quality affect interior painting cost?", a: "Yes. Premium paint (Sherwin-Williams Emerald, Benjamin Moore Aura) adds $0.50-$1.00/sq ft vs builder-grade. But premium paint covers better, lasts 2-3x longer, and is more washable. We include premium paint in all quotes." },
@@ -33,7 +34,7 @@ export default function InteriorPaintingCostHouston() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "How Much Does Interior Painting Cost in Houston in 2026?", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/interior-painting-cost-houston" },
+        articleNode({ path: "/interior-painting-cost-houston", headline: "How Much Does Interior Painting Cost in Houston in 2026?", description: "Interior painting in Houston costs $2.50-$4.50 per square foot in 2026: $300-$800 per room and $4,000-$8,000 for a full 2,500 sq ft interior.", datePublished: "2026-05-16" }),
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Interior Painting Cost Houston", "item": "https://houstonsuperiorpainting.com/interior-painting-cost-houston" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
@@ -80,7 +81,8 @@ export default function InteriorPaintingCostHouston() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-muted-foreground mb-8">Prices reflect 2026 Houston market rates with premium Sherwin-Williams or Benjamin Moore paint. All prices include two coats, preparation, and cleanup.</p>
+          <p className="text-sm text-muted-foreground mb-4">Prices reflect 2026 Houston market rates with premium Sherwin-Williams or Benjamin Moore paint. All prices include two coats, preparation, and cleanup.</p>
+          <p className="text-foreground/90 mb-8 leading-relaxed">These numbers match our <Link href="/houston-painting-cost-guide" className="font-medium text-primary underline">Houston painting cost guide</Link>, which also covers exterior and cabinet pricing. See what the work itself involves on our <Link href="/interior-painting-houston-tx" className="font-medium text-primary underline">interior painting in Houston</Link> page. We quote the same ranges for <Link href="/painters-katy-tx" className="font-medium text-primary underline">Katy painters</Link>, <Link href="/painters-cypress-tx" className="font-medium text-primary underline">Cypress painters</Link>, and <Link href="/painters-sugar-land-tx" className="font-medium text-primary underline">Sugar Land painters</Link> jobs.</p>
 
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Factors That Affect Interior Painting Cost</h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -101,7 +103,7 @@ export default function InteriorPaintingCostHouston() {
 
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">What&apos;s Included in Our Quotes</h2>
           <div className="grid md:grid-cols-2 gap-3 mb-8">
-            {["Surface preparation (patching, sanding, caulking)", "Priming (where needed)", "Two coats of premium paint", "Trim and ceiling painting (if requested)", "Furniture moving and protection", "Floor protection with canvas drop cloths", "Switch plate and outlet cover removal", "Complete cleanup and touch-ups", "Final walkthrough inspection", "5-year interior warranty"].map(i => (
+            {["Surface preparation (patching, sanding, caulking)", "Priming (where needed)", "Two coats of premium paint", "Trim and ceiling painting (if requested)", "Furniture moving and protection", "Floor protection with canvas drop cloths", "Switch plate and outlet cover removal", "Complete cleanup and touch-ups", "Final walkthrough inspection", "5-year workmanship warranty"].map(i => (
               <div key={i} className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-secondary shrink-0 mt-0.5" /><span className="text-foreground text-sm">{i}</span></div>
             ))}
           </div>
@@ -113,9 +115,9 @@ export default function InteriorPaintingCostHouston() {
               <tbody>
                 {[
                   ["Material Cost (2,500 sq ft)", "$800–$1,500", "Included in quote"],
-                  ["Labor Cost", "$0 (your time)", "$3,000–$6,500"],
+                  ["Labor Cost", "$0 (your time)", "$2,500–$6,000 more than DIY"],
                   ["Total Cost", "$800–$1,500", "$4,000–$8,000"],
-                  ["Time Required", "40–80+ hours", "2–5 days"],
+                  ["Time Required", "2–3 weekends", "3–5 days"],
                   ["Quality", "Variable", "Consistent, factory-smooth"],
                   ["Warranty", "None", "5-year warranty"],
                   ["Prep Quality", "Often skipped", "Full 8-step process"],
@@ -154,6 +156,7 @@ export default function InteriorPaintingCostHouston() {
           <div className="flex flex-wrap justify-center gap-4">
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors"><Phone className="h-5 w-5" /> Call {BUSINESS.phone}</a>
             <a href={SMS_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors"><MessageSquare className="h-5 w-5" /> Text Us</a>
+            <Link href={ESTIMATE_PATH} className="inline-flex items-center gap-2 border border-primary-foreground/40 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/10 transition-colors">Request a free painting estimate</Link>
           </div>
         </div>
       </section>
@@ -163,6 +166,7 @@ export default function InteriorPaintingCostHouston() {
           <Link key={p.href} href={p.href} className="bg-card rounded-lg p-4 border border-border hover:border-secondary transition-colors"><span className="font-semibold text-sm text-foreground">{p.title}</span></Link>
         ))}
       </div></div></section>
+      <AuthorByline />
       <Footer />
     </>
   )

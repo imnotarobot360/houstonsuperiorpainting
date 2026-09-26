@@ -42,17 +42,7 @@ const SERVICE_JSONLD = {
   description:
     "Professional commercial painting for offices, retail spaces, restaurants, medical facilities, warehouses, and industrial buildings in Houston, Katy, Cypress, Sugar Land, and surrounding TX cities. After-hours and weekend work to minimize business disruption.",
   serviceType: "Commercial Painting",
-  provider: {
-    "@type": "LocalBusiness",
-    "@id": "https://houstonsuperiorpainting.com/#business",
-    name: "Houston Superior Painting",
-    telephone: "+1-346-594-5960", email: "info@houstonsuperiorpainting.com",
-    url: "https://houstonsuperiorpainting.com",
-    image: "https://houstonsuperiorpainting.com/images/og-cover.jpg",
-    priceRange: "$$$",
-    address: { "@type": "PostalAddress", streetAddress: "14150 Huffmeister Rd, Suite 410", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77429", addressCountry: "US" },
-    geo: { "@type": "GeoCoordinates", latitude: 29.9012, longitude: -95.6293 }
-  },
+  provider: { "@type": "Organization", "@id": "https://houstonsuperiorpainting.com/#organization" },
   areaServed: [
     { "@type": "City", name: "Houston" }, { "@type": "City", name: "Katy" }, { "@type": "City", name: "Cypress" },
     { "@type": "City", name: "Sugar Land" }, { "@type": "City", name: "Richmond" }, { "@type": "City", name: "Pearland" },

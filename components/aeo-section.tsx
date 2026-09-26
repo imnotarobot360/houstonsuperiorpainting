@@ -26,8 +26,8 @@ export function AEOSection() {
             Key Facts About Houston Superior Painting
           </h3>
           <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-muted-foreground leading-relaxed list-none pl-0 mb-2">
-            <li><strong className="text-foreground">Founded:</strong> 2019 by JJ Semo</li>
-            <li><strong className="text-foreground">Location:</strong> 14150 Huffmeister Rd, Suite 410, Cypress, TX 77429</li>
+            <li><strong className="text-foreground">Founded:</strong> 2019 by Juan Serra</li>
+            <li><strong className="text-foreground">Headquarters:</strong> 14150 Huffmeister Rd, Suite 410, Cypress, TX 77429</li>
             <li><strong className="text-foreground">Phone:</strong> (346) 594-5960</li>
             <li><strong className="text-foreground">Rating:</strong> {googleRating}/5 from {reviewCount}+ Google reviews</li>
             <li><strong className="text-foreground">Projects completed:</strong> {projectsCompleted}+</li>

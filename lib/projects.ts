@@ -151,7 +151,7 @@ export const PROJECTS: CaseStudy[] = [
         "Meticulous, communicative, and respectful of our home throughout. The finish on our River Oaks exterior still looks immaculate.",
       name: "Robert H., River Oaks",
     },
-    metaTitle: "River Oaks Exterior Painting Restoration | Houston Superior Painting",
+    metaTitle: "River Oaks Exterior Paint Restoration | Houston Superior Painting",
     metaDescription:
       "A River Oaks exterior restoration with rot repair, re-caulking, and a premium weather-resistant finish for Houston humidity. Before & after case study.",
   },
@@ -264,7 +264,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     results:
       "The wall is now smooth, uniform, and sealed against water. The elastomeric membrane flexes with seasonal movement instead of cracking, addressing the moisture issue at its source rather than hiding it.",
-    metaTitle: "Bellaire Stucco Repair & Elastomeric Coating | Houston Superior Painting",
+    metaTitle: "Bellaire Stucco Repair & Elastomeric Coating | Case Study",
     metaDescription:
       "A Bellaire stucco restoration: 40+ cracks sealed and a waterproof elastomeric coating built for Houston storms. Before & after case study.",
   },
@@ -372,7 +372,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     results:
       "The trim line is restored and indistinguishable from original, the peeling is gone, and — most importantly — the moisture source was corrected so the new wood is protected. The repair is backed by our 5-year workmanship warranty.",
-    metaTitle: "Cypress Wood Rot Repair & Exterior Repaint | Houston Superior Painting",
+    metaTitle: "Cypress Wood Rot Repair & Exterior Repaint | Case Study",
     metaDescription:
       "A Cypress wood rot repair: rotted fascia and soffits replaced, the moisture source corrected, and trim repainted to match. Before & after case study.",
   },

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-05-25T00:00:00.000Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [{
       url: "https://houstonsuperiorpainting.com/images/blog/houston-weather-paint-damage.png",
       width: 1200,
@@ -62,10 +62,7 @@ export default function HoustonWeatherDamagesExteriorPaint() {
             "headline": "How Houston Weather Damages Exterior Paint",
             "description": "Houston's heat, humidity, and storms are relentless on exterior paint. Here's exactly how weather damages your home's finish — and how to fight back.",
             "image": "https://houstonsuperiorpainting.com/images/blog/houston-weather-paint-damage.png",
-            "author": {
-              "@type": "Person",
-              "name": "JJ Semo"
-            },
+            "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" },
             "publisher": {
               "@type": "Organization",
               "name": "Houston Superior Painting",
@@ -96,7 +93,7 @@ export default function HoustonWeatherDamagesExteriorPaint() {
                 "name": "How often should I repaint my home's exterior in Houston?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "In the Greater Houston area, most homes benefit from a professional exterior repaint every 7–10 years. Homes with significant sun exposure, older paint layers, or deferred maintenance may need attention sooner. An annual walkthrough of your exterior for early warning signs can help you time a repaint before major damage occurs."
+                  "text": "In the Greater Houston area, most homes benefit from a professional exterior repaint every 5–7 years. Homes with significant sun exposure, older paint layers, or deferred maintenance may need attention sooner. An annual walkthrough of your exterior for early warning signs can help you time a repaint before major damage occurs."
                 }
               },
               {
@@ -166,7 +163,7 @@ export default function HoustonWeatherDamagesExteriorPaint() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
-                  <span>JJ Semo</span>
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
@@ -206,7 +203,7 @@ export default function HoustonWeatherDamagesExteriorPaint() {
                   Quick Answer
                 </h2>
                 <p className="text-muted-foreground">
-                  Houston&apos;s climate damages exterior paint through four main forces: <strong>intense UV radiation</strong> that breaks down the paint&apos;s binder and causes fading and chalking; <strong>high humidity</strong> that interferes with adhesion and promotes mildew growth; <strong>heavy rainfall</strong> that infiltrates through caulk failures and saturates surfaces; and <strong>temperature swings</strong> that cause paint films to crack through repeated expansion and contraction. A professionally applied exterior paint job typically lasts 7–10 years in Houston with proper preparation and quality products.
+                  Houston&apos;s climate damages exterior paint through four main forces: <strong>intense UV radiation</strong> that breaks down the paint&apos;s binder and causes fading and chalking; <strong>high humidity</strong> that interferes with adhesion and promotes mildew growth; <strong>heavy rainfall</strong> that infiltrates through caulk failures and saturates surfaces; and <strong>temperature swings</strong> that cause paint films to crack through repeated expansion and contraction. Plan to repaint a Houston exterior every 5–7 years with proper preparation and quality products.
                 </p>
               </CardContent>
             </Card>
@@ -267,7 +264,7 @@ export default function HoustonWeatherDamagesExteriorPaint() {
                         <div className="bg-white/80 rounded-lg p-4">
                           <p className="font-medium text-foreground mb-2">What helps:</p>
                           <p className="text-muted-foreground text-sm">
-                            Premium exterior paints contain UV-stabilized pigments and tougher binder resins that resist UV breakdown longer than budget products. Lighter colors also absorb less UV radiation and tend to hold their appearance longer than darker tones. A well-applied exterior paint job using quality products should give you 8–12 years of protection in Houston — even under intense sun.
+                            Premium exterior paints contain UV-stabilized pigments and tougher binder resins that resist UV breakdown longer than budget products. Lighter colors also absorb less UV radiation and tend to hold their appearance longer than darker tones. A well-applied exterior paint job using quality products should carry you through the full 5–7 year repaint cycle in Houston — even under intense sun, and longer on shaded walls.
                           </p>
                         </div>
                       </div>
@@ -413,7 +410,7 @@ export default function HoustonWeatherDamagesExteriorPaint() {
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                If you&apos;re in <Link href="/painters-katy-tx" className="text-primary hover:underline">Katy</Link>, <Link href="/painters-cypress-tx" className="text-primary hover:underline">Cypress</Link>, <Link href="/painters-sugar-land-tx" className="text-primary hover:underline">Sugar Land</Link>, <Link href="/painters-the-woodlands-tx" className="text-primary hover:underline">The Woodlands</Link>, or anywhere in the Houston metro, these aren&apos;t premium extras — they&apos;re the baseline for a paint job that will actually last.
+                If you&apos;re in <Link href="/painters-katy-tx" className="text-primary hover:underline">Katy</Link>, <Link href="/painters-cypress-tx" className="text-primary hover:underline">Cypress</Link>, <Link href="/painters-sugar-land-tx" className="text-primary hover:underline">Sugar Land</Link>, <Link href="/painters-the-woodlands-tx" className="text-primary hover:underline">The Woodlands</Link>, or anywhere in the Houston metro, these aren&apos;t premium extras — they&apos;re the baseline for a paint job that will actually last, and they&apos;re included in every quote for our <Link href="/exterior-painting-houston-tx" className="text-primary hover:underline">exterior painting in Houston</Link>. Our <Link href="/exterior-house-painting-houston-cost-guide" className="text-primary hover:underline">exterior house painting cost guide</Link> shows what that prep adds to a 2026 quote.
               </p>
 
               {/* Warning Signs */}
@@ -457,7 +454,7 @@ export default function HoustonWeatherDamagesExteriorPaint() {
                 {[
                   {
                     q: "How often should I repaint my home's exterior in Houston?",
-                    a: "In the Greater Houston area, most homes benefit from a professional exterior repaint every 7–10 years. Homes with significant sun exposure, older paint layers, or deferred maintenance may need attention sooner. An annual walkthrough of your exterior for early warning signs can help you time a repaint before major damage occurs."
+                    a: "In the Greater Houston area, most homes benefit from a professional exterior repaint every 5–7 years. Homes with significant sun exposure, older paint layers, or deferred maintenance may need attention sooner. An annual walkthrough of your exterior for early warning signs can help you time a repaint before major damage occurs."
                   },
                   {
                     q: "Why does paint peel so quickly on Houston homes?",

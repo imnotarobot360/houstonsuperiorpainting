@@ -10,7 +10,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Menu, X, Phone, ChevronDown } from "lucide-react"
-import { BUSINESS, SERVICE_AREAS, PHONE_HREF, serviceHref, isExternalHref } from "@/lib/business"
+import { BUSINESS, SERVICE_AREAS, OFFICE_PAGES, PHONE_HREF, serviceHref, isExternalHref } from "@/lib/business"
+
+const ESTIMATE_PATH = "/painting-estimate-houston"
 
 // 8 keeps Garage Epoxy (index 7) in the menu — trimming below that silently
 // drops it, which is how it went missing from the footer.
@@ -20,21 +22,26 @@ const services = BUSINESS.services.slice(0, 8).map((s) => ({
   external: isExternalHref(serviceHref(s.slug)),
 }))
 
-// Sourced from SERVICE_AREAS, not the legacy BUSINESS.serviceAreas — that
-// second array had drifted to 12 stale entries while SERVICE_AREAS grew to 23,
-// and maintaining two area lists is what orphaned 10 location pages before.
-// The nav dropdown intentionally shows only the first 8 for length; the footer
-// renders the complete list, so every page still gets a site-wide link.
-const serviceAreas = SERVICE_AREAS.slice(0, 8).map((a) => ({
-  title: a.name,
-  href: `/${a.slug}`,
-}))
+// The five office city pages come first (labelled "office"), then the next
+// few service-area pages. Sourced from OFFICE_PAGES + SERVICE_AREAS; the footer
+// renders the complete area list, so every page still gets a site-wide link.
+const officeSlugs = new Set<string>(OFFICE_PAGES.map((o) => o.slug))
+const serviceAreas = [
+  ...OFFICE_PAGES.map((o) => ({
+    title: `${o.name.replace(" (HQ)", "")}, TX (office${o.name.includes("HQ") ? ", HQ" : ""})`,
+    href: `/${o.slug}`,
+  })),
+  ...SERVICE_AREAS.filter((a) => !officeSlugs.has(a.slug))
+    .slice(0, 6)
+    .map((a) => ({ title: `${a.name}, TX`, href: `/${a.slug}` })),
+]
 
 const navLinks = [
   { title: "Home", href: "/" },
   { title: "Projects", href: "/projects" },
   { title: "Insights", href: "/blog" },
   { title: "Reviews", href: "/#reviews" },
+  { title: "FAQ", href: "/faq" },
   { title: "Contact", href: "/contact" },
 ]
 
@@ -128,11 +135,11 @@ export function Header({ overHero = false }: { overHero?: boolean }) {
                 Areas
                 <ChevronDown className="h-3.5 w-3.5" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-56">
+              <DropdownMenuContent align="start" className="w-64">
                 {serviceAreas.map((area) => (
                   <DropdownMenuItem key={area.href} asChild>
                     <Link href={area.href} className="cursor-pointer font-manrope">
-                      {area.title}, TX
+                      {area.title}
                     </Link>
                   </DropdownMenuItem>
                 ))}
@@ -140,7 +147,11 @@ export function Header({ overHero = false }: { overHero?: boolean }) {
             </DropdownMenu>
 
             {navLinks.slice(2).map((l) => (
-              <Link key={l.href} href={l.href} className={`${linkBase} ${linkColor}`}>
+              <Link
+                key={l.href}
+                href={l.href}
+                className={`${linkBase} ${linkColor} ${l.href === "/faq" ? "hidden xl:inline" : ""}`}
+              >
                 {l.title}
               </Link>
             ))}
@@ -157,7 +168,7 @@ export function Header({ overHero = false }: { overHero?: boolean }) {
               <span>{BUSINESS.phone}</span>
             </a>
             <Link
-              href="/contact"
+              href={ESTIMATE_PATH}
               className="font-manrope text-sm font-semibold bg-secondary text-secondary-foreground px-5 py-2.5 rounded-md hover:bg-secondary/90 transition-colors"
             >
               Get My Free Estimate
@@ -256,7 +267,7 @@ export function Header({ overHero = false }: { overHero?: boolean }) {
                           setMobileAreasOpen(false)
                         }}
                       >
-                        {area.title}, TX
+                        {area.title}
                       </Link>
                     ))}
                   </div>
@@ -283,7 +294,7 @@ export function Header({ overHero = false }: { overHero?: boolean }) {
                 <span>{BUSINESS.phone}</span>
               </a>
               <Link
-                href="/contact"
+                href={ESTIMATE_PATH}
                 className="font-manrope text-center text-sm font-semibold bg-secondary text-secondary-foreground px-5 py-3 rounded-md mt-1"
                 onClick={() => setMobileMenuOpen(false)}
               >

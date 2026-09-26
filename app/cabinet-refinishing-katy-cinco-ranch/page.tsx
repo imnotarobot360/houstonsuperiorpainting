@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/cabinet-refinishing-katy-cinco-ranch',
   },
-  title: "Cabinet Refinishing Katy & Cinco Ranch",
+  title: "Cabinet Refinishing Katy & Cinco Ranch | Free Estimates",
   description: "Premium cabinet refinishing in Katy and Cinco Ranch, TX. Transform your kitchen. Free quote — call (346) 594-5960.",
 }
 

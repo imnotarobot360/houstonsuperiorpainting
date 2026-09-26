@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/interior-painting-bellaire-west-university',
   },
-  title: "Interior Painting Bellaire & West University",
+  title: "Interior Painting Bellaire & West University | Free Estimates",
   description: "Premium interior painting in Bellaire and West University Place, Houston. 5-star reviews, written warranty. Free quote — call (346) 594-5960.",
 }
 

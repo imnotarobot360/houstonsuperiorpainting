@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/limewash-brick-painting-houston',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Limewash Brick Houston: Cost, Process & Before/After",
     description: "Real 2026 limewash brick pricing, process, and limewash vs paint vs German smear for Houston homes.",
     type: "article",
@@ -153,7 +154,7 @@ export default function LimewashBrickPaintingPage() {
         <li>Detail work around windows, doors, and architectural features</li>
       </ul>
       <p>
-        Compare to standard exterior brick painting: $2–$4 per sq ft. The limewash premium reflects the more complex application technique required for a professional result.
+        Compare to standard exterior brick painting: $2–$4 per sq ft (whole-house exterior pricing is in our <Link href="/exterior-house-painting-houston-cost-guide">exterior house painting cost guide</Link>). The limewash premium reflects the more complex application technique required for a professional result.
       </p>
 
       <h2>What Drives Limewash Cost in Houston</h2>
@@ -306,7 +307,7 @@ export default function LimewashBrickPaintingPage() {
 
       <h2>Get a Free Limewash Estimate in Houston TX</h2>
       <p>
-        Houston Superior Painting offers professional limewash services throughout Greater Houston — including Katy, Cypress, Sugar Land, The Woodlands, Pearland, and Bellaire. We carry both traditional European-style limewash and contemporary American mineral wash products and can help you choose the right product for your brick type and desired final look.
+        Houston Superior Painting offers professional <Link href="/limewash-brick-painting-houston-tx">limewash brick painting in Houston</Link> throughout Greater Houston — including <Link href="/painters-katy-tx">Katy</Link>, Cypress, Sugar Land, The Woodlands, Pearland, and Bellaire. We carry both traditional European-style limewash and contemporary American mineral wash products and can help you choose the right product for your brick type and desired final look.
       </p>
     </BlogPostTemplate>
   )

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-08-08T08:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [
       {
         url: "https://houstonsuperiorpainting.com/images/blog/epoxy-vs-polyaspartic-houston.png",
@@ -100,7 +100,7 @@ const faqs = [
 const relatedPosts = [
   {
     title: "Garage Epoxy Coating in Houston TX: What Homeowners Should Know",
-    href: "/blog/garage-epoxy-coating-houston-tx",
+    href: "https://houstonsuperiorepoxy.com/",
     excerpt: "What works, what to avoid, and why prep is everything in our hot, humid climate.",
     image: "/images/blog/garage-epoxy-coating-houston.png",
   },
@@ -112,7 +112,7 @@ const relatedPosts = [
   },
   {
     title: "Your Garage Is the Biggest Room in Your Home. Why Are You Hiding It?",
-    href: "/blog/garage-epoxy-flooring-houston-tx",
+    href: "https://houstonsuperiorepoxy.com/",
     excerpt: "Why professional garage floor coating is one of the smartest upgrades a Houston homeowner can make.",
     image: "/images/blog/garage-epoxy-flooring-houston.png",
   },
@@ -124,7 +124,7 @@ export default function EpoxyVsPolyasparticHoustonPage() {
       slug="epoxy-vs-polyaspartic-houston"
       title="Epoxy vs Polyaspartic Floor Coating in Houston: Which One Actually Lasts?"
       excerpt="Polyaspartic costs 30–60% more than epoxy — and in Houston's humidity, that premium buys you a coating that won't yellow, won't delaminate off a damp slab, and lasts nearly twice as long."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="August 8, 2026"
       readTime="12 min read"
@@ -482,7 +482,10 @@ export default function EpoxyVsPolyasparticHoustonPage() {
 
       <p>
         Houston Superior Painting installs professional polyaspartic and epoxy floor systems throughout Greater Houston,
-        including Katy, Cypress, Sugar Land, The Woodlands, Pearland, Richmond, Fulshear, and Bellaire.
+        including <a href="/painters-katy-tx">Katy</a>, Cypress, Sugar Land, The Woodlands, Pearland, Richmond, Fulshear, and Bellaire.
+        Many homeowners pair the floor with fresh garage walls and trim through our{" "}
+        <a href="/interior-painting-houston-tx">interior painting in Houston</a> service; wall and trim pricing is in
+        our <a href="/houston-painting-cost-guide">Houston painting cost guide</a>.
       </p>
 
       <p>Every installation includes:</p>

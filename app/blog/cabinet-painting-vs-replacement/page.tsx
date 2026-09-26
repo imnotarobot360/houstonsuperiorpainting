@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/cabinet-painting-vs-replacement',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Cabinet Painting vs Cabinet Replacement: Which Is Better?",
     description: "Save thousands on your kitchen remodel with professional cabinet painting.",
     type: "article",
@@ -64,7 +65,7 @@ export default function CabinetPaintingVsReplacementPage() {
       </ul>
 
       <p>
-        A full cabinet replacement project in Houston can easily cost $20,000–$50,000.
+        A full cabinet replacement project in Houston can easily cost $20,000–$50,000. Painting the same kitchen typically runs $3,000–$6,500; see our <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">cost to paint kitchen cabinets in Houston</Link> guide for the full breakdown.
       </p>
 
       <h2>Cabinet Painting Saves Thousands</h2>
@@ -144,7 +145,7 @@ export default function CabinetPaintingVsReplacementPage() {
       <h2>Looking for Cabinet Painters in Houston?</h2>
 
       <p>
-        Houston Superior Painting provides professional cabinet painting services in Houston, Katy, Cypress, Richmond, Fulshear, and Sugar Land.
+        Houston Superior Painting provides professional <Link href="/cabinet-refinishing-houston-tx">cabinet refinishing in Houston</Link>, Katy, Cypress, Richmond, Fulshear, and <Link href="/painters-sugar-land-tx">Sugar Land</Link>.
       </p>
 
       <p>

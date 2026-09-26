@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-07-16T08:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [
       {
         url: "https://houstonsuperiorpainting.com/images/blog/spray-vs-brush-roll-painting-houston.png",
@@ -90,7 +90,7 @@ export default function SprayVsRollHoustonPage() {
       slug="spray-vs-brush-roll-painting-houston"
       title="Spray vs. Brush and Roll: Which Is Best for Houston Homes?"
       excerpt="One of the most common questions we get is whether we'll spray or roll a project. The honest answer is: it depends on the surface. Here's exactly when each method wins for Houston homes."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="July 16, 2026"
       readTime="8 min read"
@@ -212,7 +212,9 @@ export default function SprayVsRollHoustonPage() {
         Want a clear plan for your home? See our <a href="/interior-painting-houston-tx">interior</a> and{" "}
         <a href="/exterior-painting-houston-tx">exterior painting</a> services, or{" "}
         <a href="/contact">request a free estimate</a> and we&apos;ll walk you through exactly how we&apos;d approach each
-        surface.
+        surface. Application method rarely changes the bottom line much; typical prices are in our{" "}
+        <a href="/houston-painting-cost-guide">Houston painting cost guide</a>, and crews run out of all five offices,
+        including our <a href="/painters-magnolia-tx">painters in Magnolia TX</a>.
       </p>
     </BlogPostTemplate>
   )

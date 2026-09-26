@@ -1,14 +1,15 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
-  title: "Stucco Painting in Houston: Complete Guide",
+  title: "Stucco Painting in Houston: Complete Guide (2026 Guide)",
   description: "Learn about stucco painting in Houston. Discover proper preparation, best paints, and why elastomeric coatings protect stucco homes from Texas weather.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/stucco-painting-houston-guide',
   },
-  openGraph: {
-    title: "Stucco Painting in Houston: Complete Guide",
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "Stucco Painting in Houston: Complete Guide (2026 Guide)",
     description: "Everything homeowners need to know about painting stucco in Houston.",
     type: "article",
     publishedTime: "2026-05-10",
@@ -120,16 +121,16 @@ export default function StuccoPaintingHoustonGuidePage() {
       <h2>How Long Does Stucco Paint Last?</h2>
 
       <p>
-        With proper preparation and elastomeric coatings, stucco painting can last:
+        Typical stucco paint life in Houston, with proper preparation:
       </p>
 
       <ul>
-        <li><strong>8–12 years</strong> with elastomeric coatings</li>
-        <li><strong>5–7 years</strong> with standard exterior paint</li>
+        <li><strong>5–7 years</strong> with elastomeric coatings (the Houston repaint cycle), and longer on shaded walls</li>
+        <li><strong>3–5 years</strong> with standard exterior paint</li>
       </ul>
 
       <p>
-        Quality preparation significantly extends paint life.
+        Quality preparation significantly extends paint life. Stucco repaints are priced like any exterior; see the <Link href="/exterior-house-painting-houston-cost-guide">exterior house painting cost guide</Link>, where elastomeric coating adds $1–$2 per sq ft.
       </p>
 
       <h2>Popular Stucco Colors</h2>
@@ -149,7 +150,7 @@ export default function StuccoPaintingHoustonGuidePage() {
       <h2>Stucco Painting Services</h2>
 
       <p>
-        Houston Superior Painting provides professional stucco painting with elastomeric coatings throughout Houston, Katy, Cypress, Sugar Land, and surrounding areas.
+        Houston Superior Painting provides professional <Link href="/stucco-painting-houston-tx">stucco painting in Houston</Link> with elastomeric coatings throughout Houston, Katy, Cypress, <Link href="/painters-sugar-land-tx">Sugar Land</Link>, and surrounding areas.
       </p>
 
       <p>

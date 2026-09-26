@@ -17,9 +17,12 @@ const badges = [
     subtitle: "Completed across Greater Houston",
   },
   {
+    // No rating number here: this footer badge renders on every page, and the
+    // 4.9 / 200+ figure belongs to one Google Business Profile (Houston).
+    // Each office page links to its own Google reviews instead.
     icon: Star,
-    title: "4.9 Stars",
-    subtitle: "200+ verified Google reviews",
+    title: "No Upfront Payment",
+    subtitle: "Pay after the final walkthrough",
   },
 ]
 

@@ -1,14 +1,15 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
-  title: "What to Expect During a Painting Estimate",
+  title: "What to Expect During a Painting Estimate (2026 Guide)",
   description: "Learn what to expect during a professional painting estimate. Understand the process, questions to ask, and how to compare estimates for your Houston home.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/what-to-expect-painting-estimate',
   },
-  openGraph: {
-    title: "What to Expect During a Painting Estimate",
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "What to Expect During a Painting Estimate (2026 Guide)",
     description: "Understanding the painting estimate process for Houston homeowners.",
     type: "article",
     publishedTime: "2026-05-09",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 const relatedPosts = [
   {
     title: "How to Choose the Best Painters in Houston",
-    href: "/blog/how-to-choose-best-painters-houston",
+    href: "/questions-to-ask-before-hiring-painters",
     excerpt: "Expert tips on finding professional painters.",
     image: "/images/blog/choose-best-painters-houston.jpg"
   },
@@ -113,11 +114,11 @@ export default function WhatToExpectPaintingEstimatePage() {
         <li>Warranty length</li>
         <li>Company reputation</li>
         <li>Communication quality</li>
-        <li>Insurance and licensing</li>
+        <li>Insurance (Texas doesn&apos;t license painters, so ask for a certificate of insurance)</li>
       </ul>
 
       <p>
-        The lowest price is not always the best value.
+        The lowest price is not always the best value. Check each number against the 2026 ranges in our <Link href="/houston-painting-cost-guide">Houston painting cost guide</Link> before you decide.
       </p>
 
       <h2>Red Flags to Watch For</h2>
@@ -137,7 +138,7 @@ export default function WhatToExpectPaintingEstimatePage() {
       <h2>Schedule Your Free Estimate</h2>
 
       <p>
-        Houston Superior Painting provides detailed, no-obligation estimates for interior and exterior painting projects throughout Houston, Katy, Cypress, and surrounding areas.
+        Houston Superior Painting provides detailed, no-obligation estimates for <Link href="/interior-painting-houston-tx">interior painting</Link> and exterior painting projects throughout Houston, <Link href="/painters-katy-tx">Katy</Link>, Cypress, and surrounding areas. Every estimate includes our 5-year workmanship warranty, and we never ask for a deposit.
       </p>
 
       <p>

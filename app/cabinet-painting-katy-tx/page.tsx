@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Cabinet Painting Katy TX | Kitchen Cabinet Refinishing Katy",
   description: "Expert cabinet painting and refinishing in Katy TX. Professional HVLP spray results in Katy, Cinco Ranch, and nearby. Call 346-594-5960.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/cabinet-painting-katy-tx" },
-  openGraph: { title: "Cabinet Painting Katy TX | Houston Superior Painting", description: "Expert cabinet painting and refinishing in Katy TX. Save 60-70% vs replacement.", url: "https://houstonsuperiorpainting.com/cabinet-painting-katy-tx", type: "website" },
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }], title: "Cabinet Painting Katy TX | Houston Superior Painting", description: "Expert cabinet painting and refinishing in Katy TX. Save 60-70% vs replacement.", url: "https://houstonsuperiorpainting.com/cabinet-painting-katy-tx", type: "website" },
   other: { "geo.region": "US-TX", "geo.placename": "Katy", "geo.position": "29.7858;-95.8245", ICBM: "29.7858, -95.8245" },
 }
 
@@ -30,7 +30,7 @@ export default function CabinetPaintingKatyTX() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "Cabinet Painting Katy TX – Beautiful Kitchen Transformations", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/cabinet-painting-katy-tx" },
+        { "@type": "Article", "headline": "Cabinet Painting Katy TX – Beautiful Kitchen Transformations", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/cabinet-painting-katy-tx" },
         { "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Cabinet Painting Katy TX", "item": "https://houstonsuperiorpainting.com/cabinet-painting-katy-tx" } ] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },

@@ -1,130 +1,197 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business";
+import type { Metadata } from "next"
+import Link from "next/link"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import FAQ from "@/components/faq"
+import { JsonLd } from "@/components/structured-data"
+import {
+  PageHero,
+  QuickAnswer,
+  Section,
+  Bullets,
+  CtaBlock,
+  AuthorByline,
+  breadcrumbNode,
+  articleNode,
+  ESTIMATE_PATH,
+} from "@/components/aeo/blocks"
+
+const PAGE_PATH = "/questions-to-ask-before-hiring-painters"
+const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
+const TITLE = "How to Hire a Painter in Houston: Insurance, Prep, Warranty"
+const DESCRIPTION =
+  "Texas doesn't license painters. Here's how Houston homeowners vet a painting contractor: insurance proof, prep scope, paint spec, warranty terms, and the 8 questions to ask."
+const H1 = "How to Hire a Painter in Houston"
 
 export const metadata: Metadata = {
-  title: "15 Questions To Ask Before Hiring Painters in Houston TX",
-  description: "Essential questions to ask before hiring painters in Houston, Katy & Cypress to protect your investment. Insider checklist from a professional painter.",
-  alternates: { canonical: "https://houstonsuperiorpainting.com/questions-to-ask-before-hiring-painters" },
-  openGraph: { title: "15 Questions To Ask Before Hiring Painters", description: "Protect your investment. Ask these 15 questions before hiring any painting company in Houston.", url: "https://houstonsuperiorpainting.com/questions-to-ask-before-hiring-painters", type: "article", images: [{ url: "/images/og-interior-painting.jpg", width: 1200, height: 630 }] },
-  other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },
-};
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Houston Superior Painting",
+    type: "article",
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630 }],
+  },
+}
 
-const questions = [
-  { q: "Are you insured?", why: "Texas doesn\u2019t require a painting license, but legitimate companies carry general liability insurance ($1M+ minimum) and workers\u2019 comp. Ask for a certificate \u2014 a real company provides it immediately.", us: "Yes. $2M liability, fully bonded. Certificate available upon request." },
-  { q: "Do you use employees or subcontractors?", why: "Subcontractors mean inconsistent quality and less accountability. W-2 employees are trained to the company\u2019s standards and covered by their insurance.", us: "W-2 employees only. All background-checked and drug-tested." },
-  { q: "What paint brands and products do you use?", why: "Cheap paint fails in Houston\u2019s climate within 2\u20133 years. Premium products like SW Duration or BM Regal Select last 8\u201310 years. Get product names in writing.", us: "Sherwin-Williams Duration, SuperPaint, Emerald. Benjamin Moore Regal Select, Aura." },
-  { q: "What preparation work is included?", why: "Preparation is 60\u201370% of a quality paint job. Ask about pressure washing, scraping, sanding, caulking, priming, and masking. If they skip prep, the paint will fail.", us: "Full prep: power wash, scrape, sand, caulk, prime all bare surfaces, mask everything." },
-  { q: "How many coats will you apply?", why: "Two coats minimum for solid coverage and longevity. Some companies apply one coat to cut costs. Two coats should be standard, not an upsell.", us: "Two coats standard on all surfaces. Three coats on dramatic color changes." },
-  { q: "Can you provide a detailed written estimate?", why: "A vague estimate is a red flag. The quote should itemize labor, materials, products, prep work, timeline, and warranty terms. No \u201csurprise\u201d add-ons.", us: "Itemized quote with products, timeline, warranty, and payment schedule. No hidden fees." },
-  { q: "What is your warranty?", why: "Reputable companies offer written warranties. Interior: 1\u20132 years minimum. Exterior: 3\u20135 years minimum. Get it in writing, not just verbal.", us: "5-year exterior, 2-year interior, 3-year cabinets. All in writing." },
-  { q: "How long have you been in business?", why: "Look for at least 3+ years. Fly-by-night painters won\u2019t be around to honor warranties. Check Google reviews for consistent quality over time.", us: "Founded 2019 in Cypress, TX. 6+ years, 1,200+ completed projects." },
-  { q: "Can I see recent reviews and references?", why: "50+ Google reviews with a 4.5+ average is a good benchmark. Ask for references in your neighborhood and permission to see the work in person.", us: "200+ Google reviews, 4.9/5 average. References available in your area." },
-  { q: "Who will be on-site managing the project?", why: "Ask if the owner or a dedicated project manager will be present. Crews without supervision often cut corners.", us: "Owner JJ Semo personally oversees every project from start to finish." },
-  { q: "What is your payment schedule?", why: "Never pay 100% upfront. A reasonable schedule: 0\u201330% deposit, balance upon completion and inspection. Be wary of companies asking for more than 50% upfront.", us: "No deposit required for most projects. Full payment due upon completion and your satisfaction." },
-  { q: "How do you protect my furniture and landscaping?", why: "Professional painters use drop cloths, plastic sheeting, masking tape, and paper to protect everything. Ask specifically about overspray protection for exterior work.", us: "Full protection: furniture moved/covered, floors papered, fixtures masked, landscaping covered." },
-  { q: "What happens if I\u2019m not satisfied?", why: "A company confident in their work will have a clear satisfaction process. Ask what happens if you spot issues after the final walkthrough.", us: "Final walkthrough with punch list. We don\u2019t consider the job done until you\u2019re 100% satisfied." },
-  { q: "Do you handle drywall repair and prep work?", why: "Most walls need some repair before painting. A full-service company handles drywall patches, texture matching, and nail pop repairs in-house.", us: "Yes. Full drywall repair, texture matching (orange peel, knockdown, smooth), and skim coating." },
-  { q: "When can you start and how long will it take?", why: "Get a specific start date and timeline in writing. Vague answers like \u201ca few weeks\u201d signal poor scheduling. Professional companies book 1\u20132 weeks out.", us: "Specific start date and timeline in every contract. Most projects scheduled within 1\u20132 weeks." },
-];
+const FAQS = [
+  { q: "Do painters need a license in Texas?", a: "No. Texas does not license painters. Verify insurance instead." },
+  {
+    q: "How much insurance should a painter carry?",
+    a: "At least $1M general liability. Houston Superior Painting carries $2M plus workers' compensation.",
+  },
+  { q: "Is it normal to pay a deposit?", a: "Common, but not required. We take no upfront payment." },
+  { q: "How many quotes should I get?", a: "Three. Compare prep and product, not just the total." },
+  {
+    q: "Should I hire a painter who uses subcontractors?",
+    a: "Only if their COI covers the subs and one person is accountable on site.",
+  },
+  {
+    q: "What warranty is standard?",
+    a: "One to two years is common. Five years on workmanship is the top of the market in Houston.",
+  },
+  {
+    q: "How do I check a painter's reviews?",
+    a: "Google Business Profile for the office nearest you, then BBB. Ignore review counts; read the three-star ones.",
+  },
+  {
+    q: "What if a painter damages my property?",
+    a: "Their liability insurance pays. That's why you get the COI first.",
+  },
+]
 
-const faqs = [
-  { q: "How many estimates should I get before hiring a painter?", a: "Get 3 written estimates minimum. Compare not just price, but products, prep work, timeline, and warranty. The cheapest bid often means the worst quality." },
-  { q: "What is the biggest red flag when hiring painters?", a: "Asking for full payment upfront. Legitimate companies either take no deposit or a small deposit (10\u201330%). Also watch for: no written contract, no insurance, and no Google reviews." },
-  { q: "Should I buy the paint myself?", a: "No. Professional painters get contractor pricing (30\u201340% off retail) and know which products perform best in Houston\u2019s climate. Let them supply the paint and include it in the quote." },
-  { q: "How do I verify a painter\u2019s insurance?", a: "Ask for a Certificate of Insurance (COI) and verify it\u2019s current. Call the insurance company listed to confirm. A legitimate painter provides this immediately." },
-  { q: "Is the cheapest estimate always bad?", a: "Not always, but suspiciously low bids usually mean cheap paint, skipped prep, one coat, no warranty, or subcontracted labor. Compare the scope and products, not just the price." },
-  { q: "What should be in a painting contract?", a: "Scope of work, paint products and colors, number of coats, prep details, start/end dates, payment schedule, warranty terms, and satisfaction guarantee." },
-];
-
-export default function QuestionsToAskBeforeHiringPainters() {
+export default function HowToHireAPainterHoustonPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "15 Questions To Ask Before Hiring Painters in Houston TX", "author": { "@type": "Person", "name": "JJ Semo" }, "publisher": { "@id": "https://houstonsuperiorpainting.com/#business" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/questions-to-ask-before-hiring-painters" },
-        { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Questions to Ask Painters", "item": "https://houstonsuperiorpainting.com/questions-to-ask-before-hiring-painters" }] },
-        { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
-        { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
-      ] }) }} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            articleNode({ path: PAGE_PATH, headline: H1, description: DESCRIPTION }),
+            breadcrumbNode([
+              { name: "Home", path: "/" },
+              { name: "How to Hire a Painter in Houston", path: PAGE_PATH },
+            ]),
+          ],
+        }}
+      />
+      <Header />
+      <main>
+        <PageHero h1={H1} eyebrow="Hiring guide" />
 
-      <section className="quick-answer bg-amber-50 border-l-4 border-amber-500 py-8">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-xl font-semibold mb-3">Quick Answer</h2>
-          <p className="text-lg leading-relaxed">Before hiring painters in Houston, ask about: insurance ($1M+ liability), employees vs. subcontractors, paint brands, prep work included, number of coats, written warranty, and payment schedule. Never pay 100% upfront. Get 3 written estimates. Houston Superior Painting answers all 15 questions with confidence. Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a>.</p>
-        </div>
-      </section>
+        <QuickAnswer>
+          Texas does not issue painting licenses, so &ldquo;licensed painter&rdquo; means nothing in Houston. Vet a painter
+          on four things instead: a current certificate of insurance ($1M+ liability and workers&apos; comp), a written prep
+          scope, the exact paint product and coat count, and a written workmanship warranty. Any painter who can&apos;t
+          produce all four in writing before the job is a risk.{" "}
+          <Link href="/about" className="text-primary font-medium underline">
+            Houston Superior Painting
+          </Link>{" "}
+          provides all four on every estimate: (346) 594-5960.
+        </QuickAnswer>
 
-      <section className="relative bg-zinc-900 text-white py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-5xl text-center">
-          <h1 className="hero-h1 text-3xl md:text-5xl font-serif font-bold mb-6 text-balance">Questions To Ask Before Hiring Painters in Houston TX</h1>
-          <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto mb-8">An insider checklist from a professional painter. These 15 questions separate quality contractors from companies that will leave you with a mess.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors">Call {BUSINESS.phone}</a>
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 border border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">Free Estimate</Link>
-          </div>
-        </div>
-      </section>
+        <Section title="Short answer">
+          <Bullets
+            items={[
+              <>Ask for the insurance certificate, not a verbal &ldquo;yes we&apos;re insured&rdquo;</>,
+              <>Get prep, product, and coats in writing; that&apos;s where cheap quotes cut corners</>,
+              <>Never pay in full upfront; 0–30% deposit is normal, we charge none</>,
+            ]}
+          />
+        </Section>
 
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-10 text-center">15 Questions Every Homeowner Should Ask</h2>
-          <div className="space-y-6">
-            {questions.map((item, i) => (
-              <div key={item.q} className="bg-card border border-border rounded-xl p-6">
-                <div className="flex gap-4 items-start mb-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">{i + 1}</div>
-                  <h3 className="text-lg font-semibold pt-1.5">{item.q}</h3>
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-3"><strong>Why it matters:</strong> {item.why}</p>
-                <p className="text-sm bg-green-50 text-green-800 rounded-lg p-3 border border-green-200"><strong>Our answer:</strong> {item.us}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        <Section title="Licensed vs. insured: what Texas actually requires">
+          <p>
+            The Texas Department of Licensing and Regulation does not license house painters. No painter in Houston holds a
+            state painting license. What matters is insurance: general liability covers damage to your home, workers&apos;
+            compensation covers a painter who falls off your roof. Without workers&apos; comp, an injured worker can sue
+            the homeowner. Ask for the certificate of insurance (COI) with your name listed as certificate holder; the
+            insurer emails it directly.
+          </p>
+        </Section>
 
-      <section className="py-12 bg-muted/30">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-xl font-semibold mb-6 text-center">Related Pages</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-              { label: "Painting Company Near Me", href: "/painting-company-near-me" },
-              { label: "Interior Painting Cost Houston", href: "/interior-painting-cost-houston" },
-              { label: "Exterior Painting Cost Guide", href: "/exterior-house-painting-houston-cost-guide" },
-              { label: "Best Painters Katy TX", href: "/best-house-painters-near-katy-texas" },
-              { label: "Painters in Houston TX", href: "/painters-houston-tx" },
-              { label: "Free Estimate", href: "/contact" },
-            ].map(link => (
-              <Link key={link.href} href={link.href} className="block bg-card border border-border rounded-lg p-4 text-center font-medium hover:border-primary hover:text-primary transition-colors">{link.label}</Link>
-            ))}
-          </div>
-        </div>
-      </section>
+        <Section title="The 8 questions to ask every Houston painter">
+          <ol>
+            <li>
+              <strong>Can you email me your certificate of insurance today?</strong> Liability and workers&apos; comp,
+              current dates.
+            </li>
+            <li>
+              <strong>What prep is included?</strong> For{" "}
+              <Link href="/exterior-painting-houston-tx">exteriors</Link>: pressure wash, scrape, sand, caulk, prime bare
+              wood, rot repair. For <Link href="/interior-painting-houston-tx">interiors</Link>:{" "}
+              <Link href="/drywall-repair-houston-tx">patching</Link>, sanding, caulking, priming stains.
+            </li>
+            <li>
+              <strong>Which paint and how many coats?</strong> Brand, product line, sheen. Two coats is standard.
+              &ldquo;Paint and primer in one&rdquo; over bare wood is a red flag.
+            </li>
+            <li>
+              <strong>Who is on my job?</strong> Employees or subs, and who is the crew lead I talk to daily.
+            </li>
+            <li>
+              <strong>How do you handle Houston humidity?</strong> A good answer mentions surface moisture, morning dew,
+              and not painting above 85% humidity.
+            </li>
+            <li>
+              <strong>What does your warranty cover and for how long?</strong> Get it in writing. Ours is{" "}
+              <Link href="/warranty">5 years on workmanship</Link>.
+            </li>
+            <li>
+              <strong>What is the payment schedule?</strong> Deposit, progress, final. Walk away from 50%+ upfront.
+            </li>
+            <li>
+              <strong>Can I see three recent jobs in my area?</strong> Addresses or photos with neighborhood names, plus
+              Google reviews on the correct location profile.
+            </li>
+          </ol>
+        </Section>
 
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8 text-center">FAQs About Hiring Painters</h2>
-          <div className="space-y-3">
-            {faqs.map(faq => (
-              <details key={faq.q} className="group bg-card border border-border rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between cursor-pointer p-5 font-medium hover:bg-muted/50 transition-colors">{faq.q}<span className="ml-4 shrink-0 text-muted-foreground group-open:rotate-180 transition-transform">&#9660;</span></summary>
-                <div className="px-5 pb-5 text-muted-foreground leading-relaxed">{faq.a}</div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+        <Section title="Red flags">
+          <Bullets
+            items={[
+              <>
+                Quote is under $1.50/sq ft for exterior or $2/sq ft for interior (compare with the{" "}
+                <Link href="/houston-painting-cost-guide">Houston painting cost guide</Link>)
+              </>,
+              <>No written scope, just a total</>,
+              <>Cash only, or a large deposit before any work</>,
+              <>No physical office address; a P.O. box or virtual suite only</>,
+              <>Reviews all posted in the same week</>,
+              <>&ldquo;We&apos;re licensed by the state of Texas&rdquo;</>,
+            ]}
+          />
+        </Section>
 
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">We Answer All 15 Questions With Confidence</h2>
-          <p className="text-lg opacity-90 mb-8">Insured, background-checked team, premium products, written warranties, and owner on every job. Test us.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors">Call {BUSINESS.phone}</a>
-            <a href={SMS_HREF} className="inline-flex items-center justify-center gap-2 border border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">Text Us</a>
-          </div>
-        </div>
-      </section>
+        <Section title="What a proper Houston estimate looks like">
+          <p>
+            Square footage per area, surfaces included and excluded, prep steps listed, product and sheen per surface, coat
+            count, rot or drywall repair priced separately, start and finish dates, payment schedule, warranty terms, and
+            the COI attached. See{" "}
+            <Link href="/blog/what-to-expect-painting-estimate">What to Expect from a Painting Estimate</Link>.
+          </p>
+          <p>
+            Comparing a local crew with a national franchise? Here is{" "}
+            <Link href="/houston-superior-painting-vs-certapro">how Houston Superior Painting compares with CertaPro</Link>.
+          </p>
+        </Section>
+
+        <FAQ items={FAQS} title="Frequently asked questions" variant="compact" />
+
+        <CtaBlock title="Get an estimate that answers all eight questions">
+          Call (346) 594-5960 or{" "}
+          <Link href={ESTIMATE_PATH} className="underline">
+            request an estimate
+          </Link>
+          . COI, written scope, product spec, and warranty come with every quote.
+        </CtaBlock>
+
+        <AuthorByline />
+      </main>
+      <Footer />
     </>
-  );
+  )
 }

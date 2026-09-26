@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/luxury-house-painters-houston",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Luxury House Painters Houston TX — Houston Superior Painting",
     description: "High-end residential painting for Houston's finest homes. River Oaks, Memorial, Tanglewood, West University. Premium materials.",
     url: "https://houstonsuperiorpainting.com/luxury-house-painters-houston",

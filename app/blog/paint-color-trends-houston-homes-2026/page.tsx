@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Clock, User, Calendar, Phone, Lightbulb } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Paint Color Trends for Houston Homes in 2026",
+  title: "Paint Color Trends for Houston Homes in 2026 | Houston Guide",
   description:
     "What paint colors are Houston homeowners choosing in 2026? Here's what's trending inside and outside — and what's fading out of the market.",
   alternates: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-06-01T00:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [
       {
         url: "https://houstonsuperiorpainting.com/images/blog/paint-color-trends-2026.png",
@@ -185,7 +185,7 @@ export default function PaintColorTrends2026Blog() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  <Link href="/about" rel="author" className="hover:text-primary">Juan Serra</Link>
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
@@ -392,7 +392,7 @@ export default function PaintColorTrends2026Blog() {
               Color trends are useful as a starting point, not a rulebook. The right color for your specific home depends on its architecture, its fixed elements, its light conditions, and how you live in it.
             </p>
             <p>
-              A color consultation that takes 2026 trends as one input — alongside your specific home and the Houston market context — produces better results than trend-following alone. At Houston Superior Painting, we stay current on what&apos;s working in the Houston market and can discuss what current color directions look like applied to your specific home, whether you&apos;re planning an <Link href="/interior-painting-houston">interior refresh</Link>, an <Link href="/exterior-painting-houston">exterior repaint</Link>, or a <Link href="/cabinet-painting-houston-tx">cabinet transformation</Link>.
+              A color consultation that takes 2026 trends as one input — alongside your specific home and the Houston market context — produces better results than trend-following alone. At Houston Superior Painting, we stay current on what&apos;s working in the Houston market and can discuss what current color directions look like applied to your specific home, whether you&apos;re planning an <Link href="/interior-painting-houston-tx">interior refresh</Link>, an <Link href="/exterior-painting-houston-tx">exterior repaint</Link>, or a <Link href="/cabinet-refinishing-houston-tx">cabinet transformation</Link>. For budgets, our <Link href="/houston-painting-cost-guide">2026 Houston painting cost guide</Link> covers all three.
             </p>
 
             {/* FAQ Section */}

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-richmond",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Interior Painters Richmond TX — Houston Superior Painting",
     description: "Professional interior painting in Richmond, TX. Serving Pecan Grove, Long Meadow Farms, Greatwood. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/interior-painting-richmond",

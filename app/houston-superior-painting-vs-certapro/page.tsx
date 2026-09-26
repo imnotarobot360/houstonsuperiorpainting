@@ -108,11 +108,11 @@ const faqs = [
   },
   {
     question: "Which company has better warranties?",
-    answer: "Houston Superior Painting offers a 5-year written warranty on labor and materials, compared to CertaPro's typical 1-2 year warranty. Our longer warranty reflects confidence in our workmanship and materials."
+    answer: "Houston Superior Painting offers a 5-year written workmanship warranty, compared to CertaPro's typical 1-2 year warranty. Our longer warranty reflects confidence in our workmanship and materials."
   },
   {
     question: "Can I meet the owner at Houston Superior Painting?",
-    answer: "Yes, owner JJ Semo personally meets with every client during the estimate process and remains involved throughout the project. This direct relationship ensures accountability and communication that franchise models can't match."
+    answer: "Yes. Houston Superior Painting is owner-run: Juan Serra founded it in 2019, runs it from the Cypress headquarters, and personally reviews the prep scope on every estimate. That direct line to the owner ensures accountability and communication that franchise models can't match."
   }
 ]
 
@@ -224,7 +224,7 @@ export default function HSPvsCertaProPage() {
                 <Users className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Direct Owner Involvement</h3>
                 <p className="text-muted-foreground mb-4">
-                  At Houston Superior Painting, owner JJ Semo personally meets with every client. 
+                  At Houston Superior Painting, owner Juan Serra personally reviews the prep scope on every estimate. 
                   You&apos;re not just another number—you&apos;re working directly with the person whose 
                   reputation is on the line.
                 </p>
@@ -393,19 +393,8 @@ export default function HSPvsCertaProPage() {
             "@type": "Article",
             "headline": "Houston Superior Painting vs CertaPro Painters: 2026 Comparison",
             "description": "Compare Houston Superior Painting vs CertaPro Painters. See differences in pricing, warranty, local ownership, and customer reviews.",
-            "author": {
-              "@type": "Person",
-              "name": "JJ Semo",
-              "jobTitle": "Owner & Lead Estimator"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Houston Superior Painting",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://houstonsuperiorpainting.com/images/logo.png"
-              }
-            },
+            "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" },
+            "publisher": { "@id": "https://houstonsuperiorpainting.com/#organization" },
             "datePublished": "2026-05-12",
             "dateModified": "2026-05-12"
           })

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/drywall-repair-before-painting',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Drywall Repair Before Painting: Why It Matters",
     description: "Fix cracks and holes before painting for a professional finish.",
     type: "article",
@@ -26,7 +27,7 @@ const relatedPosts = [
   {
     title: "Why Proper Paint Preparation Matters",
     href: "/blog/paint-preparation-houston-climate",
-    excerpt: "The secret to paint that lasts 10+ years.",
+    excerpt: "The secret to paint that lasts its full repaint cycle.",
     image: "/images/blog/paint-preparation-houston.jpg"
   }
 ]
@@ -103,7 +104,7 @@ export default function DrywallRepairBeforePaintingPage() {
       </p>
 
       <p>
-        Poorly matched texture is often more visible than the original damage.
+        Poorly matched texture is often more visible than the original damage. That&apos;s why our <Link href="/drywall-repair-houston-tx">drywall repair in Houston</Link> is quoted and scheduled together with the paint.
       </p>
 
       <h2>When to Call a Professional</h2>
@@ -123,7 +124,7 @@ export default function DrywallRepairBeforePaintingPage() {
       <h2>Drywall Repair and Painting Services</h2>
 
       <p>
-        Houston Superior Painting provides complete drywall repair and interior painting services throughout Houston, Katy, Cypress, and surrounding areas.
+        Houston Superior Painting provides complete drywall repair and interior painting services throughout Houston, Katy, <Link href="/painters-cypress-tx">Cypress</Link>, and surrounding areas. Repairs are itemized separately on your quote; see what a room or whole home costs in our <Link href="/interior-painting-cost-houston">interior painting cost in Houston</Link> guide.
       </p>
 
       <p>

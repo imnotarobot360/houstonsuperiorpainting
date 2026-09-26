@@ -12,16 +12,16 @@ export const metadata: Metadata = {
   title: "Best Time to Paint a Houston Home Exterior",
   description: "Timing your exterior paint job in Houston matters. Here's the seasonal guide Houston homeowners need — including when to book and when to avoid.",
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/blog/best-time-to-paint-houston-home-exterior',
+    canonical: 'https://houstonsuperiorpainting.com/blog/best-time-to-paint-house-houston',
   },
   openGraph: {
     title: "Best Time to Paint Your Houston Home Exterior: A Seasonal Guide",
     description: "Timing your exterior paint job in Houston matters. Here's the seasonal guide Houston homeowners need — including when to book and when to avoid.",
-    url: "https://houstonsuperiorpainting.com/blog/best-time-to-paint-houston-home-exterior",
+    url: "https://houstonsuperiorpainting.com/blog/best-time-to-paint-house-houston",
     siteName: "Houston Superior Painting",
     type: "article",
     publishedTime: "2026-05-31T00:00:00Z",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: [{
       url: "https://houstonsuperiorpainting.com/images/blog/best-time-to-paint-houston.png",
       width: 1200,
@@ -62,7 +62,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com" },
     { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://houstonsuperiorpainting.com/blog" },
-    { "@type": "ListItem", "position": 3, "name": "Best Time to Paint Your Houston Home Exterior: A Seasonal Guide", "item": "https://houstonsuperiorpainting.com/blog/best-time-to-paint-houston-home-exterior" }
+    { "@type": "ListItem", "position": 3, "name": "Best Time to Paint Your Houston Home Exterior: A Seasonal Guide", "item": "https://houstonsuperiorpainting.com/blog/best-time-to-paint-house-houston" }
   ]
 }
 
@@ -95,7 +95,7 @@ export default function BestTimeToPaintBlog() {
             "dateModified": "2026-05-31",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://houstonsuperiorpainting.com/blog/best-time-to-paint-houston-home-exterior"
+              "@id": "https://houstonsuperiorpainting.com/blog/best-time-to-paint-house-houston"
             }
           })
         }}
@@ -177,7 +177,7 @@ export default function BestTimeToPaintBlog() {
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <User className="h-4 w-4" />
-                  JJ Semo
+                  Juan Serra
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
@@ -311,7 +311,7 @@ export default function BestTimeToPaintBlog() {
               Interior painting isn&apos;t bound by the same seasonal constraints — it&apos;s done at a controlled indoor temperature regardless of what&apos;s happening outside. This makes summer the perfect time to tackle interior painting while you wait for better outdoor conditions. For Houston homeowners with both interior and exterior projects in mind, a common and efficient approach is:
             </p>
             <ul>
-              <li><Link href="/blog/interior-painting-cost-houston-tx">Interior painting</Link> in June/July/August when outdoor conditions are challenging.</li>
+              <li><Link href="/interior-painting-cost-houston">Interior painting</Link> in June/July/August when outdoor conditions are challenging.</li>
               <li>Exterior painting booked for fall, with an early-August scheduling call to lock in a spot.</li>
             </ul>
             <p>
@@ -328,7 +328,7 @@ export default function BestTimeToPaintBlog() {
 
             <h2>Schedule Around Houston&apos;s Climate — Not Against It</h2>
             <p>
-              At Houston Superior Painting, we schedule around Houston&apos;s climate, not against it. We&apos;ll talk through the best timing for your specific home, your location, and your goals — and put you on our schedule before your spot disappears. We serve <Link href="/painters-katy-tx">Katy</Link>, <Link href="/painters-cypress-tx">Cypress</Link>, <Link href="/painters-sugar-land-tx">Sugar Land</Link>, and greater Houston with free, detailed <Link href="/exterior-painting-houston">exterior painting</Link> estimates.
+              At Houston Superior Painting, we schedule around Houston&apos;s climate, not against it. We&apos;ll talk through the best timing for your specific home, your location, and your goals — and put you on our schedule before your spot disappears. We serve <Link href="/painters-katy-tx">Katy</Link>, <Link href="/painters-cypress-tx">Cypress</Link>, <Link href="/painters-sugar-land-tx">Sugar Land</Link>, and greater Houston with free, detailed <Link href="/exterior-painting-houston-tx">exterior painting</Link> estimates.
             </p>
 
             {/* FAQ Section */}
@@ -407,7 +407,7 @@ export default function BestTimeToPaintBlog() {
                 <CardContent className="p-6">
                   <Badge variant="secondary" className="mb-2">Pricing Guide</Badge>
                   <h3 className="font-semibold text-foreground mb-2">
-                    <Link href="/blog/interior-painting-cost-houston-tx" className="hover:text-primary transition-colors">
+                    <Link href="/interior-painting-cost-houston" className="hover:text-primary transition-colors">
                       Interior Painting Cost in Houston TX: What Homeowners Should Expect
                     </Link>
                   </h3>

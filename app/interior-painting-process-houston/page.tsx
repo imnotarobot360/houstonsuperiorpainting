@@ -12,11 +12,11 @@ import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
 const CANONICAL = "https://houstonsuperiorpainting.com/interior-painting-process-houston"
 
 export const metadata: Metadata = {
-  title: "Our 8-Step Interior Painting Process",
+  title: "Our 8-Step Interior Painting Process | Houston Superior Painting",
   description:
     "See our professional 8-step interior painting process: full home protection, surface prep, sanding, priming, and two finish coats.",
   alternates: { canonical: CANONICAL },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Our Professional 8-Step Interior Painting Process | Houston",
     description:
       "Why 90% of a lasting finish comes from preparation — not the final coat. The full 8-step process behind every Houston Superior Painting project.",

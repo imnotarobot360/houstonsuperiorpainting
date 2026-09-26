@@ -6,14 +6,14 @@ export const metadata: Metadata = {
   title: "House Painting Cost in Houston | 2026 Price Guide",
   description: "Complete 2026 guide to house painting costs in Houston, TX. Interior painting: $2.50-4.50/sq ft. Exterior painting: $3,500-12,000.",
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/blog/house-painting-cost-houston-2026',
+    canonical: 'https://houstonsuperiorpainting.com/houston-painting-cost-guide',
   },
   openGraph: {
     title: "How Much Does House Painting Cost in Houston? 2026 Price Guide",
     description: "Complete pricing guide for interior and exterior painting in Houston. Updated for 2026 with real local prices.",
     type: "article",
     publishedTime: "2026-05-12",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/house-painting-cost-houston.jpg"],
   },
   twitter: {
@@ -65,7 +65,7 @@ const relatedPosts = [
   },
   {
     title: "How to Choose the Best Painters in Houston",
-    href: "/blog/how-to-choose-best-painters-houston",
+    href: "/questions-to-ask-before-hiring-painters",
     excerpt: "Tips for finding reliable, quality painters in Houston.",
     image: "/images/blog/choose-painters-houston.jpg"
   }
@@ -76,7 +76,7 @@ export default function HousePaintingCostHoustonPage() {
     <BlogPostTemplate
       title="How Much Does House Painting Cost in Houston? 2026 Price Guide"
       excerpt="Understanding painting costs in Houston helps you budget accurately and avoid surprises. This comprehensive guide covers interior and exterior pricing, what affects costs, and how to get the best value for your investment."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="May 12, 2026"
       readTime="12 min read"

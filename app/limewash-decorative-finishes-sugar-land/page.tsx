@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/limewash-decorative-finishes-sugar-land',
   },
-  title: "Limewash & Decorative Finishes Sugar Land",
+  title: "Limewash & Decorative Finishes Sugar Land | Free Estimates",
   description: "Premium limewash and decorative finishes in Sugar Land, TX. European-style elegance. Free quote — call (346) 594-5960.",
 }
 

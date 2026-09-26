@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-fulshear-tx',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters Fulshear TX — Houston Superior Painting",
     description: "Professional painters in Fulshear TX. Interior, exterior, cabinet painting for Cross Creek Ranch, Fulbrook, Polo Ranch. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/painters-fulshear-tx",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function PaintersFulshearTX() {
   return (
     <>
-      <TrustBar />
+      <TrustBar hideRating />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -50,7 +50,7 @@ export default function PaintersFulshearTX() {
           state="TX"
           heroHeadline="Fulshear's Trusted House Painters"
           heroDescription="Premium painting services for Cross Creek Ranch, Fulbrook, Polo Ranch, and all Fulshear communities. Quality craftsmanship that matches your home's quality."
-          quickAnswer="Houston Superior Painting provides professional painting services throughout Fulshear TX including Cross Creek Ranch, Fulbrook, Polo Ranch, and Jordan Ranch. Interior painting costs $2.50-$4.50/sq ft, exterior painting $6,000-$15,000. We specialize in upgrading builder-grade finishes with premium Sherwin-Williams and Benjamin Moore products. 5-year warranty included. Call (346) 594-5960 for a free estimate."
+          quickAnswer="Houston Superior Painting provides professional painting services throughout Fulshear TX including Cross Creek Ranch, Fulbrook, Polo Ranch, and Jordan Ranch. Interior painting costs $2.50–$4.50/sq ft ($4,000–$8,000 for a 2,500 sq ft home) and exterior painting $3,500–$12,000 per home. We specialize in upgrading builder-grade finishes with premium Sherwin-Williams and Benjamin Moore products. 5-year warranty included. Call (346) 594-5960 for a free estimate."
           aboutCity={`Fulshear is one of Texas's fastest-growing communities, and its beautiful new homes deserve premium painting services. Whether you're personalizing a newly built home, updating a property that's a few years old, or maintaining an established Fulshear residence, Houston Superior Painting delivers the quality craftsmanship your investment deserves.
 
 We've painted homes throughout Fulshear's premier communities—from the luxury estates of Fulbrook on Fulshear Creek to the family-friendly neighborhoods of Cross Creek Ranch, from Polo Ranch to Tamarron. Our team understands the architectural styles popular in these communities and the specific paint products that perform best in Fort Bend County's climate.
@@ -59,9 +59,8 @@ Many Fulshear homeowners come to us when their builder-grade paint begins to sho
 
 Fulshear's master-planned communities have specific HOA requirements, and we're experienced with the approval processes in Cross Creek Ranch, Fulbrook, and other neighborhoods. We help you select colors that meet community standards while expressing your personal style.
 
-Our commitment to quality, cleanliness, and communication has earned us a 4.9-star Google rating. We treat every Fulshear home with the care and respect it deserves, leaving your property spotless when we're finished.`}
+Our Google reviews speak to our quality, cleanliness, and communication. We treat every Fulshear home with the care and respect it deserves, leaving your property spotless when we're finished.`}
           whyChooseUs={[
-            "35+ Fulshear projects completed since 2019",
             "Master-planned community expertise: Cross Creek Ranch, Fulbrook, Polo Ranch",
             "Builder-grade upgrades: premium products that outperform standard finishes",
             "New construction specialists: understand modern home requirements",
@@ -134,7 +133,7 @@ Our commitment to quality, cleanliness, and communication has earned us a 4.9-st
           faqs={[
             {
               question: "How much does it cost to paint a house in Fulshear?",
-              answer: "Interior painting costs $2.50-$4.50/sq ft. A 3,500 sq ft home runs $8,750-$15,750. Exterior painting ranges $6,000-$15,000 based on size and details."
+              answer: "Interior painting in Fulshear typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
             },
             {
               question: "Do you work with Fulshear HOAs?",

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Exterior painting in Houston TX costs $3,500–$9,500 for most homes in 2026 ($1.75–$4.00/sq ft). Real prices by home size, siding type & stories.",
   alternates: {
-    canonical: "https://houstonsuperiorpainting.com/blog/exterior-painting-cost-houston-tx-2026",
+    canonical: "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide",
   },
   openGraph: {
     title: "How Much Does Exterior Painting Cost in Houston TX in 2026?",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       "Real 2026 exterior painting prices in Houston by home size, siding type, and stories — plus what every quote should include.",
     type: "article",
     publishedTime: "2026-06-11",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/exterior-painting-cost-houston-tx-2026.png"],
   },
   twitter: {
@@ -71,7 +71,7 @@ const faqs = [
 const relatedPosts = [
   {
     title: "How Much Does House Painting Cost in Houston? 2026 Price Guide",
-    href: "/blog/house-painting-cost-houston-2026",
+    href: "/houston-painting-cost-guide",
     excerpt: "Complete 2026 guide to interior and exterior house painting costs in Houston, TX.",
     image: "/images/blog/house-painting-cost-houston.jpg",
   },
@@ -94,7 +94,7 @@ export default function ExteriorPaintingCostHoustonPage() {
     <BlogPostTemplate
       title="How Much Does Exterior Painting Cost in Houston TX in 2026?"
       excerpt="Exterior painting in Houston TX costs $3,500–$9,500 for most homes in 2026, or roughly $1.75–$4.00 per square foot of paintable surface. Here's the full breakdown by home size, siding type, and stories."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 11, 2026"
       readTime="11 min read"
@@ -364,7 +364,7 @@ export default function ExteriorPaintingCostHoustonPage() {
         Paint won&apos;t cure properly above ~95°F surface temperature or when rain hits within 4 hours of application.
         Experienced Houston crews work around this; inexperienced ones paint through it and the finish fails. More
         detail in our guide to the{" "}
-        <Link href="/blog/best-time-to-paint-houston-home-exterior" className="text-primary underline">
+        <Link href="/blog/best-time-to-paint-house-houston" className="text-primary underline">
           best time to paint your exterior in Houston
         </Link>
         .
@@ -413,7 +413,7 @@ export default function ExteriorPaintingCostHoustonPage() {
       </ul>
       <p>
         If a Houston painter resists putting any of these in writing, walk away. Our guide to{" "}
-        <Link href="/blog/how-to-choose-best-painters-houston" className="text-primary underline">
+        <Link href="/questions-to-ask-before-hiring-painters" className="text-primary underline">
           finding the best painters in Houston
         </Link>{" "}
         covers the full vetting process.

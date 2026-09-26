@@ -4,7 +4,7 @@ import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
   title: "How Long Does Exterior Paint Last in Houston?",
-  description: "Learn how long exterior paint lasts in Houston's climate. With proper prep and premium paint, expect 8-10 years.",
+  description: "Learn how long exterior paint lasts in Houston's climate. With proper prep and premium paint, plan to repaint every 5-7 years.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/how-long-does-exterior-paint-last-houston',
   },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Expert guide to exterior paint longevity in Houston's challenging climate.",
     type: "article",
     publishedTime: "2026-05-10",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/exterior-paint-durability-houston.jpg"],
   },
   twitter: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How long does exterior paint last in Houston?",
-    answer: "With professional application and premium paint, exterior paint in Houston typically lasts 8-10 years before needing a full repaint. South-facing walls may need attention sooner due to intense UV exposure. DIY paint jobs and lower-quality paints may only last 3-5 years."
+    answer: "With professional application and premium paint, exterior paint in Houston lasts 5-7 years before needing a full repaint; shaded, protected walls can go longer. South-facing walls may need attention sooner due to intense UV exposure. DIY paint jobs and lower-quality paints may only last 3-4 years."
   },
   {
     question: "Why does exterior paint fail faster in Houston?",
@@ -65,7 +65,7 @@ const relatedPosts = [
   },
   {
     title: "How Much Does House Painting Cost in Houston?",
-    href: "/blog/house-painting-cost-houston-2026",
+    href: "/houston-painting-cost-guide",
     excerpt: "Complete pricing guide for interior and exterior painting.",
     image: "/images/blog/house-painting-cost-houston.jpg"
   }
@@ -76,7 +76,7 @@ export default function ExteriorPaintDurabilityHoustonPage() {
     <BlogPostTemplate
       title="How Long Does Exterior Paint Last in Houston? Complete Durability Guide"
       excerpt="Houston's intense sun, humidity, and storms create unique challenges for exterior paint. Learn how long you can expect your paint to last, what causes premature failure, and how to maximize the lifespan of your exterior paint job."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="May 10, 2026"
       readTime="11 min read"
@@ -90,8 +90,8 @@ export default function ExteriorPaintDurabilityHoustonPage() {
       <div className="quick-answer bg-secondary/10 border-l-4 border-secondary p-6 rounded-r-lg mb-8" data-speakable="true">
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
-          With professional application and premium paint, exterior paint in Houston lasts <strong>8-10 years</strong> before needing a full repaint. 
-          South-facing walls may need attention in 6-8 years due to intense UV. Lower-quality paint jobs may only last 3-5 years. 
+          With professional application and premium paint, exterior paint in Houston lasts <strong>5-7 years</strong> before needing a full repaint; shaded, protected walls can go longer. 
+          South- and west-facing walls may show wear first due to intense UV. Lower-quality paint jobs may only last 3-4 years. 
           Proper preparation is the single biggest factor in paint longevity.
         </p>
       </div>
@@ -162,27 +162,27 @@ export default function ExteriorPaintDurabilityHoustonPage() {
         <tbody>
           <tr>
             <td className="border border-border p-3">Hardie Board / Fiber Cement</td>
-            <td className="border border-border p-3">10-15 years</td>
+            <td className="border border-border p-3">5-7+ years (longer on shaded walls)</td>
             <td className="border border-border p-3">Minimal; best substrate for paint</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">Wood Siding</td>
-            <td className="border border-border p-3">5-8 years</td>
+            <td className="border border-border p-3">5-7 years</td>
             <td className="border border-border p-3">Rot, swelling, checking</td>
           </tr>
           <tr>
             <td className="border border-border p-3">Stucco</td>
-            <td className="border border-border p-3">7-10 years</td>
+            <td className="border border-border p-3">5-7 years</td>
             <td className="border border-border p-3">Cracking, moisture intrusion</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">Brick (painted)</td>
-            <td className="border border-border p-3">8-12 years</td>
+            <td className="border border-border p-3">7-10 years</td>
             <td className="border border-border p-3">Efflorescence, moisture</td>
           </tr>
           <tr>
             <td className="border border-border p-3">Aluminum Siding</td>
-            <td className="border border-border p-3">5-8 years</td>
+            <td className="border border-border p-3">5-7 years</td>
             <td className="border border-border p-3">Chalking, oxidation</td>
           </tr>
           <tr className="bg-muted/50">
@@ -367,11 +367,11 @@ export default function ExteriorPaintDurabilityHoustonPage() {
         <li>Premium Sherwin-Williams or Benjamin Moore paint</li>
         <li>Two full coats for optimal coverage and durability</li>
         <li>Professional application by experienced crews</li>
-        <li>5-year warranty on labor and materials</li>
+        <li>5-year workmanship warranty and no deposit</li>
       </ul>
 
       <p>
-        We&apos;ve painted hundreds of Houston homes and understand what it takes to achieve lasting results 
+        We&apos;ve completed 500+ Houston projects since 2019 and understand what it takes to achieve lasting results 
         in our challenging climate.
       </p>
 
@@ -389,7 +389,8 @@ export default function ExteriorPaintDurabilityHoustonPage() {
 
       <p>
         Learn more about our <Link href="/exterior-painting-houston-tx" className="text-primary underline">exterior painting services</Link> and 
-        see examples of our work.
+        see examples of our work, or budget your next repaint with the{" "}
+        <Link href="/exterior-house-painting-houston-cost-guide" className="text-primary underline">exterior house painting cost guide</Link>.
       </p>
     </BlogPostTemplate>
   )

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/warranty",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "5-Year Painting Warranty — Houston Superior Painting",
     description: "Our comprehensive 5-year warranty covers peeling, blistering, fading, and workmanship defects. Learn exactly what's covered and how to file a claim.",
     url: "https://houstonsuperiorpainting.com/warranty",

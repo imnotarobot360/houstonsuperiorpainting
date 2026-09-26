@@ -4,7 +4,7 @@ import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
   title: "Cabinet Refinishing vs Replacement in Houston: Cost Guide",
-  description: "Cabinet refinishing ($3,000-8,000) vs replacement ($20,000-50,000) in Houston. Learn when to refinish vs replace your kitchen cabinets and save up to 80%.",
+  description: "Cabinet refinishing ($3,000-6,500) vs replacement ($20,000-50,000) in Houston. Learn when to refinish vs replace your kitchen cabinets and save up to 80%.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/cabinet-refinishing-vs-replacement-houston',
   },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Save thousands on your kitchen remodel. Compare refinishing vs replacement costs in Houston.",
     type: "article",
     publishedTime: "2026-05-09",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/cabinet-refinishing-vs-replacement.jpg"],
   },
   twitter: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does cabinet refinishing cost in Houston?",
-    answer: "Professional cabinet refinishing in Houston typically costs $3,000-8,000 depending on kitchen size and cabinet complexity. This is 70-80% less than cabinet replacement while achieving a like-new appearance with factory-quality spray finishes."
+    answer: "Professional cabinet refinishing in Houston typically costs $3,000-6,500 for most kitchens, with large kitchens with islands running higher. Cost depends on kitchen size and cabinet complexity. This is 70-80% less than cabinet replacement while achieving a like-new appearance with factory-quality spray finishes."
   },
   {
     question: "How much does cabinet replacement cost in Houston?",
@@ -53,7 +53,7 @@ const faqs = [
 const relatedPosts = [
   {
     title: "How Much Does House Painting Cost in Houston?",
-    href: "/blog/house-painting-cost-houston-2026",
+    href: "/houston-painting-cost-guide",
     excerpt: "Complete pricing guide for interior and exterior painting.",
     image: "/images/blog/house-painting-cost-houston.jpg"
   },
@@ -76,7 +76,7 @@ export default function CabinetRefinishingVsReplacementPage() {
     <BlogPostTemplate
       title="Cabinet Refinishing vs Replacement in Houston: Complete Cost Comparison"
       excerpt="Updating your kitchen cabinets is one of the best investments in your home. But should you refinish your existing cabinets or replace them entirely? This comprehensive guide compares costs, timelines, and results to help Houston homeowners make the right choice."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="May 9, 2026"
       readTime="12 min read"
@@ -90,11 +90,16 @@ export default function CabinetRefinishingVsReplacementPage() {
       <div className="quick-answer bg-secondary/10 border-l-4 border-secondary p-6 rounded-r-lg mb-8" data-speakable="true">
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
-          Cabinet refinishing costs <strong>$3,000-8,000</strong> vs <strong>$20,000-50,000+</strong> for replacement in Houston—
+          Cabinet refinishing costs <strong>$3,000-6,500</strong> for most kitchens vs <strong>$20,000-50,000+</strong> for replacement in Houston—
           a savings of 70-80%. Refinishing takes 3-5 days vs 4-8 weeks for replacement. Choose refinishing if your cabinets 
           are structurally sound; choose replacement if you need a new layout or cabinets are damaged beyond repair.
         </p>
       </div>
+
+      <p>
+        For per-door pricing and kitchen-size tiers, see our full guide to the{" "}
+        <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">cost to paint kitchen cabinets in Houston</Link>.
+      </p>
 
       <p>
         Your kitchen cabinets are the most visible element of your kitchen. When they look dated, scratched, or 

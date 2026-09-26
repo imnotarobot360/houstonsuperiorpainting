@@ -45,26 +45,7 @@ const SERVICE_JSONLD = {
   description:
     "Professional low-pressure soft washing for painted siding, stucco, brick, roofs, fascia, fences, patios, and pool decks in Houston, Katy, Cypress, Sugar Land, and surrounding TX cities. Safely removes mold, algae, mildew, and black stains. Pre-paint prep specialists.",
   serviceType: "Soft Washing",
-  provider: {
-    "@type": "LocalBusiness",
-    "@id": "https://houstonsuperiorpainting.com/#business",
-    name: "Houston Superior Painting",
-    telephone: "+1-346-594-5960",
-    email: "info@houstonsuperiorpainting.com",
-    url: "https://houstonsuperiorpainting.com",
-    image: "https://houstonsuperiorpainting.com/images/og-cover.jpg",
-    priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "14150 Huffmeister Rd, Suite 410",
-      addressLocality: "Cypress",
-      addressRegion: "TX",
-      postalCode: "77429",
-      addressCountry: "US",
-    },
-    // Canonical HQ geo — keep in sync with BUSINESS.primaryAddress.
-    geo: { "@type": "GeoCoordinates", latitude: 29.9745, longitude: -95.6445 },
-  },
+  provider: { "@type": "Organization", "@id": "https://houstonsuperiorpainting.com/#organization" },
   areaServed: [
     { "@type": "City", name: "Houston" },
     { "@type": "City", name: "Katy" },

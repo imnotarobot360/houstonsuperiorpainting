@@ -3,12 +3,22 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Phone, MapPin, Star, Clock, Shield, Users } from "lucide-react"
+import { CheckCircle, Phone, MapPin, Star, Clock, Shield, Users, Building2 } from "lucide-react"
 import { BeforeAfter } from "@/components/luxury/before-after"
 import { generateBreadcrumbSchema } from "@/components/structured-data"
-import { SERVICE_AREAS } from "@/lib/business"
+import {
+  BUSINESS,
+  SERVICE_AREAS,
+  CORE_SERVICES,
+  PHONE_HREF,
+  officeAddressLine,
+} from "@/lib/business"
+import { nearestOfficeFor } from "@/lib/nearest-office"
 
 const SITE = "https://houstonsuperiorpainting.com"
+const ESTIMATE_PATH = "/painting-estimate-houston"
+const COST_GUIDE_PATH = "/houston-painting-cost-guide"
+
 
 interface LocationPageProps {
   city: string
@@ -28,7 +38,8 @@ interface LocationPageProps {
     question: string
     answer: string
   }[]
-  testimonial: {
+  // Kept on the page data but no longer rendered — see note in the component body.
+  testimonial?: {
     quote: string
     author: string
     location: string
@@ -46,7 +57,6 @@ export function LocationPageTemplate({
   services,
   neighborhoods,
   faqs,
-  testimonial,
 }: LocationPageProps) {
   // Resolve this page's own URL from the canonical SERVICE_AREAS list rather
   // than accepting a slug prop, so the breadcrumb URL can never disagree with
@@ -54,6 +64,7 @@ export function LocationPageTemplate({
   // link if the city is not in the list (a page not yet registered as a service
   // area) — better a 2-level trail than one pointing at a guessed URL.
   const area = SERVICE_AREAS.find((a) => a.name === city)
+  const nearestOffice = nearestOfficeFor(area?.slug)
 
   const crumbs = [
     { name: "Home", url: `${SITE}/` },
@@ -119,14 +130,14 @@ export function LocationPageTemplate({
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
-              <Link href="/contact">
-                Get Free Estimate in {city}
+              <Link href={ESTIMATE_PATH}>
+                Get a Painting Estimate in {city}
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 !bg-transparent !text-primary-foreground hover:!bg-primary-foreground/10">
-              <a href="tel:+13465945960" aria-label="Call Houston Superior Painting at 346-594-5960">
+              <a href={PHONE_HREF} aria-label={`Call ${BUSINESS.name} at ${BUSINESS.phone}`}>
                 <Phone className="h-4 w-4 mr-2" />
-                (346) 594-5960
+                {BUSINESS.phone}
               </a>
             </Button>
           </div>
@@ -147,11 +158,18 @@ export function LocationPageTemplate({
       <section className="py-8 bg-card border-b border-border">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="flex flex-col items-center gap-2">
+            {/* No rating figure here: the 4.9 / 200+ number belongs to the Houston
+                Google Business Profile and must not be printed on other city pages. */}
+            <a
+              href={BUSINESS.social.googleMaps}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-2 group"
+            >
               <Star className="h-6 w-6 text-accent" />
-              <span className="text-2xl font-bold text-foreground">4.9</span>
-              <span className="text-sm text-muted-foreground">Google Rating</span>
-            </div>
+              <span className="text-lg font-bold text-foreground group-hover:text-primary">See reviews on Google</span>
+              <span className="text-sm text-muted-foreground">Read what customers say</span>
+            </a>
             <div className="flex flex-col items-center gap-2">
               <Clock className="h-6 w-6 text-accent" />
               <span className="text-2xl font-bold text-foreground">2019</span>
@@ -159,13 +177,13 @@ export function LocationPageTemplate({
             </div>
             <div className="flex flex-col items-center gap-2">
               <Shield className="h-6 w-6 text-accent" />
-              <span className="text-2xl font-bold text-foreground">5-Year</span>
+              <span className="text-2xl font-bold text-foreground">{BUSINESS.trust.warrantyYears}-Year</span>
               <span className="text-sm text-muted-foreground">Warranty</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Users className="h-6 w-6 text-accent" />
-              <span className="text-2xl font-bold text-foreground">500+</span>
-              <span className="text-sm text-muted-foreground">Happy Customers</span>
+              <span className="text-2xl font-bold text-foreground">{BUSINESS.trust.projectsCompleted}+</span>
+              <span className="text-sm text-muted-foreground">Houston-area projects</span>
             </div>
           </div>
         </div>
@@ -179,6 +197,51 @@ export function LocationPageTemplate({
           </h2>
           <p className="text-foreground leading-relaxed whitespace-pre-line">
             {aboutCity}
+          </p>
+        </section>
+
+        {/* Nearest office + core services. Visible text only: these pages have
+            no office of their own, so the address must NOT go into schema. */}
+        <section className="mb-12 bg-card rounded-xl p-8 border border-border">
+          {nearestOffice && (
+            <div className="mb-8">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 flex items-center gap-3">
+                <Building2 className="h-6 w-6 text-accent flex-shrink-0" />
+                Your Nearest Office
+              </h2>
+              <p className="text-foreground leading-relaxed">
+                The nearest {BUSINESS.name} office to {city} is our{" "}
+                <Link href={`/${nearestOffice.pageSlug}`} className="text-primary font-medium hover:underline">
+                  {nearestOffice.city} painters office
+                </Link>{" "}
+                at {officeAddressLine(nearestOffice)}. Estimates for {city} homes are scheduled from there; call{" "}
+                <a href={PHONE_HREF} className="text-primary font-medium hover:underline">{BUSINESS.phone}</a>.
+              </p>
+            </div>
+          )}
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
+            Painting Services Available in {city}
+          </h2>
+          <ul className="grid sm:grid-cols-2 gap-3 mb-6">
+            {CORE_SERVICES.map((svc) => (
+              <li key={svc.slug} className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                <Link href={`/${svc.slug}`} className="text-foreground hover:text-primary hover:underline">
+                  {svc.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="text-foreground leading-relaxed">
+            See our{" "}
+            <Link href={COST_GUIDE_PATH} className="text-primary font-medium hover:underline">
+              Houston painting cost guide
+            </Link>{" "}
+            for 2026 price ranges, or{" "}
+            <Link href={ESTIMATE_PATH} className="text-primary font-medium hover:underline">
+              request a painting estimate
+            </Link>{" "}
+            for your {city} home.
           </p>
         </section>
 
@@ -221,14 +284,14 @@ export function LocationPageTemplate({
                       href={service.href}
                       className="text-primary font-medium hover:underline"
                     >
-                      Learn more about {service.title.toLowerCase()} →
+                      {service.title} →
                     </a>
                   ) : (
                     <Link
                       href={service.href}
                       className="text-primary font-medium hover:underline"
                     >
-                      Learn more about {service.title.toLowerCase()} →
+                      {service.title} →
                     </Link>
                   )}
                 </CardContent>
@@ -255,25 +318,12 @@ export function LocationPageTemplate({
           </div>
         </section>
 
-        {/* Testimonial */}
-        <section className="mb-12 bg-primary/5 rounded-xl p-8 border border-primary/10">
-          <div className="flex gap-1 mb-4">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="h-5 w-5 fill-accent text-accent" />
-            ))}
-          </div>
-          <blockquote className="text-lg text-foreground italic mb-4">
-            &ldquo;{testimonial.quote}&rdquo;
-          </blockquote>
-          <div className="text-foreground font-medium">
-            — {testimonial.author}, {testimonial.location}
-          </div>
-        </section>
+        {/* Testimonials hidden until they can be matched to real Google reviews (see docs/aeo-seo-plan-2026-09.md). TODO(juan) */}
 
         {/* Before/After */}
         <section className="mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-            Recent Projects Near {city}
+            Before and After: Exterior Repaint
           </h2>
           <BeforeAfter
             beforeSrc="/images/exterior-before-1.jpg"
@@ -327,18 +377,18 @@ export function LocationPageTemplate({
             Ready to Transform Your {city} Home?
           </h2>
           <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
-            Get a free, no-obligation estimate from Houston&apos;s trusted painting professionals. We proudly serve {city} and all surrounding communities.
+            Get a free, no-obligation estimate for your {city} home, backed by a {BUSINESS.trust.warrantyYears}-year workmanship warranty on all painting.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
-              <Link href="/contact">
-                Schedule Free Estimate
+              <Link href={ESTIMATE_PATH}>
+                Get a Painting Estimate
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 !bg-transparent !text-primary-foreground hover:!bg-primary-foreground/10">
-              <a href="tel:+13465945960" aria-label="Call Houston Superior Painting at 346-594-5960">
+              <a href={PHONE_HREF} aria-label={`Call ${BUSINESS.name} at ${BUSINESS.phone}`}>
                 <Phone className="h-4 w-4 mr-2" />
-                Call (346) 594-5960
+                Call {BUSINESS.phone}
               </a>
             </Button>
           </div>
@@ -350,19 +400,7 @@ export function LocationPageTemplate({
             We Also Serve
           </h2>
           <div className="flex flex-wrap gap-3 mb-6">
-            {[
-              { name: "Houston", href: "/painters-houston-tx" },
-              { name: "Katy", href: "/painters-katy-tx" },
-              { name: "Cypress", href: "/painters-cypress-tx" },
-              { name: "Sugar Land", href: "/painters-sugar-land-tx" },
-              { name: "The Woodlands", href: "/painters-the-woodlands-tx" },
-              { name: "Memorial", href: "/painters-memorial-tx" },
-              { name: "The Heights", href: "/painters-the-heights-tx" },
-              { name: "Bellaire", href: "/painters-bellaire-tx" },
-              { name: "Pearland", href: "/painters-pearland-tx" },
-              { name: "Richmond", href: "/painters-richmond-tx" },
-              { name: "Fulshear", href: "/painters-fulshear-tx" },
-            ].filter(loc => loc.name !== city).map((location) => (
+            {SERVICE_AREAS.map((a) => ({ name: a.name, href: `/${a.slug}` })).filter(loc => loc.name !== city).map((location) => (
               <Link
                 key={location.href}
                 href={location.href}
@@ -374,10 +412,10 @@ export function LocationPageTemplate({
           </div>
           <div className="flex gap-3">
             <Link
-              href="/houston-painting-cost-guide"
+              href={COST_GUIDE_PATH}
               className="px-4 py-2 bg-secondary/10 border border-secondary/30 rounded-lg hover:bg-secondary/20 transition-colors text-foreground font-medium"
             >
-              View Pricing Guide →
+              Houston Painting Cost Guide →
             </Link>
           </div>
         </section>

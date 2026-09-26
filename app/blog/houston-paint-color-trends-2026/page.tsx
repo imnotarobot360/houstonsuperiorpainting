@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "The most popular paint colors for Houston homes in 2026, curated by local painting experts.",
     type: "article",
     publishedTime: "2026-05-11",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
     images: ["/images/blog/paint-color-trends-2026.jpg"],
   },
   twitter: {
@@ -65,7 +65,7 @@ const relatedPosts = [
   },
   {
     title: "How Much Does House Painting Cost in Houston?",
-    href: "/blog/house-painting-cost-houston-2026",
+    href: "/houston-painting-cost-guide",
     excerpt: "Complete pricing guide for interior and exterior painting.",
     image: "/images/blog/house-painting-cost-houston.jpg"
   }
@@ -76,7 +76,7 @@ export default function HoustonPaintColorTrends2026Page() {
     <BlogPostTemplate
       title="Houston Paint Color Trends 2026: Interior & Exterior"
       excerpt="Paint colors set the mood for your entire home. Discover what's trending in Houston for 2026—from warm, enveloping neutrals to bold statement colors—and learn how to choose colors that work beautifully in our unique Texas light."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="May 11, 2026"
       readTime="10 min read"
@@ -289,7 +289,8 @@ export default function HoustonPaintColorTrends2026Page() {
 
       <p>
         Learn more about <Link href="/exterior-painting-houston-tx" className="text-primary underline">exterior painting in Houston</Link> and 
-        how to choose colors that last.
+        how to choose colors that last. A color change costs the same as any repaint; the{" "}
+        <Link href="/houston-painting-cost-guide" className="text-primary underline">Houston painting cost guide</Link> has 2026 prices by home size.
       </p>
 
       <h2>How to Choose Colors for Houston&apos;s Light</h2>

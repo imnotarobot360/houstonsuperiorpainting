@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
@@ -7,12 +8,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/how-often-repaint-home-houston-climate',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "How Often Should You Repaint Your Home in Houston's Climate?",
     description: "Expert advice on repainting schedules for Houston homes, based on years of local experience.",
     type: "article",
     publishedTime: "2026-04-08",
-    authors: ["JJ Semo"],
+    authors: ["Juan Serra"],
   },
 }
 
@@ -36,7 +37,7 @@ export default function HowOftenRepaintHoustonPage() {
     <BlogPostTemplate slug="how-often-repaint-home-houston-climate"
       title="How Often Should You Repaint Your Home in Houston's Climate?"
       excerpt="Houston's unique weather patterns affect paint differently than other regions. Learn the signs that indicate it's time to repaint and how to extend your paint's lifespan."
-      author="JJ Semo"
+      author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="April 8, 2026"
       readTime="6 min read"
@@ -57,22 +58,22 @@ export default function HowOftenRepaintHoustonPage() {
 
       <h3>Premium Paint (Sherwin-Williams Duration, Benjamin Moore Aura)</h3>
       <ul>
-        <li><strong>Expected lifespan:</strong> 10-15 years</li>
-        <li><strong>Best case scenario:</strong> Up to 20 years on north-facing walls with good preparation</li>
-        <li><strong>Worst case scenario:</strong> 7-8 years on south/west-facing walls with maximum sun exposure</li>
+        <li><strong>Expected repaint cycle:</strong> 5-7 years</li>
+        <li><strong>Best case scenario:</strong> 8-10 years on shaded, north-facing walls with good preparation</li>
+        <li><strong>Worst case scenario:</strong> 4-5 years on south/west-facing walls with maximum sun exposure</li>
       </ul>
 
       <h3>Mid-Range Paint (Sherwin-Williams SuperPaint, Benjamin Moore Regal)</h3>
       <ul>
-        <li><strong>Expected lifespan:</strong> 7-10 years</li>
-        <li><strong>Best case scenario:</strong> 12 years with excellent preparation and maintenance</li>
-        <li><strong>Worst case scenario:</strong> 5 years on high-exposure areas</li>
+        <li><strong>Expected lifespan:</strong> 4-6 years</li>
+        <li><strong>Best case scenario:</strong> 7 years with excellent preparation and maintenance</li>
+        <li><strong>Worst case scenario:</strong> 3 years on high-exposure areas</li>
       </ul>
 
       <h3>Budget Paint (Builder-grade or big-box economy lines)</h3>
       <ul>
-        <li><strong>Expected lifespan:</strong> 3-5 years</li>
-        <li><strong>Best case scenario:</strong> 6-7 years</li>
+        <li><strong>Expected lifespan:</strong> 2-4 years</li>
+        <li><strong>Best case scenario:</strong> 5 years</li>
         <li><strong>Worst case scenario:</strong> 2-3 years, especially on stucco</li>
       </ul>
 
@@ -91,7 +92,7 @@ export default function HowOftenRepaintHoustonPage() {
 
       <h3>Living Rooms and Bedrooms</h3>
       <ul>
-        <li><strong>Expected lifespan:</strong> 5-10 years</li>
+        <li><strong>Expected lifespan:</strong> 7-10 years</li>
         <li>Lower traffic means less wear</li>
         <li>Often repainted for aesthetic updates rather than necessity</li>
       </ul>
@@ -201,11 +202,11 @@ export default function HowOftenRepaintHoustonPage() {
       <h2>The Bottom Line</h2>
 
       <p>
-        In Houston, a quality exterior paint job should last 10-15 years, while interior paint can last 5-10 years in most rooms. But rather than watching the calendar, watch your paint. The warning signs I&apos;ve described will tell you when it&apos;s actually time to repaint.
+        In Houston, plan to repaint exteriors every 5-7 years and interiors every 7-10 years. But rather than watching the calendar, watch your paint. The warning signs I&apos;ve described will tell you when it&apos;s actually time to repaint.
       </p>
 
       <p>
-        If you&apos;re seeing any of these warning signs, or if it&apos;s been a while since your last paint job and you&apos;re just not sure, I&apos;m happy to take a look and give you an honest assessment. Sometimes a simple pressure wash and touch-up can buy you several more years. Other times, it really is time for a fresh start.
+        If you&apos;re seeing any of these warning signs, or if it&apos;s been a while since your last paint job and you&apos;re just not sure, I&apos;m happy to take a look and give you an honest assessment. Sometimes a simple <Link href="/pressure-washing-houston-tx">pressure washing in Houston</Link> visit and touch-up can buy you several more years. Other times, it really is time for a fresh start, and the <Link href="/houston-painting-cost-guide">Houston painting cost guide</Link> shows what a repaint runs in 2026. We cover the whole metro, from our <Link href="/painters-magnolia-tx">painters in Magnolia TX</Link> office near The Woodlands down to Pearland.
       </p>
     </BlogPostTemplate>
   )

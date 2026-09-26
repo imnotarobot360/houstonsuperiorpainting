@@ -2,15 +2,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Check, Info } from "lucide-react"
 
+// Must agree with PRICES_2026 in lib/business.ts and the /houston-painting-cost-guide tables.
 const pricingData = [
   {
     service: "Interior Painting",
     priceRange: "$2.50 - $4.50",
     unit: "per sq ft",
     examples: [
-      "1,500 sq ft home: $3,750 - $6,750",
-      "2,500 sq ft home: $6,250 - $11,250",
-      "Single room: $400 - $800"
+      "1,500 sq ft home: $3,000 - $5,500",
+      "2,500 sq ft home: $4,000 - $8,000",
+      "Single room: $300 - $800"
     ],
     factors: ["Wall condition", "Ceiling height", "Trim & doors included", "Number of colors"],
     popular: false
@@ -20,21 +21,21 @@ const pricingData = [
     priceRange: "$3,500 - $12,000",
     unit: "typical home",
     examples: [
-      "1-story (1,500 sq ft): $3,500 - $5,500",
+      "1-story (1,500 sq ft): $2,500 - $4,500",
       "2-story (2,500 sq ft): $5,500 - $9,000",
-      "Large/custom homes: $9,000+"
+      "2-story (4,000+ sq ft): $8,500 - $14,000"
     ],
     factors: ["Siding type", "Stories & accessibility", "Prep work needed", "Trim & accent colors"],
     popular: true
   },
   {
     service: "Cabinet Refinishing",
-    priceRange: "$3,500 - $8,500",
+    priceRange: "$3,000 - $6,500",
     unit: "average kitchen",
     examples: [
-      "Small kitchen (10-15 doors): $3,500 - $5,000",
-      "Medium kitchen (20-30 doors): $5,000 - $7,000",
-      "Large kitchen (35+ doors): $7,000+"
+      "Galley kitchen (10-15 doors): $2,200 - $3,500",
+      "Average kitchen (15-25 doors): $3,500 - $5,500",
+      "Large kitchen with island (25-40 doors): $6,000 - $9,000+"
     ],
     factors: ["Number of doors/drawers", "Wood vs laminate", "Color change vs refresh", "Hardware replacement"],
     popular: false

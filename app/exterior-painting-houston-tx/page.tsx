@@ -1,423 +1,202 @@
-import type { Metadata } from 'next'
+import type { Metadata } from "next"
 import Link from "next/link"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { RelatedLinks } from "@/components/luxury/related-links"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Phone, Star, Shield, Clock, Paintbrush, Sun } from "lucide-react"
-import { howToSchemas } from "@/components/structured-data"
+import { ServiceSkeleton, serviceUrl } from "@/components/aeo/service-skeleton"
+import { generateServiceSchema } from "@/components/structured-data"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
+
+const SLUG = "exterior-painting-houston-tx"
+const URL = serviceUrl(SLUG)
+const TITLE = "Exterior Painting Houston TX | 2026 Prices & Process"
+const DESCRIPTION =
+  "Exterior house painting in Houston costs $1.50–$4/sq ft in 2026; a 2,500 sq ft two-story runs $5,500–$9,000. 5-year warranty. Call (346) 594-5960."
+const OG_IMAGE = "https://houstonsuperiorpainting.com/images/og/og-exterior-painting.jpg"
 
 export const metadata: Metadata = {
-  title: 'Exterior Painting Houston TX — Houston Superior Painting',
-  description: 'Professional exterior painting in Houston TX. Wood, stucco, brick, hardie board. Premium Sherwin-Williams paints, 5-year warranty. Free estimates.',
-  alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/exterior-painting-houston-tx',
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
   openGraph: {
-    title: 'Exterior Painting Houston TX — Houston Superior Painting',
-    description: 'Professional exterior painting in Houston TX. Wood, stucco, brick, hardie board. Premium Sherwin-Williams paints, 5-year warranty.',
-    url: 'https://houstonsuperiorpainting.com/exterior-painting-houston-tx',
-    siteName: 'Houston Superior Painting',
-    type: 'website',
-    images: [{
-      url: 'https://houstonsuperiorpainting.com/images/og/og-exterior-painting.jpg',
-      width: 1200,
-      height: 630,
-      alt: 'Exterior Painting Houston TX - Houston Superior Painting',
-    }],
+    title: TITLE,
+    description: DESCRIPTION,
+    url: URL,
+    siteName: BUSINESS.name,
+    type: "website",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Exterior house painting in Houston, TX" }],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Exterior Painting Houston TX — Houston Superior Painting',
-    description: 'Professional exterior painting in Houston TX. Wood, stucco, brick, hardie board. Premium paints, 5-year warranty.',
-    images: ['https://houstonsuperiorpainting.com/images/og/og-exterior-painting.jpg'],
-  },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: [OG_IMAGE] },
 }
 
-const exteriorFaqs = [
+// Min/max match the price table below (1,500 sq ft one-story → 4,000+ sq ft two-story).
+// howToSchemas.exteriorPainting (5 steps) was dropped: it no longer matches the
+// 4 visible process steps on this page.
+const serviceSchema = generateServiceSchema({
+  name: "Exterior Painting in Houston, TX",
+  slug: SLUG,
+  description:
+    "Exterior house painting in Houston, Katy, Cypress, Sugar Land and nearby Texas cities on brick, stucco, HardiePlank, and wood siding. Pressure wash, scrape, caulk, prime, and two coats. 5-year workmanship warranty.",
+  serviceType: "Exterior Painting",
+  minPrice: 2500,
+  maxPrice: 14000,
+  subServices: ["House Painting", "Siding Painting", "Stucco Painting", "Brick Painting", "Trim & Fascia", "Front & Garage Doors"],
+})
+
+const faqs = [
   {
-    question: "How much does exterior painting cost in Houston?",
-    answer: "Exterior painting in Houston ranges from $3,500–$12,000 depending on home size, siding type, stories, and condition. A typical 2,500 sq ft home costs $5,500–$8,500. Brick and stucco may cost more due to surface preparation."
+    q: "How much does exterior painting cost in Houston in 2026?",
+    a: `Exterior painting in Houston runs ${PRICES_2026.exteriorPerSqFt} per square foot of floor area in 2026. A 2,500 sq ft two-story home costs ${PRICES_2026.exterior2500TwoStory}. Wood rot repair and stucco crack repair are priced separately.`,
   },
   {
-    question: "How long does exterior paint last in Houston?",
-    answer: "With proper preparation and premium coatings, exterior paint lasts 8–10 years in Houston's climate. We use 100% acrylic and elastomeric paints from Sherwin-Williams that resist UV, humidity, and heavy rains."
+    q: "How long does exterior painting take for a 2,500 sq ft home?",
+    a: "Four to six working days for a typical 2,500 sq ft two-story home, depending on how much scraping and repair the siding needs and on the weather.",
   },
   {
-    question: "What is the best time to paint exterior in Houston?",
-    answer: "The best time for exterior painting in Houston is March–May and September–November when temperatures are 50–85°F with lower humidity. We can paint year-round but avoid extreme heat days and rain."
+    q: "Do you use Sherwin-Williams or Benjamin Moore?",
+    a: "Mostly Sherwin-Williams Duration or Emerald on exteriors because both hold up to Gulf Coast sun and moisture. We also use Benjamin Moore Aura or Regal Select exterior when a homeowner or HOA prefers it.",
   },
   {
-    question: "Do you pressure wash before painting?",
-    answer: "Yes. Every exterior project begins with professional pressure washing to remove dirt, mold, mildew, and loose paint. This essential step ensures proper paint adhesion and longevity."
-  }
+    q: "What prep do you do before painting in Houston humidity?",
+    a: "We pressure wash to kill mildew, let the siding dry, scrape and sand loose paint, replace rotted wood, caulk every gap, and prime bare wood and repairs. We don't paint when humidity is above 85% or surfaces are above 90°F.",
+  },
+  {
+    q: "How many coats do you apply?",
+    a: "Two full coats over primed repairs, sprayed and back-rolled so the paint gets into the texture of brick, stucco, and siding.",
+  },
+  {
+    q: "Do I need to be home during exterior painting?",
+    a: "No. We need gates unlocked and access to an outdoor water spigot and outlet. We cover plants and move light patio furniture ourselves.",
+  },
+  {
+    q: "Are you licensed and insured in Texas?",
+    a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and the certificate of insurance comes with every estimate.",
+  },
+  {
+    q: "What does the 5-year warranty cover?",
+    a: "Peeling, blistering, and flaking caused by our workmanship. It does not cover damage from water intrusion, settling, or surfaces you asked us not to prep.",
+  },
+  {
+    q: "Can you match my HOA-approved colors?",
+    a: "Yes. We pull your HOA's approved color list and submit the ARC form for Katy, Cypress, Sugar Land, and Woodlands communities before work starts.",
+  },
+  {
+    q: "What time of year is best for exterior painting in Houston?",
+    a: "October through April. Summer afternoons are too hot and humid for paint to cure properly.",
+  },
+  {
+    q: "Do you require a deposit?",
+    a: "No. You pay when the walkthrough is done and you're satisfied.",
+  },
+  {
+    q: "How do I get an estimate?",
+    a: `Call ${BUSINESS.phone} or request an estimate online. We walk every elevation with you and send a written scope with prep, product, and coat count within 24 hours.`,
+  },
 ]
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": exteriorFaqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
-  }))
-}
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Exterior Painting",
-  "provider": {
-    "@type": "PaintingContractor",
-    "name": "Houston Superior Painting",
-    "telephone": "+1-346-594-5960",
-    "url": "https://houstonsuperiorpainting.com"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Houston",
-    "addressRegion": "TX"
-  },
-  "description": "Professional exterior painting services for homes in Houston TX including wood siding, stucco, brick, and hardie board.",
-}
 
 export default function ExteriorPaintingHoustonTX() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchemas.exteriorPainting) }}
-      />
-      <Header />
-      <main>
-        {/* Hero Section */}
-        <section className="bg-primary text-primary-foreground py-16 lg:py-24">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="hero-h1 font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance">
-                Exterior Painting Houston TX
-              </h1>
-              <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-                Professional exterior painting built to withstand Houston&apos;s heat, humidity, and storms. 
-                Premium Sherwin-Williams paints with a 5-year warranty.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" asChild>
-                  <Link href="/contact">Get Free Estimate</Link>
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                  <a href="tel:+13465945960" aria-label="Call Houston Superior Painting at 346-594-5960" className="flex items-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    (346) 594-5960
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Quick Answer - Speakable Section for AEO */}
-        <section data-speakable="true" className="quick-answer bg-secondary/10 border-l-4 border-secondary py-6">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
-            <p className="text-foreground/80 leading-relaxed text-lg">
-              Houston Superior Painting provides professional exterior painting in Houston, Katy, Cypress, and Sugar Land TX. 
-              Exterior painting costs $3,500–$12,000 depending on home size and siding type. 
-              With proper preparation and premium coatings, exterior paint lasts 8–10 years in Houston&apos;s climate. 
-              We include a 5-year warranty. Free estimates at (346) 594-5960.
-            </p>
-          </div>
-        </section>
-
-        {/* Trust Signals */}
-        <section className="py-8 bg-muted/50 border-b">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-8 text-center">
-              <div className="flex items-center gap-2">
-                <Star className="h-5 w-5 text-yellow-500 fill-yellow-500" />
-                <span className="font-semibold">4.9 Google Rating</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-primary" />
-                <span className="font-semibold">5-Year Warranty</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5 text-primary" />
-                <span className="font-semibold">500+ Projects</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary" />
-                <span className="font-semibold">Fully Insured</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Before & After Transformation */}
-        <section className="py-16 lg:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto text-center mb-10">
-              <h2 className="font-serif text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
-                Real Houston Exterior Transformation
-              </h2>
-              <p className="text-foreground/80 leading-relaxed max-w-2xl mx-auto">
-                This Tuscan-style Houston home went from dated beige stucco to a crisp,
-                modern white finish — making the stone, tile roof, and architectural details stand out.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              <figure className="relative overflow-hidden rounded-xl border border-border shadow-sm">
-                <span className="absolute top-4 left-4 z-10 rounded-full bg-foreground/80 px-4 py-1 text-sm font-semibold text-background">
-                  Before
-                </span>
-                <img
-                  src="/images/exterior-before-1.jpg"
-                  alt="Houston home with original beige stucco exterior before painting"
-                  className="w-full h-64 sm:h-80 object-cover"
-                  loading="lazy"
-                />
-              </figure>
-              <figure className="relative overflow-hidden rounded-xl border border-border shadow-sm">
-                <span className="absolute top-4 left-4 z-10 rounded-full bg-primary px-4 py-1 text-sm font-semibold text-primary-foreground">
-                  After
-                </span>
-                <img
-                  src="/images/exterior-after-1.jpg"
-                  alt="Same Houston home with fresh white stucco exterior after professional painting"
-                  className="w-full h-64 sm:h-80 object-cover"
-                  loading="lazy"
-                />
-              </figure>
-            </div>
-          </div>
-        </section>
-
-        {/* Main Content */}
-        <section className="py-16 lg:py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="prose prose-lg max-w-none">
-                <h2 className="font-serif text-3xl font-bold text-foreground mb-6">
-                  Houston&apos;s Exterior Painting Experts
-                </h2>
-                <p className="text-foreground/80 leading-relaxed mb-6">
-                  Houston Superior Painting specializes in exterior house painting built for Texas conditions. 
-                  Our experienced crews understand the unique challenges of Houston&apos;s climate — intense UV rays, 
-                  high humidity, heavy rains, and temperature swings — and we use products and techniques 
-                  specifically designed to handle them.
-                </p>
-                <p className="text-foreground/80 leading-relaxed mb-8">
-                  Every exterior project begins with thorough preparation: pressure washing, scraping, sanding, 
-                  caulking, and priming. This old-school approach is why our paint jobs last 8–10 years while 
-                  others start peeling after 2–3.
-                </p>
-
-                <h3 className="font-serif text-2xl font-semibold text-foreground mt-10 mb-4">
-                  Exterior Surfaces We Paint
-                </h3>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span><strong>Wood Siding</strong> — Cedar, pine, and composite wood with proper priming</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span><strong>Stucco</strong> — Elastomeric coatings that flex with temperature changes</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span><strong>Brick</strong> — Masonry paint and limewash finishes</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span><strong>Hardie Board / Fiber Cement</strong> — Long-lasting finishes for modern siding</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span><strong>Trim, Fascia & Soffits</strong> — Detail work that completes the look</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                    <span><strong>Front Doors & Garage Doors</strong> — High-impact areas with durable finishes</span>
-                  </li>
-                </ul>
-
-                <h3 className="font-serif text-2xl font-semibold text-foreground mt-10 mb-4">
-                  Exterior Painting Cost in Houston
-                </h3>
-                <p className="text-foreground/80 leading-relaxed mb-6">
-                  Exterior painting costs depend on home size, siding type, number of stories, and surface 
-                  condition. Here are typical price ranges for Houston homes:
-                </p>
-
-                <div className="overflow-x-auto mb-8">
-                  <table className="w-full border-collapse border border-border">
-                    <thead>
-                      <tr className="bg-muted">
-                        <th className="border border-border px-4 py-3 text-left">Home Size</th>
-                        <th className="border border-border px-4 py-3 text-left">Price Range</th>
-                        <th className="border border-border px-4 py-3 text-left">Timeline</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="border border-border px-4 py-3">1,500 sq ft (1 story)</td>
-                        <td className="border border-border px-4 py-3">$3,500 – $5,500</td>
-                        <td className="border border-border px-4 py-3">3–4 days</td>
-                      </tr>
-                      <tr className="bg-muted/50">
-                        <td className="border border-border px-4 py-3">2,500 sq ft (2 story)</td>
-                        <td className="border border-border px-4 py-3">$5,500 – $8,500</td>
-                        <td className="border border-border px-4 py-3">4–6 days</td>
-                      </tr>
-                      <tr>
-                        <td className="border border-border px-4 py-3">3,500 sq ft (2 story)</td>
-                        <td className="border border-border px-4 py-3">$7,500 – $11,000</td>
-                        <td className="border border-border px-4 py-3">5–7 days</td>
-                      </tr>
-                      <tr className="bg-muted/50">
-                        <td className="border border-border px-4 py-3">4,500+ sq ft</td>
-                        <td className="border border-border px-4 py-3">$10,000 – $15,000+</td>
-                        <td className="border border-border px-4 py-3">7–10 days</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <h3 className="font-serif text-2xl font-semibold text-foreground mt-10 mb-4">
-                  Why Choose Us for Exterior Painting
-                </h3>
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  <Card>
-                    <CardContent className="pt-6">
-                      <Paintbrush className="h-8 w-8 text-primary mb-3" />
-                      <h4 className="font-semibold mb-2">Prep-First Process</h4>
-                      <p className="text-muted-foreground text-sm">
-                        Power wash, scrape, sand, caulk, prime, then paint. This is why our work lasts.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="pt-6">
-                      <Shield className="h-8 w-8 text-primary mb-3" />
-                      <h4 className="font-semibold mb-2">5-Year Exterior Warranty</h4>
-                      <p className="text-muted-foreground text-sm">
-                        All exterior work carries our 5-year warranty. Peeling, fading, or bubbling? We fix it.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="pt-6">
-                      <Sun className="h-8 w-8 text-primary mb-3" />
-                      <h4 className="font-semibold mb-2">Houston Climate Expertise</h4>
-                      <p className="text-muted-foreground text-sm">
-                        We know which products handle 100°F heat, Gulf humidity, and sudden storms.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="pt-6">
-                      <Star className="h-8 w-8 text-primary mb-3" />
-                      <h4 className="font-semibold mb-2">Premium Sherwin-Williams</h4>
-                      <p className="text-muted-foreground text-sm">
-                        Duration, SuperPaint, and elastomeric coatings designed for extreme conditions.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-
-              {/* FAQ Section */}
-              <div className="mt-16">
-                <h2 className="font-serif text-3xl font-bold text-foreground mb-8 text-center">
-                  Exterior Painting FAQs
-                </h2>
-                <div className="space-y-6">
-                  {exteriorFaqs.map((faq, index) => (
-                    <div key={index} className="border-b border-border pb-6">
-                      <h3 className="font-semibold text-lg text-foreground mb-2">{faq.question}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* CTA */}
-              <div className="mt-16 text-center bg-primary text-primary-foreground rounded-xl p-8 lg:p-12">
-                <h2 className="font-serif text-2xl lg:text-3xl font-bold mb-4">
-                  Protect Your Home with Quality Exterior Paint
-                </h2>
-                <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
-                  Get a free, detailed estimate for your exterior painting project. Our 5-year warranty 
-                  gives you peace of mind.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" variant="secondary" asChild>
-                    <Link href="/contact">Get Free Estimate</Link>
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                    <a href="tel:+13465945960" className="flex items-center gap-2">
-                      <Phone className="h-5 w-5" />
-                      (346) 594-5960
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Related Services */}
-              <div className="mt-16">
-                <h3 className="font-serif text-2xl font-bold text-foreground mb-6">Related Services</h3>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <Link href="/interior-painting-houston-tx" className="block p-4 border rounded-lg hover:border-primary transition-colors">
-                    <h4 className="font-semibold">Interior Painting</h4>
-                    <p className="text-sm text-muted-foreground">Walls, ceilings, trim & doors</p>
-                  </Link>
-                  <Link href="/pressure-washing-houston-tx" className="block p-4 border rounded-lg hover:border-primary transition-colors">
-                    <h4 className="font-semibold">Pressure Washing</h4>
-                    <p className="text-sm text-muted-foreground">Surface prep & cleaning</p>
-                  </Link>
-                  <Link href="/limewash-brick-painting-houston-tx" className="block p-4 border rounded-lg hover:border-primary transition-colors">
-                    <h4 className="font-semibold">Limewash & Brick</h4>
-                    <p className="text-sm text-muted-foreground">European-style brick finishes</p>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Service Areas */}
-              <div className="mt-12">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-4">Areas We Serve</h3>
-                <p className="text-muted-foreground">
-                  Houston Superior Painting provides exterior painting services in{" "}
-                  <Link href="/painters-houston-tx" className="text-primary hover:underline">Houston</Link>,{" "}
-                  <Link href="/painters-katy-tx" className="text-primary hover:underline">Katy</Link>,{" "}
-                  <Link href="/painters-cypress-tx" className="text-primary hover:underline">Cypress</Link>,{" "}
-                  <Link href="/painters-sugar-land-tx" className="text-primary hover:underline">Sugar Land</Link>,{" "}
-                  <Link href="/painters-richmond-tx" className="text-primary hover:underline">Richmond</Link>,{" "}
-                  <Link href="/painters-fulshear-tx" className="text-primary hover:underline">Fulshear</Link>,{" "}
-                  <Link href="/painters-bellaire-tx" className="text-primary hover:underline">Bellaire</Link>,{" "}
-                  <Link href="/painters-memorial-tx" className="text-primary hover:underline">Memorial</Link>,{" "}
-                  <Link href="/painters-the-heights-tx" className="text-primary hover:underline">The Heights</Link>,{" "}
-                  and surrounding areas.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <RelatedLinks exclude="/exterior-painting-houston-tx" />
-      <Footer />
-    </>
+    <ServiceSkeleton
+      slug={SLUG}
+      serviceName="Exterior Painting"
+      h1="Exterior Painting in Houston, TX"
+      quickAnswer={
+        <>
+          Exterior house painting in Houston costs {PRICES_2026.exteriorPerSqFt} per square foot in 2026; a 2,500 sq ft
+          two-story home runs {PRICES_2026.exterior2500TwoStory}. {BUSINESS.name} pressure washes, scrapes, caulks,
+          primes, and applies two coats of Sherwin-Williams Duration or Emerald, with a{" "}
+          {BUSINESS.trust.warrantyYears}-year workmanship warranty. Free estimates: {BUSINESS.phone}.
+        </>
+      }
+      beforeAfter={{
+        before: "/images/exterior-before-1.jpg",
+        after: "/images/exterior-after-1.jpg",
+        beforeAlt: "Houston home with original beige stucco exterior before painting",
+        afterAlt: "Same Houston home with fresh white stucco exterior after painting",
+        caption: "A Tuscan-style Houston home repainted from beige stucco to white.",
+      }}
+      whoFor={
+        <p>
+          Homeowners in Greater Houston whose exterior is fading, chalking, peeling, or growing mildew — or who want a
+          new color before selling. We paint brick, stucco, HardiePlank and fiber cement, and wood siding, plus trim,
+          fascia, soffits, front doors, and garage doors. Brick owners who want a softer, breathable look should also
+          see our <Link href="/limewash-brick-painting-houston-tx">limewash and brick painting</Link> service.
+        </p>
+      }
+      processTitle="Our exterior painting process in Houston"
+      steps={[
+        {
+          title: "Prep",
+          text: "Pressure wash to kill mildew, then let it dry. Scrape and sand loose paint, replace rotted wood (priced separately), caulk every gap at windows, doors, and trim, and prime bare wood and repairs. Prep is most of the job on a Houston exterior.",
+        },
+        {
+          title: "Product",
+          text: "We match the coating to the surface: Sherwin-Williams Duration or Emerald on siding and trim, masonry or elastomeric coatings on stucco, and breathable masonry paint on brick. Colors are confirmed against your HOA's approved list before we start.",
+        },
+        {
+          title: "Two coats",
+          text: "Two full coats, sprayed and back-rolled. We don't paint when humidity is above 85% or surfaces are above 90°F, and we work around morning dew and afternoon storms.",
+        },
+        {
+          title: "Walkthrough",
+          text: "You walk every elevation with the crew lead before final payment. We touch up anything you flag on the spot.",
+        },
+      ]}
+      risks={[
+        <>
+          <strong>Humidity and dew.</strong> Paint applied over damp or chalky surfaces peels early. We wait for
+          siding to dry after washing and start after the dew burns off.
+        </>,
+        <>
+          <strong>Sun and chalking.</strong> South- and west-facing walls fade and chalk fastest. Chalky paint must be
+          washed off and sealed with primer, or the new coat won&apos;t bond.
+        </>,
+        <>
+          <strong>Flashing and water intrusion.</strong> Failed caulk and missing flashing at windows, doors, and roof
+          lines let rain behind the siding and rot the trim. We re-caulk every joint and flag flashing problems for a
+          roofer before we paint over them.
+        </>,
+        <>
+          <strong>Mold and mildew.</strong> Mildew grows on shaded north walls and under eaves. It gets killed during
+          the wash, not painted over.
+        </>,
+        <>
+          <strong>HOA rules.</strong> HOA communities in Katy, Cypress, and Sugar Land restrict exterior colors and
+          require approval before work starts. We handle the ARC submission for you.
+        </>,
+      ]}
+      costTitle="Exterior painting cost in Houston (2026)"
+      price={{
+        head: ["Home size", "1 story", "2 story"],
+        rows: [
+          ["1,500 sq ft", "$2,500–$4,500", "$3,500–$6,000"],
+          ["2,000 sq ft", "$3,500–$5,500", "$4,500–$7,500"],
+          ["2,500 sq ft", "$4,000–$7,000", PRICES_2026.exterior2500TwoStory],
+          ["3,000 sq ft", "$5,000–$8,000", "$6,500–$10,500"],
+          ["4,000+ sq ft", "$6,500–$10,000", "$8,500–$14,000"],
+        ],
+        note: "Includes pressure wash, scrape, caulk, prime, and two coats. Wood rot repair runs $75–$150 per linear foot extra. Stucco crack repair and elastomeric coating add $1–$2/sq ft.",
+      }}
+      costGuide={{ label: "exterior house painting cost guide for Houston", href: "/exterior-house-painting-houston-cost-guide" }}
+      paints={
+        <>
+          <p>
+            <strong>Sherwin-Williams Duration and Emerald</strong> for most exteriors — both hold up to Gulf Coast UV
+            and moisture and resist mildew. Duration costs about $30 a gallon more than SuperPaint and lasts 3–5 years
+            longer in Houston sun. <strong>Benjamin Moore Aura or Regal Select</strong> exterior when an HOA or
+            homeowner specifies it. Stucco gets a masonry or elastomeric coating that bridges hairline cracks.
+          </p>
+          <p>
+            Why it matters in Houston: heat, humidity, and afternoon storms break down cheap acrylics fast. Premium
+            lines keep their color on sunny elevations and shed water on shaded ones. We buy at contractor pricing and
+            pass the product through at cost.
+          </p>
+        </>
+      }
+      faqs={faqs}
+      related={[
+        { label: "Interior painting in Houston", href: "/interior-painting-houston-tx" },
+        { label: "Limewash and brick painting in Houston", href: "/limewash-brick-painting-houston-tx" },
+        { label: "Soft washing in Houston", href: "/soft-washing-houston-tx" },
+      ]}
+      schema={[serviceSchema]}
+    />
   )
 }

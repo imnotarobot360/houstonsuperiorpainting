@@ -1,202 +1,290 @@
 import type { Metadata } from "next"
+import Link from "next/link"
+import Image from "next/image"
 import { TrustBar } from "@/components/trust-bar"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ProblemSelector } from "@/components/problem-selector"
-import { PricingSection } from "@/components/pricing-section"
-import { SchedulerSection } from "@/components/scheduler-section"
-import { LocationPageTemplate } from "@/components/location-page-template"
-import { generateLocationBusinessSchema } from "@/components/structured-data"
+import FAQ from "@/components/faq"
+import { generateLocationBusinessSchema, JsonLd } from "@/components/structured-data"
+import {
+  PageHero,
+  QuickAnswer,
+  Section,
+  Bullets,
+  Steps,
+  PriceTable,
+  CtaBlock,
+  AuthorByline,
+  OfficeNap,
+  breadcrumbNode,
+  ESTIMATE_PATH,
+} from "@/components/aeo/blocks"
+import { PRICES_2026, SERVICE_AREAS, officeForPage } from "@/lib/business"
+import { PROJECTS } from "@/lib/projects"
+
+const PAGE_PATH = "/painters-houston-tx"
+const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
+const TITLE = "House Painters in Houston TX | Houston Superior Painting"
+const DESCRIPTION =
+  "Houston Superior Painting: interior, exterior, and cabinet painters serving Greater Houston since 2019. Five offices, $2M insured, 5-year warranty. Free estimates: (346) 594-5960."
 
 export const metadata: Metadata = {
-  title: "House Painters Houston TX — Houston Superior Painting",
-  description: "Professional house painters in Houston TX. Interior, exterior, and cabinet painting backed by our 5-year warranty. Free estimates — call (346) 594-5960.",
-  alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/painters-houston-tx',
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: "House Painters Houston TX — Houston Superior Painting",
-    description: "Professional house painters in Houston TX. Interior, exterior, cabinet painting with 5-year warranty. Free estimates. Call (346) 594-5960.",
-    url: "https://houstonsuperiorpainting.com/painters-houston-tx",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
     siteName: "Houston Superior Painting",
     type: "website",
-    images: [{
-      url: "https://houstonsuperiorpainting.com/images/og/og-painters-houston.jpg",
-      width: 1200,
-      height: 630,
-      alt: "House Painters Houston TX - Houston Superior Painting",
-    }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "House Painters Houston TX — Houston Superior Painting",
-    description: "Professional house painters in Houston TX. Interior, exterior, cabinet painting with 5-year warranty. Free estimates.",
-    images: ["https://houstonsuperiorpainting.com/images/og/og-painters-houston.jpg"],
-  },
-  other: {
-    'geo.region': 'US-TX',
-    'geo.placename': 'Houston',
-    'geo.position': '29.7604;-95.3698',
-    'ICBM': '29.7604, -95.3698',
+    images: [
+      {
+        url: "https://houstonsuperiorpainting.com/images/og/og-painters-houston.jpg",
+        width: 1200,
+        height: 630,
+        alt: "House painters in Houston, TX — Houston Superior Painting",
+      },
+    ],
   },
 }
 
-const houstonData = {
-  city: "Houston",
-  state: "TX",
-  heroHeadline: "Houston's Most Trusted House Painters",
-  heroDescription: "Serving the Greater Houston area with premium interior and exterior painting services. From the Heights to Memorial, Montrose to River Oaks — we deliver flawless results backed by our 5-year warranty.",
-  quickAnswer: "Houston Superior Painting provides professional residential and commercial painting services throughout Greater Houston. We specialize in interior painting ($2.50-$4.50/sq ft), exterior painting ($4,000-$15,000), cabinet refinishing ($3,500-$8,500), and specialty finishes. All work includes our 5-year warranty, uses premium Sherwin-Williams and Benjamin Moore products, and comes with free detailed estimates. Call (346) 594-5960.",
-  
-  aboutCity: `As Houston's leading painting contractor since 2019, we understand the unique challenges of painting homes in America's fourth-largest city. From historic Heights bungalows to modern Memorial townhomes, from River Oaks estates to Energy Corridor condos, every Houston home deserves expert care.
-
-Houston's Gulf Coast climate presents specific challenges: intense summer heat reaching 100°F, humidity levels often exceeding 70%, sudden thunderstorms, and occasional tropical weather. These conditions demand premium materials and meticulous preparation — both hallmarks of Houston Superior Painting.
-
-Our team has completed over 500 painting projects across every Houston neighborhood. We know which products perform best in our climate, how to properly prepare surfaces for Houston's humidity, and the techniques that deliver lasting results. That's why we use only top-tier paints from Sherwin-Williams and Benjamin Moore — products specifically formulated to withstand Houston's demanding conditions.
-
-Whether you're refreshing your interior before selling, protecting your exterior from Houston's elements, transforming dated cabinets, or adding a limewash finish to your brick home, Houston Superior Painting delivers results that exceed expectations. Our 5-year warranty, detailed estimates, and commitment to cleanliness have earned us a 4.9-star Google rating from homeowners across the city.
-
-We're proud to be a Houston-based company employing local crews who live and work in the communities we serve. Our bilingual team (English and Spanish) provides clear communication throughout your project.`,
-
-  neighborhoods: [
-    "The Heights",
-    "Memorial",
-    "River Oaks",
-    "Montrose",
-    "West University",
-    "Bellaire",
-    "Midtown",
-    "Museum District",
-    "Garden Oaks",
-    "Oak Forest",
-    "Meyerland",
-    "Energy Corridor",
-    "Galleria Area",
-    "Medical Center",
-    "EaDo",
-    "Spring Branch",
-    "Tanglewood",
-    "Upper Kirby",
-    "Rice Military",
-    "Washington Avenue"
-  ],
-
-  services: [
-    {
-      title: "Interior Painting Houston",
-      description: "Transform your Houston home's interior with expert painting. From single accent walls to complete home repaints, we use spray techniques for flawless factory finishes on walls, ceilings, trim, and doors.",
-      href: "/interior-painting-houston-tx"
-    },
-    {
-      title: "Exterior Painting Houston",
-      description: "Protect your home from Houston's humidity, intense UV rays, and severe storms. Our exterior painting uses premium weather-resistant coatings that look beautiful and last 8-10 years.",
-      href: "/exterior-painting-houston-tx"
-    },
-    {
-      title: "Cabinet Refinishing Houston",
-      description: "Update dated kitchen or bathroom cabinets at a fraction of replacement cost. Our spray-applied finishes deliver smooth, durable results that transform your space.",
-      href: "/cabinet-refinishing-houston-tx"
-    },
-    {
-      title: "Drywall Repair Houston",
-      description: "Fix cracks, nail pops, water damage, and settling issues with seamless texture matching before painting for a flawless finish.",
-      href: "/drywall-repair-houston-tx"
-    },
-    {
-      title: "Pressure Washing Houston",
-      description: "Professional pressure washing to clean and prepare your Houston home's exterior surfaces for better paint adhesion and longer-lasting results.",
-      href: "/pressure-washing-houston-tx"
-    },
-    {
-      title: "Limewash & Brick Painting Houston",
-      description: "Transform your brick exterior with authentic European limewash or German smear finishes that breathe and age beautifully.",
-      href: "/limewash-brick-painting-houston-tx"
-    },
-    {
-      title: "Commercial Painting Houston",
-      description: "Minimize disruption to your Houston business with efficient commercial painting services. We work after hours and on weekends.",
-      href: "/commercial-painting-houston-tx"
-    },
-    {
-      title: "Garage Floor Epoxy Houston",
-      description: "Durable, chemical-resistant epoxy coatings for Houston garages with metallic, flake, or solid color options and 15-year warranty.",
-      href: "https://houstonsuperiorepoxy.com/"
-    }
-  ],
-
-  whyChooseUs: [
-    "500+ homes painted across Greater Houston since 2019",
-    "4.9-star Google rating from Houston homeowners",
-    "Premium Sherwin-Williams & Benjamin Moore products included",
-    "5-year warranty on all residential painting work",
-    "Detailed, transparent estimates — no surprises or hidden fees",
-    "Background-checked, professional, uniformed crews",
-    "Meticulous preparation and clean job sites daily",
-    "Bilingual team (English & Spanish) for clear communication",
-    "Fully bonded and insured ($2M liability)",
-    "No payment until you're 100% satisfied"
-  ],
-
-  testimonial: {
-    quote: "We've used Houston Superior Painting for both our Heights bungalow and our rental property in Montrose. Both times, the results were absolutely flawless. JJ and his team are true professionals who take pride in their work. The attention to detail on our trim work was exceptional.",
-    author: "Michael & Jennifer T.",
-    location: "The Heights, Houston"
+const FAQS = [
+  {
+    q: "Are you licensed and insured in Texas?",
+    a: 'Texas does not license painters, so any painter claiming a "state painting license" is misleading you. Houston Superior Painting carries $2M general liability and workers\' compensation. Ask any painter for the certificate of insurance before they start.',
   },
+  {
+    q: "How much does it cost to paint a house in Houston?",
+    a: "A full interior on a 2,500 sq ft home runs $4,000–$8,000 in 2026. A two-story exterior of the same size runs $5,500–$9,000.",
+  },
+  {
+    q: "How long does a full interior repaint take?",
+    a: "Three to five days for a 2,500 sq ft home with a crew of three.",
+  },
+  {
+    q: "Do you require a deposit?",
+    a: "No. You pay when the walkthrough is done and you're satisfied.",
+  },
+  {
+    q: "What does the 5-year warranty cover?",
+    a: "Peeling, blistering, and flaking caused by our workmanship. It does not cover damage from water intrusion, settling, or surfaces you asked us not to prep.",
+  },
+  {
+    q: "Do you work with HOAs?",
+    a: "Yes. We pull the approved color list and submit the ARC form for Katy, Cypress, Sugar Land, and Woodlands communities.",
+  },
+  {
+    q: "When is the best time to paint an exterior in Houston?",
+    a: "October through April. Summer afternoons are too hot and humid for paint to cure properly.",
+  },
+  {
+    q: "Do you have an office near me?",
+    a: "Cypress (HQ), Houston, Katy, Sugar Land, and Magnolia.",
+  },
+]
 
-  faqs: [
-    {
-      question: "How much does it cost to paint a house in Houston?",
-      answer: "Interior painting in Houston typically ranges from $6,250-$11,250 for a 2,500 sq ft home. Exterior painting ranges from $4,000-$15,000 based on size, siding type, and condition. We provide free detailed estimates for every project with itemized costs."
-    },
-    {
-      question: "How long does exterior paint last in Houston's climate?",
-      answer: "With proper preparation and premium paints like Sherwin-Williams Duration, exterior paint in Houston lasts 8-10 years. Our 5-year warranty covers peeling, blistering, and premature fading."
-    },
-    {
-      question: "Do you paint homes in all Houston neighborhoods?",
-      answer: "Yes! We serve all Houston neighborhoods including The Heights, Memorial, River Oaks, Montrose, West U, Bellaire, Midtown, and more. We also serve surrounding cities like Katy, Sugar Land, Cypress, and The Woodlands."
-    },
-    {
-      question: "What's the best time of year to paint in Houston?",
-      answer: "Spring and fall offer ideal painting conditions in Houston. However, our experienced crews work year-round, adjusting techniques for Houston's humidity and heat to ensure perfect results regardless of season."
-    },
-    {
-      question: "How long does interior painting take?",
-      answer: "A typical 2,500 sq ft Houston home takes 4-6 days for complete interior painting including walls, ceilings, trim, and doors. Single rooms take 1-2 days. We'll provide a specific timeline in your estimate."
-    },
-    {
-      question: "Do you offer color consultations?",
-      answer: "Yes! We offer free color consultations and can provide large painted samples on your walls before committing. Our team stays current on Houston design trends and can suggest colors that complement your home's architecture."
-    }
-  ]
-}
+const NEARBY = ["Katy", "Cypress", "Sugar Land", "Magnolia", "The Woodlands", "Memorial", "The Heights", "Pearland"]
+const nearbyAreas = NEARBY.map((name) => SERVICE_AREAS.find((a) => a.name === name)!).filter(Boolean)
+
+const HOUSTON_PROJECT_SLUGS = [
+  "memorial-whole-home-interior-repaint",
+  "river-oaks-exterior-restoration",
+  "west-university-kitchen-cabinet-refinishing",
+]
+const houstonProjects = HOUSTON_PROJECT_SLUGS.map((slug) => PROJECTS.find((p) => p.slug === slug)).filter(
+  (p): p is (typeof PROJECTS)[number] => Boolean(p),
+)
+
+const office = officeForPage("painters-houston-tx")!
 
 export default function PaintersHoustonTX() {
   return (
     <>
-      <TrustBar />
-      {/* This page shipped with no LocalBusiness schema despite being the
-          primary Houston city page and the 301 target for the retired
-          /painters-in-houston-tx duplicate. Generated from the shared helper so
-          the NAP stays tied to lib/business.ts. */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            generateLocationBusinessSchema({
-              city: "Houston",
-              slug: "painters-houston-tx",
-              description:
-                "Professional house painters serving Houston, TX and the surrounding metro area.",
-            }),
-          ),
+      <JsonLd data={generateLocationBusinessSchema({ city: "Houston", slug: "painters-houston-tx" })} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          ...breadcrumbNode([
+            { name: "Home", path: "/" },
+            { name: "Service Areas", path: "/service-areas" },
+            { name: "Houston", path: PAGE_PATH },
+          ]),
         }}
       />
+      <TrustBar />
       <Header />
-      <LocationPageTemplate {...houstonData} />
-      <ProblemSelector />
-      <PricingSection />
-      <SchedulerSection />
+      <main>
+        <PageHero h1="House Painters in Houston, TX" eyebrow="Houston Superior Painting" />
+
+        <QuickAnswer>
+          Houston Superior Painting is a Houston painting contractor founded in 2019 by Juan Serra, with 500+ completed
+          projects and a 4.9-star rating across 200+ Google reviews. We paint interiors, exteriors, and cabinets across
+          Greater Houston from five offices, carry $2M liability insurance, and back every job with a 5-year workmanship
+          warranty. Free estimates: (346) 594-5960.
+        </QuickAnswer>
+
+        <Section title="Who we paint for">
+          <p>
+            Homeowners in Houston, Katy, Cypress, Sugar Land, Magnolia, The Woodlands, and the surrounding suburbs. Most of
+            our work is full interior repaints, exterior repaints on brick, stucco, and HardiePlank homes, and kitchen
+            cabinet refinishing. We also paint offices, retail, and{" "}
+            <Link href="/commercial-painting-houston-tx">light commercial buildings</Link>.
+          </p>
+        </Section>
+
+        <Section title="Our painting services">
+          <Bullets
+            items={[
+              <>
+                <Link href="/interior-painting-houston-tx">Interior painting</Link> — walls, ceilings, trim, doors, accent
+                walls. Two coats of Sherwin-Williams or Benjamin Moore, low-VOC.
+              </>,
+              <>
+                <Link href="/exterior-painting-houston-tx">Exterior painting</Link> — pressure wash, scrape, caulk, prime,
+                two coats. Brick, stucco, Hardie, wood siding.
+              </>,
+              <>
+                <Link href="/cabinet-refinishing-houston-tx">Cabinet refinishing</Link> — degrease, sand, bonding primer,
+                sprayed cabinet enamel. Factory-smooth finish.
+              </>,
+              <>
+                <Link href="/drywall-repair-houston-tx">Drywall repair</Link> — patches, water damage, texture matching
+                before paint.
+              </>,
+              <>
+                <Link href="/limewash-brick-painting-houston-tx">Limewash</Link> and{" "}
+                <Link href="/stucco-painting-houston-tx">stucco finishes</Link> — limewash brick, German smear, elastomeric
+                stucco coatings.
+              </>,
+              <>
+                <Link href="/soft-washing-houston-tx">Soft washing</Link> and{" "}
+                <Link href="/pressure-washing-houston-tx">pressure washing</Link> — mildew removal before exterior
+                painting.
+              </>,
+            ]}
+          />
+        </Section>
+
+        <Section title="How we paint a Houston home">
+          <Steps
+            items={[
+              {
+                title: "Estimate",
+                text: "on-site walkthrough, written scope with square footage, product, and coat count. No upfront payment.",
+              },
+              {
+                title: "Prep",
+                text: "this is 60% of the job in Houston. Pressure wash to kill mildew, scrape and sand, replace rotted wood, caulk every gap, prime bare surfaces.",
+              },
+              {
+                title: "Paint",
+                text: "two full coats, sprayed and back-rolled on exteriors, cut and rolled on interiors. We don't paint when humidity is above 85% or surfaces are above 90°F.",
+              },
+              {
+                title: "Walkthrough",
+                text: "you inspect every room or elevation with the crew lead before final payment.",
+              },
+            ]}
+          />
+        </Section>
+
+        <Section title="Why Houston is hard on paint">
+          <p>
+            Houston averages 90% morning humidity and 100+ days above 90°F. Paint applied over damp or chalky surfaces
+            peels within two years. South- and west-facing walls fade and chalk fastest. Mildew grows on shaded north
+            walls. HOA communities in Katy, Cypress, and Sugar Land restrict exterior colors and require approval before
+            work starts. We handle the ARC submission for you.
+          </p>
+        </Section>
+
+        <Section title="Houston painting prices (2026)">
+          <PriceTable
+            head={["Project", "2026 Houston range"]}
+            rows={[
+              ["Single room (12×14)", PRICES_2026.singleRoom],
+              ["Full interior, 2,500 sq ft", PRICES_2026.fullInterior2500],
+              ["Exterior, 2,500 sq ft two-story", PRICES_2026.exterior2500TwoStory],
+              ["Kitchen cabinets, 15–25 doors", PRICES_2026.cabinetsAverage],
+              ["Whole-home trim and baseboards", PRICES_2026.trimWholeHome],
+            ]}
+            note={
+              <>
+                These are 2026 Houston estimates, not quotes. Peeling paint, wood rot, and heavy patching add cost. See the
+                full <Link href="/houston-painting-cost-guide" className="text-primary font-medium underline">Houston Painting Cost Guide</Link>.
+              </>
+            }
+          />
+        </Section>
+
+        <Section title="Paints we use">
+          <p>
+            Sherwin-Williams Duration and Emerald for exteriors — both hold up to Gulf Coast UV and moisture. Benjamin
+            Moore Aura or Regal Select for interiors. Cabinet enamel: Benjamin Moore Advance or Sherwin-Williams Emerald
+            Urethane. We buy at contractor pricing and pass the product through at cost.
+          </p>
+        </Section>
+
+        <Section title="Recent Houston projects">
+          <div className="not-prose grid md:grid-cols-3 gap-6">
+            {houstonProjects.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/projects/${p.slug}`}
+                className="group block bg-card border border-border rounded-xl overflow-hidden hover:border-primary transition-colors"
+              >
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={p.heroImage}
+                    alt={p.title}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{p.neighborhood}</p>
+                  <h3 className="font-semibold text-lg text-foreground mb-2 group-hover:text-primary">{p.title}</h3>
+                  <p className="text-muted-foreground text-sm">{p.summary}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Section>
+
+        <FAQ items={FAQS} title="Frequently asked questions" variant="compact" />
+
+        <Section title="Visit our Houston office">
+          <OfficeNap office={office} />
+          <p className="mt-6">
+            Other offices: <Link href="/painters-cypress-tx">Cypress painters (HQ)</Link>,{" "}
+            <Link href="/painters-katy-tx">Katy painters</Link>,{" "}
+            <Link href="/painters-sugar-land-tx">Sugar Land painters</Link>, and{" "}
+            <Link href="/painters-magnolia-tx">Magnolia painters</Link>.
+          </p>
+        </Section>
+
+        <Section title="Nearby areas we serve">
+          <p>
+            {nearbyAreas.map((a, i) => (
+              <span key={a.slug}>
+                {i > 0 && " · "}
+                <Link href={`/${a.slug}`}>{a.name}</Link>
+              </span>
+            ))}
+          </p>
+        </Section>
+
+        <CtaBlock title="Get a free Houston painting estimate">
+          Call (346) 594-5960 or{" "}
+          <Link href={ESTIMATE_PATH} className="underline">
+            request an estimate online
+          </Link>
+          . Written scope in 24 hours, no upfront payment, 5-year warranty.
+        </CtaBlock>
+
+        <AuthorByline />
+      </main>
       <Footer />
     </>
   )

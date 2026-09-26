@@ -1,15 +1,16 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
-  title: "Why Paint Prep Matters in Houston's Climate",
+  title: "Why Paint Prep Matters in Houston's Climate (2026 Guide)",
   description: "Why prep is the key to a long-lasting paint job in Houston. Our professional process for surviving Texas heat, humidity, and storms.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/paint-preparation-houston-climate',
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Why Proper Paint Preparation Matters in Houston's Climate",
-    description: "The secret to paint that lasts 10+ years in Houston weather starts with proper preparation.",
+    description: "The secret to paint that lasts its full 5–7 year cycle in Houston weather starts with proper preparation.",
     type: "article",
     publishedTime: "2026-05-01",
     authors: ["Houston Superior Painting"],
@@ -35,7 +36,7 @@ export default function PaintPreparationHoustonPage() {
   return (
     <BlogPostTemplate slug="paint-preparation-houston-climate"
       title="Why Proper Paint Preparation Matters in Houston's Climate"
-      excerpt="Houston homeowners often wonder why some paint jobs last 10 years while others begin peeling after only 2 or 3 years. The answer is simple: preparation."
+      excerpt="Houston homeowners often wonder why some paint jobs last their full repaint cycle while others begin peeling after only 2 or 3 years. The answer is simple: preparation."
       author="Houston Superior Painting"
       authorRole="Professional Painting Contractor"
       publishDate="May 1, 2026"
@@ -133,27 +134,27 @@ export default function PaintPreparationHoustonPage() {
       <h2>How Long Should Exterior Paint Last in Houston?</h2>
 
       <p>
-        A properly prepared and professionally painted home in Houston can last:
+        Plan to repaint a Houston exterior every 5–7 years. With proper prep, typical lifespans by surface are:
       </p>
 
       <ul>
-        <li><strong>8–12 years</strong> for siding</li>
-        <li><strong>7–10 years</strong> for stucco</li>
-        <li><strong>5–8 years</strong> for trim and doors</li>
+        <li><strong>5–7 years</strong> for siding (longer on shaded walls)</li>
+        <li><strong>5–7 years</strong> for stucco</li>
+        <li><strong>4–6 years</strong> for trim and doors</li>
       </ul>
 
       <p>
-        The key is proper prep and premium coatings.
+        The key is proper prep and premium coatings, which is why every quote for our <Link href="/exterior-painting-houston-tx">exterior painting in Houston</Link> spells out the prep scope line by line.
       </p>
 
       <h2>Looking for Professional House Painters in Houston?</h2>
 
       <p>
-        Houston Superior Painting provides high-quality residential painting with old-school preparation methods and premium finishes. We serve Houston, Katy, Cypress, Sugar Land, Richmond, and Fulshear.
+        Houston Superior Painting provides high-quality residential painting with old-school preparation methods and premium finishes. We serve Houston, Katy, Cypress, <Link href="/painters-sugar-land-tx">Sugar Land</Link>, Richmond, and Fulshear. Our <Link href="/exterior-house-painting-houston-cost-guide">exterior painting cost guide for Houston</Link> shows what that prep costs in 2026.
       </p>
 
       <p>
-        We offer free estimates, professional communication, detailed preparation, high-end finishes, and exterior warranties.
+        We offer free estimates, professional communication, detailed preparation, high-end finishes, a 5-year workmanship warranty, and no deposit.
       </p>
 
       <p>

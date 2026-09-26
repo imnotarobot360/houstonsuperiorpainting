@@ -2,12 +2,12 @@ import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
 
 export const metadata: Metadata = {
-  title: "Luxury Interior Painting Memorial TX",
+  title: "Luxury Interior Painting Memorial TX | Houston Superior Painting",
   description: "High-end interior painting for Memorial homes. Custom finishes, designer coordination, premium materials. Master craftsmen. Free consultation.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/luxury-interior-painting-memorial",
   },
-  openGraph: {
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Luxury Interior Painting Memorial TX — Houston Superior Painting",
     description: "High-end interior painting for Memorial homes. Custom finishes, designer coordination, premium materials.",
     url: "https://houstonsuperiorpainting.com/luxury-interior-painting-memorial",

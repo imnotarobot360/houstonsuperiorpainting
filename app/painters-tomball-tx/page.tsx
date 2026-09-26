@@ -5,13 +5,13 @@ import { LocationPageTemplate } from "@/components/location-page-template"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Painters Tomball TX — Houston Superior Painting",
+  title: "House Painters Tomball TX — Houston Superior Painting",
   description: "Professional painters in Tomball TX. Interior, exterior, cabinet painting for Lakewood Forest, Northpointe, Augusta Pines. 5-year warranty. Free estimates.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-tomball-tx',
   },
   openGraph: {
-    title: "Painters Tomball TX — Houston Superior Painting",
+    title: "House Painters Tomball TX — Houston Superior Painting",
     description: "Professional painters in Tomball TX. Interior, exterior, cabinet painting for Lakewood Forest, Northpointe, Augusta Pines. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/painters-tomball-tx",
     siteName: "Houston Superior Painting",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Painters Tomball TX — Houston Superior Painting",
+    title: "House Painters Tomball TX — Houston Superior Painting",
     description: "Professional painters in Tomball TX. Interior, exterior, cabinet painting for Lakewood Forest, Northpointe, Augusta Pines.",
     images: ["https://houstonsuperiorpainting.com/images/og/og-painters-tomball.jpg"],
   },
@@ -125,7 +125,7 @@ We are fully insured, use Sherwin-Williams and Benjamin Moore paints exclusively
         faqs={[
           {
             question: "How much does it cost to paint a house in Tomball?",
-            answer: "Interior painting in Tomball typically runs $2-$4 per square foot, while exterior painting ranges from $1.50-$3.50 per square foot. A 2,500 sq ft home interior averages $5,000-$10,000. We provide free detailed estimates for all Tomball properties."
+            answer: "Interior painting in Tomball typically runs $2.50–$4.50 per square foot, while exterior painting ranges from $1.50–$4 per square foot. A 2,500 sq ft home interior runs $4,000–$8,000, and a 2,500 sq ft two-story exterior $5,500–$9,000. We provide free detailed estimates for all Tomball properties."
           },
           {
             question: "Do you paint historic homes in Old Town Tomball?",
