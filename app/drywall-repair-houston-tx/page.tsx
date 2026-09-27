@@ -68,7 +68,7 @@ const faqs = [
     a: "Light repairs such as nail pops, hairline cracks, and small patches are included with our interior painting. Larger repairs are priced as separate lines on the same estimate.",
   },
   {
-    q: "Are you licensed and insured in Texas?",
+    q: "Are you insured in Texas?",
     a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and the certificate of insurance comes with every estimate.",
   },
   {

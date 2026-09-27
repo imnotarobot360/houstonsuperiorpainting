@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     canonical: 'https://houstonsuperiorpainting.com/limewash-decorative-finishes-cypress-bridgeland',
   },
   title: "Limewash & Decorative Finishes Cypress & Bridgeland",
-  description: "Premium limewash and decorative finishes in Cypress and Bridgeland, TX. Free quote — call (346) 594-5960.",
+  description: "Premium limewash and decorative finishes in Cypress and Bridgeland, TX. European-style texture with breathable, timeless walls. Free quote — call (346) 594-5960.",
 }
 
 export default function LimewashCypressPage() {

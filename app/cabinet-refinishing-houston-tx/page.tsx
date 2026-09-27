@@ -69,7 +69,7 @@ const faqs = [
     a: "Yes. Oak has open grain that shows through paint, so we offer grain filling before primer for a smooth, modern finish. Without it, the grain texture stays visible under the color.",
   },
   {
-    q: "Are you licensed and insured in Texas?",
+    q: "Are you insured in Texas?",
     a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and the certificate of insurance comes with every estimate.",
   },
   {

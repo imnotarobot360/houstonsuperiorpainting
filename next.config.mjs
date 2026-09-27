@@ -215,6 +215,12 @@ const nextConfig = {
       { source: '/blog/best-time-to-paint-houston-home-exterior', destination: '/blog/best-time-to-paint-house-houston', permanent: true },
       { source: '/blog/how-to-choose-best-painters-houston', destination: '/questions-to-ask-before-hiring-painters', permanent: true },
       { source: '/blog/licensed-vs-unlicensed-painters', destination: '/questions-to-ask-before-hiring-painters', permanent: true },
+      // Three near-duplicate paint-color-trend slugs (none built as pages) fold
+      // into the single canonical best-paint-colors page so they never split
+      // ranking for the same intent.
+      { source: '/blog/paint-color-trends-houston-homes-2026', destination: '/best-paint-colors-houston-homes', permanent: true },
+      { source: '/blog/paint-colors-houston-homes-2026', destination: '/best-paint-colors-houston-homes', permanent: true },
+      { source: '/blog/houston-paint-color-trends-2026', destination: '/best-paint-colors-houston-homes', permanent: true },
       // Garage epoxy content belongs to the epoxy brand's own domain.
       { source: '/blog/garage-epoxy-coating-houston-tx', destination: 'https://houstonsuperiorepoxy.com/', permanent: true },
       { source: '/blog/garage-epoxy-flooring-houston-tx', destination: 'https://houstonsuperiorepoxy.com/', permanent: true },

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     canonical: 'https://houstonsuperiorpainting.com/limewash-decorative-finishes-katy-cinco-ranch',
   },
   title: "Limewash & Decorative Finishes Katy & Cinco Ranch",
-  description: "Premium limewash and decorative finishes in Katy and Cinco Ranch, TX. Free quote — call (346) 594-5960.",
+  description: "Premium limewash and decorative finishes in Katy and Cinco Ranch, TX. European-style texture with breathable, timeless walls. Free quote — call (346) 594-5960.",
 }
 
 export default function LimewashKatyPage() {
