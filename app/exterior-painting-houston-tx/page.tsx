@@ -66,7 +66,7 @@ const faqs = [
     a: "No. We need gates unlocked and access to an outdoor water spigot and outlet. We cover plants and move light patio furniture ourselves.",
   },
   {
-    q: "Are you licensed and insured in Texas?",
+    q: "Are you insured in Texas?",
     a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and the certificate of insurance comes with every estimate.",
   },
   {

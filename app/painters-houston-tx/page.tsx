@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 
 const FAQS = [
   {
-    q: "Are you licensed and insured in Texas?",
+    q: "Are you insured in Texas?",
     a: 'Texas does not license painters, so any painter claiming a "state painting license" is misleading you. Houston Superior Painting carries $2M general liability and workers\' compensation. Ask any painter for the certificate of insurance before they start.',
   },
   {

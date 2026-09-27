@@ -64,7 +64,7 @@ const faqs = [
     a: "No. We move and wrap furniture ourselves, cover floors, and put everything back when we finish. Most families stay in the house during the job because we work room by room with low-VOC paint.",
   },
   {
-    q: "Are you licensed and insured in Texas?",
+    q: "Are you insured in Texas?",
     a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and the certificate of insurance comes with every estimate.",
   },
   {

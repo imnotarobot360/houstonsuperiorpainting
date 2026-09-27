@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     canonical: 'https://houstonsuperiorpainting.com/limewash-decorative-finishes-bellaire-west-university',
   },
   title: "Limewash & Decorative Finishes Bellaire & West University",
-  description: "Premium limewash and decorative finishes in Bellaire and West University Place. Free quote — call (346) 594-5960.",
+  description: "Premium limewash and decorative finishes in Bellaire and West University Place. European-style texture with breathable, timeless walls. Free quote — call (346) 594-5960.",
 }
 
 export default function LimewashBellaireWestUPage() {
