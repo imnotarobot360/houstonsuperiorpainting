@@ -142,19 +142,56 @@ export const FUNNELS: Record<FunnelService, FunnelConfig> = {
     ],
     heroImage: "/images/luxury/project-interior.png",
     heroImageAlt: "Freshly painted Houston living room with clean trim lines",
+    /**
+     * Interior questions mirror the dedicated paid estimator
+     * (components/interior/interior-estimator.tsx) so every answer it submits
+     * persists into `leads.answers` and renders on the confirmation page and
+     * the office email. The paid estimator drives its own conditional UI (room
+     * counts vs. sq ft for `size`) and reuses these ids; the shared organic
+     * funnel renders these option lists directly.
+     */
     questions: [
       {
         id: "scope",
-        question: "How much are we painting?",
-        options: ["1–2 rooms", "Several rooms", "Whole house interior", "Not sure yet"],
+        question: "What would you like painted?",
+        options: ["Whole interior", "Several rooms", "One or two rooms", "Walls & trim only", "Something else"],
       },
       {
-        id: "surfaces",
-        question: "What needs coating?",
-        hint: "Trim and ceilings change the labour more than the wall count does.",
-        options: ["Walls only", "Walls and trim", "Walls, trim and ceilings", "Not sure yet"],
+        id: "size",
+        question: "About how large is the project?",
+        hint: "A rough answer is fine — we confirm everything on-site.",
+        options: [
+          "Under 1,500 sq ft",
+          "1,500 – 2,499 sq ft",
+          "2,500 – 3,499 sq ft",
+          "3,500 – 4,499 sq ft",
+          "4,500+ sq ft",
+          "Not sure",
+        ],
       },
-      TIMELINE_QUESTION,
+      {
+        id: "includes",
+        question: "What should we include?",
+        hint: "This is what changes the price the most.",
+        multiSelect: true,
+        options: ["Walls", "Ceilings", "Baseboards & trim", "Doors & closets", "Crown molding", "Drywall / texture repairs"],
+      },
+      {
+        id: "prep",
+        question: "How much prep does your home need?",
+        hint: "Prep is the difference between a coat that lasts and one that peels.",
+        options: [
+          "Good condition — cosmetic only",
+          "Some repairs needed",
+          "Heavy prep — lots of repairs",
+          "Not sure",
+        ],
+      },
+      {
+        id: "timeline",
+        question: "When would you like to start?",
+        options: ["As soon as possible", "Within 1 – 2 weeks", "Within a month", "1 – 3 months", "Just researching prices"],
+      },
     ],
     photoPrompt: "Photos of the rooms help us price trim and ceiling work before we arrive.",
     bookingUrl: BUSINESS.scheduler.embedUrl,

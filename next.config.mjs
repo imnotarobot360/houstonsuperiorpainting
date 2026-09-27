@@ -205,6 +205,10 @@ const nextConfig = {
       // Each loser 301s to the page that owns the query, so one URL per intent.
       // See docs/aeo-seo-plan-2026-09.md.
       { source: '/painting-houston', destination: '/painters-houston-tx', permanent: true },
+      // /locations/* was a parallel set of office pages (v0 PR #3). The plan keeps
+      // the existing /painters-*-tx URLs as the office pages, so these 301 there.
+      { source: '/locations/:slug(cypress|houston|katy|sugar-land|magnolia)', destination: '/painters-:slug-tx', permanent: true },
+      { source: '/locations', destination: '/service-areas', permanent: true },
       { source: '/blog/house-painting-cost-houston-2026', destination: '/houston-painting-cost-guide', permanent: true },
       { source: '/blog/interior-painting-cost-houston-tx', destination: '/interior-painting-cost-houston', permanent: true },
       { source: '/blog/exterior-painting-cost-houston-tx-2026', destination: '/exterior-house-painting-houston-cost-guide', permanent: true },

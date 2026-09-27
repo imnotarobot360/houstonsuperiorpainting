@@ -1,7 +1,8 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { Reveal } from "@/components/luxury/reveal"
-import { SERVICE_AREAS } from "@/lib/business"
+import { SERVICE_AREAS, BUSINESS, PHONE_HREF } from "@/lib/business"
+import { LOCATIONS } from "@/lib/locations"
 
 /**
  * Homepage "Areas We Serve" section.
@@ -21,13 +22,37 @@ export function LocationsSection() {
         <Reveal className="max-w-2xl mb-16">
           <p className="kicker mb-4">Service Areas</p>
           <h2 className="font-display text-3xl sm:text-5xl text-foreground leading-tight text-balance">
-            Serving the Greater Houston area
+            Five offices, one crew standard
           </h2>
           <p className="mt-5 font-cormorant text-xl text-graphite leading-relaxed">
-            Five offices across the metro, with crews working from the Heights to Cinco Ranch.
-            Find the detail on your neighborhood below.
+            Cypress, Houston, Katy, Sugar Land and Magnolia. Each office runs the same prep-first
+            process, tuned for Gulf Coast humidity. One number reaches all five:{" "}
+            <a href={PHONE_HREF} className="text-foreground underline decoration-gold underline-offset-4 hover:text-gold-deep">
+              {BUSINESS.phone}
+            </a>
+            .
           </p>
         </Reveal>
+
+        <ul className="mb-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px border border-midnight/10 bg-midnight/10">
+          {LOCATIONS.map((loc) => (
+            <li key={loc.slug} className="bg-background">
+              <Link href={`/painters-${loc.slug}-tx`} className="group flex h-full flex-col gap-2 p-5">
+                <span className="flex items-center justify-between gap-2 font-manrope text-base font-semibold text-foreground group-hover:text-gold-deep">
+                  {loc.city}
+                  <ArrowUpRight className="h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
+                </span>
+                <span className="font-manrope text-sm text-muted-foreground leading-relaxed">
+                  {loc.street}
+                  <br />
+                  {loc.city}, {loc.state} {loc.zip}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <p className="kicker mb-4">Neighborhoods we paint</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8">
           {SERVICE_AREAS.map((area, i) => (

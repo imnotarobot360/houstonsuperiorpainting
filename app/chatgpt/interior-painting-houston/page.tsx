@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { EstimateLanding } from "@/components/estimate-landing"
+import { InteriorLanding } from "@/components/interior/interior-landing"
 import { FUNNELS } from "@/lib/funnel-config"
 
 /**
@@ -9,8 +9,11 @@ import { FUNNELS } from "@/lib/funnel-config"
  * already ranks. Indexing a second, conversion-written page for the same intent
  * would split signals between two of our own URLs.
  *
- * All copy, questions and imagery come from lib/funnel-config.ts so the four ad
- * landing pages cannot drift apart.
+ * Interior gets a dedicated, price-first experience (InteriorLanding) rather
+ * than the shared EstimateLanding: it shows a ballpark price before asking for
+ * contact details, then offers schedule / send-photos / call after the lead is
+ * captured. The other three services still use the shared funnel. Metadata
+ * stays sourced from lib/funnel-config.ts so titles can't drift.
  */
 const CONFIG = FUNNELS.interior
 
@@ -21,5 +24,5 @@ export const metadata: Metadata = {
 }
 
 export default function InteriorPaintingLandingPage() {
-  return <EstimateLanding config={CONFIG} />
+  return <InteriorLanding />
 }
