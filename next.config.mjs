@@ -205,6 +205,8 @@ const nextConfig = {
       // Each loser 301s to the page that owns the query, so one URL per intent.
       // See docs/aeo-seo-plan-2026-09.md.
       { source: '/painting-houston', destination: '/painters-houston-tx', permanent: true },
+      // Replaced by the fuller brand comparison (Sep 30, 2026); one URL for this query.
+      { source: '/blog/sherwin-williams-vs-benjamin-moore-texas-heat', destination: '/blog/benjamin-moore-vs-sherwin-williams', permanent: true },
       // /locations/* was a parallel set of office pages (v0 PR #3). The plan keeps
       // the existing /painters-*-tx URLs as the office pages, so these 301 there.
       { source: '/locations/:slug(cypress|houston|katy|sugar-land|magnolia)', destination: '/painters-:slug-tx', permanent: true },

@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "How long do Emerald and Duration last on a house?",
     answer:
-      "With good prep and application, premium paints like Emerald and Duration commonly last 8–10 years on an exterior. Sun exposure, siding type, and maintenance all affect that.",
+      "With good prep and application, we recommend repainting a Houston exterior every 5–7 years, and premium paints like Emerald and Duration put you at the long end of that range. Sun exposure, siding type, and maintenance all affect it.",
   },
   {
     question: "Can I use Duration in a bathroom?",
@@ -50,9 +50,9 @@ const faqs = [
 
 const relatedPosts = [
   {
-    title: "Sherwin-Williams vs Benjamin Moore: Which Is Better for Texas Heat?",
-    href: "/blog/sherwin-williams-vs-benjamin-moore-texas-heat",
-    excerpt: "An honest comparison from a Houston painter with years of experience using both brands extensively.",
+    title: "Benjamin Moore vs Sherwin-Williams: A Houston Painter's Honest Comparison",
+    href: "/blog/benjamin-moore-vs-sherwin-williams",
+    excerpt: "Price, product lines, availability, and what holds up best on Houston homes.",
     image: "/images/blog/sherwin-williams-vs-benjamin-moore.jpg",
   },
   {
@@ -247,7 +247,7 @@ export default function EmeraldVsDurationPage() {
         <li><strong>Exterior with heavy wear, lots of shade, or sprinkler overspray:</strong> Duration is a great workhorse.</li>
         <li><strong>Living areas and bedrooms:</strong> Emerald for that smooth, rich finish.</li>
         <li><strong>Kitchens, baths, laundry, kids&apos; rooms:</strong> Duration for moisture resistance and scrubbability.</li>
-        <li><strong>Trim, doors, and cabinets:</strong> Neither — we&apos;d usually point you toward a dedicated enamel built for those surfaces. (See our <Link href="/cabinet-painting-houston-tx">cabinet painting</Link> page.)</li>
+        <li><strong>Trim, doors, and cabinets:</strong> Neither — we&apos;d usually point you toward a dedicated enamel built for those surfaces. (See our <Link href="/cabinet-refinishing-houston-tx">cabinet painting</Link> page.)</li>
       </ol>
 
       <p>
@@ -269,7 +269,7 @@ export default function EmeraldVsDurationPage() {
       </p>
 
       <p>
-        <Link href="/contact">Get your free estimate</Link> or call{" "}
+        <Link href="/painting-estimate-houston">Get your free estimate</Link> or call{" "}
         <a href="tel:+13465945960">(346) 594-5960</a>. We serve Katy, Cypress, Sugar Land, The Woodlands, Fulshear, Richmond, and all of Greater Houston.
       </p>
     </BlogPostTemplate>

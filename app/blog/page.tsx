@@ -21,6 +21,18 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "benjamin-moore-vs-sherwin-williams",
+    title: "Benjamin Moore vs Sherwin-Williams: A Houston Painter's Honest Comparison",
+    excerpt:
+      "Price, product lines, where to buy, and what holds up best on Houston homes — an honest comparison from a local painting contractor.",
+    category: "Paint Selection",
+    author: "Juan Serra",
+    publishDate: "September 30, 2026",
+    readTime: "7 min read",
+    image: "/images/blog/sherwin-williams-vs-benjamin-moore.jpg",
+    featured: false,
+  },
+  {
     slug: "emerald-vs-duration-paint",
     title: "Sherwin-Williams Emerald vs Duration: Which Paint Is Right for Your Houston Home?",
     excerpt:
@@ -550,17 +562,6 @@ const blogPosts = [
     publishDate: "April 8, 2026",
     readTime: "6 min read",
     image: "/images/blog/how-often-repaint-houston.jpg",
-    featured: false,
-  },
-  {
-    slug: "sherwin-williams-vs-benjamin-moore-texas-heat",
-    title: "Sherwin-Williams vs Benjamin Moore: Which Is Better for Texas Heat?",
-    excerpt: "We've used both brands extensively across thousands of Houston homes. Here's our honest comparison of how Sherwin-Williams and Benjamin Moore perform in Texas conditions.",
-    category: "Paint Selection",
-    author: "Juan Serra",
-    publishDate: "April 1, 2026",
-    readTime: "10 min read",
-    image: "/images/blog/sherwin-williams-vs-benjamin-moore.jpg",
     featured: false,
   },
 ]

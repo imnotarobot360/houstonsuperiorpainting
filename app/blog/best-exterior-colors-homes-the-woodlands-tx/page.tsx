@@ -173,7 +173,7 @@ export default function BestExteriorColorsWoodlandsTXPage() {
         filtered tree light. They read as warm and welcoming without competing with the natural surroundings.
       </p>
 
-      <p>Popular options in this family include:</p>
+      <p>Popular options in this family include (either brand can tint the other's colors; see our <Link href="/blog/benjamin-moore-vs-sherwin-williams">Benjamin Moore vs Sherwin-Williams</Link> comparison):</p>
 
       <ul>
         <li><strong>Sherwin-Williams Accessible Beige (SW 7036):</strong> Warm taupe that works with any brick or stone</li>

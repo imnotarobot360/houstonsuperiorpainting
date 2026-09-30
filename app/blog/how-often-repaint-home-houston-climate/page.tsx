@@ -26,7 +26,7 @@ const relatedPosts = [
   },
   {
     title: "Sherwin-Williams vs Benjamin Moore: Which Is Better for Texas Heat?",
-    href: "/blog/sherwin-williams-vs-benjamin-moore-texas-heat",
+    href: "/blog/benjamin-moore-vs-sherwin-williams",
     excerpt: "An honest comparison of how the two major paint brands perform in Texas conditions.",
     image: "/images/blog/sherwin-williams-vs-benjamin-moore.jpg"
   }

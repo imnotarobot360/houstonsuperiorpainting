@@ -302,7 +302,7 @@ export default function ExteriorPaintingCostHoustonPage() {
       <p>
         Houston Superior Painting quotes Good–Best tier Sherwin-Williams and Benjamin Moore products on every exterior
         job — never builder-grade, and never an upcharge surprise for real paint. See our comparison of{" "}
-        <Link href="/blog/sherwin-williams-vs-benjamin-moore-texas-heat" className="text-primary underline">
+        <Link href="/blog/benjamin-moore-vs-sherwin-williams" className="text-primary underline">
           Sherwin-Williams vs Benjamin Moore for Texas heat
         </Link>
         .

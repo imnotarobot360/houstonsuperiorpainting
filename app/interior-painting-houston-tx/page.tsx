@@ -177,7 +177,8 @@ export default function InteriorPaintingHoustonTX() {
           <p>
             Why it matters in Houston: humid air and constant AC cycling are hard on cheap paint, which scuffs,
             mildews, and flashes at touch-ups. Premium lines stay washable and hold sheen. We buy at contractor pricing
-            and pass the product through at cost.
+            and pass the product through at cost. Weighing the brands? Read our{" "}
+            <Link href="/blog/benjamin-moore-vs-sherwin-williams">Benjamin Moore vs Sherwin-Williams comparison</Link>.
           </p>
         </>
       }

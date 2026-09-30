@@ -186,7 +186,8 @@ export default function ExteriorPaintingHoustonTX() {
           <p>
             Why it matters in Houston: heat, humidity, and afternoon storms break down cheap acrylics fast. Premium
             lines keep their color on sunny elevations and shed water on shaded ones. We buy at contractor pricing and
-            pass the product through at cost.
+            pass the product through at cost. Compare the two brands in{" "}
+            <Link href="/blog/benjamin-moore-vs-sherwin-williams">Benjamin Moore vs Sherwin-Williams</Link>.
           </p>
         </>
       }
