@@ -21,6 +21,18 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "emerald-vs-duration-paint",
+    title: "Sherwin-Williams Emerald vs Duration: Which Paint Is Right for Your Houston Home?",
+    excerpt:
+      "Emerald and Duration cost about the same and both promise a finish that lasts. A Houston painter breaks down cost, coverage, and which one wins where.",
+    category: "Paint Selection",
+    author: "Juan Serra",
+    publishDate: "September 30, 2026",
+    readTime: "8 min read",
+    image: "/images/blog/emerald-vs-duration-paint.png",
+    featured: false,
+  },
+  {
     slug: "epoxy-vs-polyaspartic-houston",
     title: "Epoxy vs Polyaspartic Floor Coating in Houston: Which One Actually Lasts?",
     excerpt:
