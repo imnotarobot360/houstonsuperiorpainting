@@ -21,6 +21,18 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "cost-to-paint-2000-sq-ft-house-houston",
+    title: "How Much Does It Cost to Paint a 2,000 Sq Ft House in Houston? (2026 Guide)",
+    excerpt:
+      "Typical 2026 interior and exterior price ranges for a 2,000 sq ft Houston home, what drives the cost, and red flags to watch for on a quote.",
+    category: "Cost Guides",
+    author: "Juan Serra",
+    publishDate: "September 30, 2026",
+    readTime: "7 min read",
+    image: "/images/blog/house-painting-cost-houston.jpg",
+    featured: false,
+  },
+  {
     slug: "benjamin-moore-vs-sherwin-williams",
     title: "Benjamin Moore vs Sherwin-Williams: A Houston Painter's Honest Comparison",
     excerpt:

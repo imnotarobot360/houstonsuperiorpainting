@@ -485,7 +485,7 @@ export default function BestPaintingCompanyKatyTX() {
               <Card className="my-6 bg-primary/5 border-primary/20">
                 <CardContent className="p-6">
                   <p className="text-foreground">
-                    <strong>Want to see detailed pricing?</strong> Check out our comprehensive <Link href="/houston-painting-cost-guide" className="text-primary hover:underline">Houston Painting Cost Guide</Link> for current rates by project type.
+                    <strong>Want to see detailed pricing?</strong> Check out our comprehensive <Link href="/houston-painting-cost-guide" className="text-primary hover:underline">Houston Painting Cost Guide</Link> for current rates by project type, or our breakdown of the <Link href="/blog/cost-to-paint-2000-sq-ft-house-houston" className="text-primary hover:underline">cost to paint a 2,000 sq ft house</Link>.
                   </p>
                 </CardContent>
               </Card>

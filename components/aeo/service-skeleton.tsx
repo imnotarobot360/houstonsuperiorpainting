@@ -160,6 +160,12 @@ export function ServiceSkeleton(d: ServiceSkeletonData) {
               </>
             )}
             .
+            {/(interior|exterior)-painting/.test(d.slug) && (
+              <>
+                {" "}Pricing a mid-size home? See the{" "}
+                <Link href="/blog/cost-to-paint-2000-sq-ft-house-houston">cost to paint a 2,000 sq ft house in Houston</Link>.
+              </>
+            )}
           </p>
         </Section>
 

@@ -269,12 +269,16 @@ export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
             ]}
             note={
               <>
-                Ranges are 2026 prices and match every page on this site. Size, prep, and access move the number. See the
+                Ranges are 2026 prices. Size, prep, and access move the number. See the
                 full{" "}
                 <Link href={COST_GUIDE_PATH} className="text-primary font-medium hover:underline">
                   Houston painting cost guide
                 </Link>{" "}
-                for how each price is built, or get an exact{" "}
+                for how each price is built, the{" "}
+                <Link href="/blog/cost-to-paint-2000-sq-ft-house-houston" className="text-primary font-medium hover:underline">
+                  cost to paint a 2,000 sq ft house
+                </Link>
+                , or get an exact{" "}
                 <Link href={ESTIMATE_PATH} className="text-primary font-medium hover:underline">
                   free painting estimate in {city}
                 </Link>
