@@ -1,15 +1,47 @@
 // Instant estimate pricing model.
 //
-// Every rate here is derived from the figures already published in
-// /houston-painting-cost-guide so the calculator can never contradict the
-// site's own cost guide. Ranges are deliberately wide — this is a ballpark,
-// not a bid.
+// Every price here comes from the tables published in /houston-painting-cost-guide
+// (PRICES_2026 in lib/business.ts), so the calculator can never contradict the
+// site's own cost guide. Interior and exterior prices are interpolated between the
+// guide's home-size rows, so at each published size the calculator shows exactly
+// what the guide shows. Ranges are deliberately wide — this is a ballpark, not a bid.
+
+import { PRICES_2026 } from "@/lib/business"
 
 export type ServiceId = "interior" | "exterior" | "cabinets" | "pressure-washing" | "drywall"
 
 export interface Range {
   low: number
   high: number
+}
+
+/** "$4,000–$8,000" (or "$6,000–$9,000+") → { low: 4000, high: 9000 } */
+function parseRange(text: string): Range {
+  const [low, high] = text.split("–").map((part) => Number(part.replace(/[^0-9.]/g, "")))
+  return { low, high }
+}
+
+interface SizePoint extends Range {
+  sqft: number
+}
+
+const point = (sqft: number, price: string): SizePoint => ({ sqft, ...parseRange(price) })
+
+/**
+ * Price for a home size from the guide's size rows: straight-line between rows,
+ * and the nearest row's price per sq ft outside the table.
+ */
+function priceForSize(points: SizePoint[], sqft: number): Range {
+  const first = points[0]
+  const last = points[points.length - 1]
+  const edge = sqft <= first.sqft ? first : sqft >= last.sqft ? last : null
+  if (edge) return { low: (edge.low * sqft) / edge.sqft, high: (edge.high * sqft) / edge.sqft }
+
+  const i = points.findIndex((p) => p.sqft >= sqft)
+  const a = points[i - 1]
+  const b = points[i]
+  const t = (sqft - a.sqft) / (b.sqft - a.sqft)
+  return { low: a.low + t * (b.low - a.low), high: a.high + t * (b.high - a.high) }
 }
 
 export const SERVICES: Array<{ id: ServiceId; label: string; blurb: string }> = [
@@ -20,28 +52,50 @@ export const SERVICES: Array<{ id: ServiceId; label: string; blurb: string }> = 
   { id: "drywall", label: "Drywall Repair", blurb: "Patches, cracks & texture" },
 ]
 
-/** Interior $/sq ft by finish scope — cost guide: $2.50–$4.50/sq ft overall. */
-export const INTERIOR_SCOPES: Array<{ id: string; label: string; rate: Range }> = [
-  { id: "walls", label: "Walls only", rate: { low: 2.0, high: 2.5 } },
-  { id: "walls-trim", label: "Walls & trim", rate: { low: 2.5, high: 3.5 } },
-  { id: "full", label: "Walls, ceilings & trim", rate: { low: 3.0, high: 4.5 } },
-  { id: "premium", label: "Premium / high-end finishes", rate: { low: 4.5, high: 6.0 } },
+/** Cost guide "Full interior" rows (walls, ceilings & trim). */
+const INTERIOR_FULL_BY_SIZE: SizePoint[] = [
+  point(1500, PRICES_2026.fullInterior1500),
+  point(2000, PRICES_2026.fullInterior2000),
+  point(2500, PRICES_2026.fullInterior2500),
+  point(4000, PRICES_2026.fullInterior4000),
 ]
 
-/** Exterior $/sq ft by stories. 1-story reproduces the published
- *  "2,500 sq ft single-story = $5,500–$8,500" exactly. */
-export const EXTERIOR_STORIES: Array<{ id: string; label: string; rate: Range }> = [
-  { id: "1", label: "1 story", rate: { low: 2.2, high: 3.4 } },
-  { id: "2", label: "2 stories", rate: { low: 2.6, high: 4.2 } },
-  { id: "3", label: "3+ stories", rate: { low: 3.2, high: 5.0 } },
+/** Each finish scope as a share of the full walls, ceilings & trim price. */
+export const INTERIOR_SCOPES: Array<{ id: string; label: string; factor: Range }> = [
+  { id: "walls", label: "Walls only", factor: { low: 0.67, high: 0.56 } },
+  { id: "walls-trim", label: "Walls & trim", factor: { low: 0.83, high: 0.78 } },
+  { id: "full", label: "Walls, ceilings & trim", factor: { low: 1, high: 1 } },
+  { id: "premium", label: "Premium / high-end finishes", factor: { low: 1.5, high: 1.33 } },
 ]
 
-/** Cabinet refinishing — mirrors the "By Kitchen Size" table in the cost guide. */
+/** Cost guide exterior table, by stories. */
+const EXTERIOR_ONE_STORY: SizePoint[] = [
+  point(1500, PRICES_2026.exterior1500OneStory),
+  point(2000, PRICES_2026.exterior2000OneStory),
+  point(2500, PRICES_2026.exterior2500OneStory),
+  point(3000, PRICES_2026.exterior3000OneStory),
+  point(4000, PRICES_2026.exterior4000OneStory),
+]
+const EXTERIOR_TWO_STORY: SizePoint[] = [
+  point(1500, PRICES_2026.exterior1500TwoStory),
+  point(2000, PRICES_2026.exterior2000TwoStory),
+  point(2500, PRICES_2026.exterior2500TwoStory),
+  point(3000, PRICES_2026.exterior3000TwoStory),
+  point(4000, PRICES_2026.exterior4000TwoStory),
+]
+
+/** 3+ stories: the guide says three-story homes add 20–40% for lifts and ladders. */
+export const EXTERIOR_STORIES: Array<{ id: string; label: string; table: SizePoint[]; factor: Range }> = [
+  { id: "1", label: "1 story", table: EXTERIOR_ONE_STORY, factor: { low: 1, high: 1 } },
+  { id: "2", label: "2 stories", table: EXTERIOR_TWO_STORY, factor: { low: 1, high: 1 } },
+  { id: "3", label: "3+ stories", table: EXTERIOR_TWO_STORY, factor: { low: 1.2, high: 1.4 } },
+]
+
+/** Cabinet refinishing — the cost guide's "Kitchen size" table. */
 export const CABINET_SIZES: Array<{ id: string; label: string; total: Range }> = [
-  { id: "small", label: "Small (10–15 doors)", total: { low: 2500, high: 4000 } },
-  { id: "average", label: "Average (20–30 doors)", total: { low: 3500, high: 6000 } },
-  { id: "large", label: "Large (30–40 doors)", total: { low: 5500, high: 8000 } },
-  { id: "xl", label: "Extra large (40+ doors)", total: { low: 7500, high: 12000 } },
+  { id: "small", label: "Galley (10–15 doors)", total: parseRange(PRICES_2026.cabinetsGalley) },
+  { id: "average", label: "Average (15–25 doors)", total: parseRange(PRICES_2026.cabinetsAverage) },
+  { id: "large", label: "Large with island (25–40 doors)", total: parseRange(PRICES_2026.cabinetsLarge) },
 ]
 
 export const PRESSURE_WASH_SIZES: Array<{ id: string; label: string; total: Range }> = [
@@ -59,8 +113,7 @@ export const DRYWALL_SIZES: Array<{ id: string; label: string; total: Range }> =
 /**
  * The option each service should open on, chosen so the first number a visitor
  * sees matches the headline figure published in the cost guide tables
- * (e.g. interior defaults to walls+ceilings+trim = $3.00–$4.50/sq ft, which
- * reproduces the published "2,500 sq ft = $7,500–$11,250").
+ * (e.g. interior opens on walls, ceilings & trim at 2,500 sq ft = PRICES_2026.fullInterior2500).
  */
 export const DEFAULT_OPTION: Record<ServiceId, string> = {
   interior: "full",
@@ -87,36 +140,52 @@ export interface CalcInput {
 /** Round to the nearest $50 so ranges read like estimates, not calculations. */
 const round50 = (n: number) => Math.round(n / 50) * 50
 
+const NO_SCALING: Range = { low: 1, high: 1 }
+
+/** Apply a scope/stories factor and the surface condition, then round. */
+function finish(base: Range, factor: Range, conditionId: string): Range {
+  const condition = CONDITIONS.find((c) => c.id === conditionId)?.multiplier ?? 1
+  return {
+    low: round50(base.low * factor.low * condition),
+    high: round50(base.high * factor.high * condition),
+  }
+}
+
+/** Cost guide single room (12×14, ceiling and trim included). */
+const SINGLE_ROOM: Range = parseRange(PRICES_2026.singleRoom)
+
+/**
+ * Price a room-sized interior job at the cost guide's single-room range.
+ * `rooms` is the low and high room count (e.g. "2–3 rooms" = { low: 2, high: 3 }).
+ */
+export function roomsEstimate(rooms: Range, option: string, condition: string): Range | null {
+  const scope = INTERIOR_SCOPES.find((s) => s.id === option)
+  if (!scope) return null
+  return finish({ low: SINGLE_ROOM.low * rooms.low, high: SINGLE_ROOM.high * rooms.high }, scope.factor, condition)
+}
+
 export function calculateEstimate(input: CalcInput): Range | null {
-  const condition =
-    CONDITIONS.find((c) => c.id === input.condition)?.multiplier ?? 1
-
-  let base: Range | null = null
-
   if (input.service === "interior") {
     const scope = INTERIOR_SCOPES.find((s) => s.id === input.option)
     if (!scope || !input.sqft) return null
-    base = { low: scope.rate.low * input.sqft, high: scope.rate.high * input.sqft }
-  } else if (input.service === "exterior") {
-    const story = EXTERIOR_STORIES.find((s) => s.id === input.option)
-    if (!story || !input.sqft) return null
-    base = { low: story.rate.low * input.sqft, high: story.rate.high * input.sqft }
-  } else {
-    const table =
-      input.service === "cabinets"
-        ? CABINET_SIZES
-        : input.service === "pressure-washing"
-          ? PRESSURE_WASH_SIZES
-          : DRYWALL_SIZES
-    const match = table.find((t) => t.id === input.option)
-    if (!match) return null
-    base = { ...match.total }
+    return finish(priceForSize(INTERIOR_FULL_BY_SIZE, input.sqft), scope.factor, input.condition)
   }
 
-  return {
-    low: round50(base.low * condition),
-    high: round50(base.high * condition),
+  if (input.service === "exterior") {
+    const story = EXTERIOR_STORIES.find((s) => s.id === input.option)
+    if (!story || !input.sqft) return null
+    return finish(priceForSize(story.table, input.sqft), story.factor, input.condition)
   }
+
+  const table =
+    input.service === "cabinets"
+      ? CABINET_SIZES
+      : input.service === "pressure-washing"
+        ? PRESSURE_WASH_SIZES
+        : DRYWALL_SIZES
+  const match = table.find((t) => t.id === input.option)
+  if (!match) return null
+  return finish(match.total, NO_SCALING, input.condition)
 }
 
 export const formatUSD = (n: number) =>

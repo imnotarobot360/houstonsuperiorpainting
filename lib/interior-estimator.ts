@@ -3,8 +3,8 @@
 // This is the data + mapping layer for the interior ChatGPT-Ads landing page
 // estimator (components/interior/interior-estimator.tsx). It deliberately does
 // NOT invent any pricing: the dollar range is produced by
-// `calculateEstimate` from lib/estimate-pricing.ts, whose rates are derived
-// from the figures published in /houston-painting-cost-guide. This file only
+// `calculateEstimate` / `roomsEstimate` from lib/estimate-pricing.ts, whose
+// prices come from the tables published in /houston-painting-cost-guide. This file only
 // translates the estimator's plain-language answers into that model's inputs
 // (home size in sq ft, finish scope, surface condition).
 //
@@ -13,7 +13,7 @@
 // renders on the confirmation page and the office email exactly like the
 // shared funnel's answers do.
 
-import { calculateEstimate, formatRange, type Range } from "@/lib/estimate-pricing"
+import { calculateEstimate, formatRange, roomsEstimate, type Range } from "@/lib/estimate-pricing"
 
 export interface InteriorAnswers {
   scope?: string
@@ -47,17 +47,14 @@ export const HOME_SIZE_OPTIONS: Array<{ label: string; sqft: number }> = [
   { label: "Not sure", sqft: 2500 },
 ]
 
-// ── Question 2b: room-count size → effective paint sq ft ─────────────────────
-// Room counts are converted to an effective square footage so the same
-// published $/sq ft model can price them. Values are tuned so a single room at
-// the walls-and-trim rate lands in the low-four-figures range the cost guide
-// implies for room-scale interior work.
-export const ROOM_SIZE_OPTIONS: Array<{ label: string; sqft: number }> = [
-  { label: "1 room", sqft: 350 },
-  { label: "2 – 3 rooms", sqft: 800 },
-  { label: "4 – 5 rooms", sqft: 1400 },
-  { label: "6+ rooms", sqft: 2200 },
-  { label: "Not sure", sqft: 900 },
+// ── Question 2b: room count → low/high number of rooms ───────────────────────
+// Priced at the cost guide's single-room range. "Not sure" assumes 2–3 rooms.
+export const ROOM_SIZE_OPTIONS: Array<{ label: string; rooms: Range }> = [
+  { label: "1 room", rooms: { low: 1, high: 1 } },
+  { label: "2 – 3 rooms", rooms: { low: 2, high: 3 } },
+  { label: "4 – 5 rooms", rooms: { low: 4, high: 5 } },
+  { label: "6+ rooms", rooms: { low: 6, high: 8 } },
+  { label: "Not sure", rooms: { low: 2, high: 3 } },
 ]
 
 // ── Question 3: what to include (multi-select) ───────────────────────────────
@@ -90,7 +87,7 @@ export const TIMELINE_OPTIONS = [
 ] as const
 
 /** Which size list a given scope should present. */
-export function sizeOptionsForScope(scope: string | undefined): Array<{ label: string; sqft: number }> {
+export function sizeOptionsForScope(scope: string | undefined): Array<{ label: string }> {
   return scope && WHOLE_HOME_SCOPES.has(scope) ? HOME_SIZE_OPTIONS : ROOM_SIZE_OPTIONS
 }
 
@@ -100,12 +97,6 @@ export function sizeQuestionLabel(scope: string | undefined): string {
     : "About how many rooms are we painting?"
 }
 
-/** Resolve the chosen size answer back to an effective square footage. */
-function sqftFromAnswers(answers: InteriorAnswers): number | null {
-  const list = sizeOptionsForScope(answers.scope)
-  const match = list.find((o) => o.label === answers.size)
-  return match ? match.sqft : null
-}
 
 /**
  * Map the multi-select "includes" answer to an interior finish scope id from
@@ -152,15 +143,16 @@ function conditionIdFromAnswers(answers: InteriorAnswers): string {
 export function computeInteriorRange(answers: InteriorAnswers): Range | null {
   if (answers.scope === "Something else") return null
 
-  const sqft = sqftFromAnswers(answers)
-  if (!sqft) return null
+  const option = scopeIdFromIncludes(answers.includes)
+  const condition = conditionIdFromAnswers(answers)
 
-  return calculateEstimate({
-    service: "interior",
-    sqft,
-    option: scopeIdFromIncludes(answers.includes),
-    condition: conditionIdFromAnswers(answers),
-  })
+  if (answers.scope && WHOLE_HOME_SCOPES.has(answers.scope)) {
+    const home = HOME_SIZE_OPTIONS.find((o) => o.label === answers.size)
+    return home ? calculateEstimate({ service: "interior", sqft: home.sqft, option, condition }) : null
+  }
+
+  const rooms = ROOM_SIZE_OPTIONS.find((o) => o.label === answers.size)
+  return rooms ? roomsEstimate(rooms.rooms, option, condition) : null
 }
 
 export function formatInteriorRange(range: Range): string {

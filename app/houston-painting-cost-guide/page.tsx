@@ -157,9 +157,9 @@ export default function HoustonPaintingCostGuidePage() {
             rows={[
               ["Single room (12×14)", PRICES_2026.singleRoom, "$500"],
               ["Accent wall", "$150–$400", "$250"],
-              ["Full interior, 1,500 sq ft", "$3,000–$5,500", "$4,000"],
+              ["Full interior, 1,500 sq ft", PRICES_2026.fullInterior1500, "$4,000"],
               ["Full interior, 2,500 sq ft", PRICES_2026.fullInterior2500, "$6,000"],
-              ["Full interior, 4,000+ sq ft", "$7,000–$14,000", "$10,000"],
+              ["Full interior, 4,000+ sq ft", PRICES_2026.fullInterior4000, "$10,000"],
               ["Trim and baseboards, whole home", PRICES_2026.trimWholeHome, "$2,000"],
               ["Ceilings, whole home", "$1,500–$3,500", "$2,500"],
             ]}
@@ -175,11 +175,11 @@ export default function HoustonPaintingCostGuidePage() {
           <PriceTable
             head={["Home size", "1 story", "2 story"]}
             rows={[
-              ["1,500 sq ft", "$2,500–$4,500", "$3,500–$6,000"],
+              ["1,500 sq ft", PRICES_2026.exterior1500OneStory, PRICES_2026.exterior1500TwoStory],
               ["2,000 sq ft", PRICES_2026.exterior2000OneStory, PRICES_2026.exterior2000TwoStory],
-              ["2,500 sq ft", "$4,000–$7,000", PRICES_2026.exterior2500TwoStory],
-              ["3,000 sq ft", "$5,000–$8,000", "$6,500–$10,500"],
-              ["4,000+ sq ft", "$6,500–$10,000", "$8,500–$14,000"],
+              ["2,500 sq ft", PRICES_2026.exterior2500OneStory, PRICES_2026.exterior2500TwoStory],
+              ["3,000 sq ft", PRICES_2026.exterior3000OneStory, PRICES_2026.exterior3000TwoStory],
+              ["4,000+ sq ft", PRICES_2026.exterior4000OneStory, PRICES_2026.exterior4000TwoStory],
             ]}
           />
           <p>
@@ -193,9 +193,9 @@ export default function HoustonPaintingCostGuidePage() {
           <PriceTable
             head={["Kitchen size", "Range"]}
             rows={[
-              ["Galley, 10–15 doors", "$2,200–$3,500"],
+              ["Galley, 10–15 doors", PRICES_2026.cabinetsGalley],
               ["Average, 15–25 doors", PRICES_2026.cabinetsAverage],
-              ["Large with island, 25–40 doors", "$6,000–$9,000+"],
+              ["Large with island, 25–40 doors", PRICES_2026.cabinetsLarge],
             ]}
           />
           <p>

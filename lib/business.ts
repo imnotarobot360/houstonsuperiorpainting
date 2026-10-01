@@ -391,4 +391,16 @@ export const PRICES_2026 = {
   exterior2000: "$3,500–$7,500",
   fullInterior2000: "$3,500–$7,000",
   wholeHome2000: "$7,000–$14,500",
+  // Remaining cost guide table rows. The instant-estimate calculator (lib/estimate-pricing.ts) is built from these.
+  fullInterior1500: "$3,000–$5,500",
+  fullInterior4000: "$7,000–$14,000",
+  exterior1500OneStory: "$2,500–$4,500",
+  exterior1500TwoStory: "$3,500–$6,000",
+  exterior2500OneStory: "$4,000–$7,000",
+  exterior3000OneStory: "$5,000–$8,000",
+  exterior3000TwoStory: "$6,500–$10,500",
+  exterior4000OneStory: "$6,500–$10,000",
+  exterior4000TwoStory: "$8,500–$14,000",
+  cabinetsGalley: "$2,200–$3,500",
+  cabinetsLarge: "$6,000–$9,000+",
 } as const
