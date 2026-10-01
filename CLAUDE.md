@@ -45,3 +45,4 @@ v0 also opens PRs against this repo, so run `git pull` before starting work.
 - Google Business Profiles: confirm the Houston suite (#443 vs #405) and Magnolia's hours, add each listing's share link to `BUSINESS.locations[].mapsUrl`, and point each listing's website field to its `/painters-{city}-tx` page.
 - Add real Katy, Sugar Land and Magnolia projects to `lib/projects.ts`. The office pages show them automatically.
 - Testimonials on the 18 non-office city pages and on project pages are hidden until they can be matched to real Google reviews.
+- The named reviews on the interior funnel (`components/interior/interior-proof.tsx`, `components/testimonials.tsx`, e.g. Sarah Mitchell, Catherine R. in `lib/projects.ts`) are real Google reviews, confirmed by Juan 2026-10-01. Leave them.
