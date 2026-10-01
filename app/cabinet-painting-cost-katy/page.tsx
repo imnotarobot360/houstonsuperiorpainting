@@ -4,21 +4,21 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import FAQ from "@/components/faq"
 import { Phone, MessageSquare, ChevronRight, CheckCircle2 } from "lucide-react"
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, SMS_HREF, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "How Much Does Cabinet Painting Cost in Katy TX? 2026 Guide",
-  description: "Cabinet painting costs in Katy TX typically range $30-$60 per linear foot or $3,000-$8,000 for a full kitchen. Save 60-70% vs replacement. Call 346-594-5960.",
+  description: `Cabinet painting costs in Katy TX typically range $30-$60 per linear foot or ${PRICES_2026.cabinetsPerKitchen} for a full kitchen. Save 60-70% vs replacement. Call 346-594-5960.`,
   alternates: { canonical: "https://houstonsuperiorpainting.com/cabinet-painting-cost-katy" },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }], title: "Cabinet Painting Cost Katy TX 2026 | Full Price Guide", description: "Cabinet painting in Katy TX: $3,000-$8,000 for a full kitchen. Complete price breakdown.", url: "https://houstonsuperiorpainting.com/cabinet-painting-cost-katy", type: "article" },
+  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }], title: "Cabinet Painting Cost Katy TX 2026 | Full Price Guide", description: `Cabinet painting in Katy TX: ${PRICES_2026.cabinetsPerKitchen} for a full kitchen. Complete price breakdown.`, url: "https://houstonsuperiorpainting.com/cabinet-painting-cost-katy", type: "article" },
   other: { "geo.region": "US-TX", "geo.placename": "Katy", "geo.position": "29.7858;-95.8245", ICBM: "29.7858, -95.8245" },
 }
 
 const faqs = [
-  { q: "How much does it cost to paint kitchen cabinets in Katy?", a: "Kitchen cabinet painting in Katy costs $3,000-$8,000 for a standard kitchen (20-40 linear feet). This includes degreasing, sanding, priming, two coats via HVLP sprayer, and hardware reinstallation. Large kitchens with islands run $6,000-$10,000." },
+  { q: "How much does it cost to paint kitchen cabinets in Katy?", a: `Kitchen cabinet painting in Katy costs ${PRICES_2026.cabinetsPerKitchen} for a standard kitchen (20-40 linear feet). This includes degreasing, sanding, priming, two coats via HVLP sprayer, and hardware reinstallation. Large kitchens with islands run ${PRICES_2026.cabinetsLarge}.` },
   { q: "How is cabinet painting priced in Katy?", a: "We price per linear foot ($30-$60/LF) or by the complete project. Per-LF pricing accounts for cabinet height, door count, and complexity. A full project quote ensures no surprises and is typically more accurate." },
   { q: "What makes cabinet painting more expensive?", a: "Cost increases with: number of doors/drawers, tall pantry cabinets, glass-front doors (requires masking), island cabinets (more accessible surfaces), grain filling for oak, and specialty finishes like distressed or glazed." },
-  { q: "Is it worth painting cabinets or should I replace them?", a: "If your cabinet boxes are structurally sound, painting saves 60-70% ($3,000-$8,000 vs $15,000-$40,000 for replacement). Painting takes 5-7 days vs 3-6 weeks for replacement. We only recommend replacement for warped, water-damaged, or failing cabinet boxes." },
+  { q: "Is it worth painting cabinets or should I replace them?", a: `If your cabinet boxes are structurally sound, painting saves 60-70% (${PRICES_2026.cabinetsPerKitchen} vs $15,000-$40,000 for replacement). Painting takes 5-7 days vs 3-6 weeks for replacement. We only recommend replacement for warped, water-damaged, or failing cabinet boxes.` },
   { q: "What type of paint do you use on Katy cabinets?", a: "We use hybrid alkyd formulas: Sherwin-Williams ProClassic and Benjamin Moore Advance. These self-level for a factory-smooth finish, cure extremely hard for durability, and resist yellowing over time." },
   { q: "How long do painted cabinets last in Katy?", a: "Professional cabinet painting lasts 8-12 years with normal use. The key is proper degreasing, sanding, bonding primer, and two coats of hybrid alkyd paint. Our process ensures maximum adhesion and durability." },
   { q: "Can I stay in my Katy home during cabinet painting?", a: "Yes. We work room by room and your kitchen remains functional throughout. You will have access to your appliances and sink. Dust and fumes are minimal with our low-VOC products and containment methods." },
@@ -47,7 +47,7 @@ export default function CabinetPaintingCostKaty() {
       <section data-speakable="true" className="quick-answer bg-secondary/10 border-l-4 border-secondary py-6">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
-          <p className="text-foreground/80 leading-relaxed text-lg">Cabinet painting in Katy TX costs $3,000-$8,000 for a full kitchen ($30-$60 per linear foot) in 2026. A standard 30 LF kitchen averages $4,500-$6,500. This includes degreasing, sanding, priming, two HVLP spray coats, and hardware reinstallation. Compare to $15,000-$40,000 for full replacement. Call (346) 594-5960 for a free quote.</p>
+          <p className="text-foreground/80 leading-relaxed text-lg">Cabinet painting in Katy TX costs {PRICES_2026.cabinetsPerKitchen} for a full kitchen ($30-$60 per linear foot) in 2026. A standard 30 LF kitchen averages $4,500-$6,500. This includes degreasing, sanding, priming, two HVLP spray coats, and hardware reinstallation. Compare to $15,000-$40,000 for full replacement. Call (346) 594-5960 for a free quote.</p>
         </div>
       </section>
 

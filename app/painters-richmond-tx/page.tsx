@@ -7,6 +7,7 @@ import { ProblemSelector } from "@/components/problem-selector"
 import { PricingSection } from "@/components/pricing-section"
 import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "House Painters Richmond TX — Houston Superior Painting",
@@ -50,7 +51,7 @@ export default function PaintersRichmondTX() {
           state="TX"
           heroHeadline="Richmond's Trusted House Painters"
           heroDescription="Professional painting services for Pecan Grove, Long Meadow Farms, Greatwood, and all Richmond communities. Quality craftsmanship with a 5-year warranty and competitive Fort Bend County pricing."
-          quickAnswer="Houston Superior Painting provides professional painting services throughout Richmond TX including Pecan Grove, Long Meadow Farms, Greatwood, and Harvest Green. Interior painting costs $2.50–$4.50/sq ft ($4,000–$8,000 for a 2,500 sq ft home) and exterior painting $3,500–$12,000 per home. We use premium Sherwin-Williams and Benjamin Moore products, work with HOAs, and provide a 5-year warranty. Call (346) 594-5960 for a free estimate."
+          quickAnswer={`Houston Superior Painting provides professional painting services throughout Richmond TX including Pecan Grove, Long Meadow Farms, Greatwood, and Harvest Green. Interior painting costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. We use premium Sherwin-Williams and Benjamin Moore products, work with HOAs, and provide a 5-year warranty. Call (346) 594-5960 for a free estimate.`}
           aboutCity={`Richmond is Fort Bend County's historic county seat and one of the Greater Houston area's most welcoming communities. From the established neighborhoods of Pecan Grove to the newer developments of Long Meadow Farms and Harvest Green, Richmond offers diverse housing at accessible prices—and every home deserves quality painting services.
 
 Houston Superior Painting has been serving Richmond homeowners since 2019. We understand this community's mix of home styles: established single-story homes in Pecan Grove, newer two-story construction in Long Meadow Farms, and everything in between. Our crews adapt techniques for each home's specific needs while maintaining consistent quality.
@@ -133,7 +134,7 @@ We're familiar with HOA requirements in Pecan Grove, Long Meadow Farms, Greatwoo
           faqs={[
             {
               question: "How much does it cost to paint a house in Richmond?",
-              answer: "Interior painting in Richmond typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
+              answer: `Interior painting in Richmond typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates.`
             },
             {
               question: "Which Richmond neighborhoods do you serve?",

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ServicePageTemplate } from '@/components/service-page-template'
+import { PRICES_2026 } from '@/lib/business'
 
 export const metadata: Metadata = {
   alternates: {
@@ -89,7 +90,7 @@ We offer multiple sheen levels including matte, satin, and semi-gloss. Satin and
   faqs: [
     {
       question: "How much does cabinet refinishing cost in Houston?",
-      answer: "Cabinet refinishing in Houston typically costs $3,000 to $8,000 depending on kitchen size and cabinet construction. This is 70-80% less than replacement. We provide free detailed estimates."
+      answer: `Cabinet refinishing in Houston typically costs ${PRICES_2026.cabinetsPerKitchen} depending on kitchen size and cabinet construction. This is 70-80% less than replacement. We provide free detailed estimates.`
     },
     {
       question: "How long does cabinet refinishing take?",

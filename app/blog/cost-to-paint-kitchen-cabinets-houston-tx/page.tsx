@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Cost to Paint Kitchen Cabinets in Houston TX (2026)",
@@ -39,7 +40,7 @@ const faqs = [
   {
     question: "How much does it cost to paint kitchen cabinets in Houston in 2026?",
     answer:
-      "Most Houston homeowners spend between $3,000 and $6,500 to have kitchen cabinets professionally painted in 2026. A small galley kitchen may run $2,200–$3,500, an average kitchen $3,500–$5,500, and a large kitchen with an island and lots of doors $6,000–$9,000+. The biggest cost driver is the number of doors and drawer fronts, not the square footage of the room.",
+      `Most Houston homeowners spend ${PRICES_2026.cabinetsPerKitchen} to have kitchen cabinets professionally painted in 2026. A small galley kitchen may run ${PRICES_2026.cabinetsGalley}, an average kitchen ${PRICES_2026.cabinetsAverage}, and a large kitchen with an island and lots of doors ${PRICES_2026.cabinetsLarge}. The biggest cost driver is the number of doors and drawer fronts, not the square footage of the room.`,
   },
   {
     question: "Is it cheaper to paint or replace kitchen cabinets?",
@@ -116,7 +117,7 @@ export default function CabinetPaintingCostHoustonPage() {
 
       <p>
         <strong>
-          Most Houston homeowners spend between $3,000 and $6,500 to have their kitchen cabinets professionally painted in
+          Most Houston homeowners spend {PRICES_2026.cabinetsPerKitchen} to have their kitchen cabinets professionally painted in
           2026.
         </strong>{" "}
         Smaller kitchens land lower, and large kitchens with islands and dozens of doors run higher. The number that
@@ -129,13 +130,13 @@ export default function CabinetPaintingCostHoustonPage() {
 
       <ul>
         <li>
-          <strong>Small / galley kitchen (10–15 doors):</strong> $2,200 – $3,500
+          <strong>Small / galley kitchen (10–15 doors):</strong> {PRICES_2026.cabinetsGalley}
         </li>
         <li>
-          <strong>Average kitchen (15–25 doors):</strong> $3,500 – $5,500
+          <strong>Average kitchen (15–25 doors):</strong> {PRICES_2026.cabinetsAverage}
         </li>
         <li>
-          <strong>Large kitchen with island (25–40 doors):</strong> $6,000 – $9,000+
+          <strong>Large kitchen with island (25–40 doors):</strong> {PRICES_2026.cabinetsLarge}
         </li>
         <li>
           <strong>Add an island in a contrasting color:</strong> $400 – $900
@@ -146,7 +147,7 @@ export default function CabinetPaintingCostHoustonPage() {
       </ul>
 
       <p>
-        As a rough rule of thumb, professional cabinet painting in Houston runs about <strong>$100–$175 per door and
+        As a rough rule of thumb, professional cabinet painting in Houston runs about <strong>{PRICES_2026.cabinetsPerDoor} per door and
         drawer front</strong> when you account for all the prep, primer, and multiple finish coats involved.
       </p>
 
@@ -209,7 +210,7 @@ export default function CabinetPaintingCostHoustonPage() {
 
       <ul>
         <li>
-          <strong>Painting / refinishing:</strong> $3,000 – $6,500 — keeps your boxes and layout, biggest visual change
+          <strong>Painting / refinishing:</strong> {PRICES_2026.cabinetsPerKitchen} — keeps your boxes and layout, biggest visual change
           per dollar
         </li>
         <li>

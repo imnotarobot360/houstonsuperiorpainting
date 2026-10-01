@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Cabinet Painting vs Replacement: Which Is Better?",
@@ -65,7 +66,7 @@ export default function CabinetPaintingVsReplacementPage() {
       </ul>
 
       <p>
-        A full cabinet replacement project in Houston can easily cost $20,000–$50,000. Painting the same kitchen typically runs $3,000–$6,500; see our <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">cost to paint kitchen cabinets in Houston</Link> guide for the full breakdown.
+        A full cabinet replacement project in Houston can easily cost $20,000–$50,000. Painting the same kitchen typically runs {PRICES_2026.cabinetsPerKitchen}; see our <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">cost to paint kitchen cabinets in Houston</Link> guide for the full breakdown.
       </p>
 
       <h2>Cabinet Painting Saves Thousands</h2>

@@ -8,7 +8,7 @@ const SLUG = "interior-painting-houston-tx"
 const URL = serviceUrl(SLUG)
 const TITLE = "Interior Painting Houston TX | 2026 Prices & Process"
 const DESCRIPTION =
-  "Interior painting in Houston costs $2.50–$4.50/sq ft in 2026, or $4,000–$8,000 for a 2,500 sq ft home. Two coats, 5-year warranty. Call (346) 594-5960."
+  `Interior painting in Houston costs ${PRICES_2026.interiorPerSqFt}/sq ft in 2026, or ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Two coats, 5-year warranty. Call (346) 594-5960.`
 const OG_IMAGE = "https://houstonsuperiorpainting.com/images/og/og-interior-painting.jpg"
 
 export const metadata: Metadata = {
@@ -156,12 +156,12 @@ export default function InteriorPaintingHoustonTX() {
         head: ["Project", "2026 Houston range", "Typical"],
         rows: [
           ["Single room (12×14)", PRICES_2026.singleRoom, "$500"],
-          ["Accent wall", "$150–$400", "$250"],
-          ["Full interior, 1,500 sq ft", "$3,000–$5,500", "$4,000"],
+          ["Accent wall", PRICES_2026.accentWall, "$250"],
+          ["Full interior, 1,500 sq ft", PRICES_2026.fullInterior1500, "$4,000"],
           ["Full interior, 2,500 sq ft", PRICES_2026.fullInterior2500, "$6,000"],
-          ["Full interior, 4,000+ sq ft", "$7,000–$14,000", "$10,000"],
+          ["Full interior, 4,000+ sq ft", PRICES_2026.fullInterior4000, "$10,000"],
           ["Trim and baseboards, whole home", PRICES_2026.trimWholeHome, "$2,000"],
-          ["Ceilings, whole home", "$1,500–$3,500", "$2,500"],
+          ["Ceilings, whole home", PRICES_2026.ceilingsWholeHome, "$2,500"],
         ],
         note: "Prices assume two coats of Sherwin-Williams or Benjamin Moore on walls in fair condition. Heavy patching, wallpaper removal, or 12-ft ceilings add 15–30%.",
       }}

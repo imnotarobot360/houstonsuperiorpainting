@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { PRICES_2026 } from "@/lib/business"
 import { ArrowLeft, Clock, User, Calendar, Phone, Lightbulb } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -316,7 +317,7 @@ export default function NavyIslandBlog() {
               <li><strong>Light direction.</strong> South or west-facing kitchens receive warm, intense afternoon light that can shift how navy reads. Test a large sample under your kitchen&apos;s actual light at different times of day.</li>
               <li><strong>HOA and resale.</strong> Interior colors aren&apos;t regulated by HOAs — go as bold as you&apos;d like inside. (Exterior colors are a different story; see our <Link href="/blog/hoa-exterior-paint-rules-houston-suburbs">HOA exterior paint rules guide</Link>.) The navy island look is broadly popular with Houston buyers.</li>
               <li><strong>Humidity and kitchen conditions.</strong> A professional cabinet paint product — waterborne alkyd or lacquer-based — handles Houston&apos;s heat, moisture, and daily wear far better than standard wall paint.</li>
-              <li><strong>Budget.</strong> Painting just the island costs a fraction of a full kitchen; a whole kitchen typically runs $3,000–$6,500. See <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">what kitchen cabinet painting costs in Houston</Link> for the per-door math.</li>
+              <li><strong>Budget.</strong> Painting just the island costs a fraction of a full kitchen; a whole kitchen typically runs {PRICES_2026.cabinetsPerKitchen}. See <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">what kitchen cabinet painting costs in Houston</Link> for the per-door math.</li>
             </ul>
 
             <h2>Is the Navy Island Right for Your Kitchen?</h2>

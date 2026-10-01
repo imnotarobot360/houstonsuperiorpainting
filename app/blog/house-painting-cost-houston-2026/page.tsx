@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "House Painting Cost in Houston | 2026 Price Guide",
-  description: "Complete 2026 guide to house painting costs in Houston, TX. Interior painting: $2.50-4.50/sq ft. Exterior painting: $3,500-12,000.",
+  description: `Complete 2026 guide to house painting costs in Houston, TX. Interior painting: ${PRICES_2026.interiorPerSqFt}/sq ft. Exterior painting: ${PRICES_2026.exteriorPerHome}.`,
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/houston-painting-cost-guide',
   },
@@ -26,11 +27,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does it cost to paint the interior of a house in Houston?",
-    answer: "Interior painting in Houston costs $2.50-4.50 per square foot, or roughly $3,500-8,000 for a typical 2,000 sq ft home. This includes walls, ceilings, trim, and two coats of premium paint. Factors like ceiling height, trim complexity, and color changes affect final pricing."
+    answer: `Interior painting in Houston costs ${PRICES_2026.interiorPerSqFt} per square foot, or roughly ${PRICES_2026.fullInterior2000} for a typical 2,000 sq ft home. This includes walls, ceilings, trim, and two coats of premium paint. Factors like ceiling height, trim complexity, and color changes affect final pricing.`
   },
   {
     question: "How much does exterior house painting cost in Houston?",
-    answer: "Exterior painting in Houston ranges from $3,500 for smaller homes to $12,000+ for larger properties. A typical 2,500 sq ft home costs $5,000-8,000. Price depends on home size, siding material (brick, stucco, wood, hardie board), condition, and paint quality."
+    answer: `Exterior painting in Houston typically runs ${PRICES_2026.exteriorPerHome}, from smaller homes to larger properties. A typical 2,500 sq ft home costs ${PRICES_2026.exterior2500OneStory} one-story or ${PRICES_2026.exterior2500TwoStory} two-story. Price depends on home size, siding material (brick, stucco, wood, hardie board), condition, and paint quality.`
   },
   {
     question: "Why is painting more expensive in Houston than other cities?",
@@ -90,9 +91,9 @@ export default function HousePaintingCostHoustonPage() {
       <div className="quick-answer bg-secondary/10 border-l-4 border-secondary p-6 rounded-r-lg mb-8" data-speakable="true">
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
-          In Houston, interior painting costs <strong>$2.50-4.50 per square foot</strong> ($3,500-8,000 for a typical home). 
-          Exterior painting ranges from <strong>$3,500-12,000</strong> depending on home size and siding type. 
-          Cabinet refinishing costs <strong>$3,000-8,000</strong>. Get a free, detailed estimate from Houston Superior Painting at (346) 594-5960.
+          In Houston, interior painting costs <strong>{PRICES_2026.interiorPerSqFt} per square foot</strong> ({PRICES_2026.fullInterior2000} for a typical 2,000 sq ft home). 
+          Exterior painting ranges from <strong>{PRICES_2026.exteriorPerHome}</strong> depending on home size and siding type. 
+          Cabinet refinishing costs <strong>{PRICES_2026.cabinetsPerKitchen}</strong>. Get a free, detailed estimate from Houston Superior Painting at (346) 594-5960.
         </p>
       </div>
 
@@ -105,7 +106,7 @@ export default function HousePaintingCostHoustonPage() {
       <h2>Interior Painting Costs in Houston (2026)</h2>
 
       <p>
-        Interior painting in Houston typically costs between <strong>$2.50 and $4.50 per square foot</strong> of wall space. 
+        Interior painting in Houston typically costs <strong>{PRICES_2026.interiorPerSqFt} per square foot</strong> of floor area. 
         For most Houston homes, this translates to the following price ranges:
       </p>
 
@@ -120,17 +121,17 @@ export default function HousePaintingCostHoustonPage() {
         <tbody>
           <tr>
             <td className="border border-border p-3">1,500 sq ft</td>
-            <td className="border border-border p-3">$2,800 – $5,500</td>
+            <td className="border border-border p-3">{PRICES_2026.fullInterior1500}</td>
             <td className="border border-border p-3">2-3 days</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">2,000 sq ft</td>
-            <td className="border border-border p-3">$3,500 – $7,000</td>
+            <td className="border border-border p-3">{PRICES_2026.fullInterior2000}</td>
             <td className="border border-border p-3">3-4 days</td>
           </tr>
           <tr>
             <td className="border border-border p-3">2,500 sq ft</td>
-            <td className="border border-border p-3">$4,500 – $9,000</td>
+            <td className="border border-border p-3">{PRICES_2026.fullInterior2500}</td>
             <td className="border border-border p-3">4-5 days</td>
           </tr>
           <tr className="bg-muted/50">
@@ -164,12 +165,12 @@ export default function HousePaintingCostHoustonPage() {
       <p>If you&apos;re painting select rooms rather than your entire home, here are typical Houston prices:</p>
 
       <ul>
-        <li><strong>Single bedroom:</strong> $350-700</li>
+        <li><strong>Single bedroom:</strong> {PRICES_2026.singleRoom}</li>
         <li><strong>Master bedroom:</strong> $500-1,000</li>
         <li><strong>Living room:</strong> $600-1,200</li>
         <li><strong>Kitchen:</strong> $400-800 (walls only, not cabinets)</li>
         <li><strong>Bathroom:</strong> $250-500</li>
-        <li><strong>Accent wall:</strong> $150-300</li>
+        <li><strong>Accent wall:</strong> {PRICES_2026.accentWall}</li>
         <li><strong>Ceiling (per room):</strong> $150-350</li>
       </ul>
 
@@ -195,22 +196,22 @@ export default function HousePaintingCostHoustonPage() {
         <tbody>
           <tr>
             <td className="border border-border p-3">1,500 sq ft</td>
-            <td className="border border-border p-3">$3,500 – $5,500</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior1500OneStory} (1-story) / {PRICES_2026.exterior1500TwoStory} (2-story)</td>
             <td className="border border-border p-3">2-3 days</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">2,000 sq ft</td>
-            <td className="border border-border p-3">$4,500 – $7,000</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior2000OneStory} (1-story) / {PRICES_2026.exterior2000TwoStory} (2-story)</td>
             <td className="border border-border p-3">3-4 days</td>
           </tr>
           <tr>
             <td className="border border-border p-3">2,500 sq ft</td>
-            <td className="border border-border p-3">$5,500 – $8,500</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior2500OneStory} (1-story) / {PRICES_2026.exterior2500TwoStory} (2-story)</td>
             <td className="border border-border p-3">4-5 days</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">3,000 sq ft</td>
-            <td className="border border-border p-3">$7,000 – $10,500</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior3000OneStory} (1-story) / {PRICES_2026.exterior3000TwoStory} (2-story)</td>
             <td className="border border-border p-3">5-6 days</td>
           </tr>
           <tr>
@@ -256,17 +257,17 @@ export default function HousePaintingCostHoustonPage() {
         <tbody>
           <tr>
             <td className="border border-border p-3">Small (under 100 sq ft)</td>
-            <td className="border border-border p-3">$3,000 – $4,500</td>
+            <td className="border border-border p-3">{PRICES_2026.cabinetsGalley}</td>
             <td className="border border-border p-3">3-4 days</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">Average (100-175 sq ft)</td>
-            <td className="border border-border p-3">$4,500 – $6,500</td>
+            <td className="border border-border p-3">{PRICES_2026.cabinetsAverage}</td>
             <td className="border border-border p-3">4-5 days</td>
           </tr>
           <tr>
             <td className="border border-border p-3">Large (175+ sq ft)</td>
-            <td className="border border-border p-3">$6,500 – $8,500+</td>
+            <td className="border border-border p-3">{PRICES_2026.cabinetsLarge}</td>
             <td className="border border-border p-3">5-6 days</td>
           </tr>
         </tbody>

@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Clock, User, Calendar, ArrowLeft, Phone, DollarSign, CheckCircle, AlertTriangle, Home } from "lucide-react"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Interior Painting Cost in Houston TX | What to Expect",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does it cost to paint a 2,000 square foot house interior in Houston TX?",
-    answer: "For a 2,000 square foot Houston home with standard layout and ceiling height, expect a professional interior repaint to run roughly $3,500–$6,000 depending on the number of rooms, colors, and the prep work required. Premium products and high ceilings will push toward the higher end."
+    answer: `For a 2,000 square foot Houston home with standard layout and ceiling height, expect a professional interior repaint to run roughly ${PRICES_2026.fullInterior2000} depending on the number of rooms, colors, and the prep work required. Premium products and high ceilings will push toward the higher end.`
   },
   {
     question: "How long does it take to paint a house interior in Houston?",
@@ -61,12 +62,14 @@ const faqs = [
 ]
 
 const pricingData = [
-  { service: "Single room (bedroom/living room)", price: "$300–$700" },
-  { service: "Full interior (1,500–2,000 sq ft)", price: "$3,000–$6,500" },
-  { service: "Full interior (2,500–3,500 sq ft)", price: "$5,500–$10,000+" },
+  { service: "Single room (bedroom/living room)", price: PRICES_2026.singleRoom },
+  { service: "Full interior (1,500 sq ft)", price: PRICES_2026.fullInterior1500 },
+  { service: "Full interior (2,000 sq ft)", price: PRICES_2026.fullInterior2000 },
+  { service: "Full interior (2,500 sq ft)", price: PRICES_2026.fullInterior2500 },
+  { service: "Full interior (4,000+ sq ft)", price: PRICES_2026.fullInterior4000 },
   { service: "Ceilings only", price: "$1–$2 per sq ft" },
   { service: "Trim and baseboards", price: "$1.50–$3 per linear ft" },
-  { service: "Accent wall", price: "$150–$400" },
+  { service: "Accent wall", price: PRICES_2026.accentWall },
 ]
 
 const costFactors = [
@@ -226,7 +229,7 @@ export default function InteriorPaintingCostHoustonTX() {
                   <div>
                     <h2 className="font-semibold text-foreground mb-2">Quick Answer: Houston Interior Painting Costs</h2>
                     <p className="text-muted-foreground">
-                      Interior painting in Houston TX typically costs <strong>$3,000–$6,500</strong> for a standard 1,500–2,000 square foot home. Pricing varies based on room count, ceiling height, number of colors, prep work needed, and paint product quality. Single rooms run $300–$700. Always get a written estimate that specifies rooms, coats, and product included.
+                      Interior painting in Houston TX typically costs <strong>{PRICES_2026.fullInterior1500}</strong> for a standard 1,500 square foot home and <strong>{PRICES_2026.fullInterior2000}</strong> for a 2,000 square foot home. Pricing varies based on room count, ceiling height, number of colors, prep work needed, and paint product quality. Single rooms run {PRICES_2026.singleRoom}. Always get a written estimate that specifies rooms, coats, and product included.
                     </p>
                   </div>
                 </div>

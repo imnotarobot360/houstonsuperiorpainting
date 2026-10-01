@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { PRICES_2026 } from "@/lib/business"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LocationPageTemplate } from "@/components/location-page-template"
@@ -116,7 +117,7 @@ Whether you're maintaining a home your family has lived in for decades or recent
           faqs={[
             {
               question: "How much does house painting cost in Champions Forest?",
-              answer: "Interior painting in Champions Forest typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
+              answer: `Interior painting in Champions Forest typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates.`
             },
             {
               question: "Do you work with Champions Forest HOA?",

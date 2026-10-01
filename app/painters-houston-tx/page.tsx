@@ -56,7 +56,7 @@ const FAQS = [
   },
   {
     q: "How much does it cost to paint a house in Houston?",
-    a: "A full interior on a 2,500 sq ft home runs $4,000–$8,000 in 2026. A two-story exterior of the same size runs $5,500–$9,000.",
+    a: `A full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} in 2026. A two-story exterior of the same size runs ${PRICES_2026.exterior2500TwoStory}.`,
   },
   {
     q: "How long does a full interior repaint take?",

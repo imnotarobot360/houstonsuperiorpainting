@@ -1,11 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Exterior Painting Cost in Katy TX | 2026 Price Guide",
   description:
-    "Exterior painting in Katy TX costs $3,500–$12,000 for most homes in 2026. Price breakdowns by home size, siding type and prep — plus red flags to avoid.",
+    `Exterior painting in Katy TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026. Price breakdowns by home size, siding type and prep — plus red flags to avoid.`,
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/exterior-painting-cost-katy-tx",
   },
@@ -101,9 +102,9 @@ export default function ExteriorPaintingCostKatyPage() {
       >
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
-          Exterior painting in Katy TX costs <strong>$1.50–$4 per square foot</strong> of floor area in 2026. A 2,500
-          sq ft home runs <strong>$4,000–$7,000</strong> single-story and <strong>$5,500–$9,000</strong> two-story, and
-          most Katy homes land between $3,500 and $12,000. Get a free, detailed estimate
+          Exterior painting in Katy TX costs <strong>{PRICES_2026.exteriorPerSqFt} per square foot</strong> of floor area in 2026. A 2,500
+          sq ft home runs <strong>{PRICES_2026.exterior2500OneStory}</strong> single-story and <strong>{PRICES_2026.exterior2500TwoStory}</strong> two-story, and
+          most Katy homes land in the {PRICES_2026.exteriorPerHome} range. Get a free, detailed estimate
           from Houston Superior Painting at (346) 594-5960.
         </p>
       </div>
@@ -130,28 +131,28 @@ export default function ExteriorPaintingCostKatyPage() {
         <tbody>
           <tr>
             <td className="border border-border p-3">1,500 sq ft living</td>
-            <td className="border border-border p-3">$2,500 – $4,500</td>
-            <td className="border border-border p-3">$3,500 – $6,000</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior1500OneStory}</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior1500TwoStory}</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">2,000 sq ft living</td>
-            <td className="border border-border p-3">$3,500 – $5,500</td>
-            <td className="border border-border p-3">$4,500 – $7,500</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior2000OneStory}</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior2000TwoStory}</td>
           </tr>
           <tr>
             <td className="border border-border p-3">2,500 sq ft living</td>
-            <td className="border border-border p-3">$4,000 – $7,000</td>
-            <td className="border border-border p-3">$5,500 – $9,000</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior2500OneStory}</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior2500TwoStory}</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">3,000 sq ft living</td>
-            <td className="border border-border p-3">$5,000 – $8,000</td>
-            <td className="border border-border p-3">$6,500 – $10,500</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior3000OneStory}</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior3000TwoStory}</td>
           </tr>
           <tr>
             <td className="border border-border p-3">4,000+ sq ft living</td>
-            <td className="border border-border p-3">$6,500 – $10,000</td>
-            <td className="border border-border p-3">$8,500 – $14,000</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior4000OneStory}</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior4000TwoStory}</td>
           </tr>
         </tbody>
       </table>

@@ -5,26 +5,26 @@ import { Footer } from "@/components/footer"
 import FAQ from "@/components/faq"
 import { EstimateCalculator } from "@/components/estimate-calculator"
 import { Phone, MessageSquare, ChevronRight, CheckCircle2 } from "lucide-react"
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF } from "@/lib/business"
 import { AuthorByline, articleNode, ESTIMATE_PATH } from "@/components/aeo/blocks"
 
 export const metadata: Metadata = {
   title: "Interior Painting Cost in Houston 2026 | Price Guide",
-  description: "Transparent 2026 interior painting costs in Houston: $2.50-$4.50 per sq ft. Full breakdown by room, project type, and factors. Free quotes: 346-594-5960.",
+  description: `Transparent 2026 interior painting costs in Houston: ${PRICES_2026.interiorPerSqFt} per sq ft. Full breakdown by room, project type, and factors. Free quotes: 346-594-5960.`,
   alternates: { canonical: "https://houstonsuperiorpainting.com/interior-painting-cost-houston" },
-  openGraph: { title: "Interior Painting Cost Houston 2026 | Full Price Guide", description: "Transparent 2026 interior painting costs in Houston: $2.50-$4.50 per sq ft.", url: "https://houstonsuperiorpainting.com/interior-painting-cost-houston", type: "article", images: [{ url: "https://houstonsuperiorpainting.com/images/og/og-interior-painting.jpg", width: 1200, height: 630 }] },
+  openGraph: { title: "Interior Painting Cost Houston 2026 | Full Price Guide", description: `Transparent 2026 interior painting costs in Houston: ${PRICES_2026.interiorPerSqFt} per sq ft.`, url: "https://houstonsuperiorpainting.com/interior-painting-cost-houston", type: "article", images: [{ url: "https://houstonsuperiorpainting.com/images/og/og-interior-painting.jpg", width: 1200, height: 630 }] },
   other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },
 }
 
 const faqs = [
-  { q: "How much does it cost to paint a room in Houston?", a: "A single room (12x14) costs $300-$800 depending on ceiling height, condition, and trim work. This includes walls, ceiling, and trim with two coats of premium paint." },
-  { q: "How much does a whole-house interior paint job cost in Houston?", a: "A full interior repaint for a 2,000-2,500 sq ft Houston home costs $4,000-$8,000. A 3,000 sq ft home runs $5,500-$10,000 and 4,000+ sq ft homes run $7,000-$14,000. These prices include all walls, ceilings, trim, and doors." },
+  { q: "How much does it cost to paint a room in Houston?", a: `A single room (12x14) costs ${PRICES_2026.singleRoom} depending on ceiling height, condition, and trim work. This includes walls, ceiling, and trim with two coats of premium paint.` },
+  { q: "How much does a whole-house interior paint job cost in Houston?", a: `A full interior repaint for a 2,000 sq ft Houston home costs ${PRICES_2026.fullInterior2000} and a 2,500 sq ft home costs ${PRICES_2026.fullInterior2500}. A 3,000 sq ft home runs $5,500-$10,000 and 4,000+ sq ft homes run ${PRICES_2026.fullInterior4000}. These prices include all walls, ceilings, trim, and doors.` },
   { q: "Why do interior painting prices vary so much?", a: "Key factors: ceiling height (standard 8ft vs 10-12ft vaulted), surface condition (new drywall vs heavily patched), number of colors, accent walls, trim complexity, furniture moving, and paint product choice." },
   { q: "Is it cheaper to paint yourself in Houston?", a: "DIY saves labor (50-60% of total cost) but takes 3-5x longer, produces inconsistent results, and voids any warranty. Most DIY painters underestimate prep time and material waste. Professional results increase home value." },
   { q: "Does paint quality affect interior painting cost?", a: "Yes. Premium paint (Sherwin-Williams Emerald, Benjamin Moore Aura) adds $0.50-$1.00/sq ft vs builder-grade. But premium paint covers better, lasts 2-3x longer, and is more washable. We include premium paint in all quotes." },
-  { q: "How much does it cost to paint trim and baseboards?", a: "Trim and baseboards for a whole home typically cost $1,200-$3,000 depending on linear footage, complexity, and whether staining or painting. Crown molding adds $800-$2,000." },
+  { q: "How much does it cost to paint trim and baseboards?", a: `Trim and baseboards for a whole home typically cost ${PRICES_2026.trimWholeHome} depending on linear footage, complexity, and whether staining or painting. Crown molding adds $800-$2,000.` },
   { q: "What is included in a professional interior painting quote?", a: "Our quotes include: surface preparation (patching, sanding, caulking), priming where needed, two coats of premium paint, trim and ceiling painting if requested, furniture moving and protection, and complete cleanup." },
-  { q: "Do Houston painters charge by the room or square foot?", a: "Most professional Houston painters quote by square foot ($2.50-$4.50) or by the entire project. Per-room quotes ($300-$800) are common for smaller jobs. We provide itemized quotes so you see exactly what each area costs." },
+  { q: "Do Houston painters charge by the room or square foot?", a: `Most professional Houston painters quote by square foot (${PRICES_2026.interiorPerSqFt}) or by the entire project. Per-room quotes (${PRICES_2026.singleRoom}) are common for smaller jobs. We provide itemized quotes so you see exactly what each area costs.` },
   { q: "Are there hidden costs in interior painting?", a: "With reputable painters, no. Watch for: drywall repair charges added after starting, extra costs for moving furniture, upcharges for tall ceilings, and material cost increases. We include everything in our upfront quote." },
   { q: "When is the cheapest time to paint interiors in Houston?", a: "Late fall and winter (November-February) are slightly less busy for painters. Some companies offer 5-10% off during this period. However, interior painting can be done year-round since it is climate-controlled." },
 ]
@@ -34,7 +34,7 @@ export default function InteriorPaintingCostHouston() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        articleNode({ path: "/interior-painting-cost-houston", headline: "How Much Does Interior Painting Cost in Houston in 2026?", description: "Interior painting in Houston costs $2.50-$4.50 per square foot in 2026: $300-$800 per room and $4,000-$8,000 for a full 2,500 sq ft interior.", datePublished: "2026-05-16" }),
+        articleNode({ path: "/interior-painting-cost-houston", headline: "How Much Does Interior Painting Cost in Houston in 2026?", description: `Interior painting in Houston costs ${PRICES_2026.interiorPerSqFt} per square foot in 2026: ${PRICES_2026.singleRoom} per room and ${PRICES_2026.fullInterior2500} for a full 2,500 sq ft interior.`, datePublished: "2026-05-16" }),
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Interior Painting Cost Houston", "item": "https://houstonsuperiorpainting.com/interior-painting-cost-houston" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
@@ -51,7 +51,7 @@ export default function InteriorPaintingCostHouston() {
       <section data-speakable="true" className="quick-answer bg-secondary/10 border-l-4 border-secondary py-6">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
-          <p className="text-foreground/80 leading-relaxed text-lg">Interior painting in Houston costs $2.50-$4.50 per square foot in 2026. A typical 2,500 sq ft home costs $4,000-$8,000 for a full interior repaint with premium Sherwin-Williams or Benjamin Moore paint. Single rooms: $300-$800. Price includes prep, two coats, trim, and cleanup. Call (346) 594-5960 for a free itemized quote.</p>
+          <p className="text-foreground/80 leading-relaxed text-lg">Interior painting in Houston costs {PRICES_2026.interiorPerSqFt} per square foot in 2026. A typical 2,500 sq ft home costs {PRICES_2026.fullInterior2500} for a full interior repaint with premium Sherwin-Williams or Benjamin Moore paint. Single rooms: {PRICES_2026.singleRoom}. Price includes prep, two coats, trim, and cleanup. Call (346) 594-5960 for a free itemized quote.</p>
         </div>
       </section>
 
@@ -63,16 +63,16 @@ export default function InteriorPaintingCostHouston() {
               <thead><tr className="bg-primary text-primary-foreground"><th className="text-left p-3 font-semibold">Project Type</th><th className="text-left p-3 font-semibold">Price Range</th><th className="text-left p-3 font-semibold">Average</th></tr></thead>
               <tbody>
                 {[
-                  ["Single Room (12x14)", "$300–$800", "$500"],
-                  ["Accent Wall", "$150–$400", "$250"],
+                  ["Single Room (12x14)", PRICES_2026.singleRoom, "$500"],
+                  ["Accent Wall", PRICES_2026.accentWall, "$250"],
                   ["Master Bedroom + Bath", "$600–$1,500", "$950"],
-                  ["Full Interior – 1,500 sq ft", "$3,000–$5,500", "$4,000"],
-                  ["Full Interior – 2,000 sq ft", "$3,500–$7,000", "$5,000"],
-                  ["Full Interior – 2,500 sq ft", "$4,000–$8,000", "$6,000"],
+                  ["Full Interior – 1,500 sq ft", PRICES_2026.fullInterior1500, "$4,000"],
+                  ["Full Interior – 2,000 sq ft", PRICES_2026.fullInterior2000, "$5,000"],
+                  ["Full Interior – 2,500 sq ft", PRICES_2026.fullInterior2500, "$6,000"],
                   ["Full Interior – 3,000 sq ft", "$5,500–$10,000", "$7,500"],
-                  ["Full Interior – 4,000+ sq ft", "$7,000–$14,000", "$10,000"],
-                  ["Trim & Baseboards (whole home)", "$1,200–$3,000", "$2,000"],
-                  ["Ceiling (whole home)", "$1,500–$3,500", "$2,500"],
+                  ["Full Interior – 4,000+ sq ft", PRICES_2026.fullInterior4000, "$10,000"],
+                  ["Trim & Baseboards (whole home)", PRICES_2026.trimWholeHome, "$2,000"],
+                  ["Ceiling (whole home)", PRICES_2026.ceilingsWholeHome, "$2,500"],
                   ["Kitchen/Bath (high moisture)", "$400–$1,200", "$700"],
                   ["Stairway/Hallway (tall walls)", "$500–$1,500", "$900"],
                 ].map(([p, r, a]) => (
@@ -116,7 +116,7 @@ export default function InteriorPaintingCostHouston() {
                 {[
                   ["Material Cost (2,500 sq ft)", "$800–$1,500", "Included in quote"],
                   ["Labor Cost", "$0 (your time)", "$2,500–$6,000 more than DIY"],
-                  ["Total Cost", "$800–$1,500", "$4,000–$8,000"],
+                  ["Total Cost", "$800–$1,500", PRICES_2026.fullInterior2500],
                   ["Time Required", "2–3 weekends", "3–5 days"],
                   ["Quality", "Variable", "Consistent, factory-smooth"],
                   ["Warranty", "None", "5-year warranty"],

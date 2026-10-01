@@ -16,7 +16,7 @@ import {
 import { LocationsSection } from "@/components/locations-section"
 import FAQ from "@/components/faq"
 import Link from "next/link"
-import { OFFICE_PAGES } from "@/lib/business"
+import { OFFICE_PAGES, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   alternates: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const homeFaqs = [
   {
     q: "How much does it cost to paint a house in Houston?",
-    a: "Interior painting in Houston typically costs $2.50–$4.50 per square foot of floor area, and a full interior on a 2,500 sq ft home runs $4,000–$8,000 in 2026. Exterior painting runs $1.50–$4 per square foot of floor area ($3,500–$12,000 per home) depending on size, siding type, stories, and condition; a 2,500 sq ft two-story exterior typically runs $5,500–$9,000. We provide free detailed estimates with itemized costs and no hidden fees.",
+    a: `Interior painting in Houston typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, and a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} in 2026. Exterior painting runs ${PRICES_2026.exteriorPerSqFt} per square foot of floor area (${PRICES_2026.exteriorPerHome} per home) depending on size, siding type, stories, and condition; a 2,500 sq ft two-story exterior typically runs ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates with itemized costs and no hidden fees.`,
   },
   {
     q: "How long does exterior paint last in Houston's climate?",

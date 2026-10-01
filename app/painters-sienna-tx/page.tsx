@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { LocationPageTemplate } from "@/components/location-page-template"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
+import { PRICES_2026 } from "@/lib/business"
 // This page shipped with no Header and no Footer, unlike its siblings —
 // meaning no site navigation and none of the footer's internal links.
 import { Header } from "@/components/header"
@@ -124,7 +125,7 @@ Sienna's newer construction also means many homes are hitting their first repain
     {
       question: "How much does exterior painting cost in Sienna?",
       answer:
-        "Most Sienna homes fall between $3,500 and $12,000 for exterior work (a 2,500 sq ft two-story is typically $5,500 to $9,000), driven mainly by square footage, stucco versus brick, how much trim and soffit is involved, and the amount of crack repair needed. Every estimate is free and itemized.",
+        `Most Sienna homes fall within ${PRICES_2026.exteriorPerHome} for exterior work (a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}), driven mainly by square footage, stucco versus brick, how much trim and soffit is involved, and the amount of crack repair needed. Every estimate is free and itemized.`,
     },
     {
       question: "Why is my builder paint failing after only a few years?",

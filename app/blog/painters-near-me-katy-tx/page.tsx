@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Painters Near Me in Katy TX: Costs, What to Ask, Red Flags",
@@ -127,8 +128,8 @@ export default function PaintersNearMeKatyTxPage() {
       >
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
-          Painting a home in Katy TX in 2026 typically costs <strong>$3,000–$5,500</strong> for a 3-bedroom interior and{" "}
-          <strong>$3,500–$12,000</strong> for an exterior, depending on size and prep. Because Texas requires no painting
+          Painting a home in Katy TX in 2026 typically costs <strong>{PRICES_2026.fullInterior1500}</strong> for a 3-bedroom interior and{" "}
+          <strong>{PRICES_2026.exteriorPerHome}</strong> for an exterior, depending on size and prep. Because Texas requires no painting
           license, vetting matters: verify insurance by calling the carrier, confirm the crew are direct employees (not
           subcontractors), and get a line-item written estimate with a warranty. Houston Superior Painting has served Katy
           since 2019 with free estimates, no money until you approve, and a 5-year workmanship guarantee — call or text (346) 594-5960.
@@ -163,23 +164,23 @@ export default function PaintersNearMeKatyTxPage() {
           <tbody>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Single room (walls + ceiling)</td>
-              <td className="py-3">$300 – $800</td>
+              <td className="py-3">{PRICES_2026.singleRoom}</td>
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">3-bedroom home (about 1,500 sq ft)</td>
-              <td className="py-3">$3,000 – $5,500</td>
+              <td className="py-3">{PRICES_2026.fullInterior1500}</td>
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Full home interior (2,500 sq ft)</td>
-              <td className="py-3">$4,000 – $8,000</td>
+              <td className="py-3">{PRICES_2026.fullInterior2500}</td>
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Large home (4,000+ sq ft)</td>
-              <td className="py-3">$7,000 – $14,000</td>
+              <td className="py-3">{PRICES_2026.fullInterior4000}</td>
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Per square foot (floor area)</td>
-              <td className="py-3">$2.50 – $4.50</td>
+              <td className="py-3">{PRICES_2026.interiorPerSqFt}</td>
             </tr>
           </tbody>
         </table>
@@ -205,7 +206,7 @@ export default function PaintersNearMeKatyTxPage() {
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Large two-story (4,000+ sq ft home)</td>
-              <td className="py-3">$8,500 – $14,000</td>
+              <td className="py-3">{PRICES_2026.exterior4000TwoStory}</td>
             </tr>
           </tbody>
         </table>
@@ -223,7 +224,7 @@ export default function PaintersNearMeKatyTxPage() {
           <tbody>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Cabinet painting / refinishing</td>
-              <td className="py-3">$3,000 – $6,500</td>
+              <td className="py-3">{PRICES_2026.cabinetsPerKitchen}</td>
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Drywall repair (small area)</td>

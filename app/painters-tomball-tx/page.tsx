@@ -3,6 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LocationPageTemplate } from "@/components/location-page-template"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "House Painters Tomball TX — Houston Superior Painting",
@@ -125,7 +126,7 @@ We are fully insured, use Sherwin-Williams and Benjamin Moore paints exclusively
         faqs={[
           {
             question: "How much does it cost to paint a house in Tomball?",
-            answer: "Interior painting in Tomball typically runs $2.50–$4.50 per square foot, while exterior painting ranges from $1.50–$4 per square foot. A 2,500 sq ft home interior runs $4,000–$8,000, and a 2,500 sq ft two-story exterior $5,500–$9,000. We provide free detailed estimates for all Tomball properties."
+            answer: `Interior painting in Tomball typically runs ${PRICES_2026.interiorPerSqFt} per square foot, while exterior painting ranges from ${PRICES_2026.exteriorPerSqFt} per square foot. A 2,500 sq ft home interior runs ${PRICES_2026.fullInterior2500}, and a 2,500 sq ft two-story exterior ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates for all Tomball properties.`
           },
           {
             question: "Do you paint historic homes in Old Town Tomball?",

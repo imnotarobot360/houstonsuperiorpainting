@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "DIY vs. Professional Painting Cost in Houston (2026)",
@@ -39,12 +40,12 @@ const faqs = [
   {
     question: "Is it cheaper to paint my house myself in Houston?",
     answer:
-      "On paper, DIY is cheaper because you're not paying for labor. For a single room, DIY might cost $150–$400 in materials versus a $300–$800 professional quote. But once you factor in tools, multiple trips to the store, your time, and the risk of redoing the work, the savings on larger projects shrink quickly — especially on exteriors and cabinets.",
+      `On paper, DIY is cheaper because you're not paying for labor. For a single room, DIY might cost $150–$400 in materials versus a ${PRICES_2026.singleRoom} professional quote. But once you factor in tools, multiple trips to the store, your time, and the risk of redoing the work, the savings on larger projects shrink quickly — especially on exteriors and cabinets.`,
   },
   {
     question: "How much does professional painting cost in Houston in 2026?",
     answer:
-      "In 2026, expect roughly $300–$800 per room for interior painting, $4,000–$8,000 for a full interior repaint of a 2,500 sq ft home, and $3,500–$12,000 for exterior painting depending on size and prep ($5,500–$9,000 for a 2,500 sq ft two-story). Cabinets typically run $3,000–$6,500. These prices include labor, quality materials, prep, and usually a workmanship warranty.",
+      `In 2026, expect roughly ${PRICES_2026.singleRoom} per room for interior painting, ${PRICES_2026.fullInterior2500} for a full interior repaint of a 2,500 sq ft home, and ${PRICES_2026.exteriorPerHome} for exterior painting depending on size and prep (${PRICES_2026.exterior2500TwoStory} for a 2,500 sq ft two-story). Cabinets typically run ${PRICES_2026.cabinetsPerKitchen}. These prices include labor, quality materials, prep, and usually a workmanship warranty.`,
   },
   {
     question: "What painting projects are okay to DIY?",
@@ -148,16 +149,16 @@ export default function DiyVsProPaintingHoustonPage() {
 
       <ul>
         <li>
-          <strong>Single bedroom</strong> — DIY: $150–$400 &nbsp;|&nbsp; Pro: $300–$800
+          <strong>Single bedroom</strong> — DIY: $150–$400 &nbsp;|&nbsp; Pro: {PRICES_2026.singleRoom}
         </li>
         <li>
-          <strong>Full interior (2,000 sq ft)</strong> — DIY: $800–$1,800 &nbsp;|&nbsp; Pro: $3,500–$6,500
+          <strong>Full interior (2,000 sq ft)</strong> — DIY: $800–$1,800 &nbsp;|&nbsp; Pro: {PRICES_2026.fullInterior2000}
         </li>
         <li>
-          <strong>Exterior (2,000 sq ft)</strong> — DIY: $1,200–$2,500 + equipment &nbsp;|&nbsp; Pro: $3,500–$7,500
+          <strong>Exterior (2,000 sq ft)</strong> — DIY: $1,200–$2,500 + equipment &nbsp;|&nbsp; Pro: {PRICES_2026.exterior2000}
         </li>
         <li>
-          <strong>Kitchen cabinets</strong> — DIY: $300–$700 &nbsp;|&nbsp; Pro: $3,000–$6,500
+          <strong>Kitchen cabinets</strong> — DIY: $300–$700 &nbsp;|&nbsp; Pro: {PRICES_2026.cabinetsPerKitchen}
         </li>
       </ul>
 

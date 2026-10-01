@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import FAQ from "@/components/faq"
 import { Phone, MessageSquare, CheckCircle2, ChevronRight, MapPin } from "lucide-react"
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, SMS_HREF, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Cabinet Painting Katy TX | Kitchen Cabinet Refinishing Katy",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { q: "How much does cabinet painting cost in Katy TX?", a: "Cabinet painting in Katy typically costs $3,000-$8,000 for a full kitchen, or $30-$60 per linear foot. This includes degreasing, sanding, priming, two coats of paint, and new hardware installation. Compare to $15,000-$40,000 for full cabinet replacement." },
+  { q: "How much does cabinet painting cost in Katy TX?", a: `Cabinet painting in Katy typically costs ${PRICES_2026.cabinetsPerKitchen} for a full kitchen, or $30-$60 per linear foot. This includes degreasing, sanding, priming, two coats of paint, and new hardware installation. Compare to $15,000-$40,000 for full cabinet replacement.` },
   { q: "How long does cabinet painting take?", a: "A typical Katy kitchen takes 5-7 business days. Day 1-2: removal, degreasing, and sanding. Day 3: priming. Day 4-5: two coats of paint via HVLP sprayer. Day 6-7: reinstall doors, drawers, and new hardware. Your kitchen is functional throughout." },
   { q: "What finish do you use on cabinets?", a: "We use a satin or semi-gloss finish for durability and easy cleaning. Our preferred products are Sherwin-Williams ProClassic and Benjamin Moore Advance, both hybrid alkyd formulas that self-level for a factory-smooth finish." },
   { q: "Can you paint oak cabinets with heavy grain?", a: "Yes. For oak and other open-grain woods, we apply grain filler before priming to create a smooth surface. The result looks like factory-built painted cabinets, not painted-over wood grain." },
@@ -51,7 +51,7 @@ export default function CabinetPaintingKatyTX() {
       <section data-speakable="true" className="quick-answer bg-secondary/10 border-l-4 border-secondary py-6">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
-          <p className="text-foreground/80 leading-relaxed text-lg">Cabinet painting in Katy TX typically costs $3,000-$8,000 for a full kitchen ($30-$60/linear foot). This saves 60-70% vs replacement ($15,000-$40,000). Process takes 5-7 days using HVLP spray technology for factory-smooth results. Houston Superior Painting serves Cinco Ranch, Grand Lakes, Cross Creek Ranch, and all Katy neighborhoods. Call (346) 594-5960.</p>
+          <p className="text-foreground/80 leading-relaxed text-lg">Cabinet painting in Katy TX typically costs {PRICES_2026.cabinetsPerKitchen} for a full kitchen ($30-$60/linear foot). This saves 60-70% vs replacement ($15,000-$40,000). Process takes 5-7 days using HVLP spray technology for factory-smooth results. Houston Superior Painting serves Cinco Ranch, Grand Lakes, Cross Creek Ranch, and all Katy neighborhoods. Call (346) 594-5960.</p>
         </div>
       </section>
 
@@ -64,7 +64,7 @@ export default function CabinetPaintingKatyTX() {
             <table className="w-full border-collapse">
               <thead><tr className="bg-primary text-primary-foreground"><th className="text-left p-3 font-semibold">Option</th><th className="text-left p-3 font-semibold">Cost</th><th className="text-left p-3 font-semibold">Timeline</th><th className="text-left p-3 font-semibold">Disruption</th></tr></thead>
               <tbody>
-                <tr className="border-b border-border bg-secondary/5"><td className="p-3 font-medium">Cabinet Painting</td><td className="p-3">$3,000–$8,000</td><td className="p-3">5–7 days</td><td className="p-3 text-green-600 font-medium">Minimal</td></tr>
+                <tr className="border-b border-border bg-secondary/5"><td className="p-3 font-medium">Cabinet Painting</td><td className="p-3">{PRICES_2026.cabinetsPerKitchen}</td><td className="p-3">5–7 days</td><td className="p-3 text-green-600 font-medium">Minimal</td></tr>
                 <tr className="border-b border-border"><td className="p-3 font-medium">Refacing</td><td className="p-3">$8,000–$15,000</td><td className="p-3">1–2 weeks</td><td className="p-3 text-yellow-600 font-medium">Moderate</td></tr>
                 <tr className="border-b border-border"><td className="p-3 font-medium">Full Replacement</td><td className="p-3">$15,000–$40,000</td><td className="p-3">3–6 weeks</td><td className="p-3 text-red-600 font-medium">Major</td></tr>
               </tbody>

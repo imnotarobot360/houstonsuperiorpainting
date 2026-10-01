@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { LocationPageTemplate } from "@/components/location-page-template"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
+import { PRICES_2026 } from "@/lib/business"
 // This page shipped with no Header and no Footer, unlike its 20 siblings —
 // meaning no site navigation and none of the footer's internal links.
 import { Header } from "@/components/header"
@@ -33,7 +34,7 @@ const riverstoneData = {
   // for voice and AI answers, so its absence was a missed surface rather than
   // just missing words.
   quickAnswer:
-    "Houston Superior Painting serves Riverstone across the Sugar Land and Missouri City line, including The Manors, Avalon, Chelsea Harbour, and Waters Edge. Because Riverstone is built around roughly two dozen lakes, lakefront homes need mildew treatment before priming and colorfast tints on water-facing walls. Interiors typically run $2.50–$4.50 per square foot ($4,000–$8,000 for a 2,500 sq ft home) and exteriors $3,500–$12,000. We prepare HOA architectural submittals and warranty residential work for 5 years. Call (346) 594-5960 for a free estimate.",
+    `Houston Superior Painting serves Riverstone across the Sugar Land and Missouri City line, including The Manors, Avalon, Chelsea Harbour, and Waters Edge. Because Riverstone is built around roughly two dozen lakes, lakefront homes need mildew treatment before priming and colorfast tints on water-facing walls. Interiors typically run ${PRICES_2026.interiorPerSqFt} per square foot (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exteriors ${PRICES_2026.exteriorPerHome}. We prepare HOA architectural submittals and warranty residential work for 5 years. Call (346) 594-5960 for a free estimate.`,
 
   // Riverstone's distinguishing factor versus Sienna is water: roughly two
   // dozen lakes mean sustained high humidity, more mildew pressure, and more
@@ -136,7 +137,7 @@ Timing matters here more than in a drier climate. The most reliable exterior win
     {
       question: "How much does painting cost in Riverstone?",
       answer:
-        "Exterior projects generally run $3,500 to $12,000 (a 2,500 sq ft two-story is typically $5,500 to $9,000) and interiors $2.50 to $4.50 per square foot, depending on square footage, stucco versus brick, trim complexity, and how much mildew remediation or crack repair is required. Estimates are free and itemized.",
+        `Exterior projects generally run ${PRICES_2026.exteriorPerHome} (a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}) and interiors ${PRICES_2026.interiorPerSqFt} per square foot, depending on square footage, stucco versus brick, trim complexity, and how much mildew remediation or crack repair is required. Estimates are free and itemized.`,
     },
     {
       question: "Why does mildew keep coming back on my shaded walls?",

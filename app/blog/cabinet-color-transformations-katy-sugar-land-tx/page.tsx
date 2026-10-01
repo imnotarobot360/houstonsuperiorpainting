@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Clock, User, Calendar, Phone, Lightbulb, CheckCircle2 } from "lucide-react"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Cabinet Color Transformations in Katy & Sugar Land",
@@ -114,7 +115,7 @@ export default function CabinetTransformationsBlog() {
                 "name": "Is cabinet painting a good investment before selling in Katy or Sugar Land TX?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Consistently yes. Professional cabinet painting in a current, neutral color directly improves listing photos and buyer perception. The investment typically runs $3,000–$6,500 for most kitchens and can affect buyer offers meaningfully."
+                  "text": `Consistently yes. Professional cabinet painting in a current, neutral color directly improves listing photos and buyer perception. The investment typically runs ${PRICES_2026.cabinetsPerKitchen} for most kitchens and can affect buyer offers meaningfully.`
                 }
               },
               {
@@ -350,7 +351,7 @@ export default function CabinetTransformationsBlog() {
 
             <h3>Is cabinet painting a good investment before selling in Katy or Sugar Land TX?</h3>
             <p>
-              Consistently yes. A dated-looking kitchen is one of the top objections buyers have in the Houston suburb resale market. Professional cabinet painting in a current, neutral color directly improves listing photos, buyer perception, and sometimes sale price. The investment typically runs $3,000–$6,500 for most kitchens and can affect buyer offers meaningfully.
+              Consistently yes. A dated-looking kitchen is one of the top objections buyers have in the Houston suburb resale market. Professional cabinet painting in a current, neutral color directly improves listing photos, buyer perception, and sometimes sale price. The investment typically runs {PRICES_2026.cabinetsPerKitchen} for most kitchens and can affect buyer offers meaningfully.
             </p>
 
             <h3>How do I pick between white, navy, and greige for my cabinets?</h3>

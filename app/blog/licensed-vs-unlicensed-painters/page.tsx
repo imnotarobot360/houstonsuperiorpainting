@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Phone, Calendar, ChevronRight, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Licensed vs Unlicensed Painters in Houston",
@@ -153,7 +154,7 @@ export default function LicensedVsUnlicensedPaintersPage() {
                 <tbody>
                   <tr>
                     <td className="border p-3">Typical quote (2,500 sq ft interior)</td>
-                    <td className="border p-3">$5,500-7,500</td>
+                    <td className="border p-3">{PRICES_2026.fullInterior2500}</td>
                     <td className="border p-3">$3,500-5,000</td>
                   </tr>
                   <tr className="bg-muted/50">

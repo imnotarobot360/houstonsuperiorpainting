@@ -7,6 +7,7 @@ import { ProblemSelector } from "@/components/problem-selector"
 import { PricingSection } from "@/components/pricing-section"
 import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "House Painters Memorial TX — Houston Superior Painting",
@@ -62,7 +63,7 @@ export default function PaintersMemorialTX() {
           state="TX"
           heroHeadline="House Painters in Memorial, Houston"
           heroDescription="Serving the Memorial Villages, Bunker Hill, Piney Point, and Hedwig Village with premium painting services befitting Houston's most prestigious addresses. Luxury materials, expert craftsmanship, and white-glove service."
-          quickAnswer="Houston Superior Painting provides premium painting services throughout Memorial TX including Memorial Villages, Bunker Hill, Piney Point, and Hedwig Village. Interior painting costs $2.50–$4.50/sq ft ($7,000–$14,000 for homes over 4,000 sq ft) and a two-story exterior over 4,000 sq ft typically runs $8,500–$14,000. We specialize in luxury homes with tall ceilings, detailed millwork, and specialty finishes. Premium Sherwin-Williams and Benjamin Moore products included. 5-year warranty. Call (346) 594-5960 for a free estimate."
+          quickAnswer={`Houston Superior Painting provides premium painting services throughout Memorial TX including Memorial Villages, Bunker Hill, Piney Point, and Hedwig Village. Interior painting costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior4000} for homes over 4,000 sq ft) and a two-story exterior over 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}. We specialize in luxury homes with tall ceilings, detailed millwork, and specialty finishes. Premium Sherwin-Williams and Benjamin Moore products included. 5-year warranty. Call (346) 594-5960 for a free estimate.`}
           aboutCity={`Memorial is home to some of Houston's most prestigious addresses. The Memorial Villages—Bunker Hill, Piney Point, Hedwig Village, Hilshire Village, Hunters Creek, and Spring Valley—represent the pinnacle of Houston living with their wooded lots, custom architecture, and commitment to excellence.
 
 These aren't ordinary homes, and they don't receive ordinary painting services. Memorial's estate properties demand painters who understand luxury: tall ceilings that require specialized equipment, intricate millwork that needs careful attention, specialty finishes that must be expertly applied, and landscapes that must be protected.
@@ -148,7 +149,7 @@ Whether you're refreshing an existing finish, transforming a recent acquisition,
           faqs={[
             {
               question: "How much does it cost to paint a house in Memorial?",
-              answer: "Interior painting in Memorial typically costs $2.50–$4.50 per square foot; homes over 4,000 sq ft generally run $7,000–$14,000 inside. A two-story exterior over 4,000 sq ft typically runs $8,500–$14,000, and larger estates with extensive millwork are quoted after a walkthrough. We provide free detailed estimates."
+              answer: `Interior painting in Memorial typically costs ${PRICES_2026.interiorPerSqFt} per square foot; homes over 4,000 sq ft generally run ${PRICES_2026.fullInterior4000} inside. A two-story exterior over 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}, and larger estates with extensive millwork are quoted after a walkthrough. We provide free detailed estimates.`
             },
             {
               question: "Do you have experience with large Memorial estates?",

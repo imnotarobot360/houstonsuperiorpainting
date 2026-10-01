@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import { RelatedLinks } from "@/components/luxury/related-links"
 import FAQ from "@/components/faq"
 import { Phone, MessageSquare, CheckCircle2, ChevronRight, MapPin, Star, Shield } from "lucide-react"
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Residential Painters Houston | Interior & Exterior",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: "What does a residential painter do?", a: "Residential painters handle all painting and surface preparation for homes: interior walls, ceilings, trim, exterior siding, trim, fascia, soffits, cabinet refinishing, drywall repair, pressure washing, and specialty finishes like limewash. Houston Superior Painting is a full-service residential painting company." },
-  { q: "How much do residential painters charge in Houston?", a: "Interior painting costs $2.50-$4.50/sq ft. Exterior painting ranges $3,500-$12,000. Cabinet refinishing runs $3,000-$6,500 per kitchen. Prices depend on surface condition, accessibility, and product choice. We provide free itemized estimates." },
+  { q: "How much do residential painters charge in Houston?", a: `Interior painting costs ${PRICES_2026.interiorPerSqFt}/sq ft. Exterior painting ranges ${PRICES_2026.exteriorPerHome}. Cabinet refinishing runs ${PRICES_2026.cabinetsPerKitchen} per kitchen. Prices depend on surface condition, accessibility, and product choice. We provide free itemized estimates.` },
   { q: "How do I choose the right residential painter in Houston?", a: "Look for: verified Google reviews (check for fake patterns), proof of insurance ($1M+ liability), detailed written estimates (not verbal), warranty in writing, and willingness to provide references. Ask to see recent work in your neighborhood." },
   { q: "What is the difference between residential and commercial painting?", a: "Residential painting focuses on homes and uses products rated for living spaces (low-VOC, washable). Commercial painting handles offices, retail, and industrial spaces with specialized coatings (epoxy, fire-rated, anti-microbial). We offer both services." },
   { q: "Do residential painters do drywall repair?", a: "Quality residential painters handle minor to moderate drywall repair as part of painting preparation. This includes filling nail holes, patching cracks, fixing small holes, and texture matching. Major drywall work may require a dedicated drywall specialist." },
@@ -52,7 +52,7 @@ export default function ResidentialPaintersHouston() {
       <section data-speakable="true" className="quick-answer bg-secondary/10 border-l-4 border-secondary py-6">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
-          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting provides full-service residential painting across Greater Houston. Interior painting: $2.50-$4.50/sq ft. Exterior: $3,500-$12,000. Cabinets: $3,000-$6,500 per kitchen. We serve Houston, Katy, Cypress, Sugar Land, The Woodlands, and surrounding areas. Insured, 5-year workmanship warranty, no money until you approve the estimate. Call (346) 594-5960.</p>
+          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting provides full-service residential painting across Greater Houston. Interior painting: {PRICES_2026.interiorPerSqFt}/sq ft. Exterior: {PRICES_2026.exteriorPerHome}. Cabinets: {PRICES_2026.cabinetsPerKitchen} per kitchen. We serve Houston, Katy, Cypress, Sugar Land, The Woodlands, and surrounding areas. Insured, 5-year workmanship warranty, no money until you approve the estimate. Call (346) 594-5960.</p>
         </div>
       </section>
 
@@ -76,9 +76,9 @@ export default function ResidentialPaintersHouston() {
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Our Residential Painting Services</h2>
           <div className="grid md:grid-cols-2 gap-4 mb-8">
             {[
-              { name: "Interior Painting", href: "/interior-painting-houston-tx", price: "$2.50–$4.50/sq ft" },
-              { name: "Exterior Painting", href: "/exterior-painting-houston-tx", price: "$3,500–$12,000" },
-              { name: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx", price: "$3,000–$6,500" },
+              { name: "Interior Painting", href: "/interior-painting-houston-tx", price: `${PRICES_2026.interiorPerSqFt}/sq ft` },
+              { name: "Exterior Painting", href: "/exterior-painting-houston-tx", price: PRICES_2026.exteriorPerHome },
+              { name: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx", price: PRICES_2026.cabinetsPerKitchen },
               { name: "Drywall Repair", href: "/drywall-repair-houston-tx", price: "$150–$800/patch" },
               { name: "Pressure Washing", href: "/pressure-washing-houston-tx", price: "$200–$600" },
               { name: "Limewash & German Smear", href: "/limewash-brick-painting-houston-tx", price: "$4,000–$12,000" },

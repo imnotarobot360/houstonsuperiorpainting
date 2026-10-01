@@ -7,6 +7,7 @@ import { ProblemSelector } from "@/components/problem-selector"
 import { PricingSection } from "@/components/pricing-section"
 import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "House Painters Pearland TX — Houston Superior Painting",
@@ -50,7 +51,7 @@ export default function PaintersPearlandTX() {
           state="TX"
           heroHeadline="House Painters in Pearland, TX"
           heroDescription="From Silverlake's established homes to Shadow Creek Ranch's master-planned community, we deliver exceptional painting results backed by our 5-year warranty. HOA-compliant colors and professional service."
-          quickAnswer="Houston Superior Painting provides professional painting services throughout Pearland TX including Silverlake, Shadow Creek Ranch, Southfork, and Southern Trails. Interior painting costs $2.50–$4.50/sq ft ($4,000–$8,000 for a 2,500 sq ft home) and exterior painting $3,500–$12,000 per home. We offer HOA color consultation, use Sherwin-Williams and Benjamin Moore products, and provide a 5-year warranty. Call (346) 594-5960 for a free estimate."
+          quickAnswer={`Houston Superior Painting provides professional painting services throughout Pearland TX including Silverlake, Shadow Creek Ranch, Southfork, and Southern Trails. Interior painting costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. We offer HOA color consultation, use Sherwin-Williams and Benjamin Moore products, and provide a 5-year warranty. Call (346) 594-5960 for a free estimate.`}
           aboutCity={`Pearland has grown from a small town into one of Houston's most desirable suburban communities. With its excellent schools, family-friendly neighborhoods, and convenient access to both Houston and Galveston, Pearland attracts homeowners who value quality of life—and quality in their homes.
 
 Whether you live in the established neighborhoods around Silverlake, the master-planned community of Shadow Creek Ranch, the growing Southfork area, or historic Old Pearland, your home deserves painting services that meet your standards.
@@ -133,7 +134,7 @@ Our familiarity with Pearland's HOA requirements in communities like Shadow Cree
           faqs={[
             {
               question: "How much does it cost to paint a house in Pearland?",
-              answer: "Interior painting in Pearland typically costs $2.50–$4.50 per square foot, about $4,000–$8,000 for a 2,500 sq ft home. Exterior painting runs $3,500–$12,000 per home; a 2,500 sq ft two-story is typically $5,500–$9,000. We provide free detailed estimates."
+              answer: `Interior painting in Pearland typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates.`
             },
             {
               question: "Do you work with Pearland HOAs?",

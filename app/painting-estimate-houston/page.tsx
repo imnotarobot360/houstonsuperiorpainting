@@ -15,7 +15,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Footer } from "@/components/footer"
 import { EstimateServicePicker } from "@/components/estimate-service-picker"
-import { BUSINESS, PHONE_HREF } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business"
 import { PROJECTS } from "@/lib/projects"
 
 /**
@@ -151,10 +151,10 @@ const QUESTIONS = [
 
 const PRICE_BANDS = [
   { scope: "Interior — 1 to 2 rooms", range: "$650 – $1,800" },
-  { scope: "Interior — whole home (2,000 sq ft)", range: "$4,000 – $8,500" },
+  { scope: "Interior — whole home (2,000 sq ft)", range: PRICES_2026.fullInterior2000 },
   { scope: "Exterior — single-story", range: "$3,500 – $7,500" },
   { scope: "Exterior — two-story", range: "$6,500 – $14,000" },
-  { scope: "Cabinet refinishing — kitchen", range: "$3,000 – $6,500" },
+  { scope: "Cabinet refinishing — kitchen", range: PRICES_2026.cabinetsPerKitchen },
 ]
 
 const FAQS = [

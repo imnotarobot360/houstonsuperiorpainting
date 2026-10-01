@@ -8,7 +8,7 @@ const SLUG = "cabinet-refinishing-houston-tx"
 const URL = serviceUrl(SLUG)
 const TITLE = "Cabinet Refinishing Houston TX | 2026 Prices & Process"
 const DESCRIPTION =
-  "Kitchen cabinet painting in Houston costs $100–$175 per door in 2026, or $3,000–$6,500 per kitchen. Sprayed enamel, 5-year warranty. Call (346) 594-5960."
+  `Kitchen cabinet painting in Houston costs ${PRICES_2026.cabinetsPerDoor} per door in 2026, or ${PRICES_2026.cabinetsPerKitchen} per kitchen. Sprayed enamel, 5-year warranty. Call (346) 594-5960.`
 const OG_IMAGE = "https://houstonsuperiorpainting.com/images/og/og-cabinet-refinishing.jpg"
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ const serviceSchema = generateServiceSchema({
 const faqs = [
   {
     q: "How much does cabinet painting cost in Houston in 2026?",
-    a: `Cabinet painting in Houston runs $100–$175 per door and drawer front in 2026. Most kitchens cost ${PRICES_2026.cabinetsPerKitchen}; an average kitchen with 15–25 doors runs ${PRICES_2026.cabinetsAverage}.`,
+    a: `Cabinet painting in Houston runs ${PRICES_2026.cabinetsPerDoor} per door and drawer front in 2026. Most kitchens cost ${PRICES_2026.cabinetsPerKitchen}; an average kitchen with 15–25 doors runs ${PRICES_2026.cabinetsAverage}.`,
   },
   {
     q: "How long does cabinet refinishing take?",
@@ -94,7 +94,7 @@ export default function CabinetRefinishingPage() {
       h1="Cabinet Refinishing in Houston, TX"
       quickAnswer={
         <>
-          Painting kitchen cabinets in Houston costs $100–$175 per door and drawer front in 2026, or{" "}
+          Painting kitchen cabinets in Houston costs {PRICES_2026.cabinetsPerDoor} per door and drawer front in 2026, or{" "}
           {PRICES_2026.cabinetsPerKitchen} for most kitchens. {BUSINESS.name} degreases, sands, bonding-primes, and
           sprays Benjamin Moore Advance or Sherwin-Williams Emerald Urethane for a factory-smooth finish, with a{" "}
           {BUSINESS.trust.warrantyYears}-year workmanship warranty. Free estimates: {BUSINESS.phone}.
@@ -156,10 +156,10 @@ export default function CabinetRefinishingPage() {
       price={{
         head: ["Kitchen size", "2026 Houston range"],
         rows: [
-          ["Per door or drawer front", "$100–$175"],
-          ["Galley, 10–15 doors", "$2,200–$3,500"],
+          ["Per door or drawer front", PRICES_2026.cabinetsPerDoor],
+          ["Galley, 10–15 doors", PRICES_2026.cabinetsGalley],
           ["Average, 15–25 doors", PRICES_2026.cabinetsAverage],
-          ["Large with island, 25–40 doors", "$6,000–$9,000+"],
+          ["Large with island, 25–40 doors", PRICES_2026.cabinetsLarge],
           ["Most Houston kitchens", PRICES_2026.cabinetsPerKitchen],
         ],
         note: "Sprayed cabinet enamel, doors removed and finished flat. Grain filling, heavy repairs, and new hardware installation are quoted separately.",

@@ -403,4 +403,7 @@ export const PRICES_2026 = {
   exterior4000TwoStory: "$8,500–$14,000",
   cabinetsGalley: "$2,200–$3,500",
   cabinetsLarge: "$6,000–$9,000+",
+  cabinetsPerDoor: "$100–$175",
+  accentWall: "$150–$400",
+  ceilingsWholeHome: "$1,500–$3,500",
 } as const

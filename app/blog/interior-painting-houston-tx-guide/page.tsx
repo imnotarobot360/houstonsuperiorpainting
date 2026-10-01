@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Interior Painting Houston TX: Cost, Process & Tips",
@@ -96,9 +97,9 @@ export default function InteriorPaintingHoustonGuidePage() {
       </p>
 
       <ul>
-        <li><strong>$2.50 – $4.50 per sq ft</strong> of floor area for most repaints, premium paint included</li>
-        <li><strong>$300 – $800</strong> for a single room, including ceiling and trim</li>
-        <li><strong>$4,000 – $8,000</strong> for a full interior on a 2,500 sq ft home</li>
+        <li><strong>{PRICES_2026.interiorPerSqFt} per sq ft</strong> of floor area for most repaints, premium paint included</li>
+        <li><strong>{PRICES_2026.singleRoom}</strong> for a single room, including ceiling and trim</li>
+        <li><strong>{PRICES_2026.fullInterior2500}</strong> for a full interior on a 2,500 sq ft home</li>
       </ul>
 
       <p>
@@ -203,7 +204,7 @@ export default function InteriorPaintingHoustonGuidePage() {
 
       <h3>How much does interior painting cost in Houston?</h3>
       <p>
-        Interior painting in Houston typically costs $2.50 to $4.50 per square foot of floor area, depending on the level of preparation required and the paint used. A single room runs $300 to $800, and a full interior on a 2,500 sq ft home usually ranges from $4,000 to $8,000.
+        Interior painting in Houston typically costs {PRICES_2026.interiorPerSqFt} per square foot of floor area, depending on the level of preparation required and the paint used. A single room runs {PRICES_2026.singleRoom}, and a full interior on a 2,500 sq ft home usually runs {PRICES_2026.fullInterior2500}.
       </p>
 
       <h3>How long does interior painting take?</h3>
@@ -228,7 +229,7 @@ export default function InteriorPaintingHoustonGuidePage() {
                 "name": "How much does interior painting cost in Houston?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Interior painting in Houston typically costs $2.50 to $4.50 per square foot of floor area, depending on the level of preparation required and the paint used. A single room runs $300 to $800, and a full interior on a 2,500 sq ft home usually ranges from $4,000 to $8,000."
+                  "text": `Interior painting in Houston typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, depending on the level of preparation required and the paint used. A single room runs ${PRICES_2026.singleRoom}, and a full interior on a 2,500 sq ft home usually runs ${PRICES_2026.fullInterior2500}.`
                 }
               },
               {

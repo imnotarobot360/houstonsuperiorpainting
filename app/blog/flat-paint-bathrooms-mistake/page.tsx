@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Phone, Calendar, ChevronRight, AlertTriangle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Why Flat Paint Should Never Be Used in Bathrooms",
@@ -194,7 +195,7 @@ export default function FlatPaintBathroomsMistakePage() {
               If you already see water stains, peeling, or mold spots, the paint needs to be removed and the surface treated before repainting. Simply painting over the problem traps moisture and mold underneath.
             </p>
             <p>
-              Our <Link href="/interior-painting-houston-tx" className="text-primary hover:underline">interior painting process</Link> includes mold treatment, proper priming, and the right finish to prevent this cycle from repeating. A single bathroom typically falls in the $300–$800 single-room range in our <Link href="/interior-painting-cost-houston" className="text-primary hover:underline">interior painting cost in Houston</Link> guide, and our <Link href="/painters-sugar-land-tx" className="text-primary hover:underline">painters in Sugar Land TX</Link> and Houston offices can fix it in a day or two.
+              Our <Link href="/interior-painting-houston-tx" className="text-primary hover:underline">interior painting process</Link> includes mold treatment, proper priming, and the right finish to prevent this cycle from repeating. A single bathroom typically falls in the {PRICES_2026.singleRoom} single-room range in our <Link href="/interior-painting-cost-houston" className="text-primary hover:underline">interior painting cost in Houston</Link> guide, and our <Link href="/painters-sugar-land-tx" className="text-primary hover:underline">painters in Sugar Land TX</Link> and Houston offices can fix it in a day or two.
             </p>
           </div>
 

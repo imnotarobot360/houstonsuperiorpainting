@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business";
+import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Painting Company Near Me | Houston Superior Painting",
@@ -76,7 +76,7 @@ export default function PaintingCompanyNearMe() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold mb-3">Quick Answer</h2>
           <p className="text-lg leading-relaxed">
-            Houston Superior Painting is a top-rated local painting company serving Houston, Katy, Cypress, Sugar Land, The Woodlands, and all surrounding areas. Founded in 2019 by Juan Serra, we offer interior painting ($2.50-$4.50/sqft), exterior painting ($3,500-$12,000), cabinet refinishing, drywall repair, and more. 4.9/5 Google rating, 200+ reviews, 5-year exterior warranty. Call{" "}
+            Houston Superior Painting is a top-rated local painting company serving Houston, Katy, Cypress, Sugar Land, The Woodlands, and all surrounding areas. Founded in 2019 by Juan Serra, we offer interior painting ({PRICES_2026.interiorPerSqFt}/sqft), exterior painting ({PRICES_2026.exteriorPerHome}), cabinet refinishing, drywall repair, and more. 4.9/5 Google rating, 200+ reviews, 5-year exterior warranty. Call{" "}
             <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a> for a free estimate.
           </p>
         </div>
@@ -130,9 +130,9 @@ export default function PaintingCompanyNearMe() {
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-10 text-center">Painting Services Near You</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { label: "Interior Painting", href: "/interior-painting-houston-tx", price: "$2.50\u2013$4.50/sqft" },
-              { label: "Exterior Painting", href: "/exterior-painting-houston-tx", price: "$3,500\u2013$12,000" },
-              { label: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx", price: "$3,000\u2013$8,000" },
+              { label: "Interior Painting", href: "/interior-painting-houston-tx", price: `${PRICES_2026.interiorPerSqFt}/sqft` },
+              { label: "Exterior Painting", href: "/exterior-painting-houston-tx", price: PRICES_2026.exteriorPerHome },
+              { label: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx", price: PRICES_2026.cabinetsPerKitchen },
               { label: "Drywall Repair", href: "/drywall-repair-houston-tx", price: "$150\u2013$1,500" },
               { label: "Pressure Washing", href: "/pressure-washing-houston-tx", price: "$250\u2013$900" },
               { label: "Limewash & German Smear", href: "/limewash-brick-painting-houston-tx", price: "$3\u2013$8/sqft" },

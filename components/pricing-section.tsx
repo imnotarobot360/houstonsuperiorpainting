@@ -1,41 +1,42 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Check, Info } from "lucide-react"
+import { PRICES_2026 } from "@/lib/business"
 
 // Must agree with PRICES_2026 in lib/business.ts and the /houston-painting-cost-guide tables.
 const pricingData = [
   {
     service: "Interior Painting",
-    priceRange: "$2.50 - $4.50",
+    priceRange: PRICES_2026.interiorPerSqFt,
     unit: "per sq ft",
     examples: [
-      "1,500 sq ft home: $3,000 - $5,500",
-      "2,500 sq ft home: $4,000 - $8,000",
-      "Single room: $300 - $800"
+      `1,500 sq ft home: ${PRICES_2026.fullInterior1500}`,
+      `2,500 sq ft home: ${PRICES_2026.fullInterior2500}`,
+      `Single room: ${PRICES_2026.singleRoom}`
     ],
     factors: ["Wall condition", "Ceiling height", "Trim & doors included", "Number of colors"],
     popular: false
   },
   {
     service: "Exterior Painting",
-    priceRange: "$3,500 - $12,000",
+    priceRange: PRICES_2026.exteriorPerHome,
     unit: "typical home",
     examples: [
-      "1-story (1,500 sq ft): $2,500 - $4,500",
-      "2-story (2,500 sq ft): $5,500 - $9,000",
-      "2-story (4,000+ sq ft): $8,500 - $14,000"
+      `1-story (1,500 sq ft): ${PRICES_2026.exterior1500OneStory}`,
+      `2-story (2,500 sq ft): ${PRICES_2026.exterior2500TwoStory}`,
+      `2-story (4,000+ sq ft): ${PRICES_2026.exterior4000TwoStory}`
     ],
     factors: ["Siding type", "Stories & accessibility", "Prep work needed", "Trim & accent colors"],
     popular: true
   },
   {
     service: "Cabinet Refinishing",
-    priceRange: "$3,000 - $6,500",
+    priceRange: PRICES_2026.cabinetsPerKitchen,
     unit: "average kitchen",
     examples: [
-      "Galley kitchen (10-15 doors): $2,200 - $3,500",
-      "Average kitchen (15-25 doors): $3,500 - $5,500",
-      "Large kitchen with island (25-40 doors): $6,000 - $9,000+"
+      `Galley kitchen (10-15 doors): ${PRICES_2026.cabinetsGalley}`,
+      `Average kitchen (15-25 doors): ${PRICES_2026.cabinetsAverage}`,
+      `Large kitchen with island (25-40 doors): ${PRICES_2026.cabinetsLarge}`
     ],
     factors: ["Number of doors/drawers", "Wood vs laminate", "Color change vs refresh", "Hardware replacement"],
     popular: false

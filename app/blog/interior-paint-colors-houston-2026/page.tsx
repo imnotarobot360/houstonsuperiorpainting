@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Best Interior Paint Colors for Houston Homes 2026",
@@ -154,7 +155,7 @@ export default function InteriorPaintColors2026Page() {
       </p>
 
       <p>
-        A single room typically runs $300–$800 and a 2,500 sq ft interior $4,000–$8,000; see our <Link href="/interior-painting-cost-houston">Houston interior painting prices</Link> for details. If you are looking for interior painters in Houston, <Link href="/painters-katy-tx">Katy</Link>, or Cypress, contact us today for a free estimate.
+        A single room typically runs {PRICES_2026.singleRoom} and a 2,500 sq ft interior {PRICES_2026.fullInterior2500}; see our <Link href="/interior-painting-cost-houston">Houston interior painting prices</Link> for details. If you are looking for interior painters in Houston, <Link href="/painters-katy-tx">Katy</Link>, or Cypress, contact us today for a free estimate.
       </p>
     </BlogPostTemplate>
   )

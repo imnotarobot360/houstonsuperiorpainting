@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import FAQ from "@/components/faq"
 import { Phone, MessageSquare, Star, Shield, CheckCircle2, ChevronRight, MapPin } from "lucide-react"
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Interior Painters Katy TX | Interior House Painting",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { q: "How much does interior painting cost in Katy TX?", a: "Interior painting in Katy typically costs $2.50-$4.50 per square foot. A standard 2,500 sq ft Katy home averages $4,000-$8,000 for a full interior repaint. Accent walls and single rooms start around $300-$800. We provide free, itemized estimates." },
+  { q: "How much does interior painting cost in Katy TX?", a: `Interior painting in Katy typically costs ${PRICES_2026.interiorPerSqFt} per square foot. A standard 2,500 sq ft Katy home averages ${PRICES_2026.fullInterior2500} for a full interior repaint. Accent walls start around ${PRICES_2026.accentWall} and single rooms around ${PRICES_2026.singleRoom}. We provide free, itemized estimates.` },
   { q: "How long does interior painting take in a Katy home?", a: "Most Katy homes (3-4 bedrooms) take 2-5 days for a full interior repaint. A single room takes 1 day. We work efficiently while maintaining quality and include furniture moving, taping, priming, two coats, and cleanup." },
   { q: "What paint brands do you use for Katy interiors?", a: "We exclusively use Sherwin-Williams (Emerald, Duration, SuperPaint) and Benjamin Moore (Aura, Regal Select). These premium low-VOC formulas dry properly in Houston humidity and resist scuffing, staining, and fading." },
   { q: "Do you paint ceilings and trim in Katy?", a: "Yes. We paint all interior surfaces including walls, ceilings, trim, baseboards, crown molding, doors, closets, and built-ins. Trim is brush-cut for a crisp, factory-finish look. Ceilings get a flat finish to hide imperfections." },
@@ -94,7 +94,7 @@ export default function InteriorPaintersKatyTX() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
           <p className="text-foreground/80 leading-relaxed text-lg">
-            Interior painting in Katy TX costs $2.50-$4.50 per square foot. A typical 2,500 sq ft Katy home costs $4,000-$8,000 for a full interior repaint. Houston Superior Painting serves all Katy neighborhoods including Cinco Ranch, Grand Lakes, and Cross Creek Ranch. We use Sherwin-Williams and Benjamin Moore paints with a 5-year warranty. Call (346) 594-5960 for a free estimate.
+            Interior painting in Katy TX costs {PRICES_2026.interiorPerSqFt} per square foot. A typical 2,500 sq ft Katy home costs {PRICES_2026.fullInterior2500} for a full interior repaint. Houston Superior Painting serves all Katy neighborhoods including Cinco Ranch, Grand Lakes, and Cross Creek Ranch. We use Sherwin-Williams and Benjamin Moore paints with a 5-year warranty. Call (346) 594-5960 for a free estimate.
           </p>
         </div>
       </section>
@@ -130,12 +130,12 @@ export default function InteriorPaintersKatyTX() {
               </thead>
               <tbody>
                 {[
-                  ["Single Room (avg 12x14)", "$300–$800"],
-                  ["Accent Wall", "$150–$400"],
-                  ["Full Interior (2,000 sq ft)", "$3,500–$7,000"],
+                  ["Single Room (avg 12x14)", PRICES_2026.singleRoom],
+                  ["Accent Wall", PRICES_2026.accentWall],
+                  ["Full Interior (2,000 sq ft)", PRICES_2026.fullInterior2000],
                   ["Full Interior (3,000 sq ft)", "$5,500–$10,000"],
-                  ["Trim & Baseboards (whole home)", "$1,200–$3,000"],
-                  ["Ceiling Painting (whole home)", "$1,500–$3,500"],
+                  ["Trim & Baseboards (whole home)", PRICES_2026.trimWholeHome],
+                  ["Ceiling Painting (whole home)", PRICES_2026.ceilingsWholeHome],
                   ["Kitchen/Bath (high-moisture)", "$400–$1,200"],
                 ].map(([project, price]) => (
                   <tr key={project} className="border-b border-border hover:bg-muted/50">

@@ -7,7 +7,7 @@ import { EstimateCalculator } from "@/components/estimate-calculator"
 import { PaintingProcessSteps } from "@/components/painting-process-steps"
 import { PROCESS_STEPS } from "@/lib/painting-process"
 import { Phone, MessageSquare, ChevronRight, CheckCircle2 } from "lucide-react"
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF } from "@/lib/business"
 
 const CANONICAL = "https://houstonsuperiorpainting.com/interior-painting-process-houston"
 
@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: "How much does interior painting cost in Houston?",
-    a: "Interior painting in Houston typically runs $2.50-$4.50 per square foot depending on scope, ceiling height, and surface condition. See our interior painting cost guide for a full breakdown, or use the calculator on this page for an instant ballpark range.",
+    a: `Interior painting in Houston typically runs ${PRICES_2026.interiorPerSqFt} per square foot depending on scope, ceiling height, and surface condition. See our interior painting cost guide for a full breakdown, or use the calculator on this page for an instant ballpark range.`,
   },
 ]
 

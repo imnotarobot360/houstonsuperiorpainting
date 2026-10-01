@@ -5,6 +5,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Painting Tips & Advice Blog | Houston Superior Painting",
@@ -216,7 +217,7 @@ const blogPosts = [
     slug: "exterior-painting-cost-katy-tx",
     title: "How Much Does Exterior Painting Cost in Katy TX?",
     excerpt:
-      "Exterior painting in Katy TX costs $3,500–$9,000 for most homes in 2026. Real price breakdowns by home size, siding type & prep needed — plus red flags to avoid.",
+      `Exterior painting in Katy TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026. Real price breakdowns by home size, siding type & prep needed — plus red flags to avoid.`,
     category: "Cost Guide",
     author: "Juan Serra",
     publishDate: "June 7, 2026",
@@ -414,7 +415,7 @@ const blogPosts = [
   {
     slug: "cabinet-refinishing-vs-replacement-houston",
     title: "Cabinet Refinishing vs Replacement in Houston: Complete Cost Comparison",
-    excerpt: "Compare cabinet refinishing ($3,000-8,000) vs replacement ($20,000-50,000) in Houston. Learn when to refinish vs replace your kitchen cabinets and save up to 80%.",
+    excerpt: `Compare cabinet refinishing (${PRICES_2026.cabinetsPerKitchen}) vs replacement ($20,000-50,000) in Houston. Learn when to refinish vs replace your kitchen cabinets and save up to 80%.`,
     category: "Cabinet Refinishing",
     author: "Juan Serra",
     publishDate: "May 9, 2026",

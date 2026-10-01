@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import FAQ from "@/components/faq"
 import { Phone, MessageSquare, CheckCircle2, ChevronRight, MapPin, Star, Shield, Award, Users } from "lucide-react"
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "House Painters Cypress TX | Local Painting Company Cypress",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { q: "How much do house painters in Cypress TX charge?", a: "Interior painting in Cypress costs $2.50-$4.50 per sq ft. Exterior painting for a typical Cypress home ranges $3,500-$12,000 depending on size, stories, and siding type. Cabinet painting runs $3,000-$8,000 for a full kitchen. Free detailed estimates provided." },
+  { q: "How much do house painters in Cypress TX charge?", a: `Interior painting in Cypress costs ${PRICES_2026.interiorPerSqFt} per sq ft. Exterior painting for a typical Cypress home ranges ${PRICES_2026.exteriorPerHome} depending on size, stories, and siding type. Cabinet painting runs ${PRICES_2026.cabinetsPerKitchen} for a full kitchen. Free detailed estimates provided.` },
   { q: "What Cypress neighborhoods do you serve?", a: "We serve all of Cypress including Bridgeland, Towne Lake, Cypress Creek Lakes, Fairfield, Lakewood Forest, Cypress Falls, Cypress Springs, Longwood, and all communities along 290 and the Grand Parkway. If you are in the Cypress-Tomball area, we can help." },
   { q: "How do you handle Cypress summers for exterior painting?", a: "We start exterior work at 6-7 AM to take advantage of cooler morning temperatures. We stop when surface temperatures exceed manufacturer guidelines. Our paint products (Sherwin-Williams Duration) are rated for extreme heat and we follow strict temperature protocols." },
   { q: "Are you a local Cypress painting company?", a: "Yes. Houston Superior Painting is headquartered in Cypress, TX. Owner Juan Serra runs the company from our Cypress headquarters and reviews the prep scope on every estimate. We are not a franchise or lead-generation company. We are your neighbors." },
@@ -57,7 +57,7 @@ export default function HousePaintersCypressTX() {
       <section data-speakable="true" className="quick-answer bg-secondary/10 border-l-4 border-secondary py-6">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
-          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting is headquartered in Cypress, TX and serves Bridgeland, Towne Lake, Cypress Creek Lakes, Fairfield, and all Cypress neighborhoods. We offer interior painting ($2.50-$4.50/sq ft), exterior painting ($3,500-$12,000), cabinet refinishing ($3,000-$8,000), drywall repair, pressure washing, and more. 5-year exterior warranty, 4.9/5 Google rating. Call (346) 594-5960.</p>
+          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting is headquartered in Cypress, TX and serves Bridgeland, Towne Lake, Cypress Creek Lakes, Fairfield, and all Cypress neighborhoods. We offer interior painting ({PRICES_2026.interiorPerSqFt}/sq ft), exterior painting ({PRICES_2026.exteriorPerHome}), cabinet refinishing ({PRICES_2026.cabinetsPerKitchen}), drywall repair, pressure washing, and more. 5-year exterior warranty, 4.9/5 Google rating. Call (346) 594-5960.</p>
         </div>
       </section>
 
@@ -91,7 +91,7 @@ export default function HousePaintersCypressTX() {
             <table className="w-full border-collapse">
               <thead><tr className="bg-primary text-primary-foreground"><th className="text-left p-3 font-semibold">Service</th><th className="text-left p-3 font-semibold">Price Range</th></tr></thead>
               <tbody>
-                {[["Interior Painting", "$2.50–$4.50/sq ft"], ["Exterior Painting", "$3,500–$12,000"], ["Cabinet Refinishing", "$3,000–$8,000"], ["Drywall Repair", "$150–$800/patch"], ["Pressure Washing", "$200–$600"], ["Garage Epoxy", "$1,800–$5,000"]].map(([s, p]) => (
+                {[["Interior Painting", `${PRICES_2026.interiorPerSqFt}/sq ft`], ["Exterior Painting", PRICES_2026.exteriorPerHome], ["Cabinet Refinishing", PRICES_2026.cabinetsPerKitchen], ["Drywall Repair", "$150–$800/patch"], ["Pressure Washing", "$200–$600"], ["Garage Epoxy", "$1,800–$5,000"]].map(([s, p]) => (
                   <tr key={s} className="border-b border-border hover:bg-muted/50"><td className="p-3 font-medium">{s}</td><td className="p-3 text-muted-foreground">{p}</td></tr>
                 ))}
               </tbody>

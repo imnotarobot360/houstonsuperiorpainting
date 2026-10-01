@@ -3,6 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LocationPageTemplate } from "@/components/location-page-template"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "House Painters Memorial Villages TX | Interior & Exterior",
@@ -117,7 +118,7 @@ Whether you're in a cozy Hedwig Village cottage or a sprawling Piney Point estat
           faqs={[
             {
               question: "How much does painting cost in the Memorial Villages?",
-              answer: "Interior painting in the Memorial Villages typically costs $2.50–$4.50 per square foot; homes over 4,000 sq ft generally run $7,000–$14,000 inside. A two-story exterior over 4,000 sq ft typically runs $8,500–$14,000, and larger estates with extensive millwork are quoted after a walkthrough. We provide free detailed estimates."
+              answer: `Interior painting in the Memorial Villages typically costs ${PRICES_2026.interiorPerSqFt} per square foot; homes over 4,000 sq ft generally run ${PRICES_2026.fullInterior4000} inside. A two-story exterior over 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}, and larger estates with extensive millwork are quoted after a walkthrough. We provide free detailed estimates.`
             },
             {
               question: "Do you serve all six Memorial Villages?",

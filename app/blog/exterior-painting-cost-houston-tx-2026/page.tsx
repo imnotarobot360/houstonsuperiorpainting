@@ -1,11 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Exterior Painting Cost in Houston TX (2026)",
   description:
-    "Exterior painting in Houston TX costs $3,500–$9,500 for most homes in 2026 ($1.75–$4.00/sq ft). Real prices by home size, siding type & stories.",
+    `Exterior painting in Houston TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026 ($1.75–$4.00/sq ft). Real prices by home size, siding type & stories.`,
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide",
   },
@@ -29,7 +30,7 @@ const faqs = [
   {
     question: "How much does it cost to paint a 2,000 sq ft house exterior in Houston?",
     answer:
-      "A single-story 2,000 sq ft Houston home costs $3,500–$6,500 to paint professionally in 2026. A two-story home of the same living area runs $5,500–$9,500. The range depends on siding type, prep needed, and paint grade.",
+      `A single-story 2,000 sq ft Houston home costs ${PRICES_2026.exterior2000OneStory} to paint professionally in 2026. A two-story home of the same living area runs ${PRICES_2026.exterior2000TwoStory}. The range depends on siding type, prep needed, and paint grade.`,
   },
   {
     question: "How much does exterior painting cost per square foot in Houston?",
@@ -93,7 +94,7 @@ export default function ExteriorPaintingCostHoustonPage() {
   return (
     <BlogPostTemplate
       title="How Much Does Exterior Painting Cost in Houston TX in 2026?"
-      excerpt="Exterior painting in Houston TX costs $3,500–$9,500 for most homes in 2026, or roughly $1.75–$4.00 per square foot of paintable surface. Here's the full breakdown by home size, siding type, and stories."
+      excerpt={`Exterior painting in Houston TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026, or roughly $1.75–$4.00 per square foot of paintable surface. Here's the full breakdown by home size, siding type, and stories.`}
       author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 11, 2026"
@@ -111,10 +112,10 @@ export default function ExteriorPaintingCostHoustonPage() {
       >
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
-          Exterior painting in Houston TX costs <strong>$3,500–$9,500</strong> for most homes in 2026, or roughly{" "}
+          Exterior painting in Houston TX costs <strong>{PRICES_2026.exteriorPerHome}</strong> for most homes in 2026, or roughly{" "}
           <strong>$1.75–$4.00 per square foot</strong> of paintable surface. A typical single-story 2,000 sq ft Houston
-          home runs <strong>$3,500–$6,500</strong>; a two-story home of the same footprint runs{" "}
-          <strong>$5,500–$9,500</strong> because of ladder and equipment work. Brick, Hardie board, and stucco each
+          home runs <strong>{PRICES_2026.exterior2000OneStory}</strong>; a two-story home of the same footprint runs{" "}
+          <strong>{PRICES_2026.exterior2000TwoStory}</strong> because of ladder and equipment work. Brick, Hardie board, and stucco each
           price differently — full breakdown below.
         </p>
       </div>
@@ -141,28 +142,28 @@ export default function ExteriorPaintingCostHoustonPage() {
         <tbody>
           <tr>
             <td className="border border-border p-3">1,500 sq ft</td>
-            <td className="border border-border p-3">$3,000 – $5,000</td>
-            <td className="border border-border p-3">$4,500 – $7,000</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior1500OneStory}</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior1500TwoStory}</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">2,000 sq ft</td>
-            <td className="border border-border p-3">$3,500 – $6,500</td>
-            <td className="border border-border p-3">$5,500 – $9,500</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior2000OneStory}</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior2000TwoStory}</td>
           </tr>
           <tr>
             <td className="border border-border p-3">2,500 sq ft</td>
-            <td className="border border-border p-3">$4,500 – $7,500</td>
-            <td className="border border-border p-3">$6,500 – $11,000</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior2500OneStory}</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior2500TwoStory}</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">3,000 sq ft</td>
-            <td className="border border-border p-3">$5,500 – $9,000</td>
-            <td className="border border-border p-3">$7,500 – $13,000</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior3000OneStory}</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior3000TwoStory}</td>
           </tr>
           <tr>
             <td className="border border-border p-3">4,000+ sq ft</td>
-            <td className="border border-border p-3">$7,000 – $12,000</td>
-            <td className="border border-border p-3">$10,000 – $18,000+</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior4000OneStory}</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior4000TwoStory}</td>
           </tr>
         </tbody>
       </table>

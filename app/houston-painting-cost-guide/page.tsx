@@ -23,7 +23,7 @@ const PAGE_PATH = "/houston-painting-cost-guide"
 const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
 const TITLE = "Houston Painting Cost Guide 2026 | Interior, Exterior & Cabinets"
 const DESCRIPTION =
-  "What painting costs in Houston in 2026: $2.50–$4.50/sq ft interior, $1.50–$4/sq ft exterior, $3,000–$6,500 for cabinets. Real ranges from 500+ Houston jobs."
+  `What painting costs in Houston in 2026: ${PRICES_2026.interiorPerSqFt}/sq ft interior, ${PRICES_2026.exteriorPerSqFt}/sq ft exterior, ${PRICES_2026.cabinetsPerKitchen} for cabinets. Real ranges from 500+ Houston jobs.`
 const H1 = "How Much Does Painting Cost in Houston? (2026 Guide)"
 
 export const metadata: Metadata = {
@@ -54,15 +54,15 @@ const linkCls = "text-primary font-medium underline"
 const FAQS: { q: string; text: string; a?: ReactNode }[] = [
   {
     q: "How much does it cost to paint a 2,500 sq ft house in Houston?",
-    text: "$4,000–$8,000 for the interior, $5,500–$9,000 for a two-story exterior, in 2026.",
+    text: `${PRICES_2026.fullInterior2500} for the interior, ${PRICES_2026.exterior2500TwoStory} for a two-story exterior, in 2026.`,
   },
   {
     q: "Do painters charge per square foot or per hour in Houston?",
-    text: "Most quote per project based on square footage and condition. Expect $2.50–$4.50/sq ft interior. Hourly rates for touch-ups run $45–$75.",
+    text: `Most quote per project based on square footage and condition. Expect ${PRICES_2026.interiorPerSqFt}/sq ft interior. Hourly rates for touch-ups run $45–$75.`,
   },
   {
     q: "How much does it cost to paint one room?",
-    text: "$300–$800 for a 12×14 bedroom including ceiling and trim.",
+    text: `${PRICES_2026.singleRoom} for a 12×14 bedroom including ceiling and trim.`,
   },
   {
     q: "Does the price include paint?",
@@ -126,9 +126,9 @@ export default function HoustonPaintingCostGuidePage() {
         <PageHero h1={H1} eyebrow="2026 Houston pricing" />
 
         <QuickAnswer>
-          Painting a house in Houston costs $2.50–$4.50 per square foot for interiors and $1.50–$4 per square foot for
-          exteriors in 2026. A 2,500 sq ft home runs $4,000–$8,000 inside and $5,500–$9,000 outside. Kitchen cabinets run
-          $3,000–$6,500. These ranges come from 500+ Houston Superior Painting jobs since 2019 and include labor, prep, and
+          Painting a house in Houston costs {PRICES_2026.interiorPerSqFt} per square foot for interiors and {PRICES_2026.exteriorPerSqFt} per square foot for
+          exteriors in 2026. A 2,500 sq ft home runs {PRICES_2026.fullInterior2500} inside and {PRICES_2026.exterior2500TwoStory} outside. Kitchen cabinets run{" "}
+          {PRICES_2026.cabinetsPerKitchen}. These ranges come from 500+ Houston Superior Painting jobs since 2019 and include labor, prep, and
           premium paint. Call (346) 594-5960 for a fixed quote.
         </QuickAnswer>
 
@@ -144,7 +144,7 @@ export default function HoustonPaintingCostGuidePage() {
                 area, {PRICES_2026.exteriorPerHome} per home
               </>,
               <>
-                <Link href="/cabinet-refinishing-houston-tx">Cabinets</Link>: $100–$175 per door and drawer front,{" "}
+                <Link href="/cabinet-refinishing-houston-tx">Cabinets</Link>: {PRICES_2026.cabinetsPerDoor} per door and drawer front,{" "}
                 {PRICES_2026.cabinetsPerKitchen} per kitchen
               </>,
             ]}
@@ -156,12 +156,12 @@ export default function HoustonPaintingCostGuidePage() {
             head={["Project", "Range", "Typical"]}
             rows={[
               ["Single room (12×14)", PRICES_2026.singleRoom, "$500"],
-              ["Accent wall", "$150–$400", "$250"],
+              ["Accent wall", PRICES_2026.accentWall, "$250"],
               ["Full interior, 1,500 sq ft", PRICES_2026.fullInterior1500, "$4,000"],
               ["Full interior, 2,500 sq ft", PRICES_2026.fullInterior2500, "$6,000"],
               ["Full interior, 4,000+ sq ft", PRICES_2026.fullInterior4000, "$10,000"],
               ["Trim and baseboards, whole home", PRICES_2026.trimWholeHome, "$2,000"],
-              ["Ceilings, whole home", "$1,500–$3,500", "$2,500"],
+              ["Ceilings, whole home", PRICES_2026.ceilingsWholeHome, "$2,500"],
             ]}
           />
           <p>

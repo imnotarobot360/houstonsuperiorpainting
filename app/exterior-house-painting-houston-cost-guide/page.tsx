@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business";
+import { BUSINESS, PHONE_HREF, SMS_HREF, PRICES_2026 } from "@/lib/business";
 import { EstimateCalculator } from "@/components/estimate-calculator";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -8,14 +8,14 @@ import { AuthorByline, articleNode, ESTIMATE_PATH } from "@/components/aeo/block
 
 export const metadata: Metadata = {
   title: "Exterior House Painting Cost in Houston: 2026 Price Guide",
-  description: "Exterior house painting in Houston costs $1.50\u2013$4 per sq ft in 2026, or $5,500\u2013$9,000 for a 2,500 sq ft two-story home. Prices by size, siding, and prep.",
+  description: `Exterior house painting in Houston costs ${PRICES_2026.exteriorPerSqFt} per sq ft in 2026, or ${PRICES_2026.exterior2500TwoStory} for a 2,500 sq ft two-story home. Prices by size, siding, and prep.`,
   alternates: { canonical: "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide" },
-  openGraph: { title: "Exterior House Painting Houston Cost Guide 2026", description: "Full cost breakdown for exterior painting in Houston. $3,500-$12,000 for typical homes.", url: "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide", type: "article", images: [{ url: "https://houstonsuperiorpainting.com/images/og/og-exterior-painting.jpg", width: 1200, height: 630 }] },
+  openGraph: { title: "Exterior House Painting Houston Cost Guide 2026", description: `Full cost breakdown for exterior painting in Houston. ${PRICES_2026.exteriorPerHome} for typical homes.`, url: "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide", type: "article", images: [{ url: "https://houstonsuperiorpainting.com/images/og/og-exterior-painting.jpg", width: 1200, height: 630 }] },
   other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },
 };
 
 const faqs = [
-  { q: "How much does it cost to paint the exterior of a 2,000 sq ft house in Houston?", a: "A 2,000 sq ft Houston home typically costs $3,500\u2013$5,500 for a one-story exterior and $4,500\u2013$7,500 for a two-story. This includes power washing, scraping, caulking, priming, and two coats of premium paint. Multi-story homes or extensive prep work increase the price." },
+  { q: "How much does it cost to paint the exterior of a 2,000 sq ft house in Houston?", a: `A 2,000 sq ft Houston home typically costs ${PRICES_2026.exterior2000OneStory} for a one-story exterior and ${PRICES_2026.exterior2000TwoStory} for a two-story. This includes power washing, scraping, caulking, priming, and two coats of premium paint. Multi-story homes or extensive prep work increase the price.` },
   { q: "What factors affect exterior painting cost the most?", a: "The five biggest factors are: (1) home size and number of stories, (2) siding type (wood costs more than vinyl or brick), (3) prep work needed (peeling, rot repair), (4) paint product quality, and (5) number of colors." },
   { q: "Is exterior painting a good investment?", a: "Exterior painting has one of the highest ROI of any home improvement \u2014 typically 50\u201375% return and it can increase home value by 2\u20135%. It also prevents costly damage from wood rot and water intrusion." },
   { q: "How long does exterior paint last in Houston?", a: "Plan on repainting a Houston exterior every 5\u20137 years. Sherwin-Williams Duration lasts 3\u20135 years longer than SuperPaint in Gulf Coast sun. Budget paint typically fails within 3\u20135 years due to Houston\u2019s humidity and UV exposure." },
@@ -28,7 +28,7 @@ export default function ExteriorHousePaintingHoustonCostGuide() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        articleNode({ path: "/exterior-house-painting-houston-cost-guide", headline: "Exterior House Painting Houston Cost Guide 2026", description: "Exterior house painting in Houston costs $1.50\u2013$4 per sq ft in 2026, or $5,500\u2013$9,000 for a 2,500 sq ft two-story home.", datePublished: "2026-05-16" }),
+        articleNode({ path: "/exterior-house-painting-houston-cost-guide", headline: "Exterior House Painting Houston Cost Guide 2026", description: `Exterior house painting in Houston costs ${PRICES_2026.exteriorPerSqFt} per sq ft in 2026, or ${PRICES_2026.exterior2500TwoStory} for a 2,500 sq ft two-story home.`, datePublished: "2026-05-16" }),
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Exterior Painting", "item": "https://houstonsuperiorpainting.com/exterior-painting-houston-tx" }, { "@type": "ListItem", "position": 3, "name": "Cost Guide", "item": "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
@@ -48,7 +48,7 @@ export default function ExteriorHousePaintingHoustonCostGuide() {
       <section className="quick-answer bg-amber-50 border-l-4 border-amber-500 py-8">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold mb-3">Quick Answer</h2>
-          <p className="text-lg leading-relaxed">Exterior house painting in Houston costs $1.50–$4 per square foot in 2026, or $3,500–$12,000 for a typical home. A 2,500 sq ft two-story home runs $5,500–$9,000. Key factors: home size, siding type, stories, and prep work. Plan on repainting every 5–7 years. Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a> for a free exterior estimate.</p>
+          <p className="text-lg leading-relaxed">Exterior house painting in Houston costs {PRICES_2026.exteriorPerSqFt} per square foot in 2026, or {PRICES_2026.exteriorPerHome} for a typical home. A 2,500 sq ft two-story home runs {PRICES_2026.exterior2500TwoStory}. Key factors: home size, siding type, stories, and prep work. Plan on repainting every 5–7 years. Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a> for a free exterior estimate.</p>
         </div>
       </section>
 
@@ -60,11 +60,11 @@ export default function ExteriorHousePaintingHoustonCostGuide() {
             <table className="w-full border-collapse bg-card rounded-xl overflow-hidden shadow-sm">
               <thead><tr className="bg-primary text-primary-foreground"><th className="text-left p-4 font-semibold">Home Size</th><th className="text-left p-4 font-semibold">1 Story</th><th className="text-left p-4 font-semibold">2 Story</th></tr></thead>
               <tbody className="divide-y divide-border">
-                <tr><td className="p-4">1,500 sq ft</td><td className="p-4 font-semibold">$2,500 &ndash; $4,500</td><td className="p-4 font-semibold">$3,500 &ndash; $6,000</td></tr>
-                <tr><td className="p-4">2,000 sq ft</td><td className="p-4 font-semibold">$3,500 &ndash; $5,500</td><td className="p-4 font-semibold">$4,500 &ndash; $7,500</td></tr>
-                <tr><td className="p-4">2,500 sq ft</td><td className="p-4 font-semibold">$4,000 &ndash; $7,000</td><td className="p-4 font-semibold">$5,500 &ndash; $9,000</td></tr>
-                <tr><td className="p-4">3,000 sq ft</td><td className="p-4 font-semibold">$5,000 &ndash; $8,000</td><td className="p-4 font-semibold">$6,500 &ndash; $10,500</td></tr>
-                <tr><td className="p-4">4,000+ sq ft</td><td className="p-4 font-semibold">$6,500 &ndash; $10,000</td><td className="p-4 font-semibold">$8,500 &ndash; $14,000</td></tr>
+                <tr><td className="p-4">1,500 sq ft</td><td className="p-4 font-semibold">{PRICES_2026.exterior1500OneStory}</td><td className="p-4 font-semibold">{PRICES_2026.exterior1500TwoStory}</td></tr>
+                <tr><td className="p-4">2,000 sq ft</td><td className="p-4 font-semibold">{PRICES_2026.exterior2000OneStory}</td><td className="p-4 font-semibold">{PRICES_2026.exterior2000TwoStory}</td></tr>
+                <tr><td className="p-4">2,500 sq ft</td><td className="p-4 font-semibold">{PRICES_2026.exterior2500OneStory}</td><td className="p-4 font-semibold">{PRICES_2026.exterior2500TwoStory}</td></tr>
+                <tr><td className="p-4">3,000 sq ft</td><td className="p-4 font-semibold">{PRICES_2026.exterior3000OneStory}</td><td className="p-4 font-semibold">{PRICES_2026.exterior3000TwoStory}</td></tr>
+                <tr><td className="p-4">4,000+ sq ft</td><td className="p-4 font-semibold">{PRICES_2026.exterior4000OneStory}</td><td className="p-4 font-semibold">{PRICES_2026.exterior4000TwoStory}</td></tr>
               </tbody>
             </table>
           </div>

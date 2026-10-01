@@ -8,7 +8,7 @@ const SLUG = "exterior-painting-houston-tx"
 const URL = serviceUrl(SLUG)
 const TITLE = "Exterior Painting Houston TX | 2026 Prices & Process"
 const DESCRIPTION =
-  "Exterior house painting in Houston costs $1.50–$4/sq ft in 2026; a 2,500 sq ft two-story runs $5,500–$9,000. 5-year warranty. Call (346) 594-5960."
+  `Exterior house painting in Houston costs ${PRICES_2026.exteriorPerSqFt}/sq ft in 2026; a 2,500 sq ft two-story runs ${PRICES_2026.exterior2500TwoStory}. 5-year warranty. Call (346) 594-5960.`
 const OG_IMAGE = "https://houstonsuperiorpainting.com/images/og/og-exterior-painting.jpg"
 
 export const metadata: Metadata = {
@@ -166,11 +166,11 @@ export default function ExteriorPaintingHoustonTX() {
       price={{
         head: ["Home size", "1 story", "2 story"],
         rows: [
-          ["1,500 sq ft", "$2,500–$4,500", "$3,500–$6,000"],
-          ["2,000 sq ft", "$3,500–$5,500", "$4,500–$7,500"],
-          ["2,500 sq ft", "$4,000–$7,000", PRICES_2026.exterior2500TwoStory],
-          ["3,000 sq ft", "$5,000–$8,000", "$6,500–$10,500"],
-          ["4,000+ sq ft", "$6,500–$10,000", "$8,500–$14,000"],
+          ["1,500 sq ft", PRICES_2026.exterior1500OneStory, PRICES_2026.exterior1500TwoStory],
+          ["2,000 sq ft", PRICES_2026.exterior2000OneStory, PRICES_2026.exterior2000TwoStory],
+          ["2,500 sq ft", PRICES_2026.exterior2500OneStory, PRICES_2026.exterior2500TwoStory],
+          ["3,000 sq ft", PRICES_2026.exterior3000OneStory, PRICES_2026.exterior3000TwoStory],
+          ["4,000+ sq ft", PRICES_2026.exterior4000OneStory, PRICES_2026.exterior4000TwoStory],
         ],
         note: "Includes pressure wash, scrape, caulk, prime, and two coats. Wood rot repair runs $75–$150 per linear foot extra. Stucco crack repair and elastomeric coating add $1–$2/sq ft.",
       }}
