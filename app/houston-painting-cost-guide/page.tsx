@@ -176,7 +176,7 @@ export default function HoustonPaintingCostGuidePage() {
             head={["Home size", "1 story", "2 story"]}
             rows={[
               ["1,500 sq ft", "$2,500–$4,500", "$3,500–$6,000"],
-              ["2,000 sq ft", "$3,500–$5,500", "$4,500–$7,500"],
+              ["2,000 sq ft", PRICES_2026.exterior2000OneStory, PRICES_2026.exterior2000TwoStory],
               ["2,500 sq ft", "$4,000–$7,000", PRICES_2026.exterior2500TwoStory],
               ["3,000 sq ft", "$5,000–$8,000", "$6,500–$10,500"],
               ["4,000+ sq ft", "$6,500–$10,000", "$8,500–$14,000"],

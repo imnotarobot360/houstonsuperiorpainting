@@ -41,7 +41,6 @@ v0 also opens PRs against this repo, so run `git pull` before starting work.
 - Blog posts live under `/blog/<slug>`.
 
 ## Open items (Juan)
-- Prices: `/blog/cost-to-paint-2000-sq-ft-house-houston` was published with higher prices than `PRICES_2026` / the cost guide, by Juan's choice. Reconcile when final 2026 prices are decided.
 - The "4.9 / 200+ Google reviews" claim is not verified per Google Business Profile. It is shown on the homepage, service pages, the Houston page and some posts.
 - Google Business Profiles: confirm the Houston suite (#443 vs #405) and Magnolia's hours, add each listing's share link to `BUSINESS.locations[].mapsUrl`, and point each listing's website field to its `/painters-{city}-tx` page.
 - Add real Katy, Sugar Land and Magnolia projects to `lib/projects.ts`. The office pages show them automatically.

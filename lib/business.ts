@@ -385,4 +385,10 @@ export const PRICES_2026 = {
   cabinetsAverage: "$3,500–$5,500",
   trimWholeHome: "$1,200–$3,000",
   exteriorPerHome: "$3,500–$12,000",
+  // 2,000 sq ft home (cost guide's exterior table row; interior sits between its 1,500 and 2,500 rows)
+  exterior2000OneStory: "$3,500–$5,500",
+  exterior2000TwoStory: "$4,500–$7,500",
+  exterior2000: "$3,500–$7,500",
+  fullInterior2000: "$3,500–$7,000",
+  wholeHome2000: "$7,000–$14,500",
 } as const

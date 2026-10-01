@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { PRICES_2026 } from "@/lib/business"
 
 const URL = "https://houstonsuperiorpainting.com/blog/cost-to-paint-2000-sq-ft-house-houston"
 
@@ -32,20 +33,20 @@ const faqs = [
   {
     question: "How much does it cost to paint the exterior of a 2,000 sq ft house in Houston?",
     answer:
-      "Typically $4,000 to $9,000 in 2026, depending on stories, siding type, how much brick is left unpainted, and how much repair and prep is needed.",
+      `Typically ${PRICES_2026.exterior2000} in 2026: about ${PRICES_2026.exterior2000OneStory} for a one-story home and ${PRICES_2026.exterior2000TwoStory} for a two-story. Siding type, how much brick is left unpainted, and repairs move you within that range.`,
   },
   {
     question: "How much does it cost to paint the interior of a 2,000 sq ft house in Houston?",
     answer:
-      "Typically $6,000 to $14,000 for walls, ceilings, and trim. Walls-only jobs land toward the lower end.",
+      `Typically ${PRICES_2026.fullInterior2000} in 2026, or about ${PRICES_2026.interiorPerSqFt} per square foot of floor area. Walls-only jobs land toward the lower end.`,
   },
   {
     question: "How much does it cost to paint one room in Houston?",
     answer:
-      "About $500 to $900 for walls only in a standard-height room. Ceilings, trim, and high ceilings add to that.",
+      `About ${PRICES_2026.singleRoom} for a 12×14 bedroom, including ceiling and trim. High ceilings and dark-to-light color changes add to that.`,
   },
   {
-    question: "Why is painting more expensive in Houston?",
+    question: "Why does prep matter so much in Houston?",
     answer:
       "Houston's humidity, heat, storms, and mildew mean more prep, including washing, caulking, wood repair, and priming, which adds labor but helps the paint last.",
   },
@@ -125,7 +126,7 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
               <strong>Exterior only</strong>
             </td>
             <td>
-              <strong>$4,000 – $9,000</strong>
+              <strong>{PRICES_2026.exterior2000}</strong>
             </td>
           </tr>
           <tr>
@@ -133,7 +134,7 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
               <strong>Interior only</strong> (walls, ceilings, trim)
             </td>
             <td>
-              <strong>$6,000 – $14,000</strong>
+              <strong>{PRICES_2026.fullInterior2000}</strong>
             </td>
           </tr>
           <tr>
@@ -144,10 +145,10 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
           </tr>
           <tr>
             <td>
-              <strong>Single room</strong> (walls only, standard ceilings)
+              <strong>Single room</strong> (12×14, including ceiling and trim)
             </td>
             <td>
-              <strong>$500 – $900</strong>
+              <strong>{PRICES_2026.singleRoom}</strong>
             </td>
           </tr>
           <tr>
@@ -155,15 +156,16 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
               <strong>Whole house, inside and out</strong>
             </td>
             <td>
-              <strong>$10,000 – $23,000</strong>
+              <strong>{PRICES_2026.wholeHome2000}</strong>
             </td>
           </tr>
         </tbody>
       </table>
       <p>
-        For comparison, national averages for a 2,000 sq ft home run about <strong>$3,000–$8,000 for exterior</strong>{" "}
-        and <strong>$4,000–$12,000 for interior</strong>. Houston tends to land a bit higher, mostly because our climate
-        demands more prep — more washing, more caulking, more mildew treatment, and more wood repair.
+        On the exterior, the number of stories is the biggest split: about <strong>{PRICES_2026.exterior2000OneStory}</strong>{" "}
+        for a one-story 2,000 sq ft home and <strong>{PRICES_2026.exterior2000TwoStory}</strong>{" "}
+        for a two-story. Our climate also demands real prep — washing, caulking, mildew treatment, and wood repair — and
+        that&apos;s built into these ranges.
       </p>
       <p>
         <em>
@@ -175,8 +177,9 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
 
       <h2>Why &quot;2,000 Sq Ft&quot; Isn&apos;t the Whole Story</h2>
       <p>
-        Your home&apos;s square footage is the <em>living space</em> on the floor. Painters price by the{" "}
-        <strong>surface area that gets painted</strong> — and that&apos;s a different number.
+        The ranges above are based on your home&apos;s floor square footage. But the labor is driven by the{" "}
+        <strong>surface area that gets painted</strong> — and that&apos;s a different number. It&apos;s what decides
+        whether you land at the low or high end.
       </p>
       <ul>
         <li>
@@ -197,8 +200,8 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
       <h2>Exterior Painting: What Drives the Price</h2>
       <p>
         Professional <Link href="/exterior-painting-houston-tx">exterior painting</Link> in the Houston area typically
-        runs <strong>about $2–$4.50 per square foot of paintable surface</strong>. Here&apos;s what moves you within that
-        range:
+        runs <strong>about {PRICES_2026.exteriorPerSqFt} per square foot of floor area</strong>. Here&apos;s what moves you
+        within that range:
       </p>
       <p>
         <strong>1. How much of your house is actually painted.</strong> This is a big one in Houston. A lot of homes in{" "}
@@ -208,8 +211,9 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
         — your cost drops a lot.
       </p>
       <p>
-        <strong>2. Number of stories.</strong> Two-story homes need taller ladders, more setup, and more time. Each
-        additional story can add <strong>roughly 40–50%</strong> per square foot.
+        <strong>2. Number of stories.</strong> Two-story homes need taller ladders, more setup, and more time. On a 2,000
+        sq ft home that&apos;s the difference between about {PRICES_2026.exterior2000OneStory} and{" "}
+        {PRICES_2026.exterior2000TwoStory}.
       </p>
       <p>
         <strong>3. Siding type.</strong>
@@ -246,8 +250,8 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
       <h2>Interior Painting: What Drives the Price</h2>
       <p>
         <Link href="/interior-painting-houston-tx">Interior painting</Link> in Houston typically runs{" "}
-        <strong>about $3–$7 per square foot of paintable wall space</strong>, including standard prep, two coats, and
-        cleanup.
+        <strong>about {PRICES_2026.interiorPerSqFt} per square foot of floor area</strong>, including standard prep, two
+        coats, and cleanup.
       </p>
       <p>
         <strong>1. What&apos;s included.</strong> Walls only? Walls and ceilings? Baseboards, door frames, and doors too?
