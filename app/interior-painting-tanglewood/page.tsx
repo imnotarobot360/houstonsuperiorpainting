@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   alternates: {
@@ -32,7 +33,7 @@ export default function InteriorPaintingTanglewoodPage() {
       priceRange="$6,720 – $19,600"
       priceMin={6720}
       priceMax={19600}
-      priceDetails="Interior painting in Tanglewood typically ranges from $6,720 to $19,600 for a whole-home repaint. Tanglewood homes range from 4,000 to 8,000 sqft with significant millwork — repaints often include touch-ups to high-grade trim and cabinetry. Single rooms typically run $650 to $1,800."
+      priceDetails={`Interior painting in Tanglewood typically ranges from $6,720 to $19,600 for a whole-home repaint. Tanglewood homes range from 4,000 to 8,000 sqft with significant millwork — repaints often include touch-ups to high-grade trim and cabinetry. Single rooms typically run ${PRICES_2026.singleRoom}.`}
       faqs={[
         {
           question: "How long does an interior painting project take for a typical Tanglewood home?",
@@ -48,7 +49,7 @@ export default function InteriorPaintingTanglewoodPage() {
         },
         {
           question: "How much does interior painting cost in Tanglewood?",
-          answer: "Interior painting in Tanglewood typically ranges from $6,720 to $19,600 for a whole-home repaint. Single rooms typically run $650 to $1,800."
+          answer: `Interior painting in Tanglewood typically ranges from $6,720 to $19,600 for a whole-home repaint. Single rooms typically run ${PRICES_2026.singleRoom}.`
         },
         {
           question: "Do you provide color consultation?",
