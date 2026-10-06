@@ -55,7 +55,7 @@ const relatedPosts = [
   },
   {
     title: "Best Paint Colors for Houston Homes in 2026",
-    href: "/blog/paint-colors-houston-homes-2026",
+    href: "/best-paint-colors-houston-homes",
     excerpt: "The colors trending in Houston interiors this year.",
     image: "/images/blog/paint-colors-houston-homes-2026.png",
   },

@@ -46,6 +46,10 @@ const faqs = [
     answer: "Yes! Oak cabinets are excellent candidates for refinishing. We apply grain filler to reduce the prominent oak grain, then spray smooth cabinet-grade enamel for a modern, updated look. The result is glass-smooth with no visible grain."
   },
   {
+    question: "Is spraying cabinets better than brushing them?",
+    answer: "Yes. A sprayed finish lays down thin, even coats that look like a factory finish. Brushed and rolled cabinets often show brush marks, uneven texture and roller stipple, especially on flat door panels. We spray doors and drawer fronts in a controlled environment for that reason."
+  },
+  {
     question: "How long does cabinet refinishing take?",
     answer: "Cabinet refinishing typically takes 3-5 days. We remove doors and hardware on day 1, refinish them in our controlled spray facility, then reinstall. Your kitchen remains usable throughout most of the process."
   }
@@ -65,8 +69,8 @@ const relatedPosts = [
     image: "/images/blog/interior-painting-houston-guide.jpg"
   },
   {
-    title: "Houston Paint Color Trends 2026",
-    href: "/blog/houston-paint-color-trends-2026",
+    title: "Best Paint Colors for Houston Homes",
+    href: "/best-paint-colors-houston-homes",
     excerpt: "Top cabinet and wall colors for 2026.",
     image: "/images/blog/paint-color-trends-2026.jpg"
   }
@@ -109,8 +113,8 @@ export default function CabinetRefinishingVsReplacementPage() {
       </p>
 
       <p>
-        At Houston Superior Painting, we&apos;ve helped hundreds of homeowners transform their kitchens with 
-        professional cabinet refinishing. We&apos;ve also seen situations where replacement made more sense. 
+        At Houston Superior Painting, cabinet refinishing is one of our core services, and we&apos;ve also seen
+        situations where replacement made more sense.
         This guide will help you understand both options and make the right choice for your home.
       </p>
 
@@ -322,6 +326,25 @@ export default function CabinetRefinishingVsReplacementPage() {
         new hardware if you&apos;re updating your cabinet pulls and knobs.
       </p>
 
+      <h2>Spray Finish vs Brush Finish</h2>
+
+      <p>
+        How the paint goes on matters as much as the paint itself. A sprayed finish lays down thin, even coats
+        that look like the factory finish on new cabinetry. Brush-and-roller cabinet jobs often show:
+      </p>
+
+      <ul>
+        <li><strong>Brush marks:</strong> visible strokes, especially on flat door panels and rails</li>
+        <li><strong>Uneven texture:</strong> heavier build-up in corners and profiles</li>
+        <li><strong>Roller stipple:</strong> an orange-peel texture that reads as &quot;painted&quot; rather than finished</li>
+      </ul>
+
+      <p>
+        When you compare quotes, ask each contractor whether doors and drawer fronts will be sprayed or brushed.
+        It&apos;s one of the biggest differences between a refinish that looks like new cabinets and one that looks like a weekend project. For more on application methods, see{" "}
+        <Link href="/blog/spray-vs-brush-roll-painting-houston" className="text-primary underline">spray vs brush and roll painting</Link>.
+      </p>
+
       <h2>Popular Cabinet Color Options</h2>
 
       <p>
@@ -336,6 +359,8 @@ export default function CabinetRefinishingVsReplacementPage() {
         <li><strong>Navy blue:</strong> Bold accent color for islands or lower cabinets (SW Naval)</li>
         <li><strong>Forest green:</strong> Trending for statement pieces (BM Salamander)</li>
         <li><strong>Two-tone combinations:</strong> White uppers with contrasting island or lowers</li>
+        <li><strong>Painted perimeter with natural wood:</strong> Painted cabinets paired with a stained island or open shelving</li>
+        <li><strong>Matte black accents:</strong> Black hardware or a black island against light cabinets</li>
       </ul>
 
       <h2>Refinishing vs Replacement: ROI Comparison</h2>
@@ -344,13 +369,9 @@ export default function CabinetRefinishingVsReplacementPage() {
         From a return on investment perspective:
       </p>
 
-      <ul>
-        <li><strong>Cabinet refinishing ROI:</strong> 80-100% (you recoup most or all of your investment)</li>
-        <li><strong>Cabinet replacement ROI:</strong> 60-80% (higher investment with proportionally lower return)</li>
-      </ul>
-
       <p>
-        If you&apos;re planning to sell your home, refinishing often makes more sense. 
+        Replacement costs several times more than refinishing, but buyers mostly notice the finish, color and
+        hardware, not what the cabinet boxes cost. If you&apos;re planning to sell your home, refinishing often makes more sense. 
         You get the visual impact of updated cabinets without the major expense, 
         leaving more equity in your pocket.
       </p>
@@ -364,8 +385,9 @@ export default function CabinetRefinishingVsReplacementPage() {
       </p>
 
       <p>
-        Learn more about our <Link href="/cabinet-refinishing-houston-tx" className="text-primary underline">cabinet refinishing services</Link> or 
-        contact us at (346) 594-5960 to schedule your free estimate.
+        Learn more about our <Link href="/cabinet-refinishing-houston-tx" className="text-primary underline">cabinet refinishing services</Link>,{" "}
+        <Link href="/painting-estimate-houston" className="text-primary underline">request your free estimate</Link>, or
+        call us at (346) 594-5960.
       </p>
 
       <p>
@@ -373,6 +395,7 @@ export default function CabinetRefinishingVsReplacementPage() {
         {" "}<Link href="/painters-katy-tx" className="text-primary underline">Katy</Link>, 
         {" "}<Link href="/painters-cypress-tx" className="text-primary underline">Cypress</Link>, 
         {" "}<Link href="/painters-sugar-land-tx" className="text-primary underline">Sugar Land</Link>, 
+        {" "}<Link href="/painters-richmond-tx" className="text-primary underline">Richmond</Link>,
         {" "}<Link href="/painters-fulshear-tx" className="text-primary underline">Fulshear</Link>, and surrounding areas.
       </p>
     </BlogPostTemplate>

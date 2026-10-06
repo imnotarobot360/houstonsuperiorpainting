@@ -56,7 +56,7 @@ const faqs = [
 const relatedPosts = [
   {
     title: "Best Painters in Houston TX: How to Find & Vet Them",
-    href: "/blog/best-painters-houston-tx",
+    href: "/questions-to-ask-before-hiring-painters",
     excerpt: "How to vet, hire, and avoid being burned by Houston painters — with the 8 questions you must ask.",
     image: "/images/blog/best-painters-houston-tx.png",
   },
@@ -411,7 +411,7 @@ export default function PaintColorsHoustonHomes2026Page() {
       <p>
         Explore our <Link href="/interior-painting-houston-tx">interior painting</Link> and{" "}
         <Link href="/exterior-painting-houston-tx">exterior painting</Link> services, or learn{" "}
-        <Link href="/blog/best-painters-houston-tx">how to vet the best painters in Houston</Link> before you hire. A
+        <Link href="/questions-to-ask-before-hiring-painters">how to vet the best painters in Houston</Link> before you hire. A
         color change costs the same as any repaint; see the{" "}
         <Link href="/houston-painting-cost-guide">Houston painting cost guide</Link> for 2026 prices.
       </p>

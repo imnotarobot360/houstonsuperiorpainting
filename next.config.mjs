@@ -227,6 +227,20 @@ const nextConfig = {
       { source: '/blog/garage-epoxy-coating-houston-tx', destination: 'https://houstonsuperiorepoxy.com/', permanent: true },
       { source: '/blog/garage-epoxy-flooring-houston-tx', destination: 'https://houstonsuperiorepoxy.com/', permanent: true },
 
+      // ─── Duplicate-post merge, Oct 2026 ───────────────────────────────
+      // Each pair targeted the same query. The loser's unique content was folded
+      // into the winner, then the loser 301s there so one URL owns the intent.
+      { source: '/blog/interior-paint-colors-houston-2026', destination: '/blog/best-interior-paint-colors-houston-homes', permanent: true },
+      { source: '/blog/cabinet-painting-vs-replacement', destination: '/blog/cabinet-refinishing-vs-replacement-houston', permanent: true },
+      { source: '/blog/best-painting-company-katy-tx', destination: '/blog/painters-near-me-katy-tx', permanent: true },
+      { source: '/blog/best-painters-houston-tx', destination: '/questions-to-ask-before-hiring-painters', permanent: true },
+      { source: '/blog/how-often-repaint-home-houston-climate', destination: '/how-often-paint-house-houston', permanent: true },
+      { source: '/blog/best-exterior-paints-houston-humidity', destination: '/best-exterior-paint-houston-weather', permanent: true },
+      // The epoxy domain already publishes these two topics; send each to its
+      // exact counterpart (trailing slash = that site's canonical, so one hop).
+      { source: '/blog/epoxy-vs-polyaspartic-houston', destination: 'https://houstonsuperiorepoxy.com/resources/epoxy-vs-polyaspartic-houston/', permanent: true },
+      { source: '/blog/home-depot-vs-professional-garage-floor-epoxy', destination: 'https://houstonsuperiorepoxy.com/resources/diy-epoxy-kit-vs-professional-installation/', permanent: true },
+
       // Cypress interior page renamed to the community-scoped canonical URL.
       { source: '/interior-painting-cypress-tx', destination: '/interior-painting-cypress-bridgeland', permanent: true },
     ]

@@ -58,30 +58,6 @@ const blogPosts = [
     featured: false,
   },
   {
-    slug: "epoxy-vs-polyaspartic-houston",
-    title: "Epoxy vs Polyaspartic Floor Coating in Houston: Which One Actually Lasts?",
-    excerpt:
-      "Polyaspartic costs 30–60% more than epoxy — and in Houston's humidity, that premium buys a coating that won't yellow, won't delaminate off a damp slab, and lasts nearly twice as long.",
-    category: "Garage & Specialty Coatings",
-    author: "Juan Serra",
-    publishDate: "August 8, 2026",
-    readTime: "12 min read",
-    image: "/images/blog/epoxy-vs-polyaspartic-houston.png",
-    featured: true,
-  },
-  {
-    slug: "home-depot-vs-professional-garage-floor-epoxy",
-    title: "Home Depot Epoxy vs. Professional Garage Floor Epoxy: What's the Real Difference?",
-    excerpt:
-      "A DIY kit sounds like the smart move — until you learn what most homeowners find out too late. The real difference isn't the epoxy, it's the prep, materials, and installation.",
-    category: "Homeowner Guide",
-    author: "Juan Serra",
-    publishDate: "July 25, 2026",
-    readTime: "9 min read",
-    image: "/images/blog/home-depot-vs-professional-epoxy.png",
-    featured: false,
-  },
-  {
     slug: "cost-to-paint-kitchen-cabinets-houston-tx",
     title: "How Much Does It Cost to Paint Kitchen Cabinets in Houston? (2026)",
     excerpt:
@@ -178,18 +154,6 @@ const blogPosts = [
     featured: true,
   },
   {
-    slug: "paint-colors-houston-homes-2026",
-    title: "How to Pick Paint Colors for Houston Homes (2026 Trends)",
-    excerpt:
-      "The best paint colors for Houston homes in 2026 — trends, what works in Texas light, HOA-safe neutrals, and room-by-room recommendations from professional Houston painters.",
-    category: "Color Guide",
-    author: "Juan Serra",
-    publishDate: "June 7, 2026",
-    readTime: "12 min read",
-    image: "/images/blog/paint-colors-houston-homes-2026.png",
-    featured: true,
-  },
-  {
     slug: "paint-warranty-texas",
     title: "What Does a 5-Year Paint Warranty Actually Cover in Texas?",
     excerpt:
@@ -202,18 +166,6 @@ const blogPosts = [
     featured: true,
   },
   {
-    slug: "best-painters-houston-tx",
-    title: "Best Painters in Houston TX: How to Find & Vet Them",
-    excerpt:
-      "Looking for the best painters in Houston TX? Here's how to vet, hire, and avoid being burned — with the 8 questions you must ask before signing anything.",
-    category: "Hiring Guide",
-    author: "Juan Serra",
-    publishDate: "June 7, 2026",
-    readTime: "11 min read",
-    image: "/images/blog/best-painters-houston-tx.png",
-    featured: true,
-  },
-  {
     slug: "exterior-painting-cost-katy-tx",
     title: "How Much Does Exterior Painting Cost in Katy TX?",
     excerpt:
@@ -223,17 +175,6 @@ const blogPosts = [
     publishDate: "June 7, 2026",
     readTime: "12 min read",
     image: "/images/blog/exterior-painting-cost-katy-tx.png",
-    featured: true,
-  },
-  {
-    slug: "paint-color-trends-houston-homes-2026",
-    title: "Paint Color Trends for Houston Homes in 2026",
-    excerpt: "What paint colors are Houston homeowners choosing in 2026? Here's what's trending inside and outside — and what's fading out of the market.",
-    category: "Color Guide",
-    author: "Juan Serra",
-    publishDate: "June 1, 2026",
-    readTime: "13 min read",
-    image: "/images/blog/paint-color-trends-2026.png",
     featured: true,
   },
   {
@@ -325,17 +266,6 @@ const blogPosts = [
     featured: false,
   },
   {
-    slug: "best-painting-company-katy-tx",
-    title: "Best Painting Company in Katy TX: What Homeowners Should Look For",
-    excerpt: "Finding the best painting company in Katy TX sounds straightforward — until you start calling around. Learn what to look for before you hire.",
-    category: "Hiring Guide",
-    author: "Juan Serra",
-    publishDate: "May 24, 2026",
-    readTime: "14 min read",
-    image: "/images/blog/best-painting-company-katy.jpg",
-    featured: false,
-  },
-  {
     slug: "best-exterior-colors-homes-the-woodlands-tx",
     title: "Best Exterior Colors for Homes in The Woodlands TX",
     excerpt: "Choosing exterior paint colors in The Woodlands? Here's what works in this community's wooded, natural setting — and what to avoid.",
@@ -377,17 +307,6 @@ const blogPosts = [
     publishDate: "June 7, 2026",
     readTime: "9 min read",
     image: "/images/blog/how-long-interior-painting-houston.jpg",
-    featured: false,
-  },
-  {
-    slug: "houston-paint-color-trends-2026",
-    title: "Houston Paint Color Trends 2026: Interior & Exterior",
-    excerpt: "Discover the top paint color trends for Houston homes in 2026. From warm neutrals to color drenching, find the perfect palette for your interior and exterior.",
-    category: "Color Trends",
-    author: "Juan Serra",
-    publishDate: "May 11, 2026",
-    readTime: "10 min read",
-    image: "/images/blog/paint-color-trends-2026.jpg",
     featured: false,
   },
   {
@@ -501,28 +420,6 @@ const blogPosts = [
     featured: false,
   },
   {
-    slug: "cabinet-painting-vs-replacement",
-    title: "Cabinet Painting vs Cabinet Replacement: Which Is Better?",
-    excerpt: "Kitchen remodeling can become extremely expensive. Learn why many Houston homeowners are choosing cabinet painting instead of full cabinet replacement.",
-    category: "Cabinet Painting",
-    author: "Houston Superior Painting",
-    publishDate: "May 3, 2026",
-    readTime: "6 min read",
-    image: "/images/blog/cabinet-painting-vs-replacement.jpg",
-    featured: false,
-  },
-  {
-    slug: "interior-paint-colors-houston-2026",
-    title: "Best Interior Paint Colors for Houston Homes in 2026",
-    excerpt: "In 2026, Houston homeowners are moving toward warm, clean, modern colors that feel bright without looking cold. Discover trending colors.",
-    category: "Interior Painting",
-    author: "Houston Superior Painting",
-    publishDate: "May 2, 2026",
-    readTime: "6 min read",
-    image: "/images/blog/interior-paint-colors-2026.jpg",
-    featured: false,
-  },
-  {
     slug: "paint-preparation-houston-climate",
     title: "Why Proper Paint Preparation Matters in Houston's Climate",
     excerpt: "Houston homeowners often wonder why some paint jobs last 10 years while others begin peeling after only 2 or 3 years. The answer is simple: preparation.",
@@ -555,32 +452,10 @@ const blogPosts = [
     image: "/images/blog/interior-painting-houston-guide.jpg",
     featured: false,
   },
-  {
-    slug: "best-exterior-paints-houston-humidity",
-    title: "Best Exterior Paints for Houston Humidity: A Complete Guide",
-    excerpt: "Discover which exterior paints stand up best to Houston's brutal humidity, intense UV rays, and unpredictable storms. Our years of local experience reveal the top performers.",
-    category: "Exterior Painting",
-    author: "Juan Serra",
-    publishDate: "April 15, 2026",
-    readTime: "8 min read",
-    image: "/images/blog/exterior-paint-houston-humidity.jpg",
-    featured: false,
-  },
-  {
-    slug: "how-often-repaint-home-houston-climate",
-    title: "How Often Should You Repaint Your Home in Houston's Climate?",
-    excerpt: "Houston's unique weather patterns affect paint differently than other regions. Learn the signs that indicate it's time to repaint and how to extend your paint's lifespan.",
-    category: "Maintenance",
-    author: "Juan Serra",
-    publishDate: "April 8, 2026",
-    readTime: "6 min read",
-    image: "/images/blog/how-often-repaint-houston.jpg",
-    featured: false,
-  },
 ]
 
 const featuredPost = blogPosts.find(post => post.featured)
-const regularPosts = blogPosts.filter(post => !post.featured)
+const regularPosts = blogPosts.filter(post => post !== featuredPost)
 
 export default function BlogPage() {
   return (

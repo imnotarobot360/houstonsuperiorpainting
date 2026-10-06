@@ -65,7 +65,7 @@ const relatedPosts = [
   },
   {
     title: "Best Exterior Paints for Houston Humidity",
-    href: "/blog/best-exterior-paints-houston-humidity",
+    href: "/best-exterior-paint-houston-weather",
     excerpt: "Which exterior paints stand up best to Houston's humidity and storms.",
     image: "/images/blog/exterior-paint-houston-humidity.jpg",
   },

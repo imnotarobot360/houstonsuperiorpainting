@@ -50,7 +50,7 @@ const faqs = [
 const relatedPosts = [
   {
     title: "Best Exterior Paints for Houston Humidity",
-    href: "/blog/best-exterior-paints-houston-humidity",
+    href: "/best-exterior-paint-houston-weather",
     excerpt: "Which products actually hold up against Houston's heat and moisture.",
     image: "/images/blog/how-often-repaint-houston.jpg",
   },

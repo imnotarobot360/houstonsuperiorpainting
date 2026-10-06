@@ -67,8 +67,8 @@ const relatedPosts = [
     image: "/images/blog/house-painting-cost-houston.jpg",
   },
   {
-    title: "Best Painting Company in Katy TX: What Homeowners Should Look For",
-    href: "/blog/best-painting-company-katy-tx",
+    title: "Painters Near Me in Katy TX: Costs, What to Ask, Red Flags",
+    href: "/blog/painters-near-me-katy-tx",
     excerpt: "What to look for before you hire an exterior painter in Katy TX.",
     image: "/images/blog/best-painting-company-katy.jpg",
   },

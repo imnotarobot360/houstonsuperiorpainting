@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import FAQ from "@/components/faq"
-import { Phone, MessageSquare, ChevronRight, CheckCircle2, AlertTriangle } from "lucide-react"
+import { Phone, MessageSquare, ChevronRight, CheckCircle2, AlertTriangle, ClipboardCheck } from "lucide-react"
 import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business"
 
 export const metadata: Metadata = {
@@ -22,6 +22,8 @@ const faqs = [
   { q: "How does siding material affect painting frequency in Houston?", a: "Wood siding: every 5-7 years. HardiePlank/fiber cement: every 5-7 years, sometimes longer on shaded elevations. Brick: every 10-15 years (if painted). Stucco: every 5-7 years. Vinyl: rarely needs painting but can be refreshed." },
   { q: "Can I extend the life of my Houston exterior paint?", a: "Yes. Annual pressure washing, prompt caulk repair, addressing moisture sources (sprinklers hitting walls, poor drainage), and trimming vegetation away from walls all extend paint life significantly." },
   { q: "Is it cheaper to repaint before the paint completely fails?", a: "Yes, significantly. Maintenance repainting over intact paint costs 30-40% less than repainting over failed surfaces that require extensive scraping, sanding, and priming of bare substrate." },
+  { q: "How long does mid-range exterior paint last in Houston?", a: "About 4-6 years for mid-range lines such as Sherwin-Williams SuperPaint or Benjamin Moore Regal. With excellent prep and maintenance it can reach about 7 years, but on high-exposure south and west walls it can fail in about 3." },
+  { q: "What are the signs interior walls need repainting?", a: "Scuffs and marks that no longer wash off (the paint film has worn thin), bubbling or peeling in bathrooms (usually a moisture problem), water or smoke stains bleeding through, colors faded by sun through windows, or simply a color that feels dated." },
   { q: "What is the best time of year to paint a house in Houston?", a: "October through April is ideal for exteriors. Low humidity, mild temperatures, and minimal rain. Interior painting can be done year-round. Avoid exterior painting in peak summer heat (June-August)." },
 ]
 
@@ -30,7 +32,7 @@ export default function HowOftenPaintHouseHouston() {
     <>
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        { "@type": "Article", "headline": "How Often Should You Paint a House in Houston?", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/how-often-paint-house-houston" },
+        { "@type": "Article", "headline": "How Often Should You Paint a House in Houston?", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-10-05", "mainEntityOfPage": "https://houstonsuperiorpainting.com/how-often-paint-house-houston" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "How Often Paint House Houston", "item": "https://houstonsuperiorpainting.com/how-often-paint-house-houston" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
@@ -78,12 +80,29 @@ export default function HowOftenPaintHouseHouston() {
 
           <p className="text-foreground/80 leading-relaxed mb-10">When the calendar says it is time, our <Link href="/exterior-painting-houston-tx" className="text-primary underline">exterior painting in Houston</Link> includes the pressure wash, caulk, and primer that make the next cycle last. To budget ahead, the <Link href="/houston-painting-cost-guide" className="text-primary underline">Houston painting cost guide</Link> has 2026 prices by home size, and crews work out of our offices serving <Link href="/painters-houston-tx" className="text-primary underline">painters in Houston TX</Link> and <Link href="/painters-cypress-tx" className="text-primary underline">Cypress TX</Link>.</p>
 
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">How Paint Grade and Wall Direction Change the Timeline</h2>
+          <p className="text-foreground/80 leading-relaxed mb-6">The schedule above is an average for the whole house. In practice, the grade of paint already on your walls and which way each wall faces decide when you actually need to repaint.</p>
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            {[
+              { title: "Premium", examples: "SW Duration, BM Aura", typical: "5–7 years", range: "Up to 8–10 years on shaded, north-facing walls with good prep; 4–5 years on south and west walls in full sun." },
+              { title: "Mid-Range", examples: "SW SuperPaint, BM Regal", typical: "4–6 years", range: "About 7 years with excellent prep and maintenance; as little as 3 years on high-exposure walls." },
+              { title: "Budget / Builder-Grade", examples: "Builder-grade and big-box economy lines", typical: "3–4 years", range: "Rarely past 5 years. Stucco and sun-baked elevations often fail first." },
+            ].map(t => (
+              <div key={t.title} className="bg-card rounded-lg p-6 border border-border">
+                <h3 className="font-semibold text-foreground mb-1">{t.title}</h3>
+                <p className="text-muted-foreground text-xs mb-3">{t.examples}</p>
+                <p className="text-foreground font-medium mb-2">Typical: {t.typical}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">{t.range}</p>
+              </div>
+            ))}
+          </div>
+
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Factors That Affect Painting Frequency in Houston</h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {[
               { title: "Sun Exposure", desc: "South and west-facing walls receive the most UV. These walls fade and chalk 30-40% faster than north-facing walls. Consider repainting these sides first." },
               { title: "Humidity & Moisture", desc: "Houston humidity above 75% drives moisture into paint films. Poor ventilation, sprinklers hitting walls, and clogged gutters accelerate failure." },
-              { title: "Paint Quality", desc: "100% acrylic premium paints (SW Duration, BM Aura) last 2-3x longer than builder-grade vinyl acrylic. The extra cost per gallon pays for itself." },
+              { title: "Paint Quality", desc: "100% acrylic premium paints (SW Duration, BM Aura) last 2-3x longer than builder-grade vinyl acrylic. Builders choose economy paint because it covers in one coat and keeps their costs down, but it lacks the UV stabilizers and mildewcides Houston demands." },
               { title: "Surface Preparation", desc: "Proper washing, scraping, sanding, caulking, and priming add 3-5 years to paint life. Skipping prep is the most common reason paint fails early." },
               { title: "Color Choice", desc: "Dark colors fade faster than light colors due to UV absorption. If you love dark colors, use products with iron oxide pigments for better fade resistance." },
               { title: "Storm Damage", desc: "Houston hurricanes and severe storms can damage paint through driving rain, flying debris, and standing water. Inspect after every major storm." },
@@ -102,12 +121,34 @@ export default function HowOftenPaintHouseHouston() {
             ))}
           </div>
 
+          <h3 className="text-xl font-semibold text-foreground mb-4">How to Check Your Exterior in Five Minutes</h3>
+          <div className="space-y-4 mb-8">
+            {[
+              { title: "Chalk test", desc: "Run your hand across the siding. A light powder is normal after a few years; heavy chalk means UV has broken down the binder and a repaint is coming soon." },
+              { title: "Fade check", desc: "Compare the open wall to a protected spot under the eaves or behind a shutter. A big difference means UV damage is well along, usually worst on south and west walls." },
+              { title: "Look for alligatoring", desc: "A pattern of cracks like alligator skin means the film has gone brittle and lost its flexibility, common with older oil-based paint that cannot handle Houston temperature swings." },
+              { title: "Watch for recurring mildew", desc: "Black, green, or gray spots on shaded or north-facing walls wash off, but if they keep coming back the mildewcide in the paint is spent." },
+              { title: "Treat peeling and bare wood as urgent", desc: "Peeling means water is getting behind the film, and exposed wood rots quickly in Houston humidity. Do not wait for the next scheduled repaint." },
+            ].map(c => (
+              <div key={c.title} className="flex items-start gap-3"><ClipboardCheck className="h-5 w-5 text-secondary shrink-0 mt-0.5" /><p className="text-foreground/80 text-sm leading-relaxed"><span className="font-semibold text-foreground">{c.title}:</span> {c.desc}</p></div>
+            ))}
+          </div>
+
+          <h3 className="text-xl font-semibold text-foreground mb-4">Signs Inside the House</h3>
+          <div className="grid md:grid-cols-2 gap-3 mb-6">
+            {["Scuffs and marks that no longer wash off", "Bubbling or peeling in bathrooms (a moisture problem)", "Water or smoke stains bleeding through", "Colors faded by sun through windows", "Paint that is sound but a color that feels dated"].map(s => (
+              <div key={s} className="flex items-start gap-2"><AlertTriangle className="h-4 w-4 text-yellow-500 shrink-0 mt-0.5" /><span className="text-foreground text-sm">{s}</span></div>
+            ))}
+          </div>
+          <p className="text-foreground/80 leading-relaxed mb-10">Stains that bleed through usually need a stain-blocking primer before the finish coat. For room-by-room work, see our <Link href="/interior-painting-houston-tx" className="text-primary underline">interior painting in Houston</Link> service.</p>
+
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">How to Extend Paint Life in Houston</h2>
           <div className="space-y-3 mb-8">
-            {["Pressure wash exterior surfaces annually to remove dirt, mildew, and pollutants", "Repair caulking around windows, doors, and trim as soon as gaps appear", "Fix gutter and drainage issues that direct water onto painted surfaces", "Trim trees and bushes away from walls to allow air circulation", "Address sprinklers that hit painted surfaces", "Touch up small areas of damage promptly before they spread", "Use premium paint with built-in mildewcide for Houston humidity"].map(t => (
+            {["Pressure wash exterior surfaces annually to remove dirt, mildew, and pollutants", "Repair caulking around windows, doors, and trim as soon as gaps appear", "Fix gutter and drainage issues that direct water onto painted surfaces", "Trim trees and bushes away from walls to allow air circulation", "Address sprinklers that hit painted surfaces", "Touch up small areas of damage promptly before they spread", "Use premium paint with built-in mildewcide for Houston humidity", "Inside, use satin or semi-gloss in hallways, kids’ rooms, kitchens, and bathrooms so walls can be scrubbed instead of repainted"].map(t => (
               <div key={t} className="flex items-start gap-2"><CheckCircle2 className="h-4 w-4 text-secondary shrink-0 mt-0.5" /><span className="text-foreground text-sm">{t}</span></div>
             ))}
           </div>
+          <p className="text-foreground/80 leading-relaxed">Watch the paint, not just the calendar. If the warning signs are mild, a <Link href="/pressure-washing-houston-tx" className="text-primary underline">pressure washing in Houston</Link> visit plus targeted touch-ups can buy several more years. If they are widespread, repainting now costs less than waiting until bare substrate shows.</p>
         </div>
       </section>
 
@@ -118,7 +159,8 @@ export default function HowOftenPaintHouseHouston() {
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary-foreground mb-4">Not Sure If Your Home Needs Repainting?</h2>
           <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">Schedule a free inspection and we will assess your paint condition, provide honest recommendations, and give you a detailed estimate if work is needed.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors"><Phone className="h-5 w-5" /> Call {BUSINESS.phone}</a>
+            <Link href="/painting-estimate-houston" className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors">Get a Free Estimate</Link>
+            <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors"><Phone className="h-5 w-5" /> Call {BUSINESS.phone}</a>
             <a href={SMS_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors"><MessageSquare className="h-5 w-5" /> Text Us</a>
           </div>
         </div>

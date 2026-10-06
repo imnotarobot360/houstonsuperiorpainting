@@ -20,13 +20,13 @@ export const metadata: Metadata = {
 const relatedPosts = [
   {
     title: "Best Exterior Paints for Houston Humidity",
-    href: "/blog/best-exterior-paints-houston-humidity",
+    href: "/best-exterior-paint-houston-weather",
     excerpt: "Discover which exterior paints stand up best to Houston's brutal humidity and storms.",
     image: "/images/blog/exterior-paint-houston-humidity.jpg"
   },
   {
     title: "How Often Should You Repaint Your Home in Houston?",
-    href: "/blog/how-often-repaint-home-houston-climate",
+    href: "/how-often-paint-house-houston",
     excerpt: "Learn the signs that indicate it's time to repaint and how to extend your paint's lifespan.",
     image: "/images/blog/how-often-repaint-houston.jpg"
   }

@@ -65,7 +65,7 @@ const relatedPosts = [
   },
   {
     title: "Houston Paint Color Trends 2026",
-    href: "/blog/houston-paint-color-trends-2026",
+    href: "/best-paint-colors-houston-homes",
     excerpt: "The most popular exterior colors for 2026.",
     image: "/images/blog/paint-color-trends-2026.jpg"
   }

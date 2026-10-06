@@ -5,17 +5,18 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, Clock, User, Calendar, CheckCircle2, Palette, Sun, Home, AlertTriangle } from "lucide-react"
+import { ArrowLeft, Clock, User, Calendar, CheckCircle2, Palette, Sun, Home, AlertTriangle, Brush } from "lucide-react"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Best Interior Paint Colors for Houston Homes | 2026 Guide",
-  description: "Choosing interior paint colors for your Houston home? Here's what works in our light conditions, with our humidity, and in today's market.",
+  description: "Interior paint colors for Houston homes: warm whites, greige, earth tones, navy and accent walls that work in our light and today's market.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/best-interior-paint-colors-houston-homes',
   },
   openGraph: {
     title: "Best Interior Paint Colors for Houston Homes | 2026 Guide",
-    description: "Choosing interior paint colors for your Houston home? Here's what works in our light conditions, with our humidity, and in today's market.",
+    description: "Interior paint colors for Houston homes: warm whites, greige, earth tones, navy and accent walls that work in our light and today's market.",
     url: "https://houstonsuperiorpainting.com/blog/best-interior-paint-colors-houston-homes",
     siteName: "Houston Superior Painting",
     type: "article",
@@ -42,6 +43,35 @@ const breadcrumbSchema = {
   ]
 }
 
+// One list feeds both the visible FAQ and the FAQPage schema, so the two can
+// never drift apart. Answers stay plain strings.
+const faqs = [
+  {
+    q: "What are the most popular interior paint colors in Houston TX right now?",
+    a: "Warm whites like Alabaster and White Dove, warm greiges like Agreeable Gray and Accessible Beige, and soft sage greens are consistently popular in Houston-area homes. Earthy neutrals such as mushroom, clay and sand tones are gaining ground, and for accent walls and home offices, navy tones like Hale Navy and Naval are frequently requested."
+  },
+  {
+    q: "Why do interior paint colors look different in my Houston home than on the chip?",
+    a: "Paint chips are small and viewed under store lighting, which is very different from the natural light and lamp light in your home. Houston's warm, bright natural light enhances warm undertones and can flatten cool tones. Always test a large painted sample in your actual room before committing."
+  },
+  {
+    q: "Should I use the same color throughout my open-concept Houston home?",
+    a: "Not necessarily the same color, but cohesive colors that flow well together. Many Houston homeowners use one neutral throughout the main living area and introduce slightly different tones in individual rooms. A professional color consultation can help you create a palette that feels intentional across the whole home."
+  },
+  {
+    q: "What interior paint sheen should I use in Houston?",
+    a: "Flat or matte for ceilings and low-traffic walls. Eggshell for most living areas and bedrooms, since it's wipeable and forgiving. Satin for kitchens and bathrooms, where Houston humidity and frequent cleaning call for moisture resistance, and semi-gloss for trim and doors."
+  },
+  {
+    q: "Are cool gray interior colors still popular in Houston?",
+    a: "Cool grays are less dominant in the Houston market than they were five years ago, having been largely replaced by warmer neutrals and earth tones. They still have a place, particularly in modern or transitional homes, but warm greiges and soft whites are more consistently appealing across buyer preferences."
+  },
+  {
+    q: "What accent wall ideas work well in Houston homes?",
+    a: "A dark charcoal or navy fireplace wall, limewash for soft movement and texture, vertical paneling or wood slats painted in a deep tone, and Venetian plaster for a high-end finish are all popular. Keep the surrounding walls in a warm neutral so the accent reads as intentional."
+  }
+]
+
 export default function BestInteriorPaintColorsHoustonHomes() {
   return (
     <>
@@ -52,7 +82,7 @@ export default function BestInteriorPaintColorsHoustonHomes() {
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Best Interior Paint Colors for Houston Homes",
-            "description": "Choosing interior paint colors for your Houston home? Here's what works in our light conditions, with our humidity, and in today's market.",
+            "description": "Interior paint colors for Houston homes: warm whites, greige, earth tones, navy and accent walls that work in our light and today's market.",
             "author": {
               "@type": "Organization",
               "name": "Houston Superior Painting",
@@ -67,7 +97,7 @@ export default function BestInteriorPaintColorsHoustonHomes() {
               }
             },
             "datePublished": "2026-05-26",
-            "dateModified": "2026-05-26",
+            "dateModified": "2026-10-05",
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "https://houstonsuperiorpainting.com/blog/best-interior-paint-colors-houston-homes"
@@ -82,48 +112,11 @@ export default function BestInteriorPaintColorsHoustonHomes() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What are the most popular interior paint colors in Houston TX right now?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Warm whites like Alabaster and White Dove, warm greiges like Agreeable Gray and Accessible Beige, and soft sage greens are consistently popular in Houston-area homes. For accent walls and home offices, navy tones like Hale Navy and Naval are frequently requested."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Why do interior paint colors look different in my Houston home than on the chip?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Paint chips are small and viewed under store lighting, which is very different from the natural light and lamp light in your home. Houston's warm, bright natural light enhances warm undertones and can flatten cool tones. Always test a large painted sample in your actual room before committing."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Should I use the same color throughout my open-concept Houston home?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Not necessarily the same color, but cohesive colors that flow well together. Many Houston homeowners use one neutral throughout the main living area and introduce slightly different tones in individual rooms."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What interior paint sheen should I use in Houston?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Flat or matte for ceilings and low-traffic walls. Eggshell for most living areas and bedrooms — it's wipeable and forgiving. Satin or semi-gloss for kitchens, bathrooms, trim, and doors where moisture resistance and washability matter."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Are cool gray interior colors still popular in Houston?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Cool grays are less dominant in the Houston market than they were five years ago, having been largely replaced by warmer neutrals. They still have a place — particularly in modern or transitional homes — but warm greiges and soft whites are more consistently appealing across buyer preferences."
-                }
-              }
-            ]
+            "mainEntity": faqs.map((faq) => ({
+              "@type": "Question",
+              "name": faq.q,
+              "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+            }))
           })
         }}
       />
@@ -294,6 +287,10 @@ export default function BestInteriorPaintColorsHoustonHomes() {
                 </Card>
               </div>
 
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Greek Villa (SW 7551) is another warm white worth sampling. It sits between Alabaster and White Dove and is especially easy to live with in large open-concept layouts, where one white has to work across kitchen, living and dining spaces.
+              </p>
+
               {/* Warm Greiges */}
               <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Warm Greiges and Soft Taupes</h3>
               
@@ -307,7 +304,7 @@ export default function BestInteriorPaintColorsHoustonHomes() {
                   <CardContent className="pt-4">
                     <p className="font-semibold text-foreground">Agreeable Gray</p>
                     <p className="text-xs text-muted-foreground">SW 7029</p>
-                    <p className="text-sm text-muted-foreground mt-2">Most popular interior color in the country</p>
+                    <p className="text-sm text-muted-foreground mt-2">Balanced greige, a long-running favorite</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-card border-border overflow-hidden">
@@ -328,6 +325,10 @@ export default function BestInteriorPaintColorsHoustonHomes() {
                 </Card>
               </div>
 
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                If you want a greige that leans a little grayer without going cold, Repose Gray (SW 7015) is the usual next step. Test it next to Agreeable Gray in your room: under strong afternoon light the difference is obvious.
+              </p>
+
               {/* Soft Greens */}
               <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Warm Sage and Soft Greens</h3>
               
@@ -337,6 +338,17 @@ export default function BestInteriorPaintColorsHoustonHomes() {
 
               <p className="text-muted-foreground leading-relaxed mb-6">
                 These work especially well in living rooms with views of outdoor landscaping, home offices where a calming tone helps focus, and dining rooms where a slightly more saturated color adds warmth and depth.
+              </p>
+
+              {/* Earth Tones */}
+              <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Earth Tones: Mushroom, Clay, Olive and Sand</h3>
+
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                As Houston homeowners move away from cold gray interiors, earthier neutrals are filling the gap. Think mushroom and taupe-brown tones, soft clay, muted olive greens, and sand-inspired neutrals like Universal Khaki (SW 6150). They feel warm without reading beige, and they work with Houston&apos;s warm light rather than against it.
+              </p>
+
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Earth tones pair especially well with natural wood floors and cabinetry and with black or matte-bronze fixtures. Use them on a full room in a den or primary bedroom, or let a warm white carry the open living areas and bring the earthier color into one adjacent space.
               </p>
 
               {/* Navy */}
@@ -364,6 +376,27 @@ export default function BestInteriorPaintColorsHoustonHomes() {
                   </CardContent>
                 </Card>
               </div>
+
+              {/* Accent Walls */}
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
+                <Brush className="h-7 w-7 text-primary" />
+                Accent Walls and Feature Finishes
+              </h2>
+
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                An accent wall is the low-risk way to use a deeper color or a textured finish. Ideas that work well in Houston homes:
+              </p>
+
+              <ul className="space-y-2 mb-6 text-muted-foreground">
+                <li><strong className="text-foreground">Dark fireplace walls:</strong> charcoal or navy behind a fireplace anchors a living room painted in a warm white or greige.</li>
+                <li><strong className="text-foreground">Limewash:</strong> soft, cloudy movement on a feature wall, without the commitment of a full room. See our <Link href="/limewash-brick-painting-houston-tx" className="text-primary hover:underline">limewash painting in Houston</Link> page.</li>
+                <li><strong className="text-foreground">Vertical paneling or wood slats:</strong> painted in a deep tone, they add texture and height to bedrooms and offices.</li>
+                <li><strong className="text-foreground">Venetian plaster:</strong> a polished, high-end finish best kept to one wall or a powder room.</li>
+              </ul>
+
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                A painted accent wall typically runs {PRICES_2026.accentWall} in 2026. For more layouts and color pairings, browse our <Link href="/accent-wall-ideas-houston" className="text-primary hover:underline">accent wall ideas for Houston homes</Link>.
+              </p>
 
               {/* Colors to Avoid */}
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
@@ -458,6 +491,7 @@ export default function BestInteriorPaintColorsHoustonHomes() {
                   { title: "Paint large samples, not small chips", desc: "A 2x2 foot painted section on your actual wall is infinitely more useful than any chip." },
                   { title: "Observe at multiple times of day", desc: "Morning light, midday sun, and evening lamp light can make the same color look like three different choices." },
                   { title: "Consider the whole flow", desc: "In an open-concept home, colors visible from multiple vantage points need to work together." },
+                  { title: "Choose the sheen with the color", desc: "The same color reads lighter and shows more wall texture in a higher sheen. Eggshell suits most walls, satin suits humid kitchens and baths, and semi-gloss belongs on trim and doors." },
                   { title: "Don't forget the ceiling", desc: "Most ceilings are white, but the specific white matters. Ceiling white is different from wall white." },
                   { title: "Get a professional eye", desc: "A color consultation with a professional is genuinely useful if you're uncertain." }
                 ].map((tip, index) => (
@@ -477,28 +511,7 @@ export default function BestInteriorPaintColorsHoustonHomes() {
               </h2>
 
               <div className="space-y-6 mb-12">
-                {[
-                  {
-                    q: "What are the most popular interior paint colors in Houston TX right now?",
-                    a: "Warm whites like Alabaster and White Dove, warm greiges like Agreeable Gray and Accessible Beige, and soft sage greens are consistently popular in Houston-area homes. For accent walls and home offices, navy tones like Hale Navy and Naval are frequently requested."
-                  },
-                  {
-                    q: "Why do interior paint colors look different in my Houston home than on the chip?",
-                    a: "Paint chips are small and viewed under store lighting, which is very different from the natural light and lamp light in your home. Houston's warm, bright natural light enhances warm undertones and can flatten cool tones. Always test a large painted sample in your actual room before committing."
-                  },
-                  {
-                    q: "Should I use the same color throughout my open-concept Houston home?",
-                    a: "Not necessarily the same color, but cohesive colors that flow well together. Many Houston homeowners use one neutral throughout the main living area and introduce slightly different tones in individual rooms. A professional color consultation can help you create a palette that feels intentional across the whole home."
-                  },
-                  {
-                    q: "What interior paint sheen should I use in Houston?",
-                    a: "Flat or matte for ceilings and low-traffic walls. Eggshell for most living areas and bedrooms — it's wipeable and forgiving. Satin or semi-gloss for kitchens, bathrooms, trim, and doors where moisture resistance and washability matter."
-                  },
-                  {
-                    q: "Are cool gray interior colors still popular in Houston?",
-                    a: "Cool grays are less dominant in the Houston market than they were five years ago, having been largely replaced by warmer neutrals. They still have a place — particularly in modern or transitional homes — but warm greiges and soft whites are more consistently appealing across buyer preferences."
-                  }
-                ].map((faq, index) => (
+                {faqs.map((faq, index) => (
                   <Card key={index} className="bg-card border-border">
                     <CardContent className="pt-6">
                       <p className="font-semibold text-foreground mb-2">{faq.q}</p>
@@ -517,11 +530,11 @@ export default function BestInteriorPaintColorsHoustonHomes() {
                   Ready to Refresh Your Houston Home&apos;s Interior?
                 </h2>
                 <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
-                  At Houston Superior Painting, we work with Houston-area homeowners to help them find colors they&apos;ll love — and then apply them beautifully. We offer color consultations and serve Katy, Cypress, Sugar Land, The Woodlands, and greater Houston.
+                  At Houston Superior Painting, we work with Houston-area homeowners to help them find colors they&apos;ll love — and then apply them beautifully. We offer color consultations and serve Katy, Cypress, Sugar Land, The Woodlands, and greater Houston. A single room typically runs {PRICES_2026.singleRoom}, and a 2,500 sq ft interior {PRICES_2026.fullInterior2500}.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" variant="secondary" asChild>
-                    <Link href="/contact">Get Free Estimate</Link>
+                    <Link href="/painting-estimate-houston">Get Free Estimate</Link>
                   </Button>
                   <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
                     <a href="tel:+13465945960">Call (346) 594-5960</a>
@@ -534,14 +547,14 @@ export default function BestInteriorPaintColorsHoustonHomes() {
             <div className="mt-12">
               <h3 className="text-xl font-semibold text-foreground mb-6">Related Articles</h3>
               <div className="grid md:grid-cols-2 gap-6">
-                <Link href="/blog/houston-paint-color-trends-2026" className="group">
+                <Link href="/best-paint-colors-houston-homes" className="group">
                   <Card className="bg-card border-border hover:border-primary/50 transition-colors h-full">
                     <CardContent className="pt-6">
                       <p className="font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
-                        Houston Paint Color Trends 2026
+                        Best Paint Colors for Houston Homes
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        What&apos;s trending in Houston homes this year and what to expect.
+                        Interior and exterior color picks by room orientation and home style.
                       </p>
                     </CardContent>
                   </Card>

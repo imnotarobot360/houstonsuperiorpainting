@@ -461,7 +461,7 @@ export default function InteriorPaintingCostHoustonTX() {
                   <Link href="/painters-houston-tx" className="px-4 py-2 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors text-foreground">
                     Painters Houston TX
                   </Link>
-                  <Link href="/blog/best-painting-company-katy-tx" className="px-4 py-2 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors text-foreground">
+                  <Link href="/blog/painters-near-me-katy-tx" className="px-4 py-2 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors text-foreground">
                     How to Hire a Painter
                   </Link>
                 </div>

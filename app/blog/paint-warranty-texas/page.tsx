@@ -60,8 +60,8 @@ const faqs = [
 
 const relatedPosts = [
   {
-    title: "Best Painters in Houston TX: How to Find & Vet Them",
-    href: "/blog/best-painters-houston-tx",
+    title: "How to Hire a Painter in Houston: 8 Questions to Ask",
+    href: "/questions-to-ask-before-hiring-painters",
     excerpt: "How to vet, hire, and avoid being burned by Houston painters — with the 8 questions you must ask.",
     image: "/images/blog/best-painters-houston-tx.png",
   },
@@ -72,10 +72,10 @@ const relatedPosts = [
     image: "/images/blog/exterior-painting-cost-katy-tx.png",
   },
   {
-    title: "Questions to Ask Before Hiring Painters",
-    href: "/questions-to-ask-before-hiring-painters",
-    excerpt: "The essential questions that separate professional painters from fly-by-night operations.",
-    image: "/images/blog/paint-warranty-texas.png",
+    title: "How Long Does Exterior Paint Last in Houston?",
+    href: "/blog/how-long-does-exterior-paint-last-houston",
+    excerpt: "What a well-prepped exterior paint job should last in Houston's heat, humidity, and storms.",
+    image: "/images/blog/exterior-paint-durability-houston.jpg",
   },
 ]
 
@@ -326,7 +326,7 @@ export default function PaintWarrantyTexasPage() {
       <p>
         Explore our <Link href="/exterior-painting-houston-tx">exterior painting</Link> and{" "}
         <Link href="/interior-painting-houston-tx">interior painting</Link> services, or see how to{" "}
-        <Link href="/blog/best-painters-houston-tx">vet the best painters in Houston</Link> before you hire. Warranty
+        <Link href="/questions-to-ask-before-hiring-painters">vet a Houston painter</Link> before you hire. Warranty
         coverage is included in every price in our <Link href="/houston-painting-cost-guide">Houston painting cost guide</Link>.
       </p>
       <p>

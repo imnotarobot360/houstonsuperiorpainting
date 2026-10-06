@@ -94,14 +94,14 @@ const relatedPosts = [
     image: "/images/blog/interior-painting-houston-guide.jpg",
   },
   {
-    slug: "best-exterior-paints-houston-humidity",
-    title: "Best Exterior Paints for Houston Humidity",
-    image: "/images/blog/exterior-paint-houston-humidity.jpg",
+    slug: "benjamin-moore-vs-sherwin-williams",
+    title: "Benjamin Moore vs Sherwin-Williams: Which Paint Is Better?",
+    image: "/images/blog/sherwin-williams-vs-benjamin-moore.jpg",
   },
   {
-    slug: "how-often-repaint-home-houston-climate",
-    title: "How Often Should You Repaint Your Home in Houston?",
-    image: "/images/blog/how-often-repaint-houston.jpg",
+    slug: "how-long-does-exterior-paint-last-houston",
+    title: "How Long Does Exterior Paint Last in Houston?",
+    image: "/images/blog/exterior-paint-durability-houston.jpg",
   },
 ]
 

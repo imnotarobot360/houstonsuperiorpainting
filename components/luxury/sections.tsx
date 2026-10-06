@@ -313,7 +313,7 @@ const insights = [
   },
   {
     title: "Best Paint Colors for Houston Homes",
-    href: "/blog/paint-colors-houston-homes-2026",
+    href: "/best-paint-colors-houston-homes",
     img: "/images/luxury/project-interior.png",
     cat: "Color",
   },

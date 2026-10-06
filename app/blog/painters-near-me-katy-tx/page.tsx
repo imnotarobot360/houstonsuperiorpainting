@@ -35,7 +35,7 @@ const faqs = [
   {
     question: "Are there HOA-approved painters in Katy TX?",
     answer:
-      "HOAs don't certify painters, but experienced Katy painters know the approval process and can help you select colors that will pass HOA review. We maintain updated color guides for major Katy communities.",
+      "HOAs don't certify painters, but experienced Katy painters know the approval process and can help you select colors that will pass HOA review. Ask your painter to work from your community's current approved palette and to put the exact color names and codes in the written estimate.",
   },
   {
     question: "How long does it take to paint a house in Katy TX?",
@@ -52,6 +52,26 @@ const faqs = [
     answer:
       "December and January typically have the lowest demand and some painters offer winter discounts. However, exterior painting is weather-dependent in winter — cold fronts can cause delays.",
   },
+  {
+    question: "What is the best time of year to paint a house exterior in Katy TX?",
+    answer:
+      "October through April usually gives the best conditions: lower humidity, moderate temperatures and fewer afternoon storms. Spring books up quickly, so get on a reputable painter's schedule early. In summer, good crews start early in the morning and work around the heat and storms.",
+  },
+  {
+    question: "How long does an exterior paint job last in Katy TX?",
+    answer:
+      "With proper prep and quality paint, plan to repaint a Katy exterior every 5–7 years; shaded, protected walls can last longer. Rushed prep or lower-grade paint can cut that roughly in half in our heat and humidity.",
+  },
+  {
+    question: "Should I pressure wash my house before the painters arrive?",
+    answer:
+      "No. Pressure washing is part of the painter's prep and should be listed in the written estimate. If a painter asks you to do it yourself or plans to skip it, treat that as a red flag.",
+  },
+  {
+    question: "How many coats of paint should a professional painter apply?",
+    answer:
+      "Two finish coats of a quality paint is the standard for most repaints, with primer on bare wood, patches and repaired areas. Confirm the number of coats and the exact product in your written estimate before work begins.",
+  },
 ]
 
 const relatedPosts = [
@@ -62,8 +82,8 @@ const relatedPosts = [
     image: "/images/blog/exterior-painting-cost-katy-tx.png",
   },
   {
-    title: "Best Painters in Houston TX: How to Find & Vet Them",
-    href: "/blog/best-painters-houston-tx",
+    title: "How to Hire a Painter in Houston: Insurance, Prep, Warranty",
+    href: "/questions-to-ask-before-hiring-painters",
     excerpt: "How to vet, hire, and avoid being burned by Houston painters — with the 8 questions you must ask.",
     image: "/images/blog/best-painters-houston-tx.png",
   },
@@ -77,8 +97,8 @@ const relatedPosts = [
 
 const redFlags = [
   {
-    title: "Large upfront deposit required",
-    body: "Professional Katy painters don't require more than 10–15% upfront for materials on large projects. A 50% deposit before work starts means they need your money before they've earned it — and have an incentive to rush.",
+    title: "Large upfront payment before anything is agreed",
+    body: "Be wary of a painter who wants a big share of the price before you have a written estimate you've approved. It often means they need your money before they've earned it, and it gives them an incentive to rush. At Houston Superior Painting nothing is due until you approve the written estimate, and the balance comes after the final walkthrough.",
   },
   {
     title: "Quote over the phone without seeing the house",
@@ -114,7 +134,7 @@ export default function PaintersNearMeKatyTxPage() {
       author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 7, 2026"
-      readTime="11 min read"
+      readTime="14 min read"
       category="Local Guide"
       featuredImage="/images/blog/painters-near-me-katy-tx.png"
       featuredImageAlt="A professional painting crew in branded uniforms working on a two-story home in a Katy, Texas master-planned community with a company truck in the driveway"
@@ -197,12 +217,12 @@ export default function PaintersNearMeKatyTxPage() {
           </thead>
           <tbody>
             <tr className="border-b border-border">
-              <td className="py-3 pr-4">Single-story (1,500–2,000 sq ft home)</td>
-              <td className="py-3">$2,500 – $5,500</td>
+              <td className="py-3 pr-4">Single-story (about 2,000 sq ft home)</td>
+              <td className="py-3">{PRICES_2026.exterior2000OneStory}</td>
             </tr>
             <tr className="border-b border-border">
-              <td className="py-3 pr-4">Two-story (2,000–3,000 sq ft home)</td>
-              <td className="py-3">$4,500 – $10,500</td>
+              <td className="py-3 pr-4">Two-story (about 2,500 sq ft home)</td>
+              <td className="py-3">{PRICES_2026.exterior2500TwoStory}</td>
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Large two-story (4,000+ sq ft home)</td>
@@ -227,20 +247,26 @@ export default function PaintersNearMeKatyTxPage() {
               <td className="py-3">{PRICES_2026.cabinetsPerKitchen}</td>
             </tr>
             <tr className="border-b border-border">
-              <td className="py-3 pr-4">Drywall repair (small area)</td>
-              <td className="py-3">$200 – $600</td>
+              <td className="py-3 pr-4">Trim and doors (whole home)</td>
+              <td className="py-3">{PRICES_2026.trimWholeHome}</td>
             </tr>
             <tr className="border-b border-border">
-              <td className="py-3 pr-4">Pressure washing only</td>
-              <td className="py-3">$250 – $600</td>
+              <td className="py-3 pr-4">Ceilings (whole home)</td>
+              <td className="py-3">{PRICES_2026.ceilingsWholeHome}</td>
             </tr>
             <tr className="border-b border-border">
-              <td className="py-3 pr-4">Garage floor epoxy</td>
-              <td className="py-3">$1,500 – $4,000</td>
+              <td className="py-3 pr-4">Accent wall</td>
+              <td className="py-3">{PRICES_2026.accentWall}</td>
             </tr>
           </tbody>
         </table>
       </div>
+
+      <p>
+        Size, number of stories, prep and products decide where you land in these ranges. What you are really paying for
+        is how long the job lasts: a well-prepped, properly applied exterior should carry you through a full 5–7 year
+        repaint cycle. A cheaper job that fails in half that time costs more overall.
+      </p>
 
       <h2>Why Katy TX Has a Painting Quality Problem</h2>
       <p>
@@ -277,7 +303,8 @@ export default function PaintersNearMeKatyTxPage() {
       </p>
       <p>
         <strong>Why it matters:</strong> If an uninsured painter spills 5 gallons on your new wood floors or falls off a
-        ladder in your yard, you&apos;re paying for it.
+        ladder in your yard, you&apos;re paying for it. For reference, Houston Superior Painting carries $2M general
+        liability plus workers&apos; comp.
       </p>
 
       <h3>Question 2: &quot;Who will physically be on my property, and are they your employees?&quot;</h3>
@@ -338,6 +365,62 @@ export default function PaintersNearMeKatyTxPage() {
       <p>
         A painter who claims to be local but can&apos;t name a project in Katy in the last year is not a local painter.
       </p>
+      <p>
+        Read their Google reviews with the same lens. Star ratings tell you little; look for reviews that mention specifics
+        (the crew showed up on time, protected the landscaping, the paint still looked good a year later) and for
+        reviewers in Katy neighborhoods. How the company responds to a bad review tells you how they will treat you
+        when something goes wrong.
+      </p>
+
+      <h2>The Prep Process: The Biggest Quality Signal</h2>
+      <p>
+        Great paint on bad prep still peels. Before you hire anyone, ask them to walk you through exactly what happens
+        before the first coat goes on. A solid exterior prep process includes:
+      </p>
+      <ul>
+        <li>Pressure washing the entire surface to remove dirt, mildew and chalk</li>
+        <li>Scraping and sanding anywhere old paint is lifting</li>
+        <li>Caulking gaps around windows, doors and trim</li>
+        <li>Priming bare wood and patched spots before the finish coats</li>
+        <li>Protecting landscaping, driveways and windows before painting starts</li>
+      </ul>
+      <p>
+        A good painter also tells you what they find during prep, such as wood rot, failing caulk or stucco that needs
+        repair, before they paint over it. You shouldn&apos;t have to chase them for that, or for daily updates.
+      </p>
+
+      <h3>What the Written Estimate Should Spell Out</h3>
+      <p>&quot;Labor and materials&quot; is not an estimate. A line-item estimate should tell you:</p>
+      <ul>
+        <li>How many coats are being applied</li>
+        <li>The paint brand and product line</li>
+        <li>Whether caulking and priming are included</li>
+        <li>Exactly what prep work is covered</li>
+        <li>How long the job is expected to take</li>
+      </ul>
+      <p>
+        When you compare two estimates and one is much cheaper, this is where you find out why: fewer coats, a
+        lower-grade paint, or prep that was quietly left out.
+      </p>
+
+      <h2>Why Katy&apos;s Climate Makes Painting Harder</h2>
+      <p>
+        Summer humidity in Katy regularly climbs above 80%, and afternoon storms roll in fast between May and October.
+        Paint applied in the wrong conditions doesn&apos;t adhere properly, moisture trapped under the film causes
+        bubbling and peeling, and long summers of UV break pigment down quickly. A painter who knows the area will:
+      </p>
+      <ul>
+        <li>Check humidity and the forecast before starting application</li>
+        <li>Paint during cooler morning hours in the summer months</li>
+        <li>Use products with built-in mildew resistance</li>
+        <li>Allow proper dry time between coats, even when you&apos;re eager to finish</li>
+      </ul>
+      <p>
+        Color is affected too. A chip that looks right indoors can read very differently on 2,000 square feet of siding
+        under Texas sun, so test samples on more than one wall before you commit. Our guide to the{" "}
+        <Link href="/best-exterior-paint-houston-weather">best exterior paint for Houston weather</Link> covers product
+        choice in more detail.
+      </p>
 
       <h2>Katy TX Painter Red Flags: The Ones That Cost Homeowners Money</h2>
       <p>
@@ -364,6 +447,20 @@ export default function PaintersNearMeKatyTxPage() {
         ))}
       </div>
 
+      <h2>Signs Your Katy Home Needs a Fresh Coat Now</h2>
+      <ul>
+        <li>The paint is chalking: it leaves a powdery residue on your hand</li>
+        <li>You see cracking or peeling, even in small areas</li>
+        <li>The color has faded noticeably, especially on south- and west-facing walls</li>
+        <li>Wood trim or siding shows signs of moisture damage</li>
+        <li>It has been more than 5–7 years since the last full exterior repaint</li>
+        <li>Your HOA has flagged the appearance</li>
+      </ul>
+      <p>
+        Catching these early saves money. Once moisture gets behind failing paint, you&apos;re into siding repair or
+        wood rot, which costs far more than a timely repaint.
+      </p>
+
       <h2>What Katy TX Neighborhoods We Serve</h2>
       <p>
         Houston Superior Painting works throughout Katy TX and surrounding communities, including:
@@ -376,7 +473,7 @@ export default function PaintersNearMeKatyTxPage() {
           <strong>Grand Lakes</strong> — familiar with community approval process
         </li>
         <li>
-          <strong>Cross Creek Ranch</strong> — regular projects in this newer community
+          <strong>Cross Creek Ranch</strong> — newer construction and HOA color approvals
         </li>
         <li>
           <strong>Firethorne</strong> — both interior and exterior projects
@@ -385,7 +482,7 @@ export default function PaintersNearMeKatyTxPage() {
           <strong>Westpark</strong> — including older homes with specific prep needs
         </li>
         <li>
-          <strong>Seven Meadows</strong> — regularly active here
+          <strong>Seven Meadows</strong> — interior and exterior repaints
         </li>
         <li>
           <strong>Pine Mill Ranch</strong> — two-story homes, specialty equipment ready
@@ -437,7 +534,8 @@ export default function PaintersNearMeKatyTxPage() {
           minutes
         </li>
         <li>
-          <strong>Schedule online:</strong> <Link href="/painters-katy-tx">our Katy TX painters page</Link>
+          <strong>Schedule online:</strong> <Link href="/painting-estimate-houston">request your free estimate</Link>, or see{" "}
+          <Link href="/painters-katy-tx">our Katy TX painters page</Link>
         </li>
         <li>
           <strong>Serving all of Katy TX</strong> including Cinco Ranch, Grand Lakes, Cross Creek Ranch, Firethorne, and
