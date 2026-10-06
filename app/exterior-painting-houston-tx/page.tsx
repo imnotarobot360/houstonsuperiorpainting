@@ -82,6 +82,10 @@ const faqs = [
     a: "October through April. Summer afternoons are too hot and humid for paint to cure properly.",
   },
   {
+    q: "How often should a Houston home's exterior be repainted?",
+    a: "Plan on every 5–7 years for stucco, wood siding, and trim with premium paint and proper prep. South- and west-facing walls usually need it first. Repainting before the paint fails costs less than repairing rot and water damage later.",
+  },
+  {
     q: "Do you require a deposit?",
     a: "Only after you approve the estimate. The estimate is free and we collect nothing before you approve it. Once you approve, a down payment schedules the job, and the balance is due after the final walkthrough.",
   },
@@ -115,7 +119,8 @@ export default function ExteriorPaintingHoustonTX() {
       whoFor={
         <p>
           Homeowners in Greater Houston whose exterior is fading, chalking, peeling, or growing mildew — or who want a
-          new color before selling. We paint brick, stucco, HardiePlank and fiber cement, and wood siding, plus trim,
+          new color before selling. Other signs it is time: cracked caulk, exposed wood, water stains, and soft trim,
+          which usually mean moisture is already getting in. We paint brick, stucco, HardiePlank and fiber cement, and wood siding, plus trim,
           fascia, soffits, front doors, and garage doors. Brick owners who want a softer, breathable look should also
           see our <Link href="/limewash-brick-painting-houston-tx">limewash and brick painting</Link> service.
         </p>
@@ -124,7 +129,7 @@ export default function ExteriorPaintingHoustonTX() {
       steps={[
         {
           title: "Prep",
-          text: "Pressure wash to kill mildew, then let it dry. Scrape and sand loose paint, replace rotted wood (priced separately), caulk every gap at windows, doors, and trim, and prime bare wood and repairs. Prep is most of the job on a Houston exterior.",
+          text: "Pressure wash to kill mildew, then let it dry. Scrape and sand loose paint, replace rotted wood (priced separately), caulk every gap at windows, doors, and trim, and prime bare wood and repairs with a primer matched to the surface (wood, stucco, HardiePlank, or water-damaged areas). Prep is most of the job on a Houston exterior.",
         },
         {
           title: "Product",
@@ -196,6 +201,7 @@ export default function ExteriorPaintingHoustonTX() {
         { label: "Interior painting in Houston", href: "/interior-painting-houston-tx" },
         { label: "Limewash and brick painting in Houston", href: "/limewash-brick-painting-houston-tx" },
         { label: "Soft washing in Houston", href: "/soft-washing-houston-tx" },
+        { label: "How often to paint a house in Houston", href: "/how-often-paint-house-houston" },
       ]}
       schema={[serviceSchema]}
     />

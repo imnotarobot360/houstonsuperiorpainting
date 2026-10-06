@@ -77,8 +77,8 @@ const relatedPosts = [
     image: "/images/blog/house-painting-cost-houston.jpg",
   },
   {
-    title: "Exterior House Painting in Houston: Everything Homeowners Need to Know",
-    href: "/blog/exterior-house-painting-houston-guide",
+    title: "Exterior Painting in Houston, TX",
+    href: "/exterior-painting-houston-tx",
     excerpt: "Comprehensive guide to exterior painting in Houston's climate.",
     image: "/images/blog/exterior-house-painting-guide.jpg",
   },

@@ -59,12 +59,12 @@ const FAQS = [
     a: `A full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} in 2026. A two-story exterior of the same size runs ${PRICES_2026.exterior2500TwoStory}.`,
   },
   {
-    q: "How long does a full interior repaint take?",
-    a: "Three to five days for a 2,500 sq ft home with a crew of three.",
+    q: "How long does it take to paint a house in Houston?",
+    a: "A full interior on a 2,500 sq ft home takes three to five days with a crew of three. A single-story exterior of the same size takes three to five days, a two-story five to eight, and kitchen cabinets four to six. Your written estimate states the timeline before any work starts.",
   },
   {
     q: "Do you require a deposit?",
-    a: "Only after you approve the estimate. The estimate is free and we collect nothing before you approve it. Once you approve, a down payment schedules the job, and the balance is due after the final walkthrough.",
+    a: "Only after you approve the estimate. The estimate is free and we collect nothing before you approve it. Once you approve, a down payment schedules the job, and the balance is due after the final walkthrough. Be cautious of any painter who wants a large share of the price before you have a written, approved estimate.",
   },
   {
     q: "What does the 5-year warranty cover?",
@@ -77,6 +77,14 @@ const FAQS = [
   {
     q: "When is the best time to paint an exterior in Houston?",
     a: "October through April. Summer afternoons are too hot and humid for paint to cure properly.",
+  },
+  {
+    q: "Should I paint my house myself or hire a painter?",
+    a: "A single bedroom, accent wall, or closet is a reasonable DIY project. Exteriors are different: ladder work, summer heat, humidity-sensitive timing, and prep that is easy to get wrong. Rushed or skipped prep is the usual reason a Houston exterior peels early, and a DIY job carries no warranty.",
+  },
+  {
+    q: "How long does exterior paint last in Houston?",
+    a: "With full prep and a premium exterior paint such as Sherwin-Williams Duration or Emerald, plan on roughly five to seven years before a full repaint, longer on shaded walls. Budget paint or skipped prep fails much sooner, with peeling, fading, and chalking on the sunny sides first.",
   },
   {
     q: "Do you have an office near me?",
@@ -196,6 +204,36 @@ export default function PaintersHoustonTX() {
             walls. HOA communities in Katy, Cypress, and Sugar Land restrict exterior colors and require approval before
             work starts. We handle the ARC submission for you.
           </p>
+        </Section>
+
+        <Section title="How to choose a painter in Houston">
+          <Bullets
+            items={[
+              <>
+                <strong>Proof of insurance.</strong>{" "}Ask for the certificate showing general liability and workers&apos;
+                comp. Texas has no painting license, so insurance is the check that matters.
+              </>,
+              <>
+                <strong>Prep in writing.</strong> The estimate should list pressure washing, scraping, caulking, and priming,
+                plus the product and number of coats. A verbal quote is not a scope.
+              </>,
+              <>
+                <strong>A written workmanship warranty.</strong> Ours is 5 years. No warranty usually means no confidence in
+                the prep.
+              </>,
+              <>
+                <strong>No large upfront payment.</strong> Nothing should be due before you approve a written estimate.
+              </>,
+              <>
+                <strong>A plan for Houston weather.</strong> Ask how they schedule around humidity, heat, and rain. Painting
+                at high humidity causes adhesion failure.
+              </>,
+              <>
+                <strong>Be wary of the lowest bid.</strong> A price far below the others usually means skipped prep or
+                uninsured labor.
+              </>,
+            ]}
+          />
         </Section>
 
         <Section title="Houston painting prices (2026)">

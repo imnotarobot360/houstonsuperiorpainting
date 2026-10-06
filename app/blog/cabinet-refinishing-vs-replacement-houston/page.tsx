@@ -63,8 +63,8 @@ const relatedPosts = [
     image: "/images/blog/house-painting-cost-houston.jpg"
   },
   {
-    title: "Interior Painting Houston TX Guide",
-    href: "/blog/interior-painting-houston-tx-guide",
+    title: "Interior Painting in Houston, TX",
+    href: "/interior-painting-houston-tx",
     excerpt: "Everything you need to know about interior painting in Houston.",
     image: "/images/blog/interior-painting-houston-guide.jpg"
   },

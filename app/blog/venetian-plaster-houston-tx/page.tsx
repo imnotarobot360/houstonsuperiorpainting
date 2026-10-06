@@ -59,14 +59,14 @@ const faqs = [
 
 const relatedPosts = [
   {
-    title: "Limewash Brick Houston: Cost, Process & Before/After",
-    href: "/blog/limewash-brick-painting-houston",
+    title: "Limewash & Brick Painting in Houston",
+    href: "/limewash-brick-painting-houston-tx",
     excerpt: "Another breathable, European-style finish for Houston homes.",
     image: "/images/blog/limewash-brick-houston.jpg",
   },
   {
-    title: "Exterior House Painting Houston Guide",
-    href: "/blog/exterior-house-painting-houston-guide",
+    title: "Exterior Painting in Houston, TX",
+    href: "/exterior-painting-houston-tx",
     excerpt: "Everything homeowners need to know about exterior painting.",
     image: "/images/blog/exterior-house-painting-guide.jpg",
   },

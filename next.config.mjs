@@ -240,6 +240,12 @@ const nextConfig = {
       // exact counterpart (trailing slash = that site's canonical, so one hop).
       { source: '/blog/epoxy-vs-polyaspartic-houston', destination: 'https://houstonsuperiorepoxy.com/resources/epoxy-vs-polyaspartic-houston/', permanent: true },
       { source: '/blog/home-depot-vs-professional-garage-floor-epoxy', destination: 'https://houstonsuperiorepoxy.com/resources/diy-epoxy-kit-vs-professional-installation/', permanent: true },
+      // Blog guides that competed with the money page for the same query. Their
+      // useful content now lives on the service / office page, which owns it.
+      { source: '/blog/interior-painting-houston-tx-guide', destination: '/interior-painting-houston-tx', permanent: true },
+      { source: '/blog/exterior-house-painting-houston-guide', destination: '/exterior-painting-houston-tx', permanent: true },
+      { source: '/blog/limewash-brick-painting-houston', destination: '/limewash-brick-painting-houston-tx', permanent: true },
+      { source: '/blog/painters-near-me-houston', destination: '/painters-houston-tx', permanent: true },
 
       // Cypress interior page renamed to the community-scoped canonical URL.
       { source: '/interior-painting-cypress-tx', destination: '/interior-painting-cypress-bridgeland', permanent: true },

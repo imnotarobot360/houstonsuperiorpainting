@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 const relatedPosts = [
   {
-    title: "Interior Painting Houston TX Guide",
-    href: "/blog/interior-painting-houston-tx-guide",
+    title: "Interior Painting in Houston, TX",
+    href: "/interior-painting-houston-tx",
     excerpt: "What homeowners need to know before hiring an interior painter.",
     image: "/images/blog/interior-painting-houston-guide.jpg"
   },

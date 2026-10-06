@@ -55,8 +55,8 @@ const relatedPosts = [
     image: "/images/blog/how-often-repaint-houston.jpg",
   },
   {
-    title: "Exterior House Painting Houston Guide",
-    href: "/blog/exterior-house-painting-houston-guide",
+    title: "Exterior Painting in Houston, TX",
+    href: "/exterior-painting-houston-tx",
     excerpt: "Everything homeowners need to know about exterior painting.",
     image: "/images/blog/exterior-house-painting-guide.jpg",
   },

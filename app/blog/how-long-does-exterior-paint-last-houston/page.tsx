@@ -52,8 +52,8 @@ const faqs = [
 
 const relatedPosts = [
   {
-    title: "Exterior House Painting Houston: Everything You Need to Know",
-    href: "/blog/exterior-house-painting-houston-guide",
+    title: "Exterior Painting in Houston, TX",
+    href: "/exterior-painting-houston-tx",
     excerpt: "Complete guide to exterior painting in Houston.",
     image: "/images/blog/exterior-house-painting-guide.jpg"
   },

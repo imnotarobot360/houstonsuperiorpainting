@@ -25,8 +25,8 @@ const relatedPosts = [
     image: "/images/blog/choose-best-painters-houston.jpg"
   },
   {
-    title: "Painters Near Me in Houston",
-    href: "/blog/painters-near-me-houston",
+    title: "Painters in Houston, TX",
+    href: "/painters-houston-tx",
     excerpt: "Costs, timing, and how to hire the right crew.",
     image: "/images/blog/painters-near-me-houston.jpg"
   }

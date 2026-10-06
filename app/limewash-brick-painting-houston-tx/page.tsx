@@ -58,37 +58,6 @@ const serviceSchema = {
   }
 }
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is limewash and how is it different from paint?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Limewash is a traditional finish made from slaked lime that penetrates and bonds with brick rather than sitting on top like paint. It creates a soft, matte finish with natural variation and is breathable, allowing moisture to escape from the brick."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does limewash cost in Houston?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Limewash for a Houston home typically costs $4,000-$15,000 depending on home size and brick condition. This includes proper preparation, multiple coats, and detail work around windows and trim."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is German smear?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "German smear (also called mortar wash) is a technique where wet mortar is applied to brick and partially wiped away, creating a rustic, European cottage look with some brick showing through. It's permanent and cannot be removed once applied."
-      }
-    }
-  ]
-}
-
 const pageData = {
   title: "Limewash & Brick Painting in Houston TX",
   subtitle: "European-Style Brick Finishes",
@@ -118,6 +87,18 @@ Our German smear process involves careful preparation, custom mortar mixing to a
 Solid brick painting is ideal when you want to completely change your home's color, cover mismatched or repaired brick, or achieve a specific designer look. We use premium masonry paints that resist fading, peeling, and chalking in Houston's intense sun.
 
 Proper preparation is essential for brick painting success. We thoroughly clean and prime the brick, fill any damaged mortar joints, and apply multiple coats for complete coverage and durability. Our brick painting typically lasts 10-15 years with proper care.`
+    },
+    {
+      title: "Our Limewash Process, Step by Step",
+      content: `1. Cleaning and prep. The brick is washed to remove dirt, mildew, algae and loose mortar, with a mildewcide treatment. In Houston this step is non-negotiable: mildew left under limewash blooms back through. Efflorescence (white mineral deposits) is treated, damaged mortar joints are repaired, and windows, trim, doors and landscaping are protected. The brick then dries for at least 48-72 hours before any limewash goes on.
+
+2. First coat. Limewash is applied by brush, not roller, in overlapping strokes that follow the brick coursing. While it is still wet we press it into the mortar joints and wipe back high spots so the natural brick color shows through where you want it.
+
+3. Building the look. Two to four thin coats in total, adding coverage where you want it denser and keeping it open where you want more brick showing. Limewash looks much darker and more opaque when wet and lightens considerably over 24-48 hours as it dries, so we judge each coat dry, and so should you.
+
+4. Optional sealer. Traditional limewash is left unsealed so it stays breathable. If you want extra mildew and moisture protection, we use only a penetrating, breathable masonry sealer, never a film-forming one.
+
+A typical exterior limewash takes 3-5 days, longer than standard exterior painting because every coat is worked by hand. Some homeowners limewash only the street-facing front and leave or paint the other sides, which lowers the cost. We confirm the scope in your written estimate.`
     }
   ],
   features: [
@@ -199,7 +180,27 @@ Proper preparation is essential for brick painting success. We thoroughly clean 
     },
     {
       question: "Can you remove limewash or German smear later?",
-      answer: "Limewash can be removed with acid washing if desired, though this is labor-intensive. German smear is permanent and cannot be removed without damaging the brick. Consider this carefully before choosing."
+      answer: "Fresh limewash can be partly removed with water before it cures. Once cured, it can be lightened with water and scrubbing or taken off with acid washing, but that is labor-intensive and some finish stays in the brick's pores, so treat removal as difficult rather than routine. German smear is permanent and cannot be removed without damaging the brick. Consider this carefully before choosing."
+    },
+    {
+      question: "Should I limewash, German smear, or paint my brick?",
+      answer: "Choose limewash if you want a soft, aged European look where the brick still shows through, a breathable finish, and a way back if you change your mind. Choose German smear if you want a heavier, rustic, textured look and are certain about it, because it is permanent. Choose solid brick paint if you want a complete color change, full coverage, or to hide mismatched or repaired brick without a refresh cycle. We can do a sample area so you can see the finish on your own brick first."
+    },
+    {
+      question: "Can I limewash brick that is already painted?",
+      answer: "Not successfully. Limewash bonds to bare masonry, not to a paint film, so existing paint has to be stripped first, which adds real cost. If your brick has never been painted, it is worth considering limewash before you ever paint it."
+    },
+    {
+      question: "Does limewash work on all brick types?",
+      answer: "It works best on natural clay brick, older porous brick and most common red brick. It is more difficult on glazed brick, very smooth-faced brick, or brick with a previous sealer, because the limewash has little to soak into. We check your brick type and condition at the estimate before recommending it."
+    },
+    {
+      question: "Do I need HOA approval to limewash my house?",
+      answer: "If you are in an HOA, almost certainly. Limewash changes your home's exterior appearance, so most Greater Houston master-planned communities require ARC or ACC approval. Submit your color choice with reference photos of finished limewash homes."
+    },
+    {
+      question: "How do I maintain limewash brick in Houston?",
+      answer: "Soft wash it every year or two with a mild cleaning solution to remove mildew and keep the look fresh. Avoid high-pressure washing, which can erode the limewash layer. South- and west-facing walls take the most sun and usually need a refresh first, and a refresh coat is simpler than a full new application."
     },
     {
       question: "Is limewash good for Houston's climate?",
@@ -210,8 +211,21 @@ Proper preparation is essential for brick painting success. We thoroughly clean 
     { title: "Exterior Painting", href: "/exterior-painting-houston-tx" },
     { title: "Interior Painting", href: "/interior-painting-houston-tx" },
     { title: "Pressure Washing", href: "/pressure-washing-houston-tx" },
+    { title: "Soft Washing", href: "/soft-washing-houston-tx" },
     { title: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx" }
   ]
+}
+
+// Built from the visible FAQ list so the FAQPage schema always matches the
+// on-page text (it previously listed only 3 of the visible questions).
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": pageData.faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
+  })),
 }
 
 export default function LimewashBrickPaintingPage() {

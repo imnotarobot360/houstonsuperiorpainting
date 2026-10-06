@@ -52,8 +52,8 @@ const faqs = [
 
 const relatedPosts = [
   {
-    title: "Interior Painting Houston TX: Complete Guide",
-    href: "/blog/interior-painting-houston-tx-guide",
+    title: "Interior Painting in Houston, TX",
+    href: "/interior-painting-houston-tx",
     excerpt: "Everything homeowners need to know about interior painting in Houston.",
     image: "/images/blog/interior-painting-houston-guide.jpg"
   },

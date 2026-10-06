@@ -64,6 +64,10 @@ const faqs = [
     a: "No. We move and wrap furniture ourselves, cover floors, and put everything back when we finish. Most families stay in the house during the job because we work room by room with low-VOC paint.",
   },
   {
+    q: "What should I ask an interior painter before hiring one in Houston?",
+    a: "Ask exactly what prep is included: patching, sanding, caulking at trim, and primer on bare or stained spots. Skipped prep is the usual reason a low bid starts peeling early. Get the product, sheen, and coat count in writing, ask for a written workmanship warranty and a certificate of insurance, and be wary of anyone who wants full payment before work starts. Our written estimate lists all of it, our warranty runs 5 years, and nothing is due until you approve the estimate.",
+  },
+  {
     q: "Are you insured in Texas?",
     a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and the certificate of insurance comes with every estimate.",
   },
@@ -115,7 +119,7 @@ export default function InteriorPaintingHoustonTX() {
       steps={[
         {
           title: "Protect and prep",
-          text: "Floors covered, furniture moved and wrapped, switch plates removed, vents masked. Then we sand, caulk gaps, patch nail holes and cracks, and spot-prime bare spots and stains.",
+          text: "We check every wall, ceiling, and trim run for cracks, stains, and loose paint first. Floors covered, furniture moved and wrapped, switch plates removed, vents masked. Then we sand, caulk gaps, patch nail holes and cracks, and spot-prime bare spots and stains.",
         },
         {
           title: "Choose the product and sheen",
