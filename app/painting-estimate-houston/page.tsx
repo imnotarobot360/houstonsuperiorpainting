@@ -443,7 +443,7 @@ export default function PaintingEstimatePage() {
                         <div key={shot.tag} className="relative aspect-[4/5] overflow-hidden">
                           <Image
                             src={shot.src || "/placeholder.svg"}
-                            alt={shot.alt}
+                            alt={shot.alt ?? ""}
                             fill
                             loading="lazy"
                             sizes="(max-width: 640px) 50vw, 25vw"

@@ -17,20 +17,27 @@ export interface CaseStudy {
   /** Short summary used on the index card + meta description. */
   summary: string
   heroImage: string
-  beforeImage: string
+  /** Optional: some jobs only have finished photos. Without it, no before/after slider renders. */
+  beforeImage?: string
   afterImage: string
-  beforeAlt: string
+  beforeAlt?: string
   afterAlt: string
+  /** Extra finished-job photos, shown as a gallery on the project page. */
+  gallery?: { src: string; alt: string }[]
   /** Quick-glance project facts. */
   stats: ProjectStat[]
+  /**
+   * The write-up sections below are optional. Leave a section out rather than
+   * describing work, products or conditions nobody has confirmed for this job.
+   */
   /** The homeowner's problem / starting condition. */
-  challenge: string
+  challenge?: string
   /** Ordered steps describing how the crew approached the work. */
-  approach: { title: string; detail: string }[]
+  approach?: { title: string; detail: string }[]
   /** Products / materials specified. */
-  products: string[]
+  products?: string[]
   /** Outcome paragraph. */
-  results: string
+  results?: string
   testimonial?: { quote: string; name: string }
   /**
    * True when the before/after images have not been confirmed as photos of this
@@ -385,6 +392,42 @@ export const PROJECTS: CaseStudy[] = [
     metaTitle: "Cypress Wood Rot Repair & Exterior Repaint | Case Study",
     metaDescription:
       "A Cypress wood rot repair: rotted fascia and soffits replaced, the moisture source corrected, and trim repainted to match. Before & after case study.",
+  },
+  {
+    // Job photos supplied by Juan on 2026-10-07: a completed interior job in
+    // Richmond, TX. Finished photos only (no before shots), and no confirmed
+    // scope, products, size or timeline yet, so those sections are left out
+    // rather than guessed. Add them here once Juan confirms the details.
+    slug: "richmond-interior-repaint",
+    title: "Interior Painting in a Richmond, TX Home",
+    neighborhood: "Richmond, TX",
+    service: "Interior Painting",
+    serviceSlug: "interior-painting-houston-tx",
+    summary:
+      "A completed interior painting job in a two-story Richmond home, photographed after the work: bedrooms, the upstairs landing and the stairwell.",
+    heroImage: "/images/projects/richmond-interior/01-bedroom-wide.jpg",
+    afterImage: "/images/projects/richmond-interior/01-bedroom-wide.jpg",
+    afterAlt: "Richmond bedroom with freshly painted greige walls, white crown molding, baseboards and door",
+    gallery: [
+      { src: "/images/projects/richmond-interior/05-bedroom-window.jpg", alt: "Second Richmond bedroom with greige walls, white crown molding and window trim" },
+      { src: "/images/projects/richmond-interior/04-landing-to-bedroom.jpg", alt: "Upstairs landing with greige walls and white door casing opening into a bedroom" },
+      { src: "/images/projects/richmond-interior/06-landing-doors.jpg", alt: "Upstairs landing with white two-panel doors and greige walls beside the stair railing" },
+      { src: "/images/projects/richmond-interior/03-pocket-door-bath-hall.jpg", alt: "White pocket door and casing opening to a tiled hallway" },
+      { src: "/images/projects/richmond-interior/02-pocket-door.jpg", alt: "Close-up of a white two-panel pocket door and casing against greige walls" },
+      { src: "/images/projects/richmond-interior/09-stairs-lower-flight.jpg", alt: "Staircase with white stair skirt board and greige walls" },
+      { src: "/images/projects/richmond-interior/08-stairs-railing.jpg", alt: "Stairwell wall in greige with white skirt board below the railing" },
+      { src: "/images/projects/richmond-interior/10-stair-handrail.jpg", alt: "Stairwell wall with a white handrail backer board and greige walls" },
+      { src: "/images/projects/richmond-interior/07-stairwell-from-below.jpg", alt: "Two-story stairwell seen from below, with white crown molding and greige walls" },
+    ],
+    stats: [
+      { label: "Location", value: "Richmond, TX" },
+      { label: "Service", value: "Interior" },
+      { label: "Areas shown", value: "Bedrooms, landing, stairs" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Interior Painting Project in Richmond, TX",
+    metaDescription:
+      "Photos of a completed interior painting job in a two-story Richmond, TX home: bedrooms, the upstairs landing and the stairwell.",
   },
 ]
 

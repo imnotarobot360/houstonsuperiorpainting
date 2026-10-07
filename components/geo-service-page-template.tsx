@@ -81,6 +81,7 @@ const ZONE_PROJECT_PLACES: Record<string, string[]> = {
   "river-oaks": ["River Oaks"],
   "the-heights": ["The Heights"],
   houston: ["Houston"],
+  richmond: ["Richmond"],
 }
 
 interface FAQ {

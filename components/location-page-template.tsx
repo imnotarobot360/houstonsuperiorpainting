@@ -14,7 +14,8 @@ import {
   officeAddressLine,
 } from "@/lib/business"
 import { nearestOfficeFor } from "@/lib/nearest-office"
-import { getProject } from "@/lib/projects"
+import Image from "next/image"
+import { LOCAL_PROOF_PROJECTS, getProject } from "@/lib/projects"
 
 // The River Oaks exterior is a project with real job photos. City pages show it
 // as an example of our exterior work, labelled with its own neighborhood.
@@ -70,6 +71,11 @@ export function LocationPageTemplate({
   // area) — better a 2-level trail than one pointing at a guessed URL.
   const area = SERVICE_AREAS.find((a) => a.name === city)
   const nearestOffice = nearestOfficeFor(area?.slug)
+  // A real project whose neighborhood names this city ("Richmond, TX" → Richmond).
+  const cityProject = LOCAL_PROOF_PROJECTS.find(
+    (p) => p.neighborhood.split(",")[0].trim().toLowerCase() === city.trim().toLowerCase(),
+  )
+  const shownProject = cityProject ?? exampleProject
 
   const crumbs = [
     { name: "Home", url: `${SITE}/` },
@@ -325,23 +331,36 @@ export function LocationPageTemplate({
 
         {/* Testimonials hidden until they can be matched to real Google reviews (see docs/aeo-seo-plan-2026-09.md). TODO(juan) */}
 
-        {/* Before/After: these photos are the River Oaks project, so they are
-            labelled and linked as that project, never as this city's work. */}
-        {exampleProject && (
+        {/* A real project in this city when one exists; otherwise the River Oaks
+            project, labelled and linked as River Oaks, never as this city's work. */}
+        {shownProject && (
           <section className="mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-              Example Project: {exampleProject.neighborhood}
+              {cityProject ? `Recent Project in ${city}` : `Example Project: ${shownProject.neighborhood}`}
             </h2>
-            <BeforeAfter
-              beforeSrc={exampleProject.beforeImage}
-              afterSrc={exampleProject.afterImage}
-              beforeAlt={exampleProject.beforeAlt}
-              afterAlt={exampleProject.afterAlt}
-            />
+            {shownProject.beforeImage ? (
+              <BeforeAfter
+                beforeSrc={shownProject.beforeImage}
+                afterSrc={shownProject.afterImage}
+                beforeAlt={shownProject.beforeAlt ?? ""}
+                afterAlt={shownProject.afterAlt}
+              />
+            ) : (
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border">
+                <Image
+                  src={shownProject.afterImage}
+                  alt={shownProject.afterAlt}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 896px) 100vw, 896px"
+                  className="object-cover"
+                />
+              </div>
+            )}
             <p className="mt-4 text-foreground/80">
-              {exampleProject.summary}{" "}
-              <Link href={`/projects/${exampleProject.slug}`} className="text-primary font-medium hover:underline">
-                Read the project write-up
+              {shownProject.summary}{" "}
+              <Link href={`/projects/${shownProject.slug}`} className="text-primary font-medium hover:underline">
+                {shownProject.gallery?.length ? "See all the project photos" : "Read the project write-up"}
               </Link>
               .
             </p>

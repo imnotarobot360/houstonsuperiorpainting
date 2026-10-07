@@ -27,6 +27,7 @@ const NEIGHBORHOOD_CITY_PAGE: Record<string, string> = {
   "The Heights": "painters-the-heights-tx",
   Heights: "painters-the-heights-tx",
   Cypress: "painters-cypress-tx",
+  Richmond: "painters-richmond-tx",
 }
 
 function cityPageFor(neighborhood: string): { name: string; slug: string } | undefined {
@@ -144,23 +145,65 @@ export default async function ProjectPage({
           </div>
         </section>
 
-        {/* Before / After */}
+        {/* Before / After, or the finished photo when there are no before shots */}
         <section className="bg-background py-14 sm:py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Reveal className="text-center mb-8">
-              <p className="kicker mb-3">The Transformation</p>
-              <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
-                Drag to reveal the before &amp; after
-              </h2>
-            </Reveal>
-            <Reveal>
-              <BeforeAfter
-                beforeSrc={project.beforeImage}
-                afterSrc={project.afterImage}
-                beforeAlt={project.beforeAlt}
-                afterAlt={project.afterAlt}
-              />
-            </Reveal>
+            {project.beforeImage ? (
+              <>
+                <Reveal className="text-center mb-8">
+                  <p className="kicker mb-3">The Transformation</p>
+                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
+                    Drag to reveal the before &amp; after
+                  </h2>
+                </Reveal>
+                <Reveal>
+                  <BeforeAfter
+                    beforeSrc={project.beforeImage}
+                    afterSrc={project.afterImage}
+                    beforeAlt={project.beforeAlt ?? ""}
+                    afterAlt={project.afterAlt}
+                  />
+                </Reveal>
+              </>
+            ) : (
+              <>
+                <Reveal className="text-center mb-8">
+                  <p className="kicker mb-3">The Finished Work</p>
+                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
+                    Photos from the completed job
+                  </h2>
+                </Reveal>
+                <Reveal>
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border">
+                    <Image
+                      src={project.afterImage}
+                      alt={project.afterAlt}
+                      fill
+                      priority
+                      sizes="(max-width: 896px) 100vw, 896px"
+                      className="object-cover"
+                    />
+                  </div>
+                </Reveal>
+              </>
+            )}
+
+            {project.gallery && project.gallery.length > 0 && (
+              <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {project.gallery.map((g) => (
+                  <li key={g.src} className="relative aspect-[3/4] overflow-hidden rounded-lg border border-border">
+                    <Image
+                      src={g.src}
+                      alt={g.alt}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 640px) 50vw, 300px"
+                      className="object-cover"
+                    />
+                  </li>
+                ))}
+              </ul>
+            )}
 
             {/* Stats */}
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -179,6 +222,8 @@ export default async function ProjectPage({
           </div>
         </section>
 
+        {project.challenge && (
+          <>
         {/* Challenge */}
         <section className="bg-muted py-16 sm:py-20">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -191,7 +236,11 @@ export default async function ProjectPage({
             </Reveal>
           </div>
         </section>
+          </>
+        )}
 
+        {project.approach && project.approach.length > 0 && (
+          <>
         {/* Approach */}
         <section className="bg-background py-16 sm:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,7 +267,11 @@ export default async function ProjectPage({
             </ol>
           </div>
         </section>
+          </>
+        )}
 
+        {(project.products?.length || project.results) && (
+          <>
         {/* Products + Results */}
         <section className="bg-muted py-16 sm:py-20">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2">
@@ -228,7 +281,7 @@ export default async function ProjectPage({
                 What we used
               </h2>
               <ul className="space-y-3">
-                {project.products.map((product) => (
+                {(project.products ?? []).map((product) => (
                   <li key={product} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <span className="text-muted-foreground leading-relaxed">{product}</span>
@@ -245,6 +298,8 @@ export default async function ProjectPage({
             </Reveal>
           </div>
         </section>
+          </>
+        )}
 
         {/* Testimonials hidden until they can be matched to real Google reviews (see docs/aeo-seo-plan-2026-09.md). TODO(juan) */}
 
