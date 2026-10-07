@@ -191,14 +191,14 @@ export default async function ProjectPage({
             {project.gallery && project.gallery.length > 0 && (
               <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {project.gallery.map((g) => (
-                  <li key={g.src} className="relative aspect-[3/4] overflow-hidden rounded-lg border border-border">
+                  <li key={g.src} className="relative aspect-[3/4] overflow-hidden rounded-lg border border-border bg-muted">
                     <Image
                       src={g.src}
                       alt={g.alt}
                       fill
                       loading="lazy"
                       sizes="(max-width: 640px) 50vw, 300px"
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </li>
                 ))}

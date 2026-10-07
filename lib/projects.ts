@@ -429,6 +429,60 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Photos of a completed interior painting job in a two-story Richmond, TX home: bedrooms, the upstairs landing and the stairwell.",
   },
+  {
+    // Job photos supplied by Juan on 2026-10-07 (exterior painting in The
+    // Heights). Cropped to remove a person, part of the house number and the
+    // street-side bins. Finished photos only; scope and products unconfirmed.
+    slug: "heights-exterior-siding-repaint",
+    title: "Exterior Painting on a Two-Story Heights Home",
+    neighborhood: "The Heights, Houston",
+    service: "Exterior Painting",
+    serviceSlug: "exterior-painting-houston-tx",
+    summary:
+      "A completed exterior painting job on a two-story home in The Heights, photographed after the work: the front elevation, the side porch and the front entry.",
+    heroImage: "/images/projects/heights-exterior-siding/01-front-elevation.jpg",
+    afterImage: "/images/projects/heights-exterior-siding/01-front-elevation.jpg",
+    afterAlt: "Two-story Heights home with gray lap siding, shingle-style gables and cream trim, balcony and columns",
+    gallery: [
+      { src: "/images/projects/heights-exterior-siding/02-side-porch.jpg", alt: "Long side porch with gray siding, cream trim and columns, a gray porch floor and a stained wood ceiling" },
+      { src: "/images/projects/heights-exterior-siding/03-front-door.jpg", alt: "Front entry with gray siding, cream door casing and crown, and a gray porch floor" },
+    ],
+    stats: [
+      { label: "Location", value: "The Heights" },
+      { label: "Service", value: "Exterior" },
+      { label: "Home", value: "Two-story" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Exterior Painting Project in The Heights, Houston",
+    metaDescription:
+      "Photos of a completed exterior painting job on a two-story home in The Heights, Houston: siding, trim, porch and front entry.",
+  },
+  {
+    // Job photos supplied by Juan on 2026-10-07 (exterior painting in The
+    // Heights). A realtor's sign was cropped out. Finished photos only.
+    slug: "heights-painted-brick-bungalow",
+    title: "Painted Brick Bungalow Exterior in The Heights",
+    neighborhood: "The Heights, Houston",
+    service: "Exterior Painting",
+    serviceSlug: "exterior-painting-houston-tx",
+    summary:
+      "A completed exterior painting job on a brick bungalow in The Heights, photographed after the work: white painted brick and gable with black trim, columns and window frames.",
+    heroImage: "/images/projects/heights-painted-brick-bungalow/01-corner-view.jpg",
+    afterImage: "/images/projects/heights-painted-brick-bungalow/01-corner-view.jpg",
+    afterAlt: "Heights bungalow with white painted brick, a white gable and black porch columns, fascia and window trim",
+    gallery: [
+      { src: "/images/projects/heights-painted-brick-bungalow/02-front-porch.jpg", alt: "Front of the bungalow: white painted brick and gable with black columns, beams and window frames" },
+    ],
+    stats: [
+      { label: "Location", value: "The Heights" },
+      { label: "Service", value: "Exterior" },
+      { label: "Surfaces shown", value: "Brick, gable, trim" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Painted Brick Bungalow in The Heights, Houston",
+    metaDescription:
+      "Photos of a completed exterior painting job on a Heights bungalow: white painted brick and gable with black trim, columns and window frames.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */
