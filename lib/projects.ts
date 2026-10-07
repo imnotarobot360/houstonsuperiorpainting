@@ -517,6 +517,37 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Photos of a completed interior painting job in a Fulshear, TX home: living room and fireplace wall, entry, home office and bedroom.",
   },
+  {
+    // Job photos supplied by Juan on 2026-10-07: a second, separate interior
+    // job in Richmond, TX. Finished photos only; scope and products unconfirmed.
+    slug: "richmond-interior-arches-repaint",
+    title: "Interior Painting in a Richmond Home with Arched Halls",
+    neighborhood: "Richmond, TX",
+    service: "Interior Painting",
+    serviceSlug: "interior-painting-houston-tx",
+    summary:
+      "A completed interior painting job in a Richmond home, photographed after the work: the living room, kitchen and breakfast area, arched hallways, dining room, study and a bedroom.",
+    heroImage: "/images/projects/richmond-interior-arches/01-living-room-fireplace.jpg",
+    afterImage: "/images/projects/richmond-interior-arches/01-living-room-fireplace.jpg",
+    afterAlt: "Open living room with white walls and baseboards, arched openings and a stone fireplace",
+    gallery: [
+      { src: "/images/projects/richmond-interior-arches/02-kitchen-and-breakfast-area.jpg", alt: "Kitchen and breakfast area with white walls and a white island base beside dark cabinets" },
+      { src: "/images/projects/richmond-interior-arches/03-arched-hallway.jpg", alt: "Hallway through two arched openings with white walls and baseboards" },
+      { src: "/images/projects/richmond-interior-arches/04-arched-entry-hall.jpg", alt: "Arched entry hall leading to the front door, with white walls and baseboards" },
+      { src: "/images/projects/richmond-interior-arches/05-dining-room.jpg", alt: "Dining room with white walls and baseboards and tall windows" },
+      { src: "/images/projects/richmond-interior-arches/06-study.jpg", alt: "Small study with light walls, white baseboards and window trim" },
+      { src: "/images/projects/richmond-interior-arches/07-bedroom-vaulted-ceiling.jpg", alt: "Bedroom with a vaulted ceiling, light gray walls and white double doors" },
+    ],
+    stats: [
+      { label: "Location", value: "Richmond, TX" },
+      { label: "Service", value: "Interior" },
+      { label: "Areas shown", value: "Living, kitchen, halls, bedroom" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Interior Painting Project with Arched Halls in Richmond, TX",
+    metaDescription:
+      "Photos of a completed interior painting job in a Richmond, TX home: living room, kitchen, arched hallways, dining room, study and bedroom.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */
