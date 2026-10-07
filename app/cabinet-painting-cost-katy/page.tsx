@@ -42,7 +42,7 @@ export default function CabinetPaintingCostKaty() {
 
       <section className="relative bg-primary py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-6xl">
-          <nav aria-label="Breadcrumb" className="mb-6"><ol className="flex items-center gap-2 text-sm text-primary-foreground/70"><li><Link href="/" className="hover:text-primary-foreground">Home</Link></li><ChevronRight className="h-3 w-3" /><li><Link href="/cabinet-painting-katy-tx" className="hover:text-primary-foreground">Cabinet Painting Katy</Link></li><ChevronRight className="h-3 w-3" /><li className="text-primary-foreground font-medium">Cost Guide</li></ol></nav>
+          <nav aria-label="Breadcrumb" className="mb-6"><ol className="flex items-center gap-2 text-sm text-primary-foreground/70"><li><Link href="/" className="hover:text-primary-foreground">Home</Link></li><ChevronRight className="h-3 w-3" /><li><Link href="/cabinet-refinishing-katy-cinco-ranch" className="hover:text-primary-foreground">Cabinet Refinishing Katy</Link></li><ChevronRight className="h-3 w-3" /><li className="text-primary-foreground font-medium">Cost Guide</li></ol></nav>
           <h1 className="hero-h1 text-3xl md:text-5xl font-serif font-bold text-primary-foreground mb-6 text-balance">How Much Does Cabinet Painting Cost in Katy TX?</h1>
           <p className="text-primary-foreground/90 text-lg md:text-xl max-w-3xl mb-8 leading-relaxed">Our 2026 price ranges for cabinet painting in Katy, and what moves a quote up or down.</p>
         </div>
@@ -130,7 +130,7 @@ export default function CabinetPaintingCostKaty() {
       </section>
 
       <section className="py-12 bg-background"><div className="container mx-auto px-4 max-w-4xl"><h2 className="text-xl font-serif font-bold mb-4">Related Pages</h2><div className="grid md:grid-cols-3 gap-4">
-        {[{ title: "Cabinet Painting Katy TX", href: "/cabinet-painting-katy-tx" }, { title: "Cabinet Refinishing Service", href: "/cabinet-refinishing-houston-tx" }, { title: "Paint or Replace Cabinets?", href: "/paint-or-replace-cabinets" }, { title: "Houston Painting Cost Guide", href: "/houston-painting-cost-guide" }].map(p => (
+        {[{ title: "Cabinet Refinishing in Katy & Cinco Ranch", href: "/cabinet-refinishing-katy-cinco-ranch" }, { title: "Cabinet Refinishing Service", href: "/cabinet-refinishing-houston-tx" }, { title: "Paint or Replace Cabinets?", href: "/paint-or-replace-cabinets" }, { title: "Houston Painting Cost Guide", href: "/houston-painting-cost-guide" }].map(p => (
           <Link key={p.href} href={p.href} className="bg-card rounded-lg p-4 border border-border hover:border-secondary transition-colors"><span className="font-semibold text-sm text-foreground">{p.title}</span></Link>
         ))}
       </div></div></section>

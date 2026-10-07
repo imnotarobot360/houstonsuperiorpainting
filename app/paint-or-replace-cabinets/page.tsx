@@ -100,7 +100,7 @@ export default function PaintOrReplaceCabinets() {
             {[
               { label: "Cabinet Refinishing Houston", href: "/cabinet-refinishing-houston-tx" },
               { label: "Cabinet Painting Cost Katy", href: "/cabinet-painting-cost-katy" },
-              { label: "Cabinet Painting Katy TX", href: "/cabinet-painting-katy-tx" },
+              { label: "Cabinet Refinishing Katy & Cinco Ranch", href: "/cabinet-refinishing-katy-cinco-ranch" },
               { label: "Interior Painting Houston", href: "/interior-painting-houston-tx" },
               { label: "Best Paint Colors Houston", href: "/best-paint-colors-houston-homes" },
               { label: "Free Estimate", href: "/contact" },

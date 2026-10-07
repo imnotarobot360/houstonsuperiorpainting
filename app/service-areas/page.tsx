@@ -200,9 +200,9 @@ export default function ServiceAreasPage() {
             </div>
           </div>
           <p className="mt-10 text-foreground/80">
-            Looking for someone close by? Read how to find a{" "}
-            <Link href="/painting-company-near-me" className="text-primary hover:underline">painting company near me in Houston</Link>, or our guide to{" "}
-            <Link href="/best-house-painters-near-katy-texas" className="text-primary hover:underline">house painters near Katy, Texas</Link>.
+            Looking for someone close by? See our{" "}
+            <Link href="/painters-houston-tx" className="text-primary hover:underline">Houston painters page</Link>, or our guide to{" "}
+            <Link href="/blog/painters-near-me-katy-tx" className="text-primary hover:underline">choosing painters near Katy, Texas</Link>.
           </p>
         </section>
       </main>

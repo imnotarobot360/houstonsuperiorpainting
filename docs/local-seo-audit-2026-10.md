@@ -61,7 +61,10 @@ fixed a mislabeled link (Woodlands cabinets → Heights) and a wrong Bellaire li
 two pages that had no site navigation; rewrote titles/descriptions within length; kept every URL and
 canonical.
 
-## 3. Consolidation candidates — NOT done, needs Juan's OK
+## 3. Consolidation — DONE Oct 7, 2026 (approved by Juan)
+
+The 301s below are in `next.config.mjs` and the 12 page files are removed. The limewash hub gained an
+interior decorative-finishes FAQ and a Venetian plaster link so that content still has a home.
 
 After the invented local detail came out, several groups are near-duplicates of each other and of a
 stronger page (same-service pages across zones now share 67–74% of their text). Proposed 301 mapping,

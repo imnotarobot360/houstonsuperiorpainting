@@ -84,7 +84,6 @@ export default function BrickPaintingMemorialPage() {
       ]}
       relatedPages={[
         { title: "Limewash & Brick Painting Houston", href: "/limewash-brick-painting-houston-tx" },
-        { title: "Limewash & Decorative Finishes Memorial", href: "/limewash-decorative-finishes-memorial" },
         { title: "Exterior Painting Memorial", href: "/exterior-painting-memorial" },
         { title: "Exterior Painting Houston", href: "/exterior-painting-houston-tx" },
         { title: "Painters in Memorial", href: "/painters-memorial-tx" },

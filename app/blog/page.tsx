@@ -94,18 +94,6 @@ const blogPosts = [
     featured: false,
   },
   {
-    slug: "soft-washing-houston-tx",
-    title: "Soft Washing in Houston TX: What It Is and When to Use It",
-    excerpt:
-      "Soft washing safely removes algae, mildew, and grime from your home's exterior without high-pressure damage — and it's one of the best ways to prep for paint.",
-    category: "Exterior Cleaning",
-    author: "Juan Serra",
-    publishDate: "June 19, 2026",
-    readTime: "9 min read",
-    image: "/images/blog/soft-washing-houston.png",
-    featured: false,
-  },
-  {
     slug: "how-to-prepare-home-for-interior-painting",
     title: "How to Prepare Your Home for Interior Painting in Houston TX",
     excerpt:

@@ -79,7 +79,7 @@ export default function ExteriorPaintingSugarLandPage() {
         { title: "Exterior painting cost guide", href: "/exterior-house-painting-houston-cost-guide" },
         { title: "Wood rot repair", href: "/wood-rot-repair-houston-tx" },
         { title: "Stucco painting and repair", href: "/stucco-painting-houston-tx" },
-        { title: "Limewash and decorative finishes in Sugar Land", href: "/limewash-decorative-finishes-sugar-land" },
+        { title: "Limewash and brick painting", href: "/limewash-brick-painting-houston-tx" },
         { title: "Exterior painting in Cypress & Bridgeland", href: "/exterior-painting-cypress-bridgeland" },
         { title: "Exterior painting in Katy & Cinco Ranch", href: "/exterior-painting-katy-cinco-ranch" },
         { title: "Painters in Sugar Land, TX (Sugar Land office)", href: "/painters-sugar-land-tx" }

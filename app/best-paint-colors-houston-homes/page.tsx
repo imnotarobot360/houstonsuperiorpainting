@@ -125,7 +125,7 @@ export default function BestPaintColorsHoustonHomes() {
       </section>
 
       <section className="py-12 bg-background"><div className="container mx-auto px-4 max-w-4xl"><h2 className="text-xl font-serif font-bold mb-4">Related Articles</h2><div className="grid md:grid-cols-3 gap-4">
-        {[{ title: "Interior Painters Katy TX", href: "/interior-painters-katy-tx" }, { title: "Accent Wall Ideas Houston", href: "/accent-wall-ideas-houston" }, { title: "Interior Painting Cost Houston", href: "/interior-painting-cost-houston" }, { title: "Best Exterior Paint for Houston", href: "/best-exterior-paint-houston-weather" }].map(p => (
+        {[{ title: "Interior Painting in Katy & Cinco Ranch", href: "/interior-painting-katy-cinco-ranch" }, { title: "Accent Wall Ideas Houston", href: "/accent-wall-ideas-houston" }, { title: "Interior Painting Cost Houston", href: "/interior-painting-cost-houston" }, { title: "Best Exterior Paint for Houston", href: "/best-exterior-paint-houston-weather" }].map(p => (
           <Link key={p.href} href={p.href} className="bg-card rounded-lg p-4 border border-border hover:border-secondary transition-colors"><span className="font-semibold text-sm text-foreground">{p.title}</span></Link>
         ))}
       </div></div></section>

@@ -205,9 +205,14 @@ A typical exterior limewash takes 3-5 days, longer than standard exterior painti
     {
       question: "Is limewash good for Houston's climate?",
       answer: "Yes, limewash is excellent for Houston's humid climate because it's breathable. Unlike paint that can trap moisture and cause peeling, limewash allows water vapor to pass through, keeping brick healthy."
+    },
+    {
+      question: "Do you offer decorative finishes for interior walls?",
+      answer: "Yes. For interior walls we offer Venetian plaster, Roman Clay, and faux and metallic finishes, along with limewash on interior brick. Each is priced after an on-site look, and the estimate is free."
     }
   ],
   relatedServices: [
+    { title: "Venetian Plaster", href: "/venetian-plaster-houston-tx" },
     { title: "Exterior Painting", href: "/exterior-painting-houston-tx" },
     { title: "Interior Painting", href: "/interior-painting-houston-tx" },
     { title: "Pressure Washing", href: "/pressure-washing-houston-tx" },

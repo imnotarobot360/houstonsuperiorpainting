@@ -85,7 +85,6 @@ export default function BrickPaintingKatyPage() {
       ]}
       relatedPages={[
         { title: "Limewash and brick painting", href: "/limewash-brick-painting-houston-tx" },
-        { title: "Limewash in Katy & Cinco Ranch", href: "/limewash-decorative-finishes-katy-cinco-ranch" },
         { title: "Exterior painting in Katy & Cinco Ranch", href: "/exterior-painting-katy-cinco-ranch" },
         { title: "Brick painting in Memorial", href: "/brick-painting-memorial" },
         { title: "Painters in Katy, TX (Katy office)", href: "/painters-katy-tx" }

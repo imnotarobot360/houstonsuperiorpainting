@@ -79,7 +79,7 @@ export default function ExteriorPaintingKatyPage() {
         { title: "Exterior painting cost guide", href: "/exterior-house-painting-houston-cost-guide" },
         { title: "Wood rot repair", href: "/wood-rot-repair-houston-tx" },
         { title: "Soft washing", href: "/soft-washing-houston-tx" },
-        { title: "Limewash and decorative finishes in Katy & Cinco Ranch", href: "/limewash-decorative-finishes-katy-cinco-ranch" },
+        { title: "Limewash and brick painting", href: "/limewash-brick-painting-houston-tx" },
         { title: "Exterior painting in Cypress & Bridgeland", href: "/exterior-painting-cypress-bridgeland" },
         { title: "Exterior painting in Sugar Land", href: "/exterior-painting-sugar-land" },
         { title: "Painters in Katy, TX (Katy office)", href: "/painters-katy-tx" }

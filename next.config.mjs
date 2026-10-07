@@ -247,6 +247,24 @@ const nextConfig = {
       { source: '/blog/limewash-brick-painting-houston', destination: '/limewash-brick-painting-houston-tx', permanent: true },
       { source: '/blog/painters-near-me-houston', destination: '/painters-houston-tx', permanent: true },
 
+      // ─── Local page consolidation, Oct 2026 (approved by Juan) ────────
+      // See docs/local-seo-audit-2026-10.md §3. Once the invented local detail was
+      // removed, each of these duplicated a stronger page's intent with no local
+      // proof of its own (the 7 limewash pages were 61–74% identical).
+      { source: '/limewash-decorative-finishes-bellaire-west-university', destination: '/limewash-brick-painting-houston-tx', permanent: true },
+      { source: '/limewash-decorative-finishes-tanglewood', destination: '/limewash-brick-painting-houston-tx', permanent: true },
+      { source: '/limewash-decorative-finishes-the-heights', destination: '/limewash-brick-painting-houston-tx', permanent: true },
+      { source: '/limewash-decorative-finishes-memorial', destination: '/limewash-brick-painting-houston-tx', permanent: true },
+      { source: '/limewash-decorative-finishes-cypress-bridgeland', destination: '/limewash-brick-painting-houston-tx', permanent: true },
+      { source: '/limewash-decorative-finishes-katy-cinco-ranch', destination: '/limewash-brick-painting-houston-tx', permanent: true },
+      { source: '/limewash-decorative-finishes-sugar-land', destination: '/limewash-brick-painting-houston-tx', permanent: true },
+      { source: '/interior-painters-katy-tx', destination: '/interior-painting-katy-cinco-ranch', permanent: true },
+      { source: '/cabinet-painting-katy-tx', destination: '/cabinet-refinishing-katy-cinco-ranch', permanent: true },
+      { source: '/best-house-painters-near-katy-texas', destination: '/blog/painters-near-me-katy-tx', permanent: true },
+      { source: '/painting-company-near-me', destination: '/painters-houston-tx', permanent: true },
+      // Already canonicalised to the service page; the 301 finishes the job.
+      { source: '/blog/soft-washing-houston-tx', destination: '/soft-washing-houston-tx', permanent: true },
+
       // Cypress interior page renamed to the community-scoped canonical URL.
       { source: '/interior-painting-cypress-tx', destination: '/interior-painting-cypress-bridgeland', permanent: true },
     ]

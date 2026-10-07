@@ -162,7 +162,7 @@ export default function InteriorPaintingCostHouston() {
       </section>
 
       <section className="py-12 bg-background"><div className="container mx-auto px-4 max-w-4xl"><h2 className="text-xl font-serif font-bold mb-4">Related Articles</h2><div className="grid md:grid-cols-3 gap-4">
-        {[{ title: "Interior Painters Katy TX", href: "/interior-painters-katy-tx" }, { title: "Best Paint Colors for Houston Homes", href: "/best-paint-colors-houston-homes" }, { title: "Painters in Houston TX", href: "/painters-houston-tx" }, { title: "Exterior Painting Cost Guide", href: "/exterior-house-painting-houston-cost-guide" }, { title: "How Long Does Interior Painting Take?", href: "/blog/how-long-does-interior-painting-take-in-houston" }].map(p => (
+        {[{ title: "Interior Painting in Katy & Cinco Ranch", href: "/interior-painting-katy-cinco-ranch" }, { title: "Best Paint Colors for Houston Homes", href: "/best-paint-colors-houston-homes" }, { title: "Painters in Houston TX", href: "/painters-houston-tx" }, { title: "Exterior Painting Cost Guide", href: "/exterior-house-painting-houston-cost-guide" }, { title: "How Long Does Interior Painting Take?", href: "/blog/how-long-does-interior-painting-take-in-houston" }].map(p => (
           <Link key={p.href} href={p.href} className="bg-card rounded-lg p-4 border border-border hover:border-secondary transition-colors"><span className="font-semibold text-sm text-foreground">{p.title}</span></Link>
         ))}
       </div></div></section>
