@@ -80,8 +80,54 @@ function walk(dir, prefix, acc) {
   }
 }
 
+/** Last commit date that changed a line range of a file (git log -L), or null. */
+function gitLineRangeDate(relPath, start, end) {
+  try {
+    const out = execFileSync(
+      'git',
+      ['log', '-1', '--format=%cI', '-s', `-L${start},${end}:${relPath}`],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], cwd: repoRoot },
+    ).trim()
+    const first = out.split('\n')[0]
+    if (!first) return null
+    const d = new Date(first)
+    return Number.isNaN(d.getTime()) ? null : d.toISOString()
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Per-project dates for /projects/[slug]. Every project page is rendered by
+ * one dynamic page file, so dating them by that file stamped all case studies
+ * with the same date — a newly added project inherited whatever the template
+ * last changed. Instead, date each project by the later of: the last commit
+ * that changed its own entry in lib/projects.ts, and the last commit that
+ * changed any of its photos.
+ */
+function projectDates(acc) {
+  const rel = 'lib/projects.ts'
+  const lines = fs.readFileSync(path.join(repoRoot, rel), 'utf8').split(/\r?\n/)
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(/^\s{4}slug: "([^"]+)",$/)
+    if (!m) continue
+    let start = i
+    while (start > 0 && !/^\s{2}\{\s*$/.test(lines[start])) start--
+    let end = i
+    while (end < lines.length - 1 && !/^\s{2}\},?\s*$/.test(lines[end])) end++
+    const block = lines.slice(start, end + 1).join('\n')
+    const candidates = [gitLineRangeDate(rel, start + 1, end + 1)]
+    for (const img of new Set(block.match(/\/images\/[^"]+\.(?:jpe?g|png|webp)/g) ?? [])) {
+      candidates.push(gitDate(`public${img}`))
+    }
+    const best = candidates.filter(Boolean).sort().pop()
+    if (best) acc[`projects/${m[1]}`] = best
+  }
+}
+
 const dates = {}
 walk(appDir, '', dates)
+projectDates(dates)
 
 // Sort keys so the committed file has a stable diff between runs.
 const sorted = Object.fromEntries(Object.keys(dates).sort().map((k) => [k, dates[k]]))
