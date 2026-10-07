@@ -8,10 +8,10 @@ const URL = "https://houstonsuperiorpainting.com/blog/painting-brick-houston"
 const DESCRIPTION =
   "When brick paint makes sense in Houston, when limewash is the better finish, and when to leave the brick alone. 2026 cost and moisture rules."
 
-// TODO(juan): replace featured image with a real job photo
-const IMAGE = "/images/blog/limewash-brick-houston.jpg"
+// Real job photo: our West University painted-brick exterior (see /projects/west-university-painted-brick-exterior).
+const IMAGE = "/images/projects/west-university-painted-brick/01-front-and-garage.jpg"
 const IMAGE_ALT =
-  "Single-story brick home with a light washed finish over the brick, dark trim, and a landscaped front lawn"
+  "Two-story West University home with white painted brick, an arched entry and a dark garage door under oak branches"
 
 export const metadata: Metadata = {
   title: "Painting Brick in Houston TX | When Not to Paint Brick",
@@ -179,6 +179,10 @@ export default function PaintingBrickHoustonPage() {
       <p>
         We do not pressure-wash painted brick at a distance that drives water through failed caulk at the windows.{" "}
         <Link href="/soft-washing-houston-tx">Soft wash</Link>, then dry.
+      </p>
+      <p>
+        See a finished example: our{" "}
+        <Link href="/projects/west-university-painted-brick-exterior">painted brick exterior in West University</Link>.
       </p>
 
       <h2>Cost</h2>

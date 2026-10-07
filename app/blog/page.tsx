@@ -42,7 +42,7 @@ const blogPosts = [
     author: "Juan Serra",
     publishDate: "October 7, 2026",
     readTime: "10 min read",
-    image: "/images/blog/limewash-brick-houston.jpg",
+    image: "/images/projects/west-university-painted-brick/01-front-and-garage.jpg",
     featured: false,
   },
   {

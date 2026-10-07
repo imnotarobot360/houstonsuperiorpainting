@@ -582,6 +582,37 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Before and after: a Cypress, TX commercial office repainted from scuffed off-white to soft blue, including hallways, offices and the break room.",
   },
+  {
+    // Job photos supplied by Juan on 2026-10-07: exterior painting in West
+    // University. The house number was blurred and a security-company yard sign
+    // cropped out. Finished photos only; whether the dark trim, gutters and
+    // garage door were part of our scope is unconfirmed, so only the painted
+    // brick is claimed.
+    slug: "west-university-painted-brick-exterior",
+    title: "Painted Brick Exterior in West University",
+    neighborhood: "West University, Houston",
+    service: "Exterior Painting",
+    serviceSlug: "exterior-painting-houston-tx",
+    summary:
+      "A two-story brick home in West University painted white, photographed after the work: the arched entry, front steps and garage elevation.",
+    heroImage: "/images/projects/west-university-painted-brick/01-front-and-garage.jpg",
+    afterImage: "/images/projects/west-university-painted-brick/01-front-and-garage.jpg",
+    afterAlt: "Two-story West University home with white painted brick, an arched entry and a dark garage door under oak branches",
+    gallery: [
+      { src: "/images/projects/west-university-painted-brick/02-front-entry.jpg", alt: "White painted brick front elevation with an arched entry, black front door and black window frames" },
+      { src: "/images/projects/west-university-painted-brick/03-entry-and-garage.jpg", alt: "Painted brick entry steps, arched porch and garage with a black standing-seam metal roof accent" },
+      { src: "/images/projects/west-university-painted-brick/04-garage-elevation.jpg", alt: "Garage elevation with white painted brick around an arched opening and a black garage door" },
+    ],
+    stats: [
+      { label: "Location", value: "West University" },
+      { label: "Service", value: "Exterior" },
+      { label: "Surface", value: "Painted brick" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Painted Brick Exterior in West University, Houston",
+    metaDescription:
+      "Photos of a West University, Houston home with its brick painted white: the arched entry, front steps and garage elevation.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */
