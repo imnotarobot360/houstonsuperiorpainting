@@ -299,9 +299,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     path.join(appDir, 'projects', '[slug]', 'page.tsx'),
   )
   for (const project of PROJECTS) {
+    // Each project's own date from the snapshot (its entry in lib/projects.ts
+    // or its photos, whichever changed last). Falls back to the shared page
+    // file's date only for a project the snapshot has not seen yet.
+    const own = (CONTENT_DATES as Record<string, string>)[`projects/${project.slug}`]
+    const ownDate = own ? new Date(own) : null
+    const lastModified = ownDate && !Number.isNaN(ownDate.getTime()) ? ownDate : projectsPageDate
     entries.push({
       url: `${baseUrl}/projects/${project.slug}`,
-      ...(projectsPageDate ? { lastModified: projectsPageDate } : {}),
+      ...(lastModified ? { lastModified } : {}),
       changeFrequency: 'monthly',
       priority: 0.7,
     })

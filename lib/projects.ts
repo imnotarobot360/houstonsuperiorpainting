@@ -548,6 +548,40 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Photos of a completed interior painting job in a Richmond, TX home: living room, kitchen, arched hallways, dining room, study and bedroom.",
   },
+  {
+    // Before/after photos supplied by Juan on 2026-10-07: commercial office
+    // repaint in Cypress, TX. The client is NOT named: a photo showing the
+    // business name on a window was left out, and a whiteboard with notes was
+    // cropped off. Scope beyond what the photos show is unconfirmed.
+    slug: "cypress-commercial-office-repaint",
+    title: "Commercial Office Repaint in Cypress",
+    neighborhood: "Cypress, TX",
+    service: "Commercial Painting",
+    serviceSlug: "commercial-painting-houston-tx",
+    summary:
+      "A commercial office in Cypress repainted from scuffed off-white to a soft blue: hallways, private offices and the break room.",
+    heroImage: "/images/projects/cypress-commercial-office/01-after-hallway.jpg",
+    beforeImage: "/images/projects/cypress-commercial-office/00-before-hallway.jpg",
+    afterImage: "/images/projects/cypress-commercial-office/01-after-hallway.jpg",
+    beforeAlt: "Office hallway before painting, with scuffed and marked off-white walls",
+    afterAlt: "The same office hallway after painting, with clean soft-blue walls",
+    gallery: [
+      { src: "/images/projects/cypress-commercial-office/02-after-long-hallway.jpg", alt: "Long office hallway after painting, with soft-blue walls" },
+      { src: "/images/projects/cypress-commercial-office/03-after-office.jpg", alt: "Private office with freshly painted soft-blue walls" },
+      { src: "/images/projects/cypress-commercial-office/04-after-office-window.jpg", alt: "Office with soft-blue walls painted around a recessed window" },
+      { src: "/images/projects/cypress-commercial-office/05-after-private-office.jpg", alt: "Private office with soft-blue walls" },
+      { src: "/images/projects/cypress-commercial-office/06-after-break-room.jpg", alt: "Break room with freshly painted soft-blue walls" },
+    ],
+    stats: [
+      { label: "Location", value: "Cypress, TX" },
+      { label: "Service", value: "Commercial" },
+      { label: "Areas shown", value: "Halls, offices, break room" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Commercial Office Repaint in Cypress, TX",
+    metaDescription:
+      "Before and after: a Cypress, TX commercial office repainted from scuffed off-white to soft blue, including hallways, offices and the break room.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */

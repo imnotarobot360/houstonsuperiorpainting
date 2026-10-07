@@ -317,7 +317,7 @@ export default function CommercialPaintingHoustonPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Request a Commercial Bid</h2>
             <p className="text-emerald-50 text-lg mb-8 max-w-2xl mx-auto">Line-item bids within 48 business hours. COI provided on signature. After-hours work standard.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 font-semibold rounded-lg text-base shadow-md transition">Request Bid →</Link>
+              <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 font-semibold rounded-lg text-base shadow-md transition">Request Bid →</Link>
               <a href="tel:+13465945960" className="inline-flex items-center justify-center px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">📞 (346) 594-5960</a>
               <a href="mailto:info@houstonsuperiorpainting.com" className="inline-flex items-center justify-center px-8 py-4 bg-emerald-900 hover:bg-emerald-950 text-white font-semibold rounded-lg text-base transition">✉ Email Specs</a>
             </div>
@@ -330,6 +330,7 @@ export default function CommercialPaintingHoustonPage() {
             <h2 className="text-2xl font-bold text-center mb-8">Related Services</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
+                { href: "/projects/cypress-commercial-office-repaint", title: "Project: Cypress Office", desc: "Before and after photos" },
                 { href: "/interior-painting-houston-tx", title: "Interior Painting", desc: "Residential interiors" },
                 { href: "/exterior-painting-houston-tx", title: "Exterior Painting", desc: "Residential exteriors" },
                 { href: "/pressure-washing-houston-tx", title: "Pressure Washing", desc: "Property maintenance" },

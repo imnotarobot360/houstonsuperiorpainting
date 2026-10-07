@@ -26,6 +26,8 @@ const exampleProject = getProject("river-oaks-exterior-restoration")
 const NEARBY_PROJECT_CITY: Record<string, string> = {
   "Cinco Ranch": "Fulshear",
   Rosenberg: "Richmond",
+  "Cypress Creek": "Cypress",
+  "Champions Forest": "Cypress",
 }
 
 const SITE = "https://houstonsuperiorpainting.com"
