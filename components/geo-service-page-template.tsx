@@ -82,6 +82,10 @@ const ZONE_PROJECT_PLACES: Record<string, string[]> = {
   "the-heights": ["The Heights"],
   houston: ["Houston"],
   richmond: ["Richmond"],
+  fulshear: ["Fulshear"],
+  // Fulshear borders Katy; the card is labelled Fulshear, never Katy.
+  katy: ["Fulshear"],
+  "katy-cinco-ranch": ["Fulshear"],
 }
 
 interface FAQ {

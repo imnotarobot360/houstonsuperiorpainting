@@ -28,6 +28,7 @@ const NEIGHBORHOOD_CITY_PAGE: Record<string, string> = {
   Heights: "painters-the-heights-tx",
   Cypress: "painters-cypress-tx",
   Richmond: "painters-richmond-tx",
+  Fulshear: "painters-fulshear-tx",
 }
 
 function cityPageFor(neighborhood: string): { name: string; slug: string } | undefined {

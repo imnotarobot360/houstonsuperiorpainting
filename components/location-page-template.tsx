@@ -21,6 +21,13 @@ import { LOCAL_PROOF_PROJECTS, getProject } from "@/lib/projects"
 // as an example of our exterior work, labelled with its own neighborhood.
 const exampleProject = getProject("river-oaks-exterior-restoration")
 
+// City pages with no project of their own, mapped to a bordering city that has
+// one. The project is always labelled with its real city.
+const NEARBY_PROJECT_CITY: Record<string, string> = {
+  "Cinco Ranch": "Fulshear",
+  Rosenberg: "Richmond",
+}
+
 const SITE = "https://houstonsuperiorpainting.com"
 const ESTIMATE_PATH = "/painting-estimate-houston"
 const COST_GUIDE_PATH = "/houston-painting-cost-guide"
@@ -75,7 +82,12 @@ export function LocationPageTemplate({
   const cityProject = LOCAL_PROOF_PROJECTS.find(
     (p) => p.neighborhood.split(",")[0].trim().toLowerCase() === city.trim().toLowerCase(),
   )
-  const shownProject = cityProject ?? exampleProject
+  // Otherwise a real project in a bordering city, labelled with that city.
+  const nearbyCity = NEARBY_PROJECT_CITY[city]
+  const nearbyProject = cityProject
+    ? undefined
+    : LOCAL_PROOF_PROJECTS.find((p) => p.neighborhood.split(",")[0].trim() === nearbyCity)
+  const shownProject = cityProject ?? nearbyProject ?? exampleProject
 
   const crumbs = [
     { name: "Home", url: `${SITE}/` },
@@ -336,7 +348,11 @@ export function LocationPageTemplate({
         {shownProject && (
           <section className="mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-              {cityProject ? `Recent Project in ${city}` : `Example Project: ${shownProject.neighborhood}`}
+              {cityProject
+                ? `Recent Project in ${city}`
+                : nearbyProject
+                  ? `Recent Project Nearby: ${shownProject.neighborhood}`
+                  : `Example Project: ${shownProject.neighborhood}`}
             </h2>
             {shownProject.beforeImage ? (
               <BeforeAfter

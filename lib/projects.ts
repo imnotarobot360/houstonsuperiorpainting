@@ -483,6 +483,40 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Photos of a completed exterior painting job on a Heights bungalow: white painted brick and gable with black trim, columns and window frames.",
   },
+  {
+    // Job photos supplied by Juan on 2026-10-07: interior job in Fulshear, TX.
+    // One shot cropped to remove a person. Finished photos only; scope,
+    // products and colors unconfirmed. Fulshear borders Katy, so Katy pages
+    // show this as a nearby project — always labelled Fulshear, never Katy.
+    slug: "fulshear-interior-repaint",
+    title: "Interior Painting in a Fulshear, TX Home",
+    neighborhood: "Fulshear, TX",
+    service: "Interior Painting",
+    serviceSlug: "interior-painting-houston-tx",
+    summary:
+      "A completed interior painting job in a Fulshear home, photographed after the work: the living room and fireplace wall, the entry and dining area, a home office and a bedroom.",
+    heroImage: "/images/projects/fulshear-interior/01-living-room.jpg",
+    afterImage: "/images/projects/fulshear-interior/01-living-room.jpg",
+    afterAlt: "Fulshear living room with beige walls, taupe crown molding and baseboards, and a white stone fireplace",
+    gallery: [
+      { src: "/images/projects/fulshear-interior/02-living-room-fireplace-wall.jpg", alt: "Living room fireplace wall with arched transom windows, beige walls and taupe crown molding" },
+      { src: "/images/projects/fulshear-interior/03-painted-stone-fireplace.jpg", alt: "White stone fireplace with a wood mantel beside taupe baseboards" },
+      { src: "/images/projects/fulshear-interior/04-view-to-kitchen.jpg", alt: "View from the living room to the kitchen, with beige walls and taupe crown molding" },
+      { src: "/images/projects/fulshear-interior/05-entry-to-living-dining.jpg", alt: "Entry hall opening to the living and dining areas, with taupe trim on columns and baseboards" },
+      { src: "/images/projects/fulshear-interior/06-home-office-wall-molding.jpg", alt: "Home office with beige walls and taupe picture-frame wall molding" },
+      { src: "/images/projects/fulshear-interior/07-bedroom-accent-wall.jpg", alt: "Bedroom with cream walls, a navy accent wall and two-tone tray-ceiling crown molding" },
+      { src: "/images/projects/fulshear-interior/08-living-room-wide.jpg", alt: "Wide view of the living room toward the entry, with beige walls and taupe trim" },
+    ],
+    stats: [
+      { label: "Location", value: "Fulshear, TX" },
+      { label: "Service", value: "Interior" },
+      { label: "Areas shown", value: "Living, office, bedroom" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Interior Painting Project in Fulshear, TX",
+    metaDescription:
+      "Photos of a completed interior painting job in a Fulshear, TX home: living room and fireplace wall, entry, home office and bedroom.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */

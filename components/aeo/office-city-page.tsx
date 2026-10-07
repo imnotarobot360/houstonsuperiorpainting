@@ -208,7 +208,12 @@ export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
   const { city, slug } = data
   const office = requireOffice(slug)
   const hq = isHeadquarters(office)
-  const projects = projectsForCity(city)
+  const ownProjects = projectsForCity(city)
+  // No job in this city yet: show real projects from its listed nearby areas,
+  // labelled with their own neighborhood, never as this city's work.
+  const projects =
+    ownProjects.length > 0 ? ownProjects : data.nearby.flatMap((a) => projectsForCity(areaName(a))).slice(0, 2)
+  const projectsAreNearby = ownProjects.length === 0
   const faqs = buildFaqs(data, office)
 
   const breadcrumb = {
@@ -297,7 +302,7 @@ export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
 
         {/* Renders only when lib/projects.ts has a real project in this city. */}
         {projects.length > 0 && (
-          <Section title={`Recent ${city} projects`}>
+          <Section title={projectsAreNearby ? `Recent projects near ${city}` : `Recent ${city} projects`}>
             <div className="not-prose grid gap-6">
               {projects.map((p) => (
                 <Link
