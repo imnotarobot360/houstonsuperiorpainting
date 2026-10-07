@@ -613,6 +613,35 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Photos of a West University, Houston home with its brick painted white: the arched entry, front steps and garage elevation.",
   },
+  {
+    // Job photos supplied by Juan on 2026-10-07: kitchen cabinets in Cypress, TX.
+    // Finished photos only; products and colors unconfirmed.
+    slug: "cypress-two-tone-kitchen-cabinets",
+    title: "Two-Tone Kitchen Cabinet Painting in Cypress",
+    neighborhood: "Cypress, TX",
+    service: "Cabinet Refinishing",
+    serviceSlug: "cabinet-refinishing-houston-tx",
+    summary:
+      "A Cypress kitchen with blue painted lower cabinets, peninsula and island, and white painted upper cabinets, photographed after the work.",
+    heroImage: "/images/projects/cypress-two-tone-kitchen/01-kitchen-perimeter-and-island.jpg",
+    afterImage: "/images/projects/cypress-two-tone-kitchen/01-kitchen-perimeter-and-island.jpg",
+    afterAlt: "Cypress kitchen with blue painted lower cabinets and island, white painted upper cabinets and granite counters",
+    gallery: [
+      {
+        src: "/images/projects/cypress-two-tone-kitchen/02-kitchen-peninsula-and-island.jpg",
+        alt: "Blue painted peninsula with open end shelves, a blue island and white painted upper cabinets around a wall oven",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "Cypress, TX" },
+      { label: "Service", value: "Cabinets" },
+      { label: "Finish", value: "Two-tone" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Two-Tone Kitchen Cabinets in Cypress, TX",
+    metaDescription:
+      "Photos of a Cypress, TX kitchen with blue painted lower cabinets and island and white painted uppers.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */

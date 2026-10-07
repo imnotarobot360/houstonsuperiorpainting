@@ -186,6 +186,7 @@ export default function CabinetRefinishingPage() {
         { label: "Drywall repair in Houston", href: "/drywall-repair-houston-tx" },
         { label: "Exterior house painting in Houston", href: "/exterior-painting-houston-tx" },
         { label: "Project: kitchen cabinet refinishing in West University", href: "/projects/west-university-kitchen-cabinet-refinishing" },
+        { label: "Project: two-tone kitchen cabinets in Cypress", href: "/projects/cypress-two-tone-kitchen-cabinets" },
       ]}
       schema={[serviceSchema]}
     />
