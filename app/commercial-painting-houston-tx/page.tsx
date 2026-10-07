@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { RelatedLinks } from "@/components/luxury/related-links";
 import type { Metadata } from "next";
+import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Commercial Painting Houston TX — Houston Superior Painting",
@@ -48,7 +49,6 @@ const SERVICE_JSONLD = {
     { "@type": "City", name: "Sugar Land" }, { "@type": "City", name: "Richmond" }, { "@type": "City", name: "Pearland" },
     { "@type": "Neighborhood", name: "Memorial" }, { "@type": "City", name: "The Woodlands" }, { "@type": "City", name: "Bellaire" },
   ],
-  offers: { "@type": "Offer", priceCurrency: "USD", priceSpecification: { "@type": "PriceSpecification", minPrice: 2500, maxPrice: 75000, priceCurrency: "USD" }, availability: "https://schema.org/InStock" },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Commercial Painting Services",
@@ -62,21 +62,6 @@ const SERVICE_JSONLD = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Property Management Painting" } },
     ],
   },
-};
-
-const FAQ_JSONLD = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much does commercial painting cost in Houston?", acceptedAnswer: { "@type": "Answer", text: "Commercial painting in Houston typically runs $1.50–$4.00 per square foot for interiors and $2.50–$5.00 per square foot for exteriors. Small office repaints start around $2,500. Mid-size projects (5,000 sq ft office) run $8,000–$20,000. Large warehouses and multi-tenant buildings range $25,000–$75,000+. We provide detailed line-item bids." } },
-    { "@type": "Question", name: "Can you paint after hours so we don't lose business?", acceptedAnswer: { "@type": "Answer", text: "Yes. Houston Superior Painting routinely works evenings, overnight shifts, weekends, and holidays for restaurants, retail stores, medical offices, and offices where daytime painting isn't possible. Coordination is set during the bidding process so your team plans accordingly." } },
-    { "@type": "Question", name: "Do you carry commercial insurance and provide COI?", acceptedAnswer: { "@type": "Answer", text: "Yes. We carry general liability insurance, workers compensation, and commercial auto. Certificate of Insurance (COI) is provided to your property manager or facilities team upon contract signing. We can add the building owner as additional insured if required." } },
-    { "@type": "Question", name: "How long does a commercial painting project take?", acceptedAnswer: { "@type": "Answer", text: "A typical 3,000 sq ft office interior is 4–6 working days. Retail spaces 2–4 days. Restaurants 3–5 days (often done overnight). Warehouse exteriors 7–14 days. We provide an exact timeline before starting and stick to it — schedule reliability is critical for commercial work." } },
-    { "@type": "Question", name: "Do you handle HOAs and multifamily properties?", acceptedAnswer: { "@type": "Answer", text: "Yes. We paint HOA common areas, multifamily apartments, condo exteriors, and townhouse communities in Greater Houston. We coordinate with property managers, work around tenant schedules, and provide before/after documentation for HOA boards." } },
-    { "@type": "Question", name: "Can you paint medical and dental offices?", acceptedAnswer: { "@type": "Answer", text: "Yes. We use low-VOC and zero-VOC paints for medical, dental, and pediatric environments. Work is scheduled around patient hours. We follow OSHA, EPA, and any client-specific protocols including HIPAA-aware areas." } },
-    { "@type": "Question", name: "Do you do warehouse and industrial coatings?", acceptedAnswer: { "@type": "Answer", text: "Yes. We apply epoxy floor coatings, industrial wall coatings, line striping, safety markings, and high-heat coatings for warehouses, distribution centers, manufacturing, and auto shops. Surface prep includes degreasing, blasting (when needed), and primer matched to substrate." } },
-    { "@type": "Question", name: "What areas do you serve for commercial painting?", acceptedAnswer: { "@type": "Answer", text: "Houston Superior Painting provides commercial painting throughout Houston, Katy, Cypress, Sugar Land, Richmond, Pearland, Memorial, The Heights, Bellaire, and The Woodlands TX. Free bids at (346) 594-5960." } },
-  ],
 };
 
 const BREADCRUMB_JSONLD = {
@@ -108,28 +93,54 @@ const cities = [
   { name: "The Woodlands", slug: "painters-the-woodlands-tx" }, { name: "Rosenberg", slug: "painters-rosenberg-tx" },
 ];
 
-const pricingRows = [
-  { project: "Small office (1,500 sq ft interior)", price: "$2,500 – $5,500", note: "2–4 days" },
-  { project: "Mid-size office (5,000 sq ft)", price: "$8,000 – $20,000", note: "5–10 days" },
-  { project: "Retail store interior", price: "$3,500 – $9,000", note: "2–5 days" },
-  { project: "Restaurant (after-hours)", price: "$5,000 – $15,000", note: "3–5 nights" },
-  { project: "Medical / dental office", price: "$4,000 – $12,000", note: "3–6 days" },
-  { project: "Warehouse exterior (10,000 sq ft)", price: "$12,000 – $28,000", note: "7–14 days" },
-  { project: "Multi-tenant building exterior", price: "$15,000 – $50,000", note: "10–21 days" },
-  { project: "HOA common-area package", price: "$8,000 – $25,000", note: "5–14 days" },
-  { project: "Industrial epoxy floor (1,500 sq ft)", price: "$4,500 – $9,500", note: "3–5 days" },
+// 2026 price bands — every figure comes from PRICES_2026 (lib/business.ts). Per sq ft of WALL, repaints only.
+const priceRows = [
+  { space: "Office walls, standard height", price: `${PRICES_2026.commercialOffice} / sq ft of wall`, moves: "Occupied vs empty, accent walls, night work" },
+  { space: "Retail interior, tenant turn", price: `${PRICES_2026.commercialRetail} / sq ft of wall`, moves: "Color change, patches, after-hours only" },
+  { space: "Warehouse / shop", price: `${PRICES_2026.commercialWarehouse} / sq ft of wall`, moves: "Lift, deck height, oil and dust" },
+  { space: "Exterior storefront / tilt-wall", price: "Quoted from elevation", moves: "Coating spec, boom lift, lane closure" },
+  { space: "Doors and frames, each", price: PRICES_2026.commercialDoorEach, moves: "Both sides, hardware off or masked" },
 ];
 
+const whatWePaint = [
+  "Office suites and common corridors",
+  "Retail and restaurant interiors between tenants",
+  "Warehouses and shop walls",
+  "HOA clubhouses and amenity buildings",
+  "Exterior storefronts and tilt-wall, where the coating spec allows it",
+];
+
+const bidChecklist = [
+  "Rooms or elevations, not “paint the building”",
+  "Primer only where bare, two finish coats, product line named",
+  "Who moves furniture",
+  "Low-VOC or zero-VOC if the suite is occupied the next morning",
+  `COI limits — we carry ${BUSINESS.trust.liabilityCoverage} general liability + workers’ comp`,
+  "A finish date, not “about a week”",
+];
+
+// Visible FAQ text and FAQPage schema are generated from this one array so they always match.
 const faqItems = [
-  { q: "How much does commercial painting cost in Houston?", a: "Commercial painting runs $1.50–$4.00 per sq ft interior and $2.50–$5.00 per sq ft exterior. Small office repaints start at $2,500. Mid-size offices $8,000–$20,000. Large warehouses and multi-tenant $25,000–$75,000+. Detailed line-item bids provided." },
-  { q: "Can you paint after hours?", a: "Yes. We routinely work evenings, overnight, weekends, and holidays for restaurants, retail, medical offices, and offices where daytime work isn't possible. Coordination is set during bidding so your team plans accordingly." },
-  { q: "Do you carry insurance and provide COI?", a: "Yes — general liability, workers comp, and commercial auto. Certificate of Insurance is provided to property managers upon contract signing. We can add building owner as additional insured if required." },
+  { q: "How much does commercial painting cost in Houston?", a: `About ${PRICES_2026.commercialPerSqFt} per sq ft of wall for occupied offices and retail in 2026: offices ${PRICES_2026.commercialOffice}, retail tenant turns ${PRICES_2026.commercialRetail}. Open warehouses with a lift run less per foot, about ${PRICES_2026.commercialWarehouse}. Doors and frames are ${PRICES_2026.commercialDoorEach} each. Exterior storefronts and tilt-wall are quoted from the elevation. After-hours and weekend work adds ${PRICES_2026.commercialAfterHoursPremium}. Every bid is written line by line.` },
+  { q: "Can you paint after hours?", a: `Yes. Most Houston retail and occupied offices want the crew in after 6 p.m. or on Sunday, and we also work overnight, weekends, and holidays for restaurants and medical offices. Night work adds ${PRICES_2026.commercialAfterHoursPremium} for shorter shifts and extra setup and breakdown, and that premium is written into the bid so your team can plan around it.` },
+  { q: "Do you carry insurance and provide COI?", a: `Yes. We carry ${BUSINESS.trust.liabilityCoverage} general liability + workers' comp. We send the Certificate of Insurance to your property manager or facilities team before the start date, and we can add the building owner as additional insured if required.` },
   { q: "How long does a commercial project take?", a: "Typical 3,000 sq ft office: 4–6 days. Retail: 2–4 days. Restaurants (overnight): 3–5 nights. Warehouse exteriors: 7–14 days. Exact timeline before starting and stick to it — schedule reliability matters." },
   { q: "Do you handle HOAs and multifamily?", a: "Yes. HOA common areas, multifamily apartments, condo exteriors, and townhouse communities. We coordinate with property managers, work around tenants, and provide before/after documentation for HOA boards." },
   { q: "Can you paint medical and dental offices?", a: "Yes. Low-VOC and zero-VOC paints, work scheduled around patient hours. We follow OSHA, EPA, and client-specific protocols including HIPAA-aware areas." },
   { q: "Do you do warehouse and industrial coatings?", a: "Yes — epoxy floor coatings, industrial wall coatings, line striping, safety markings, and high-heat coatings. Surface prep includes degreasing, blasting if needed, and primer matched to substrate." },
   { q: "Do you offer maintenance contracts?", a: "Yes. For HOAs, property management firms, and corporate clients we offer annual maintenance contracts — scheduled touch-ups, repainting cycles, and emergency response built into one budgeted line item." },
+  { q: "What areas do you serve for commercial painting?", a: `Houston Superior Painting provides commercial painting throughout Houston, Katy, Cypress, Sugar Land, Richmond, Pearland, Memorial, The Heights, Bellaire, and The Woodlands TX. Free bids at ${BUSINESS.phone}.` },
 ];
+
+const FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
 
 export default function CommercialPaintingHoustonPage() {
   return (
@@ -168,8 +179,8 @@ export default function CommercialPaintingHoustonPage() {
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Schedule Reliability</li>
                 </ul>
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                  <Link href="/contact" className="inline-flex items-center justify-center px-6 py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg text-base shadow-md transition">Request Commercial Bid →</Link>
-                  <a href="tel:+13465945960" className="inline-flex items-center justify-center px-6 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">📞 (346) 594-5960</a>
+                  <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center px-6 py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg text-base shadow-md transition">Request Commercial Bid →</Link>
+                  <a href={PHONE_HREF} className="inline-flex items-center justify-center px-6 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">📞 {BUSINESS.phone}</a>
                 </div>
                 <p className="mt-4 text-sm text-zinc-500">Bids returned within <strong className="text-zinc-700">48 business hours</strong>.</p>
               </div>
@@ -185,7 +196,10 @@ export default function CommercialPaintingHoustonPage() {
           <div className="mx-auto max-w-3xl px-4">
             <h2 className="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Quick Answer</h2>
             <p className="quick-answer text-lg md:text-xl text-zinc-800 leading-relaxed">
-              Houston Superior Painting provides commercial painting for offices, retail, restaurants, medical, warehouses, and HOAs across Greater Houston. Projects range <strong>$2,500–$75,000+</strong> depending on size and scope. We work <strong>after-hours and weekends</strong> to minimize business disruption. Full Certificate of Insurance provided. Free bids at <a href="tel:+13465945960" className="text-emerald-700 underline font-semibold">(346) 594-5960</a>.
+              Houston Superior Painting provides commercial painting for offices, retail, restaurants, medical, warehouses, and HOAs across Greater Houston. In 2026, occupied offices and retail run about <strong>{PRICES_2026.commercialPerSqFt} per sq ft of wall</strong>, and open warehouses with a lift run less per foot. After-hours and weekend work adds <strong>{PRICES_2026.commercialAfterHoursPremium}</strong>. A usable bid names rooms, coats, product, height, protection, and whether the crew is working live or after close. Insured with {BUSINESS.trust.liabilityCoverage} general liability + workers&apos; comp, COI sent before the start date. Free bids at <a href={PHONE_HREF} className="text-emerald-700 underline font-semibold">{BUSINESS.phone}</a>.
+            </p>
+            <p className="mt-6 text-lg text-zinc-700 leading-relaxed">
+              A commercial repaint is not a house bid with more gallons. The constraints are occupants, hours, lift access, and a property manager who needs a certificate of insurance before anyone unlocks the door.
             </p>
           </div>
         </section>
@@ -258,25 +272,65 @@ export default function CommercialPaintingHoustonPage() {
           </div>
         </section>
 
-        {/* PRICING TABLE */}
+        {/* WHAT WE PAINT */}
         <section className="py-16 md:py-24 bg-white">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Commercial Painting Pricing Guide</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">What We Paint</h2>
+            <p className="text-center text-zinc-600 max-w-2xl mx-auto mb-10">Commercial repaints across Greater Houston, occupied or empty.</p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {whatWePaint.map((item) => (
+                <li key={item} className="flex items-start gap-3 bg-zinc-50 border border-zinc-200 rounded-lg px-4 py-3 text-zinc-800">
+                  <span className="text-emerald-600 font-bold" aria-hidden>✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* PRICING TABLE */}
+        <section className="py-16 md:py-24 bg-zinc-50 border-y border-zinc-200">
+          <div className="mx-auto max-w-4xl px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">2026 Commercial Painting Prices in Houston</h2>
             <p className="text-center text-zinc-600 max-w-2xl mx-auto mb-10">Ranges below are for budgeting. Final pricing is project-specific and provided in a written line-item bid.</p>
             <div className="pricing-snippet overflow-x-auto rounded-xl border border-zinc-200 shadow-sm bg-white">
               <table className="w-full text-left">
-                <thead className="bg-zinc-900 text-white"><tr><th className="px-4 py-3 font-semibold">Project Type</th><th className="px-4 py-3 font-semibold">Price Range</th><th className="px-4 py-3 font-semibold">Timeline</th></tr></thead>
+                <thead className="bg-zinc-900 text-white"><tr><th className="px-4 py-3 font-semibold">Space</th><th className="px-4 py-3 font-semibold">2026 Range</th><th className="px-4 py-3 font-semibold">What Moves It</th></tr></thead>
                 <tbody className="divide-y divide-zinc-200">
-                  {pricingRows.map((row) => (
-                    <tr key={row.project} className="hover:bg-zinc-50">
-                      <td className="px-4 py-3 font-medium">{row.project}</td>
-                      <td className="px-4 py-3 text-emerald-700 font-semibold">{row.price}</td>
-                      <td className="px-4 py-3 text-zinc-600">{row.note}</td>
+                  {priceRows.map((row) => (
+                    <tr key={row.space} className="hover:bg-zinc-50">
+                      <td className="px-4 py-3 font-medium">{row.space}</td>
+                      <td className="px-4 py-3 text-emerald-700 font-semibold whitespace-nowrap">{row.price}</td>
+                      <td className="px-4 py-3 text-zinc-600">{row.moves}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
+            <p className="mt-6 text-zinc-700 leading-relaxed">
+              These are labor-and-material ranges for repaints, not new-construction spray packages. Empty suites price at the bottom. A live medical or law office prices at the top because of protection and hours.
+            </p>
+
+            <h3 className="mt-12 text-2xl font-bold">After-Hours Work: +{PRICES_2026.commercialAfterHoursPremium}</h3>
+            <p className="mt-3 text-zinc-700 leading-relaxed">
+              Most Houston retail and occupied offices want the crew in after 6 p.m. or on Sunday. That is a real cost: shorter shifts, more setup and breakdown, same insurance. After-hours and weekend work adds <strong>{PRICES_2026.commercialAfterHoursPremium}</strong>. We would rather write the premium on the bid than pretend a night job prices like a Tuesday empty suite.
+            </p>
+          </div>
+        </section>
+
+        {/* BID CHECKLIST */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="mx-auto max-w-3xl px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">What the Bid Should Include</h2>
+            <p className="text-center text-zinc-600 max-w-2xl mx-auto mb-10">Compare bids line by line. If one of these is missing, ask before you sign.</p>
+            <ul className="space-y-3">
+              {bidChecklist.map((item) => (
+                <li key={item} className="flex items-start gap-3 bg-zinc-50 rounded-xl p-4 text-zinc-800">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-700 text-white text-sm font-bold flex items-center justify-center" aria-hidden>✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -318,7 +372,7 @@ export default function CommercialPaintingHoustonPage() {
             <p className="text-emerald-50 text-lg mb-8 max-w-2xl mx-auto">Line-item bids within 48 business hours. COI provided on signature. After-hours work standard.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 font-semibold rounded-lg text-base shadow-md transition">Request Bid →</Link>
-              <a href="tel:+13465945960" className="inline-flex items-center justify-center px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">📞 (346) 594-5960</a>
+              <a href={PHONE_HREF} className="inline-flex items-center justify-center px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">📞 {BUSINESS.phone}</a>
               <a href="mailto:info@houstonsuperiorpainting.com" className="inline-flex items-center justify-center px-8 py-4 bg-emerald-900 hover:bg-emerald-950 text-white font-semibold rounded-lg text-base transition">✉ Email Specs</a>
             </div>
           </div>

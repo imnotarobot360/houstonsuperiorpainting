@@ -425,4 +425,33 @@ export const PRICES_2026 = {
   cabinetsPerDoor: "$100–$175",
   accentWall: "$150–$400",
   ceilingsWholeHome: "$1,500–$3,500",
+  // ─── Added 2026-10-07 from Juan's blog drafts (new categories only; where a
+  // draft overlapped an existing row above, the existing row was kept). ───
+  // Exterior add-on: failed butt joints on most elevations.
+  caulkHeavyAdd: "$400–$1,200",
+  // Brick. Limewash is priced per sq ft of brick face, not living area.
+  limewashPerSqFt: "$4–$8",
+  limewashHome2500: "$6,000–$10,000",
+  paintedBrickPerSqFt: "$2–$3.50",
+  paintedBrickRanch: "$4,500–$9,000",
+  // Older Heights-style bungalow exterior: prep (scrape, glaze, sill repair) drives it.
+  bungalowExterior: "$4,500–$9,000",
+  // Popcorn ceilings.
+  popcornRemovalPerSqFt: "$1.50–$3.50",
+  popcornPaintPerSqFt: "$1–$2",
+  popcornSingleRoom: "$450–$900",
+  popcornHome1500: "$3,500–$7,500",
+  // Townhomes and patio homes.
+  frontDoorOnly: "$250–$450",
+  townhomeDoorAndTrim: "$400–$1,200",
+  townhomeExterior2Story: "$3,500–$7,500",
+  townhomeExterior3StoryRear: "$6,500–$11,000",
+  townhomeInterior: "$2,800–$5,500",
+  // Commercial repaints, per sq ft of wall.
+  commercialPerSqFt: "$1.50–$4",
+  commercialOffice: "$1.50–$3",
+  commercialRetail: "$2–$4",
+  commercialWarehouse: "$0.75–$2",
+  commercialDoorEach: "$75–$150",
+  commercialAfterHoursPremium: "15–30%",
 } as const
