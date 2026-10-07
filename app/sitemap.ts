@@ -116,6 +116,9 @@ function contentDateFor(route: string, filePath: string): Date | null {
 // on disk, so they must be listed here by hand or the sitemap advertises a URL
 // that immediately 308s — Google reports those as "Page with redirect" and
 // drops them from the index.
+//
+// Pages whose own metadata canonicalises to a different URL are dropped too,
+// by isSelfCanonical() below.
 const EXCLUDED = new Set([
   'blog', // /blog index is added explicitly below
   'garage-epoxy-houston-tx', // 308s to houstonsuperiorepoxy.com
@@ -140,6 +143,24 @@ const EXCLUDED_TREES = new Set([
   // See docs/seo-audit-2026-08.md §6.
   'chatgpt',
 ])
+
+/**
+ * False when a page's own metadata declares a canonical URL for a DIFFERENT
+ * route (e.g. /blog/soft-washing-houston-tx canonicalises to
+ * /soft-washing-houston-tx). A sitemap must list only preferred canonical URLs;
+ * Google reports the others as "Alternate page with proper canonical tag".
+ * Only literal canonical strings are checked; computed ones are trusted.
+ */
+function isSelfCanonical(appDir: string, route: string): boolean {
+  try {
+    const src = fs.readFileSync(path.join(appDir, route, 'page.tsx'), 'utf8')
+    const m = src.match(/canonical:\s*["'`]https:\/\/houstonsuperiorpainting\.com\/?([^"'`$]*)["'`]/)
+    if (!m) return true
+    return m[1].replace(/\/$/, '') === route
+  } catch {
+    return true
+  }
+}
 
 // Per-route priority/changeFrequency hints. Anything not listed falls back to
 // sensible defaults based on its path prefix.
@@ -240,7 +261,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const excluded = new Set([...EXCLUDED, ...(await redirectedRoutes())])
   collectRoutes(appDir, '', collected, excluded)
 
-  const entries: MetadataRoute.Sitemap = collected.map(({ route, lastModified }) => {
+  const entries: MetadataRoute.Sitemap = collected
+    .filter(({ route }) => isSelfCanonical(appDir, route))
+    .map(({ route, lastModified }) => {
     const { priority, changeFrequency } = routeMeta(route)
     return {
       url: route ? `${baseUrl}/${route}` : baseUrl,

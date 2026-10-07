@@ -1,12 +1,21 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
+  title: "Memorial Cabinet Refinishing | Houston Superior Painting",
+  description: "Kitchen cabinet refinishing in Memorial, Houston: degrease, sand, bonding primer and a sprayed finish. Free written estimate. 5-year warranty.",
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/cabinet-refinishing-memorial',
+    canonical: "https://houstonsuperiorpainting.com/cabinet-refinishing-memorial",
   },
-  title: "Cabinet Refinishing Memorial | Houston Superior Painting",
-  description: "Premium cabinet refinishing in Memorial, Houston. Transform your kitchen for a fraction of replacement cost. Free quote — call (346) 594-5960.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "Memorial Cabinet Refinishing | Houston Superior Painting",
+    description: "Kitchen cabinet refinishing in Memorial, Houston: degrease, sand, bonding primer and a sprayed finish. Free written estimate. 5-year warranty.",
+    url: "https://houstonsuperiorpainting.com/cabinet-refinishing-memorial",
+    siteName: "Houston Superior Painting",
+    type: "website",
+  },
 }
 
 export default function CabinetRefinishingMemorialPage() {
@@ -16,48 +25,45 @@ export default function CabinetRefinishingMemorialPage() {
       serviceSlug="cabinet-refinishing"
       zone="Memorial, Houston, TX"
       zoneSlug="memorial"
-      metaTitle="Cabinet Refinishing Memorial | Houston Superior Painting"
-      metaDescription="Premium cabinet refinishing in Memorial, Houston. Transform your kitchen for a fraction of replacement cost."
-      h1="Cabinet Refinishing in Memorial, Houston, TX"
-      heroSubheading="Transform your Memorial kitchen with professional cabinet refinishing — factory-smooth finishes, 5-year warranty, and completed in days, not weeks."
-      introLocal="Memorial homeowners understand quality. When it comes to updating your kitchen, cabinet refinishing offers a smart alternative to the $40,000+ cost of full cabinet replacement. Houston Superior Painting has refinished cabinets throughout Memorial Park, Hunters Creek Village, and Bunker Hill, delivering factory-quality finishes that transform kitchens and add lasting value to your home."
-      serviceOverview="Our cabinet refinishing process includes thorough degreasing, sanding, priming with bonding primer, and multiple coats of premium cabinet-grade paint. We use Sherwin-Williams Emerald Urethane and Benjamin Moore Advance — the gold standard for cabinet finishes. A typical kitchen takes 4 to 6 business days, and every project is backed by our 5-year cabinet warranty."
+      metaTitle={"Memorial Cabinet Refinishing | Houston Superior Painting"}
+      metaDescription={"Kitchen cabinet refinishing in Memorial, Houston: degrease, sand, bonding primer and a sprayed finish. Free written estimate. 5-year warranty."}
+      h1={"Cabinet Refinishing in Memorial, Houston, TX"}
+      heroSubheading={"Kitchen cabinet refinishing for Memorial homes: your existing doors and boxes cleaned, sanded, primed and refinished, with a 5-year written warranty."}
+      introLocal={"Many Memorial kitchens have solid cabinets in good condition that are simply dated in color or finish. Refinishing keeps the existing cabinet boxes and doors and changes the color and sheen, which avoids the demolition and lead time of replacing cabinets. It is not the right fit for cabinets that are water-damaged, delaminating or laid out in a way you want to change, and we will tell you if yours fall into that group."}
+      serviceOverview={"Cabinet refinishing includes removing and labeling doors and drawer fronts, degreasing, sanding, filling where needed, applying a bonding primer and spraying the finish coats. Cabinet boxes are masked and finished in place. Hardware is removed and reinstalled, or replaced with new hardware you choose. The products and sheen are listed on your written estimate, and every job carries our 5-year written workmanship warranty."}
       whyChooseUs={[
-        "Factory-quality finishes achieved through meticulous preparation and premium materials.",
-        "Save 60-70% compared to cabinet replacement while achieving a similar transformation.",
-        "5-year written cabinet warranty covering adhesion, durability, and finish quality.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Minimal kitchen downtime — most projects complete in 4-6 business days."
+        "Doors and drawer fronts removed and labeled, so every piece goes back where it came from.",
+        "Degreasing and sanding before priming: the steps that decide whether a cabinet finish lasts.",
+        "Bonding primer and a sprayed finish for a smooth, even surface.",
+        "Kitchen protected, and work areas cleaned at the end of each day.",
+        "A written estimate that lists the cabinets, prep and products.",
       ]}
-      priceRange="$4,500 – $12,000"
-      priceMin={4500}
-      priceMax={12000}
-      priceDetails="Cabinet refinishing in Memorial typically ranges from $4,500 to $12,000, depending on kitchen size, cabinet style, and finish complexity. This represents 60-70% savings compared to full cabinet replacement."
+      priceDetails={`Our published range is ${PRICES_2026.cabinetsPerKitchen} per kitchen, and most kitchens land around ${PRICES_2026.cabinetsAverage}. The number of doors and drawers, islands and pantry cabinets, color changes and repairs set where your kitchen falls. The written estimate is free.`}
       faqs={[
         {
-          question: "How long does cabinet refinishing take?",
-          answer: "A typical Memorial kitchen takes 4 to 6 business days. We work efficiently while never rushing the preparation or cure times that ensure a lasting finish."
+          question: "How much does cabinet refinishing cost in Memorial?",
+          answer: `Our published range is ${PRICES_2026.cabinetsPerKitchen} per kitchen, and most kitchens land around ${PRICES_2026.cabinetsAverage}. The number of doors and drawers, islands, color changes and repairs set your exact price in a free written estimate.`,
         },
         {
-          question: "What paint do you use on cabinets?",
-          answer: "We use Sherwin-Williams Emerald Urethane and Benjamin Moore Advance — the gold standard for cabinet finishes. Both are extremely durable and provide a factory-smooth finish."
+          question: "How long does cabinet refinishing take?",
+          answer: "It depends on the number of doors and drawers and on drying and cure time between coats. The schedule is set in your written estimate before work starts.",
         },
         {
           question: "Can I use my kitchen during the project?",
-          answer: "We work to minimize disruption. You'll have partial access to your kitchen most days, though some areas will be off-limits during active work and curing."
+          answer: "Partly. Cabinets being worked on are masked and should not be used, but we plan the work so the kitchen is not shut down any longer than necessary.",
         },
         {
-          question: "How much does cabinet refinishing cost in Memorial?",
-          answer: "Cabinet refinishing typically ranges from $4,500 to $12,000, representing 60-70% savings compared to full replacement."
-        },
-        {
-          question: "How long will the finish last?",
-          answer: "With proper care, our cabinet finishes last 10-15 years. We back every project with a 5-year written warranty covering adhesion and durability."
+          question: "How should I treat newly painted cabinets?",
+          answer: "Paint keeps curing for a few weeks after it feels dry, so close doors gently, avoid scrubbing and wait before putting heavy items against freshly painted surfaces. After that, mild soap and water is all they need.",
         },
         {
           question: "Can you change the color of my cabinets?",
-          answer: "Yes — we can refinish cabinets in any color. White, off-white, and navy are popular choices. We provide color samples during consultation."
-        }
+          answer: "Yes. Cabinets can be refinished in any color and sheen. Color samples are part of the estimate process.",
+        },
+        {
+          question: "Do I have to pay anything before work starts?",
+          answer: `${BUSINESS.paymentPolicy.sentence}`,
+        },
       ]}
       testimonials={[
         {
@@ -77,14 +83,14 @@ export default function CabinetRefinishingMemorialPage() {
         }
       ]}
       relatedPages={[
+        { title: "Cabinet Refinishing Houston", href: "/cabinet-refinishing-houston-tx" },
+        { title: "Interior Painting Memorial", href: "/interior-painting-memorial" },
+        { title: "Painters in Memorial", href: "/painters-memorial-tx" },
         { title: "Cabinet Refinishing Tanglewood", href: "/cabinet-refinishing-tanglewood" },
-        { title: "Cabinet Refinishing Bellaire", href: "/cabinet-refinishing-bellaire-west-university" },
+        { title: "Cabinet Refinishing Bellaire & West University", href: "/cabinet-refinishing-bellaire-west-university" },
         { title: "Cabinet Refinishing The Heights", href: "/cabinet-refinishing-the-heights" },
-        { title: "Cabinet Refinishing Sugar Land", href: "/cabinet-refinishing-sugar-land" },
-        { title: "Cabinet Refinishing Katy", href: "/cabinet-refinishing-katy-cinco-ranch" },
-        { title: "Cabinet Refinishing Cypress", href: "/cabinet-refinishing-cypress-bridgeland" }
       ]}
-      warrantyYears={3}
+      warrantyYears={5}
       warrantyType="Cabinet"
     />
   )

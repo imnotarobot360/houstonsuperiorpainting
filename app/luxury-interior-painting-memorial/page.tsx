@@ -1,15 +1,17 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS } from "@/lib/business"
 
 export const metadata: Metadata = {
-  title: "Luxury Interior Painting Memorial TX | Houston Superior Painting",
-  description: "High-end interior painting for Memorial homes. Custom finishes, designer coordination, premium materials. Master craftsmen. Free consultation.",
+  title: "Luxury Interior Painting in Memorial, Houston, TX",
+  description: "High-end interior painting for Memorial homes: detailed millwork, tall ceilings and designer color specs. Priced after an on-site look. 5-year warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/luxury-interior-painting-memorial",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "Luxury Interior Painting Memorial TX — Houston Superior Painting",
-    description: "High-end interior painting for Memorial homes. Custom finishes, designer coordination, premium materials.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "Luxury Interior Painting in Memorial, Houston, TX",
+    description: "High-end interior painting for Memorial homes: detailed millwork, tall ceilings and designer color specs. Priced after an on-site look. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/luxury-interior-painting-memorial",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -23,48 +25,45 @@ export default function LuxuryInteriorPaintingMemorialPage() {
       serviceSlug="luxury-interior-painting"
       zone="Memorial"
       zoneSlug="memorial"
-      metaTitle="Luxury Interior Painting Memorial TX — Houston Superior Painting"
-      metaDescription="High-end interior painting for Memorial homes. Custom finishes, designer coordination, premium materials."
-      h1="High-End Interior Painting in Memorial, TX"
-      heroSubheading="Master-level interior painting for Memorial's finest residences — from classic estates to contemporary builds in Memorial Villages."
-      introLocal="Memorial represents some of Houston's most distinguished real estate — from stately homes along Memorial Drive to contemporary estates in Piney Point Village, Hunters Creek, and Bunker Hill. These exceptional properties demand painters who understand the difference between standard work and true craftsmanship. Houston Superior Painting brings the expertise, materials, and attention to detail that Memorial homeowners expect."
-      serviceOverview="Our luxury interior painting service goes beyond standard applications. We offer specialty finishes including lacquer, Venetian plaster, metallic effects, and custom decorative techniques. We use the finest materials available — Farrow & Ball, Fine Paints of Europe, Benjamin Moore Aura — and coordinate seamlessly with designers and architects. Every project includes dedicated project management and our comprehensive 5-year warranty."
+      metaTitle={"Luxury Interior Painting in Memorial, Houston, TX"}
+      metaDescription={"High-end interior painting for Memorial homes: detailed millwork, tall ceilings and designer color specs. Priced after an on-site look. 5-year warranty."}
+      h1={"High-End Interior Painting in Memorial, TX"}
+      heroSubheading={"Interior painting for larger and more detailed Memorial homes: millwork, paneling, tall ceilings and designer-specified colors."}
+      introLocal={"Larger Memorial homes, including many in the Memorial Villages, often have paneled rooms, detailed crown and casing, built-ins, two-story foyers and curved stairwells. That detail is where finish quality shows: straight cut lines, filled and sanded joints in trim, and an even sheen across large walls. Because the scope varies so much from home to home, we price this work after walking the house rather than from a per-square-foot rate. You can see a whole-home interior repaint we completed in Memorial further down this page."}
+      serviceOverview={"This service covers walls, ceilings, millwork, paneling, built-ins and doors, plus Venetian plaster for feature walls. If you are working with an interior designer, we follow their color and sheen specifications and coordinate our schedule with theirs. We use Sherwin-Williams, Benjamin Moore and Farrow & Ball products, listed on your written estimate, and every job carries our 5-year written workmanship warranty."}
       whyChooseUs={[
-        "Extensive experience in Memorial Villages — Piney Point, Hunters Creek, Bunker Hill, Spring Valley, and Hedwig Village.",
-        "Master craftsmen skilled in lacquer, Venetian plaster, and specialty decorative finishes.",
-        "Seamless coordination with interior designers, architects, and general contractors.",
-        "Premium materials including Farrow & Ball, Fine Paints of Europe, and Benjamin Moore Aura.",
-        "Dedicated project manager with daily communication and complete documentation."
+        "Pricing based on a walkthrough, with the scope written room by room.",
+        "Trim and millwork filled, caulked and sanded before finishing.",
+        "Your designer's color and sheen specifications followed.",
+        "Venetian plaster available for feature walls.",
+        "Floors, furniture and finishes protected throughout the job.",
       ]}
-      priceRange="$12,000 – $85,000+"
-      priceMin={12000}
-      priceMax={85000}
-      priceDetails="Luxury interior painting in Memorial varies based on project scope, specialty finishes, and property size. Whole-home projects typically range from $12,000 to $85,000+. We provide detailed proposals after an in-person consultation."
+      priceDetails={"We don't publish a price range for high-end interior work. The cost depends on the surface, its condition, the area and the technique, so it is priced after an on-site look. The estimate is free, and nothing is due until you approve it."}
       faqs={[
         {
-          question: "What makes your luxury service different from standard interior painting?",
-          answer: "We bring master craftsmen, premium materials (Farrow & Ball, Fine Paints of Europe), specialty finish capabilities, dedicated project management, and seamless designer coordination. The result is museum-quality work."
+          question: "How is this different from your standard interior painting?",
+          answer: "The prep-first process is the same; the difference is scope. Detailed millwork, paneling, tall spaces and specified finishes take more prep and more careful work, so we price them after a walkthrough instead of from our standard published ranges.",
         },
         {
-          question: "What specialty finishes do you offer?",
-          answer: "We offer lacquer finishes, Venetian plaster, limewash, metallic effects, faux techniques, grasscloth installation, and custom decorative work. Our craftsmen have decades of combined experience."
+          question: "Do you work with interior designers?",
+          answer: "Yes. We follow a designer's color and sheen schedule and coordinate the timing of our work with theirs and with other trades.",
         },
         {
-          question: "Do you coordinate with interior designers?",
-          answer: "Absolutely. We regularly work with Memorial's top designers, following detailed specifications, attending coordination meetings, and providing samples as needed."
+          question: "What decorative finishes do you offer?",
+          answer: "For walls, ceilings and millwork we offer Venetian plaster, Roman Clay, lacquer, metallic and faux finishes, and grasscloth and wallcovering. Specialty work is priced after an on-site look.",
         },
         {
-          question: "How do you handle large Memorial estate projects?",
-          answer: "Large projects receive a dedicated project manager, detailed phased scheduling, and coordination with other trades. We can work around renovation schedules and family activities."
+          question: "How much does high-end interior painting cost in Memorial?",
+          answer: "We don't publish a price range for high-end interior painting, because the cost depends on the surface, its condition, the area and the technique. We price it after an on-site look, and the estimate is free.",
         },
         {
-          question: "What Memorial neighborhoods do you serve?",
-          answer: "We serve all Memorial Villages including Piney Point Village, Hunters Creek, Bunker Hill, Spring Valley, Hedwig Village, and the greater Memorial area."
+          question: "Can we stay in the house during the project?",
+          answer: "Usually, yes. Large homes can be done in sections so the rest of the house stays usable, with floors and furniture protected in the areas being painted.",
         },
         {
-          question: "What warranty do you provide?",
-          answer: "All luxury projects include our comprehensive 5-year workmanship warranty with priority service. We maintain detailed records and provide complete documentation."
-        }
+          question: "Do I have to pay anything before work starts?",
+          answer: `${BUSINESS.paymentPolicy.sentence}`,
+        },
       ]}
       testimonials={[
         {
@@ -84,12 +83,13 @@ export default function LuxuryInteriorPaintingMemorialPage() {
         }
       ]}
       relatedPages={[
+        { title: "Interior Painting Memorial", href: "/interior-painting-memorial" },
+        { title: "Interior Painting Houston", href: "/interior-painting-houston-tx" },
+        { title: "Venetian Plaster", href: "/venetian-plaster-houston-tx" },
+        { title: "Cabinet Refinishing Memorial", href: "/cabinet-refinishing-memorial" },
         { title: "Luxury House Painters Houston", href: "/luxury-house-painters-houston" },
         { title: "Luxury Exterior Painting River Oaks", href: "/luxury-exterior-painting-river-oaks" },
-        { title: "Interior Painting Memorial", href: "/interior-painting-memorial" },
-        { title: "Cabinet Refinishing Memorial", href: "/cabinet-refinishing-memorial" },
-        { title: "Limewash & Decorative Finishes", href: "/limewash-decorative-finishes-memorial" },
-        { title: "Painters Memorial TX", href: "/painters-memorial-tx" }
+        { title: "Painters in Memorial", href: "/painters-memorial-tx" },
       ]}
       warrantyYears={5}
       warrantyType="Luxury Interior"

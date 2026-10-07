@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/exterior-painting-bellaire-west-university',
   },
-  title: "Exterior Painting Bellaire & West University | Free Estimates",
-  description: "Premium exterior painting in Bellaire and West University Place. 5-year warranty, 5-star reviews. Free quote — call (346) 594-5960.",
+  title: "Exterior Painting Bellaire & West University TX",
+  description: "Exterior house painting in Bellaire and West University Place, TX: washing, wood repair, priming and a 5-year written warranty. Free written estimate.",
 }
 
 export default function ExteriorPaintingBellaireWestUPage() {
@@ -16,48 +17,48 @@ export default function ExteriorPaintingBellaireWestUPage() {
       serviceSlug="exterior-painting"
       zone="Bellaire & West University, TX"
       zoneSlug="bellaire-west-university"
-      metaTitle="Exterior Painting Bellaire & West University | Houston Superior Painting"
-      metaDescription="Premium exterior painting in Bellaire and West University Place. 5-year warranty, 5-star reviews."
-      h1="Exterior Painting in Bellaire and West University Place, Houston, TX"
-      heroSubheading="The painting team Bellaire and West University homeowners trust to deliver flawless exterior painting — prepped for Houston weather, finished beautifully, and backed by a 5-year written warranty."
-      introLocal="When Bellaire and West University homeowners search for an exterior painter, they're looking for a team that understands both the classic ranch homes built in the 1950s-60s and the contemporary new construction throughout these neighborhoods. Houston Superior Painting has protected and beautified exteriors throughout Bellaire and West U with coatings engineered for Houston's demanding climate."
-      serviceOverview="Our exterior painting service includes the full scope: power washing, wood rot repair, caulking, priming, and finish coats with premium exterior-grade materials. We use Sherwin-Williams Duration, SuperPaint, and Benjamin Moore Aura Exterior. A typical project takes 4 to 8 business days, and every job is backed by our 5-year written exterior warranty."
+      metaTitle="Exterior Painting Bellaire & West University TX"
+      metaDescription="Exterior house painting in Bellaire and West University Place, TX: washing, wood repair, priming and a 5-year written warranty. Free written estimate."
+      h1="Exterior Painting in Bellaire and West University Place, TX"
+      heroSubheading="Washing, repairs, caulking and priming before any paint goes on, Sherwin-Williams and Benjamin Moore exterior paints, and a 5-year written workmanship warranty."
+      introLocal="Bellaire and West University Place are separate cities surrounded by Houston, with original mid-century homes, often brick with painted wood trim, alongside newer, larger rebuilds with siding or stucco. Each needs different prep, and Houston's humidity and heat are hard on exterior paint, so we look at the house before pricing it."
+      serviceOverview="Exterior work starts with pressure washing and scraping loose paint, then wood repair, caulking and spot-priming before the finish coats. Houston's humidity, heat and summer storms are hard on exterior paint, so we schedule coats around rain and follow each paint maker's temperature and humidity limits."
       whyChooseUs={[
-        "Experience with both classic mid-century homes and contemporary new construction in Bellaire and West U.",
-        "Familiar with local permit requirements and neighborhood guidelines.",
-        "5-year written exterior warranty — the longest in the Houston metro area.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line."
+        "Prep planned for both original mid-century homes and newer rebuilds, including wood trim, siding and stucco.",
+        "Rotted siding, trim and fascia are found at the estimate and listed in the written scope before work starts.",
+        "Sherwin-Williams and Benjamin Moore exterior paints, chosen for the surface.",
+        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
       ]}
-      priceRange="$6,200 – $21,000"
-      priceMin={6200}
-      priceMax={21000}
-      priceDetails="Exterior painting in Bellaire and West University typically ranges from $6,200 to $21,000 for a complete repaint, depending on home size, stories, substrate type, and prep complexity."
+      priceDetails={`Exterior work typically falls around ${PRICES_2026.exteriorPerSqFt} per square foot. Height, siding type, the amount of wood repair and how much of the house is unpainted brick all change the total; the free written estimate gives you the exact number.`}
       faqs={[
         {
-          question: "How long does an exterior painting project take?",
-          answer: "For a typical home in Bellaire or West U, a full exterior repaint takes between 4 and 8 business days, weather permitting."
+          question: "How much does exterior painting cost in Bellaire and West University Place?",
+          answer: `Our published range for a typical whole-house exterior is ${PRICES_2026.exteriorPerHome}; a 2,500 sq ft two-story runs about ${PRICES_2026.exterior2500TwoStory}. Height, siding and repairs move the number, so the free written estimate is the real price.`,
         },
         {
-          question: "What paint brands do you use for exteriors?",
-          answer: "We use Sherwin-Williams Duration and SuperPaint, as well as Benjamin Moore Aura Exterior."
+          question: "What paint do you use on exteriors?",
+          answer: "Sherwin-Williams and Benjamin Moore exterior paints, chosen for the surface: wood siding and trim, fiber cement, stucco or masonry.",
         },
         {
           question: "Do you repair wood rot before painting?",
-          answer: "Yes — wood rot repair is included in our scope, especially important for older Bellaire homes with wood siding."
+          answer: "Yes. Wood rot repair is one of our services. We check siding, trim and fascia during the estimate, and any repairs are listed in the written scope before work starts.",
         },
         {
-          question: "How much does exterior painting cost?",
-          answer: "Exterior painting typically ranges from $6,200 to $21,000 for a complete repaint."
+          question: "How long does an exterior repaint take?",
+          answer: "It depends on the size and height of the home, the amount of prep and repair, and the weather. We tell you the expected duration with the written estimate and schedule coats around rain.",
         },
         {
-          question: "What's included in your 5-year warranty?",
-          answer: "Our warranty covers peeling, flaking, blistering, and adhesion failures caused by improper preparation or application."
+          question: "My house was built before 1978. Does that matter?",
+          answer: "Homes built before 1978 may contain lead paint. Federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask any painter for their certification before sanding or scraping begins.",
         },
         {
-          question: "Do you handle older homes with lead paint?",
-          answer: "Yes — we are EPA Lead-Safe RRP Certified for pre-1978 homes, which is common in Bellaire."
-        }
+          question: "What does the warranty cover?",
+          answer: "Every project comes with a 5-year written workmanship warranty. The terms are written out with your estimate, so you can read them before you approve anything.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+        },
       ]}
       testimonials={[
         {

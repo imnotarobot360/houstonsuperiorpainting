@@ -3,17 +3,17 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LocationPageTemplate } from "@/components/location-page-template"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
-import { PRICES_2026 } from "@/lib/business"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "House Painters Rosenberg TX | Interior & Exterior Painting",
-  description: "Professional house painters in Rosenberg, TX. Houston Superior Painting offers expert interior and exterior painting for Rosenberg and Fort Bend County.",
+  description: "House painters in Rosenberg, TX: interior, exterior and cabinet painting for older homes and new subdivisions in Fort Bend County. 5-year warranty.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-rosenberg-tx',
   },
   openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Rosenberg TX | Houston Superior Painting",
-    description: "Professional interior and exterior painting services for Rosenberg, TX homeowners. Insured crews, 5-year warranty, serving since 2019. Get your free estimate today.",
+    description: "Interior and exterior painting for Rosenberg, TX homeowners. Insured crews, 5-year workmanship warranty, free estimates.",
     type: "website",
   },
 }
@@ -36,100 +36,90 @@ export default function PaintersRosenbergTX() {
         <LocationPageTemplate
           city="Rosenberg"
           state="TX"
-          heroHeadline="Reliable House Painters Serving Rosenberg, Texas"
-          heroDescription="Quality painting services for Rosenberg's growing community. From established neighborhoods to new developments, we deliver professional results at fair prices. Proudly serving Fort Bend County."
-          aboutCity={`Rosenberg has grown from a historic railroad town into a thriving Fort Bend County community with a perfect blend of small-town charm and modern amenities. We're proud to serve Rosenberg homeowners with the same quality and professionalism we bring to every project.
+          heroHeadline="House Painters Serving Rosenberg, Texas"
+          heroDescription="Interior, exterior and cabinet painting for Rosenberg homes, from older houses near downtown to newer subdivisions across Fort Bend County."
+          quickAnswer={`Houston Superior Painting paints homes in Rosenberg, TX. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Older homes need more prep than new ones, and that shows up in the written estimate. Insured, 5-year workmanship warranty, and nothing is due until you approve the estimate. Call ${BUSINESS.phone} for a free estimate.`}
+          aboutCity={`Rosenberg grew up as a railroad town on the Brazos River and is now one of Fort Bend County's faster-growing cities. Older homes near the historic downtown sit alongside newer subdivisions on the city's edges.
 
-Whether you're in one of Rosenberg's newer master-planned communities like Brazos Town Center, an established neighborhood near downtown, or anywhere in between, our experienced crews deliver results you'll love. We understand that Rosenberg families work hard for their homes and deserve honest, reliable painting services without surprises.
+Older homes here often have wood siding and trim that need scraping, wood repair, caulk and primer before repainting. Newer homes are usually brick with painted siding, trim and soffits, and tend to need cleaning, caulk touch-up and good coverage on their first repaint. Houston's humidity and summer heat are hard on exterior paint, which is why prep, not just the paint, decides how long a job lasts.
 
-Rosenberg's location in Fort Bend County means homes here face Texas heat, humidity, and occasional severe weather. We select paints and preparation methods specifically suited to these conditions, ensuring your paint job looks great and protects your home for years. Our thorough preparation process—including pressure washing, scraping, priming, and caulking—is what makes the difference between paint that lasts and paint that fails.
+Newer subdivisions often have HOAs that require approval before an exterior color change, so get that approval before the job is scheduled. We can provide the product names and color codes your association asks for.
 
-We've built our reputation in the Rosenberg area on quality work, fair pricing, and excellent customer service. Our 5-year warranty backs up our commitment to results that last.`}
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, and nothing is due until you approve it.`}
           whyChooseUs={[
-            "Fort Bend County trusted: Serving Rosenberg and surrounding communities",
-            "Fair, honest pricing: Detailed estimates with no hidden costs",
-            "Quality materials: Premium paints rated for Texas climate",
-            "Thorough preparation: The foundation of lasting results",
-            "Clean, respectful crews: We treat your home like our own",
-            "5-year written warranty: Our guarantee of lasting quality"
+            "Written estimates with the full scope spelled out",
+            "Thorough preparation: washing, scraping, caulk, wood repair and priming",
+            "Sherwin-Williams and Benjamin Moore products",
+            "Insured: $2M general liability plus workers' comp",
+            "5-year written workmanship warranty",
+            "No upfront payment: nothing is due until you approve the written estimate"
           ]}
           services={[
             {
               title: "Interior Painting",
-              description: "Refresh your Rosenberg home's interior with smooth, professional results. From single rooms to complete repaints, we deliver beautiful finishes.",
+              description: "Walls, ceilings and trim, from single rooms to complete repaints.",
               href: "/interior-painting-houston-tx"
             },
             {
               title: "Exterior House Painting",
-              description: "Protect your Rosenberg home from Texas heat, humidity, and storms. Our premium coatings maintain their beauty for years.",
+              description: "Exterior repaints with cleaning, repair and priming before the finish coats.",
               href: "/exterior-painting-houston-tx"
             },
             {
               title: "Cabinet Refinishing",
-              description: "Update your kitchen without the cost of replacement. Professional cabinet painting transforms your space at a fraction of the cost.",
+              description: "Painted cabinet finishes as an alternative to replacing sound cabinet boxes.",
               href: "/cabinet-refinishing-houston-tx"
             },
             {
               title: "Drywall Repair",
-              description: "Fix cracks, nail pops, and settling damage before painting. Proper repairs ensure flawless final results.",
+              description: "Fix cracks, nail pops, and settling damage before painting.",
               href: "/drywall-repair-houston-tx"
             },
             {
               title: "Pressure Washing",
-              description: "Professional pressure washing for Rosenberg homes. Clean driveways, patios, and siding.",
+              description: "Pressure washing for driveways, patios, and siding.",
               href: "/pressure-washing-houston-tx"
             },
             {
               title: "Limewash Brick",
-              description: "Transform your Rosenberg brick home with elegant European limewash finishes.",
+              description: "Limewash finishes for brick homes, priced after an on-site look.",
               href: "/limewash-brick-painting-houston-tx"
             },
             {
               title: "Commercial Painting",
-              description: "Professional painting for Rosenberg businesses and commercial properties.",
+              description: "Painting for Rosenberg businesses and commercial properties.",
               href: "/commercial-painting-houston-tx"
             },
             {
               title: "Garage Floor Epoxy",
-              description: "Durable epoxy coatings for Rosenberg garages that resist stains and last for years.",
+              description: "Garage floor coatings through our sister brand, Houston Superior Epoxy.",
               href: "https://houstonsuperiorepoxy.com/"
             }
           ]}
           neighborhoods={[
-            "Brazos Town Center",
-            "Seabourne Creek",
-            "Pecan Lakes",
-            "Rosenberg Historic District",
-            "Reading Farms",
-            "Pecan Bend",
-            "Briarwood",
-            "Fort Bend Estates",
-            "Rosenberg Ranch",
-            "Mason Park",
-            "Ralston Creek",
-            "Southgate"
+            "Downtown Rosenberg",
+            "Summer Lakes",
+            "Bonbrook Plantation",
+            "Walnut Creek",
+            "Bridlewood Estates",
+            "Richmond area"
           ]}
-          testimonial={{
-            quote: "We got several quotes for painting our Rosenberg home, and Houston Superior Painting offered the best combination of quality and value. The crew was professional, on-time, and the results exceeded our expectations. Highly recommend!",
-            author: "The Garcia Family",
-            location: "Brazos Town Center, Rosenberg"
-          }}
           faqs={[
             {
               question: "How much does it cost to paint a house in Rosenberg, TX?",
-              answer: `Interior painting in Rosenberg typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates.`
+              answer: `Interior painting in Rosenberg typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
             },
             {
               question: "Do you serve all of Rosenberg and surrounding areas?",
-              answer: "Yes! We serve all of Rosenberg including Brazos Town Center, Seabourne Creek, Pecan Lakes, and surrounding Fort Bend communities like Richmond, Sugar Land, and Fulshear."
+              answer: "Yes. We paint homes throughout Rosenberg and nearby Fort Bend communities such as Richmond, Sugar Land and Fulshear."
             },
             {
               question: "What's the best time to paint exteriors in Rosenberg?",
-              answer: "Fall (October-November) and spring (March-April) offer ideal painting conditions in Rosenberg—moderate temperatures and lower humidity. However, we paint year-round and schedule around weather for proper curing."
+              answer: "Spring and fall usually bring milder temperatures and lower humidity, which make exterior work easier. We paint year-round and schedule around rain and temperature so coatings can cure properly."
             },
             {
-              question: "Do you offer financing for painting projects?",
-              answer: "We accept various payment methods and can discuss payment options for larger projects. Contact us to discuss what works best for your budget."
+              question: "How does payment work?",
+              answer: "Estimates are free. Nothing is due until you approve the written estimate; then a down payment is due, and the balance is due after the final walkthrough."
             }
           ]}
         />

@@ -9,15 +9,19 @@ import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 import { PRICES_2026 } from "@/lib/business"
 
+const TITLE = "House Painters in Richmond TX | Houston Superior Painting"
+const DESCRIPTION =
+  "Interior, exterior & cabinet painting in Richmond, TX. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960."
+
 export const metadata: Metadata = {
-  title: "House Painters Richmond TX — Houston Superior Painting",
-  description: "Professional painters in Richmond TX. Interior, exterior, cabinet painting for Pecan Grove, Long Meadow Farms, Greatwood. 5-year warranty. Free estimates.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-richmond-tx',
   },
   openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "House Painters Richmond TX — Houston Superior Painting",
-    description: "Professional painters in Richmond TX. Interior, exterior, cabinet painting for Pecan Grove, Long Meadow Farms, Greatwood. 5-year warranty.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://houstonsuperiorpainting.com/painters-richmond-tx",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -49,66 +53,61 @@ export default function PaintersRichmondTX() {
         <LocationPageTemplate
           city="Richmond"
           state="TX"
-          heroHeadline="Richmond's Trusted House Painters"
-          heroDescription="Professional painting services for Pecan Grove, Long Meadow Farms, Greatwood, and all Richmond communities. Quality craftsmanship with a 5-year warranty and competitive Fort Bend County pricing."
-          quickAnswer={`Houston Superior Painting provides professional painting services throughout Richmond TX including Pecan Grove, Long Meadow Farms, Greatwood, and Harvest Green. Interior painting costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. We use premium Sherwin-Williams and Benjamin Moore products, work with HOAs, and provide a 5-year warranty. Call (346) 594-5960 for a free estimate.`}
-          aboutCity={`Richmond is Fort Bend County's historic county seat and one of the Greater Houston area's most welcoming communities. From the established neighborhoods of Pecan Grove to the newer developments of Long Meadow Farms and Harvest Green, Richmond offers diverse housing at accessible prices—and every home deserves quality painting services.
+          heroHeadline="House Painters in Richmond, TX"
+          heroDescription="Interior, exterior, and cabinet painting for Richmond homes, from historic downtown to newer communities like Harvest Green and Long Meadow Farms. Insured, with a 5-year workmanship warranty."
+          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Richmond, TX, including Pecan Grove, Long Meadow Farms, Harvest Green, and historic downtown. We are headquartered in Cypress, and our crews work across Greater Houston and Fort Bend County. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We carry $2M general liability + workers' comp and give a 5-year workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
+          aboutCity={`Richmond is the Fort Bend County seat, and its housing ranges from older homes near the historic downtown to newer master-planned communities such as Harvest Green, Long Meadow Farms, and Veranda. The two need different work: older homes usually have more wood siding and trim to check for rot before paint, while newer homes are often ready to replace flat builder-grade interior paint with a washable finish.
 
-Houston Superior Painting has been serving Richmond homeowners since 2019. We understand this community's mix of home styles: established single-story homes in Pecan Grove, newer two-story construction in Long Meadow Farms, and everything in between. Our crews adapt techniques for each home's specific needs while maintaining consistent quality.
+Richmond sits along the Brazos River and has the same Gulf Coast climate as the rest of Greater Houston: heat, humidity, and heavy rain. Exterior paint holds up when it goes on clean, dry, primed surfaces, so every exterior estimate lists the washing, scraping, caulking, and priming we will do.
 
-Richmond's location along the Brazos River means homes here face the same Gulf Coast challenges as the rest of Greater Houston: intense summer heat, high humidity, and occasional flooding threats. We use premium materials rated for these conditions and follow preparation protocols that ensure lasting results.
-
-Many Richmond homeowners appreciate our competitive pricing. We serve Fort Bend County's working families with fair quotes, honest service, and no hidden fees. Our detailed estimates show exactly what you're getting so there are no surprises.
-
-We're familiar with HOA requirements in Pecan Grove, Long Meadow Farms, Greatwood, and other Richmond communities. We help you select colors that meet community standards while achieving the look you want. Every Richmond project is backed by our 5-year workmanship warranty.`}
+Many Richmond communities have HOAs that review exterior colors. We can pull your community's approved color list and help with the approval paperwork before work starts. Homes built before 1978 may contain lead paint, which federal rules require be disturbed only by an EPA-certified renovation firm, so ask any painter about that before work on an older home begins.`}
           whyChooseUs={[
-            "HOA expertise: Pecan Grove, Long Meadow Farms, Greatwood guidelines",
-            "Climate-rated materials: premium paints for Gulf Coast conditions",
-            "Competitive pricing: fair quotes for Fort Bend County families",
-            "New and established homes: skilled with all Richmond housing types",
-            "Professional crews: punctual, clean, respectful of your home",
-            "5-year written warranty on all residential painting",
-            "No hidden fees: detailed estimates with transparent pricing"
+            "Free on-site estimate with a written scope; nothing is due until you approve it",
+            "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
+            "5-year written workmanship warranty",
+            "Sherwin-Williams and Benjamin Moore paints",
+            "Help with HOA color lists and approval paperwork",
+            "Founded in 2019 and headquartered in Cypress, with crews across Greater Houston",
           ]}
           services={[
             {
               title: "Interior Painting Richmond",
-              description: "Transform your Richmond home's interior with smooth, professional finishes. Quality results at Fort Bend County prices.",
+              description: "Walls, ceilings, trim, and doors, from a single room to a whole-home repaint.",
               href: "/interior-painting-houston-tx"
             },
             {
               title: "Exterior Painting Richmond",
-              description: "Protect your Richmond home from Gulf Coast weather with durable exterior coatings built to last.",
+              description: "Wash, scrape, caulk, and prime before the finish coats on siding, trim, and brick.",
               href: "/exterior-painting-houston-tx"
             },
             {
               title: "Cabinet Refinishing Richmond",
-              description: "Update your Richmond kitchen with factory-smooth cabinet finishes. Cost-effective alternative to replacement.",
+              description: "Sprayed cabinet finishes that update a kitchen without replacing the cabinets.",
               href: "/cabinet-refinishing-houston-tx"
             },
             {
               title: "Drywall Repair Richmond",
-              description: "Fix cracks, nail pops, and settling damage before painting for flawless results.",
+              description: "Cracks, nail pops, and settling damage repaired and texture-matched before painting.",
               href: "/drywall-repair-houston-tx"
             },
             {
               title: "Pressure Washing Richmond",
-              description: "Professional cleaning for driveways, sidewalks, and exteriors. Essential prep for painting.",
+              description: "Cleaning for driveways, sidewalks, and exteriors, and the first step before exterior paint.",
               href: "/pressure-washing-houston-tx"
             },
             {
               title: "Limewash Brick Richmond",
-              description: "Transform your Richmond brick home with elegant European limewash finishes.",
+              description: "Limewash or painted brick for Richmond brick homes, priced after an on-site look.",
               href: "/limewash-brick-painting-houston-tx"
             },
             {
               title: "Commercial Painting Richmond",
-              description: "Professional painting for Richmond businesses and commercial properties.",
+              description: "Painting for Richmond businesses and commercial properties.",
               href: "/commercial-painting-houston-tx"
             },
             {
               title: "Garage Floor Epoxy Richmond",
-              description: "Durable epoxy coatings for Richmond garages with multiple color and finish options.",
+              description: "Garage floor epoxy is handled by our separate epoxy brand, Houston Superior Epoxy.",
               href: "https://houstonsuperiorepoxy.com/"
             }
           ]}
@@ -124,37 +123,31 @@ We're familiar with HOA requirements in Pecan Grove, Long Meadow Farms, Greatwoo
             "Veranda",
             "Williams Ranch",
             "Colony Creek",
-            "Fort Bend County"
           ]}
-          testimonial={{
-            quote: "After getting several quotes, Houston Superior Painting stood out for their professionalism and fair pricing. They painted our entire Pecan Grove home interior in under a week, and the quality is excellent. Great communication throughout. Highly recommend for Richmond homeowners!",
-            author: "David & Lisa K.",
-            location: "Pecan Grove, Richmond"
-          }}
           faqs={[
             {
               question: "How much does it cost to paint a house in Richmond?",
-              answer: `Interior painting in Richmond typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates.`
+              answer: `In 2026 interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exteriors run ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
             },
             {
-              question: "Which Richmond neighborhoods do you serve?",
-              answer: "All of them! Pecan Grove, Long Meadow Farms, Greatwood, Harvest Green, Brazos Town Center, and every neighborhood in Richmond."
+              question: "Do you serve all of Richmond?",
+              answer: "Yes. We paint homes across Richmond, including Pecan Grove, Long Meadow Farms, Greatwood, Harvest Green, Veranda, and historic downtown. Call (346) 594-5960 or request an estimate online to confirm your address."
             },
             {
               question: "Do you work with Richmond HOAs?",
-              answer: "Yes! We're familiar with HOA requirements in Pecan Grove, Long Meadow Farms, Greatwood, and other Richmond communities. We help with color selection and approvals."
+              answer: "Yes. We can pull your community's approved color list and help with the approval paperwork before any exterior work starts, and we can send a certificate of insurance to your HOA."
             },
             {
               question: "What paint do you use for Richmond exteriors?",
-              answer: "Sherwin-Williams Duration and SuperPaint—formulated for Gulf Coast humidity, UV exposure, and mildew resistance. Our 5-year warranty covers any issues."
+              answer: "Sherwin-Williams or Benjamin Moore exterior paints suited to heat, humidity, and mildew, such as Sherwin-Williams Duration or SuperPaint. Our 5-year warranty covers peeling, blistering, and flaking caused by our workmanship."
             },
             {
               question: "How long does a paint job take?",
-              answer: "Interior: 4-6 days for a typical home. Exterior: 5-8 days depending on size and prep. We provide specific timelines in your estimate."
+              answer: "It depends on the size of the home and how much prep it needs. Your written estimate states the timeline before any work starts, and exterior work can shift a few days for rain."
             },
             {
               question: "Are you insured?",
-              answer: "Yes, fully insured with $2M liability coverage. Certificates available for HOAs."
+              answer: "Yes. We carry $2M general liability + workers' comp and can send a certificate of insurance to you or your HOA. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license."
             }
           ]}
         />

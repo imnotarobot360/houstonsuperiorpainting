@@ -26,7 +26,7 @@ const PAGE_PATH = "/painters-houston-tx"
 const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
 const TITLE = "House Painters in Houston TX | Houston Superior Painting"
 const DESCRIPTION =
-  "Houston Superior Painting: interior, exterior, and cabinet painters serving Greater Houston since 2019. Five offices, $2M insured, 5-year warranty. Free estimates: (346) 594-5960."
+  "Interior, exterior & cabinet painters serving Houston since 2019. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960."
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -88,7 +88,7 @@ const FAQS = [
   },
   {
     q: "Do you have an office near me?",
-    a: "Cypress (HQ), Houston, Katy, Sugar Land, and Magnolia.",
+    a: "Our headquarters is in Cypress, and we also list locations in Houston, Katy, Sugar Land, and Magnolia. Crews work across Greater Houston, so call (346) 594-5960 or request a free estimate online to confirm we cover your address.",
   },
 ]
 
@@ -126,10 +126,11 @@ export default function PaintersHoustonTX() {
         <PageHero h1="House Painters in Houston, TX" eyebrow="Houston Superior Painting" />
 
         <QuickAnswer>
-          Houston Superior Painting is a Houston painting contractor founded in 2019 by Juan Serra, with 500+ completed
-          projects and a 4.9-star rating across 200+ Google reviews. We paint interiors, exteriors, and cabinets across
-          Greater Houston from five offices, carry $2M liability insurance, and back every job with a 5-year workmanship
-          warranty. Free estimates: (346) 594-5960.
+          Houston Superior Painting is a Houston painting contractor founded in 2019 by Juan Serra and headquartered in
+          Cypress. Our crews paint interiors, exteriors, and kitchen cabinets and repair drywall across Houston and Greater
+          Houston. We carry $2M general liability + workers&apos; comp and back every job with a 5-year workmanship
+          warranty. For a free estimate, call (346) 594-5960 or{" "}
+          <Link href={ESTIMATE_PATH}>request one online</Link>.
         </QuickAnswer>
 
         <Section title="Who we paint for">
@@ -183,11 +184,11 @@ export default function PaintersHoustonTX() {
               },
               {
                 title: "Prep",
-                text: "this is 60% of the job in Houston. Pressure wash to kill mildew, scrape and sand, replace rotted wood, caulk every gap, prime bare surfaces.",
+                text: "the step that decides how long Houston paint lasts. Wash off mildew and chalk, scrape and sand, replace rotted wood, caulk every gap, prime bare surfaces.",
               },
               {
                 title: "Paint",
-                text: "two full coats, sprayed and back-rolled on exteriors, cut and rolled on interiors. We don't paint when humidity is above 85% or surfaces are above 90°F.",
+                text: "two full coats, sprayed and back-rolled on exteriors, cut and rolled on interiors. We schedule around rain, dew, and afternoon heat so each coat can cure.",
               },
               {
                 title: "Walkthrough",
@@ -199,8 +200,8 @@ export default function PaintersHoustonTX() {
 
         <Section title="Why Houston is hard on paint">
           <p>
-            Houston averages 90% morning humidity and 100+ days above 90°F. Paint applied over damp or chalky surfaces
-            peels within two years. South- and west-facing walls fade and chalk fastest. Mildew grows on shaded north
+            Houston&apos;s humidity, heavy rain, and long, hot summers are hard on paint. Paint applied over damp or chalky
+            surfaces peels early. South- and west-facing walls fade and chalk fastest. Mildew grows on shaded north
             walls. HOA communities in Katy, Cypress, and Sugar Land restrict exterior colors and require approval before
             work starts. We handle the ARC submission for you.
           </p>
@@ -259,7 +260,7 @@ export default function PaintersHoustonTX() {
           <p>
             Sherwin-Williams Duration and Emerald for exteriors — both hold up to Gulf Coast UV and moisture. Benjamin
             Moore Aura or Regal Select for interiors. Cabinet enamel: Benjamin Moore Advance or Sherwin-Williams Emerald
-            Urethane. We buy at contractor pricing and pass the product through at cost.
+            Urethane.
           </p>
         </Section>
 
@@ -292,7 +293,7 @@ export default function PaintersHoustonTX() {
 
         <FAQ items={FAQS} title="Frequently asked questions" variant="compact" />
 
-        <Section title="Visit our Houston office">
+        <Section title="Our Houston office">
           <OfficeNap office={office} />
           <p className="mt-6">
             Other offices: <Link href="/painters-cypress-tx">Cypress painters (HQ)</Link>,{" "}

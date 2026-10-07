@@ -1,15 +1,17 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
-  title: "Exterior Painters The Woodlands TX | Houston Superior Painting",
-  description: "Professional exterior painting in The Woodlands, TX. Wood, stucco, brick, hardie board. DRC-compliant colors. 5-year warranty. Free estimates.",
+  title: "The Woodlands Exterior Painting | Houston Superior Painting",
+  description: "Exterior painting in The Woodlands, TX: wood, stucco, brick and fiber-cement, with color info for DRC review. Free estimate. 5-year warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/exterior-painting-the-woodlands",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "Exterior Painters The Woodlands TX — Houston Superior Painting",
-    description: "Professional exterior painting in The Woodlands, TX. Wood, stucco, brick, hardie board. DRC-compliant colors. 5-year warranty.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "The Woodlands Exterior Painting | Houston Superior Painting",
+    description: "Exterior painting in The Woodlands, TX: wood, stucco, brick and fiber-cement, with color info for DRC review. Free estimate. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/exterior-painting-the-woodlands",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -23,48 +25,45 @@ export default function ExteriorPaintingTheWoodlandsPage() {
       serviceSlug="exterior-painting"
       zone="The Woodlands"
       zoneSlug="the-woodlands"
-      metaTitle="Exterior Painters The Woodlands TX — Houston Superior Painting"
-      metaDescription="Professional exterior painting in The Woodlands, TX. Wood, stucco, brick, hardie board. DRC-compliant colors. 5-year warranty."
-      h1="Exterior House Painters in The Woodlands, TX"
-      heroSubheading="Premium exterior painting built to withstand Houston heat and humidity — with colors that meet The Woodlands Design Review Committee standards."
-      introLocal="The Woodlands' lush, tree-lined streets and distinctive architecture require painters who understand both the aesthetic standards and the environmental challenges. From traditional brick homes in Grogan's Mill to contemporary builds in Creekside Park, Houston Superior Painting delivers exterior finishes that protect against Houston's intense UV, humidity, and seasonal storms while meeting DRC guidelines."
-      serviceOverview="Our exterior painting service in The Woodlands includes thorough pressure washing, surface repair, caulking, priming, and premium paint application. We use Sherwin-Williams Duration, SuperPaint, and Emerald exterior lines — all formulated for extreme Texas conditions. Projects typically take 4-10 days depending on home size, and every job includes our 5-year exterior warranty."
+      metaTitle={"The Woodlands Exterior Painting | Houston Superior Painting"}
+      metaDescription={"Exterior painting in The Woodlands, TX: wood, stucco, brick and fiber-cement, with color info for DRC review. Free estimate. 5-year warranty."}
+      h1={"Exterior House Painters in The Woodlands, TX"}
+      heroSubheading={"Exterior painting for homes under The Woodlands' tree canopy, prepared for shade, moisture and Houston heat, with color information ready for your Design Review Committee application."}
+      introLocal={"The Woodlands' heavy tree cover keeps many homes shaded and damp, which encourages mildew, algae and wood rot on siding and trim, especially on the shaded sides of the house. Exterior color changes are reviewed by The Woodlands' Residential Design Review Committee, so settle the color before scheduling. Homes range from wood-sided houses in the earlier villages to brick, stucco and fiber-cement in newer ones, and each surface needs its own prep."}
+      serviceOverview={"Exterior painting in The Woodlands includes washing the house, scraping loose paint, repairing or replacing rotted wood, caulking open joints, spot-priming bare areas and applying the finish coats to siding, trim, doors and fascia. Plants, walkways and windows are covered while we work. We use Sherwin-Williams and Benjamin Moore exterior paints, with the product listed on your written estimate, and every job carries our 5-year written workmanship warranty."}
       whyChooseUs={[
-        "Familiar with The Woodlands Design Review Committee requirements and approved color palettes.",
-        "Experience with all substrate types — wood siding, stucco, brick, hardie board, and mixed exteriors.",
-        "Proper prep work including pressure washing, scraping, sanding, and premium caulking.",
-        "We work around your landscaping and protect all surfaces.",
-        "5-year written workmanship warranty on all exterior projects."
+        "Washing, scraping, caulking and spot-priming are part of the scope, not add-ons.",
+        "Wood repair, if your home needs it, is listed and priced in the written estimate.",
+        "Landscaping, walkways and windows covered, and the site cleaned at the end of each day.",
+        "Sherwin-Williams and Benjamin Moore exterior paints.",
+        "A written estimate that lists surfaces, repairs, prep and products.",
       ]}
-      priceRange="$6,500 – $24,000"
-      priceMin={6500}
-      priceMax={24000}
-      priceDetails="Exterior painting in The Woodlands typically ranges from $6,500 to $24,000 for a complete repaint, depending on home size, substrate condition, trim complexity, and color count. Smaller projects or touch-ups start around $2,500."
+      priceDetails={`Our published range for a typical whole-house exterior is ${PRICES_2026.exteriorPerHome}. A 2,500 sq ft two-story typically runs ${PRICES_2026.exterior2500TwoStory}, or about ${PRICES_2026.exteriorPerSqFt} per square foot of floor area. Siding type, number of stories, wood repair and trim detail move the price within that range. The written estimate is free.`}
       faqs={[
         {
-          question: "How long does exterior painting take in The Woodlands?",
-          answer: "Most exterior projects in The Woodlands take 5 to 10 business days, including prep, priming, and two coats of paint. Larger estates or homes with extensive wood repair may take longer."
-        },
-        {
-          question: "Do you help with Design Review Committee approval?",
-          answer: "Yes — we're familiar with The Woodlands DRC process and can help you select colors from approved palettes. We can also assist with the application if needed."
-        },
-        {
-          question: "What exterior paint do you use?",
-          answer: "We use premium Sherwin-Williams exterior paints including Duration, SuperPaint, and Emerald — all formulated for Texas heat and humidity with excellent fade resistance."
-        },
-        {
           question: "How much does exterior painting cost in The Woodlands?",
-          answer: "Exterior painting typically ranges from $6,500 to $24,000 depending on home size and condition. We provide detailed written estimates after an in-person inspection."
+          answer: `Our published range for a typical whole-house exterior is ${PRICES_2026.exteriorPerHome}, and a 2,500 sq ft two-story typically runs ${PRICES_2026.exterior2500TwoStory}. Siding type, number of stories, wood repair and trim detail decide where your home falls, and your exact price is set in a free written estimate.`,
         },
         {
-          question: "Can you paint brick or stucco exteriors?",
-          answer: "Yes — we specialize in all substrate types including brick, stucco, wood, hardie board, and mixed exteriors. We also offer limewash for brick homes."
+          question: "Do I need approval to change my exterior color?",
+          answer: "Exterior color changes in The Woodlands go through the Residential Design Review Committee. Check the current requirements with The Woodlands Township before you commit to a color. We can give you the color names and product information for your application.",
         },
         {
-          question: "What warranty do you offer on exterior painting?",
-          answer: "Every exterior project includes our 5-year written workmanship warranty. We also honor manufacturer paint warranties and can provide documentation."
-        }
+          question: "Do you treat mildew before painting?",
+          answer: "Yes. Mildew and algae are washed off and treated before painting, because paint applied over them does not bond well and the growth can come back through the new coat.",
+        },
+        {
+          question: "Do you repair wood rot?",
+          answer: "Yes. Rotted siding and trim are repaired or replaced and primed before painting, and the repair is listed in your written estimate.",
+        },
+        {
+          question: "Do I have to pay anything before work starts?",
+          answer: `${BUSINESS.paymentPolicy.sentence}`,
+        },
+        {
+          question: "What warranty do you offer?",
+          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+        },
       ]}
       testimonials={[
         {
@@ -84,12 +83,13 @@ export default function ExteriorPaintingTheWoodlandsPage() {
         }
       ]}
       relatedPages={[
+        { title: "Exterior Painting Houston", href: "/exterior-painting-houston-tx" },
         { title: "Interior Painting The Woodlands", href: "/interior-painting-the-woodlands" },
-        { title: "Painters The Woodlands TX", href: "/painters-the-woodlands-tx" },
-        { title: "Exterior Painting Memorial", href: "/exterior-painting-memorial" },
-        { title: "Exterior Painting Katy", href: "/exterior-painting-katy-cinco-ranch" },
-        { title: "Exterior Painting Sugar Land", href: "/exterior-painting-sugar-land" },
-        { title: "Limewash & Brick Painting", href: "/limewash-brick-painting-houston-tx" }
+        { title: "Painters in The Woodlands", href: "/painters-the-woodlands-tx" },
+        { title: "Exterior Painting Cypress & Bridgeland", href: "/exterior-painting-cypress-bridgeland" },
+        { title: "Wood Rot Repair", href: "/wood-rot-repair-houston-tx" },
+        { title: "Pressure Washing", href: "/pressure-washing-houston-tx" },
+        { title: "Limewash & Brick Painting Houston", href: "/limewash-brick-painting-houston-tx" },
       ]}
       warrantyYears={5}
       warrantyType="Exterior"

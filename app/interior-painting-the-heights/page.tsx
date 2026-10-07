@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/interior-painting-the-heights',
   },
-  title: "Interior Painting The Heights | Houston Superior Painting",
-  description: "Premium interior painting in The Heights, Houston. 5-star reviews, written warranty, family-owned. Free quote — call (346) 594-5960.",
+  title: "Interior Painting The Heights, Houston TX",
+  description: "Interior painting in the Houston Heights: prep for plaster, old trim and new builds, Sherwin-Williams and Benjamin Moore paints, 5-year warranty.",
 }
 
 export default function InteriorPaintingHeightsPage() {
@@ -16,48 +17,48 @@ export default function InteriorPaintingHeightsPage() {
       serviceSlug="interior-painting"
       zone="The Heights, Houston, TX"
       zoneSlug="the-heights"
-      metaTitle="Interior Painting The Heights | Houston Superior Painting"
-      metaDescription="Premium interior painting in The Heights, Houston. 5-star reviews, written warranty, family-owned."
+      metaTitle="Interior Painting The Heights, Houston TX"
+      metaDescription="Interior painting in the Houston Heights: prep for plaster, old trim and new builds, Sherwin-Williams and Benjamin Moore paints, 5-year warranty."
       h1="Interior Painting in The Heights, Houston, TX"
-      heroSubheading="The painting team Heights homeowners trust to deliver flawless interior painting — prepped properly, finished beautifully, and warrantied in writing."
-      introLocal="When Heights homeowners search for a painter, they're looking for a team that understands the unique architectural character of this historic neighborhood. From beautifully restored Victorian homes to sleek modern new construction, Houston Superior Painting has completed projects throughout The Heights, Woodland Heights, and Norhill, and our process respects the craftsmanship these homes deserve."
-      serviceOverview="Our interior painting service in The Heights includes the full scope, from consultation through final inspection. We use premium-tier materials — Sherwin-Williams Emerald, Benjamin Moore Aura, and Behr Marquee (low-VOC) — selected for their durability in Houston's humid climate. A typical project takes 3 to 7 business days, and every job is backed by our 3-year written workmanship warranty + free touch-ups during the first 12 months."
+      heroSubheading="Careful prep, Sherwin-Williams and Benjamin Moore paints, and a 5-year written workmanship warranty, with nothing due until you approve the written estimate."
+      introLocal="The Heights has many early-1900s bungalows and Victorian homes, alongside newer townhomes and rebuilds. Older homes often have plaster walls, original wood trim and many layers of old paint, which take more prep than new drywall. We walk through each home before pricing it."
+      serviceOverview="Interior work covers walls, ceilings, trim and doors. Furniture is moved or covered, holes and cracks are patched, surfaces are sanded and spot-primed, and finish coats go on in Sherwin-Williams or Benjamin Moore paint, with a more washable sheen where rooms take more wear."
       whyChooseUs={[
-        "We know the architectural styles of The Heights — historic bungalows, Craftsman homes, Victorian restorations, and modern new builds — and how to finish each substrate correctly.",
-        "EPA Lead-Safe Certified for pre-1978 homes, which are common in The Heights.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line.",
-        "3-year written workmanship warranty + free touch-ups during the first 12 months."
+        "Careful prep on older plaster, wood trim and built-ins in early-1900s homes.",
+        "A free, written, itemized estimate after an on-site walkthrough.",
+        "Sherwin-Williams and Benjamin Moore paints, including low-VOC options.",
+        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
       ]}
-      priceRange="$4,200 – $16,800"
-      priceMin={4200}
-      priceMax={16800}
-      priceDetails="Interior painting in The Heights typically ranges from $4,200 to $16,800 for a whole-home repaint, depending on square footage, ceiling height, trim complexity, and historic detailing. Single rooms typically run $550 to $1,500."
+      priceDetails={`Most interior work falls around ${PRICES_2026.interiorPerSqFt} per square foot. Larger homes, tall ceilings, detailed trim and drywall repair raise the total; the free written estimate gives you the exact number.`}
       faqs={[
         {
-          question: "How long does an interior painting project take in The Heights?",
-          answer: "For a typical Heights home (1,800 to 4,500 sqft), a full interior repaint takes between 3 and 6 business days. Historic homes with detailed trim may take slightly longer."
-        },
-        {
-          question: "Are you certified to work on older Heights homes?",
-          answer: "Yes — we are EPA Lead-Safe RRP Certified, which is required for homes built before 1978. Many Heights bungalows and Victorian homes fall into this category."
-        },
-        {
-          question: "Will I need to move out during the project?",
-          answer: "No. We work room by room and use low-VOC paint. We protect floors and furniture with drop cloths and plastic sheeting."
-        },
-        {
           question: "How much does interior painting cost in The Heights?",
-          answer: "Interior painting typically ranges from $4,200 to $16,800 for a whole-home repaint. Single rooms run $550 to $1,500."
+          answer: `Our published range for a whole-home interior of about 2,500 sq ft is ${PRICES_2026.fullInterior2500}, and a single room typically runs ${PRICES_2026.singleRoom}. Ceiling height, trim and repairs move the number, so the free written estimate is the real price.`,
         },
         {
-          question: "Do you have experience with historic homes?",
-          answer: "Yes — we've painted dozens of historic Heights homes, including Victorian restorations with original millwork. We understand how to properly prep and paint these surfaces."
+          question: "What paint do you use?",
+          answer: "Sherwin-Williams and Benjamin Moore interior paints. Both brands make low-VOC lines, and we choose the product and sheen for each room, for example a more washable finish for kitchens, baths and trim.",
         },
         {
-          question: "What's included in your warranty?",
-          answer: "Every project includes a 3-year written workmanship warranty plus 12 months of free touch-ups. The warranty is transferable."
-        }
+          question: "Do I need to move out during the project?",
+          answer: "Usually not. We cover floors and furniture, work through the house in sections, and clean the work areas at the end of each day.",
+        },
+        {
+          question: "How long does an interior repaint take?",
+          answer: "It depends on the size of the home, ceiling heights, the amount of trim and how much patching is needed. We tell you the expected duration when we give you the written estimate.",
+        },
+        {
+          question: "My Heights home was built before 1978. Does that matter?",
+          answer: "Homes built before 1978 may contain lead paint. Federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask any painter for their certification before sanding or scraping begins.",
+        },
+        {
+          question: "What does the warranty cover?",
+          answer: "Every project comes with a 5-year written workmanship warranty. The terms are written out with your estimate, so you can read them before you approve anything.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+        },
       ]}
       testimonials={[
         {
@@ -84,7 +85,7 @@ export default function InteriorPaintingHeightsPage() {
         { title: "Interior Painting Katy", href: "/interior-painting-katy-cinco-ranch" },
         { title: "Interior Painting Cypress", href: "/interior-painting-cypress-bridgeland" }
       ]}
-      warrantyYears={3}
+      warrantyYears={5}
       warrantyType="Interior"
     />
   )

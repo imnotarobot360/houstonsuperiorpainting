@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
+  title: "Exterior Painting Katy & Cinco Ranch, TX | Free Estimate",
+  description: "Exterior house painting in Katy and Cinco Ranch, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty.",
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/exterior-painting-katy-cinco-ranch',
+    canonical: "https://houstonsuperiorpainting.com/exterior-painting-katy-cinco-ranch",
   },
-  title: "Exterior Painting Katy & Cinco Ranch | Houston Superior Painting",
-  description: "Premium exterior painting in Katy and Cinco Ranch, TX. 5-year warranty, 5-star reviews. Free quote — call (346) 594-5960.",
 }
 
 export default function ExteriorPaintingKatyPage() {
@@ -16,47 +17,45 @@ export default function ExteriorPaintingKatyPage() {
       serviceSlug="exterior-painting"
       zone="Katy & Cinco Ranch, TX"
       zoneSlug="katy-cinco-ranch"
-      metaTitle="Exterior Painting Katy & Cinco Ranch | Houston Superior Painting"
-      metaDescription="Premium exterior painting in Katy and Cinco Ranch, TX. 5-year warranty, 5-star reviews."
+      metaTitle="Exterior Painting Katy & Cinco Ranch, TX | Free Estimate"
+      metaDescription="Exterior house painting in Katy and Cinco Ranch, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty."
       h1="Exterior Painting in Katy and Cinco Ranch, TX"
-      heroSubheading="The painting team Katy homeowners trust to deliver flawless exterior painting — prepped for Houston weather, finished beautifully, and backed by a 5-year written warranty."
-      introLocal="When Katy and Cinco Ranch homeowners search for an exterior painter, they're looking for a team that understands the master-planned communities throughout the area — Cinco Ranch, Cross Creek Ranch, Elyson, and Firethorne. Houston Superior Painting has protected and beautified exteriors throughout Katy with coatings engineered to withstand Houston's demanding climate."
-      serviceOverview="Our exterior painting service in Katy includes the full scope: power washing, wood rot repair, caulking, priming, and finish coats with premium exterior-grade materials. We use Sherwin-Williams Duration, SuperPaint, and Benjamin Moore Aura Exterior. A typical project takes 4 to 7 business days, and every job is backed by our 5-year written exterior warranty."
+      heroSubheading="Exterior repaints prepped for Houston heat and humidity: washed, caulked, repaired and primed before the finish coats, with a 5-year written workmanship warranty."
+      introLocal="Many homes in Cinco Ranch, Cross Creek Ranch, Elyson and the rest of Katy are brick on the lower floor with siding and trim above, so an exterior repaint here is mostly siding, trim, soffits, fascia and doors. Most of these communities have HOAs that require color approval before work starts. Houston's humidity and summer heat are hard on exterior paint everywhere in the region, which is why prep matters more than the paint can."
+      serviceOverview="An exterior job starts with washing the house and removing mildew. We scrape loose paint, replace rotted trim where needed, caulk open joints, prime bare wood and repairs, then apply the finish coats with Sherwin-Williams or Benjamin Moore exterior paint. Landscaping, walkways and windows are protected while we work. Your written estimate lists the surfaces, repairs, product and schedule."
       whyChooseUs={[
-        "We know Katy communities — Cinco Ranch, Cross Creek Ranch, Elyson, Firethorne — and how to work with each HOA.",
-        "Experience with both new construction touch-ups and full repaints on 10-20 year old homes.",
-        "5-year written exterior warranty — the longest in the Houston metro area.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line."
+        "Founded in 2019 by owner Juan Serra and headquartered in Cypress, TX.",
+        "Wood rot repair and caulking are written into the estimate alongside the paint work.",
+        "Plants, walkways and windows protected; work areas cleaned each day.",
+        `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
+        "5-year written workmanship warranty.",
+        "No upfront payment: the estimate is free and nothing is due until you approve it in writing."
       ]}
-      priceRange="$5,800 – $19,500"
-      priceMin={5800}
-      priceMax={19500}
-      priceDetails="Exterior painting in Katy typically ranges from $5,800 to $19,500 for a complete repaint, depending on home size, stories, substrate type, and prep complexity."
+      priceDetails={`Another way to think about it: roughly ${PRICES_2026.exteriorPerSqFt} per square foot of floor area. Number of stories, siding type, the amount of wood rot to repair and how much trim there is all move the price, and your free written estimate itemizes it.`}
       faqs={[
         {
-          question: "How long does an exterior project take in Katy?",
-          answer: "For a typical Katy home (2,800 to 5,000 sqft), a full exterior repaint takes between 4 and 7 business days, weather permitting."
-        },
-        {
-          question: "What paint brands do you use for exteriors?",
-          answer: "We use Sherwin-Williams Duration and SuperPaint, as well as Benjamin Moore Aura Exterior."
-        },
-        {
-          question: "Do you work with Katy area HOAs?",
-          answer: "Yes — we're familiar with the HOA requirements in Cinco Ranch, Cross Creek Ranch, Elyson, and other Katy communities."
-        },
-        {
           question: "How much does exterior painting cost in Katy?",
-          answer: "Exterior painting typically ranges from $5,800 to $19,500 for a complete repaint."
+          answer: `Most whole-house exteriors run ${PRICES_2026.exteriorPerHome}, and a 2,500 sq ft two-story is typically about ${PRICES_2026.exterior2500TwoStory}. These are our published 2026 Greater Houston ranges; your written estimate is free and itemized after we see the house.`,
         },
         {
-          question: "What's included in your 5-year warranty?",
-          answer: "Our warranty covers peeling, flaking, blistering, and adhesion failures caused by improper preparation or application."
+          question: "Does my HOA need to approve the colors?",
+          answer: "In most master-planned communities, yes. Get your HOA's color approval before the job is scheduled. If your HOA has an approved palette, bring it to the estimate and we will quote with those colors.",
         },
         {
-          question: "When should I repaint my Katy home's exterior?",
-          answer: "Most Katy homes need repainting every 7-10 years. Signs include fading, chalking, peeling, or visible wear on trim and siding."
+          question: "When is the best time to paint an exterior here?",
+          answer: "Exterior paint can go on most of the year in the Houston area. What matters is the weather on the day: we don't paint in rain or when rain is expected before the coating dries, and in summer it helps to avoid coating walls in direct midday sun.",
+        },
+        {
+          question: "Do you repair wood rot before painting?",
+          answer: "Yes. Rotted trim, fascia and siding boards are replaced before painting, because paint over rot fails quickly. Repairs found during the estimate are written into it.",
+        },
+        {
+          question: "What warranty do you give?",
+          answer: "Every exterior job comes with a 5-year written workmanship warranty. The full warranty terms are included with your written estimate, so you can read them before you approve the work.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free, and nothing is due until you approve the written estimate. A down payment is collected at that point, and the balance is due after the final walkthrough.",
         }
       ]}
       testimonials={[
@@ -77,15 +76,16 @@ export default function ExteriorPaintingKatyPage() {
         }
       ]}
       relatedPages={[
-        { title: "Exterior Painting Memorial", href: "/exterior-painting-memorial" },
-        { title: "Exterior Painting Tanglewood", href: "/exterior-painting-tanglewood" },
-        { title: "Exterior Painting Bellaire", href: "/exterior-painting-bellaire-west-university" },
-        { title: "Exterior Painting The Heights", href: "/exterior-painting-the-heights" },
-        { title: "Exterior Painting Sugar Land", href: "/exterior-painting-sugar-land" },
-        { title: "Exterior Painting Cypress", href: "/exterior-painting-cypress-bridgeland" }
+        { title: "Exterior painting cost guide", href: "/exterior-house-painting-houston-cost-guide" },
+        { title: "Wood rot repair", href: "/wood-rot-repair-houston-tx" },
+        { title: "Soft washing", href: "/soft-washing-houston-tx" },
+        { title: "Limewash and decorative finishes in Katy & Cinco Ranch", href: "/limewash-decorative-finishes-katy-cinco-ranch" },
+        { title: "Exterior painting in Cypress & Bridgeland", href: "/exterior-painting-cypress-bridgeland" },
+        { title: "Exterior painting in Sugar Land", href: "/exterior-painting-sugar-land" },
+        { title: "Painters in Katy, TX (Katy office)", href: "/painters-katy-tx" }
       ]}
       warrantyYears={5}
-      warrantyType="Exterior"
+      warrantyType="Workmanship"
     />
   )
 }

@@ -32,6 +32,13 @@ export interface CaseStudy {
   /** Outcome paragraph. */
   results: string
   testimonial?: { quote: string; name: string }
+  /**
+   * True when the before/after images have not been confirmed as photos of this
+   * job. These three entries use square 1024x1024 PNGs that read as generated
+   * illustrations, unlike the phone-camera JPEGs on the other three. Until Juan
+   * confirms (or replaces) them, they are not used as local proof on city pages.
+   */
+  photosNeedReview?: boolean
   metaTitle: string
   metaDescription: string
 }
@@ -216,6 +223,7 @@ export const PROJECTS: CaseStudy[] = [
   },
   {
     slug: "bellaire-stucco-repair-elastomeric-coating",
+    photosNeedReview: true,
     title: "Stucco Repair & Elastomeric Coating in Bellaire",
     neighborhood: "Bellaire, Houston",
     service: "Stucco Painting & Repair",
@@ -270,6 +278,7 @@ export const PROJECTS: CaseStudy[] = [
   },
   {
     slug: "heights-wallpaper-removal-modern-repaint",
+    photosNeedReview: true,
     title: "Wallpaper Removal & Modern Repaint in The Heights",
     neighborhood: "The Heights, Houston",
     service: "Wallpaper Removal",
@@ -324,6 +333,7 @@ export const PROJECTS: CaseStudy[] = [
   },
   {
     slug: "cypress-wood-rot-repair-exterior-repaint",
+    photosNeedReview: true,
     title: "Wood Rot Repair & Exterior Repaint in Cypress",
     neighborhood: "Cypress, TX",
     service: "Wood Rot Repair",
@@ -377,6 +387,9 @@ export const PROJECTS: CaseStudy[] = [
       "A Cypress wood rot repair: rotted fascia and soffits replaced, the moisture source corrected, and trim repainted to match. Before & after case study.",
   },
 ]
+
+/** Projects whose photos are job photos: the only ones city pages may cite as local proof. */
+export const LOCAL_PROOF_PROJECTS: CaseStudy[] = PROJECTS.filter((p) => !p.photosNeedReview)
 
 export function getProject(slug: string): CaseStudy | undefined {
   return PROJECTS.find((p) => p.slug === slug)

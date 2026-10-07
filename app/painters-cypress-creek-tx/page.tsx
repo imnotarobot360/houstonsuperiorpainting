@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { PRICES_2026 } from "@/lib/business"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LocationPageTemplate } from "@/components/location-page-template"
@@ -7,13 +7,13 @@ import { generateLocationBusinessSchema } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   title: "House Painters Cypress Creek TX | Interior & Exterior",
-  description: "Professional house painters serving Cypress Creek and Northwest Houston. Expert interior, exterior, and cabinet painting. Free estimates, 5-year warranty.",
+  description: "House painters for the Cypress Creek area of NW Houston, Klein and Spring: interior, exterior and cabinet painting. Free estimates, 5-year warranty.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-cypress-creek-tx',
   },
   openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Cypress Creek TX | Houston Superior Painting",
-    description: "Professional painting services for Cypress Creek area homeowners. Premium materials, insured crews, 5-year warranty.",
+    description: "Interior, exterior and cabinet painting for Cypress Creek area homeowners. Insured crews, 5-year workmanship warranty.",
     type: "website",
   },
 }
@@ -36,62 +36,63 @@ export default function PaintersCypressCreekTX() {
         <LocationPageTemplate
           city="Cypress Creek"
           state="TX"
-          heroHeadline="Professional House Painters for Cypress Creek Area"
-          heroDescription="Serving the beautiful communities along Cypress Creek. From Champions Forest to Gleannloch Farms, we understand the unique needs of homes in this wooded, creek-side environment."
-          aboutCity={`The Cypress Creek corridor is home to some of Northwest Houston's most desirable neighborhoods. From the established communities of Champions Forest and Lakewood Forest to newer developments like Gleannloch Farms and Legends Ranch, this area offers beautiful homes surrounded by mature trees and natural waterways.
+          heroHeadline="House Painters for the Cypress Creek Area"
+          heroDescription="Interior, exterior and cabinet painting for neighborhoods along Cypress Creek in Northwest Houston, Klein and Spring, with prep suited to wooded, shaded lots."
+          quickAnswer={`Houston Superior Painting paints homes along the Cypress Creek corridor in Northwest Houston, Klein and Spring. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Shaded, wooded lots usually need extra washing, caulk and wood repair before painting. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          aboutCity={`Cypress Creek runs across northwest Harris County, and the neighborhoods along it range from established, wooded subdivisions such as Lakewood Forest and Northgate Forest to newer communities such as Gleannloch Farms. Many of the older homes date from the 1970s through the 1990s.
 
-We've been painting homes along Cypress Creek since 2019, and we understand the unique challenges of this environment. The wooded setting creates specific conditions: more shade means different drying times, the creek proximity increases humidity, and organic debris from trees requires extra preparation. Our crews adjust their approach for these conditions, ensuring lasting results.
+Mature trees and the creek setting shape exterior work. Shade keeps siding and trim damp longer, which encourages mildew and slows drying, and leaves and sap build up on surfaces. Exterior repaints here start with a thorough wash, then caulk replacement, repair of soft or rotted wood, and priming bare spots before the finish coats, scheduled for dry weather.
 
-Many homes in the Cypress Creek area were built in the 1980s and 1990s and are now needing their second or third exterior repaint. We specialize in properly preparing these mature homes—addressing weathering, caulk failures, and minor wood damage before applying premium coatings that protect for years to come.
+Inside, older homes often need settling cracks and old water stains repaired and sealed before repainting, and kitchen cabinets are a common update. Many subdivisions in the area are deed-restricted, so check whether your HOA needs to approve an exterior color change before the job is scheduled.
 
-Whether you're in Champions, Klein, Spring, or any of the beautiful neighborhoods along the creek, Houston Superior Painting delivers the quality craftsmanship your home deserves. Our 5-year workmanship warranty backs our commitment to excellence.`}
+Houston Superior Painting was founded in 2019 and is headquartered in nearby Cypress. Every estimate is free and written, and nothing is due until you approve it.`}
           whyChooseUs={[
-            "Cypress Creek area experts: Familiar with local conditions and challenges",
-            "Wooded environment experience: Proper prep for shade and moisture",
-            "Mature home specialists: Skilled with 1980s-90s construction",
-            "Moisture-resistant products: Protection for creek-side properties",
-            "Premium materials: Sherwin-Williams and Benjamin Moore paints",
-            "5-year written warranty: Our guarantee of lasting quality"
+            "Prep for shaded, wooded lots: washing, mildew treatment, caulk and wood repair",
+            "Interior crack and stain repair before repainting",
+            "Sherwin-Williams and Benjamin Moore paints",
+            "Insured: $2M general liability plus workers' comp",
+            "5-year written workmanship warranty",
+            "No upfront payment: nothing is due until you approve the written estimate"
           ]}
           services={[
             {
               title: "Interior Painting",
-              description: "Refresh your Cypress Creek area home with beautiful interior finishes. We handle everything from single rooms to complete repaints.",
+              description: "Walls, ceilings and trim, from single rooms to complete repaints.",
               href: "/interior-painting-houston-tx"
             },
             {
               title: "Exterior House Painting",
-              description: "Protect your home from the humid, wooded environment. Our prep work and premium paints ensure lasting results.",
+              description: "Exterior repaints with washing, repair and priming suited to shaded, humid lots.",
               href: "/exterior-painting-houston-tx"
             },
             {
               title: "Cabinet Refinishing",
-              description: "Update your kitchen with professional cabinet painting. Transform dated cabinets at a fraction of replacement cost.",
+              description: "Painted cabinet finishes as an alternative to replacing sound cabinet boxes.",
               href: "/cabinet-refinishing-houston-tx"
             },
             {
               title: "Drywall Repair",
-              description: "Fix settling cracks, water stains, and other damage before painting. Essential for perfect results.",
+              description: "Fix settling cracks, water stains, and other damage before painting.",
               href: "/drywall-repair-houston-tx"
             },
             {
               title: "Pressure Washing",
-              description: "Professional pressure washing for Cypress Creek homes. Remove mold, mildew, and organic debris.",
+              description: "Pressure washing to remove mildew and organic debris.",
               href: "/pressure-washing-houston-tx"
             },
             {
               title: "Limewash Brick",
-              description: "Transform your Cypress Creek brick home with elegant European limewash finishes.",
+              description: "Limewash finishes for brick homes, priced after an on-site look.",
               href: "/limewash-brick-painting-houston-tx"
             },
             {
               title: "Commercial Painting",
-              description: "Professional painting for businesses along FM 1960 and Spring area.",
+              description: "Painting for businesses along FM 1960 and the Spring area.",
               href: "/commercial-painting-houston-tx"
             },
             {
               title: "Garage Floor Epoxy",
-              description: "Durable epoxy coatings for Cypress Creek garages that resist stains and last for years.",
+              description: "Garage floor coatings through our sister brand, Houston Superior Epoxy.",
               href: "https://houstonsuperiorepoxy.com/"
             }
           ]}
@@ -109,27 +110,22 @@ Whether you're in Champions, Klein, Spring, or any of the beautiful neighborhood
             "Cypress Station",
             "Willowbrook"
           ]}
-          testimonial={{
-            quote: "Our Champions Forest home was showing its age after 25 years. Houston Superior Painting did an incredible exterior transformation—they addressed every issue, from wood rot to failing caulk, and the paint job looks amazing. They really understand older homes in our area.",
-            author: "Mark & Susan K.",
-            location: "Champions Forest"
-          }}
           faqs={[
             {
               question: "How much does house painting cost in the Cypress Creek area?",
-              answer: `Interior painting in the Cypress Creek area typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates.`
+              answer: `Interior painting in the Cypress Creek area typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
             },
             {
-              question: "Do you paint homes near the creek with flooding concerns?",
-              answer: "Yes. We're experienced with homes in flood-prone areas and use moisture-resistant products when appropriate. Proper preparation and product selection are essential for lasting results in these conditions."
+              question: "Can you paint walls that had water damage?",
+              answer: "Yes, once the cause is fixed and the wall is dry. Damaged drywall is repaired or replaced, and stains are sealed with a stain-blocking primer before painting so they do not bleed through."
             },
             {
               question: "What areas near Cypress Creek do you serve?",
-              answer: "We serve all neighborhoods along the Cypress Creek corridor including Champions Forest, Lakewood Forest, Gleannloch Farms, Klein, Spring, and surrounding communities."
+              answer: "We paint homes along the Cypress Creek corridor, including Champions Forest, Lakewood Forest, Gleannloch Farms, Klein, Spring and surrounding communities."
             },
             {
               question: "How do you handle the wooded environment around Cypress Creek?",
-              answer: "The tree canopy along Cypress Creek creates specific conditions—more shade, higher moisture, and organic debris. We adjust our preparation process accordingly with proper cleaning, moisture testing, and primer selection."
+              answer: "Shade keeps surfaces damp and encourages mildew, so we wash and treat surfaces first, replace failed caulk, repair soft wood, prime bare spots, and schedule painting for dry weather so coatings can cure."
             }
           ]}
         />

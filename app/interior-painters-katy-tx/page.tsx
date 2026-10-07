@@ -3,16 +3,20 @@ import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import FAQ from "@/components/faq"
-import { Phone, MessageSquare, Star, Shield, CheckCircle2, ChevronRight, MapPin } from "lucide-react"
-import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF } from "@/lib/business"
+import { Phone, MessageSquare, CheckCircle2, ChevronRight, MapPin } from "lucide-react"
+import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF, SERVICE_AREAS } from "@/lib/business"
+
+const NEARBY = SERVICE_AREAS.filter((a) =>
+  ["painters-katy-tx", "painters-cinco-ranch-tx", "painters-fulshear-tx", "painters-richmond-tx", "painters-sugar-land-tx", "painters-energy-corridor-tx"].includes(a.slug),
+)
 
 export const metadata: Metadata = {
   title: "Interior Painters Katy TX | Interior House Painting",
-  description: "Expert interior painters in Katy TX. Flawless walls, ceilings, and trim with premium preparation. Serving Katy, Cypress, and Houston. Call 346-594-5960.",
+  description: "Interior painting in Katy, TX: walls, ceilings, trim and doors. 2026 price ranges, Sherwin-Williams and Benjamin Moore paint, 5-year warranty.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/interior-painters-katy-tx" },
   openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Interior Painters Katy TX | Houston Superior Painting",
-    description: "Expert interior painters in Katy TX. Flawless walls, ceilings, and trim with premium preparation. Call 346-594-5960.",
+    description: "Interior painting in Katy, TX: walls, ceilings, trim and doors. 2026 price ranges and a free written estimate.",
     url: "https://houstonsuperiorpainting.com/interior-painters-katy-tx",
     type: "website",
   },
@@ -20,16 +24,16 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { q: "How much does interior painting cost in Katy TX?", a: `Interior painting in Katy typically costs ${PRICES_2026.interiorPerSqFt} per square foot. A standard 2,500 sq ft Katy home averages ${PRICES_2026.fullInterior2500} for a full interior repaint. Accent walls start around ${PRICES_2026.accentWall} and single rooms around ${PRICES_2026.singleRoom}. We provide free, itemized estimates.` },
-  { q: "How long does interior painting take in a Katy home?", a: "Most Katy homes (3-4 bedrooms) take 2-5 days for a full interior repaint. A single room takes 1 day. We work efficiently while maintaining quality and include furniture moving, taping, priming, two coats, and cleanup." },
-  { q: "What paint brands do you use for Katy interiors?", a: "We exclusively use Sherwin-Williams (Emerald, Duration, SuperPaint) and Benjamin Moore (Aura, Regal Select). These premium low-VOC formulas dry properly in Houston humidity and resist scuffing, staining, and fading." },
-  { q: "Do you paint ceilings and trim in Katy?", a: "Yes. We paint all interior surfaces including walls, ceilings, trim, baseboards, crown molding, doors, closets, and built-ins. Trim is brush-cut for a crisp, factory-finish look. Ceilings get a flat finish to hide imperfections." },
-  { q: "Can you help with color selection?", a: "Absolutely. We offer complimentary color consultation with every project. We bring large samples to test in your actual lighting conditions, recommend colors that complement your flooring and cabinets, and ensure your choices photograph well for resale." },
-  { q: "Do you move furniture before painting?", a: "Yes. Light furniture is moved to the center of the room and covered with drop cloths. Heavy items like pianos or large entertainment centers may need to be moved in advance. We protect all floors, fixtures, and hardware." },
-  { q: "What areas of Katy do you serve?", a: "We serve all of Katy including Cinco Ranch, Grand Lakes, Cross Creek Ranch, Elyson, Cane Island, Firethorne, Tamarron, and all neighborhoods along I-10 and Grand Parkway. We also serve nearby Fulshear and Richmond." },
-  { q: "Do you offer a warranty on interior painting?", a: "Yes. All interior painting comes with a 5-year warranty covering peeling, blistering, and adhesion failure. We stand behind our work and will return to fix any issue at no charge." },
-  { q: "How do you protect my home during painting?", a: "We cover all floors with canvas drop cloths (not plastic), mask all trim and fixtures with painter tape, cover furniture with plastic sheeting, and remove all switch plates and outlet covers. After painting, we vacuum and mop all work areas." },
-  { q: "What is the best time of year to paint interiors in Katy?", a: "Interior painting can be done year-round since we control the indoor environment. However, spring and fall are most popular because you can open windows for ventilation. We use low-VOC paints that are safe for occupied homes." },
+  { q: "How much does interior painting cost in Katy TX?", a: `Interior painting in Katy typically costs ${PRICES_2026.interiorPerSqFt} per square foot. A full interior repaint of a 2,500 sq ft home usually runs ${PRICES_2026.fullInterior2500}. A single room is usually ${PRICES_2026.singleRoom} and an accent wall ${PRICES_2026.accentWall}. Your written estimate is free and itemized.` },
+  { q: "How long does interior painting take in a Katy home?", a: "A full interior repaint of a typical 3-4 bedroom home usually takes 2-5 days, and a single room usually takes a day. Your written estimate gives the expected schedule for your home." },
+  { q: "What paint brands do you use for Katy interiors?", a: "We use Sherwin-Williams and Benjamin Moore paints, choosing the product line and sheen for each room: flat for most ceilings, and a washable finish for walls, trim and doors that get handled." },
+  { q: "Do you paint ceilings and trim in Katy?", a: "Yes. We paint walls, ceilings, trim, baseboards, crown molding, doors, closets and built-ins. Each item is listed separately on the estimate so you can choose what to include." },
+  { q: "Can you help with color selection?", a: "Yes. We can talk through colors during the estimate. We recommend testing large samples on your own walls and checking them in morning and evening light before you commit." },
+  { q: "Do you move furniture before painting?", a: "Light furniture is moved to the center of the room and covered. Very heavy or fragile items, such as pianos or large entertainment centers, may need to be moved in advance. Floors, fixtures and hardware are protected before painting starts." },
+  { q: "What areas of Katy do you serve?", a: "We serve homes throughout Katy, including Cinco Ranch, Grand Lakes, Cross Creek Ranch, Elyson, Cane Island, Firethorne and Tamarron, plus nearby Fulshear and Richmond." },
+  { q: "Do you offer a warranty on interior painting?", a: "Yes. Interior painting comes with our 5-year written workmanship warranty." },
+  { q: "How do you protect my home during painting?", a: "Floors are covered with drop cloths, trim and fixtures are masked, furniture is covered, and switch plates and outlet covers are removed before painting. Work areas are cleaned up when the job is done." },
+  { q: "What is the best time of year to paint interiors in Katy?", a: "Interior painting can be done year-round because the work happens indoors. Spring and fall are convenient if you like to open windows for ventilation. Low-VOC paints are available for occupied homes." },
 ]
 
 export default function InteriorPaintersKatyTX() {
@@ -44,16 +48,17 @@ export default function InteriorPaintersKatyTX() {
             "@graph": [
               {
                 "@type": "Article",
-                "headline": "Interior Painters Katy TX – Flawless Interior House Painting",
+                "headline": "Interior Painters in Katy, TX",
                 "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" },
                 "publisher": { "@type": "Organization", "name": "Houston Superior Painting" },
                 "datePublished": "2026-05-16",
-                "dateModified": "2026-05-16",
+                "dateModified": "2026-10-07",
                 "mainEntityOfPage": "https://houstonsuperiorpainting.com/interior-painters-katy-tx",
               },
               { "@type": "BreadcrumbList", "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Interior Painters Katy TX", "item": "https://houstonsuperiorpainting.com/interior-painters-katy-tx" },
+                { "@type": "ListItem", "position": 2, "name": "Katy Painters", "item": "https://houstonsuperiorpainting.com/painters-katy-tx" },
+                { "@type": "ListItem", "position": 3, "name": "Interior Painters Katy TX", "item": "https://houstonsuperiorpainting.com/interior-painters-katy-tx" },
               ]},
               { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
               { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
@@ -68,22 +73,22 @@ export default function InteriorPaintersKatyTX() {
             <ol className="flex items-center gap-2 text-sm text-primary-foreground/70">
               <li><Link href="/" className="hover:text-primary-foreground">Home</Link></li>
               <ChevronRight className="h-3 w-3" />
-              <li><Link href="/painters-houston-tx" className="hover:text-primary-foreground">Painters Houston</Link></li>
+              <li><Link href="/painters-katy-tx" className="hover:text-primary-foreground">Katy Painters</Link></li>
               <ChevronRight className="h-3 w-3" />
               <li className="text-primary-foreground font-medium">Interior Painters Katy TX</li>
             </ol>
           </nav>
           <h1 className="hero-h1 text-3xl md:text-5xl font-serif font-bold text-primary-foreground mb-6 text-balance">
-            Interior Painters Katy TX – Flawless Interior House Painting
+            Interior Painters in Katy, TX
           </h1>
           <p className="text-primary-foreground/90 text-lg md:text-xl max-w-3xl mb-8 leading-relaxed">
-            Expert interior painting for Katy homeowners. Flawless walls, ceilings, trim, and accent walls with premium Sherwin-Williams and Benjamin Moore paints.
+            Walls, ceilings, trim, doors and accent walls for Katy homes, painted with Sherwin-Williams and Benjamin Moore products and backed by a 5-year written workmanship warranty.
           </p>
           <div className="flex flex-wrap gap-4">
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors">
               <Phone className="h-5 w-5" /> Call {BUSINESS.phone}
             </a>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary-foreground/90 transition-colors">
+            <Link href="/painting-estimate-houston" className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary-foreground/90 transition-colors">
               Free Estimate
             </Link>
           </div>
@@ -94,19 +99,19 @@ export default function InteriorPaintersKatyTX() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
           <p className="text-foreground/80 leading-relaxed text-lg">
-            Interior painting in Katy TX costs {PRICES_2026.interiorPerSqFt} per square foot. A typical 2,500 sq ft Katy home costs {PRICES_2026.fullInterior2500} for a full interior repaint. Houston Superior Painting serves all Katy neighborhoods including Cinco Ranch, Grand Lakes, and Cross Creek Ranch. We use Sherwin-Williams and Benjamin Moore paints with a 5-year warranty. Call (346) 594-5960 for a free estimate.
+            Interior painting in Katy, TX typically costs {PRICES_2026.interiorPerSqFt} per square foot, or {PRICES_2026.fullInterior2500} for a full repaint of a 2,500 sq ft home. Houston Superior Painting serves Katy neighborhoods including Cinco Ranch, Grand Lakes and Cross Creek Ranch, uses Sherwin-Williams and Benjamin Moore paints, and gives a 5-year written workmanship warranty. Call {BUSINESS.phone} for a free estimate.
           </p>
         </div>
       </section>
 
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Why Katy Homeowners Choose Us for Interior Painting</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Interior Painting for Katy Homes</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            Katy&apos;s rapid growth has brought thousands of new homes to the area, but even newer construction needs repainting after 5-7 years. Builder-grade paint fades, scuffs easily, and does not hold up to active families. Our interior painting process transforms Katy homes with premium products that resist Houston&apos;s humidity, last longer, and look better.
+            Much of Katy is newer construction in master-planned communities, and builder-grade flat paint scuffs easily and is hard to wash. Repainting with a washable finish is a common first project in these homes. Open floor plans and tall ceilings also mean more ladder and scaffold work, which your estimate accounts for.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-8">
-            Founded in 2019 by Juan Serra, Houston Superior Painting has completed hundreds of interior projects across Katy, from single accent walls in Cinco Ranch to full whole-home repaints in Grand Lakes. We understand the open floor plans, high ceilings, and neutral palettes popular in Katy master-planned communities.
+            Houston Superior Painting was founded in 2019 by Juan Serra and is headquartered in Cypress. We carry {BUSINESS.trust.liabilityCoverage} in general liability insurance plus workers&apos; comp, and every job carries a 5-year written workmanship warranty. {BUSINESS.paymentPolicy.sentence} For full service details, see our <Link href="/interior-painting-houston-tx" className="text-primary underline">interior painting service page</Link>.
           </p>
 
           <h3 className="text-xl font-semibold mb-4">What&apos;s Included in Our Interior Painting</h3>
@@ -119,8 +124,8 @@ export default function InteriorPaintersKatyTX() {
             ))}
           </div>
 
-          <h3 className="text-xl font-semibold mb-4">Interior Painting Cost Guide – Katy TX 2026</h3>
-          <div className="pricing-snippet overflow-x-auto mb-8">
+          <h3 className="text-xl font-semibold mb-4">2026 Interior Painting Price Ranges (Katy and Greater Houston)</h3>
+          <div className="pricing-snippet overflow-x-auto mb-4">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-primary text-primary-foreground">
@@ -133,10 +138,10 @@ export default function InteriorPaintersKatyTX() {
                   ["Single Room (avg 12x14)", PRICES_2026.singleRoom],
                   ["Accent Wall", PRICES_2026.accentWall],
                   ["Full Interior (2,000 sq ft)", PRICES_2026.fullInterior2000],
-                  ["Full Interior (3,000 sq ft)", "$5,500–$10,000"],
+                  ["Full Interior (2,500 sq ft)", PRICES_2026.fullInterior2500],
+                  ["Full Interior (4,000 sq ft)", PRICES_2026.fullInterior4000],
                   ["Trim & Baseboards (whole home)", PRICES_2026.trimWholeHome],
                   ["Ceiling Painting (whole home)", PRICES_2026.ceilingsWholeHome],
-                  ["Kitchen/Bath (high-moisture)", "$400–$1,200"],
                 ].map(([project, price]) => (
                   <tr key={project} className="border-b border-border hover:bg-muted/50">
                     <td className="p-3 font-medium">{project}</td>
@@ -146,22 +151,25 @@ export default function InteriorPaintersKatyTX() {
               </tbody>
             </table>
           </div>
+          <p className="text-muted-foreground text-sm mb-8">
+            See the <Link href="/interior-painting-cost-houston" className="text-primary underline">interior painting cost guide</Link> for what moves a quote up or down.
+          </p>
 
-          <h3 className="text-xl font-semibold mb-4">Color Selection for Katy Homes</h3>
+          <h3 className="text-xl font-semibold mb-4">Choosing Colors for a Katy Home</h3>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Katy homes benefit from colors that work with the abundant natural light typical of Texas architecture. Popular choices for 2026 include warm whites (Sherwin-Williams Alabaster, Benjamin Moore White Dove), soft greiges (Agreeable Gray, Revere Pewter), and warm blues for accent walls. We test colors in your actual lighting before committing to a final choice.
+            Warm whites (Sherwin-Williams Alabaster, Benjamin Moore White Dove) and greiges (Agreeable Gray, Revere Pewter) are common choices for open floor plans because they read consistently from room to room. A color can look very different in a west-facing room in the afternoon than in a north-facing one, so test large samples in your own light before deciding.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-8">
-            For resale value, neutral tones consistently perform best in the Katy market. However, bold accent walls in dining rooms, offices, and master bedrooms are trending strongly in 2026. We can help balance neutral foundations with statement features.
+            If you are painting before a sale, a neutral base is the safer choice. If you are staying, an accent wall in a dining room, office or bedroom is an inexpensive way to add color. More ideas: <Link href="/best-paint-colors-houston-homes" className="text-primary underline">paint colors for Houston homes</Link>.
           </p>
 
-          <h3 className="text-xl font-semibold mb-4">Katy Neighborhoods We Serve</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {["Cinco Ranch", "Grand Lakes", "Cross Creek Ranch", "Elyson", "Cane Island", "Firethorne", "Tamarron", "Nottingham Country", "Pine Mill Ranch", "Falcon Ranch", "Ventana Lakes", "Morton Ranch"].map((area) => (
-              <div key={area} className="flex items-center gap-2 bg-card rounded-lg p-3 border border-border text-sm">
+          <h3 className="text-xl font-semibold mb-4">Katy and Nearby Areas</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {NEARBY.map((area) => (
+              <Link key={area.slug} href={`/${area.slug}`} className="flex items-center gap-2 bg-card rounded-lg p-3 border border-border text-sm hover:border-secondary transition-colors">
                 <MapPin className="h-4 w-4 text-secondary shrink-0" />
-                <span className="font-medium">{area}</span>
-              </div>
+                <span className="font-medium">Painters in {area.name}</span>
+              </Link>
             ))}
           </div>
         </div>
@@ -175,12 +183,15 @@ export default function InteriorPaintersKatyTX() {
 
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary-foreground mb-4">Ready to Transform Your Katy Home?</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary-foreground mb-4">Get a Free Interior Painting Estimate in Katy</h2>
           <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
-            Request your free quote today. Nothing due until you approve the estimate; a down payment then secures your project date. 100% satisfaction guarantee.
+            {BUSINESS.paymentPolicy.short}: nothing is due until you approve the written estimate.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors">
+            <Link href="/painting-estimate-houston" className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors">
+              Request an Estimate
+            </Link>
+            <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors">
               <Phone className="h-5 w-5" /> Call {BUSINESS.phone}
             </a>
             <a href={SMS_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors">
@@ -192,14 +203,15 @@ export default function InteriorPaintersKatyTX() {
 
       <section className="py-12 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-xl font-serif font-bold mb-4">Related Articles</h2>
+          <h2 className="text-xl font-serif font-bold mb-4">Related Pages</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {[
-              { title: "Painters in Houston TX", href: "/painters-houston-tx" },
-              { title: "Interior Painting Cost Houston 2026", href: "/interior-painting-cost-houston" },
-              { title: "Best Paint Colors for Houston Homes", href: "/best-paint-colors-houston-homes" },
-              { title: "Accent Wall Ideas Houston", href: "/accent-wall-ideas-houston" },
-              { title: "Paint or Replace Cabinets?", href: "/paint-or-replace-cabinets" },
+              { title: "Painters in Katy TX", href: "/painters-katy-tx" },
+              { title: "Interior Painting Service", href: "/interior-painting-houston-tx" },
+              { title: "Interior Painting Cost Guide", href: "/interior-painting-cost-houston" },
+              { title: "Accent Wall Ideas", href: "/accent-wall-ideas-houston" },
+              { title: "Cabinet Painting Katy TX", href: "/cabinet-painting-katy-tx" },
+              { title: "Warranty", href: "/warranty" },
             ].map((p) => (
               <Link key={p.href} href={p.href} className="bg-card rounded-lg p-4 border border-border hover:border-secondary transition-colors">
                 <span className="font-semibold text-sm text-foreground">{p.title}</span>

@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/interior-painting-tanglewood',
   },
-  title: "Interior Painting Tanglewood | Houston Superior Painting",
-  description: "Premium interior painting in Tanglewood, Houston. 5-star reviews, written warranty, family-owned. Free quote — call (346) 594-5960.",
+  title: "Interior Painting Tanglewood, Houston TX",
+  description: "Interior painting in Tanglewood, Houston: prep for large homes and detailed trim, Sherwin-Williams and Benjamin Moore paints, 5-year warranty. Free estimate.",
 }
 
 export default function InteriorPaintingTanglewoodPage() {
@@ -17,48 +17,48 @@ export default function InteriorPaintingTanglewoodPage() {
       serviceSlug="interior-painting"
       zone="Tanglewood, Houston, TX"
       zoneSlug="tanglewood"
-      metaTitle="Interior Painting Tanglewood | Houston Superior Painting"
-      metaDescription="Premium interior painting in Tanglewood, Houston. 5-star reviews, written warranty, family-owned. Free quote."
+      metaTitle="Interior Painting Tanglewood, Houston TX"
+      metaDescription="Interior painting in Tanglewood, Houston: prep for large homes and detailed trim, Sherwin-Williams and Benjamin Moore paints, 5-year warranty. Free estimate."
       h1="Interior Painting in Tanglewood, Houston, TX"
-      heroSubheading="The painting team Tanglewood homeowners trust to deliver flawless interior painting — prepped properly, finished beautifully, and warrantied in writing."
-      introLocal="When Tanglewood homeowners search for a painter, they're not looking for someone with a roller and a price quote. They're looking for a team that understands the architectural character of Tanglewood proper, Briargrove, and Briar Hollow Lane, respects HOA standards where they apply, and treats their home like it costs what it actually does. Houston Superior Painting has completed projects across Tanglewood, Houston, TX, and our process is built around the one thing that separates a 2-year paint job from a 10-year one: preparation."
-      serviceOverview="Our interior painting service in Tanglewood includes the full scope, from consultation through final inspection. We use premium-tier materials — Sherwin-Williams Emerald, Benjamin Moore Aura, and Behr Marquee (low-VOC) — selected for their durability in Houston's humid climate. A typical project for a Tanglewood home takes 3 to 7 business days, and every job is backed by our 3-year written workmanship warranty + free touch-ups during the first 12 months."
+      heroSubheading="Careful prep, Sherwin-Williams and Benjamin Moore paints, and a 5-year written workmanship warranty, with nothing due until you approve the written estimate."
+      introLocal="Tanglewood, near Uptown and the Galleria, has wooded lots and a mix of original ranch homes and large newer houses built on rebuilt lots. Larger homes with tall ceilings, stairwells and detailed trim take more setup and prep, and we plan for that after walking through the house."
+      serviceOverview="Interior work covers walls, ceilings, trim and doors. Furniture is moved or covered, holes and cracks are patched, surfaces are sanded and spot-primed, and finish coats go on in Sherwin-Williams or Benjamin Moore paint, with a more washable sheen where rooms take more wear."
       whyChooseUs={[
-        "We know the architectural style of Tanglewood — Traditional brick colonials, transitional remodels, recent teardown rebuilds — and how to finish each substrate correctly.",
-        "Familiar with local architectural review processes in Tanglewood.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line.",
-        "3-year written workmanship warranty + free touch-ups during the first 12 months."
+        "Prep and setup planned for larger homes with tall ceilings, stairwells and detailed trim.",
+        "A free, written, itemized estimate after an on-site walkthrough.",
+        "Sherwin-Williams and Benjamin Moore paints, including low-VOC options.",
+        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
       ]}
-      priceRange="$6,720 – $19,600"
-      priceMin={6720}
-      priceMax={19600}
-      priceDetails={`Interior painting in Tanglewood typically ranges from $6,720 to $19,600 for a whole-home repaint. Tanglewood homes range from 4,000 to 8,000 sqft with significant millwork — repaints often include touch-ups to high-grade trim and cabinetry. Single rooms typically run ${PRICES_2026.singleRoom}.`}
+      priceDetails={`Most interior work falls around ${PRICES_2026.interiorPerSqFt} per square foot. Larger homes, tall ceilings, detailed trim and drywall repair raise the total; the free written estimate gives you the exact number.`}
       faqs={[
         {
-          question: "How long does an interior painting project take for a typical Tanglewood home?",
-          answer: "For a typical Tanglewood home (3,000 to 6,000 sqft of living space), a full interior repaint takes between 3 and 7 business days. We schedule a dedicated crew of 3 to 5 painters and work consecutive days without bouncing between jobs."
-        },
-        {
-          question: "What paint brands do you use for Tanglewood interiors?",
-          answer: "We use premium-tier paints: Sherwin-Williams Emerald, Benjamin Moore Aura, and Behr Marquee. All are low-VOC and safe to be home during application."
-        },
-        {
-          question: "Will I need to move out during the project?",
-          answer: "No. We work room by room, keep the rest of the house functional, and use low-VOC paint. We protect floors and furniture with 12-mil plastic and drop cloths."
-        },
-        {
           question: "How much does interior painting cost in Tanglewood?",
-          answer: `Interior painting in Tanglewood typically ranges from $6,720 to $19,600 for a whole-home repaint. Single rooms typically run ${PRICES_2026.singleRoom}.`
+          answer: `Our published range for a whole-home interior of about 2,500 sq ft is ${PRICES_2026.fullInterior2500}, and a single room typically runs ${PRICES_2026.singleRoom}. Ceiling height, trim and repairs move the number, so the free written estimate is the real price.`,
         },
         {
-          question: "Do you provide color consultation?",
-          answer: "Yes — every full-home interior painting project includes a complimentary color consultation with physical samples and digital mockups."
+          question: "What paint do you use?",
+          answer: "Sherwin-Williams and Benjamin Moore interior paints. Both brands make low-VOC lines, and we choose the product and sheen for each room, for example a more washable finish for kitchens, baths and trim.",
         },
         {
-          question: "What's included in your interior painting warranty?",
-          answer: "Every interior painting project includes a 3-year written workmanship warranty plus 12 months of free touch-ups. The warranty is transferable to a new owner."
-        }
+          question: "Do I need to move out during the project?",
+          answer: "Usually not. We cover floors and furniture, work through the house in sections, and clean the work areas at the end of each day.",
+        },
+        {
+          question: "How long does an interior repaint take?",
+          answer: "It depends on the size of the home, ceiling heights, the amount of trim and how much patching is needed. We tell you the expected duration when we give you the written estimate.",
+        },
+        {
+          question: "My house was built before 1978. Does that matter?",
+          answer: "Homes built before 1978 may contain lead paint. Federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask any painter for their certification before sanding or scraping begins.",
+        },
+        {
+          question: "What does the warranty cover?",
+          answer: "Every project comes with a 5-year written workmanship warranty. The terms are written out with your estimate, so you can read them before you approve anything.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+        },
       ]}
       testimonials={[
         {
@@ -85,7 +85,7 @@ export default function InteriorPaintingTanglewoodPage() {
         { title: "Interior Painting Katy", href: "/interior-painting-katy-cinco-ranch" },
         { title: "Interior Painting Cypress", href: "/interior-painting-cypress-bridgeland" }
       ]}
-      warrantyYears={3}
+      warrantyYears={5}
       warrantyType="Interior"
     />
   )

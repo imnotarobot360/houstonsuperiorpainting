@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF, SERVICE_AREAS } from "@/lib/business";
+
+const NEARBY = SERVICE_AREAS.filter((a) =>
+  ["painters-katy-tx", "painters-cinco-ranch-tx", "painters-fulshear-tx", "painters-richmond-tx", "painters-sugar-land-tx"].includes(a.slug),
+);
 
 export const metadata: Metadata = {
-  title: "Best House Painters Near Katy Texas | Houston Superior Painting",
+  title: "House Painters Near Katy, TX: How to Choose",
   description:
-    "Recognized as one of the best house painters near Katy Texas. Premium service in Katy, Fulshear, Richmond & Sugar Land. 4.9/5 Google, free estimates.",
+    "How to choose a house painter near Katy, TX: what to check, what an estimate should include, and 2026 price ranges for interior, exterior and cabinets.",
   alternates: { canonical: "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas" },
   openGraph: {
-    title: "Best House Painters Near Katy Texas | Houston Superior Painting",
-    description: "Top-rated house painters near Katy TX. Interior, exterior, cabinet painting. Free estimates. (346) 594-5960.",
+    title: "House Painters Near Katy, TX: How to Choose",
+    description: "What to check before hiring a house painter near Katy, TX, plus 2026 price ranges. (346) 594-5960.",
     url: "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas",
     type: "website",
     images: [{ url: "/images/og/og-exterior-painting.jpg", width: 1200, height: 630 }],
@@ -18,53 +24,54 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "What areas near Katy do you serve?", a: "We serve all of Katy including Cinco Ranch, Cross Creek Ranch, Elyson, Cane Island, Firethorne, Tamarron, plus Fulshear, Richmond, Sugar Land, and all surrounding communities in Fort Bend and Harris County." },
-  { q: "How much does house painting cost in Katy TX?", a: "Interior painting in Katy costs $2.50\u2013$4.50/sqft. A 2,500 sqft Katy home averages $4,000\u2013$8,000 for interior and $4,500\u2013$12,000 for exterior. Cabinet painting runs $3,000\u2013$8,000. We provide free itemized estimates." },
-  { q: "Do you have experience with Katy new construction homes?", a: "Yes. We have painted hundreds of new construction and builder-grade upgrade projects in Katy communities including Cinco Ranch, Elyson, and Cross Creek Ranch. We know the typical layouts, siding types, and HOA requirements." },
-  { q: "What paint brands do you use?", a: "We exclusively use Sherwin-Williams (Duration, SuperPaint, Emerald) and Benjamin Moore (Regal Select, Aura). These premium products are rated for Texas heat and humidity." },
-  { q: "How long does it take to paint a house in Katy?", a: "Interior painting takes 3\u20135 days for a typical Katy home. Exterior painting takes 4\u20137 days depending on size, siding type, and prep work needed. We schedule around weather for exterior work." },
-  { q: "Do you offer warranties?", a: "Yes. A 5-year warranty on all painting work \u2014 exterior, interior, and cabinet refinishing. All warranties are in writing." },
+  { q: "How do I choose a house painter near Katy?", a: "Ask for a certificate of insurance (general liability and workers' comp), get a written estimate that lists prep, products and every surface, ask what the written warranty covers and for how long, and check when payment is due. Compare two or three itemized estimates, not just totals." },
+  { q: "Do house painters in Texas need a license?", a: "No. Texas does not issue a state license for residential painting contractors, so insurance and a written warranty are the things to verify. Some cities require a registration or permit for certain work, so ask if your project needs one." },
+  { q: "How much does house painting cost in Katy TX?", a: `Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft, or ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting typically runs ${PRICES_2026.exteriorPerHome}. Kitchen cabinet painting typically runs ${PRICES_2026.cabinetsPerKitchen}. Estimates are free and itemized.` },
+  { q: "What areas near Katy do you serve?", a: "We serve Katy, including Cinco Ranch, Cross Creek Ranch, Elyson, Cane Island, Firethorne and Tamarron, plus Fulshear, Richmond, Sugar Land and the rest of Greater Houston." },
+  { q: "What paint brands do you use?", a: "We use Sherwin-Williams and Benjamin Moore paints, choosing the product line for the surface and exposure." },
+  { q: "How long does it take to paint a house in Katy?", a: "A full interior usually takes 3-5 days for a typical home. An exterior usually takes 4-7 days depending on size, siding and prep, and is scheduled around the weather." },
+  { q: "Do you offer warranties?", a: "Yes. Interior, exterior and cabinet work all carry our 5-year written workmanship warranty." },
 ];
 
 export default function BestHousePaintersKatyTexas() {
   return (
     <>
+      <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
         { "@type": "Organization", "@id": "https://houstonsuperiorpainting.com/#organization", "areaServed": { "@type": "City", "name": "Katy", "containedInPlace": { "@type": "State", "name": "Texas" } } },
-        { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Katy Painters", "item": "https://houstonsuperiorpainting.com/painters-katy-tx" }, { "@type": "ListItem", "position": 3, "name": "Best House Painters Katy", "item": "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas" }] },
+        { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Katy Painters", "item": "https://houstonsuperiorpainting.com/painters-katy-tx" }, { "@type": "ListItem", "position": 3, "name": "House Painters Near Katy: How to Choose", "item": "https://houstonsuperiorpainting.com/best-house-painters-near-katy-texas" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
       ] }) }} />
 
-      <section className="quick-answer bg-amber-50 border-l-4 border-amber-500 py-8">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-xl font-semibold mb-3">Quick Answer</h2>
-          <p className="text-lg leading-relaxed">Houston Superior Painting is one of the top-rated house painters near Katy, Texas. We serve Cinco Ranch, Cross Creek Ranch, Elyson, Fulshear, Richmond, and Sugar Land. Interior painting starts at $2.50/sqft, exterior from $3,500. 4.9/5 Google rating, 200+ reviews, 5-year exterior warranty. Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a>.</p>
-        </div>
-      </section>
-
       <section className="relative bg-zinc-900 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-5xl text-center">
-          <h1 className="hero-h1 text-3xl md:text-5xl font-serif font-bold mb-6 text-balance">Best House Painters Near Katy Texas</h1>
-          <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto mb-8">From Cinco Ranch to Fulshear, Katy homeowners trust Houston Superior Painting for premium interior, exterior, and cabinet painting. Owner-operated since 2019.</p>
+          <h1 className="hero-h1 text-3xl md:text-5xl font-serif font-bold mb-6 text-balance">House Painters Near Katy, TX: How to Choose</h1>
+          <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto mb-8">What to check before you hire a painter in Katy, Fulshear or Richmond, what a good estimate includes, and what painting typically costs in 2026.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors">Call {BUSINESS.phone}</a>
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 border border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">Free Estimate</Link>
+            <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center gap-2 border border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">Free Estimate</Link>
           </div>
         </div>
       </section>
 
+      <section className="quick-answer bg-amber-50 border-l-4 border-amber-500 py-8">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-xl font-semibold mb-3">Quick Answer</h2>
+          <p className="text-lg leading-relaxed">To choose a house painter near Katy, check for liability and workers&apos; comp insurance, a written itemized estimate, a written warranty, and a payment schedule that does not ask for money before you approve the scope. Interior painting typically costs {PRICES_2026.interiorPerSqFt} per sq ft and exterior painting {PRICES_2026.exteriorPerHome}. Houston Superior Painting serves Katy, Cinco Ranch, Fulshear, Richmond and Sugar Land. Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a>.</p>
+        </div>
+      </section>
+
       <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-10 text-center">Why Katy Homeowners Choose Us</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8">What to Check Before You Hire</h2>
+          <div className="space-y-4">
             {[
-              { title: "Katy Experts Since 2019", desc: "Hundreds of completed projects across Cinco Ranch, Cross Creek Ranch, Elyson, Cane Island, and every Katy neighborhood." },
-              { title: "4.9/5 Google Rating", desc: "200+ verified 5-star reviews from homeowners across Katy, Fulshear, Richmond, and Sugar Land." },
-              { title: "Premium Products Only", desc: "Sherwin-Williams Duration and Emerald, Benjamin Moore Regal Select and Aura. No builder-grade paint." },
-              { title: "Background-Checked Team", desc: "W-2 employees only. Every team member is background-checked and drug-tested." },
-              { title: "5-Year Written Warranty", desc: "Written 5-year warranty on all work \u2014 exterior, interior, and cabinets." },
-              { title: "Owner On Every Job", desc: "Owner Juan Serra personally reviews the prep scope on every Katy estimate." },
+              { title: "Insurance, not a license", desc: "Texas does not license residential painters. Ask for a certificate of insurance showing general liability and workers' comp, so an injury on your property is not your problem." },
+              { title: "An itemized written estimate", desc: "It should list each surface, the prep (washing, scraping, caulking, priming), the paint product and sheen, and the number of coats. A one-line price is hard to compare." },
+              { title: "A written warranty", desc: "Ask how long it lasts and what it covers, and get it in writing." },
+              { title: "When you pay", desc: "Be cautious about paying a large amount before the scope is agreed in writing. A balance due after a final walkthrough gives you leverage to get touch-ups done." },
+              { title: "Lead paint in older homes", desc: "Homes built before 1978 may contain lead paint, which federal rules require be disturbed only by an EPA-certified renovation firm. If your home is that old, ask any painter for their certification." },
             ].map(item => (
               <div key={item.title} className="bg-card border border-border rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
@@ -72,50 +79,51 @@ export default function BestHousePaintersKatyTexas() {
               </div>
             ))}
           </div>
+          <p className="mt-6 text-muted-foreground">More detail: <Link href="/questions-to-ask-before-hiring-painters" className="text-primary underline">questions to ask before hiring painters</Link>.</p>
         </div>
       </section>
 
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8 text-center">House Painting Costs in Katy TX</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">About Houston Superior Painting</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">Houston Superior Painting was founded in 2019 by Juan Serra and is headquartered in Cypress, TX. We carry {BUSINESS.trust.liabilityCoverage} in general liability insurance plus workers&apos; comp, use Sherwin-Williams and Benjamin Moore paints, and give a 5-year written workmanship warranty on interior, exterior and cabinet work.</p>
+          <p className="text-muted-foreground leading-relaxed">{BUSINESS.paymentPolicy.sentence} Services: <Link href="/interior-painting-houston-tx" className="text-primary underline">interior painting</Link>, <Link href="/exterior-painting-houston-tx" className="text-primary underline">exterior painting</Link> and <Link href="/cabinet-refinishing-houston-tx" className="text-primary underline">cabinet refinishing</Link>.</p>
+        </div>
+      </section>
+
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8 text-center">House Painting Price Ranges, 2026</h2>
           <div className="overflow-x-auto pricing-snippet">
             <table className="w-full border-collapse bg-card rounded-xl overflow-hidden shadow-sm">
-              <thead><tr className="bg-primary text-primary-foreground"><th className="text-left p-4 font-semibold">Service</th><th className="text-left p-4 font-semibold">Price Range</th><th className="text-left p-4 font-semibold">Timeline</th></tr></thead>
+              <thead><tr className="bg-primary text-primary-foreground"><th className="text-left p-4 font-semibold">Service</th><th className="text-left p-4 font-semibold">Price Range</th><th className="text-left p-4 font-semibold">Typical Timeline</th></tr></thead>
               <tbody className="divide-y divide-border">
-                <tr><td className="p-4">Interior Painting (whole home)</td><td className="p-4 font-semibold">$4,000 &ndash; $8,000</td><td className="p-4">3\u20135 days</td></tr>
-                <tr><td className="p-4">Exterior Painting</td><td className="p-4 font-semibold">$4,500 &ndash; $12,000</td><td className="p-4">4\u20137 days</td></tr>
-                <tr><td className="p-4">Cabinet Refinishing</td><td className="p-4 font-semibold">$3,000 &ndash; $8,000</td><td className="p-4">5\u20138 days</td></tr>
-                <tr><td className="p-4">Single Room</td><td className="p-4 font-semibold">$500 &ndash; $1,500</td><td className="p-4">1 day</td></tr>
-                <tr><td className="p-4">Accent Wall</td><td className="p-4 font-semibold">$200 &ndash; $600</td><td className="p-4">3\u20135 hours</td></tr>
+                <tr><td className="p-4">Interior painting (2,500 sq ft home)</td><td className="p-4 font-semibold">{PRICES_2026.fullInterior2500}</td><td className="p-4">3–5 days</td></tr>
+                <tr><td className="p-4">Exterior painting</td><td className="p-4 font-semibold">{PRICES_2026.exteriorPerHome}</td><td className="p-4">4–7 days</td></tr>
+                <tr><td className="p-4">Kitchen cabinet painting</td><td className="p-4 font-semibold">{PRICES_2026.cabinetsPerKitchen}</td><td className="p-4">5–7 days</td></tr>
+                <tr><td className="p-4">Single room</td><td className="p-4 font-semibold">{PRICES_2026.singleRoom}</td><td className="p-4">1 day</td></tr>
+                <tr><td className="p-4">Accent wall</td><td className="p-4 font-semibold">{PRICES_2026.accentWall}</td><td className="p-4">A few hours</td></tr>
               </tbody>
             </table>
+          </div>
+          <p className="mt-4 text-sm text-muted-foreground text-center">See the <Link href="/houston-painting-cost-guide" className="text-primary underline">Houston painting cost guide</Link> for more sizes.</p>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8 text-center">Katy and Nearby Areas</h2>
+          <div className="flex flex-wrap gap-3 justify-center">
+            {NEARBY.map(a => (
+              <Link key={a.slug} href={`/${a.slug}`} className="bg-card border border-border rounded-lg px-4 py-3 text-sm font-medium hover:border-primary hover:text-primary transition-colors">Painters in {a.name}</Link>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8 text-center">Katy Neighborhoods We Serve</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-            {["Cinco Ranch", "Cross Creek Ranch", "Elyson", "Cane Island", "Firethorne", "Tamarron", "Grand Lakes", "Pine Mill Ranch", "Nottingham Country", "Morton Ranch", "Katy Mills Area", "Old Katy"].map(n => (
-              <div key={n} className="bg-card border border-border rounded-lg p-3 text-center text-sm font-medium">{n}</div>
-            ))}
-          </div>
-          <div className="mt-8 flex flex-wrap gap-3 justify-center">
-            <Link href="/painters-katy-tx" className="text-primary font-semibold hover:underline">Katy Painters</Link>
-            <span className="text-muted-foreground">|</span>
-            <Link href="/painters-fulshear-tx" className="text-primary font-semibold hover:underline">Fulshear</Link>
-            <span className="text-muted-foreground">|</span>
-            <Link href="/painters-richmond-tx" className="text-primary font-semibold hover:underline">Richmond</Link>
-            <span className="text-muted-foreground">|</span>
-            <Link href="/painters-sugar-land-tx" className="text-primary font-semibold hover:underline">Sugar Land</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8 text-center">FAQs About House Painting in Katy</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-8 text-center">FAQs About Hiring a Painter in Katy</h2>
           <div className="space-y-3">
             {faqs.map(faq => (
               <details key={faq.q} className="group bg-card border border-border rounded-xl overflow-hidden">
@@ -129,14 +137,16 @@ export default function BestHousePaintersKatyTexas() {
 
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">Ready for Katy&apos;s Best Painters?</h2>
-          <p className="text-lg opacity-90 mb-8">Free estimates, premium products, 5-year warranty. See why Katy homeowners rate us 4.9/5 on Google.</p>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">Get a Free Written Estimate</h2>
+          <p className="text-lg opacity-90 mb-8">{BUSINESS.paymentPolicy.short}: nothing is due until you approve the written estimate. 5-year written workmanship warranty.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors">Call {BUSINESS.phone}</a>
+            <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors">Request an Estimate</Link>
+            <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 border border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">Call {BUSINESS.phone}</a>
             <a href={SMS_HREF} className="inline-flex items-center justify-center gap-2 border border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">Text Us</a>
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/limewash-decorative-finishes-the-heights',
   },
-  title: "Limewash & Decorative Finishes The Heights | Free Estimates",
-  description: "Premium limewash and decorative finishes in The Heights, Houston. European-style elegance. Free quote — call (346) 594-5960.",
+  title: "Limewash & Decorative Finishes The Heights",
+  description: "Limewash for brick chimneys, walls and newer brick homes, plus decorative finishes, in the Houston Heights. Priced after an on-site look; free estimate.",
 }
 
 export default function LimewashHeightsPage() {
@@ -16,48 +16,48 @@ export default function LimewashHeightsPage() {
       serviceSlug="limewash-decorative-finishes"
       zone="The Heights, Houston, TX"
       zoneSlug="the-heights"
-      metaTitle="Limewash & Decorative Finishes The Heights | Houston Superior Painting"
-      metaDescription="Premium limewash and decorative finishes in The Heights, Houston."
+      metaTitle="Limewash & Decorative Finishes The Heights"
+      metaDescription="Limewash for brick chimneys, walls and newer brick homes, plus decorative finishes, in the Houston Heights. Priced after an on-site look; free estimate."
       h1="Limewash & Decorative Finishes in The Heights, Houston, TX"
-      heroSubheading="Bring European elegance to your Heights home with authentic limewash and decorative finishes — timeless beauty, breathable walls, and a look that only improves with age."
-      introLocal="The Heights is known for its distinctive character, and limewash finishes complement that aesthetic perfectly. Whether you're refreshing a historic bungalow's exterior or adding Roman Clay to a modern new build, Houston Superior Painting brings authentic European techniques to The Heights, Woodland Heights, and Norhill."
-      serviceOverview="Our limewash and decorative finish services include authentic lime-based washes for brick and stucco, Roman Clay and Venetian plaster for interior walls, and specialty texture techniques. We use premium materials from Romabio, Portola Paints, and Master of Plaster. A typical project takes 3 to 7 business days."
+      heroSubheading="Limewash for brick, stone and stucco, and decorative finishes such as Venetian plaster for interior walls, priced after an on-site look."
+      introLocal="Most original Heights homes are wood-sided, so limewash here is usually for brick chimneys, foundations, garden walls, newer brick construction, or interior walls. It is not the right product for every surface, so we look before quoting."
+      serviceOverview="Limewash is a mineral finish made from lime and water, often tinted. It soaks into porous masonry instead of forming a film on top, giving brick and stone a soft, matte, uneven look. It works best on unpainted, unsealed masonry. Indoors we also apply decorative finishes such as Venetian plaster. Because the result depends on the surface, we look at it in person before quoting."
       whyChooseUs={[
-        "Authentic limewash technique using premium lime-based materials.",
-        "Experience with historic Heights architecture and contemporary new builds.",
-        "EPA Lead-Safe Certified for pre-1978 homes common in The Heights.",
-        "Trained in Roman Clay, Venetian plaster, and specialty decorative techniques.",
-        "Breathable finishes essential for Houston's humid climate."
+        "A check of whether your brick has been painted or sealed before, which decides whether limewash will work.",
+        "An on-site look at the masonry or walls before anything is quoted.",
+        "A free written estimate, with nothing due until you approve it.",
+        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
       ]}
-      priceRange="$5,500 – $18,000"
-      priceMin={5500}
-      priceMax={18000}
-      priceDetails="Limewash and decorative finishes in The Heights typically range from $5,500 to $18,000, depending on home size and finish complexity."
+      priceDetails="Limewash and decorative finishes are priced after an on-site look. The surface (brick, stone, stucco or interior wall), its condition, whether it has been painted or sealed before, and the look you want all change the scope, so we don't publish a range. The estimate is free."
       faqs={[
         {
           question: "What is limewash?",
-          answer: "Limewash is an ancient finish made from limestone that creates beautiful depth and character."
+          answer: "Limewash is a mineral finish made from lime and water, often tinted. It soaks into porous brick, stone or stucco instead of forming a film on top, which gives a soft, matte, slightly uneven look.",
         },
         {
-          question: "Is limewash appropriate for historic Heights homes?",
-          answer: "Yes — limewash has been used for centuries and complements historic architecture beautifully."
-        },
-        {
-          question: "Can you limewash my brick bungalow?",
-          answer: "Yes — limewash is perfect for brick and creates a durable, breathable finish."
-        },
-        {
-          question: "What interior finishes do you offer?",
-          answer: "We offer Roman Clay, Venetian plaster, lime plaster, and specialty textures."
-        },
-        {
-          question: "How much does limewash cost?",
-          answer: "Exterior limewash ranges from $4-8 per sqft; interior finishes from $12-20 per sqft."
+          question: "Can limewash go on any brick?",
+          answer: "It works best on unpainted, unsealed brick, stone and stucco. Masonry that has been painted or sealed usually needs a different product, which we check during the estimate.",
         },
         {
           question: "How does limewash age?",
-          answer: "Limewash develops a beautiful patina over time and can last 15-20+ years."
-        }
+          answer: "Limewash weathers gradually, especially on surfaces that get a lot of rain, and it can be refreshed with another coat. Some homeowners like the softer look as it wears; others plan for periodic touch-ups.",
+        },
+        {
+          question: "Is limewash better than painting brick?",
+          answer: "Neither is better in every case. Paint forms a film and gives a solid, uniform color. Limewash is breathable and lets the texture and some of the brick color show through. The right choice depends on the look you want and the condition of the masonry.",
+        },
+        {
+          question: "How much does limewash cost in The Heights?",
+          answer: "Limewash and decorative finishes are priced after an on-site look, because the surface, its condition and the look you want change the scope. The estimate is free and nothing is due until you approve it.",
+        },
+        {
+          question: "What decorative finishes do you offer?",
+          answer: "For interior walls we offer Venetian plaster, Roman Clay, and faux and metallic finishes; for bare brick, limewash. Each is priced after an on-site look, and the estimate is free.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+        },
       ]}
       testimonials={[
         {

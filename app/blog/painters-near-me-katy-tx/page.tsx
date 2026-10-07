@@ -137,7 +137,7 @@ export default function PaintersNearMeKatyTxPage() {
       readTime="14 min read"
       category="Local Guide"
       featuredImage="/images/blog/painters-near-me-katy-tx.png"
-      featuredImageAlt="A professional painting crew in branded uniforms working on a two-story home in a Katy, Texas master-planned community with a company truck in the driveway"
+      featuredImageAlt="Illustration of a painting crew working on a two-story suburban home"
       slug="painters-near-me-katy-tx"
       faqs={faqs}
       relatedPosts={relatedPosts}

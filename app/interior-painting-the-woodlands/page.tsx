@@ -1,15 +1,17 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
-  title: "Interior Painters The Woodlands TX | Houston Superior Painting",
-  description: "Premium interior painting in The Woodlands, TX. Serving Creekside Park, Sterling Ridge, Alden Bridge. 5-year warranty. Free estimates.",
+  title: "The Woodlands Interior Painting | Houston Superior Painting",
+  description: "Interior painting in The Woodlands, TX: walls, ceilings, trim and doors. Free written estimate, nothing due until you approve. 5-year warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-the-woodlands",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "Interior Painters The Woodlands TX — Houston Superior Painting",
-    description: "Premium interior painting in The Woodlands, TX. Serving Creekside Park, Sterling Ridge, Alden Bridge. 5-year warranty.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "The Woodlands Interior Painting | Houston Superior Painting",
+    description: "Interior painting in The Woodlands, TX: walls, ceilings, trim and doors. Free written estimate, nothing due until you approve. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/interior-painting-the-woodlands",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -23,48 +25,45 @@ export default function InteriorPaintingTheWoodlandsPage() {
       serviceSlug="interior-painting"
       zone="The Woodlands"
       zoneSlug="the-woodlands"
-      metaTitle="Interior Painters The Woodlands TX — Houston Superior Painting"
-      metaDescription="Premium interior painting in The Woodlands, TX. Serving Creekside Park, Sterling Ridge, Alden Bridge. 5-year warranty."
-      h1="Interior Painters in The Woodlands, TX"
-      heroSubheading="Meticulous interior painting for The Woodlands' finest homes — from village estates to modern builds in Creekside Park."
-      introLocal="The Woodlands represents some of the Houston area's most distinctive architecture — from traditional estates in Grogan's Mill and Panther Creek to contemporary builds in Creekside Park and Sterling Ridge. Houston Superior Painting understands these diverse styles and the expectations of Woodlands homeowners. Our prep-first approach ensures every project delivers lasting, beautiful results that complement your home's character."
-      serviceOverview="Our interior painting service in The Woodlands covers everything from single accent walls to complete home repaints. We use premium materials — Sherwin-Williams Emerald, Benjamin Moore Aura — selected for Houston's humidity. Projects typically take 3-7 business days, and every job includes our 5-year workmanship warranty plus 12 months of complimentary touch-ups."
+      metaTitle={"The Woodlands Interior Painting | Houston Superior Painting"}
+      metaDescription={"Interior painting in The Woodlands, TX: walls, ceilings, trim and doors. Free written estimate, nothing due until you approve. 5-year warranty."}
+      h1={"Interior Painters in The Woodlands, TX"}
+      heroSubheading={"Interior painting for homes across The Woodlands' villages, from older homes in Grogan's Mill and Panther Creek to newer builds in Creekside Park."}
+      introLocal={"The Woodlands' villages span several decades of construction. Homes in the earlier villages, such as Grogan's Mill and Panther Creek, often have years of touch-ups, older oil-based trim and dated colors, while newer homes in Creekside Park and Sterling Ridge tend to have flat builder-grade paint and tall, open rooms. Oil-based trim needs a bonding primer before it will hold water-based paint, and tall rooms need the right equipment; both are planned for in the written estimate."}
+      serviceOverview={"Interior painting in The Woodlands covers walls, ceilings, trim, doors and closets. Prep comes first: furniture moved or covered, floors protected, holes and cracks patched, gaps caulked and stains spot-primed. We apply Sherwin-Williams or Benjamin Moore paint, and the product line and sheen for each surface are listed on your written estimate. The schedule is also set in writing before work starts, and every job carries our 5-year written workmanship warranty."}
       whyChooseUs={[
-        "Deep experience in The Woodlands villages — Creekside Park, Sterling Ridge, Alden Bridge, Panther Creek, Indian Springs, and Grogan's Mill.",
-        "Comfortable working in high-end homes with custom millwork, tall ceilings, and detailed trim.",
-        "Daily photo updates and a dedicated bilingual foreman on every project.",
-        "We coordinate with your designer or architect when needed.",
-        "5-year written workmanship warranty plus 12 months of free touch-ups."
+        "A written estimate that lists the rooms, surfaces, prep and products, so you can compare bids line by line.",
+        "Prep before paint: patching, caulking and spot-priming are part of the scope, not extras.",
+        "Furniture, floors and fixtures protected, and work areas cleaned at the end of each day.",
+        "Sheen matched to each room, with more washable finishes for kitchens, baths and hallways.",
+        "Sherwin-Williams and Benjamin Moore paints.",
       ]}
-      priceRange="$5,200 – $18,500"
-      priceMin={5200}
-      priceMax={18500}
-      priceDetails="Interior painting in The Woodlands typically ranges from $5,200 to $18,500 for a whole-home repaint, depending on square footage, ceiling height, trim complexity, and finish quality. Single rooms typically run $650 to $1,800."
+      priceDetails={`Our published range for a whole-home interior of about 2,500 sq ft is ${PRICES_2026.fullInterior2500}. A single room typically runs ${PRICES_2026.singleRoom}, or about ${PRICES_2026.interiorPerSqFt} per square foot of floor area for a whole home. Ceiling height, trim detail, color changes and wall repairs move the price within that range. The written estimate is free.`}
       faqs={[
         {
-          question: "How long does interior painting take in The Woodlands?",
-          answer: "For a typical Woodlands home (3,000 to 6,000 sqft), a full interior repaint takes 4 to 8 business days. Larger estates with detailed millwork may require additional time."
-        },
-        {
-          question: "What paint brands do you use in The Woodlands?",
-          answer: "We use premium lines including Sherwin-Williams Emerald, Benjamin Moore Aura, and Regal Select. All are low-VOC and safe for occupied homes."
-        },
-        {
-          question: "Do you work with The Woodlands Design Review Committee?",
-          answer: "Yes — while interior painting typically doesn't require DRC approval, we're familiar with The Woodlands' standards and can assist with any exterior color coordination."
-        },
-        {
           question: "How much does interior painting cost in The Woodlands?",
-          answer: "Interior painting typically ranges from $5,200 to $18,500 for whole-home projects. Single rooms run $650 to $1,800 depending on size and complexity."
+          answer: `Our published pricing is ${PRICES_2026.fullInterior2500} for a whole-home interior of about 2,500 sq ft and ${PRICES_2026.singleRoom} for a single room. Ceiling height, trim, color changes and wall repairs move the price within those ranges, and your exact price is set in a free written estimate.`,
         },
         {
-          question: "Can you match custom colors or existing finishes?",
-          answer: "Absolutely. We provide professional color matching and can coordinate with your designer. We also offer complimentary color consultations."
+          question: "Can you paint over oil-based trim?",
+          answer: "Yes, with the right prep. Glossy oil-based trim is cleaned, scuff-sanded and primed with a bonding primer before the topcoat. Without that step, water-based paint can peel off it.",
         },
         {
-          question: "What areas in The Woodlands do you serve?",
-          answer: "We serve all villages including Creekside Park, Sterling Ridge, Alden Bridge, Panther Creek, Indian Springs, Grogan's Mill, Cochran's Crossing, and College Park."
-        }
+          question: "Does interior painting need Design Review Committee approval?",
+          answer: "Generally no. The Woodlands' Residential Design Review Committee reviews exterior changes, such as exterior colors. If you are unsure, check with The Woodlands Township before you start.",
+        },
+        {
+          question: "What paint do you use?",
+          answer: "We use Sherwin-Williams and Benjamin Moore paints. The product line and sheen for each surface are written into your estimate, so you know exactly what is going on your home.",
+        },
+        {
+          question: "Do I have to pay anything before work starts?",
+          answer: `${BUSINESS.paymentPolicy.sentence}`,
+        },
+        {
+          question: "What warranty do you offer?",
+          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+        },
       ]}
       testimonials={[
         {
@@ -84,12 +83,12 @@ export default function InteriorPaintingTheWoodlandsPage() {
         }
       ]}
       relatedPages={[
+        { title: "Interior Painting Houston", href: "/interior-painting-houston-tx" },
         { title: "Exterior Painting The Woodlands", href: "/exterior-painting-the-woodlands" },
-        { title: "Cabinet Refinishing The Woodlands", href: "/cabinet-refinishing-the-heights" },
-        { title: "Painters The Woodlands TX", href: "/painters-the-woodlands-tx" },
+        { title: "Painters in The Woodlands", href: "/painters-the-woodlands-tx" },
+        { title: "Interior Painting Cypress & Bridgeland", href: "/interior-painting-cypress-bridgeland" },
         { title: "Interior Painting Memorial", href: "/interior-painting-memorial" },
-        { title: "Interior Painting Katy", href: "/interior-painting-katy-cinco-ranch" },
-        { title: "Interior Painting Sugar Land", href: "/interior-painting-sugar-land" }
+        { title: "Cabinet Refinishing Houston", href: "/cabinet-refinishing-houston-tx" },
       ]}
       warrantyYears={5}
       warrantyType="Interior"

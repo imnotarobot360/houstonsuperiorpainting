@@ -9,15 +9,19 @@ import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 import { PRICES_2026 } from "@/lib/business"
 
+const TITLE = "House Painters in Pearland TX | Houston Superior Painting"
+const DESCRIPTION =
+  "Interior, exterior & cabinet painting in Pearland, TX. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960."
+
 export const metadata: Metadata = {
-  title: "House Painters Pearland TX — Houston Superior Painting",
-  description: "Professional painters in Pearland TX. Interior, exterior, cabinet painting for Silverlake, Shadow Creek Ranch, Southfork. 5-year warranty. Free estimates.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-pearland-tx',
   },
   openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "House Painters Pearland TX — Houston Superior Painting",
-    description: "Professional painters in Pearland TX. Interior, exterior, cabinet painting for Silverlake, Shadow Creek Ranch, Southfork. 5-year warranty.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://houstonsuperiorpainting.com/painters-pearland-tx",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -50,65 +54,60 @@ export default function PaintersPearlandTX() {
           city="Pearland"
           state="TX"
           heroHeadline="House Painters in Pearland, TX"
-          heroDescription="From Silverlake's established homes to Shadow Creek Ranch's master-planned community, we deliver exceptional painting results backed by our 5-year warranty. HOA-compliant colors and professional service."
-          quickAnswer={`Houston Superior Painting provides professional painting services throughout Pearland TX including Silverlake, Shadow Creek Ranch, Southfork, and Southern Trails. Interior painting costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. We offer HOA color consultation, use Sherwin-Williams and Benjamin Moore products, and provide a 5-year warranty. Call (346) 594-5960 for a free estimate.`}
-          aboutCity={`Pearland has grown from a small town into one of Houston's most desirable suburban communities. With its excellent schools, family-friendly neighborhoods, and convenient access to both Houston and Galveston, Pearland attracts homeowners who value quality of life—and quality in their homes.
+          heroDescription="Interior, exterior, and cabinet painting for Pearland homes, from Old Pearland to Silverlake and Shadow Creek Ranch. Insured, with a 5-year workmanship warranty."
+          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Pearland, TX, including Silverlake, Shadow Creek Ranch, Southfork, and Southern Trails. We are headquartered in Cypress, and our crews work across Greater Houston. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We carry $2M general liability + workers' comp and give a 5-year workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
+          aboutCity={`Pearland's housing runs from older homes in Old Pearland to master-planned communities such as Silverlake, Shadow Creek Ranch, and Southern Trails. Older homes tend to have more wood trim and siding to check for rot before paint. In newer two-story homes, the usual projects are replacing flat builder-grade interior paint with a washable finish and repainting sun-faded siding and trim.
 
-Whether you live in the established neighborhoods around Silverlake, the master-planned community of Shadow Creek Ranch, the growing Southfork area, or historic Old Pearland, your home deserves painting services that meet your standards.
+Pearland sits south of Houston, closer to the Gulf, with the same heat, humidity, and heavy rain as the rest of the area. South- and west-facing walls fade and chalk first. On an exterior we wash off the chalk and mildew, re-caulk open joints, and prime bare spots so the new coat bonds instead of peeling.
 
-Houston Superior Painting has been serving Pearland homeowners since 2019. We understand this community's mix of home styles—from newer two-story construction in master-planned communities to established single-story homes in older neighborhoods. Our crews adapt techniques for each home's specific needs while maintaining consistent quality.
-
-Pearland's Gulf Coast location presents the same climate challenges as Greater Houston: intense summer heat, high humidity, and occasional severe weather. We use premium materials rated for these conditions and follow preparation protocols that ensure lasting results.
-
-Our familiarity with Pearland's HOA requirements in communities like Shadow Creek Ranch and Silverlake means we can help you navigate color approvals and community standards. We've built relationships with Pearland homeowners who trust us for their ongoing painting needs.`}
+Many Pearland communities have HOAs that review exterior colors. We can pull your community's approved color list and help with the approval paperwork before work starts.`}
           whyChooseUs={[
-            "HOA expertise: Shadow Creek Ranch, Silverlake, Southfork guidelines",
-            "Climate-rated materials: premium paints for Gulf Coast conditions",
-            "New and established homes: skilled with all Pearland housing types",
-            "Professional crews: punctual, clean, respectful",
-            "5-year written warranty on all residential painting",
-            "Free color consultations and HOA approval assistance",
-            "Competitive pricing for Pearland homeowners"
+            "Free on-site estimate with a written scope; nothing is due until you approve it",
+            "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
+            "5-year written workmanship warranty",
+            "Sherwin-Williams and Benjamin Moore paints",
+            "Help with HOA color lists and approval paperwork",
+            "Founded in 2019 and headquartered in Cypress, with crews across Greater Houston",
           ]}
           services={[
             {
               title: "Interior Painting Pearland",
-              description: "Transform your Pearland home's interior with smooth, professional finishes. Perfect for updating builder-grade finishes.",
+              description: "Walls, ceilings, trim, and doors, including replacing flat builder-grade paint with a washable finish.",
               href: "/interior-painting-houston-tx"
             },
             {
               title: "Exterior Painting Pearland",
-              description: "Protect your Pearland home from Gulf Coast weather with durable exterior coatings that look great for years.",
+              description: "Wash, scrape, caulk, and prime before the finish coats on siding, trim, and brick.",
               href: "/exterior-painting-houston-tx"
             },
             {
               title: "Cabinet Refinishing Pearland",
-              description: "Update your Pearland kitchen with factory-smooth cabinet finishes. Cost-effective alternative to replacement.",
+              description: "Sprayed cabinet finishes that update a kitchen without replacing the cabinets.",
               href: "/cabinet-refinishing-houston-tx"
             },
             {
               title: "Drywall Repair Pearland",
-              description: "Fix cracks, nail pops, and settling damage before painting for flawless final results.",
+              description: "Cracks, nail pops, and settling damage repaired and texture-matched before painting.",
               href: "/drywall-repair-houston-tx"
             },
             {
               title: "Pressure Washing Pearland",
-              description: "Professional cleaning for driveways, sidewalks, and exteriors. Essential prep before painting.",
+              description: "Cleaning for driveways, sidewalks, and exteriors, and the first step before exterior paint.",
               href: "/pressure-washing-houston-tx"
             },
             {
               title: "Limewash Brick Pearland",
-              description: "Transform your Pearland brick home with elegant European limewash finishes.",
+              description: "Limewash or painted brick for Pearland brick homes, priced after an on-site look.",
               href: "/limewash-brick-painting-houston-tx"
             },
             {
               title: "Commercial Painting Pearland",
-              description: "Professional painting for Pearland businesses and commercial properties.",
+              description: "Painting for Pearland businesses and commercial properties.",
               href: "/commercial-painting-houston-tx"
             },
             {
               title: "Garage Floor Epoxy Pearland",
-              description: "Durable epoxy coatings for Pearland garages with multiple color and finish options.",
+              description: "Garage floor epoxy is handled by our separate epoxy brand, Houston Superior Epoxy.",
               href: "https://houstonsuperiorepoxy.com/"
             }
           ]}
@@ -120,41 +119,34 @@ Our familiarity with Pearland's HOA requirements in communities like Shadow Cree
             "Lakes of Highland Glen",
             "West Oaks",
             "Old Pearland",
-            "Pearland Town Center",
             "Sunrise Lakes",
             "Lakes of Savannah",
-            "Pearland East",
             "Magnolia Landing"
           ]}
-          testimonial={{
-            quote: "We got quotes from several painters for our Shadow Creek Ranch home. Houston Superior Painting was competitively priced but clearly more professional—detailed estimate, great communication, and the results speak for themselves. Our house looks fantastic!",
-            author: "The Martinez Family",
-            location: "Shadow Creek Ranch, Pearland"
-          }}
           faqs={[
             {
               question: "How much does it cost to paint a house in Pearland?",
-              answer: `Interior painting in Pearland typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates.`
+              answer: `In 2026 interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exteriors run ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
             },
             {
               question: "Do you work with Pearland HOAs?",
-              answer: "Yes! We're familiar with HOA requirements in Shadow Creek Ranch, Silverlake, and other Pearland communities. We help with color selection and approval process."
+              answer: "Yes. We can pull your community's approved color list and help with the approval paperwork before any exterior work starts, and we can send a certificate of insurance to your HOA."
             },
             {
               question: "What paint do you use for Pearland exteriors?",
-              answer: "Sherwin-Williams Duration and SuperPaint—formulated for Gulf Coast humidity, UV exposure, and mildew resistance. Our 5-year warranty covers any issues."
+              answer: "Sherwin-Williams or Benjamin Moore exterior paints suited to heat, humidity, and mildew, such as Sherwin-Williams Duration or SuperPaint. Our 5-year warranty covers peeling, blistering, and flaking caused by our workmanship."
             },
             {
               question: "Which Pearland areas do you serve?",
-              answer: "All of them! Silverlake, Shadow Creek Ranch, Southfork, Southern Trails, Old Pearland, and every neighborhood in between."
+              answer: "All of Pearland, including Silverlake, Shadow Creek Ranch, Southfork, Southern Trails, and Old Pearland. Call (346) 594-5960 or request an estimate online to confirm your address."
             },
             {
               question: "How long does a paint job take in Pearland?",
-              answer: "Interior: 4-6 days for a typical home. Exterior: 5-8 days depending on size and prep work. We provide specific timelines in your estimate."
+              answer: "It depends on the size of the home and how much prep it needs. Your written estimate states the timeline before any work starts, and exterior work can shift a few days for rain."
             },
             {
               question: "Are you insured?",
-              answer: "Yes, fully insured with $2M liability coverage. Certificates available for HOAs."
+              answer: "Yes. We carry $2M general liability + workers' comp and can send a certificate of insurance to you or your HOA. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license."
             }
           ]}
         />

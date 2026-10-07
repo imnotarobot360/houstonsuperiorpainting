@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
+  title: "Exterior Painting Cypress & Bridgeland, TX | Free Estimate",
+  description: "Exterior house painting in Cypress and Bridgeland, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty.",
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/exterior-painting-cypress-bridgeland',
+    canonical: "https://houstonsuperiorpainting.com/exterior-painting-cypress-bridgeland",
   },
-  title: "Exterior Painting Cypress & Bridgeland | Free Estimates",
-  description: "Premium exterior painting in Cypress and Bridgeland, TX. 5-year warranty, 5-star reviews. Free quote — call (346) 594-5960.",
 }
 
 export default function ExteriorPaintingCypressPage() {
@@ -16,47 +17,45 @@ export default function ExteriorPaintingCypressPage() {
       serviceSlug="exterior-painting"
       zone="Cypress & Bridgeland, TX"
       zoneSlug="cypress-bridgeland"
-      metaTitle="Exterior Painting Cypress & Bridgeland | Houston Superior Painting"
-      metaDescription="Premium exterior painting in Cypress and Bridgeland, TX. 5-year warranty, 5-star reviews."
+      metaTitle="Exterior Painting Cypress & Bridgeland, TX | Free Estimate"
+      metaDescription="Exterior house painting in Cypress and Bridgeland, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty."
       h1="Exterior Painting in Cypress and Bridgeland, TX"
-      heroSubheading="The painting team Cypress homeowners trust to deliver flawless exterior painting — prepped for Houston weather, finished beautifully, and backed by a 5-year written warranty."
-      introLocal="When Cypress and Bridgeland homeowners search for an exterior painter, they're looking for a team that understands the master-planned communities throughout the area — Bridgeland, Towne Lake, Fairfield, and Cypress Creek Lakes. Houston Superior Painting has protected and beautified exteriors throughout Cypress with coatings engineered to withstand Houston's demanding climate."
-      serviceOverview="Our exterior painting service in Cypress includes the full scope: power washing, wood rot repair, caulking, priming, and finish coats with premium exterior-grade materials. We use Sherwin-Williams Duration, SuperPaint, and Benjamin Moore Aura Exterior. A typical project takes 4 to 7 business days, and every job is backed by our 5-year written exterior warranty."
+      heroSubheading="Exterior repaints prepped for Houston heat and humidity: washed, caulked, repaired and primed before the finish coats, with a 5-year written workmanship warranty."
+      introLocal="Houston Superior Painting is headquartered in Cypress, so Bridgeland, Towne Lake, Fairfield and the rest of the Cypress area are close to home for our crews. Many homes here are brick with fiber-cement siding and trim on the upper floors and gables. On those homes the paint usually fails first at the trim: caulk joints open up, and the bottoms of trim boards and garage door frames take on water. Houston's humidity and summer heat are hard on exterior paint everywhere in the region, which is why prep matters more than the paint can."
+      serviceOverview="An exterior job starts with washing the house and removing mildew. We scrape loose paint, replace rotted trim where needed, caulk open joints, prime bare wood and repairs, then apply the finish coats with Sherwin-Williams or Benjamin Moore exterior paint. Landscaping, walkways and windows are protected while we work. Your written estimate lists the surfaces, repairs, product and schedule."
       whyChooseUs={[
-        "We know Cypress communities — Bridgeland, Towne Lake, Fairfield, Cypress Creek Lakes — and how to work with each HOA.",
-        "Experience with the contemporary finishes common in newer Cypress construction.",
-        "5-year written exterior warranty — the longest in the Houston metro area.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line."
+        "Founded in 2019 by owner Juan Serra and headquartered in Cypress, TX.",
+        "Wood rot repair and caulking are written into the estimate alongside the paint work.",
+        "Plants, walkways and windows protected; work areas cleaned each day.",
+        `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
+        "5-year written workmanship warranty.",
+        "No upfront payment: the estimate is free and nothing is due until you approve it in writing."
       ]}
-      priceRange="$5,500 – $18,500"
-      priceMin={5500}
-      priceMax={18500}
-      priceDetails="Exterior painting in Cypress typically ranges from $5,500 to $18,500 for a complete repaint, depending on home size, stories, substrate type, and prep complexity."
+      priceDetails={`Another way to think about it: roughly ${PRICES_2026.exteriorPerSqFt} per square foot of floor area. Number of stories, siding type, the amount of wood rot to repair and how much trim there is all move the price, and your free written estimate itemizes it.`}
       faqs={[
         {
-          question: "How long does an exterior project take in Cypress?",
-          answer: "For a typical Cypress home (2,500 to 4,500 sqft), a full exterior repaint takes between 4 and 7 business days, weather permitting."
-        },
-        {
-          question: "What paint brands do you use for exteriors?",
-          answer: "We use Sherwin-Williams Duration and SuperPaint, as well as Benjamin Moore Aura Exterior."
-        },
-        {
-          question: "Do you work with Cypress area HOAs?",
-          answer: "Yes — we're familiar with the HOA requirements in Bridgeland, Towne Lake, Fairfield, and other Cypress communities."
-        },
-        {
           question: "How much does exterior painting cost in Cypress?",
-          answer: "Exterior painting typically ranges from $5,500 to $18,500 for a complete repaint."
+          answer: `Most whole-house exteriors run ${PRICES_2026.exteriorPerHome}, and a 2,500 sq ft two-story is typically about ${PRICES_2026.exterior2500TwoStory}. These are our published 2026 Greater Houston ranges; your written estimate is free and itemized after we see the house.`,
         },
         {
-          question: "What's included in your 5-year warranty?",
-          answer: "Our warranty covers peeling, flaking, blistering, and adhesion failures caused by improper preparation or application."
+          question: "Does my HOA need to approve the colors?",
+          answer: "In most master-planned communities, yes. Get your HOA's color approval before the job is scheduled. If your HOA has an approved palette, bring it to the estimate and we will quote with those colors.",
         },
         {
-          question: "Do you handle newer homes that need their first repaint?",
-          answer: "Yes — we work with many Cypress homes getting their first repaint 7-10 years after construction."
+          question: "When is the best time to paint an exterior here?",
+          answer: "Exterior paint can go on most of the year in the Houston area. What matters is the weather on the day: we don't paint in rain or when rain is expected before the coating dries, and in summer it helps to avoid coating walls in direct midday sun.",
+        },
+        {
+          question: "Do you repair wood rot before painting?",
+          answer: "Yes. Rotted trim, fascia and siding boards are replaced before painting, because paint over rot fails quickly. Repairs found during the estimate are written into it.",
+        },
+        {
+          question: "What warranty do you give?",
+          answer: "Every exterior job comes with a 5-year written workmanship warranty. The full warranty terms are included with your written estimate, so you can read them before you approve the work.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free, and nothing is due until you approve the written estimate. A down payment is collected at that point, and the balance is due after the final walkthrough.",
         }
       ]}
       testimonials={[
@@ -77,15 +76,16 @@ export default function ExteriorPaintingCypressPage() {
         }
       ]}
       relatedPages={[
-        { title: "Exterior Painting Memorial", href: "/exterior-painting-memorial" },
-        { title: "Exterior Painting Tanglewood", href: "/exterior-painting-tanglewood" },
-        { title: "Exterior Painting Bellaire", href: "/exterior-painting-bellaire-west-university" },
-        { title: "Exterior Painting The Heights", href: "/exterior-painting-the-heights" },
-        { title: "Exterior Painting Sugar Land", href: "/exterior-painting-sugar-land" },
-        { title: "Exterior Painting Katy", href: "/exterior-painting-katy-cinco-ranch" }
+        { title: "Exterior painting cost guide", href: "/exterior-house-painting-houston-cost-guide" },
+        { title: "Wood rot repair", href: "/wood-rot-repair-houston-tx" },
+        { title: "Soft washing", href: "/soft-washing-houston-tx" },
+        { title: "Limewash and decorative finishes in Cypress & Bridgeland", href: "/limewash-decorative-finishes-cypress-bridgeland" },
+        { title: "Exterior painting in Katy & Cinco Ranch", href: "/exterior-painting-katy-cinco-ranch" },
+        { title: "Exterior painting in Sugar Land", href: "/exterior-painting-sugar-land" },
+        { title: "Painters in Cypress, TX (headquarters)", href: "/painters-cypress-tx" }
       ]}
       warrantyYears={5}
-      warrantyType="Exterior"
+      warrantyType="Workmanship"
     />
   )
 }

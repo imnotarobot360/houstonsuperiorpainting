@@ -1,12 +1,21 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
+  title: "Memorial Interior Painting | Houston Superior Painting",
+  description: "Interior painting in Memorial, Houston: walls, ceilings, trim and doors, with prep done first. Free written estimate. Insured, 5-year warranty.",
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/interior-painting-memorial',
+    canonical: "https://houstonsuperiorpainting.com/interior-painting-memorial",
   },
-  title: "Interior Painting Memorial | Houston Superior Painting",
-  description: "Premium interior painting in Memorial, Houston. 5-star reviews, written warranty, family-owned. Free quote — call (346) 594-5960.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "Memorial Interior Painting | Houston Superior Painting",
+    description: "Interior painting in Memorial, Houston: walls, ceilings, trim and doors, with prep done first. Free written estimate. Insured, 5-year warranty.",
+    url: "https://houstonsuperiorpainting.com/interior-painting-memorial",
+    siteName: "Houston Superior Painting",
+    type: "website",
+  },
 }
 
 export default function InteriorPaintingMemorialPage() {
@@ -16,48 +25,45 @@ export default function InteriorPaintingMemorialPage() {
       serviceSlug="interior-painting"
       zone="Memorial, Houston, TX"
       zoneSlug="memorial"
-      metaTitle="Interior Painting Memorial | Houston Superior Painting"
-      metaDescription="Premium interior painting in Memorial, Houston. 5-star reviews, written warranty, family-owned. Free quote."
-      h1="Interior Painting in Memorial, Houston, TX"
-      heroSubheading="The painting team Memorial homeowners trust to deliver flawless interior painting — prepped properly, finished beautifully, and warrantied in writing."
-      introLocal="When Memorial homeowners search for a painter, they're not looking for someone with a roller and a price quote. They're looking for a team that understands the architectural character of Memorial Park, Hunters Creek Village, and Bunker Hill, respects HOA standards where they apply, and treats their home like it costs what it actually does. Houston Superior Painting has completed projects across Memorial, Houston, TX, and our process is built around the one thing that separates a 2-year paint job from a 10-year one: preparation."
-      serviceOverview="Our interior painting service in Memorial includes the full scope, from consultation through final inspection. We use premium-tier materials — Sherwin-Williams Emerald, Benjamin Moore Aura, and Behr Marquee (low-VOC) — selected for their durability in Houston's humid climate. A typical project for a Memorial home takes 3 to 7 business days, and every job is backed by our 3-year written workmanship warranty + free touch-ups during the first 12 months. We do not subcontract. Every painter on your property is a W-2 employee of Houston Superior Painting, fully insured, uniformed, and trained in our standardized preparation protocols."
+      metaTitle={"Memorial Interior Painting | Houston Superior Painting"}
+      metaDescription={"Interior painting in Memorial, Houston: walls, ceilings, trim and doors, with prep done first. Free written estimate. Insured, 5-year warranty."}
+      h1={"Interior Painting in Memorial, Houston, TX"}
+      heroSubheading={"Interior painting for Memorial homes, with the patching, caulking and priming done before paint goes on, and a 5-year written warranty."}
+      introLocal={"Memorial mixes older ranch-style and traditional homes with large newer rebuilds, and includes the separate Memorial Villages such as Hunters Creek, Piney Point and Bunker Hill. Older homes usually need more repair before painting (cracked drywall or plaster, gaps at trim, old oil-based finishes), while newer homes tend to have tall ceilings, detailed millwork and open stairwells. You can see a whole-home interior repaint we completed in Memorial further down this page."}
+      serviceOverview={"Interior painting in Memorial covers walls, ceilings, trim, doors and closets. Prep comes first: furniture moved or covered, floors protected, holes and cracks patched, gaps caulked and stains spot-primed. We apply Sherwin-Williams or Benjamin Moore paint, and the product line and sheen for each surface are listed on your written estimate. The schedule is also set in writing before work starts, and every job carries our 5-year written workmanship warranty."}
       whyChooseUs={[
-        "We know the architectural style of Memorial — Tudor, French country, traditional brick colonial, contemporary new builds — and how to finish each substrate correctly.",
-        "Familiar with Memorial Villages HOA requirements — we handle the submittal package for you.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line.",
-        "3-year written workmanship warranty + free touch-ups during the first 12 months."
+        "A written estimate that lists the rooms, surfaces, prep and products, so you can compare bids line by line.",
+        "Prep before paint: patching, caulking and spot-priming are part of the scope, not extras.",
+        "Furniture, floors and fixtures protected, and work areas cleaned at the end of each day.",
+        "Sheen matched to each room, with more washable finishes for kitchens, baths and hallways.",
+        "Sherwin-Williams and Benjamin Moore paints.",
       ]}
-      priceRange="$6,960 – $20,300"
-      priceMin={6960}
-      priceMax={20300}
-      priceDetails="Interior painting in Memorial typically ranges from $6,960 to $20,300 for a whole-home repaint, depending on square footage, ceiling height, trim complexity, and color count. Memorial homes are typically 3,800–7,500 sqft with high ceilings and significant trim detail. Single rooms typically run $650 to $1,800. We provide a written, line-item estimate with no surprise charges."
+      priceDetails={`Our published range for a whole-home interior of about 2,500 sq ft is ${PRICES_2026.fullInterior2500}. A single room typically runs ${PRICES_2026.singleRoom}, or about ${PRICES_2026.interiorPerSqFt} per square foot of floor area for a whole home. Ceiling height, trim detail, color changes and wall repairs move the price within that range. The written estimate is free.`}
       faqs={[
         {
-          question: "How long does an interior painting project take for a typical Memorial home?",
-          answer: "For a typical Memorial home (3,000 to 6,000 sqft of living space), a full interior repaint takes between 3 and 7 business days. We schedule a dedicated crew of 3 to 5 painters, work consecutive days without bouncing between jobs, and send daily photo updates so you know exactly what's happening."
-        },
-        {
-          question: "What paint brands do you use for Memorial interiors?",
-          answer: "We use premium-tier paints: Sherwin-Williams Emerald (our preferred for walls and ceilings), Benjamin Moore Aura, and Behr Marquee on tighter budgets. All are low-VOC and safe to be home during application. For trim and doors we use Sherwin-Williams ProClassic or Benjamin Moore Advance."
-        },
-        {
-          question: "Will I need to move out during the project?",
-          answer: "No. We work room by room, keep the rest of the house functional, and use low-VOC paint that's safe to be around. We protect floors and furniture with 12-mil plastic, drop cloths, and zip-wall containment when needed."
-        },
-        {
           question: "How much does interior painting cost in Memorial?",
-          answer: "Interior painting in Memorial typically ranges from $6,960 to $20,300 for a whole-home repaint. Single rooms typically run $650 to $1,800. We provide a written, line-item estimate with no surprise charges, and offer 0% APR financing on projects over $5,000."
+          answer: `Our published pricing is ${PRICES_2026.fullInterior2500} for a whole-home interior of about 2,500 sq ft and ${PRICES_2026.singleRoom} for a single room. Ceiling height, trim, color changes and wall repairs move the price within those ranges, and your exact price is set in a free written estimate.`,
         },
         {
-          question: "Do you provide color consultation?",
-          answer: "Yes — every full-home interior painting project includes a complimentary color consultation. We bring physical samples, large-format swatches, and digital mockups so you can see exactly how a color will read in your light."
+          question: "Do I need to move out during an interior repaint?",
+          answer: "Usually not. We can work in sections so the rest of the house stays usable, and floors and furniture in the rooms being painted are protected.",
         },
         {
-          question: "What's included in your interior painting warranty?",
-          answer: "Every interior painting project includes a 3-year written workmanship warranty covering peeling, flaking, and adhesion failures. We also include 12 months of free touch-ups for normal wear. The warranty is transferable to a new owner if you sell your Memorial home."
-        }
+          question: "My home is older. Is lead paint a concern?",
+          answer: "It can be. Homes built before 1978 may contain lead paint, and federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask any painter you are considering for their certification. If your home is that old, mention it when you request an estimate so it can be planned for.",
+        },
+        {
+          question: "What paint do you use?",
+          answer: "We use Sherwin-Williams and Benjamin Moore paints. The product line and sheen for each surface are written into your estimate, so you know exactly what is going on your home.",
+        },
+        {
+          question: "Do I have to pay anything before work starts?",
+          answer: `${BUSINESS.paymentPolicy.sentence}`,
+        },
+        {
+          question: "What warranty do you offer?",
+          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+        },
       ]}
       testimonials={[
         {
@@ -77,14 +83,15 @@ export default function InteriorPaintingMemorialPage() {
         }
       ]}
       relatedPages={[
+        { title: "Interior Painting Houston", href: "/interior-painting-houston-tx" },
+        { title: "Exterior Painting Memorial", href: "/exterior-painting-memorial" },
+        { title: "Cabinet Refinishing Memorial", href: "/cabinet-refinishing-memorial" },
+        { title: "Painters in Memorial", href: "/painters-memorial-tx" },
         { title: "Interior Painting Tanglewood", href: "/interior-painting-tanglewood" },
-        { title: "Interior Painting Bellaire", href: "/interior-painting-bellaire-west-university" },
+        { title: "Interior Painting Bellaire & West University", href: "/interior-painting-bellaire-west-university" },
         { title: "Interior Painting The Heights", href: "/interior-painting-the-heights" },
-        { title: "Interior Painting Sugar Land", href: "/interior-painting-sugar-land" },
-        { title: "Interior Painting Katy", href: "/interior-painting-katy-cinco-ranch" },
-        { title: "Interior Painting Cypress", href: "/interior-painting-cypress-bridgeland" }
       ]}
-      warrantyYears={3}
+      warrantyYears={5}
       warrantyType="Interior"
     />
   )

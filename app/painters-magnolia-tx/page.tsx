@@ -6,7 +6,7 @@ export const metadata = officeCityMetadata({
   slug: "painters-magnolia-tx",
   title: "House Painters in Magnolia TX | Houston Superior Painting",
   description:
-    "House painters from our Magnolia office on Cottontop Mtn. Interior, exterior, cabinets. $2M insured, 5-year warranty. Free estimates: (346) 594-5960.",
+    "Interior, exterior & cabinet painting in Magnolia, TX. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960.",
   // No Magnolia-specific OG image exists; the site cover is used.
 })
 
@@ -34,14 +34,14 @@ const DATA: OfficeCityPageData = {
     { name: "Lake Windcrest", note: "A wooded lakeside community with larger lots and a mix of brick and siding homes." },
     { name: "Downtown Magnolia", note: "The older part of town, with more wood-sided homes and trim that often needs repair before paint." },
     { name: "Decker Prairie", note: "The area around Magnolia and Pinehurst with a mix of acreage homes and smaller subdivisions." },
-    { name: "Woodforest (Montgomery)", note: "A large master-planned community in Montgomery, served from our Magnolia office." },
+    { name: "Woodforest (Montgomery)", note: "A large master-planned community in neighboring Montgomery." },
   ],
   prep: [
-    "Magnolia homes sit on bigger, more wooded lots than most of Greater Houston, and the pines leave pollen and sap on siding, trim, and gutters every spring. Paint does not stick to that film, so we soft-wash the whole exterior and let it dry before any prep or primer goes on.",
+    "Many Magnolia homes sit on large, wooded lots, and the pines leave pollen and sap on siding, trim, and gutters every spring. Paint does not stick to that film, so we soft-wash the whole exterior and let it dry before any prep or primer goes on.",
     "There is also more wood siding and more acreage homes here, often with barns, fences, or detached garages. Bare or weathered wood needs scraping and an oil- or bonding primer before the finish coats, and we plan the schedule around the extra square footage so nothing sits primed and unpainted.",
   ],
   areasAnswer:
-    "All of Magnolia, including Audubon, Woodtrace, Mostyn Manor, Magnolia Ridge, High Meadow Ranch, Escondido, Lake Windcrest, Downtown Magnolia, and Decker Prairie. From the Magnolia office we also cover Pinehurst, Montgomery, Tomball, and The Woodlands.",
+    "All of Magnolia, including Audubon, Woodtrace, Mostyn Manor, Magnolia Ridge, High Meadow Ranch, Escondido, Lake Windcrest, Downtown Magnolia, and Decker Prairie. We also cover nearby Pinehurst, Montgomery, Tomball, and The Woodlands.",
   // The previous version of this page said 2–3 weeks; kept to avoid over-promising.
   startAnswer:
     "We typically book Magnolia jobs 2–3 weeks out. Acreage properties with several buildings can take more planning. We confirm the exact start date at the estimate.",

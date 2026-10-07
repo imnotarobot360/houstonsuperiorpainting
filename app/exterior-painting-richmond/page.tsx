@@ -1,15 +1,17 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
-  title: "Exterior Painters Richmond TX — Houston Superior Painting",
-  description: "Professional exterior painting in Richmond, TX. Pecan Grove, Long Meadow Farms, Greatwood. Premium materials, 5-year warranty. Free estimates.",
+  title: "Exterior Painting Richmond TX | Houston Superior Painting",
+  description: "Exterior house painting in Richmond, TX: wash, repair, caulk, prime and paint siding and trim. Free written estimate. Insured, 5-year warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/exterior-painting-richmond",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "Exterior Painters Richmond TX — Houston Superior Painting",
-    description: "Professional exterior painting in Richmond, TX. Pecan Grove, Long Meadow Farms, Greatwood. Premium materials, 5-year warranty.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "Exterior Painting Richmond TX | Houston Superior Painting",
+    description: "Exterior house painting in Richmond, TX: wash, repair, caulk, prime and paint siding and trim. Free written estimate. Insured, 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/exterior-painting-richmond",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -23,48 +25,45 @@ export default function ExteriorPaintingRichmondPage() {
       serviceSlug="exterior-painting"
       zone="Richmond"
       zoneSlug="richmond"
-      metaTitle="Exterior Painters Richmond TX — Houston Superior Painting"
-      metaDescription="Professional exterior painting in Richmond, TX. Pecan Grove, Long Meadow Farms, Greatwood. Premium materials, 5-year warranty."
-      h1="Exterior House Painters in Richmond, TX"
-      heroSubheading="Durable exterior painting built to protect Richmond homes from Texas heat, humidity, and storms."
-      introLocal="Richmond's mix of established neighborhoods like Pecan Grove and growing communities like Long Meadow Farms presents unique exterior painting challenges. Houston Superior Painting understands the diverse housing stock — from brick ranch homes to modern stucco builds — and delivers finishes that protect against Houston's intense UV, humidity, and seasonal weather while enhancing curb appeal."
-      serviceOverview="Our exterior painting service in Richmond includes thorough pressure washing, surface repair, caulking, priming, and premium paint application. We use Sherwin-Williams Duration, SuperPaint, and Emerald exterior lines — formulated for extreme Texas conditions. Projects typically take 4-8 days depending on home size, backed by our 5-year exterior warranty."
+      metaTitle={"Exterior Painting Richmond TX | Houston Superior Painting"}
+      metaDescription={"Exterior house painting in Richmond, TX: wash, repair, caulk, prime and paint siding and trim. Free written estimate. Insured, 5-year warranty."}
+      h1={"Exterior House Painters in Richmond, TX"}
+      heroSubheading={"Exterior painting for Richmond homes, with the washing, wood repair and caulking that Houston's heat, humidity and storms make necessary."}
+      introLocal={"Richmond has everything from older frame houses near the historic downtown to brick-and-siding homes in master-planned communities such as Pecan Grove, Greatwood and Long Meadow Farms. On most of these homes paint fails first where water and sun hit hardest: fascia, window trim, the bottoms of siding boards and the south- and west-facing walls. We check those areas before quoting and price any repairs into the written estimate, rather than painting over soft wood or open joints."}
+      serviceOverview={"Exterior painting in Richmond includes washing the house, scraping loose paint, repairing or replacing rotted wood, caulking open joints, spot-priming bare areas and applying the finish coats to siding, trim, doors and fascia. Plants, walkways and windows are covered while we work. We use Sherwin-Williams and Benjamin Moore exterior paints, with the product listed on your written estimate, and every job carries our 5-year written workmanship warranty."}
       whyChooseUs={[
-        "Experience throughout Richmond — Pecan Grove, Long Meadow Farms, Greatwood, and surrounding areas.",
-        "Proper prep work including pressure washing, scraping, sanding, and premium caulking.",
-        "Premium exterior paints formulated for Texas heat and humidity.",
-        "We protect your landscaping and clean up completely every day.",
-        "5-year written workmanship warranty on all exterior projects."
+        "Washing, scraping, caulking and spot-priming are part of the scope, not add-ons.",
+        "Wood repair, if your home needs it, is listed and priced in the written estimate.",
+        "Landscaping, walkways and windows covered, and the site cleaned at the end of each day.",
+        "Sherwin-Williams and Benjamin Moore exterior paints.",
+        "A written estimate that lists surfaces, repairs, prep and products.",
       ]}
-      priceRange="$5,500 – $18,000"
-      priceMin={5500}
-      priceMax={18000}
-      priceDetails="Exterior painting in Richmond typically ranges from $5,500 to $18,000 for a complete repaint, depending on home size, substrate condition, and trim complexity. Smaller projects or touch-ups start around $2,000."
+      priceDetails={`Our published range for a typical whole-house exterior is ${PRICES_2026.exteriorPerHome}. A 2,500 sq ft two-story typically runs ${PRICES_2026.exterior2500TwoStory}, or about ${PRICES_2026.exteriorPerSqFt} per square foot of floor area. Siding type, number of stories, wood repair and trim detail move the price within that range. The written estimate is free.`}
       faqs={[
         {
-          question: "How long does exterior painting take in Richmond?",
-          answer: "Most exterior projects in Richmond take 4 to 8 business days, including prep, priming, and two coats of paint. Larger homes or those needing extensive repairs may take longer."
+          question: "How much does exterior painting cost in Richmond?",
+          answer: `Our published range for a typical whole-house exterior is ${PRICES_2026.exteriorPerHome}, and a 2,500 sq ft two-story typically runs ${PRICES_2026.exterior2500TwoStory}. Siding type, number of stories, wood repair and trim detail decide where your home falls, and your exact price is set in a free written estimate.`,
         },
         {
-          question: "What exterior paint do you use?",
-          answer: "We use premium Sherwin-Williams exterior paints including Duration, SuperPaint, and Emerald — all formulated for Texas conditions with excellent fade resistance."
+          question: "Does my HOA need to approve the color?",
+          answer: "Many Richmond communities, including master-planned ones like Pecan Grove and Long Meadow Farms, have HOA rules on exterior colors. Check your HOA's guidelines before you choose. We can give you the exact color names and product information to include with your application.",
         },
         {
           question: "Can you paint brick or stucco?",
-          answer: "Yes — we work with all exterior substrates including brick, stucco, wood, hardie board, and mixed exteriors. We also offer limewash for brick homes."
+          answer: "Yes. Brick and stucco need masonry primers and paints, and painted brick is hard to reverse, so we talk through solid paint versus limewash before you decide.",
         },
         {
-          question: "How much does exterior painting cost in Richmond?",
-          answer: "Exterior painting typically ranges from $5,500 to $18,000 depending on home size and condition. We provide detailed written estimates after an in-person inspection."
+          question: "How long does an exterior repaint take?",
+          answer: "It depends on the size of the house, the number of stories, how much wood repair is needed and the weather. The schedule is set in your written estimate, and rain days move it back because paint should not go on wet surfaces.",
         },
         {
-          question: "Do you work with Richmond HOAs?",
-          answer: "Yes — we're familiar with HOA requirements in Pecan Grove, Long Meadow Farms, Greatwood, and other Richmond communities. We can assist with color approval if needed."
+          question: "Do I have to pay anything before work starts?",
+          answer: `${BUSINESS.paymentPolicy.sentence}`,
         },
         {
           question: "What warranty do you offer?",
-          answer: "Every exterior project includes our 5-year written workmanship warranty. We also honor manufacturer paint warranties."
-        }
+          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+        },
       ]}
       testimonials={[
         {
@@ -84,12 +83,14 @@ export default function ExteriorPaintingRichmondPage() {
         }
       ]}
       relatedPages={[
+        { title: "Exterior Painting Houston", href: "/exterior-painting-houston-tx" },
         { title: "Interior Painting Richmond", href: "/interior-painting-richmond" },
-        { title: "Painters Richmond TX", href: "/painters-richmond-tx" },
+        { title: "Painters in Richmond", href: "/painters-richmond-tx" },
         { title: "Exterior Painting Sugar Land", href: "/exterior-painting-sugar-land" },
-        { title: "Exterior Painting Katy", href: "/exterior-painting-katy-cinco-ranch" },
         { title: "Exterior Painting Fulshear", href: "/exterior-painting-fulshear" },
-        { title: "Pressure Washing Houston", href: "/pressure-washing-houston-tx" }
+        { title: "Exterior Painting Katy & Cinco Ranch", href: "/exterior-painting-katy-cinco-ranch" },
+        { title: "Pressure Washing", href: "/pressure-washing-houston-tx" },
+        { title: "Wood Rot Repair", href: "/wood-rot-repair-houston-tx" },
       ]}
       warrantyYears={5}
       warrantyType="Exterior"

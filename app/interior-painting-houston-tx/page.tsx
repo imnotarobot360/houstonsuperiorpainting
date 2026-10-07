@@ -191,6 +191,7 @@ export default function InteriorPaintingHoustonTX() {
         { label: "Exterior house painting in Houston", href: "/exterior-painting-houston-tx" },
         { label: "Kitchen cabinet refinishing in Houston", href: "/cabinet-refinishing-houston-tx" },
         { label: "Drywall repair in Houston", href: "/drywall-repair-houston-tx" },
+        { label: "Project: whole-home interior repaint in Memorial", href: "/projects/memorial-whole-home-interior-repaint" },
       ]}
       schema={[serviceSchema]}
     />

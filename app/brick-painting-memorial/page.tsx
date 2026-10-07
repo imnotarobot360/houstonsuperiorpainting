@@ -1,15 +1,17 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS } from "@/lib/business"
 
 export const metadata: Metadata = {
-  title: "Brick Painting Memorial TX — Houston Superior Painting",
-  description: "Premium brick painting in Memorial, TX. Transform dated brick exteriors. Piney Point, Hunters Creek, Bunker Hill. 5-year warranty. Free estimates.",
+  title: "Memorial Brick Painting | Houston Superior Painting",
+  description: "Brick painting and limewash for Memorial homes in Houston: cleaning, mortar repair and masonry primer. Priced after an on-site look. Free estimate.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/brick-painting-memorial",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "Brick Painting Memorial TX — Houston Superior Painting",
-    description: "Premium brick painting in Memorial, TX. Transform dated brick exteriors. Piney Point, Hunters Creek, Bunker Hill. 5-year warranty.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "Memorial Brick Painting | Houston Superior Painting",
+    description: "Brick painting and limewash for Memorial homes in Houston: cleaning, mortar repair and masonry primer. Priced after an on-site look. Free estimate.",
     url: "https://houstonsuperiorpainting.com/brick-painting-memorial",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -23,48 +25,45 @@ export default function BrickPaintingMemorialPage() {
       serviceSlug="brick-painting"
       zone="Memorial"
       zoneSlug="memorial"
-      metaTitle="Brick Painting Memorial TX — Houston Superior Painting"
-      metaDescription="Premium brick painting in Memorial, TX. Transform dated brick exteriors. Piney Point, Hunters Creek, Bunker Hill. 5-year warranty."
-      h1="Brick Painting in Memorial, TX"
-      heroSubheading="Transform your Memorial home's dated brick with a sophisticated, modern finish — premium brick painting for discerning homeowners."
-      introLocal="Many Memorial homes feature beautiful brick that has simply gone out of style. Whether you're updating a 1980s ranch in Spring Branch or refreshing a classic Colonial in Hunters Creek, professional brick painting offers a dramatic transformation at a fraction of the cost of re-siding. Houston Superior Painting serves Memorial's finest neighborhoods with premium brick painting services."
-      serviceOverview="Our brick painting service in Memorial includes comprehensive surface preparation, masonry primer, and premium paint application using products specifically formulated for brick. We offer both solid paint coverage and limewash options depending on your desired aesthetic. Projects typically take 4-7 days, backed by our 5-year warranty."
+      metaTitle={"Memorial Brick Painting | Houston Superior Painting"}
+      metaDescription={"Brick painting and limewash for Memorial homes in Houston: cleaning, mortar repair and masonry primer. Priced after an on-site look. Free estimate."}
+      h1={"Brick Painting in Memorial, TX"}
+      heroSubheading={"Painting or limewashing dated brick on Memorial homes, with the cleaning and masonry prep that keeps the new finish from peeling."}
+      introLocal={"Many Memorial homes have brick that is sound but dated in color. Painting it is one way to change the look without re-siding, but it is a long-term decision: once brick is painted, getting back to bare brick is difficult and expensive. The other common option is limewash, which soaks into bare brick and lets more of it show through. We look at your brick, mortar and any existing coating before recommending either."}
+      serviceOverview={"Brick painting starts with cleaning the masonry, treating efflorescence (the white salt deposits that come from moisture) and repairing cracked or missing mortar. We then apply a masonry primer and finish coats made for brick. Moisture is the main thing to watch: if water is getting into the wall from a leak, a gutter or poor drainage, it needs to be fixed first, or any coating can blister and peel. Brick painting is priced after an on-site look, and the written estimate lists the prep, products and coats."}
       whyChooseUs={[
-        "Experience in Memorial Villages — Piney Point, Hunters Creek, Bunker Hill, Spring Valley, and Hedwig Village.",
-        "Premium masonry products including elastomeric and mineral-based paints.",
-        "Both solid paint and limewash options available.",
-        "Proper preparation including cleaning, efflorescence treatment, and masonry primer.",
-        "5-year written workmanship warranty on all brick painting projects."
+        "We check mortar, moisture and existing coatings before recommending paint or limewash.",
+        "Efflorescence treated and mortar repaired before any coating goes on.",
+        "Masonry primer and paints made for brick.",
+        "Both solid paint and limewash available, so the recommendation fits your brick.",
+        "A written estimate with the prep, products and coats spelled out.",
       ]}
-      priceRange="$6,000 – $22,000"
-      priceMin={6000}
-      priceMax={22000}
-      priceDetails="Brick painting in Memorial typically ranges from $6,000 to $22,000 depending on home size, brick condition, and finish type. Partial brick painting or accent areas start around $3,000."
+      priceDetails={"We don't publish a price range for brick painting. The cost depends on the surface, its condition, the area and the technique, so it is priced after an on-site look. The estimate is free, and nothing is due until you approve it."}
       faqs={[
         {
-          question: "Will painting devalue my brick home?",
-          answer: "No — properly painted brick is a design choice, not a maintenance issue. Many Memorial buyers prefer painted brick, and it can actually increase curb appeal and home value when done well."
+          question: "Should I paint or limewash my brick?",
+          answer: "Masonry paint gives a solid, uniform color. Limewash gives a softer, varied look with more of the brick showing through, but it needs bare, unsealed brick. Both are hard to reverse, so we look at the brick and show you a sample before you decide.",
         },
         {
-          question: "What colors work best for painted brick in Memorial?",
-          answer: "White, warm gray, greige, and soft cream tones are popular in Memorial. We provide color consultations and can recommend options that complement your home's architecture and neighborhood aesthetic."
-        },
-        {
-          question: "How does brick painting compare to limewash?",
-          answer: "Brick painting provides solid, uniform color. Limewash creates a softer, more antiqued European look with subtle brick variation showing through. We offer both and can help you choose."
+          question: "Will painting my brick hurt resale value?",
+          answer: "It depends on the house and the buyer. Painted brick suits some styles well, but it adds future maintenance because it will eventually need repainting, and it is hard to reverse. Treat it as a long-term design choice.",
         },
         {
           question: "How long does painted brick last?",
-          answer: "With proper prep and premium products, painted brick typically lasts 15-20+ years. We use breathable, flexible paints designed specifically for masonry."
+          answer: "It depends mostly on prep, moisture and sun exposure. Brick that is clean, dry and properly primed holds paint far better than brick with moisture problems, which is why we check for moisture before painting.",
         },
         {
-          question: "Can you paint brick with existing damage?",
-          answer: "Yes — we repair mortar joints, cracks, and surface damage before painting. Our prep process addresses these issues for a lasting finish."
+          question: "Can you paint brick that has cracked or missing mortar?",
+          answer: "Yes, after it is repaired. Cracked or missing mortar is repointed before painting, and that repair is listed in your written estimate.",
         },
         {
-          question: "What warranty do you provide?",
-          answer: "Every brick painting project includes our 5-year written workmanship warranty. We stand behind our prep work and product selection."
-        }
+          question: "How much does brick painting cost in Memorial?",
+          answer: "We don't publish a price range for brick painting, because the cost depends on the surface, its condition, the area and the technique. We price it after an on-site look, and the estimate is free.",
+        },
+        {
+          question: "Do I have to pay anything before work starts?",
+          answer: `${BUSINESS.paymentPolicy.sentence}`,
+        },
       ]}
       testimonials={[
         {
@@ -84,12 +83,12 @@ export default function BrickPaintingMemorialPage() {
         }
       ]}
       relatedPages={[
-        { title: "Limewash Services Memorial", href: "/limewash-decorative-finishes-memorial" },
+        { title: "Limewash & Brick Painting Houston", href: "/limewash-brick-painting-houston-tx" },
+        { title: "Limewash & Decorative Finishes Memorial", href: "/limewash-decorative-finishes-memorial" },
         { title: "Exterior Painting Memorial", href: "/exterior-painting-memorial" },
-        { title: "Painters Memorial TX", href: "/painters-memorial-tx" },
+        { title: "Exterior Painting Houston", href: "/exterior-painting-houston-tx" },
+        { title: "Painters in Memorial", href: "/painters-memorial-tx" },
         { title: "Brick Painting Katy", href: "/brick-painting-katy" },
-        { title: "Luxury Exterior Painting", href: "/luxury-house-painters-houston" },
-        { title: "Limewash & Brick Houston", href: "/limewash-brick-painting-houston-tx" }
       ]}
       warrantyYears={5}
       warrantyType="Brick Painting"

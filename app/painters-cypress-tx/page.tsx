@@ -5,7 +5,7 @@ export const metadata = officeCityMetadata({
   slug: "painters-cypress-tx",
   title: "House Painters in Cypress TX | Houston Superior Painting",
   description:
-    "House painters from our Cypress headquarters on Huffmeister Rd. $2M insured, 5-year warranty, free written estimates in 24 hours. Call (346) 594-5960.",
+    "Painters headquartered in Cypress, TX: interior, exterior & cabinets. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960.",
   ogImage: "https://houstonsuperiorpainting.com/images/og/og-painters-cypress.jpg",
 })
 
@@ -34,11 +34,11 @@ const DATA: OfficeCityPageData = {
     { name: "Longwood", note: "An established community with mature trees and homes that often need trim and fascia repair before paint." },
   ],
   prep: [
-    "Cypress has more tree cover than most of Greater Houston, and shade is hard on paint. North-facing walls and anything under a canopy stay damp after rain and grow mildew, and paint rolled over mildew peels within a couple of seasons. We soft-wash those walls with a mildewcide first, let them dry fully, and prime any bare wood before the finish coats go on.",
+    "Much of Cypress is heavily wooded, and shade is hard on paint. North-facing walls and anything under a canopy stay damp after rain and grow mildew, and paint rolled over mildew peels within a couple of seasons. We soft-wash those walls with a mildewcide first, let them dry fully, and prime any bare wood before the finish coats go on.",
     "Most Cypress homes sit in HOA communities such as Bridgeland, Towne Lake, and Cypress Creek Lakes that restrict exterior colors. We pull the approved color list and submit the ARC form before work starts, so the job is not held up waiting on approval.",
   ],
   areasAnswer:
-    "All of Cypress, including Bridgeland, Towne Lake, Fairfield, Cypress Creek Lakes, Coles Crossing, Blackhorse Ranch, Lakes of Fairhaven, Canyon Lakes West, Lakewood Forest, and Longwood. From the Cypress headquarters we also cover Tomball, Champions Forest, Cypress Creek, Spring, and The Woodlands.",
+    "All of Cypress, including Bridgeland, Towne Lake, Fairfield, Cypress Creek Lakes, Coles Crossing, Blackhorse Ranch, Lakes of Fairhaven, Canyon Lakes West, Lakewood Forest, and Longwood. Our crews also cover Tomball, Champions Forest, Cypress Creek, Spring, and The Woodlands.",
   nearby: [
     "painters-tomball-tx",
     "painters-champions-forest-tx",

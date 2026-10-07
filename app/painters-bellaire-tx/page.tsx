@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
-import { PRICES_2026 } from "@/lib/business"
+import Link from "next/link"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 import { TrustBar } from "@/components/trust-bar"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -9,15 +10,18 @@ import { PricingSection } from "@/components/pricing-section"
 import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 
+const DESCRIPTION =
+  "House painters serving Bellaire, TX: interior, exterior and cabinet painting for mid-century ranches and new builds. Insured, 5-year warranty, free estimates."
+
 export const metadata: Metadata = {
   title: "House Painters Bellaire TX — Houston Superior Painting",
-  description: "Professional painters in Bellaire TX. Interior, exterior, cabinet painting for this prestigious Houston enclave. 5-year warranty. Free estimates.",
+  description: DESCRIPTION,
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-bellaire-tx',
   },
   openGraph: {
     title: "House Painters Bellaire TX — Houston Superior Painting",
-    description: "Professional painters in Bellaire TX. Interior, exterior, cabinet painting for this prestigious Houston enclave. 5-year warranty.",
+    description: DESCRIPTION,
     url: "https://houstonsuperiorpainting.com/painters-bellaire-tx",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -31,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "House Painters Bellaire TX — Houston Superior Painting",
-    description: "Professional painters in Bellaire TX. Interior, exterior, cabinet painting for this prestigious Houston enclave.",
+    description: DESCRIPTION,
     images: ["https://houstonsuperiorpainting.com/images/og/og-painters-bellaire.jpg"],
   },
   other: {
@@ -62,65 +66,62 @@ export default function PaintersBellaireTX() {
           city="Bellaire"
           state="TX"
           heroHeadline="House Painters in Bellaire, TX"
-          heroDescription="From charming mid-century ranches to stunning modern builds, we deliver the quality that this distinguished community expects. Premium materials, meticulous prep, and a 5-year warranty on every project."
-          quickAnswer={`Houston Superior Painting provides professional painting services throughout Bellaire TX. Interior painting costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. We specialize in both classic mid-century homes and modern new construction, use Sherwin-Williams and Benjamin Moore premium products, and provide a 5-year warranty. Call (346) 594-5960 for a free estimate.`}
-          aboutCity={`Bellaire is one of Houston's most desirable inner-loop communities, known for its excellent schools, tree-lined streets, and prime location just minutes from the Medical Center, Galleria, and downtown. The homes here range from charming 1950s ranches to stunning modern architecture, and each deserves painting services that match its quality.
+          heroDescription="From mid-century ranches to new custom builds, we paint Bellaire homes with careful prep, Sherwin-Williams and Benjamin Moore products, and a 5-year written workmanship warranty."
+          quickAnswer={`Houston Superior Painting provides interior, exterior and cabinet painting in Bellaire, TX. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. We paint both older ranch homes and new construction, use Sherwin-Williams and Benjamin Moore products, carry $2M general liability plus workers' comp, and back our work with a 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          aboutCity={`Bellaire is an inner-loop city surrounded by Houston, close to the Texas Medical Center, the Galleria and West University. Its housing mixes original mid-century ranch homes with newer two-story custom builds that have replaced many of them, often on fairly narrow lots.
 
-We've been serving Bellaire homeowners since 2019, and we understand what makes this community special. The close-knit neighborhood feel means reputation matters—and we've built ours on consistent quality, fair pricing, and respectful service that Bellaire families appreciate.
+That mix shapes how a paint job is planned. Older ranches often need more prep before any color goes on: failed caulk, weathered wood trim and siding, and decades of earlier coats. Newer builds tend to need less repair but have taller walls, more trim and larger exterior surfaces. On close-set lots, ladders, drop cloths and spray work have to be planned around the house next door.
 
-Bellaire's real estate values are among Houston's highest, demanding proper home maintenance. Painting is one of the most impactful investments you can make—protecting your home from Houston's harsh climate while enhancing curb appeal. Whether you're refreshing a beloved family home that's been in the neighborhood for decades or putting finishing touches on a new custom build, we deliver results that protect and enhance your investment.
+Houston's humidity and summer heat are hard on exterior paint, so on exteriors we focus on cleaning, repairing and priming before the finish coats. Inside, we cover single rooms, whole-home repaints, trim and cabinets.
 
-Our crews are experienced with Bellaire's unique characteristics: working efficiently on smaller lots, coordinating around neighbor proximity, and understanding the city's specific requirements. We've completed over 35 projects in Bellaire alone, building relationships with homeowners who trust us for their ongoing painting needs.
-
-We treat every Bellaire project with the care and professionalism this exceptional community deserves. Our bilingual team provides clear communication, our detailed estimates have no hidden fees, and our 5-year warranty ensures your satisfaction.`}
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every Bellaire project starts with a free written estimate, and nothing is due until you approve it.`}
           whyChooseUs={[
-            "Mid-century to modern expertise: skilled with all Bellaire architectural styles",
-            "Tight-lot experience: efficient work in close-set neighborhoods",
-            "Premium materials: Sherwin-Williams Duration and Benjamin Moore Regal standard",
-            "City permit knowledge: familiar with Bellaire's requirements",
-            "Clean, professional crews: respectful of your property and neighbors",
-            "5-year written warranty on all residential painting",
-            "Free color consultations with take-home samples"
+            "Experience with both older ranch homes and new construction",
+            "Planning for close-set lots: protecting neighboring property during prep and painting",
+            "Sherwin-Williams and Benjamin Moore products",
+            "Insured: $2M general liability plus workers' comp",
+            "5-year written workmanship warranty",
+            "No upfront payment: nothing is due until you approve the written estimate"
           ]}
           services={[
             {
               title: "Interior Painting Bellaire",
-              description: "Transform your Bellaire home's interior with expert painting. From single rooms to complete repaints, we deliver flawless, brush-mark-free results.",
+              description: "Single rooms to whole-home repaints, including walls, ceilings and trim.",
               href: "/interior-painting-houston-tx"
             },
             {
               title: "Exterior Painting Bellaire",
-              description: "Protect and beautify your Bellaire home's exterior. Our premium coatings maintain curb appeal and withstand Houston's demanding climate.",
+              description: "Exterior repaints with cleaning, repair and priming before the finish coats.",
               href: "/exterior-painting-houston-tx"
             },
             {
               title: "Cabinet Refinishing Bellaire",
-              description: "Update your kitchen with factory-smooth cabinet finishes. A cost-effective way to modernize without full replacement.",
+              description: "Painted cabinet finishes as an alternative to replacing sound cabinet boxes.",
               href: "/cabinet-refinishing-houston-tx"
             },
             {
               title: "Drywall Repair Bellaire",
-              description: "Fix cracks, settling damage, and imperfections before painting. Essential for older Bellaire homes to achieve perfect results.",
+              description: "Repairs to cracks, holes and imperfections before painting.",
               href: "/drywall-repair-houston-tx"
             },
             {
               title: "Pressure Washing Bellaire",
-              description: "Professional pressure washing for Bellaire homes. Clean driveways, patios, and siding before painting or as standalone service.",
+              description: "Cleaning driveways, patios and siding before painting or as a standalone service.",
               href: "/pressure-washing-houston-tx"
             },
             {
               title: "Limewash Brick Bellaire",
-              description: "Transform your Bellaire brick home with elegant European limewash or German smear finishes that breathe and age beautifully.",
+              description: "Limewash and German smear finishes for brick homes, priced after an on-site look.",
               href: "/limewash-brick-painting-houston-tx"
             },
             {
               title: "Commercial Painting Bellaire",
-              description: "Professional painting for Bellaire businesses and commercial properties with after-hours scheduling.",
+              description: "Painting for Bellaire businesses and commercial properties.",
               href: "/commercial-painting-houston-tx"
             },
             {
               title: "Garage Floor Epoxy Bellaire",
-              description: "Durable epoxy coatings for Bellaire garages that resist stains, chemicals, and last for years.",
+              description: "Garage floor coatings through our sister brand, Houston Superior Epoxy.",
               href: "https://houstonsuperiorepoxy.com/"
             }
           ]}
@@ -138,38 +139,54 @@ We treat every Bellaire project with the care and professionalism this exception
             "Southside Place",
             "Medical Center Area"
           ]}
-          testimonial={{
-            quote: "Our 1960s Bellaire ranch needed a complete exterior refresh. Houston Superior Painting did an exceptional job—the prep work was thorough, the colors are perfect, and they worked carefully around our narrow lot. Our neighbors have already asked for their contact info!",
-            author: "Patricia & George S.",
-            location: "Bellaire, TX"
-          }}
           faqs={[
             {
               question: "How much does it cost to paint a house in Bellaire, TX?",
-              answer: `Interior painting in Bellaire typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates.`
+              answer: `Interior painting in Bellaire typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
             },
             {
               question: "Do you paint both older and newer Bellaire homes?",
-              answer: "Yes! Bellaire has a wonderful mix of charming mid-century ranches and modern new construction. We're experienced with both—respecting the character of classic homes while bringing fresh finishes to newer builds."
+              answer: "Yes. Bellaire has a mix of mid-century ranch homes and newer custom builds. Older homes usually need more prep, such as caulk, wood repair and priming, while newer homes tend to have taller walls and more trim."
             },
             {
-              question: "Are you familiar with Bellaire's building requirements?",
-              answer: "Absolutely. Bellaire has specific permit requirements for exterior work. We handle all necessary coordination and are familiar with the city's standards for residential painting projects."
+              question: "My Bellaire home was built before 1978. What about lead paint?",
+              answer: "Homes built before 1978 may contain lead paint. Federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask any painter you are considering for their certification before sanding or scraping begins."
             },
             {
               question: "How do you work around Bellaire's narrow lots?",
-              answer: "Bellaire's close-set homes require careful planning. We coordinate with neighbors when necessary, use equipment suited for tight spaces, and take extra care to protect neighboring properties."
+              answer: "Close-set homes take planning. We set up ladders and equipment to fit the space, protect the neighboring property during prep and painting, and talk with you about access before work starts."
             },
             {
               question: "What warranty do you offer in Bellaire?",
-              answer: "All Bellaire painting projects include our 5-year written warranty covering peeling, blistering, bubbling, and excessive fading. We stand behind our work."
+              answer: "Bellaire painting projects are backed by our 5-year written workmanship warranty."
             },
             {
-              question: "Are you insured for Bellaire?",
-              answer: "Yes, we are fully insured with $2M liability coverage. Certificates available upon request."
+              question: "Are you insured?",
+              answer: "Yes. We carry $2M general liability insurance plus workers' compensation. Certificates are available on request."
             }
           ]}
         />
+        <section className="container mx-auto px-4 max-w-4xl pb-12">
+          <div className="bg-card rounded-xl p-8 border border-border">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
+              Recent Project Nearby
+            </h2>
+            <p className="text-foreground leading-relaxed">
+              In nearby West University, we refinished a kitchen&apos;s oak cabinets with a sprayed, painted finish.{" "}
+              <Link
+                href="/projects/west-university-kitchen-cabinet-refinishing"
+                className="text-primary font-medium hover:underline"
+              >
+                See the West University cabinet refinishing project
+              </Link>
+              , or read about our{" "}
+              <Link href="/cabinet-refinishing-houston-tx" className="text-primary font-medium hover:underline">
+                cabinet refinishing service
+              </Link>
+              .
+            </p>
+          </div>
+        </section>
         <ProblemSelector />
         <PricingSection />
         <SchedulerSection />

@@ -1,12 +1,21 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
+  title: "Memorial Exterior Painting | Houston Superior Painting",
+  description: "Exterior painting in Memorial, Houston: wash, wood repair, caulk, prime and paint. Free written estimate. Insured, 5-year written warranty.",
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/exterior-painting-memorial',
+    canonical: "https://houstonsuperiorpainting.com/exterior-painting-memorial",
   },
-  title: "Exterior Painting Memorial | Houston Superior Painting",
-  description: "Premium exterior painting in Memorial, Houston. 5-year warranty, 5-star reviews, family-owned. Free quote — call (346) 594-5960.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "Memorial Exterior Painting | Houston Superior Painting",
+    description: "Exterior painting in Memorial, Houston: wash, wood repair, caulk, prime and paint. Free written estimate. Insured, 5-year written warranty.",
+    url: "https://houstonsuperiorpainting.com/exterior-painting-memorial",
+    siteName: "Houston Superior Painting",
+    type: "website",
+  },
 }
 
 export default function ExteriorPaintingMemorialPage() {
@@ -16,48 +25,45 @@ export default function ExteriorPaintingMemorialPage() {
       serviceSlug="exterior-painting"
       zone="Memorial, Houston, TX"
       zoneSlug="memorial"
-      metaTitle="Exterior Painting Memorial | Houston Superior Painting"
-      metaDescription="Premium exterior painting in Memorial, Houston. 5-year warranty, 5-star reviews, family-owned."
-      h1="Exterior Painting in Memorial, Houston, TX"
-      heroSubheading="The painting team Memorial homeowners trust to deliver flawless exterior painting — prepped for Houston weather, finished beautifully, and backed by a 5-year written warranty."
-      introLocal="When Memorial homeowners search for an exterior painter, they're looking for a team that understands the unique challenges of Houston's climate — intense UV, humidity, and unpredictable weather. From the stately homes of Hunters Creek Village to contemporary builds in Memorial Park, Houston Superior Painting has protected and beautified exteriors throughout Memorial with coatings engineered to last."
-      serviceOverview="Our exterior painting service in Memorial includes the full scope: power washing, wood rot repair, caulking, priming, and finish coats with premium exterior-grade materials. We use Sherwin-Williams Duration, SuperPaint, and Benjamin Moore Aura Exterior — all formulated for Houston's climate. A typical project takes 5 to 10 business days depending on home size, and every job is backed by our 5-year written exterior warranty."
+      metaTitle={"Memorial Exterior Painting | Houston Superior Painting"}
+      metaDescription={"Exterior painting in Memorial, Houston: wash, wood repair, caulk, prime and paint. Free written estimate. Insured, 5-year written warranty."}
+      h1={"Exterior Painting in Memorial, Houston, TX"}
+      heroSubheading={"Exterior painting for Memorial homes, prepared for Houston's sun, humidity and storms and backed by a 5-year written warranty."}
+      introLocal={"Memorial's mature trees shade many homes, which keeps siding and trim damp and invites mildew and wood rot, while unshaded south- and west-facing walls take the brunt of the sun. Homes range from older brick ranches with wood trim to large newer rebuilds with stucco, stone and fiber-cement. Exterior work in the Memorial Villages may also be subject to that village's or your HOA's rules, so check before you choose colors."}
+      serviceOverview={"Exterior painting in Memorial includes washing the house, scraping loose paint, repairing or replacing rotted wood, caulking open joints, spot-priming bare areas and applying the finish coats to siding, trim, doors and fascia. Plants, walkways and windows are covered while we work. We use Sherwin-Williams and Benjamin Moore exterior paints, with the product listed on your written estimate, and every job carries our 5-year written workmanship warranty."}
       whyChooseUs={[
-        "We know Memorial architecture — Tudor, French country, traditional brick colonial, contemporary — and how to protect each exterior substrate.",
-        "Familiar with Memorial Villages HOA requirements — we handle the color approval and submittal package.",
-        "5-year written exterior warranty — the longest in the Houston metro area.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line."
+        "Washing, scraping, caulking and spot-priming are part of the scope, not add-ons.",
+        "Wood repair, if your home needs it, is listed and priced in the written estimate.",
+        "Landscaping, walkways and windows covered, and the site cleaned at the end of each day.",
+        "Sherwin-Williams and Benjamin Moore exterior paints.",
+        "A written estimate that lists surfaces, repairs, prep and products.",
       ]}
-      priceRange="$8,500 – $28,000"
-      priceMin={8500}
-      priceMax={28000}
-      priceDetails="Exterior painting in Memorial typically ranges from $8,500 to $28,000 for a complete repaint, depending on home size, stories, substrate type, and prep complexity. Memorial homes are typically 3,800–7,500 sqft with significant architectural detail."
+      priceDetails={`Our published range for a typical whole-house exterior is ${PRICES_2026.exteriorPerHome}. A 2,500 sq ft two-story typically runs ${PRICES_2026.exterior2500TwoStory}, or about ${PRICES_2026.exteriorPerSqFt} per square foot of floor area. Siding type, number of stories, wood repair and trim detail move the price within that range. The written estimate is free.`}
       faqs={[
         {
-          question: "How long does an exterior painting project take in Memorial?",
-          answer: "For a typical Memorial home (3,000 to 6,000 sqft), a full exterior repaint takes between 5 and 10 business days, weather permitting. Larger estates or homes with extensive wood trim may take longer."
-        },
-        {
-          question: "What paint brands do you use for exteriors?",
-          answer: "We use Sherwin-Williams Duration and SuperPaint, as well as Benjamin Moore Aura Exterior. All are formulated for Houston's UV, humidity, and weather extremes."
+          question: "How much does exterior painting cost in Memorial?",
+          answer: `Our published range for a typical whole-house exterior is ${PRICES_2026.exteriorPerHome}, and a 2,500 sq ft two-story typically runs ${PRICES_2026.exterior2500TwoStory}. Siding type, number of stories, wood repair and trim detail decide where your home falls, and your exact price is set in a free written estimate.`,
         },
         {
           question: "Do you repair wood rot before painting?",
-          answer: "Yes — wood rot repair is included in our scope. We use Bondo or epoxy consolidants for minor damage, and replace boards for significant rot. All repairs are primed before finish coats."
+          answer: "Yes. Rotted wood is repaired or replaced and primed before the finish coats, and the repair is listed in your written estimate.",
         },
         {
-          question: "How much does exterior painting cost in Memorial?",
-          answer: "Exterior painting in Memorial typically ranges from $8,500 to $28,000 for a complete repaint. We provide a written, line-item estimate with no surprise charges."
+          question: "Should I paint or limewash my brick?",
+          answer: "It depends on the look you want and the condition of the brick. Limewash soaks into bare brick and lets it show through; masonry paint gives a solid color. Both are hard to undo, so we look at the brick and talk through the options first.",
         },
         {
-          question: "What's included in your 5-year warranty?",
-          answer: "Our 5-year exterior warranty covers peeling, flaking, blistering, and adhesion failures caused by improper preparation or application. It's the longest warranty in the Houston metro area."
+          question: "My home is older. Is lead paint a concern?",
+          answer: "It can be. Homes built before 1978 may contain lead paint, and federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask any painter you are considering for their certification. If your home is that old, mention it when you request an estimate so it can be planned for.",
         },
         {
-          question: "Can you help with HOA color approval?",
-          answer: "Yes — we're familiar with the Memorial Villages HOA requirements and can prepare the color submittal package for your review and approval."
-        }
+          question: "Do I have to pay anything before work starts?",
+          answer: `${BUSINESS.paymentPolicy.sentence}`,
+        },
+        {
+          question: "What warranty do you offer?",
+          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+        },
       ]}
       testimonials={[
         {
@@ -77,12 +83,13 @@ export default function ExteriorPaintingMemorialPage() {
         }
       ]}
       relatedPages={[
+        { title: "Exterior Painting Houston", href: "/exterior-painting-houston-tx" },
+        { title: "Interior Painting Memorial", href: "/interior-painting-memorial" },
+        { title: "Brick Painting Memorial", href: "/brick-painting-memorial" },
+        { title: "Painters in Memorial", href: "/painters-memorial-tx" },
         { title: "Exterior Painting Tanglewood", href: "/exterior-painting-tanglewood" },
-        { title: "Exterior Painting Bellaire", href: "/exterior-painting-bellaire-west-university" },
-        { title: "Exterior Painting The Heights", href: "/exterior-painting-the-heights" },
-        { title: "Exterior Painting Sugar Land", href: "/exterior-painting-sugar-land" },
-        { title: "Exterior Painting Katy", href: "/exterior-painting-katy-cinco-ranch" },
-        { title: "Exterior Painting Cypress", href: "/exterior-painting-cypress-bridgeland" }
+        { title: "Exterior Painting Bellaire & West University", href: "/exterior-painting-bellaire-west-university" },
+        { title: "Wood Rot Repair", href: "/wood-rot-repair-houston-tx" },
       ]}
       warrantyYears={5}
       warrantyType="Exterior"

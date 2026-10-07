@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/exterior-painting-tanglewood',
   },
-  title: "Exterior Painting Tanglewood | Houston Superior Painting",
-  description: "Premium exterior painting in Tanglewood, Houston. 5-year warranty, 5-star reviews, family-owned. Free quote — call (346) 594-5960.",
+  title: "Exterior Painting Tanglewood, Houston TX",
+  description: "Exterior house painting in Tanglewood, Houston: mildew washing, wood repair, priming, and a 5-year written warranty. Free written estimate.",
 }
 
 export default function ExteriorPaintingTanglewoodPage() {
@@ -16,48 +17,48 @@ export default function ExteriorPaintingTanglewoodPage() {
       serviceSlug="exterior-painting"
       zone="Tanglewood, Houston, TX"
       zoneSlug="tanglewood"
-      metaTitle="Exterior Painting Tanglewood | Houston Superior Painting"
-      metaDescription="Premium exterior painting in Tanglewood, Houston. 5-year warranty, 5-star reviews."
+      metaTitle="Exterior Painting Tanglewood, Houston TX"
+      metaDescription="Exterior house painting in Tanglewood, Houston: mildew washing, wood repair, priming, and a 5-year written warranty. Free written estimate."
       h1="Exterior Painting in Tanglewood, Houston, TX"
-      heroSubheading="The painting team Tanglewood homeowners trust to deliver flawless exterior painting — prepped for Houston weather, finished beautifully, and backed by a 5-year written warranty."
-      introLocal="When Tanglewood homeowners search for an exterior painter, they're looking for a team that understands the unique challenges of Houston's climate and the architectural standards of the neighborhood. From traditional brick colonials to contemporary new builds, Houston Superior Painting has protected and beautified exteriors throughout Tanglewood, Briargrove, and Briar Hollow with coatings engineered to last."
-      serviceOverview="Our exterior painting service in Tanglewood includes the full scope: power washing, wood rot repair, caulking, priming, and finish coats with premium exterior-grade materials. We use Sherwin-Williams Duration, SuperPaint, and Benjamin Moore Aura Exterior. A typical project takes 5 to 10 business days, and every job is backed by our 5-year written exterior warranty."
+      heroSubheading="Washing, repairs, caulking and priming before any paint goes on, Sherwin-Williams and Benjamin Moore exterior paints, and a 5-year written workmanship warranty."
+      introLocal="Tanglewood, near Uptown and the Galleria, is known for large lots and mature trees, with many brick homes and newer rebuilds. Heavy shade keeps some walls damp, which encourages mildew, so washing and prep matter as much as the paint. Houston's humidity and heat add to the wear."
+      serviceOverview="Exterior work starts with pressure washing and scraping loose paint, then wood repair, caulking and spot-priming before the finish coats. Houston's humidity, heat and summer storms are hard on exterior paint, so we schedule coats around rain and follow each paint maker's temperature and humidity limits."
       whyChooseUs={[
-        "We know Tanglewood architecture — traditional brick colonials, transitional remodels, contemporary new builds — and how to protect each substrate.",
-        "Familiar with local architectural review processes and neighborhood standards.",
-        "5-year written exterior warranty — the longest in the Houston metro area.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line."
+        "Washing to remove mildew from walls and trim that stay shaded under mature trees.",
+        "Rotted siding, trim and fascia are found at the estimate and listed in the written scope before work starts.",
+        "Sherwin-Williams and Benjamin Moore exterior paints, chosen for the surface.",
+        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
       ]}
-      priceRange="$7,800 – $24,500"
-      priceMin={7800}
-      priceMax={24500}
-      priceDetails="Exterior painting in Tanglewood typically ranges from $7,800 to $24,500 for a complete repaint, depending on home size, stories, substrate type, and prep complexity."
+      priceDetails={`Exterior work typically falls around ${PRICES_2026.exteriorPerSqFt} per square foot. Height, siding type, the amount of wood repair and how much of the house is unpainted brick all change the total; the free written estimate gives you the exact number.`}
       faqs={[
         {
-          question: "How long does an exterior painting project take in Tanglewood?",
-          answer: "For a typical Tanglewood home, a full exterior repaint takes between 5 and 10 business days, weather permitting."
+          question: "How much does exterior painting cost in Tanglewood?",
+          answer: `Our published range for a typical whole-house exterior is ${PRICES_2026.exteriorPerHome}; a 2,500 sq ft two-story runs about ${PRICES_2026.exterior2500TwoStory}. Height, siding and repairs move the number, so the free written estimate is the real price.`,
         },
         {
-          question: "What paint brands do you use for exteriors?",
-          answer: "We use Sherwin-Williams Duration and SuperPaint, as well as Benjamin Moore Aura Exterior — all formulated for Houston's climate."
+          question: "What paint do you use on exteriors?",
+          answer: "Sherwin-Williams and Benjamin Moore exterior paints, chosen for the surface: wood siding and trim, fiber cement, stucco or masonry.",
         },
         {
           question: "Do you repair wood rot before painting?",
-          answer: "Yes — wood rot repair is included. We use epoxy consolidants for minor damage and replace boards for significant rot."
+          answer: "Yes. Wood rot repair is one of our services. We check siding, trim and fascia during the estimate, and any repairs are listed in the written scope before work starts.",
         },
         {
-          question: "How much does exterior painting cost in Tanglewood?",
-          answer: "Exterior painting typically ranges from $7,800 to $24,500 for a complete repaint."
+          question: "How long does an exterior repaint take?",
+          answer: "It depends on the size and height of the home, the amount of prep and repair, and the weather. We tell you the expected duration with the written estimate and schedule coats around rain.",
         },
         {
-          question: "What's included in your 5-year warranty?",
-          answer: "Our 5-year exterior warranty covers peeling, flaking, blistering, and adhesion failures caused by improper preparation or application."
+          question: "My house was built before 1978. Does that matter?",
+          answer: "Homes built before 1978 may contain lead paint. Federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask any painter for their certification before sanding or scraping begins.",
         },
         {
-          question: "Do you handle pressure washing?",
-          answer: "Yes — professional power washing is included to remove dirt, mildew, and loose paint before we begin."
-        }
+          question: "What does the warranty cover?",
+          answer: "Every project comes with a 5-year written workmanship warranty. The terms are written out with your estimate, so you can read them before you approve anything.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+        },
       ]}
       testimonials={[
         {

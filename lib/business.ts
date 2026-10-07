@@ -222,7 +222,9 @@ export const BUSINESS = {
     insured: true,
     bonded: true,
     liabilityCoverage: "$2M",
-    bbbAccredited: true,
+    // Checked 2026-10-07 on bbb.org: the profile (file opened 2026-10-05) says
+    // "NOT BBB Accredited" and "Not Rated". Do not claim accreditation.
+    bbbAccredited: false,
   },
 
   // Payment policy confirmed by Juan (2026-09). Never state a deposit
@@ -236,7 +238,21 @@ export const BUSINESS = {
   },
 
   // ─── Brands / partners ─────────────────────────────────
-  paintPartners: ["Sherwin-Williams", "Benjamin Moore"],
+  // Brands we use. Juan confirmed Farrow & Ball 2026-10-07. These are products
+  // we apply, not partner programs: never say "preferred contractor/partner".
+  paintPartners: ["Sherwin-Williams", "Benjamin Moore", "Farrow & Ball"],
+
+  // Specialty finishes Juan confirmed we offer (2026-10-07), beyond the
+  // services list below. Fine to name on pages; prices are quoted on site.
+  specialtyFinishes: [
+    "Venetian plaster",
+    "Roman Clay",
+    "Limewash",
+    "Faux finishes",
+    "Metallic finishes",
+    "Lacquer",
+    "Grasscloth and wallcovering",
+  ],
 
   // ─── Social / SameAs (for Organization schema) ─────────
   social: {
@@ -244,8 +260,11 @@ export const BUSINESS = {
       "https://www.google.com/maps/place/Houston+Superior+Painting../@29.7143308,-95.4349558,17z/data=!4m8!3m7!1s0x1c94ce195628f7bf:0xcc8b6e63c1c05fe7!8m2!3d29.7143308!4d-95.4349558!9m1!1b1!16s%2Fg%2F11y71l36d3",
     facebook: "https://www.facebook.com/houstonsuperiorpainting",
     instagram: "https://www.instagram.com/houstonsuperiorpainting",
-    yelp: "https://www.yelp.com/biz/houston-superior-painting",
-    bbb: "https://www.bbb.org/us/tx/cypress/profile/painting-contractors/houston-superior-painting",
+    // Yelp removed 2026-10-07: the listing could not be confirmed (yelp.com
+    // blocks automated checks). Re-add only after confirming it is ours.
+    // BBB: the old URL (no -0915-90077903 suffix) 404s. This is a directory
+    // listing, not accreditation (see trust.bbbAccredited).
+    bbb: "https://www.bbb.org/us/tx/cypress/profile/painting-contractors/houston-superior-painting-0915-90077903",
   },
 } as const;
 

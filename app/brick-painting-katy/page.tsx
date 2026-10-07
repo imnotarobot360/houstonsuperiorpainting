@@ -1,15 +1,17 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS } from "@/lib/business"
 
 export const metadata: Metadata = {
-  title: "Brick Painting Katy TX — Houston Superior Painting",
-  description: "Professional brick painting in Katy, TX. Transform dated brick with modern colors. Cinco Ranch, Cross Creek, Elyson. 5-year warranty. Free estimates.",
+  title: "Brick Painting in Katy, TX | Houston Superior Painting",
+  description: "Brick painting in Katy, TX: cleaning, efflorescence treatment, masonry primer and breathable masonry paint. Priced on-site; 5-year written warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/brick-painting-katy",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "Brick Painting Katy TX — Houston Superior Painting",
-    description: "Professional brick painting in Katy, TX. Transform dated brick with modern colors. Cinco Ranch, Cross Creek, Elyson. 5-year warranty.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "Brick Painting in Katy, TX | Houston Superior Painting",
+    description: "Brick painting in Katy, TX: cleaning, efflorescence treatment, masonry primer and breathable masonry paint. Priced on-site; 5-year written warranty.",
     url: "https://houstonsuperiorpainting.com/brick-painting-katy",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -23,47 +25,45 @@ export default function BrickPaintingKatyPage() {
       serviceSlug="brick-painting"
       zone="Katy"
       zoneSlug="katy"
-      metaTitle="Brick Painting Katy TX — Houston Superior Painting"
-      metaDescription="Professional brick painting in Katy, TX. Transform dated brick with modern colors. Cinco Ranch, Cross Creek, Elyson. 5-year warranty."
+      metaTitle="Brick Painting in Katy, TX | Houston Superior Painting"
+      metaDescription="Brick painting in Katy, TX: cleaning, efflorescence treatment, masonry primer and breathable masonry paint. Priced on-site; 5-year written warranty."
       h1="Brick Painting in Katy, TX"
-      heroSubheading="Transform your dated brick exterior with a fresh, modern look — professional brick painting for Katy homeowners."
-      introLocal="Many Katy homes built in the 1990s and 2000s feature brick exteriors in colors that now feel dated. Brick painting offers a cost-effective way to dramatically update your home's curb appeal without the expense of re-bricking or siding. Houston Superior Painting serves homeowners throughout Cinco Ranch, Cross Creek Ranch, Elyson, and the greater Katy area with professional brick painting that lasts."
-      serviceOverview="Our brick painting service in Katy includes thorough cleaning, masonry primer application, and premium elastomeric or mineral-based paint specifically formulated for brick. We ensure proper adhesion and moisture management so your painted brick looks beautiful for years. Projects typically take 3-6 days, backed by our 5-year warranty."
+      heroSubheading="Painted brick done the way masonry needs: cleaned, treated, primed and coated with a breathable masonry paint, backed by a 5-year written workmanship warranty."
+      introLocal="Brick fronts are common across Katy, from Cinco Ranch to the newer communities to the west, and much of it is red or orange brick that owners now want in white, gray or a warm neutral. Painting brick is a long-term decision, because removing paint from brick later is hard, so we talk through painting versus limewash at the estimate."
+      serviceOverview="Brick painting starts with washing the masonry and treating any efflorescence (the white mineral deposit that comes through brick and mortar), then letting it dry. Cracked or missing mortar is noted before we start. We apply a masonry primer and finish with a breathable masonry paint so moisture inside the wall can escape instead of pushing the paint off. Your written estimate lists the walls, products, color and schedule."
       whyChooseUs={[
-        "Experience painting brick throughout Katy — Cinco Ranch, Cross Creek Ranch, Elyson, Firethorne, and beyond.",
-        "Proper prep work including cleaning, efflorescence treatment, and masonry primer.",
-        "Premium paints specifically formulated for brick — elastomeric and mineral-based options.",
-        "Understanding of Houston's humidity and its effects on painted brick.",
-        "5-year written workmanship warranty on all brick painting projects."
+        "Founded in 2019 by owner Juan Serra and headquartered in Cypress, TX.",
+        "Cleaning and efflorescence treatment before any primer goes on.",
+        "Breathable masonry primer and paint, so trapped moisture doesn't blister the finish.",
+        `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
+        "5-year written workmanship warranty.",
+        "No upfront payment: the estimate is free and nothing is due until you approve it in writing."
       ]}
-      priceRange="$4,500 – $15,000"
-      priceMin={4500}
-      priceMax={15000}
-      priceDetails="Brick painting in Katy typically ranges from $4,500 to $15,000 depending on home size, brick condition, and color choices. Partial brick painting or accent areas start around $2,000."
+      priceDetails="Brick painting is priced after an on-site look. The amount of brick, how many stories, its condition, mortar repairs and the color change all affect the cost, so we don't publish a range for this work. The estimate is free."
       faqs={[
         {
           question: "Is painting brick a good idea?",
-          answer: "Yes — when done properly with the right products. Modern masonry paints are breathable and flexible, allowing moisture to escape while providing lasting color. We use premium products designed specifically for brick."
-        },
-        {
-          question: "How long does painted brick last?",
-          answer: "With proper preparation and quality paint, painted brick typically lasts 15-20+ years. We use premium elastomeric and mineral-based paints designed for long-term durability."
+          answer: "It can be, if it is done with breathable masonry products over clean, dry brick. The trade-off is that painted brick needs repainting over time and is hard to return to bare brick, so we also discuss limewash, which soaks in rather than coating the surface.",
         },
         {
           question: "Can I change my brick from red to white or gray?",
-          answer: "Absolutely — we can transform any brick color. White, gray, and warm neutrals are popular choices in Katy. We'll help you select colors that complement your home and meet HOA requirements."
+          answer: "Yes. Painted brick can be any color. White, gray and warm neutrals are popular. Check your HOA's approved colors first if you live in a community with one.",
         },
         {
           question: "How much does brick painting cost in Katy?",
-          answer: "Brick painting typically ranges from $4,500 to $15,000 depending on home size and brick condition. We provide detailed written estimates after an in-person inspection."
+          answer: "We price brick painting after an on-site look, because the amount of brick, its condition and any mortar repair change the cost too much for a useful published range. The estimate is free.",
         },
         {
-          question: "Do Katy HOAs allow brick painting?",
-          answer: "Most Katy HOAs allow brick painting with approved colors. We're familiar with requirements in Cinco Ranch, Cross Creek Ranch, Elyson, and other communities and can help with the approval process."
+          question: "Do Katy HOAs allow painted brick?",
+          answer: "It depends on the HOA. Many require approval for any exterior color change, and some restrict painting brick. Get approval before the job is scheduled.",
         },
         {
-          question: "What's the difference between brick painting and limewash?",
-          answer: "Brick painting provides solid color coverage, while limewash creates a soft, antiqued European look that allows some brick variation to show through. We offer both options."
+          question: "What is the difference between painting brick and limewashing it?",
+          answer: "Paint forms a solid, opaque coat of color. Limewash soaks into bare brick and leaves a softer, mottled look with some of the brick showing through. Limewash only works on unpainted, unsealed brick.",
+        },
+        {
+          question: "What warranty do you give?",
+          answer: "Every brick painting job comes with a 5-year written workmanship warranty. The full warranty terms are included with your written estimate, so you can read them before you approve the work.",
         }
       ]}
       testimonials={[
@@ -84,15 +84,14 @@ export default function BrickPaintingKatyPage() {
         }
       ]}
       relatedPages={[
-        { title: "Limewash Services Katy", href: "/limewash-decorative-finishes-katy-cinco-ranch" },
-        { title: "Exterior Painting Katy", href: "/exterior-painting-katy-cinco-ranch" },
-        { title: "Painters Katy TX", href: "/painters-katy-tx" },
-        { title: "Brick Painting Memorial", href: "/brick-painting-memorial" },
-        { title: "Limewash & Brick Houston", href: "/limewash-brick-painting-houston-tx" },
-        { title: "Exterior Painting Houston", href: "/exterior-painting-houston-tx" }
+        { title: "Limewash and brick painting", href: "/limewash-brick-painting-houston-tx" },
+        { title: "Limewash in Katy & Cinco Ranch", href: "/limewash-decorative-finishes-katy-cinco-ranch" },
+        { title: "Exterior painting in Katy & Cinco Ranch", href: "/exterior-painting-katy-cinco-ranch" },
+        { title: "Brick painting in Memorial", href: "/brick-painting-memorial" },
+        { title: "Painters in Katy, TX (Katy office)", href: "/painters-katy-tx" }
       ]}
       warrantyYears={5}
-      warrantyType="Brick Painting"
+      warrantyType="Workmanship"
     />
   )
 }

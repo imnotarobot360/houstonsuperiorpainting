@@ -1,15 +1,17 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
-  title: "Interior Painters Fulshear TX — Houston Superior Painting",
-  description: "Premium interior painting in Fulshear, TX. Serving Cross Creek Ranch, Fulbrook, Weston Lakes. 5-year warranty. Free estimates.",
+  title: "Interior Painting Fulshear TX | Houston Superior Painting",
+  description: "Interior painting in Fulshear, TX, from Cross Creek Ranch to Fulbrook. Free written estimate, nothing due until you approve. Insured, 5-year warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-fulshear",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "Interior Painters Fulshear TX — Houston Superior Painting",
-    description: "Premium interior painting in Fulshear, TX. Serving Cross Creek Ranch, Fulbrook, Weston Lakes. 5-year warranty.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "Interior Painting Fulshear TX | Houston Superior Painting",
+    description: "Interior painting in Fulshear, TX, from Cross Creek Ranch to Fulbrook. Free written estimate, nothing due until you approve. Insured, 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/interior-painting-fulshear",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -23,48 +25,45 @@ export default function InteriorPaintingFulshearPage() {
       serviceSlug="interior-painting"
       zone="Fulshear"
       zoneSlug="fulshear"
-      metaTitle="Interior Painters Fulshear TX — Houston Superior Painting"
-      metaDescription="Premium interior painting in Fulshear, TX. Serving Cross Creek Ranch, Fulbrook, Weston Lakes. 5-year warranty."
-      h1="Interior Painters in Fulshear, TX"
-      heroSubheading="Premium interior painting for Fulshear's master-planned communities — Cross Creek Ranch, Fulbrook, Weston Lakes, and beyond."
-      introLocal="Fulshear has grown from a quiet farming community into one of Houston's most sought-after addresses, with master-planned communities offering exceptional homes and amenities. Houston Superior Painting serves homeowners throughout Fulshear's premier neighborhoods — Cross Creek Ranch, Fulbrook on Fulshear Creek, Weston Lakes, and the surrounding area — delivering the quality finishes these beautiful homes deserve."
-      serviceOverview="Our interior painting service in Fulshear provides comprehensive coverage from consultation through final inspection. We use premium materials including Sherwin-Williams Emerald and Benjamin Moore Aura — specifically chosen for their durability in Houston's humid climate. Most projects complete in 3-7 business days, backed by our 5-year workmanship warranty."
+      metaTitle={"Interior Painting Fulshear TX | Houston Superior Painting"}
+      metaDescription={"Interior painting in Fulshear, TX, from Cross Creek Ranch to Fulbrook. Free written estimate, nothing due until you approve. Insured, 5-year warranty."}
+      h1={"Interior Painters in Fulshear, TX"}
+      heroSubheading={"Interior painting for Fulshear homes, from newer builds in Cross Creek Ranch and Jordan Ranch to established homes in Fulbrook and Weston Lakes."}
+      introLocal={"Much of Fulshear's housing is newer construction in master-planned communities such as Cross Creek Ranch, Jordan Ranch and Fulbrook on Fulshear Creek. Newer homes commonly have flat builder-grade paint that marks easily, plus nail pops and corner cracks as the house settles in its first few years. A repaint is a good time to fix those and move to a more washable finish in kitchens, hallways and kids' rooms. Open-plan homes with tall ceilings and stairwells also need extension equipment or scaffolding, which we account for in the estimate."}
+      serviceOverview={"Interior painting in Fulshear covers walls, ceilings, trim, doors and closets. Prep comes first: furniture moved or covered, floors protected, holes and cracks patched, gaps caulked and stains spot-primed. We apply Sherwin-Williams or Benjamin Moore paint, and the product line and sheen for each surface are listed on your written estimate. The schedule is also set in writing before work starts, and every job carries our 5-year written workmanship warranty."}
       whyChooseUs={[
-        "Deep experience in Fulshear communities — Cross Creek Ranch, Fulbrook, Weston Lakes, Polo Ranch, and Jordan Ranch.",
-        "Understanding of new construction timelines and builder touch-up requirements.",
-        "Daily SMS photo updates and dedicated bilingual project foreman.",
-        "Premium low-VOC paints safe for families with children and pets.",
-        "5-year written workmanship warranty plus 12 months of complimentary touch-ups."
+        "A written estimate that lists the rooms, surfaces, prep and products, so you can compare bids line by line.",
+        "Prep before paint: patching, caulking and spot-priming are part of the scope, not extras.",
+        "Furniture, floors and fixtures protected, and work areas cleaned at the end of each day.",
+        "Sheen matched to each room, with more washable finishes for kitchens, baths and hallways.",
+        "Sherwin-Williams and Benjamin Moore paints.",
       ]}
-      priceRange="$5,000 – $16,500"
-      priceMin={5000}
-      priceMax={16500}
-      priceDetails="Interior painting in Fulshear typically ranges from $5,000 to $16,500 for a whole-home repaint, depending on square footage, ceiling height, and trim complexity. Single rooms typically run $600 to $1,600."
+      priceDetails={`Our published range for a whole-home interior of about 2,500 sq ft is ${PRICES_2026.fullInterior2500}. A single room typically runs ${PRICES_2026.singleRoom}, or about ${PRICES_2026.interiorPerSqFt} per square foot of floor area for a whole home. Ceiling height, trim detail, color changes and wall repairs move the price within that range. The written estimate is free.`}
       faqs={[
         {
-          question: "How long does interior painting take in Fulshear?",
-          answer: "For a typical Fulshear home (3,000 to 5,500 sqft), a full interior repaint takes 4 to 7 business days. Larger homes with detailed trim may require additional time."
-        },
-        {
-          question: "What paint brands do you use?",
-          answer: "We use Sherwin-Williams Emerald, Benjamin Moore Aura, and Regal Select. All are low-VOC formulas safe for your family."
-        },
-        {
-          question: "Do you work with Fulshear HOAs?",
-          answer: "Yes — we're familiar with the HOA requirements in Cross Creek Ranch, Fulbrook, Weston Lakes, and other Fulshear communities. We handle any required approvals."
-        },
-        {
           question: "How much does interior painting cost in Fulshear?",
-          answer: "Interior painting typically ranges from $5,000 to $16,500 for whole-home projects. Single rooms run $600 to $1,600 depending on size and complexity."
+          answer: `Our published pricing is ${PRICES_2026.fullInterior2500} for a whole-home interior of about 2,500 sq ft and ${PRICES_2026.singleRoom} for a single room. Ceiling height, trim, color changes and wall repairs move the price within those ranges, and your exact price is set in a free written estimate.`,
         },
         {
-          question: "Can you help with new construction touch-ups?",
-          answer: "Absolutely. We regularly work with homeowners after builder warranties expire, addressing the inevitable settlement cracks and touch-ups that new homes need."
+          question: "Can you fix nail pops and settling cracks in a newer home?",
+          answer: "Yes. Nail pops, corner cracks and small dings are patched, sanded and primed before painting, and that prep is listed in your written estimate.",
         },
         {
-          question: "What areas in Fulshear do you serve?",
-          answer: "We serve all of Fulshear including Cross Creek Ranch, Fulbrook on Fulshear Creek, Weston Lakes, Polo Ranch, Jordan Ranch, and surrounding areas."
-        }
+          question: "Can you paint two-story foyers and stairwells?",
+          answer: "Yes. High walls and stairwells need extension equipment or scaffolding, which is accounted for in your estimate.",
+        },
+        {
+          question: "What paint do you use?",
+          answer: "We use Sherwin-Williams and Benjamin Moore paints. The product line and sheen for each surface are written into your estimate, so you know exactly what is going on your home.",
+        },
+        {
+          question: "Do I have to pay anything before work starts?",
+          answer: `${BUSINESS.paymentPolicy.sentence}`,
+        },
+        {
+          question: "What warranty do you offer?",
+          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+        },
       ]}
       testimonials={[
         {
@@ -84,12 +83,13 @@ export default function InteriorPaintingFulshearPage() {
         }
       ]}
       relatedPages={[
+        { title: "Interior Painting Houston", href: "/interior-painting-houston-tx" },
         { title: "Exterior Painting Fulshear", href: "/exterior-painting-fulshear" },
-        { title: "Painters Fulshear TX", href: "/painters-fulshear-tx" },
-        { title: "Interior Painting Katy", href: "/interior-painting-katy-cinco-ranch" },
+        { title: "Painters in Fulshear", href: "/painters-fulshear-tx" },
+        { title: "Interior Painting Katy & Cinco Ranch", href: "/interior-painting-katy-cinco-ranch" },
         { title: "Interior Painting Richmond", href: "/interior-painting-richmond" },
         { title: "Interior Painting Sugar Land", href: "/interior-painting-sugar-land" },
-        { title: "Cabinet Refinishing Houston", href: "/cabinet-refinishing-houston-tx" }
+        { title: "Cabinet Refinishing Houston", href: "/cabinet-refinishing-houston-tx" },
       ]}
       warrantyYears={5}
       warrantyType="Interior"

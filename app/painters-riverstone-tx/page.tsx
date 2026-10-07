@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { LocationPageTemplate } from "@/components/location-page-template"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
-import { PRICES_2026 } from "@/lib/business"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 // This page shipped with no Header and no Footer, unlike its 20 siblings —
 // meaning no site navigation and none of the footer's internal links.
 import { Header } from "@/components/header"
@@ -10,14 +10,14 @@ import { Footer } from "@/components/footer"
 export const metadata: Metadata = {
   title: "House Painters Riverstone TX | Sugar Land Painting",
   description:
-    "House painters serving Riverstone in Sugar Land and Missouri City, TX. Interior, exterior, and cabinet painting with HOA approval support. Free estimates.",
+    "House painters serving Riverstone in Sugar Land and Missouri City, TX. Interior, exterior and cabinet painting with HOA submittal help. Free estimates.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/painters-riverstone-tx",
   },
   openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Riverstone | Sugar Land, TX",
     description:
-      "Painting contractors serving Riverstone. Waterfront-home expertise, HOA color approval help, 5-year warranty.",
+      "Painting for Riverstone homes: mildew and moisture-aware prep near the lakes, HOA color submittal help, 5-year workmanship warranty.",
     type: "website",
   },
 }
@@ -27,142 +27,114 @@ const riverstoneData = {
   state: "TX",
   heroHeadline: "House Painters Serving Riverstone",
   heroDescription:
-    "Painting contractors working across Riverstone's lakefront sections and gated enclaves — from HOA color submittals to the humidity that comes with living on the water.",
+    "Interior, exterior and cabinet painting across Riverstone's lakefront and inland sections, from HOA color submittals to the extra mildew prep that comes with living near the water.",
 
-  // This page had no quickAnswer, so it was the only content block on the
-  // template that never rendered here. It feeds the data-speakable section used
-  // for voice and AI answers, so its absence was a missed surface rather than
-  // just missing words.
+  // Feeds the data-speakable Quick Answer section used for voice and AI answers.
   quickAnswer:
-    `Houston Superior Painting serves Riverstone across the Sugar Land and Missouri City line, including The Manors, Avalon, Chelsea Harbour, and Waters Edge. Because Riverstone is built around roughly two dozen lakes, lakefront homes need mildew treatment before priming and colorfast tints on water-facing walls. Interiors typically run ${PRICES_2026.interiorPerSqFt} per square foot (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exteriors ${PRICES_2026.exteriorPerHome}. We prepare HOA architectural submittals and warranty residential work for 5 years. Call (346) 594-5960 for a free estimate.`,
+    `Houston Superior Painting paints homes in Riverstone, which straddles the Sugar Land and Missouri City line. Interiors typically run ${PRICES_2026.interiorPerSqFt} per square foot (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exteriors ${PRICES_2026.exteriorPerHome}. Homes on the lakes often need mildew washing and treatment before priming, and exterior color changes need HOA approval before work starts. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`,
 
-  // Riverstone's distinguishing factor versus Sienna is water: roughly two
-  // dozen lakes mean sustained high humidity, more mildew pressure, and more
-  // reflected UV on lakeside elevations. Content is built around that rather
-  // than reusing the Sienna or Sugar Land narrative.
-  aboutCity: `Riverstone spans the Sugar Land and Missouri City line and is built around water — roughly two dozen lakes, plus the Brazos River along its southern edge. That setting is the single biggest factor in how a paint job performs here, and it is the thing most estimates ignore.
+  // Riverstone's distinguishing factor versus Sienna is water: the community is
+  // built around lakes, which means more mildew pressure on shaded elevations.
+  // Content is built around that rather than reusing the Sienna or Sugar Land
+  // narrative.
+  aboutCity: `Riverstone is a master-planned community that spans the Sugar Land and Missouri City line, built around a series of lakes, with the Brazos River nearby. Most homes were built from the 2000s onward and are typically brick, with stucco or cast stone accents, painted siding, and plenty of trim and soffit.
 
-Homes on or near the lakes sit in sustained higher humidity than comparable houses a mile inland. Two things follow. First, mildew pressure is heavier, especially on north- and east-facing walls that stay shaded through the morning. We wash and treat those surfaces before priming, because painting over a spore-laden surface simply seals the problem in and the discoloration returns through the new film. Second, coating cure times shift — an exterior that would flash off in a few hours further inland can stay soft much longer on a humid lakeside afternoon, so we schedule coats around dew point rather than the clock.
+The lakes affect exterior paint. Shaded walls near water stay damp longer, so mildew builds up faster, especially on north-facing elevations. Those surfaces need to be washed and treated before primer; painting over mildew seals it in and the discoloration comes back through the new paint. Humid days also slow drying, so coats are scheduled around the weather rather than the clock. Deep, saturated colors fade fastest in full sun, which is worth keeping in mind for front doors and accent walls.
 
-Lakeside elevations also take reflected ultraviolet light off the water in addition to direct sun. Deep and saturated colors on those walls fade measurably faster than the same color on a street-facing elevation. When homeowners want a darker accent or front door on a water-facing side, we specify colorfast tint bases and steer away from the organic pigments that chalk out first.
+Two other things are worth checking before a repaint. Stucco can develop hairline cracks, often at window and door corners, as the ground and wall move; those should be patched and bridged with a flexible coating rather than just painted over. And lawn sprinklers that spray the house can leave a chalky white band of hard-water minerals along the bottom of the wall, which has to be removed before primer so the new paint bonds. Adjusting the spray heads keeps it from coming back.
 
-Riverstone's housing stock is largely 2000s-onward construction from builders including Toll Brothers, Perry Homes, Highland Homes, and Trendmaker, with stucco, brick, and cast stone elevations. Like other master-planned Fort Bend communities, exterior color changes go through architectural review before work begins, and several of the gated enclaves layer additional guidelines on top of the community-wide standards.
-
-Stucco is worth calling out on its own, because it is common on Riverstone elevations and it fails differently than brick or fiber cement. Fort Bend County sits on expansive clay that swells in the wet months and shrinks in drought, and that seasonal movement transfers into stucco as hairline cracking — most often stepping diagonally from window and door corners. A standard coating simply bridges those cracks for a season and then splits again along the same line. We open and patch them, and on walls with active movement we specify an elastomeric coating with real elongation rather than a thicker coat of ordinary paint.
-
-Irrigation is the other pattern we see repeatedly in Riverstone, and it is one homeowners rarely connect to their paint. Lawn sprinklers running against the house leave hard-water minerals on the lower two or three feet of wall, which shows as a chalky white banding that resists ordinary washing and stops new coatings from bonding cleanly. Where we find it, the mineral deposits have to come off before primer, and it is usually worth adjusting the spray heads so the new finish is not being watered nightly.
-
-Timing matters here more than in a drier climate. The most reliable exterior windows in this part of Fort Bend are generally spring before summer humidity settles in and autumn once it breaks, and we work around the heavy oak pollen that coats surfaces in early spring, since painting into pollen leaves it embedded in the film. Interior work runs year-round without these constraints.`,
+Exterior color changes go through the community's architectural review before work begins, and some sections have their own added guidelines. We provide color codes and sheen details for your submittal. Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, and nothing is due until you approve it.`,
 
   neighborhoods: [
     "The Manors at Riverstone",
     "Avalon at Riverstone",
     "Chelsea Harbour",
     "Waters Edge",
-    "The Reserve at Riverstone",
-    "Piper's Meadow",
-    "Sterling Lakes",
-    "Whispering Pines",
-    "Terra Bella",
-    "Vintage Oaks",
   ],
 
   services: [
     {
       title: "Exterior Painting",
       description:
-        "Lakeside-aware exterior work: mildew treatment before priming, dew-point scheduling, and colorfast tints on the elevations that take reflected UV off the water.",
+        "Exterior repaints with mildew washing and treatment before priming, crack repair, and coats scheduled around humidity.",
       href: "/exterior-painting-houston-tx",
+    },
+    {
+      title: "Stucco Painting & Repair",
+      description:
+        "Hairline crack repair and flexible coatings for stucco elevations and accents.",
+      href: "/stucco-painting-houston-tx",
     },
     {
       title: "Interior Painting",
       description:
-        "The two-story window walls and open great rooms common in Riverstone plans, finished cleanly — including the high work that needs proper staging, not ladders.",
+        "Two-story window walls and open great rooms, with proper staging for the high work.",
       href: "/interior-painting-houston-tx",
     },
     {
       title: "Cabinet Refinishing",
       description:
-        "Spray-finished cabinets for Riverstone kitchens, refinished in place at a fraction of replacement cost with a durable factory-smooth result.",
+        "Spray-finished cabinets as an alternative to replacing sound cabinet boxes.",
       href: "/cabinet-refinishing-houston-tx",
     },
     {
       title: "Pressure Washing",
       description:
-        "Essential near the lakes. We clear the mildew and algae film off siding, stucco, patios, and walkways that shaded lakeside walls accumulate.",
+        "Clearing mildew and algae from siding, stucco, patios and walkways.",
       href: "/pressure-washing-houston-tx",
     },
     {
       title: "Drywall Repair",
       description:
-        "Fort Bend's clay soil moves, and newer homes show it as settlement cracks and nail pops. We repair properly before finish coats go on.",
+        "Settlement cracks and nail pops repaired before finish coats go on.",
       href: "/drywall-repair-houston-tx",
-    },
-    {
-      title: "Commercial Painting",
-      description:
-        "Painting for Riverstone-area offices, retail suites, and amenity buildings, scheduled outside business hours where access requires it.",
-      href: "/commercial-painting-houston-tx",
     },
   ],
 
   whyChooseUs: [
-    "Experienced with Riverstone HOA architectural submittals",
-    "Mildew remediation and moisture-aware prep for lakefront homes",
-    "Colorfast tint specification for sun- and water-exposed walls",
-    "Premium Sherwin-Williams & Benjamin Moore paints",
-    "5-year warranty on residential work",
-    "Detailed written estimates with no hidden costs",
-    "Fully insured, background-checked crews",
+    "Help preparing color codes and sheen details for HOA submittals",
+    "Mildew washing and treatment before priming on shaded, lakeside walls",
+    "Stucco crack repair before painting",
+    "Sherwin-Williams and Benjamin Moore paints",
+    "5-year written workmanship warranty",
+    "Insured: $2M general liability plus workers' comp",
   ],
-
-  testimonial: {
-    quote:
-      "We back onto one of the lakes and the shaded side of our house kept greying over within a year of the last paint job. This crew treated the mildew first and explained why the previous company's work failed. It has held up through two humid summers now.",
-    author: "Jonathan & Elise T.",
-    location: "Chelsea Harbour, Riverstone",
-  },
 
   faqs: [
     {
       question: "Does living near the lakes in Riverstone affect exterior paint?",
       answer:
-        "Yes, in two ways. Sustained humidity raises mildew pressure on shaded elevations, so those surfaces need washing and treatment before primer. And lakeside walls take reflected UV off the water on top of direct sun, which fades saturated colors faster unless colorfast tint bases are specified.",
+        "Yes. Shaded walls near water stay damp longer, which encourages mildew, so those surfaces need washing and treatment before primer. Humid days also slow drying, so coats are scheduled around the weather.",
     },
     {
       question: "Do I need HOA approval to repaint in Riverstone?",
       answer:
-        "Yes. Exterior color changes go through architectural review before work starts, and several gated enclaves apply additional guidelines beyond the community-wide standards. We supply color codes and sheen specifications for the submittal and schedule around the review window.",
+        "Yes. Exterior color changes go through architectural review before work starts, and some sections have added guidelines. We supply color codes and sheen details for the submittal and schedule the job once it is approved.",
     },
     {
       question: "How much does painting cost in Riverstone?",
       answer:
-        `Exterior projects generally run ${PRICES_2026.exteriorPerHome} (a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}) and interiors ${PRICES_2026.interiorPerSqFt} per square foot, depending on square footage, stucco versus brick, trim complexity, and how much mildew remediation or crack repair is required. Estimates are free and itemized.`,
+        `Exterior projects generally run ${PRICES_2026.exteriorPerHome} (a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}) and interiors ${PRICES_2026.interiorPerSqFt} per square foot, depending on size, stucco versus brick, trim, and how much mildew treatment or crack repair is needed. Estimates are free and written.`,
     },
     {
       question: "Why does mildew keep coming back on my shaded walls?",
       answer:
-        "Because painting over it seals it in rather than removing it. Mildew needs to be washed and treated so the surface is genuinely clean before primer goes on. Otherwise the discoloration works back through the new film, usually within a year in a humid lakeside setting.",
+        "Usually because it was painted over rather than removed. Mildew needs to be washed and treated so the surface is clean before primer goes on; otherwise the discoloration works back through the new paint.",
     },
     {
-      question: "Why does the stucco on my Riverstone home keep cracking after painting?",
+      question: "Why does the stucco on my home keep cracking after painting?",
       answer:
-        "Because the crack is moving and the coating is not. Fort Bend's clay soil swells and shrinks seasonally, and that movement shows up in stucco as hairline cracks stepping off window and door corners. Paint alone bridges them for a season, then splits along the same line. The cracks need to be opened and patched, and on walls with active movement an elastomeric coating with genuine elongation is the right specification.",
+        "Because the wall is moving and ordinary paint is not flexible enough to move with it. Hairline cracks need to be opened and patched, and walls with ongoing movement are better served by a flexible, elastomeric-type coating.",
     },
     {
       question: "What is the chalky white band along the bottom of my exterior walls?",
       answer:
-        "Almost always hard-water minerals from lawn sprinklers hitting the house. It resists normal washing and prevents new coatings from bonding, so it has to be removed before primer rather than painted over. It is also worth redirecting the spray heads, since otherwise the new finish gets watered every night.",
-    },
-    {
-      question: "When is the best time of year to paint an exterior in Riverstone?",
-      answer:
-        "Generally spring before summer humidity sets in, or autumn once it breaks. We also work around the heavy oak pollen in early spring, because painting into pollen embeds it in the film. Interior work is unaffected and can be scheduled year-round.",
+        "Usually hard-water minerals from lawn sprinklers hitting the house. It resists normal washing and keeps new paint from bonding, so it has to be removed before primer. Redirecting the spray heads keeps it from coming back.",
     },
     {
       question: "Do you serve the rest of Sugar Land and Missouri City?",
       answer:
-        "Yes. Riverstone straddles both, and we work throughout each — see our Sugar Land and Missouri City painting pages for full coverage of surrounding communities.",
+        "Yes. Riverstone straddles both, and our Sugar Land and Missouri City painting pages cover the surrounding communities.",
     },
   ],
 }

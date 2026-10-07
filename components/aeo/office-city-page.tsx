@@ -37,7 +37,7 @@ import {
   officeForPage,
   type Office,
 } from "@/lib/business"
-import { PROJECTS, type CaseStudy } from "@/lib/projects"
+import { LOCAL_PROOF_PROJECTS, type CaseStudy } from "@/lib/projects"
 
 export const COST_GUIDE_PATH = "/houston-painting-cost-guide"
 
@@ -86,13 +86,14 @@ function isHeadquarters(office: Office): boolean {
 }
 
 /**
- * Real projects whose neighborhood names this city, e.g. "Cypress, TX".
+ * Real projects whose neighborhood names this city, e.g. "Cypress, TX". Only
+ * projects with confirmed job photos count (see photosNeedReview in lib/projects.ts).
  * Matching on a comma-separated part keeps "Cypress Creek" from matching
  * "Cypress". New entries in lib/projects.ts appear on the page automatically.
  */
 export function projectsForCity(city: string): CaseStudy[] {
   const c = city.trim().toLowerCase()
-  return PROJECTS.filter((p) =>
+  return LOCAL_PROOF_PROJECTS.filter((p) =>
     p.neighborhood
       .split(",")
       .map((part) => part.trim().toLowerCase())

@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
+  title: "Interior Painting Cypress & Bridgeland, TX | Free Estimate",
+  description: "Interior painting in Cypress and Bridgeland, TX: walls, ceilings, trim and doors. Free written estimate, fully insured, 5-year workmanship warranty.",
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/interior-painting-cypress-bridgeland',
+    canonical: "https://houstonsuperiorpainting.com/interior-painting-cypress-bridgeland",
   },
-  title: "Interior Painting Cypress & Bridgeland | Free Estimates",
-  description: "Premium interior painting in Cypress and Bridgeland, TX. 5-star reviews, written warranty. Free quote — call (346) 594-5960.",
 }
 
 export default function InteriorPaintingCypressPage() {
@@ -16,47 +17,45 @@ export default function InteriorPaintingCypressPage() {
       serviceSlug="interior-painting"
       zone="Cypress & Bridgeland, TX"
       zoneSlug="cypress-bridgeland"
-      metaTitle="Interior Painting Cypress & Bridgeland | Houston Superior Painting"
-      metaDescription="Premium interior painting in Cypress and Bridgeland, TX. 5-star reviews, written warranty."
+      metaTitle="Interior Painting Cypress & Bridgeland, TX | Free Estimate"
+      metaDescription="Interior painting in Cypress and Bridgeland, TX: walls, ceilings, trim and doors. Free written estimate, fully insured, 5-year workmanship warranty."
       h1="Interior Painting in Cypress and Bridgeland, TX"
-      heroSubheading="The painting team Cypress homeowners trust to deliver flawless interior painting — prepped properly, finished beautifully, and warrantied in writing."
-      introLocal="When Cypress and Bridgeland homeowners search for a painter, they're looking for a team that understands the master-planned communities throughout the area — Bridgeland, Towne Lake, Fairfield, Cypress Creek Lakes, and beyond. Houston Superior Painting has completed projects throughout Cypress, and our process is built around preparation — the one thing that separates a 2-year paint job from a 10-year one."
-      serviceOverview="Our interior painting service in Cypress includes the full scope, from consultation through final inspection. We use premium-tier materials — Sherwin-Williams Emerald, Benjamin Moore Aura, and Behr Marquee (low-VOC) — selected for their durability in Houston's humid climate. A typical project takes 3 to 7 business days, and every job is backed by our 3-year written workmanship warranty + free touch-ups during the first 12 months."
+      heroSubheading="Walls, ceilings, trim and doors painted with careful prep, protected floors and furniture, and a 5-year written workmanship warranty."
+      introLocal="Houston Superior Painting is headquartered in Cypress, so Bridgeland, Towne Lake, Fairfield and the rest of the Cypress area are close to home for our crews. Many homes here are newer builds in master-planned communities, and builders often use a flat wall paint that scuffs easily and doesn't wipe clean. The first repaint is a good time to move kitchens, halls and kids' rooms to a more washable sheen."
+      serviceOverview="An interior job covers the walls, ceilings, trim and doors you choose. We move and cover furniture, protect floors, fill nail pops and drywall cracks, caulk open trim joints and spot-prime repairs before the finish coats go on, using Sherwin-Williams or Benjamin Moore paint. Your written estimate lists the rooms, surfaces, product, sheen and schedule."
       whyChooseUs={[
-        "We know the communities of Cypress — Bridgeland, Towne Lake, Fairfield, Cypress Creek Lakes — and how to work with each HOA's requirements.",
-        "Experience with the contemporary finishes common in newer Cypress construction.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line.",
-        "3-year written workmanship warranty + free touch-ups during the first 12 months."
+        "Founded in 2019 by owner Juan Serra and headquartered in Cypress, TX.",
+        "Prep is written into the estimate: patching, caulking and spot-priming, not just the finish coats.",
+        "Furniture moved or covered, floors protected and work areas cleaned each day.",
+        `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
+        "5-year written workmanship warranty.",
+        "No upfront payment: the estimate is free and nothing is due until you approve it in writing."
       ]}
-      priceRange="$4,600 – $15,200"
-      priceMin={4600}
-      priceMax={15200}
-      priceDetails="Interior painting in Cypress typically ranges from $4,600 to $15,200 for a whole-home repaint, depending on square footage, ceiling height, trim complexity, and color count. Single rooms typically run $500 to $1,400."
+      priceDetails={`For a whole home, about ${PRICES_2026.interiorPerSqFt} per square foot of floor area is a reasonable rule of thumb. Ceiling height, how much trim and how many doors are included, color changes and drywall repair move the number, and your free written estimate itemizes it.`}
       faqs={[
         {
-          question: "How long does an interior painting project take in Cypress?",
-          answer: "For a typical Cypress home (2,500 to 4,500 sqft), a full interior repaint takes between 3 and 6 business days. We schedule a dedicated crew and work consecutive days."
-        },
-        {
-          question: "What paint brands do you use?",
-          answer: "We use Sherwin-Williams Emerald, Benjamin Moore Aura, and Behr Marquee. All are low-VOC and safe to be home during application."
-        },
-        {
-          question: "Will I need to move out during the project?",
-          answer: "No. We work room by room and use low-VOC paint. We protect floors and furniture with drop cloths and plastic sheeting."
-        },
-        {
           question: "How much does interior painting cost in Cypress?",
-          answer: "Interior painting typically ranges from $4,600 to $15,200 for a whole-home repaint. Single rooms run $500 to $1,400."
+          answer: `A whole-home interior of about 2,500 sq ft typically runs ${PRICES_2026.fullInterior2500}, and a single room ${PRICES_2026.singleRoom}. These are our published 2026 Greater Houston ranges; your written estimate is free and itemized after we see the home.`,
         },
         {
-          question: "Do you work with Cypress area HOAs?",
-          answer: "Yes — we're familiar with the HOA requirements in Bridgeland, Towne Lake, Fairfield, and other Cypress communities."
+          question: "How long does an interior repaint take?",
+          answer: "It depends on the size of the home, which surfaces are included and how much repair the walls need. A single room is often done in a day; a whole home takes longer. The schedule is written into your estimate.",
         },
         {
-          question: "What's included in your warranty?",
-          answer: "Every project includes a 3-year written workmanship warranty plus 12 months of free touch-ups. The warranty is transferable."
+          question: "Do I need to move out while you paint?",
+          answer: "No. We work room by room, protect floors and furniture, and clean up the work areas at the end of each day, so most homeowners stay in the house.",
+        },
+        {
+          question: "What paint do you use?",
+          answer: "Sherwin-Williams and Benjamin Moore. The product and sheen are matched to the room: more washable finishes for kitchens, baths, halls and kids' rooms, flat finishes for ceilings. The exact product is listed on your estimate.",
+        },
+        {
+          question: "What warranty do you give?",
+          answer: "Every interior job comes with a 5-year written workmanship warranty. The full warranty terms are included with your written estimate, so you can read them before you approve the work.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free, and nothing is due until you approve the written estimate. A down payment is collected at that point, and the balance is due after the final walkthrough.",
         }
       ]}
       testimonials={[
@@ -77,15 +76,16 @@ export default function InteriorPaintingCypressPage() {
         }
       ]}
       relatedPages={[
-        { title: "Interior Painting Memorial", href: "/interior-painting-memorial" },
-        { title: "Interior Painting Tanglewood", href: "/interior-painting-tanglewood" },
-        { title: "Interior Painting Bellaire", href: "/interior-painting-bellaire-west-university" },
-        { title: "Interior Painting The Heights", href: "/interior-painting-the-heights" },
-        { title: "Interior Painting Sugar Land", href: "/interior-painting-sugar-land" },
-        { title: "Interior Painting Katy", href: "/interior-painting-katy-cinco-ranch" }
+        { title: "Interior painting cost guide", href: "/interior-painting-cost-houston" },
+        { title: "Drywall repair", href: "/drywall-repair-houston-tx" },
+        { title: "Cabinet refinishing in Cypress & Bridgeland", href: "/cabinet-refinishing-cypress-bridgeland" },
+        { title: "Exterior painting in Cypress & Bridgeland", href: "/exterior-painting-cypress-bridgeland" },
+        { title: "Interior painting in Katy & Cinco Ranch", href: "/interior-painting-katy-cinco-ranch" },
+        { title: "Interior painting in Sugar Land", href: "/interior-painting-sugar-land" },
+        { title: "Painters in Cypress, TX (headquarters)", href: "/painters-cypress-tx" }
       ]}
-      warrantyYears={3}
-      warrantyType="Interior"
+      warrantyYears={5}
+      warrantyType="Workmanship"
     />
   )
 }

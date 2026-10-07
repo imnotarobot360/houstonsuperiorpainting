@@ -1,15 +1,17 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS } from "@/lib/business"
 
 export const metadata: Metadata = {
-  title: "Luxury Exterior Painting River Oaks TX | Free Estimates",
-  description: "Premium exterior painting for River Oaks estates. Historic preservation expertise, custom color matching, master craftsmen. Free consultation.",
+  title: "River Oaks Exterior Painting | Houston Superior Painting",
+  description: "Exterior painting for River Oaks homes in Houston: wood repair, careful prep and color matching on older architecture. Priced after an on-site look.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/luxury-exterior-painting-river-oaks",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "Luxury Exterior Painting River Oaks TX — Houston Superior Painting",
-    description: "Premium exterior painting for River Oaks estates. Historic preservation expertise, custom color matching, master craftsmen.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "River Oaks Exterior Painting | Houston Superior Painting",
+    description: "Exterior painting for River Oaks homes in Houston: wood repair, careful prep and color matching on older architecture. Priced after an on-site look.",
     url: "https://houstonsuperiorpainting.com/luxury-exterior-painting-river-oaks",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -23,48 +25,45 @@ export default function LuxuryExteriorPaintingRiverOaksPage() {
       serviceSlug="luxury-exterior-painting"
       zone="River Oaks"
       zoneSlug="river-oaks"
-      metaTitle="Luxury Exterior Painting River Oaks TX — Houston Superior Painting"
-      metaDescription="Premium exterior painting for River Oaks estates. Historic preservation expertise, custom color matching, master craftsmen."
-      h1="Luxury Exterior Painting in River Oaks, TX"
-      heroSubheading="Exceptional exterior painting for Houston's most prestigious neighborhood — preserving architectural heritage while providing lasting protection."
-      introLocal="River Oaks represents the pinnacle of Houston residential architecture — historic Georgian mansions, Mediterranean villas, French chateaux, and contemporary masterpieces line its legendary boulevards. These exceptional properties require painters who understand both historic preservation techniques and modern high-performance coatings. Houston Superior Painting brings the expertise, premium materials, and meticulous attention to detail that River Oaks estates demand."
-      serviceOverview="Our luxury exterior painting service addresses the unique requirements of River Oaks properties. We specialize in historic color restoration, custom finish matching, and premium coating systems that protect against Houston's demanding climate. We use the finest exterior products including Fine Paints of Europe, Benjamin Moore's MoorGard Low Lustre, and Sherwin-Williams Duration — applied with master-level technique and backed by comprehensive warranties."
+      metaTitle={"River Oaks Exterior Painting | Houston Superior Painting"}
+      metaDescription={"Exterior painting for River Oaks homes in Houston: wood repair, careful prep and color matching on older architecture. Priced after an on-site look."}
+      h1={"Luxury Exterior Painting in River Oaks, TX"}
+      heroSubheading={"Exterior painting for River Oaks homes, from older houses with wood windows and detailed trim to newer builds, with prep matched to the age of the house."}
+      introLocal={"River Oaks is one of Houston's oldest planned neighborhoods, and many of its homes have older wood windows, cornices, columns and trim alongside brick, stucco and stone. Older wood trim usually needs scraping, sanding, repair and priming before it will hold new paint, and that prep is most of the job. You can see an exterior restoration we completed in River Oaks further down this page."}
+      serviceOverview={"Exterior work here covers washing, scraping and sanding loose paint, repairing or replacing rotted wood trim, re-caulking, priming bare wood and applying the finish coats. Where a color has to match existing work, we match it from a sample. We use Sherwin-Williams and Benjamin Moore exterior products, listed on your written estimate, and every job carries our 5-year written workmanship warranty."}
       whyChooseUs={[
-        "Deep experience with River Oaks' diverse architectural styles — Georgian, Mediterranean, French, Tudor, and contemporary.",
-        "Historic preservation expertise including period-appropriate color matching and restoration techniques.",
-        "Premium exterior products including Fine Paints of Europe and Benjamin Moore's finest lines.",
-        "Coordination with architects, historic consultants, and property managers.",
-        "Comprehensive 5-year warranty with dedicated priority service."
+        "Prep matched to the age of the house: scraping, sanding and priming bare wood before finish coats.",
+        "Rotted trim repaired or replaced and primed before painting.",
+        "Colors matched from an existing sample when you want to keep the current scheme.",
+        "Landscaping, hardscape and windows protected, and the site cleaned at the end of each day.",
+        "A written estimate with repairs, prep and products spelled out.",
       ]}
-      priceRange="$25,000 – $200,000+"
-      priceMin={25000}
-      priceMax={200000}
-      priceDetails="Luxury exterior painting in River Oaks varies significantly based on property size, architectural complexity, and restoration requirements. Projects typically range from $25,000 to $200,000+. We provide detailed proposals after a thorough on-site assessment."
+      priceDetails={"We don't publish a price range for high-end exterior work. The cost depends on the surface, its condition, the area and the technique, so it is priced after an on-site look. The estimate is free, and nothing is due until you approve it."}
       faqs={[
         {
-          question: "Do you have experience with historic River Oaks homes?",
-          answer: "Yes — we specialize in River Oaks' historic properties including Georgian, Mediterranean, French, and Tudor styles. We understand period-appropriate colors, techniques, and preservation requirements."
+          question: "My home is older. Is lead paint a concern?",
+          answer: "It can be. Homes built before 1978 may contain lead paint, and federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask any painter you are considering for their certification. If your home is that old, mention it when you request an estimate so it can be planned for.",
         },
         {
-          question: "What exterior products do you use on luxury properties?",
-          answer: "We use the finest exterior products including Fine Paints of Europe, Benjamin Moore's MoorGard and Regal lines, and Sherwin-Williams Duration — selected for their durability and exceptional finish quality."
+          question: "Can you match our existing exterior colors?",
+          answer: "Yes. We can match a color from a sample of the existing paint, or work from a color schedule your architect or designer provides.",
         },
         {
-          question: "Can you match historic colors?",
-          answer: "Absolutely. We provide professional color matching and can work from historic palettes, existing samples, or coordinate with historic preservation consultants."
-        },
-        {
-          question: "How do you protect landscaping on large estates?",
-          answer: "We use comprehensive protection systems including custom covering for specimen plantings, careful staging, and daily cleanup. We coordinate with your landscape team when needed."
+          question: "How do you protect landscaping?",
+          answer: "Beds and plants near the house are covered while we wash, scrape and paint, and walkways and windows are protected. Tell us about anything delicate and we will plan around it.",
         },
         {
           question: "Do you work with architects and property managers?",
-          answer: "Yes — we regularly coordinate with architects, historic consultants, and property managers. We provide detailed documentation and attend coordination meetings as needed."
+          answer: "Yes. We can work from an architect's or designer's specifications and send the estimate and schedule to whoever manages the project.",
         },
         {
-          question: "What warranty do you provide on River Oaks projects?",
-          answer: "All luxury exterior projects include our comprehensive 5-year workmanship warranty with dedicated priority service. We maintain detailed project records and provide complete documentation."
-        }
+          question: "How much does high-end exterior painting cost in River Oaks?",
+          answer: "We don't publish a price range for high-end exterior painting, because the cost depends on the surface, its condition, the area and the technique. We price it after an on-site look, and the estimate is free.",
+        },
+        {
+          question: "Do I have to pay anything before work starts?",
+          answer: `${BUSINESS.paymentPolicy.sentence}`,
+        },
       ]}
       testimonials={[
         {
@@ -84,12 +83,13 @@ export default function LuxuryExteriorPaintingRiverOaksPage() {
         }
       ]}
       relatedPages={[
+        { title: "Exterior Painting Houston", href: "/exterior-painting-houston-tx" },
+        { title: "Painters in River Oaks", href: "/painters-river-oaks-tx" },
         { title: "Luxury House Painters Houston", href: "/luxury-house-painters-houston" },
         { title: "Luxury Interior Painting Memorial", href: "/luxury-interior-painting-memorial" },
-        { title: "Painters River Oaks TX", href: "/painters-river-oaks-tx" },
         { title: "Exterior Painting Tanglewood", href: "/exterior-painting-tanglewood" },
-        { title: "Limewash & Brick Painting", href: "/limewash-brick-painting-houston-tx" },
-        { title: "Cabinet Refinishing Houston", href: "/cabinet-refinishing-houston-tx" }
+        { title: "Wood Rot Repair", href: "/wood-rot-repair-houston-tx" },
+        { title: "Limewash & Brick Painting Houston", href: "/limewash-brick-painting-houston-tx" },
       ]}
       warrantyYears={5}
       warrantyType="Luxury Exterior"

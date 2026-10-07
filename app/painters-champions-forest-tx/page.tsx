@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { PRICES_2026 } from "@/lib/business"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LocationPageTemplate } from "@/components/location-page-template"
@@ -7,13 +7,13 @@ import { generateLocationBusinessSchema } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   title: "House Painters Champions Forest TX | Interior & Exterior",
-  description: "Professional house painters serving Champions Forest, Champions, and Northwest Houston. Interior, exterior, and cabinet painting. Insured, 5-year warranty.",
+  description: "House painters serving Champions Forest and the Champions area of NW Houston. Interior, exterior and cabinet painting. Insured, 5-year warranty.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-champions-forest-tx',
   },
   openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Champions Forest TX | Houston Superior Painting",
-    description: "Professional painting services for Champions Forest homeowners. Premium materials, insured crews, 5-year warranty.",
+    description: "Interior, exterior and cabinet painting for Champions Forest homeowners. Insured crews, 5-year workmanship warranty.",
     type: "website",
   },
 }
@@ -36,62 +36,63 @@ export default function PaintersChampionsForestTX() {
         <LocationPageTemplate
           city="Champions Forest"
           state="TX"
-          heroHeadline="Reliable House Painters for Champions Forest"
-          heroDescription="Serving Champions Forest, Champions, and Northwest Houston with quality painting services. We understand the unique needs of this beautiful wooded community and deliver results that last."
-          aboutCity={`Champions Forest is one of Northwest Houston's most desirable neighborhoods, known for its mature trees, excellent schools, and strong sense of community. The homes here—many built in the 1970s and 1980s—are well-maintained by owners who take pride in their properties.
+          heroHeadline="House Painters in Champions Forest, TX"
+          heroDescription="Interior, exterior and cabinet painting for Champions Forest and the wider Champions area of Northwest Houston, with prep suited to older homes under heavy tree cover."
+          quickAnswer={`Houston Superior Painting paints homes in Champions Forest and the Champions area of Northwest Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Older homes under mature trees usually need extra washing, caulk and wood repair before painting. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          aboutCity={`Champions Forest is a wooded Northwest Houston neighborhood near FM 1960, with many homes dating from the 1970s and 1980s. The mature tree canopy that gives the area its character also affects exterior paint.
 
-We've been serving Champions Forest homeowners for years, and we understand what makes this community special. The beautiful tree canopy that gives the neighborhood its name also creates specific challenges for exterior painting: more shade affects drying times, the forest environment increases moisture, and organic debris requires thorough cleaning before paint application.
+Heavy shade keeps siding and trim damp longer, which encourages mildew and slows drying, and leaves and sap collect on surfaces. Exterior work here usually starts with a thorough wash, then caulk replacement, repair of any soft or rotted wood, and priming of bare spots before the finish coats. Painting is scheduled for dry weather so coatings can cure properly.
 
-Many Champions Forest homes are now on their second or third exterior repaint. Our crews are experienced with the construction methods and materials common in this era of Houston building. We know how to properly prepare older siding, address wood damage, replace failing caulk, and apply coatings that will protect your home for years to come.
+Inside, homes of this era often have textured walls, older trim and settling cracks that need repair before repainting. We also refinish kitchen cabinets as an alternative to replacement.
 
-Whether you're maintaining a home your family has lived in for decades or recently moved into this wonderful community, Houston Superior Painting delivers the quality and reliability Champions Forest homeowners expect.`}
+Houston Superior Painting was founded in 2019 and is headquartered in nearby Cypress. Every estimate is free and written, and nothing is due until you approve it.`}
           whyChooseUs={[
-            "Champions Forest specialists: Years of experience in this community",
-            "Mature home expertise: Skilled with 1970s-80s construction methods",
-            "Wooded environment: Proper prep for shade and moisture conditions",
-            "HOA familiar: We know Champions Forest color requirements",
-            "Premium materials: Sherwin-Williams and Benjamin Moore products",
-            "5-year written warranty: Our guarantee of lasting quality"
+            "Prep for older homes: caulk replacement, wood repair and priming",
+            "Washing and mildew treatment before painting under heavy shade",
+            "Sherwin-Williams and Benjamin Moore products",
+            "Insured: $2M general liability plus workers' comp",
+            "5-year written workmanship warranty",
+            "No upfront payment: nothing is due until you approve the written estimate"
           ]}
           services={[
             {
               title: "Interior Painting",
-              description: "Refresh your Champions Forest home's interior with smooth, professional results. We handle everything from single rooms to complete repaints.",
+              description: "Walls, ceilings and trim, from single rooms to complete repaints.",
               href: "/interior-painting-houston-tx"
             },
             {
               title: "Exterior House Painting",
-              description: "Protect your home from the challenges of the wooded environment. Thorough prep and premium paints for lasting results.",
+              description: "Exterior repaints with washing, repair and priming suited to shaded, wooded lots.",
               href: "/exterior-painting-houston-tx"
             },
             {
               title: "Cabinet Refinishing",
-              description: "Update your kitchen without replacement. Professional cabinet painting transforms dated cabinets at a fraction of the cost.",
+              description: "Painted cabinet finishes as an alternative to replacing sound cabinet boxes.",
               href: "/cabinet-refinishing-houston-tx"
             },
             {
               title: "Drywall Repair",
-              description: "Fix settling cracks, nail pops, and water stains before painting. Essential for perfect results in mature homes.",
+              description: "Fix settling cracks, nail pops, and water stains before painting.",
               href: "/drywall-repair-houston-tx"
             },
             {
               title: "Pressure Washing",
-              description: "Professional pressure washing for Champions Forest homes. Remove mold, mildew, and organic debris.",
+              description: "Pressure washing to remove mildew and organic debris from Champions Forest homes.",
               href: "/pressure-washing-houston-tx"
             },
             {
               title: "Limewash Brick",
-              description: "Transform your Champions Forest brick home with elegant European limewash finishes.",
+              description: "Limewash finishes for brick homes, priced after an on-site look.",
               href: "/limewash-brick-painting-houston-tx"
             },
             {
               title: "Commercial Painting",
-              description: "Professional painting for Champions area businesses and commercial properties.",
+              description: "Painting for Champions area businesses and commercial properties.",
               href: "/commercial-painting-houston-tx"
             },
             {
               title: "Garage Floor Epoxy",
-              description: "Durable epoxy coatings for Champions Forest garages that resist stains and last for years.",
+              description: "Garage floor coatings through our sister brand, Houston Superior Epoxy.",
               href: "https://houstonsuperiorepoxy.com/"
             }
           ]}
@@ -109,27 +110,22 @@ Whether you're maintaining a home your family has lived in for decades or recent
             "Spring Creek Oaks",
             "Prestonwood Forest"
           ]}
-          testimonial={{
-            quote: "Our Champions Forest home needed serious exterior work after 30 years. Houston Superior Painting addressed every issue—rotted trim, failing caulk, peeling paint—and the result is amazing. Our home looks better than when we bought it. Excellent work!",
-            author: "Tom & Barbara M.",
-            location: "Champions Forest"
-          }}
           faqs={[
             {
               question: "How much does house painting cost in Champions Forest?",
-              answer: `Interior painting in Champions Forest typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates.`
+              answer: `Interior painting in Champions Forest typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
             },
             {
-              question: "Do you work with Champions Forest HOA?",
-              answer: "Yes! We're familiar with Champions Forest HOA requirements and can help you select compliant exterior colors. We've painted many homes throughout the community."
+              question: "Do I need HOA approval to repaint in Champions Forest?",
+              answer: "Many deed-restricted sections in the Champions area require approval before an exterior color change. Check with your association before work is scheduled; we can provide the product names and color codes they ask for."
             },
             {
               question: "How do you handle Champions Forest's mature trees?",
-              answer: "Champions Forest's tree canopy creates specific conditions for exterior painting. We adjust our preparation for shade, moisture, and organic debris, and schedule work during optimal weather windows."
+              answer: "Heavy shade keeps surfaces damp and encourages mildew, so we wash and treat surfaces first, repair caulk and wood, and schedule painting for dry weather so coatings can cure."
             },
             {
               question: "Do you paint older homes that need extra prep work?",
-              answer: "Absolutely. Many Champions Forest homes were built in the 1970s-1980s and require thorough preparation. We address wood damage, caulk failures, and weathering before painting for lasting results."
+              answer: "Yes. Many Champions Forest homes date from the 1970s and 1980s. We address wood damage, failed caulk and weathering before painting. Homes built before 1978 may contain lead paint, which federal rules require be disturbed only by an EPA-certified renovation firm, so ask any painter for their certification."
             }
           ]}
         />

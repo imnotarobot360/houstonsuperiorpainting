@@ -1,15 +1,17 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS } from "@/lib/business"
 
 export const metadata: Metadata = {
-  title: "Luxury House Painters Houston TX — Houston Superior Painting",
-  description: "High-end residential painting for Houston's finest homes. River Oaks, Memorial, Tanglewood, West University. Premium materials, master craftsmen.",
+  title: "Luxury House Painters Houston TX | Houston Superior Painting",
+  description: "High-end interior and exterior painting for larger Houston homes: detailed millwork, older architecture, designer specs. Priced after an on-site look.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/luxury-house-painters-houston",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "Luxury House Painters Houston TX — Houston Superior Painting",
-    description: "High-end residential painting for Houston's finest homes. River Oaks, Memorial, Tanglewood, West University. Premium materials.",
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: "Luxury House Painters Houston TX | Houston Superior Painting",
+    description: "High-end interior and exterior painting for larger Houston homes: detailed millwork, older architecture, designer specs. Priced after an on-site look.",
     url: "https://houstonsuperiorpainting.com/luxury-house-painters-houston",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -23,49 +25,45 @@ export default function LuxuryHousePaintersHoustonPage() {
       serviceSlug="luxury-house-painters"
       zone="Houston"
       zoneSlug="houston"
-      metaTitle="Luxury House Painters Houston TX — Houston Superior Painting"
-      metaDescription="High-end residential painting for Houston's finest homes. River Oaks, Memorial, Tanglewood, West University. Premium materials, master craftsmen."
-      h1="Luxury House Painters in Houston, TX"
-      heroSubheading="Exceptional craftsmanship for exceptional homes — serving River Oaks, Memorial, Tanglewood, West University, and Houston's most distinguished neighborhoods."
-      introLocal="Houston's luxury homes demand painters who understand the difference between adequate and exceptional. From historic River Oaks estates to contemporary Memorial mansions, Houston Superior Painting brings the expertise, premium materials, and meticulous attention to detail that discerning homeowners expect. We work seamlessly with architects, designers, and general contractors to deliver flawless results on the most demanding projects."
-      serviceOverview="Our luxury painting services encompass everything from specialty finishes and custom color matching to complex multi-phase projects coordinated with renovations. We use the finest materials available — Farrow & Ball, Benjamin Moore's Aura Grand Entrance, Fine Paints of Europe, and Sherwin-Williams Emerald — applied with master-level technique. Every project receives dedicated project management and our comprehensive 5-year warranty."
+      metaTitle={"Luxury House Painters Houston TX | Houston Superior Painting"}
+      metaDescription={"High-end interior and exterior painting for larger Houston homes: detailed millwork, older architecture, designer specs. Priced after an on-site look."}
+      h1={"Luxury House Painters in Houston, TX"}
+      heroSubheading={"Interior and exterior painting for larger, more detailed Houston homes in neighborhoods such as River Oaks, Memorial, Tanglewood and West University."}
+      introLocal={"Larger and older Houston homes bring work that a standard repaint price does not capture: detailed millwork and paneling, tall foyers and stairwells, older wood windows and trim, and finishes specified by a designer or architect. We price this work after walking the house, and the written estimate spells out the scope room by room and surface by surface. Projects with job photos, including a whole-home interior repaint in Memorial and an exterior restoration in River Oaks, are shown further down this page."}
+      serviceOverview={"We handle interior walls, ceilings, millwork and built-ins; exterior siding, trim, brick and stucco; cabinet refinishing; and Venetian plaster for feature walls. We follow designer or architect specifications when there are any, and we coordinate our schedule with other trades on a renovation. We use Sherwin-Williams, Benjamin Moore and Farrow & Ball products, listed on your written estimate, and every job carries our 5-year written workmanship warranty."}
       whyChooseUs={[
-        "Experience with Houston's most prestigious addresses — River Oaks, Memorial Villages, Tanglewood, West University, Piney Point.",
-        "Master-level craftsmen skilled in specialty finishes, lacquer work, and decorative techniques.",
-        "Seamless coordination with architects, designers, and general contractors.",
-        "Premium materials including Farrow & Ball, Fine Paints of Europe, and Benjamin Moore Aura.",
-        "Dedicated project manager and daily communication throughout your project.",
-        "Comprehensive 5-year warranty with priority service."
+        "Pricing based on a walkthrough, with the scope written room by room and surface by surface.",
+        "Prep-first work on millwork, trim and older surfaces.",
+        "Designer and architect color and sheen specifications followed.",
+        "Scheduling coordinated with other trades on renovation projects.",
+        "Venetian plaster and cabinet refinishing available alongside painting.",
       ]}
-      priceRange="$15,000 – $150,000+"
-      priceMin={15000}
-      priceMax={150000}
-      priceDetails="Luxury residential painting in Houston varies significantly based on project scope, specialty finishes, and property size. Whole-home repaints for luxury properties typically range from $15,000 to $150,000+. We provide detailed proposals after an in-person consultation."
+      priceDetails={"We don't publish a price range for high-end residential painting. The cost depends on the surface, its condition, the area and the technique, so it is priced after an on-site look. The estimate is free, and nothing is due until you approve it."}
       faqs={[
         {
-          question: "What makes your luxury painting services different?",
-          answer: "We bring master-level craftsmen, premium materials (Farrow & Ball, Fine Paints of Europe), dedicated project management, and meticulous attention to detail that luxury homes demand. We also coordinate seamlessly with designers and contractors."
+          question: "How is this different from a standard repaint?",
+          answer: "The prep-first process is the same; the difference is scope. Detailed millwork, tall spaces, older surfaces and specified finishes take more prep and more careful work, so we price them after a walkthrough instead of from our standard published ranges.",
         },
         {
           question: "Do you work with interior designers and architects?",
-          answer: "Absolutely. We regularly collaborate with Houston's top designers and architects, following detailed specifications and attending coordination meetings as needed."
+          answer: "Yes. We follow their color and sheen specifications and coordinate the timing of our work with theirs and with other trades.",
         },
         {
           question: "What specialty finishes do you offer?",
-          answer: "We offer lacquer finishes, Venetian plaster, limewash, metallic finishes, faux techniques, and custom decorative work. Our craftsmen have decades of combined experience with specialty applications."
+          answer: "Venetian plaster, Roman Clay, lacquer, metallic and faux finishes, grasscloth and wallcovering, and limewash for bare brick, alongside interior and exterior painting and cabinet refinishing. Specialty work is priced after an on-site look.",
         },
         {
-          question: "How do you handle large estate projects?",
-          answer: "Large projects receive a dedicated project manager, detailed scheduling, and phased execution to minimize disruption. We can also coordinate with other trades and work around renovation schedules."
+          question: "How much does high-end residential painting cost in Houston?",
+          answer: "We don't publish a price range for high-end residential painting, because the cost depends on the surface, its condition, the area and the technique. We price it after an on-site look, and the estimate is free.",
         },
         {
-          question: "What Houston neighborhoods do you serve?",
-          answer: "We serve all of Houston's luxury neighborhoods including River Oaks, Memorial Villages, Tanglewood, West University, Piney Point Village, Hunters Creek, Bunker Hill, and beyond."
+          question: "Which Houston neighborhoods do you serve?",
+          answer: "We work across Houston, including River Oaks, Memorial and the Memorial Villages, Tanglewood, West University and Bellaire, as well as the suburbs listed on our service area pages.",
         },
         {
-          question: "What warranty do you provide on luxury projects?",
-          answer: "All luxury projects include our comprehensive 5-year workmanship warranty with priority service. We also honor all manufacturer warranties and provide detailed documentation."
-        }
+          question: "Do I have to pay anything before work starts?",
+          answer: `${BUSINESS.paymentPolicy.sentence}`,
+        },
       ]}
       testimonials={[
         {
@@ -85,12 +83,13 @@ export default function LuxuryHousePaintersHoustonPage() {
         }
       ]}
       relatedPages={[
+        { title: "Interior Painting Houston", href: "/interior-painting-houston-tx" },
+        { title: "Exterior Painting Houston", href: "/exterior-painting-houston-tx" },
+        { title: "Cabinet Refinishing Houston", href: "/cabinet-refinishing-houston-tx" },
+        { title: "Venetian Plaster", href: "/venetian-plaster-houston-tx" },
         { title: "Luxury Interior Painting Memorial", href: "/luxury-interior-painting-memorial" },
         { title: "Luxury Exterior Painting River Oaks", href: "/luxury-exterior-painting-river-oaks" },
-        { title: "Interior Painting Tanglewood", href: "/interior-painting-tanglewood" },
-        { title: "Cabinet Refinishing Memorial", href: "/cabinet-refinishing-memorial" },
-        { title: "Limewash & Decorative Finishes", href: "/limewash-brick-painting-houston-tx" },
-        { title: "Painters River Oaks TX", href: "/painters-river-oaks-tx" }
+        { title: "Painters in Houston", href: "/painters-houston-tx" },
       ]}
       warrantyYears={5}
       warrantyType="Luxury Residential"

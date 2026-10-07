@@ -202,6 +202,7 @@ export default function ExteriorPaintingHoustonTX() {
         { label: "Limewash and brick painting in Houston", href: "/limewash-brick-painting-houston-tx" },
         { label: "Soft washing in Houston", href: "/soft-washing-houston-tx" },
         { label: "How often to paint a house in Houston", href: "/how-often-paint-house-houston" },
+        { label: "Project: exterior restoration in River Oaks", href: "/projects/river-oaks-exterior-restoration" },
       ]}
       schema={[serviceSchema]}
     />

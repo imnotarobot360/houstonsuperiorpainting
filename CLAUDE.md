@@ -39,6 +39,11 @@ v0 also opens PRs against this repo, so run `git pull` before starting work.
 - No "#1" or "best painters in Houston" in our own voice. No invented projects, reviews or stats. Real projects live in `lib/projects.ts`.
 - Internal links go to canonical URLs, never to a redirect source. Use the estimate CTA `/painting-estimate-houston`, not `/contact`.
 - Blog posts live under `/blog/<slug>`.
+- Brands we use: Sherwin-Williams, Benjamin Moore, Farrow & Ball (`BUSINESS.paintPartners`). Never "preferred contractor/partner".
+- Specialty finishes we offer are in `BUSINESS.specialtyFinishes` (Venetian plaster, Roman Clay, limewash, faux, metallic, lacquer, grasscloth). No published price: "priced after an on-site look".
+- NOT BBB accredited (bbb.org, checked 2026-10-07). Never claim EPA RRP certification, bonding, financing, family-owned or bilingual crews unless Juan confirms and it is added to `lib/business.ts`.
+- Local proof: only cite projects in `LOCAL_PROOF_PROJECTS` (`lib/projects.ts`); entries with `photosNeedReview` have unconfirmed photos. Never print local job counts ("35 projects in Bellaire") or unverified testimonials on city pages.
+- Pending owner decisions from the Oct 2026 local SEO audit (office eligibility, consolidation 301s, trust stats): `docs/local-seo-audit-2026-10.md`.
 
 ## Open items (Juan)
 - The "4.9 / 200+ Google reviews" claim is not verified per Google Business Profile. It is shown on the homepage, service pages, the Houston page and some posts.

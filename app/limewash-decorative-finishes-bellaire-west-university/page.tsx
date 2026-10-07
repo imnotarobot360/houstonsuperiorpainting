@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/limewash-decorative-finishes-bellaire-west-university',
   },
-  title: "Limewash & Decorative Finishes Bellaire & West University",
-  description: "Premium limewash and decorative finishes in Bellaire and West University Place. European-style texture with breathable, timeless walls. Free quote — call (346) 594-5960.",
+  title: "Limewash Brick Bellaire & West University TX",
+  description: "Limewash for brick and decorative finishes in Bellaire and West University Place, TX. Priced after an on-site look; free estimate, nothing due upfront.",
 }
 
 export default function LimewashBellaireWestUPage() {
@@ -16,48 +16,48 @@ export default function LimewashBellaireWestUPage() {
       serviceSlug="limewash-decorative-finishes"
       zone="Bellaire & West University, TX"
       zoneSlug="bellaire-west-university"
-      metaTitle="Limewash & Decorative Finishes Bellaire & West University | Houston Superior Painting"
-      metaDescription="Premium limewash and decorative finishes in Bellaire and West University Place."
-      h1="Limewash & Decorative Finishes in Bellaire and West University Place, Houston, TX"
-      heroSubheading="Bring European elegance to your home with authentic limewash and decorative finishes — timeless beauty, breathable walls, and a look that only improves with age."
-      introLocal="Bellaire and West University homeowners appreciate distinctive design. Limewash and decorative finishes offer a sophisticated alternative to conventional paint, creating depth, texture, and character. Houston Superior Painting has applied limewash and decorative finishes throughout these neighborhoods, transforming both mid-century homes and new construction."
-      serviceOverview="Our limewash and decorative finish services include authentic lime-based washes for brick and stucco, Roman Clay and Venetian plaster for interior walls, and specialty texture techniques. We use premium materials from Romabio, Portola Paints, and Master of Plaster. A typical project takes 3 to 7 business days."
+      metaTitle="Limewash Brick Bellaire & West University TX"
+      metaDescription="Limewash for brick and decorative finishes in Bellaire and West University Place, TX. Priced after an on-site look; free estimate, nothing due upfront."
+      h1="Limewash & Decorative Finishes in Bellaire and West University Place, TX"
+      heroSubheading="Limewash for brick, stone and stucco, and decorative finishes such as Venetian plaster for interior walls, priced after an on-site look."
+      introLocal="Bellaire and West University Place have many brick homes, from original mid-century ranches to newer builds. Limewash can soften the color of unpainted brick, but it is not the right product for every wall, so we look at the brick before quoting."
+      serviceOverview="Limewash is a mineral finish made from lime and water, often tinted. It soaks into porous masonry instead of forming a film on top, giving brick and stone a soft, matte, uneven look. It works best on unpainted, unsealed masonry. Indoors we also apply decorative finishes such as Venetian plaster. Because the result depends on the surface, we look at it in person before quoting."
       whyChooseUs={[
-        "Authentic limewash technique using premium lime-based materials.",
-        "Experience with both mid-century brick homes and contemporary new builds.",
-        "Trained in Roman Clay, Venetian plaster, and specialty decorative techniques.",
-        "Daily SMS photo updates so you can monitor progress.",
-        "Breathable finishes essential for Houston's humid climate."
+        "A check of whether your brick has been painted or sealed before, which decides whether limewash will work.",
+        "An on-site look at the masonry or walls before anything is quoted.",
+        "A free written estimate, with nothing due until you approve it.",
+        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
       ]}
-      priceRange="$6,500 – $20,000"
-      priceMin={6500}
-      priceMax={20000}
-      priceDetails="Limewash and decorative finishes in Bellaire and West University typically range from $6,500 to $20,000, depending on home size and finish complexity."
+      priceDetails="Limewash and decorative finishes are priced after an on-site look. The surface (brick, stone, stucco or interior wall), its condition, whether it has been painted or sealed before, and the look you want all change the scope, so we don't publish a range. The estimate is free."
       faqs={[
         {
           question: "What is limewash?",
-          answer: "Limewash is an ancient finish made from limestone that creates beautiful depth and character."
+          answer: "Limewash is a mineral finish made from lime and water, often tinted. It soaks into porous brick, stone or stucco instead of forming a film on top, which gives a soft, matte, slightly uneven look.",
         },
         {
-          question: "How long does limewash last?",
-          answer: "Authentic limewash can last 15-20+ years and develops a beautiful patina."
+          question: "Can limewash go on any brick?",
+          answer: "It works best on unpainted, unsealed brick, stone and stucco. Masonry that has been painted or sealed usually needs a different product, which we check during the estimate.",
         },
         {
-          question: "Can you limewash my brick home?",
-          answer: "Yes — limewash is ideal for brick and creates a durable, breathable finish."
-        },
-        {
-          question: "What interior finishes do you offer?",
-          answer: "We offer Roman Clay, Venetian plaster, lime plaster, and specialty textures."
-        },
-        {
-          question: "How much does limewash cost?",
-          answer: "Exterior limewash ranges from $4-8 per sqft; interior finishes from $12-20 per sqft."
+          question: "How does limewash age?",
+          answer: "Limewash weathers gradually, especially on surfaces that get a lot of rain, and it can be refreshed with another coat. Some homeowners like the softer look as it wears; others plan for periodic touch-ups.",
         },
         {
           question: "Is limewash better than painting brick?",
-          answer: "Yes — limewash is breathable and creates a more sophisticated aesthetic."
-        }
+          answer: "Neither is better in every case. Paint forms a film and gives a solid, uniform color. Limewash is breathable and lets the texture and some of the brick color show through. The right choice depends on the look you want and the condition of the masonry.",
+        },
+        {
+          question: "How much does limewash cost in Bellaire and West University?",
+          answer: "Limewash and decorative finishes are priced after an on-site look, because the surface, its condition and the look you want change the scope. The estimate is free and nothing is due until you approve it.",
+        },
+        {
+          question: "What decorative finishes do you offer?",
+          answer: "For interior walls we offer Venetian plaster, Roman Clay, and faux and metallic finishes; for bare brick, limewash. Each is priced after an on-site look, and the estimate is free.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+        },
       ]}
       testimonials={[
         {

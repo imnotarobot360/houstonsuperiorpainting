@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/exterior-painting-the-heights',
   },
-  title: "Exterior Painting The Heights | Houston Superior Painting",
-  description: "Premium exterior painting in The Heights, Houston. 5-year warranty, 5-star reviews, family-owned. Free quote — call (346) 594-5960.",
+  title: "Exterior Painting The Heights, Houston TX",
+  description: "Exterior painting for Heights bungalows and newer homes: scraping, wood repair, priming and a 5-year written warranty. Free written estimate.",
 }
 
 export default function ExteriorPaintingHeightsPage() {
@@ -16,48 +17,48 @@ export default function ExteriorPaintingHeightsPage() {
       serviceSlug="exterior-painting"
       zone="The Heights, Houston, TX"
       zoneSlug="the-heights"
-      metaTitle="Exterior Painting The Heights | Houston Superior Painting"
-      metaDescription="Premium exterior painting in The Heights, Houston. 5-year warranty, EPA Lead-Safe Certified."
+      metaTitle="Exterior Painting The Heights, Houston TX"
+      metaDescription="Exterior painting for Heights bungalows and newer homes: scraping, wood repair, priming and a 5-year written warranty. Free written estimate."
       h1="Exterior Painting in The Heights, Houston, TX"
-      heroSubheading="The painting team Heights homeowners trust to deliver flawless exterior painting — prepped for Houston weather, finished beautifully, and backed by a 5-year written warranty."
-      introLocal="When Heights homeowners search for an exterior painter, they're looking for a team that respects the historic character of the neighborhood while protecting homes from Houston's demanding climate. From beautifully restored Victorian bungalows to sleek modern builds, Houston Superior Painting has protected and beautified exteriors throughout The Heights, Woodland Heights, and Norhill."
-      serviceOverview="Our exterior painting service in The Heights includes the full scope: power washing, wood rot repair, caulking, priming, and finish coats with premium exterior-grade materials. We're EPA Lead-Safe Certified for pre-1978 homes, which is essential in The Heights. A typical project takes 5 to 9 business days, and every job is backed by our 5-year written exterior warranty."
+      heroSubheading="Washing, repairs, caulking and priming before any paint goes on, Sherwin-Williams and Benjamin Moore exterior paints, and a 5-year written workmanship warranty."
+      introLocal="The Heights has many early-1900s bungalows and Victorian homes with wood siding and detailed trim, alongside newer townhomes and rebuilds. Old wood siding needs careful scraping, repair and priming, and Houston's humidity and heat are hard on exterior paint."
+      serviceOverview="Exterior work starts with pressure washing and scraping loose paint, then wood repair, caulking and spot-priming before the finish coats. Houston's humidity, heat and summer storms are hard on exterior paint, so we schedule coats around rain and follow each paint maker's temperature and humidity limits."
       whyChooseUs={[
-        "Extensive experience with historic Heights architecture — Victorian, Craftsman, and bungalow restoration.",
-        "EPA Lead-Safe RRP Certified for pre-1978 homes — required for much of The Heights housing stock.",
-        "5-year written exterior warranty — the longest in the Houston metro area.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line."
+        "Scraping, wood repair and priming for the wood siding and trim on older Heights homes.",
+        "Rotted siding, trim and fascia are found at the estimate and listed in the written scope before work starts.",
+        "Sherwin-Williams and Benjamin Moore exterior paints, chosen for the surface.",
+        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
       ]}
-      priceRange="$5,200 – $19,500"
-      priceMin={5200}
-      priceMax={19500}
-      priceDetails="Exterior painting in The Heights typically ranges from $5,200 to $19,500 for a complete repaint, depending on home size, stories, historic detailing, and prep complexity."
+      priceDetails={`Exterior work typically falls around ${PRICES_2026.exteriorPerSqFt} per square foot. Height, siding type, the amount of wood repair and how much of the house is unpainted brick all change the total; the free written estimate gives you the exact number.`}
       faqs={[
         {
-          question: "Are you certified to work on older Heights homes?",
-          answer: "Yes — we are EPA Lead-Safe RRP Certified, which is required for homes built before 1978. Many Heights bungalows and Victorian homes require this certification."
-        },
-        {
-          question: "How long does an exterior project take in The Heights?",
-          answer: "For a typical Heights home, a full exterior repaint takes between 5 and 9 business days. Historic homes with detailed trim may take longer."
-        },
-        {
-          question: "Do you repair wood rot on historic homes?",
-          answer: "Yes — we specialize in wood rot repair for historic Heights homes. We use epoxy consolidants and dutchman repairs to preserve original materials when possible."
-        },
-        {
           question: "How much does exterior painting cost in The Heights?",
-          answer: "Exterior painting typically ranges from $5,200 to $19,500 for a complete repaint."
+          answer: `Our published range for a typical whole-house exterior is ${PRICES_2026.exteriorPerHome}; a 2,500 sq ft two-story runs about ${PRICES_2026.exterior2500TwoStory}. Height, siding and repairs move the number, so the free written estimate is the real price.`,
         },
         {
-          question: "What's included in your 5-year warranty?",
-          answer: "Our warranty covers peeling, flaking, blistering, and adhesion failures caused by improper preparation or application."
+          question: "What paint do you use on exteriors?",
+          answer: "Sherwin-Williams and Benjamin Moore exterior paints, chosen for the surface: wood siding and trim, fiber cement, stucco or masonry.",
         },
         {
-          question: "Can you match historic paint colors?",
-          answer: "Yes — we can match original colors or help you select historically appropriate palettes for your Heights home."
-        }
+          question: "Do you repair wood rot before painting?",
+          answer: "Yes. Wood rot repair is one of our services. We check siding, trim and fascia during the estimate, and any repairs are listed in the written scope before work starts.",
+        },
+        {
+          question: "How long does an exterior repaint take?",
+          answer: "It depends on the size and height of the home, the amount of prep and repair, and the weather. We tell you the expected duration with the written estimate and schedule coats around rain.",
+        },
+        {
+          question: "My Heights home was built before 1978. Does that matter?",
+          answer: "Homes built before 1978 may contain lead paint. Federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask any painter for their certification before sanding or scraping begins.",
+        },
+        {
+          question: "What does the warranty cover?",
+          answer: "Every project comes with a 5-year written workmanship warranty. The terms are written out with your estimate, so you can read them before you approve anything.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+        },
       ]}
       testimonials={[
         {

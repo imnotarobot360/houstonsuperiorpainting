@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { LocationPageTemplate } from "@/components/location-page-template"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
-import { PRICES_2026 } from "@/lib/business"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 // This page shipped with no Header and no Footer, unlike its siblings —
 // meaning no site navigation and none of the footer's internal links.
 import { Header } from "@/components/header"
@@ -9,13 +9,13 @@ import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "House Painters Missouri City TX | Interior & Exterior",
-  description: "Professional house painters in Missouri City, TX. Interior and exterior painting, cabinet refinishing, and drywall repair. Insured crews, 5-year warranty.",
+  description: "House painters in Missouri City, TX: interior and exterior painting, cabinet refinishing and drywall repair. Insured crews, 5-year warranty.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-missouri-city-tx',
   },
   openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "House Painters in Missouri City TX | Houston Superior Painting",
-    description: "Trusted painting contractors serving Missouri City and Fort Bend County. Quality craftsmanship, 5-year warranty. Get your free estimate today!",
+    description: "Interior, exterior and cabinet painting for Missouri City and Fort Bend County homes. Insured, 5-year workmanship warranty, free estimates.",
     type: "website",
   },
 }
@@ -24,18 +24,20 @@ const missouriCityData = {
   city: "Missouri City",
   state: "TX",
   heroHeadline: "House Painters in Missouri City, TX",
-  heroDescription: "Trusted painting contractors serving Sienna, Riverstone, Lake Olympia, and all Missouri City neighborhoods with exceptional craftsmanship.",
-  
-  aboutCity: `Missouri City homeowners deserve painting contractors who understand the unique character of Fort Bend County's premier communities. From the master-planned neighborhoods of Sienna Plantation to the established homes of Quail Valley, Houston Superior Painting delivers results that enhance your home's beauty and protect your investment.
+  heroDescription: "Interior, exterior and cabinet painting for Missouri City homes, from established neighborhoods like Quail Valley to newer master-planned communities.",
 
-Our team has extensive experience with Missouri City's diverse housing styles — from traditional brick homes to modern stucco construction, from lakefront properties to golf course estates. We understand that Fort Bend County homeowners expect premium quality, and we deliver exactly that with every project.
+  quickAnswer: `Houston Superior Painting paints homes in Missouri City, TX. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Many Missouri City neighborhoods are HOA-governed, so check exterior color approval before work starts. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`,
 
-Missouri City's subtropical climate presents specific challenges: intense summer heat, high humidity, and occasional severe storms. Our exterior painting solutions use elastomeric and acrylic coatings specifically formulated to withstand these conditions without cracking, peeling, or fading. For interiors, we use low-VOC paints that are safe for your family while delivering exceptional durability.
+  aboutCity: `Missouri City is a Fort Bend County city southwest of Houston. Its housing ranges from established neighborhoods such as Quail Valley, with many homes from the 1970s and 1980s, to newer master-planned communities such as Sienna. Most homes are brick with painted siding, trim and soffits.
 
-Whether you're preparing your home for sale, updating a newly purchased property, or simply refreshing your living spaces, we bring the same attention to detail and commitment to excellence we bring to every home across Greater Houston.`,
+The work differs by age. Older homes often need failed caulk replaced, rotted trim and siding repaired, and bare wood primed before repainting. Newer homes are often on their first repaint and mainly need cleaning, caulk touch-up and good coverage. Houston's humidity and summer heat are hard on exterior paint, so surface prep matters as much as the product.
+
+Many Missouri City neighborhoods have HOAs that require approval before an exterior color change. Get approval before the job is scheduled; we can provide the product names and color codes your association asks for.
+
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, and nothing is due until you approve it.`,
 
   neighborhoods: [
-    "Sienna Plantation",
+    "Sienna",
     "Riverstone",
     "Lake Olympia",
     "Quail Valley",
@@ -52,79 +54,71 @@ Whether you're preparing your home for sale, updating a newly purchased property
   services: [
     {
       title: "Interior Painting",
-      description: "Transform your Missouri City home's interior with professional painting. From accent walls to whole-home repaints, we deliver flawless, brush-mark-free results.",
+      description: "Walls, ceilings and trim, from accent walls to whole-home repaints.",
       href: "/interior-painting-houston-tx"
     },
     {
       title: "Exterior Painting",
-      description: "Protect your Missouri City home from Texas weather with durable exterior coatings. We properly prepare surfaces and use premium paints for lasting results.",
+      description: "Exterior repaints with cleaning, caulk, wood repair and priming before the finish coats.",
       href: "/exterior-painting-houston-tx"
     },
     {
       title: "Cabinet Refinishing",
-      description: "Give your kitchen or bathroom a fresh look without the cost of replacement. Our spray-applied cabinet finishes rival factory quality.",
+      description: "Spray-applied painted cabinet finishes as an alternative to replacement.",
       href: "/cabinet-refinishing-houston-tx"
     },
     {
       title: "Drywall Repair",
-      description: "We fix cracks, holes, nail pops, and water damage before painting. Proper preparation is key to a beautiful, long-lasting finish.",
+      description: "We fix cracks, holes, nail pops, and water damage before painting.",
       href: "/drywall-repair-houston-tx"
     },
     {
       title: "Pressure Washing",
-      description: "Professional pressure washing for Missouri City homes. Clean driveways, patios, and siding.",
+      description: "Pressure washing for driveways, patios, and siding.",
       href: "/pressure-washing-houston-tx"
     },
     {
       title: "Limewash Brick",
-      description: "Transform your Missouri City brick home with elegant European limewash finishes.",
+      description: "Limewash finishes for brick homes, priced after an on-site look.",
       href: "/limewash-brick-painting-houston-tx"
     },
     {
       title: "Commercial Painting",
-      description: "Professional painting for Missouri City businesses and commercial properties.",
+      description: "Painting for Missouri City businesses and commercial properties.",
       href: "/commercial-painting-houston-tx"
     },
     {
       title: "Garage Floor Epoxy",
-      description: "Durable epoxy coatings for Missouri City garages that resist stains and last for years.",
+      description: "Garage floor coatings through our sister brand, Houston Superior Epoxy.",
       href: "https://houstonsuperiorepoxy.com/"
     }
   ],
 
   whyChooseUs: [
-    "Experienced with all Missouri City neighborhoods",
     "$2M general liability insurance plus workers' compensation",
-    "Premium Sherwin-Williams & Benjamin Moore paints",
-    "5-year warranty on residential work",
-    "Detailed estimates with no hidden costs",
-    "Clean, professional, background-checked crews",
-    "On-time completion — we respect your schedule",
-    "Fully insured"
+    "Sherwin-Williams and Benjamin Moore paints",
+    "5-year written workmanship warranty",
+    "Written estimates with the full scope spelled out",
+    "No upfront payment: nothing is due until you approve the written estimate",
+    "Help preparing color details for HOA submittals"
   ],
-
-  testimonial: {
-    quote: "Living in Sienna, we needed painters who understood HOA requirements and worked efficiently. Houston Superior Painting exceeded our expectations — the crew was professional, clean, and the finished result is beautiful. Highly recommend!",
-    author: "David & Amanda R.",
-    location: "Sienna Plantation, Missouri City"
-  },
 
   faqs: [
     {
       question: "Do you work with Missouri City HOAs?",
-      answer: "Yes, we're experienced working with HOA requirements in communities like Sienna, Riverstone, and Lake Olympia. We help ensure your color choices meet community guidelines."
+      answer: "Yes. Many Missouri City communities require HOA approval before an exterior color change. Get approval before the job is scheduled; we can provide the product names and color codes your association asks for."
     },
     {
       question: "How much does house painting cost in Missouri City?",
-      answer: `Interior painting in Missouri City typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates.`
+      answer: `Interior painting in Missouri City typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
     },
     {
       question: "How long will my exterior paint last in Missouri City?",
-      answer: "With proper preparation and premium paints, expect 5-7 years of beautiful, durable results. Our 5-year warranty protects against peeling, blistering, and premature fading."
+      answer: "It depends mostly on prep, product and sun exposure. South- and west-facing walls and trim weather fastest. Our work is backed by a 5-year written workmanship warranty."
     },
     {
-      question: "Do you offer color consultation?",
-      answer: "Yes! We help Missouri City homeowners select colors that complement their home's architecture, landscaping, and HOA requirements. We can provide sample boards before finalizing your choice."
+      question: "Do you paint older homes in Quail Valley?",
+      answer: "Yes. Older homes usually need more prep: caulk replacement, wood repair and priming. Homes built before 1978 may contain lead paint, which federal rules require be disturbed only by an EPA-certified renovation firm, so ask any painter for their certification."
     }
   ]
 }

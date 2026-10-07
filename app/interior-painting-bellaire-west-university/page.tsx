@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/interior-painting-bellaire-west-university',
   },
-  title: "Interior Painting Bellaire & West University | Free Estimates",
-  description: "Premium interior painting in Bellaire and West University Place, Houston. 5-star reviews, written warranty. Free quote — call (346) 594-5960.",
+  title: "Interior Painting Bellaire & West University TX",
+  description: "Interior painting in Bellaire and West University Place, TX: careful prep, Sherwin-Williams and Benjamin Moore paints, 5-year written warranty. Free estimate.",
 }
 
 export default function InteriorPaintingBellaireWestUPage() {
@@ -16,48 +17,48 @@ export default function InteriorPaintingBellaireWestUPage() {
       serviceSlug="interior-painting"
       zone="Bellaire & West University, TX"
       zoneSlug="bellaire-west-university"
-      metaTitle="Interior Painting Bellaire & West University | Houston Superior Painting"
-      metaDescription="Premium interior painting in Bellaire and West University Place, Houston. 5-star reviews, written warranty."
-      h1="Interior Painting in Bellaire and West University Place, Houston, TX"
-      heroSubheading="The painting team Bellaire and West University homeowners trust to deliver flawless interior painting — prepped properly, finished beautifully, and warrantied in writing."
-      introLocal="When Bellaire and West University homeowners search for a painter, they're looking for a team that understands the unique architectural character of these established neighborhoods. From the classic ranch homes of Bellaire to the stately properties of West University Place, Houston Superior Painting has completed projects throughout these communities, and our process is built around preparation — the one thing that separates a 2-year paint job from a 10-year one."
-      serviceOverview="Our interior painting service includes the full scope, from consultation through final inspection. We use premium-tier materials — Sherwin-Williams Emerald, Benjamin Moore Aura, and Behr Marquee (low-VOC) — selected for their durability in Houston's humid climate. A typical project takes 3 to 7 business days, and every job is backed by our 3-year written workmanship warranty + free touch-ups during the first 12 months."
+      metaTitle="Interior Painting Bellaire & West University TX"
+      metaDescription="Interior painting in Bellaire and West University Place, TX: careful prep, Sherwin-Williams and Benjamin Moore paints, 5-year written warranty. Free estimate."
+      h1="Interior Painting in Bellaire and West University Place, TX"
+      heroSubheading="Careful prep, Sherwin-Williams and Benjamin Moore paints, and a 5-year written workmanship warranty, with nothing due until you approve the written estimate."
+      introLocal="Bellaire and West University Place are separate cities surrounded by Houston, with a mix of original mid-century ranch homes and newer, larger rebuilds. Older homes often need more patching and trim prep; newer homes tend to have taller ceilings and open stairwells that take more setup. We walk through each home before pricing it."
+      serviceOverview="Interior work covers walls, ceilings, trim and doors. Furniture is moved or covered, holes and cracks are patched, surfaces are sanded and spot-primed, and finish coats go on in Sherwin-Williams or Benjamin Moore paint, with a more washable sheen where rooms take more wear."
       whyChooseUs={[
-        "We know the architectural styles of Bellaire and West U — from 1950s ranch homes to contemporary new construction — and how to finish each substrate correctly.",
-        "Familiar with local permit requirements and neighborhood guidelines.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line.",
-        "3-year written workmanship warranty + free touch-ups during the first 12 months."
+        "Patching and spot-priming of the settling cracks and worn trim common in older ranch homes.",
+        "A free, written, itemized estimate after an on-site walkthrough.",
+        "Sherwin-Williams and Benjamin Moore paints, including low-VOC options.",
+        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
       ]}
-      priceRange="$5,800 – $18,500"
-      priceMin={5800}
-      priceMax={18500}
-      priceDetails="Interior painting in Bellaire and West University typically ranges from $5,800 to $18,500 for a whole-home repaint, depending on square footage, ceiling height, and trim complexity. Single rooms typically run $600 to $1,600."
+      priceDetails={`Most interior work falls around ${PRICES_2026.interiorPerSqFt} per square foot. Larger homes, tall ceilings, detailed trim and drywall repair raise the total; the free written estimate gives you the exact number.`}
       faqs={[
         {
-          question: "How long does an interior painting project take in Bellaire or West U?",
-          answer: "For a typical home (2,500 to 5,000 sqft), a full interior repaint takes between 3 and 6 business days. We schedule a dedicated crew and work consecutive days."
+          question: "How much does interior painting cost in Bellaire and West University Place?",
+          answer: `Our published range for a whole-home interior of about 2,500 sq ft is ${PRICES_2026.fullInterior2500}, and a single room typically runs ${PRICES_2026.singleRoom}. Ceiling height, trim and repairs move the number, so the free written estimate is the real price.`,
         },
         {
-          question: "What paint brands do you use?",
-          answer: "We use Sherwin-Williams Emerald, Benjamin Moore Aura, and Behr Marquee. All are low-VOC and safe to be home during application."
+          question: "What paint do you use?",
+          answer: "Sherwin-Williams and Benjamin Moore interior paints. Both brands make low-VOC lines, and we choose the product and sheen for each room, for example a more washable finish for kitchens, baths and trim.",
         },
         {
-          question: "Will I need to move out during the project?",
-          answer: "No. We work room by room and use low-VOC paint. We protect floors and furniture with drop cloths and plastic sheeting."
+          question: "Do I need to move out during the project?",
+          answer: "Usually not. We cover floors and furniture, work through the house in sections, and clean the work areas at the end of each day.",
         },
         {
-          question: "How much does interior painting cost in Bellaire?",
-          answer: "Interior painting typically ranges from $5,800 to $18,500 for a whole-home repaint. Single rooms run $600 to $1,600."
+          question: "How long does an interior repaint take?",
+          answer: "It depends on the size of the home, ceiling heights, the amount of trim and how much patching is needed. We tell you the expected duration when we give you the written estimate.",
         },
         {
-          question: "Do you provide color consultation?",
-          answer: "Yes — every full-home project includes a complimentary color consultation with physical samples and digital mockups."
+          question: "My house was built before 1978. Does that matter?",
+          answer: "Homes built before 1978 may contain lead paint. Federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask any painter for their certification before sanding or scraping begins.",
         },
         {
-          question: "What's included in your warranty?",
-          answer: "Every project includes a 3-year written workmanship warranty plus 12 months of free touch-ups. The warranty is transferable."
-        }
+          question: "What does the warranty cover?",
+          answer: "Every project comes with a 5-year written workmanship warranty. The terms are written out with your estimate, so you can read them before you approve anything.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+        },
       ]}
       testimonials={[
         {
@@ -84,7 +85,7 @@ export default function InteriorPaintingBellaireWestUPage() {
         { title: "Interior Painting Katy", href: "/interior-painting-katy-cinco-ranch" },
         { title: "Interior Painting Cypress", href: "/interior-painting-cypress-bridgeland" }
       ]}
-      warrantyYears={3}
+      warrantyYears={5}
       warrantyType="Interior"
     />
   )

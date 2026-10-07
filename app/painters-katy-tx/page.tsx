@@ -6,7 +6,7 @@ export const metadata = officeCityMetadata({
   slug: "painters-katy-tx",
   title: "House Painters in Katy TX | Houston Superior Painting",
   description:
-    "House painters from our Katy office on FM 1463. Interior, exterior, and cabinets. $2M insured, 5-year warranty, free estimates. Call (346) 594-5960.",
+    "Interior, exterior & cabinet painting in Katy, TX. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960.",
   ogImage: "https://houstonsuperiorpainting.com/images/og/og-painters-katy.jpg",
 })
 
@@ -41,7 +41,7 @@ const DATA: OfficeCityPageData = {
     "Most of these homes are brick with Hardie (fiber-cement) siding and wood or composite trim. The brick rarely needs paint, but the siding and trim on south- and west-facing walls take the full afternoon sun and chalk and fade first. We wash off the chalk, re-caulk the joints where siding meets brick, and prime any bare spots so the new coat bonds instead of peeling.",
   ],
   areasAnswer:
-    "All of Katy, including Cinco Ranch, Cross Creek Ranch, Elyson, Cane Island, Firethorne, Seven Meadows, Grand Lakes, Old Katy, Tamarron, and Nottingham Country. From the Katy office we also cover Fulshear, Richmond, and Rosenberg.",
+    "All of Katy, including Cinco Ranch, Cross Creek Ranch, Elyson, Cane Island, Firethorne, Seven Meadows, Grand Lakes, Old Katy, Tamarron, and Nottingham Country. We also cover nearby Fulshear, Richmond, and Rosenberg.",
   nearby: [
     "painters-cinco-ranch-tx",
     "painters-fulshear-tx",

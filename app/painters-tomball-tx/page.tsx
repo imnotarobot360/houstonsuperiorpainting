@@ -5,20 +5,25 @@ import { LocationPageTemplate } from "@/components/location-page-template"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 import { PRICES_2026 } from "@/lib/business"
 
+const TITLE = "House Painters in Tomball TX | Houston Superior Painting"
+const DESCRIPTION =
+  "Interior, exterior & cabinet painting in Tomball, TX, from our Cypress HQ. $2M general liability + workers' comp, 5-year warranty. Call (346) 594-5960."
+const OG_IMAGE = "https://houstonsuperiorpainting.com/images/og/og-painters-tomball.jpg"
+
 export const metadata: Metadata = {
-  title: "House Painters Tomball TX — Houston Superior Painting",
-  description: "Professional painters in Tomball TX. Interior, exterior, cabinet painting for Lakewood Forest, Northpointe, Augusta Pines. 5-year warranty. Free estimates.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-tomball-tx',
   },
   openGraph: {
-    title: "House Painters Tomball TX — Houston Superior Painting",
-    description: "Professional painters in Tomball TX. Interior, exterior, cabinet painting for Lakewood Forest, Northpointe, Augusta Pines. 5-year warranty.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://houstonsuperiorpainting.com/painters-tomball-tx",
     siteName: "Houston Superior Painting",
     type: "website",
     images: [{
-      url: "https://houstonsuperiorpainting.com/images/og/og-painters-tomball.jpg",
+      url: OG_IMAGE,
       width: 1200,
       height: 630,
       alt: "Painters Tomball TX - Houston Superior Painting",
@@ -26,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "House Painters Tomball TX — Houston Superior Painting",
-    description: "Professional painters in Tomball TX. Interior, exterior, cabinet painting for Lakewood Forest, Northpointe, Augusta Pines.",
-    images: ["https://houstonsuperiorpainting.com/images/og/og-painters-tomball.jpg"],
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
   },
 }
 
@@ -50,62 +55,61 @@ export default function PaintersTomballTX() {
         <LocationPageTemplate
           city="Tomball"
           state="TX"
-          heroHeadline="Professional House Painters in Tomball, TX"
-          heroDescription="Transform your Tomball home with Houston Superior Painting. From historic downtown properties to new construction in master-planned communities, we deliver exceptional results with meticulous attention to detail."
-          aboutCity={`Tomball has evolved from a historic railroad town into one of Northwest Houston's most desirable communities. The city blends small-town Texas charm with modern amenities, featuring everything from renovated historic homes near Main Street to contemporary builds in master-planned communities like Northpointe and Augusta Pines.
+          heroHeadline="House Painters in Tomball, TX"
+          heroDescription="Interior, exterior, and cabinet painting for Tomball homes, from older houses near downtown to newer master-planned communities. Insured, with a 5-year workmanship warranty."
+          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Tomball, TX, including Old Town Tomball, Northpointe, Augusta Pines, and Rosehill. We are headquartered in nearby Cypress, and our crews work across Northwest Houston and Greater Houston. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We carry $2M general liability + workers' comp and give a 5-year workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
+          aboutCity={`Tomball started as a railroad town, and its housing still reflects that: older homes near Main Street and downtown, many with wood siding and detailed trim, alongside newer master-planned communities such as Northpointe and Augusta Pines.
 
-The Tomball area experiences the same challenging climate as the greater Houston region—intense summer heat, high humidity year-round, and occasional severe weather. These conditions demand painting contractors who understand proper surface preparation, moisture management, and product selection for lasting results.
+Older wood-sided homes need the most prep. We probe siding, trim, and window sills for soft wood, replace what has rotted, scrape loose paint, and prime bare wood before the finish coats, because paint over rot or loose paint fails quickly. Homes built before 1978 may contain lead paint, which federal rules require be disturbed only by an EPA-certified renovation firm, so ask any painter about that before work on an older home begins.
 
-Houston Superior Painting has served Tomball homeowners since 2019, building a reputation for quality craftsmanship and reliable service. Whether you're updating a charming bungalow in Old Town Tomball, refreshing a family home in Lakewood Forest, or painting a new build in Creekside Park, we bring the expertise and premium materials needed for beautiful, durable finishes.
-
-We are fully insured, use Sherwin-Williams and Benjamin Moore paints exclusively, and back every project with our 5-year quality guarantee. Our team understands Tomball's diverse architectural styles—from traditional Texas ranch homes to craftsman-style builds and modern farmhouses.`}
+Tomball has the same heat, humidity, and heavy rain as the rest of Greater Houston, and wooded lots add shade and mildew. We wash off mildew and chalk and let the surfaces dry fully before painting. Tomball is a short drive from our Cypress headquarters.`}
           whyChooseUs={[
-            "Tomball expertise: Trusted by homeowners throughout the area",
-            "Historic home experience: Proper techniques for older properties",
-            "Master-planned community knowledge: We know Northpointe, Augusta Pines, and more",
-            "Premium materials: Sherwin-Williams and Benjamin Moore exclusively",
-            "Clean, respectful crews: We protect your home and landscaping",
-            "5-year warranty: Complete confidence in our work"
+            "Free on-site estimate with a written scope; nothing is due until you approve it",
+            "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
+            "5-year written workmanship warranty",
+            "Sherwin-Williams and Benjamin Moore paints",
+            "Wood-rot repair and full prep on older wood-sided homes",
+            "Founded in 2019 and headquartered in nearby Cypress",
           ]}
         services={[
           {
             title: "Interior Painting",
-            description: "Transform your Tomball home's interior with flawless walls and ceilings. From single rooms to complete repaints, we deliver brush-mark-free results.",
+            description: "Walls, ceilings, trim, and doors, from a single room to a whole-home repaint.",
             href: "/interior-painting-houston-tx"
           },
           {
             title: "Exterior House Painting",
-            description: "Protect your Tomball home from Texas heat, humidity, and storms with premium exterior coatings that maintain their beauty for years.",
+            description: "Wash, scrape, repair, caulk, and prime before the finish coats on wood siding, brick, and trim.",
             href: "/exterior-painting-houston-tx"
           },
           {
             title: "Cabinet Refinishing",
-            description: "Update your Tomball kitchen with factory-smooth cabinet finishes. A fraction of replacement cost with stunning results.",
+            description: "Sprayed cabinet finishes that update a kitchen without replacing the cabinets.",
             href: "/cabinet-refinishing-houston-tx"
           },
           {
             title: "Drywall Repair",
-            description: "Fix cracks, settling damage, and imperfections before painting for flawless results.",
+            description: "Cracks, settling damage, and water spots repaired and texture-matched before painting.",
             href: "/drywall-repair-houston-tx"
           },
           {
             title: "Pressure Washing",
-            description: "Professional pressure washing for Tomball homes. Clean driveways, patios, and siding before painting.",
+            description: "Cleaning for driveways, patios, and siding, and the first step before exterior paint.",
             href: "/pressure-washing-houston-tx"
           },
           {
             title: "Limewash Brick",
-            description: "Transform your Tomball brick home with elegant European limewash finishes.",
+            description: "Limewash or painted brick for Tomball brick homes, priced after an on-site look.",
             href: "/limewash-brick-painting-houston-tx"
           },
           {
             title: "Commercial Painting",
-            description: "Professional painting for Tomball businesses along Main Street and FM 2920.",
+            description: "Painting for Tomball businesses and commercial properties.",
             href: "/commercial-painting-houston-tx"
           },
           {
             title: "Garage Floor Epoxy",
-            description: "Durable epoxy coatings for Tomball garages that resist stains and last for years.",
+            description: "Garage floor epoxy is handled by our separate epoxy brand, Houston Superior Epoxy.",
             href: "https://houstonsuperiorepoxy.com/"
           }
         ]}
@@ -126,34 +130,29 @@ We are fully insured, use Sherwin-Williams and Benjamin Moore paints exclusively
         faqs={[
           {
             question: "How much does it cost to paint a house in Tomball?",
-            answer: `Interior painting in Tomball typically runs ${PRICES_2026.interiorPerSqFt} per square foot, while exterior painting ranges from ${PRICES_2026.exteriorPerSqFt} per square foot. A 2,500 sq ft home interior runs ${PRICES_2026.fullInterior2500}, and a 2,500 sq ft two-story exterior ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates for all Tomball properties.`
+            answer: `In 2026 interior painting typically runs ${PRICES_2026.interiorPerSqFt} per square foot and exterior painting ${PRICES_2026.exteriorPerSqFt} per square foot. A 2,500 sq ft home interior runs ${PRICES_2026.fullInterior2500}, and a 2,500 sq ft two-story exterior ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
           },
           {
-            question: "Do you paint historic homes in Old Town Tomball?",
-            answer: "Absolutely. We have extensive experience with Tomball's historic properties near Main Street and the Cherry Street area. We use appropriate techniques and materials that preserve the character of older homes while providing modern protection."
+            question: "Do you paint older homes in Old Town Tomball?",
+            answer: "Yes. On older homes we check siding, trim, and sills for rot, replace soft wood, scrape loose paint, and prime bare wood before painting. If the home was built before 1978, ask about lead paint before any work begins, since federal rules require an EPA-certified renovation firm to disturb it."
           },
           {
             question: "How long does exterior paint last in Tomball's climate?",
-            answer: "With proper preparation and premium paints, exterior paint in Tomball lasts 7-10 years. We use Sherwin-Williams Duration and SuperPaint specifically formulated for Texas heat and humidity, backed by our 5-year guarantee."
+            answer: "With full prep and a premium exterior paint such as Sherwin-Williams Duration, plan on roughly five to seven years before a full repaint, longer on shaded walls. Our 5-year warranty covers peeling, blistering, and flaking caused by our workmanship."
           },
           {
             question: "Do you work in the newer Tomball subdivisions?",
-            answer: "Yes, we serve all Tomball communities including Northpointe, Augusta Pines, Lakewood Forest, Creekside Park, and newer developments along FM 2920 and Tomball Parkway."
+            answer: "Yes. We serve Tomball communities including Northpointe, Augusta Pines, Rosehill, Lakewood Forest, and Creekside Park. For HOA communities we can pull the approved color list and help with the approval paperwork."
           },
           {
             question: "Can you match paint colors for touch-ups on my Tomball home?",
-            answer: "Yes, we use professional color-matching technology to perfectly match existing paint colors. This is especially helpful for touch-ups, accent walls, or when repainting a single room to match the rest of your home."
+            answer: "Usually, yes. If you have the original color name or a leftover can, we use it; if not, the paint store can color-match a sample. Older or sun-faded paint may not blend perfectly, so for exteriors we often recommend repainting a full wall section."
           },
           {
             question: "What's the best time of year to paint exteriors in Tomball?",
-            answer: "Spring (March-May) and fall (September-November) offer the best conditions for exterior painting in Tomball—moderate temperatures and lower humidity. However, we can paint year-round by adjusting our schedule around weather conditions."
+            answer: "Spring and fall usually give the best conditions, with milder temperatures and lower humidity. We can paint other times of year by scheduling around rain, dew, and afternoon heat."
           }
         ]}
-        testimonial={{
-          quote: "We needed painters who could work with our 1940s Tomball cottage—original wood siding, detailed trim, the works. These guys were careful, thorough, and the results are stunning. Our neighbors keep stopping to compliment the house!",
-          author: "Mark and Linda T.",
-          location: "Old Town Tomball"
-        }}
       />
       </main>
       <Footer />

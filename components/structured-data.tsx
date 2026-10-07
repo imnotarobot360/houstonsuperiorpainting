@@ -1,7 +1,7 @@
 // Comprehensive structured data for Houston Superior Painting
 // Sitewide: Organization + WebSite + Person. LocalBusiness only on the 5 office city pages.
 
-import { BUSINESS, SERVICE_AREAS, officeForPage, officeMapsUrl, type Office } from "@/lib/business"
+import { BUSINESS, EPOXY_URL, SERVICE_AREAS, officeForPage, officeMapsUrl, type Office } from "@/lib/business"
 
 // Places in SERVICE_AREAS that are neighborhoods / master-planned communities
 // rather than incorporated or census-designated places. Typing River Oaks or
@@ -65,7 +65,6 @@ const SAME_AS = [
   BUSINESS.social.googleMaps,
   BUSINESS.social.facebook,
   BUSINESS.social.instagram,
-  BUSINESS.social.yelp,
   BUSINESS.social.bbb,
 ]
 
@@ -105,10 +104,22 @@ export const siteGraphSchema = {
         areaServed: "US-TX",
         availableLanguage: ["English", "Spanish"],
       },
-      // The five offices, each a LocalBusiness defined on its own city page.
-      subOrganization: BUSINESS.locations.map((l) => ({
-        "@id": `${BUSINESS.url}/${l.pageSlug}#location`,
-      })),
+      // The five offices, each a LocalBusiness defined on its own city page,
+      // plus the epoxy division. Houston Superior Epoxy is a separate brand with
+      // its own site, phone, profiles and reviews, and its schema names this
+      // Organization as parentOrganization. It is referenced by @id, name and
+      // URL only, so none of its reviews, warranty or services merge in here.
+      subOrganization: [
+        ...BUSINESS.locations.map((l) => ({
+          "@id": `${BUSINESS.url}/${l.pageSlug}#location`,
+        })),
+        {
+          "@type": "Organization",
+          "@id": `${EPOXY_URL}/#organization`,
+          name: "Houston Superior Epoxy",
+          url: EPOXY_URL,
+        },
+      ],
       sameAs: SAME_AS,
     },
     {

@@ -14,6 +14,11 @@ import {
   officeAddressLine,
 } from "@/lib/business"
 import { nearestOfficeFor } from "@/lib/nearest-office"
+import { getProject } from "@/lib/projects"
+
+// The River Oaks exterior is a project with real job photos. City pages show it
+// as an example of our exterior work, labelled with its own neighborhood.
+const exampleProject = getProject("river-oaks-exterior-restoration")
 
 const SITE = "https://houstonsuperiorpainting.com"
 const ESTIMATE_PATH = "/painting-estimate-houston"
@@ -182,8 +187,8 @@ export function LocationPageTemplate({
             </div>
             <div className="flex flex-col items-center gap-2">
               <Users className="h-6 w-6 text-accent" />
-              <span className="text-2xl font-bold text-foreground">{BUSINESS.trust.projectsCompleted}+</span>
-              <span className="text-sm text-muted-foreground">Houston-area projects</span>
+              <span className="text-2xl font-bold text-foreground">{BUSINESS.paymentPolicy.short}</span>
+              <span className="text-sm text-muted-foreground">{BUSINESS.paymentPolicy.badgeSubtitle}</span>
             </div>
           </div>
         </div>
@@ -210,11 +215,11 @@ export function LocationPageTemplate({
                 Your Nearest Office
               </h2>
               <p className="text-foreground leading-relaxed">
-                The nearest {BUSINESS.name} office to {city} is our{" "}
+                The closest listed {BUSINESS.name} office to {city} is our{" "}
                 <Link href={`/${nearestOffice.pageSlug}`} className="text-primary font-medium hover:underline">
                   {nearestOffice.city} painters office
                 </Link>{" "}
-                at {officeAddressLine(nearestOffice)}. Estimates for {city} homes are scheduled from there; call{" "}
+                at {officeAddressLine(nearestOffice)}. To schedule an estimate, call{" "}
                 <a href={PHONE_HREF} className="text-primary font-medium hover:underline">{BUSINESS.phone}</a>.
               </p>
             </div>
@@ -320,18 +325,28 @@ export function LocationPageTemplate({
 
         {/* Testimonials hidden until they can be matched to real Google reviews (see docs/aeo-seo-plan-2026-09.md). TODO(juan) */}
 
-        {/* Before/After */}
-        <section className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-            Before and After: Exterior Repaint
-          </h2>
-          <BeforeAfter
-            beforeSrc="/images/exterior-before-1.jpg"
-            afterSrc="/images/exterior-after-1.jpg"
-            beforeAlt={`House painting project before - ${city} area`}
-            afterAlt={`House painting project after - ${city} area`}
-          />
-        </section>
+        {/* Before/After: these photos are the River Oaks project, so they are
+            labelled and linked as that project, never as this city's work. */}
+        {exampleProject && (
+          <section className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+              Example Project: {exampleProject.neighborhood}
+            </h2>
+            <BeforeAfter
+              beforeSrc={exampleProject.beforeImage}
+              afterSrc={exampleProject.afterImage}
+              beforeAlt={exampleProject.beforeAlt}
+              afterAlt={exampleProject.afterAlt}
+            />
+            <p className="mt-4 text-foreground/80">
+              {exampleProject.summary}{" "}
+              <Link href={`/projects/${exampleProject.slug}`} className="text-primary font-medium hover:underline">
+                Read the project write-up
+              </Link>
+              .
+            </p>
+          </section>
+        )}
 
         {/* FAQ Section */}
         <section className="mb-12">

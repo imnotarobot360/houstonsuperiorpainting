@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/cabinet-refinishing-tanglewood',
   },
-  title: "Cabinet Refinishing Tanglewood | Houston Superior Painting",
-  description: "Premium cabinet refinishing in Tanglewood, Houston. Transform your kitchen for a fraction of replacement cost. Free quote — call (346) 594-5960.",
+  title: "Cabinet Refinishing Tanglewood, Houston TX",
+  description: "Kitchen cabinet refinishing in Tanglewood, Houston: degreasing, sanding, bonding primer and a 5-year written warranty. Free written estimate.",
 }
 
 export default function CabinetRefinishingTanglewoodPage() {
@@ -16,48 +17,44 @@ export default function CabinetRefinishingTanglewoodPage() {
       serviceSlug="cabinet-refinishing"
       zone="Tanglewood, Houston, TX"
       zoneSlug="tanglewood"
-      metaTitle="Cabinet Refinishing Tanglewood | Houston Superior Painting"
-      metaDescription="Premium cabinet refinishing in Tanglewood, Houston. Transform your kitchen for a fraction of replacement cost."
+      metaTitle="Cabinet Refinishing Tanglewood, Houston TX"
+      metaDescription="Kitchen cabinet refinishing in Tanglewood, Houston: degreasing, sanding, bonding primer and a 5-year written warranty. Free written estimate."
       h1="Cabinet Refinishing in Tanglewood, Houston, TX"
-      heroSubheading="Transform your Tanglewood kitchen with professional cabinet refinishing — factory-smooth finishes, 5-year warranty, and completed in days, not weeks."
-      introLocal="Tanglewood homeowners appreciate the value of smart upgrades. Cabinet refinishing transforms your kitchen for a fraction of the cost of full replacement. Houston Superior Painting has refinished cabinets throughout Tanglewood proper, Briargrove, and Briar Hollow, delivering factory-quality finishes that modernize kitchens while respecting your investment."
-      serviceOverview="Our cabinet refinishing process includes thorough degreasing, sanding, priming with bonding primer, and multiple coats of premium cabinet-grade paint. We use Sherwin-Williams Emerald Urethane and Benjamin Moore Advance. A typical kitchen takes 4 to 6 business days, and every project is backed by our 5-year cabinet warranty."
+      heroSubheading="Cleaned, sanded and primed before the finish coats, so painted cabinets hold up to daily use, backed by a 5-year written workmanship warranty."
+      introLocal="Tanglewood has both original homes and newer rebuilds, and many kitchens have solid cabinets that only need a new finish. Refinishing keeps your cabinet boxes and layout and changes the color and finish."
+      serviceOverview="Cabinet refinishing changes the color and finish of your existing cabinets. Surfaces are cleaned and degreased, sanded, primed with a bonding primer and finished with Sherwin-Williams or Benjamin Moore products made for cabinets and trim. Prep is what keeps a cabinet finish from chipping or peeling in a working kitchen."
       whyChooseUs={[
-        "Factory-quality finishes achieved through meticulous preparation and premium materials.",
-        "Save 60-70% compared to cabinet replacement while achieving a similar transformation.",
-        "5-year written cabinet warranty covering adhesion, durability, and finish quality.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Minimal kitchen downtime — most projects complete in 4-6 business days."
+        "An honest refinish-or-replace recommendation after we see the cabinet boxes.",
+        "Degreasing, sanding and bonding primer on every surface before the finish coats.",
+        "Sherwin-Williams and Benjamin Moore cabinet and trim products.",
+        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
       ]}
-      priceRange="$4,200 – $11,500"
-      priceMin={4200}
-      priceMax={11500}
-      priceDetails="Cabinet refinishing in Tanglewood typically ranges from $4,200 to $11,500, depending on kitchen size, cabinet style, and finish complexity."
+      priceDetails="Price depends mainly on the number of doors and drawers, the current finish (stained wood, previously painted, or laminate), how big a color change you want, and any repairs. The free written estimate gives you the exact number."
       faqs={[
         {
-          question: "How long does cabinet refinishing take?",
-          answer: "A typical Tanglewood kitchen takes 4 to 6 business days."
+          question: "How much does cabinet refinishing cost in Tanglewood?",
+          answer: `Our published range is ${PRICES_2026.cabinetsPerKitchen} per kitchen, and most kitchens land around ${PRICES_2026.cabinetsAverage}. The number of doors and drawers and the current finish move the number, so the free written estimate is the real price.`,
         },
         {
           question: "What paint do you use on cabinets?",
-          answer: "We use Sherwin-Williams Emerald Urethane and Benjamin Moore Advance — the gold standard for cabinet finishes."
+          answer: "Sherwin-Williams and Benjamin Moore products made for cabinets and trim, applied over a bonding primer.",
         },
         {
           question: "Can I use my kitchen during the project?",
-          answer: "We work to minimize disruption. You'll have partial access most days."
+          answer: "Expect limited use of the kitchen while the work is under way. We explain the schedule and what you can use when we give you the written estimate.",
         },
         {
-          question: "How much does cabinet refinishing cost in Tanglewood?",
-          answer: "Cabinet refinishing typically ranges from $4,200 to $11,500."
+          question: "Should I refinish or replace my cabinets?",
+          answer: "If the cabinet boxes are solid and you like the layout, refinishing changes the look for less than replacement. If the boxes are damaged or you want a different layout, replacement makes more sense. We will tell you honestly which applies after seeing them.",
         },
         {
-          question: "How long will the finish last?",
-          answer: "With proper care, our cabinet finishes last 10-15 years, backed by our 5-year warranty."
+          question: "What does the warranty cover?",
+          answer: "Every project comes with a 5-year written workmanship warranty. The terms are written out with your estimate, so you can read them before you approve anything.",
         },
         {
-          question: "Can you change the color of my cabinets?",
-          answer: "Yes — we can refinish cabinets in any color with full color consultation included."
-        }
+          question: "When do I pay?",
+          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+        },
       ]}
       testimonials={[
         {
@@ -84,7 +81,7 @@ export default function CabinetRefinishingTanglewoodPage() {
         { title: "Cabinet Refinishing Katy", href: "/cabinet-refinishing-katy-cinco-ranch" },
         { title: "Cabinet Refinishing Cypress", href: "/cabinet-refinishing-cypress-bridgeland" }
       ]}
-      warrantyYears={3}
+      warrantyYears={5}
       warrantyType="Cabinet"
     />
   )

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { TrustBar } from "@/components/trust-bar"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -7,17 +8,20 @@ import { ProblemSelector } from "@/components/problem-selector"
 import { PricingSection } from "@/components/pricing-section"
 import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
-import { PRICES_2026 } from "@/lib/business"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
+
+const DESCRIPTION =
+  "House painters in Memorial, Houston: interior, exterior and cabinet painting for large homes with tall ceilings and detailed trim. 5-year warranty."
 
 export const metadata: Metadata = {
   title: "House Painters Memorial TX — Houston Superior Painting",
-  description: "Premier painters in Memorial TX. Interior, exterior, cabinet painting for Memorial Villages, Bunker Hill, Piney Point. 5-year warranty. Free estimates.",
+  description: DESCRIPTION,
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-memorial-tx',
   },
   openGraph: {
     title: "House Painters Memorial TX — Houston Superior Painting",
-    description: "Premier painters in Memorial TX. Interior, exterior, cabinet painting for Memorial Villages, Bunker Hill, Piney Point. 5-year warranty.",
+    description: DESCRIPTION,
     url: "https://houstonsuperiorpainting.com/painters-memorial-tx",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -31,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "House Painters Memorial TX — Houston Superior Painting",
-    description: "Premier painters in Memorial TX. Interior, exterior, cabinet painting for Memorial Villages, Bunker Hill, Piney Point.",
+    description: DESCRIPTION,
     images: ["https://houstonsuperiorpainting.com/images/og/og-painters-memorial.jpg"],
   },
   other: {
@@ -62,117 +66,135 @@ export default function PaintersMemorialTX() {
           city="Memorial"
           state="TX"
           heroHeadline="House Painters in Memorial, Houston"
-          heroDescription="Serving the Memorial Villages, Bunker Hill, Piney Point, and Hedwig Village with premium painting services befitting Houston's most prestigious addresses. Luxury materials, expert craftsmanship, and white-glove service."
-          quickAnswer={`Houston Superior Painting provides premium painting services throughout Memorial TX including Memorial Villages, Bunker Hill, Piney Point, and Hedwig Village. Interior painting costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior4000} for homes over 4,000 sq ft) and a two-story exterior over 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}. We specialize in luxury homes with tall ceilings, detailed millwork, and specialty finishes. Premium Sherwin-Williams and Benjamin Moore products included. 5-year warranty. Call (346) 594-5960 for a free estimate.`}
-          aboutCity={`Memorial is home to some of Houston's most prestigious addresses. The Memorial Villages—Bunker Hill, Piney Point, Hedwig Village, Hilshire Village, Hunters Creek, and Spring Valley—represent the pinnacle of Houston living with their wooded lots, custom architecture, and commitment to excellence.
+          heroDescription="Interior, exterior and cabinet painting for Memorial-area homes along the Memorial Drive corridor, from established ranch homes to large custom builds with tall ceilings and detailed trim."
+          quickAnswer={`Houston Superior Painting paints homes throughout the Memorial area of west Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior4000} for homes around 4,000 sq ft) and a two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}. Larger homes with extensive millwork are quoted after a walkthrough. Sherwin-Williams and Benjamin Moore products, insured crews, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          aboutCity={`Memorial is a wooded area of west Houston along Memorial Drive and Buffalo Bayou, with established neighborhoods such as Memorial Bend, Frostwood and Memorial Thicket, and the separate Memorial Villages cities just to the north. Many original ranch homes have been joined or replaced by large custom builds.
 
-These aren't ordinary homes, and they don't receive ordinary painting services. Memorial's estate properties demand painters who understand luxury: tall ceilings that require specialized equipment, intricate millwork that needs careful attention, specialty finishes that must be expertly applied, and landscapes that must be protected.
+Larger Memorial homes bring their own painting challenges: tall foyer and stairwell walls that need scaffolding or extension equipment, a lot of trim, crown and built-in millwork that has to be cut in by hand, and mature landscaping that has to be protected around the exterior. Shade from the tree canopy also keeps exterior surfaces damp longer, so washing, caulk and wood repair come before any finish coat.
 
-Houston Superior Painting has earned the trust of Memorial homeowners through our commitment to premium quality. We use only top-tier products—Sherwin-Williams Emerald and Duration, Benjamin Moore Aura and Regal Select—applied by experienced crews who appreciate fine craftsmanship.
+We paint walls, ceilings, trim and cabinets, and we can work from a designer's color and sheen specifications. Specialty finishes such as Venetian plaster, Roman Clay, faux finishes and limewash are priced after an on-site look.
 
-We understand that Memorial homeowners value their privacy and their time. Our project managers provide detailed schedules, our crews arrive punctually and work efficiently, and we leave your home cleaner than we found it. We coordinate seamlessly with designers, architects, and other trades when your project requires it.
-
-Whether you're refreshing an existing finish, transforming a recent acquisition, or completing new construction, Houston Superior Painting delivers results worthy of Memorial's distinguished reputation. Our 5-year warranty and meticulous attention to detail have made us the trusted choice for discerning Memorial homeowners.`}
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every estimate is free and written, and nothing is due until you approve it.`}
           whyChooseUs={[
-            "Estate-home experience: large floor plans, tall ceilings, and detailed millwork",
-            "Luxury home expertise: tall ceilings, detailed millwork, specialty finishes",
-            "Premium products only: Sherwin-Williams Emerald, Benjamin Moore Aura",
-            "White-glove service: punctual, clean, respectful of your home",
-            "Designer and builder coordination for renovation projects",
-            "Extensive landscape protection with full cleanup",
-            "5-year written warranty on all residential painting",
-            "Discreet, professional crews who understand Memorial expectations"
+            "Equipment and planning for tall ceilings, stairwells and detailed millwork",
+            "Can work from designer or architect color and sheen specifications",
+            "Landscape and floor protection, with cleanup when the work is done",
+            "Sherwin-Williams and Benjamin Moore products",
+            "Insured: $2M general liability plus workers' comp",
+            "5-year written workmanship warranty"
           ]}
           services={[
             {
               title: "Interior Painting Memorial",
-              description: "Expert interior painting for Memorial's luxury homes. Tall ceilings, detailed trim, and perfect finishes throughout.",
+              description: "Walls, ceilings and trim for Memorial homes, including tall rooms and stairwells.",
               href: "/interior-painting-houston-tx"
             },
             {
               title: "Exterior Painting Memorial",
-              description: "Premium exterior coatings that protect your Memorial home from Houston's climate while enhancing its architectural beauty.",
+              description: "Exterior repaints with washing, caulk and wood repair before the finish coats.",
               href: "/exterior-painting-houston-tx"
             },
             {
               title: "Cabinet Refinishing Memorial",
-              description: "Transform your Memorial kitchen with factory-smooth cabinet finishes. Custom colors and specialty techniques available.",
+              description: "Painted cabinet finishes in custom colors as an alternative to replacement.",
               href: "/cabinet-refinishing-houston-tx"
             },
             {
-              title: "Specialty Finishes Memorial",
-              description: "Venetian plaster, faux finishes, glazing, and custom techniques for Memorial's distinctive interiors.",
-              href: "/interior-painting-houston-tx"
+              title: "Venetian Plaster & Specialty Finishes Memorial",
+              description: "Venetian plaster, Roman Clay and faux finishes for feature walls and rooms, priced after an on-site look.",
+              href: "/venetian-plaster-houston-tx"
             },
             {
               title: "Drywall Repair Memorial",
-              description: "Seamless repairs for cracks, settling, and imperfections. Perfect prep for perfect results.",
+              description: "Repairs to cracks, settling and imperfections before painting.",
               href: "/drywall-repair-houston-tx"
             },
             {
               title: "Limewash Brick Memorial",
-              description: "Elegant European limewash finishes for Memorial's brick homes. Timeless beauty that breathes.",
+              description: "Limewash finishes for brick homes, priced after an on-site look.",
               href: "/limewash-brick-painting-houston-tx"
             },
             {
               title: "Pressure Washing Memorial",
-              description: "Professional cleaning for driveways, patios, and exteriors before painting or as standalone service.",
+              description: "Cleaning driveways, patios and exteriors before painting or as a standalone service.",
               href: "/pressure-washing-houston-tx"
             },
             {
               title: "Garage Floor Epoxy Memorial",
-              description: "Premium epoxy coatings for Memorial garages. Metallic, flake, and custom options available.",
+              description: "Garage floor coatings through our sister brand, Houston Superior Epoxy.",
               href: "https://houstonsuperiorepoxy.com/"
             }
           ]}
           neighborhoods={[
-            "Memorial Villages",
-            "Bunker Hill Village",
-            "Piney Point Village",
-            "Hedwig Village",
-            "Hilshire Village",
-            "Hunters Creek Village",
-            "Spring Valley Village",
-            "Memorial Forest",
             "Memorial Bend",
             "Memorial Close",
             "Memorial Drive Estates",
+            "Memorial Forest",
             "Memorial Thicket",
             "Stablewood",
-            "Frostwood"
+            "Frostwood",
+            "Bunker Hill Village",
+            "Piney Point Village",
+            "Hedwig Village",
+            "Hunters Creek Village",
+            "Spring Valley Village"
           ]}
-          testimonial={{
-            quote: "We've used Houston Superior Painting for two homes in Piney Point over the past three years. Their attention to detail is exceptional—they treated our home like their own. The crew was professional, clean, and the quality is outstanding. We won't use anyone else.",
-            author: "The Richardson Family",
-            location: "Piney Point Village"
-          }}
           faqs={[
             {
               question: "How much does it cost to paint a house in Memorial?",
-              answer: `Interior painting in Memorial typically costs ${PRICES_2026.interiorPerSqFt} per square foot; homes over 4,000 sq ft generally run ${PRICES_2026.fullInterior4000} inside. A two-story exterior over 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}, and larger estates with extensive millwork are quoted after a walkthrough. We provide free detailed estimates.`
+              answer: `Interior painting in Memorial typically costs ${PRICES_2026.interiorPerSqFt} per square foot; homes around 4,000 sq ft generally run ${PRICES_2026.fullInterior4000} inside. A two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}, and larger homes with extensive millwork are quoted after a walkthrough. We provide free written estimates.`
             },
             {
-              question: "Do you have experience with large Memorial estates?",
-              answer: "Yes! We've painted numerous estate homes over 8,000 sq ft in Memorial Villages. Our crews have the equipment, experience, and patience for homes of any size."
+              question: "Do you paint large Memorial homes?",
+              answer: "Yes. Large homes mostly add time and equipment: tall walls and stairwells, more trim and millwork, and more exterior surface. We plan those in the written estimate after walking the home."
             },
             {
               question: "What paint brands do you use in Memorial?",
-              answer: "For Memorial's luxury homes, we use only premium products: Sherwin-Williams Emerald and Duration, Benjamin Moore Aura and Regal Select. These provide superior finish and durability."
+              answer: "We use Sherwin-Williams and Benjamin Moore, choosing the product line for each surface, sheen and exposure."
             },
             {
               question: "Can you work with our designer?",
-              answer: "Absolutely. We regularly coordinate with interior designers, architects, and builders throughout Memorial. We're comfortable reading specifications and matching precise colors."
+              answer: "Yes. We can work from a designer's or architect's color and sheen specifications and coordinate scheduling with other trades on a renovation."
             },
             {
               question: "How do you protect landscaping?",
-              answer: "Memorial homes often have valuable mature landscaping. We use extensive drop cloths and plastic sheeting, train our crews to work carefully, and always clean up thoroughly."
+              answer: "We cover beds and shrubs near the work area, protect floors and hardscape with drop cloths and plastic, and clean up when the work is done."
+            },
+            {
+              question: "Do you also serve the Memorial Villages?",
+              answer: "Yes. Bunker Hill, Piney Point, Hedwig, Hunters Creek, Spring Valley and Hilshire Village are covered on our Memorial Villages page."
             },
             {
               question: "What warranty do you offer?",
-              answer: "All Memorial painting projects include our 5-year written warranty covering peeling, blistering, bubbling, and excessive fading."
+              answer: "Memorial painting projects are backed by our 5-year written workmanship warranty."
             }
           ]}
         />
+        <section className="container mx-auto px-4 max-w-4xl pb-12">
+          <div className="bg-card rounded-xl p-8 border border-border">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
+              Recent Project in Memorial
+            </h2>
+            <p className="text-foreground leading-relaxed">
+              We repainted the interior of a Memorial home with one cohesive palette across walls and trim.{" "}
+              <Link
+                href="/projects/memorial-whole-home-interior-repaint"
+                className="text-primary font-medium hover:underline"
+              >
+                See the Memorial whole-home interior repaint
+              </Link>
+              . Also serving the{" "}
+              <Link href="/painters-memorial-villages-tx" className="text-primary font-medium hover:underline">
+                Memorial Villages
+              </Link>{" "}
+              and the{" "}
+              <Link href="/painters-energy-corridor-tx" className="text-primary font-medium hover:underline">
+                Energy Corridor
+              </Link>
+              .
+            </p>
+          </div>
+        </section>
         <ProblemSelector />
         <PricingSection />
         <SchedulerSection />

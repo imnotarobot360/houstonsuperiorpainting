@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
+  title: "Exterior Painting Sugar Land, TX | Free Estimate",
+  description: "Exterior house painting in Sugar Land, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty.",
   alternates: {
-    canonical: 'https://houstonsuperiorpainting.com/exterior-painting-sugar-land',
+    canonical: "https://houstonsuperiorpainting.com/exterior-painting-sugar-land",
   },
-  title: "Exterior Painting Sugar Land | Houston Superior Painting",
-  description: "Premium exterior painting in Sugar Land, TX. 5-year warranty, 5-star reviews, family-owned. Free quote — call (346) 594-5960.",
 }
 
 export default function ExteriorPaintingSugarLandPage() {
@@ -16,47 +17,45 @@ export default function ExteriorPaintingSugarLandPage() {
       serviceSlug="exterior-painting"
       zone="Sugar Land, TX"
       zoneSlug="sugar-land"
-      metaTitle="Exterior Painting Sugar Land | Houston Superior Painting"
-      metaDescription="Premium exterior painting in Sugar Land, TX. 5-year warranty, 5-star reviews."
+      metaTitle="Exterior Painting Sugar Land, TX | Free Estimate"
+      metaDescription="Exterior house painting in Sugar Land, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty."
       h1="Exterior Painting in Sugar Land, TX"
-      heroSubheading="The painting team Sugar Land homeowners trust to deliver flawless exterior painting — prepped for Houston weather, finished beautifully, and backed by a 5-year written warranty."
-      introLocal="When Sugar Land homeowners search for an exterior painter, they're looking for a team that understands the master-planned communities and HOA requirements throughout Riverstone, Sweetwater, New Territory, and First Colony. Houston Superior Painting has protected and beautified exteriors throughout Sugar Land with coatings engineered to withstand Houston's demanding climate."
-      serviceOverview="Our exterior painting service in Sugar Land includes the full scope: power washing, wood rot repair, caulking, priming, and finish coats with premium exterior-grade materials. We use Sherwin-Williams Duration, SuperPaint, and Benjamin Moore Aura Exterior. A typical project takes 4 to 8 business days, and every job is backed by our 5-year written exterior warranty."
+      heroSubheading="Exterior repaints prepped for Houston heat and humidity: washed, caulked, repaired and primed before the finish coats, with a 5-year written workmanship warranty."
+      introLocal="Exteriors in Sugar Land include brick, fiber-cement and wood siding, and stucco, so prep differs by house: stucco cracks need filling and a masonry-rated coating, and wood trim needs rot checked and replaced before it is painted. Houston's humidity and summer heat are hard on exterior paint everywhere in the region, which is why prep matters more than the paint can."
+      serviceOverview="An exterior job starts with washing the house and removing mildew. We scrape loose paint, replace rotted trim where needed, caulk open joints, prime bare wood and repairs, then apply the finish coats with Sherwin-Williams or Benjamin Moore exterior paint. Landscaping, walkways and windows are protected while we work. Your written estimate lists the surfaces, repairs, product and schedule."
       whyChooseUs={[
-        "We know Sugar Land communities — Riverstone, Sweetwater, New Territory, First Colony — and how to work with each HOA.",
-        "Experience with the stucco, brick, and HardiePlank common in Sugar Land homes.",
-        "5-year written exterior warranty — the longest in the Houston metro area.",
-        "Daily SMS photo updates so you can monitor progress from anywhere.",
-        "Bilingual foreman dedicated to your job, with a direct phone line."
+        "Founded in 2019 by owner Juan Serra and headquartered in Cypress, TX.",
+        "Wood rot repair and caulking are written into the estimate alongside the paint work.",
+        "Plants, walkways and windows protected; work areas cleaned each day.",
+        `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
+        "5-year written workmanship warranty.",
+        "No upfront payment: the estimate is free and nothing is due until you approve it in writing."
       ]}
-      priceRange="$6,800 – $22,500"
-      priceMin={6800}
-      priceMax={22500}
-      priceDetails="Exterior painting in Sugar Land typically ranges from $6,800 to $22,500 for a complete repaint, depending on home size, stories, substrate type, and prep complexity."
+      priceDetails={`Another way to think about it: roughly ${PRICES_2026.exteriorPerSqFt} per square foot of floor area. Number of stories, siding type, the amount of wood rot to repair and how much trim there is all move the price, and your free written estimate itemizes it.`}
       faqs={[
         {
-          question: "How long does an exterior project take in Sugar Land?",
-          answer: "For a typical Sugar Land home (3,000 to 5,500 sqft), a full exterior repaint takes between 4 and 8 business days, weather permitting."
-        },
-        {
-          question: "What paint brands do you use for exteriors?",
-          answer: "We use Sherwin-Williams Duration and SuperPaint, as well as Benjamin Moore Aura Exterior."
-        },
-        {
-          question: "Do you work with Sugar Land HOAs?",
-          answer: "Yes — we're familiar with the HOA requirements in Riverstone, Sweetwater, New Territory, and First Colony. We can help with color approval submittals."
-        },
-        {
           question: "How much does exterior painting cost in Sugar Land?",
-          answer: "Exterior painting typically ranges from $6,800 to $22,500 for a complete repaint."
+          answer: `Most whole-house exteriors run ${PRICES_2026.exteriorPerHome}, and a 2,500 sq ft two-story is typically about ${PRICES_2026.exterior2500TwoStory}. These are our published 2026 Greater Houston ranges; your written estimate is free and itemized after we see the house.`,
         },
         {
-          question: "What's included in your 5-year warranty?",
-          answer: "Our warranty covers peeling, flaking, blistering, and adhesion failures caused by improper preparation or application."
+          question: "Does my HOA need to approve the colors?",
+          answer: "In most master-planned communities, yes. Get your HOA's color approval before the job is scheduled. If your HOA has an approved palette, bring it to the estimate and we will quote with those colors.",
         },
         {
-          question: "Do you handle stucco exteriors?",
-          answer: "Yes — we have extensive experience with stucco, including crack repair and elastomeric coatings."
+          question: "When is the best time to paint an exterior here?",
+          answer: "Exterior paint can go on most of the year in the Houston area. What matters is the weather on the day: we don't paint in rain or when rain is expected before the coating dries, and in summer it helps to avoid coating walls in direct midday sun.",
+        },
+        {
+          question: "Do you repair wood rot before painting?",
+          answer: "Yes. Rotted trim, fascia and siding boards are replaced before painting, because paint over rot fails quickly. Repairs found during the estimate are written into it.",
+        },
+        {
+          question: "What warranty do you give?",
+          answer: "Every exterior job comes with a 5-year written workmanship warranty. The full warranty terms are included with your written estimate, so you can read them before you approve the work.",
+        },
+        {
+          question: "When do I pay?",
+          answer: "The estimate is free, and nothing is due until you approve the written estimate. A down payment is collected at that point, and the balance is due after the final walkthrough.",
         }
       ]}
       testimonials={[
@@ -77,15 +76,16 @@ export default function ExteriorPaintingSugarLandPage() {
         }
       ]}
       relatedPages={[
-        { title: "Exterior Painting Memorial", href: "/exterior-painting-memorial" },
-        { title: "Exterior Painting Tanglewood", href: "/exterior-painting-tanglewood" },
-        { title: "Exterior Painting Bellaire", href: "/exterior-painting-bellaire-west-university" },
-        { title: "Exterior Painting The Heights", href: "/exterior-painting-the-heights" },
-        { title: "Exterior Painting Katy", href: "/exterior-painting-katy-cinco-ranch" },
-        { title: "Exterior Painting Cypress", href: "/exterior-painting-cypress-bridgeland" }
+        { title: "Exterior painting cost guide", href: "/exterior-house-painting-houston-cost-guide" },
+        { title: "Wood rot repair", href: "/wood-rot-repair-houston-tx" },
+        { title: "Stucco painting and repair", href: "/stucco-painting-houston-tx" },
+        { title: "Limewash and decorative finishes in Sugar Land", href: "/limewash-decorative-finishes-sugar-land" },
+        { title: "Exterior painting in Cypress & Bridgeland", href: "/exterior-painting-cypress-bridgeland" },
+        { title: "Exterior painting in Katy & Cinco Ranch", href: "/exterior-painting-katy-cinco-ranch" },
+        { title: "Painters in Sugar Land, TX (Sugar Land office)", href: "/painters-sugar-land-tx" }
       ]}
       warrantyYears={5}
-      warrantyType="Exterior"
+      warrantyType="Workmanship"
     />
   )
 }

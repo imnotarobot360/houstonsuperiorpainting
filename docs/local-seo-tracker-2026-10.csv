@@ -1,0 +1,30 @@
+city,service,page_url,real_local_project,project_url,original_photos,authorized_review,gsc_impressions_28d,gsc_clicks_28d,gsc_top_queries,leads_or_calls_28d,ai_answer_observation,date_checked,notes
+Houston,All services (city page),https://houstonsuperiorpainting.com/painters-houston-tx,Yes (Memorial; River Oaks; West University),/projects/memorial-whole-home-interior-repaint; /projects/river-oaks-exterior-restoration; /projects/west-university-kitchen-cabinet-refinishing,Likely (phone-camera JPEGs; confirm),Catherine R. (Memorial) confirmed real 2026-10-01; Robert H. and Daniel & Priya M. - confirm permission,,,,,,2026-10-07,Office page (GBP). Address 2617 Bissonnet St #443 - confirm it is a staffed office
+Houston,Interior painting,https://houstonsuperiorpainting.com/interior-painting-houston-tx,Yes (Memorial),/projects/memorial-whole-home-interior-repaint,Likely (confirm),Catherine R. confirmed,,,,,,2026-10-07,
+Houston,Exterior painting,https://houstonsuperiorpainting.com/exterior-painting-houston-tx,Yes (River Oaks),/projects/river-oaks-exterior-restoration,Likely (confirm; house number visible in photo),Robert H. - confirm,,,,,,2026-10-07,
+Houston,Cabinet refinishing,https://houstonsuperiorpainting.com/cabinet-refinishing-houston-tx,Yes (West University),/projects/west-university-kitchen-cabinet-refinishing,Likely (confirm),Daniel & Priya M. - confirm,,,,,,2026-10-07,
+Cypress,All services (city page),https://houstonsuperiorpainting.com/painters-cypress-tx,No (wood-rot project photos unconfirmed),/projects/cypress-wood-rot-repair-exterior-repaint (not cited),Unconfirmed (1024px PNGs),None,,,,,,2026-10-07,HQ office page (GBP)
+Cypress,Interior painting,https://houstonsuperiorpainting.com/interior-painting-cypress-bridgeland,No,,No,None,,,,,,2026-10-07,
+Cypress,Exterior painting,https://houstonsuperiorpainting.com/exterior-painting-cypress-bridgeland,No,,No,None,,,,,,2026-10-07,
+Cypress,Cabinet refinishing,https://houstonsuperiorpainting.com/cabinet-refinishing-cypress-bridgeland,No,,No,None,,,,,,2026-10-07,
+Katy,All services (city page),https://houstonsuperiorpainting.com/painters-katy-tx,No,,No,None,,,,,,2026-10-07,Office page (GBP). Address 3230 FM 1463 APT 3201 - an apartment unit; confirm it is an eligible office
+Katy,Interior painting,https://houstonsuperiorpainting.com/interior-painting-katy-cinco-ranch,No,,No,None,,,,,,2026-10-07,Overlaps /interior-painters-katy-tx
+Katy,Exterior painting,https://houstonsuperiorpainting.com/exterior-painting-katy-cinco-ranch,No,,No,None,,,,,,2026-10-07,
+Katy,Cabinet refinishing,https://houstonsuperiorpainting.com/cabinet-refinishing-katy-cinco-ranch,No,,No,None,,,,,,2026-10-07,Overlaps /cabinet-painting-katy-tx
+Sugar Land,All services (city page),https://houstonsuperiorpainting.com/painters-sugar-land-tx,No,,No,None,,,,,,2026-10-07,Office page (GBP). Confirm suite is a staffed office
+Sugar Land,Interior painting,https://houstonsuperiorpainting.com/interior-painting-sugar-land,No,,No,None,,,,,,2026-10-07,
+Sugar Land,Exterior painting,https://houstonsuperiorpainting.com/exterior-painting-sugar-land,No,,No,None,,,,,,2026-10-07,
+Sugar Land,Cabinet refinishing,https://houstonsuperiorpainting.com/cabinet-refinishing-sugar-land,No,,No,None,,,,,,2026-10-07,
+Richmond,All services (city page),https://houstonsuperiorpainting.com/painters-richmond-tx,No,,No,None,,,,,,2026-10-07,Service area (no office)
+Richmond,Interior painting,https://houstonsuperiorpainting.com/interior-painting-richmond,No,,No,None,,,,,,2026-10-07,
+Richmond,Exterior painting,https://houstonsuperiorpainting.com/exterior-painting-richmond,No,,No,None,,,,,,2026-10-07,
+Fulshear,All services (city page),https://houstonsuperiorpainting.com/painters-fulshear-tx,No,,No,None,,,,,,2026-10-07,Service area (no office)
+Fulshear,Interior painting,https://houstonsuperiorpainting.com/interior-painting-fulshear,No,,No,None,,,,,,2026-10-07,
+Fulshear,Exterior painting,https://houstonsuperiorpainting.com/exterior-painting-fulshear,No,,No,None,,,,,,2026-10-07,
+Tomball,All services (city page),https://houstonsuperiorpainting.com/painters-tomball-tx,No,,No,None,,,,,,2026-10-07,Service area (no office)
+Magnolia,All services (city page),https://houstonsuperiorpainting.com/painters-magnolia-tx,No,,No,None,,,,,,2026-10-07,Office page (GBP). Address 14512 Cottontop Mtn looks residential - confirm eligibility
+The Woodlands,All services (city page),https://houstonsuperiorpainting.com/painters-the-woodlands-tx,No,,No,None,,,,,,2026-10-07,Service area (no office)
+The Woodlands,Interior painting,https://houstonsuperiorpainting.com/interior-painting-the-woodlands,No,,No,None,,,,,,2026-10-07,
+The Woodlands,Exterior painting,https://houstonsuperiorpainting.com/exterior-painting-the-woodlands,No,,No,None,,,,,,2026-10-07,
+Pearland,All services (city page),https://houstonsuperiorpainting.com/painters-pearland-tx,No,,No,None,,,,,,2026-10-07,Service area (no office)
+Missouri City,All services (city page),https://houstonsuperiorpainting.com/painters-missouri-city-tx,No,,No,None,,,,,,2026-10-07,Service area (no office)

@@ -9,15 +9,19 @@ import { PricingSection } from "@/components/pricing-section"
 import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 
+const TITLE = "House Painters in Fulshear TX | Houston Superior Painting"
+const DESCRIPTION =
+  "Interior, exterior & cabinet painting in Fulshear, TX. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960."
+
 export const metadata: Metadata = {
-  title: "House Painters Fulshear TX — Houston Superior Painting",
-  description: "Professional painters in Fulshear TX. Interior, exterior, cabinet painting for Cross Creek Ranch, Fulbrook, Polo Ranch. 5-year warranty. Free estimates.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/painters-fulshear-tx',
   },
   openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "House Painters Fulshear TX — Houston Superior Painting",
-    description: "Professional painters in Fulshear TX. Interior, exterior, cabinet painting for Cross Creek Ranch, Fulbrook, Polo Ranch. 5-year warranty.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://houstonsuperiorpainting.com/painters-fulshear-tx",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -49,66 +53,61 @@ export default function PaintersFulshearTX() {
         <LocationPageTemplate
           city="Fulshear"
           state="TX"
-          heroHeadline="Fulshear's Trusted House Painters"
-          heroDescription="Premium painting services for Cross Creek Ranch, Fulbrook, Polo Ranch, and all Fulshear communities. Quality craftsmanship that matches your home's quality."
-          quickAnswer={`Houston Superior Painting provides professional painting services throughout Fulshear TX including Cross Creek Ranch, Fulbrook, Polo Ranch, and Jordan Ranch. Interior painting costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. We specialize in upgrading builder-grade finishes with premium Sherwin-Williams and Benjamin Moore products. 5-year warranty included. Call (346) 594-5960 for a free estimate.`}
-          aboutCity={`Fulshear is one of Texas's fastest-growing communities, and its beautiful new homes deserve premium painting services. Whether you're personalizing a newly built home, updating a property that's a few years old, or maintaining an established Fulshear residence, Houston Superior Painting delivers the quality craftsmanship your investment deserves.
+          heroHeadline="House Painters in Fulshear, TX"
+          heroDescription="Interior, exterior, and cabinet painting for Fulshear homes in Cross Creek Ranch, Fulbrook, Jordan Ranch, Tamarron, and the rest of the area. Insured, with a 5-year workmanship warranty."
+          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Fulshear, TX, including Cross Creek Ranch, Fulbrook on Fulshear Creek, Jordan Ranch, and Tamarron. We are headquartered in Cypress, and our crews work across Greater Houston and Fort Bend County. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We carry $2M general liability + workers' comp and give a 5-year workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
+          aboutCity={`Fulshear has grown quickly in recent years, and most of its homes are in newer master-planned communities such as Cross Creek Ranch, Jordan Ranch, and Tamarron. Many of those homes still have the flat builder-grade paint they were built with, which scuffs easily and is hard to clean. A common first project is repainting the main living areas, kitchen, and halls in a washable finish, or refinishing builder-grade cabinets in a new color.
 
-We've painted homes throughout Fulshear's premier communities—from the luxury estates of Fulbrook on Fulshear Creek to the family-friendly neighborhoods of Cross Creek Ranch, from Polo Ranch to Tamarron. Our team understands the architectural styles popular in these communities and the specific paint products that perform best in Fort Bend County's climate.
+Fulshear has the same Gulf Coast climate as the rest of Greater Houston, and the south- and west-facing walls of a newer home are usually the first to fade and chalk. On an exterior we wash off the chalk, re-caulk the joints where siding meets brick, and prime any bare spots before the finish coats.
 
-Many Fulshear homeowners come to us when their builder-grade paint begins to show wear. Texas sun, humidity, and weather take their toll, and upgrading to premium Sherwin-Williams or Benjamin Moore products makes a noticeable difference in both appearance and longevity. We also help homeowners make their new construction feel like home by painting accent walls, updating cabinet colors, or refreshing standard builder whites with custom colors.
-
-Fulshear's master-planned communities have specific HOA requirements, and we're experienced with the approval processes in Cross Creek Ranch, Fulbrook, and other neighborhoods. We help you select colors that meet community standards while expressing your personal style.
-
-Our Google reviews speak to our quality, cleanliness, and communication. We treat every Fulshear home with the care and respect it deserves, leaving your property spotless when we're finished.`}
+Nearly every Fulshear master-planned community has an HOA that reviews exterior color changes. We can pull your community's approved color list and help with the approval paperwork before work starts.`}
           whyChooseUs={[
-            "Master-planned community expertise: Cross Creek Ranch, Fulbrook, Polo Ranch",
-            "Builder-grade upgrades: premium products that outperform standard finishes",
-            "New construction specialists: understand modern home requirements",
-            "HOA color assistance: help with approvals and compliant palettes",
-            "Premium materials: Sherwin-Williams, Benjamin Moore standard",
-            "5-year written warranty on all residential painting",
-            "Clean, professional crews respected by Fulshear homeowners"
+            "Free on-site estimate with a written scope; nothing is due until you approve it",
+            "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
+            "5-year written workmanship warranty",
+            "Sherwin-Williams and Benjamin Moore paints in place of flat builder-grade finishes",
+            "Help with HOA color lists and approval paperwork",
+            "Founded in 2019 and headquartered in Cypress, with crews across Greater Houston",
           ]}
           services={[
             {
               title: "Interior Painting Fulshear",
-              description: "Transform your Fulshear home's interior. Upgrade from builder-grade to premium finishes that look better and last longer.",
+              description: "Walls, ceilings, trim, and doors, including replacing flat builder-grade paint with a washable finish.",
               href: "/interior-painting-houston-tx"
             },
             {
               title: "Exterior Painting Fulshear",
-              description: "Protect your Fulshear home from Texas weather with durable exterior coatings designed for Gulf Coast conditions.",
+              description: "Wash, caulk, and prime before the finish coats on siding, trim, and brick.",
               href: "/exterior-painting-houston-tx"
             },
             {
               title: "Cabinet Refinishing Fulshear",
-              description: "Update your Fulshear kitchen with factory-smooth cabinet finishes. Transform builder-grade cabinets to custom quality.",
+              description: "Sprayed cabinet finishes that update builder-grade cabinets without replacing them.",
               href: "/cabinet-refinishing-houston-tx"
             },
             {
               title: "Accent Walls Fulshear",
-              description: "Add personality to your Fulshear home with perfectly painted accent walls and feature colors.",
+              description: "Accent walls and feature colors as part of an interior project.",
               href: "/interior-painting-houston-tx"
             },
             {
               title: "Drywall Repair Fulshear",
-              description: "Fix nail pops, cracks, and settling damage before painting for perfect results.",
+              description: "Nail pops, cracks, and settling damage repaired and texture-matched before painting.",
               href: "/drywall-repair-houston-tx"
             },
             {
               title: "Limewash Brick Fulshear",
-              description: "Transform your Fulshear brick home with elegant European limewash finishes.",
+              description: "Limewash or painted brick for Fulshear brick homes, priced after an on-site look.",
               href: "/limewash-brick-painting-houston-tx"
             },
             {
               title: "Pressure Washing Fulshear",
-              description: "Professional cleaning for driveways, patios, and exteriors. Essential maintenance for Fulshear homes.",
+              description: "Cleaning for driveways, patios, and exteriors, and the first step before exterior paint.",
               href: "/pressure-washing-houston-tx"
             },
             {
               title: "Garage Floor Epoxy Fulshear",
-              description: "Durable epoxy coatings for Fulshear garages with metallic, flake, and solid color options.",
+              description: "Garage floor epoxy is handled by our separate epoxy brand, Houston Superior Epoxy.",
               href: "https://houstonsuperiorepoxy.com/"
             }
           ]}
@@ -122,39 +121,31 @@ Our Google reviews speak to our quality, cleanliness, and communication. We trea
             "Fulshear Run",
             "Parkway Lakes",
             "Fulshear Lake Estates",
-            "Longenbaugh",
-            "Katy-Fulshear",
-            "FM 1093 Corridor"
           ]}
-          testimonial={{
-            quote: "We wanted to personalize our new Cross Creek Ranch home and Houston Superior Painting made it happen. They helped us pick the perfect colors, worked around our move-in schedule, and the quality is exceptional. Much better than builder-grade! Highly recommend.",
-            author: "The Williams Family",
-            location: "Cross Creek Ranch, Fulshear"
-          }}
           faqs={[
             {
               question: "How much does it cost to paint a house in Fulshear?",
-              answer: `Interior painting in Fulshear typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates.`
+              answer: `In 2026 interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exteriors run ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
             },
             {
               question: "Do you work with Fulshear HOAs?",
-              answer: "Yes! We're familiar with HOA requirements in Cross Creek Ranch, Fulbrook, Polo Ranch, and other Fulshear communities. We help with color selection and approvals."
+              answer: "Yes. We can pull your community's approved color list and help with the approval paperwork before any exterior work starts, and we can send a certificate of insurance to your HOA."
             },
             {
-              question: "Can you upgrade builder-grade paint?",
-              answer: "Absolutely! We upgrade to premium Sherwin-Williams and Benjamin Moore products that look better and last significantly longer than standard builder finishes."
+              question: "Can you replace builder-grade paint?",
+              answer: "Yes. Flat builder-grade paint marks easily and does not wash well. We repaint with Sherwin-Williams or Benjamin Moore paint in a washable sheen such as eggshell or satin, usually starting with the rooms that get the most use."
             },
             {
               question: "Which Fulshear areas do you serve?",
-              answer: "All of them! Cross Creek Ranch, Fulbrook, Polo Ranch, Tamarron, Jordan Ranch, Weston Lakes, and every neighborhood in Fulshear."
+              answer: "All of Fulshear, including Cross Creek Ranch, Fulbrook on Fulshear Creek, Polo Ranch, Tamarron, Jordan Ranch, and Weston Lakes. Call (346) 594-5960 or request an estimate online to confirm your address."
             },
             {
               question: "What paint brands do you use?",
-              answer: "We use Sherwin-Williams Duration and Emerald, Benjamin Moore Regal and Aura—premium products that outperform builder-grade in every way."
+              answer: "Sherwin-Williams and Benjamin Moore, for example Sherwin-Williams Duration or Emerald on exteriors and Benjamin Moore Regal Select or Aura on interiors. The product and number of coats are listed on your written estimate."
             },
             {
               question: "Are you insured?",
-              answer: "Yes, fully insured with $2M liability coverage. Certificates available for HOAs."
+              answer: "Yes. We carry $2M general liability + workers' comp and can send a certificate of insurance to you or your HOA. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license."
             }
           ]}
         />
