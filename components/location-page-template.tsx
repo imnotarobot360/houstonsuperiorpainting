@@ -28,6 +28,8 @@ const NEARBY_PROJECT_CITY: Record<string, string> = {
   Rosenberg: "Richmond",
   "Cypress Creek": "Cypress",
   "Champions Forest": "Cypress",
+  "The Woodlands": "Magnolia",
+  Tomball: "Magnolia",
 }
 
 const SITE = "https://houstonsuperiorpainting.com"

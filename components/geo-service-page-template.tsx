@@ -86,6 +86,8 @@ const ZONE_PROJECT_PLACES: Record<string, string[]> = {
   "cypress-bridgeland": ["Cypress"],
   // Richmond borders Sugar Land; the card is labelled Richmond, never Sugar Land.
   "sugar-land": ["Richmond"],
+  // Magnolia borders The Woodlands; the card is labelled Magnolia.
+  "the-woodlands": ["Magnolia"],
   // Fulshear borders Katy; the card is labelled Fulshear, never Katy.
   katy: ["Fulshear"],
   "katy-cinco-ranch": ["Fulshear"],

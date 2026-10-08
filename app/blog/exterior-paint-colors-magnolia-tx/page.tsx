@@ -5,9 +5,9 @@ import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 const URL = "https://houstonsuperiorpainting.com/blog/exterior-paint-colors-magnolia-tx"
 
-// TODO(juan): replace featured image with a real job photo
-const IMAGE = "/images/blog/best-exterior-colors-woodlands.jpg"
-const IMAGE_ALT = "One-story home with sage-gray siding and stone under large shade trees"
+// Real job photo: our Magnolia exterior (see /projects/magnolia-exterior-siding-repaint).
+const IMAGE = "/images/projects/magnolia-exterior-siding/01-front-and-porch.jpg"
+const IMAGE_ALT = "Two-story Magnolia home with green lap siding, yellow trim, a turret roof and a wraparound porch among pine trees"
 
 export const metadata: Metadata = {
   title: "Best Exterior Paint Colors in Magnolia TX (2026)",
@@ -126,6 +126,10 @@ export default function ExteriorPaintColorsMagnoliaTxPage() {
       </table>
       <p>
         Dark colors under heavy shade hide mildew until it is a blanket. Mid-tones show it sooner, which is more honest.
+      </p>
+      <p>
+        See a real example on a wooded lot: our{" "}
+        <Link href="/projects/magnolia-exterior-siding-repaint">Magnolia exterior with green siding and yellow trim</Link>.
       </p>
 
       <h2>Prep That Matters Here</h2>

@@ -114,7 +114,7 @@ const blogPosts = [
     author: "Juan Serra",
     publishDate: "October 7, 2026",
     readTime: "7 min read",
-    image: "/images/blog/best-exterior-colors-woodlands.jpg",
+    image: "/images/projects/magnolia-exterior-siding/01-front-and-porch.jpg",
     featured: false,
   },
   {

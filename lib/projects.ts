@@ -642,6 +642,36 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Photos of a Cypress, TX kitchen with blue painted lower cabinets and island and white painted uppers.",
   },
+  {
+    // Job photos supplied by Juan on 2026-10-08: exterior painting in Magnolia,
+    // TX. Cropped to remove another contractor's yard sign, our van and
+    // construction debris. Finished photos only; scope and products unconfirmed.
+    slug: "magnolia-exterior-siding-repaint",
+    title: "Exterior Painting on a Wooded Magnolia Home",
+    neighborhood: "Magnolia, TX",
+    service: "Exterior Painting",
+    serviceSlug: "exterior-painting-houston-tx",
+    summary:
+      "A two-story home on a wooded Magnolia lot with green lap siding and yellow trim, photographed after the exterior work.",
+    heroImage: "/images/projects/magnolia-exterior-siding/01-front-and-porch.jpg",
+    afterImage: "/images/projects/magnolia-exterior-siding/01-front-and-porch.jpg",
+    afterAlt: "Two-story Magnolia home with green lap siding, yellow trim, a turret roof and a wraparound porch among pine trees",
+    gallery: [
+      {
+        src: "/images/projects/magnolia-exterior-siding/02-garage-and-side.jpg",
+        alt: "Garage wing and side gable with green lap siding, yellow trim and round gable vents",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "Magnolia, TX" },
+      { label: "Service", value: "Exterior" },
+      { label: "Home", value: "Two-story, wooded lot" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Exterior Painting Project in Magnolia, TX",
+    metaDescription:
+      "Photos of a two-story Magnolia, TX home with green lap siding and yellow trim on a wooded lot, after exterior painting.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */
