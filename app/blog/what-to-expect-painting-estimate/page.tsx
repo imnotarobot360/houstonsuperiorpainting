@@ -29,6 +29,12 @@ const relatedPosts = [
     href: "/painters-houston-tx",
     excerpt: "Costs, timing, and how to hire the right crew.",
     image: "/images/blog/painters-near-me-houston.jpg"
+  },
+  {
+    title: "Request a Free, Itemized Painting Estimate",
+    href: "/painting-estimate-houston",
+    excerpt: "A written, itemized estimate you can compare line by line.",
+    image: "/images/blog/painting-estimate-guide.jpg"
   }
 ]
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Fragment } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Header } from "@/components/header"
@@ -51,6 +52,32 @@ const breadcrumbSchema = {
   ]
 }
 
+// Single source for the FAQ: the visible questions/answers and the FAQPage
+// JSON-LD are both rendered from this array, so the schema always matches
+// the text on the page.
+const faqs: { question: string; answer: string }[] = [
+  {
+    question: "Do I need HOA approval to repaint my house the same color in Houston?",
+    answer: "In many Houston-area communities, yes — even repainting in the same color requires an ARC submission before work begins. Check your community's specific guidelines. Some communities have simplified processes for exact-match repaints; others require a full application regardless.",
+  },
+  {
+    question: "How long does HOA paint approval take in communities like Cinco Ranch or Riverstone?",
+    answer: "Most HOA architectural review committees in the Houston area operate on 14–30 day review cycles. Some have rolling deadlines; others meet monthly. Contact your HOA management company for the specific timeline in your community and build that into your painting project schedule.",
+  },
+  {
+    question: "What happens if I paint my house without HOA approval?",
+    answer: "If your HOA requires prior approval and you paint without it, you risk a violation notice and a requirement to repaint in an approved color — at your expense. This is a costly and avoidable situation. Always get written approval before any exterior painting begins.",
+  },
+  {
+    question: "Can I paint my front door a different color from what the HOA palette lists?",
+    answer: "Many HOAs have separate standards for front doors than for body and trim colors — sometimes allowing more personality at the door. Check your specific community's guidelines. Some communities have a curated list of approved door accent colors that allows more expression than the body color palette.",
+  },
+  {
+    question: "What's the best way to find my HOA's approved exterior color list?",
+    answer: "Contact your HOA management company directly, check your community's resident portal or website, or reach out to your neighborhood's architectural review committee. When in doubt, calling and asking is always appropriate — HOA offices expect these questions and are generally helpful.",
+  },
+]
+
 export default function HOAPaintRulesBlog() {
   return (
     <>
@@ -92,48 +119,11 @@ export default function HOAPaintRulesBlog() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Do I need HOA approval to repaint my house the same color in Houston?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "In many Houston-area communities, yes — even repainting the same color requires an ARC submission before work begins. Check your specific community's guidelines."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How long does HOA paint approval take in communities like Cinco Ranch or Riverstone?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Most HOA architectural review committees in Houston operate on 14–30 day review cycles. Contact your HOA management company for your community's specific timeline."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What happens if I paint my house without HOA approval?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "You risk a violation notice and a requirement to repaint in an approved color at your own expense. Always get written approval before any exterior painting begins."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can I paint my front door a different color from what the HOA palette lists?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Many HOAs have separate standards for front doors than for body and trim colors — sometimes allowing more personality at the door. Check your specific community's guidelines for approved door accent colors."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What's the best way to find my HOA's approved exterior color list?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Contact your HOA management company directly, check your community's resident portal or website, or reach out to your neighborhood's architectural review committee."
-                }
-              }
-            ]
+            "mainEntity": faqs.map((faq) => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+            }))
           })
         }}
       />
@@ -432,30 +422,12 @@ export default function HOAPaintRulesBlog() {
             {/* FAQ Section */}
             <h2>Frequently Asked Questions</h2>
 
-            <h3>Do I need HOA approval to repaint my house the same color in Houston?</h3>
-            <p>
-              In many Houston-area communities, yes — even repainting in the same color requires an ARC submission before work begins. Check your community&apos;s specific guidelines. Some communities have simplified processes for exact-match repaints; others require a full application regardless.
-            </p>
-
-            <h3>How long does HOA paint approval take in communities like Cinco Ranch or Riverstone?</h3>
-            <p>
-              Most HOA architectural review committees in the Houston area operate on 14–30 day review cycles. Some have rolling deadlines; others meet monthly. Contact your HOA management company for the specific timeline in your community and build that into your painting project schedule.
-            </p>
-
-            <h3>What happens if I paint my house without HOA approval?</h3>
-            <p>
-              If your HOA requires prior approval and you paint without it, you risk a violation notice and a requirement to repaint in an approved color — at your expense. This is a costly and avoidable situation. Always get written approval before any exterior painting begins.
-            </p>
-
-            <h3>Can I paint my front door a different color from what the HOA palette lists?</h3>
-            <p>
-              Many HOAs have separate standards for front doors than for body and trim colors — sometimes allowing more personality at the door. Check your specific community&apos;s guidelines. Some communities have a curated list of approved door accent colors that allows more expression than the body color palette.
-            </p>
-
-            <h3>What&apos;s the best way to find my HOA&apos;s approved exterior color list?</h3>
-            <p>
-              Contact your HOA management company directly, check your community&apos;s resident portal or website, or reach out to your neighborhood&apos;s architectural review committee. When in doubt, calling and asking is always appropriate — HOA offices expect these questions and are generally helpful.
-            </p>
+            {faqs.map((faq) => (
+              <Fragment key={faq.question}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </Fragment>
+            ))}
 
           </div>
         </article>

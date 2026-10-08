@@ -208,7 +208,8 @@ export default function HowToHireAPainterHoustonPage() {
             count, rot or drywall repair priced separately, start and finish dates, payment schedule, warranty terms, and
             the COI attached. See{" "}
             <Link href="/blog/what-to-expect-painting-estimate">What to Expect from a Painting Estimate</Link>. If any
-            of these is vague, get it clarified before you sign; vague estimates turn into change-order disputes.
+            of these is vague, get it clarified before you sign; vague estimates turn into change-order disputes. Our{" "}
+            <Link href="/painting-estimate-houston">free written estimate</Link> lists every one of these items.
           </p>
         </Section>
 

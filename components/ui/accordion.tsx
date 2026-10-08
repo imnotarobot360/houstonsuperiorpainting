@@ -53,9 +53,14 @@ function AccordionContent({
   ...props
 }: React.ComponentProps<typeof AccordionPrimitive.Content>) {
   return (
+    // forceMount keeps closed panels in the HTML; data-[state=closed]:hidden hides them visually.
+    // Without it, collapsed FAQ answers were missing from the page source, so
+    // search and AI crawlers saw FAQPage schema whose answers were not on the
+    // page — a mismatch Google treats as invalid FAQ markup.
     <AccordionPrimitive.Content
+      forceMount
       data-slot="accordion-content"
-      className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm"
+      className="data-[state=closed]:hidden data-[state=open]:animate-accordion-down overflow-hidden text-sm"
       {...props}
     >
       <div className={cn('pt-0 pb-4', className)}>{children}</div>

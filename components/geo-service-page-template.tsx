@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { ORG_ID } from "@/components/structured-data"
+import { ORG_ID, generateBreadcrumbSchema } from "@/components/structured-data"
 import { BUSINESS, PHONE_HREF, PRICES_2026, SERVICE_AREAS, SMS_HREF } from "@/lib/business"
 import { LOCAL_PROOF_PROJECTS } from "@/lib/projects"
 import { Phone, MessageSquare, CheckCircle, Shield, Clock, FileText } from "lucide-react"
@@ -216,6 +216,14 @@ export function GeoServicePageTemplate({
     }),
   }
 
+  // Mirrors the visible breadcrumb: Home / {service hub} / {place}.
+  const pageUrl = `${BUSINESS.url}/${serviceSlug}-${zoneSlug}`
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: `${BUSINESS.url}/` },
+    { name: service, url: `${BUSINESS.url}${serviceHub}` },
+    { name: place, url: pageUrl },
+  ])
+
   const processSteps = [
     { title: "Free Consultation", description: "On-site walkthrough and a written, itemized estimate" },
     { title: "Surface Preparation", description: "Dust removal, patching, sanding, caulking, and spot-priming" },
@@ -238,6 +246,7 @@ export function GeoServicePageTemplate({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <Header />
 

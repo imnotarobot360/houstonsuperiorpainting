@@ -63,21 +63,6 @@ const SERVICE_JSONLD = {
   },
 };
 
-const FAQ_JSONLD = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much does pressure washing cost in Houston?", acceptedAnswer: { "@type": "Answer", text: "Pressure washing in Houston typically costs $250–$900. Driveway-only $150–$300, full house exterior $300–$700, deck $200–$450, fence $200–$500 per side, full property package $600–$1,200. Houston Superior Painting provides free quotes with no minimum charge." } },
-    { "@type": "Question", name: "What is the difference between pressure washing and soft washing?", acceptedAnswer: { "@type": "Answer", text: "Pressure washing uses high-PSI water (1,500–4,000 PSI) for hard surfaces like concrete, brick, and stone. Soft washing uses low-pressure water (under 500 PSI) combined with biodegradable detergents for delicate surfaces like roofs, siding, stucco, and windows. Using the wrong method damages surfaces — we choose the right method for each material." } },
-    { "@type": "Question", name: "How often should I pressure wash my Houston home?", acceptedAnswer: { "@type": "Answer", text: "In Houston, annual pressure washing is recommended due to high humidity, mold, mildew, pollen, and oak tannin. Driveways may need cleaning every 6 months. Roofs typically every 2–3 years using soft wash. Annual cleaning extends paint life by 30–50%." } },
-    { "@type": "Question", name: "Can pressure washing damage my house?", acceptedAnswer: { "@type": "Answer", text: "Yes — if done incorrectly. High pressure can strip paint, damage wood, force water behind siding, and erode mortar. Houston Superior Painting calibrates pressure and nozzles to each surface and uses soft wash for delicate areas. We carry full insurance for peace of mind." } },
-    { "@type": "Question", name: "Do you remove mold and mildew?", acceptedAnswer: { "@type": "Answer", text: "Yes. Houston's humidity causes mold and mildew on virtually every exterior surface. We use professional-grade sodium hypochlorite mixes that kill mold at the spore level — not just rinse it off. Treatment includes neutralizing for plants and re-rinse." } },
-    { "@type": "Question", name: "Do you do pressure washing before painting?", acceptedAnswer: { "@type": "Answer", text: "Yes. All Houston Superior Painting exterior painting projects include pressure washing as the first prep step. We remove dirt, mold, mildew, chalk, and loose paint so coatings bond properly. Pre-paint pressure washing is built into our exterior painting quote." } },
-    { "@type": "Question", name: "Will pressure washing kill my plants?", acceptedAnswer: { "@type": "Answer", text: "No. We pre-wet landscaping and cover delicate plants before applying cleaning solutions. After wash, we rinse foliage thoroughly. Our cleaning mixes are biodegradable and used at safe concentrations. Houston Superior Painting has zero plant damage claims." } },
-    { "@type": "Question", name: "What areas do you serve for pressure washing?", acceptedAnswer: { "@type": "Answer", text: "Houston Superior Painting provides pressure washing throughout Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, Bellaire, and The Woodlands TX. Free quotes at (346) 594-5960." } },
-  ],
-};
-
 const BREADCRUMB_JSONLD = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -129,6 +114,18 @@ const faqItems = [
   { q: "Will pressure washing kill my plants?", a: "No. We pre-wet landscaping and cover delicate plants before applying cleaning solutions. After washing, we rinse foliage thoroughly. Our mixes are biodegradable and used at safe concentrations. Zero plant damage claims to date." },
   { q: "Can you clean my roof safely?", a: "Yes. We use soft wash (under 500 PSI) for roofs to avoid lifting shingles or forcing water under flashing. Soft wash with biocides kills mold and mildew streaks for 4–6 years before regrowth." },
 ];
+
+// FAQPage schema is generated from the same faqItems rendered on the page,
+// so the structured data always matches the visible questions and answers.
+const FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
 
 export default function PressureWashingHoustonPage() {
   return (

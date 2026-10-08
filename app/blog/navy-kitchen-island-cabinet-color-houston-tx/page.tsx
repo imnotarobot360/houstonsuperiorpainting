@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Fragment } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Header } from "@/components/header"
@@ -52,6 +53,32 @@ const breadcrumbSchema = {
   ]
 }
 
+// Single source for the FAQ: the visible questions/answers and the FAQPage
+// JSON-LD are both rendered from this array, so the schema always matches
+// the text on the page.
+const faqs: { question: string; answer: string }[] = [
+  {
+    question: "What's the best navy paint color for kitchen cabinets in Houston TX?",
+    answer: "Hale Navy (Benjamin Moore HC-154) and Naval (Sherwin-Williams SW 6244) are the most consistently popular choices in Houston kitchens. Hale Navy is slightly richer and bolder; Naval is more muted and sophisticated. The right choice depends on your countertop, flooring, and the amount of natural light in your kitchen.",
+  },
+  {
+    question: "Is the navy island trend going to look dated in a few years?",
+    answer: "Navy blue has appeared in well-designed kitchens for decades — it's a classic color, not a passing trend. The two-tone concept is also well-established. That said, the specific execution matters: clean lines, quality hardware, and a timeless white on the uppers all contribute to a look that ages well rather than dating quickly.",
+  },
+  {
+    question: "Can I paint just the island and leave the perimeter cabinets as-is?",
+    answer: "Yes — island-only projects are common and entirely practical. If the perimeter cabinets are in good condition and a color you're happy with, painting just the island is a cost-effective way to achieve the two-tone look without a full kitchen repaint.",
+  },
+  {
+    question: "Does navy show fingerprints more than lighter colors?",
+    answer: "Darker cabinet colors can show fingerprints and smudges more readily than whites or light neutrals, especially in kitchens with young children. A higher-sheen finish (satin or semi-gloss) with a damp cloth wipes clean easily. Most homeowners find the look worth the marginally higher maintenance.",
+  },
+  {
+    question: "What hardware finish looks best with navy cabinets in a Houston home?",
+    answer: "Matte black is the most popular hardware choice with navy in the current Houston market — it's clean, modern, and works with almost any countertop. Brushed gold or antique brass is a warm, transitional alternative that works particularly well when the kitchen has warm-toned flooring and countertops.",
+  },
+]
+
 export default function NavyIslandBlog() {
   return (
     <>
@@ -93,48 +120,11 @@ export default function NavyIslandBlog() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What's the best navy paint color for kitchen cabinets in Houston TX?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Hale Navy (Benjamin Moore HC-154) and Naval (Sherwin-Williams SW 6244) are the most consistently popular choices in Houston kitchens. Hale Navy is richer and bolder; Naval is more muted and sophisticated. The right choice depends on your countertop, flooring, and natural light."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Is the navy island trend going to look dated in a few years?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Navy blue has appeared in well-designed kitchens for decades — it's a classic color, not a passing trend. Clean execution with quality hardware and a timeless white on uppers contributes to a look that ages well."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can I paint just the island and leave the perimeter cabinets as-is?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes — island-only cabinet painting projects are common and entirely practical. If perimeter cabinets are in good condition and a color you're happy with, painting just the island is a cost-effective way to achieve the two-tone look."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does navy show fingerprints more than lighter colors?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Darker cabinet colors can show fingerprints and smudges more readily than whites or light neutrals. A higher-sheen finish (satin or semi-gloss) with a damp cloth wipes clean easily, and most homeowners find the look worth the marginally higher maintenance."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What hardware finish looks best with navy cabinets in a Houston home?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Matte black is the most popular hardware choice with navy in the current Houston market — clean, modern, and works with almost any countertop. Brushed gold or antique brass is a warm, transitional alternative that works well with warm-toned flooring and countertops."
-                }
-              }
-            ]
+            "mainEntity": faqs.map((faq) => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+            }))
           })
         }}
       />
@@ -328,30 +318,12 @@ export default function NavyIslandBlog() {
             {/* FAQ Section */}
             <h2>Frequently Asked Questions</h2>
 
-            <h3>What&apos;s the best navy paint color for kitchen cabinets in Houston TX?</h3>
-            <p>
-              Hale Navy (Benjamin Moore HC-154) and Naval (Sherwin-Williams SW 6244) are the most consistently popular choices in Houston kitchens. Hale Navy is slightly richer and bolder; Naval is more muted and sophisticated. The right choice depends on your countertop, flooring, and the amount of natural light in your kitchen.
-            </p>
-
-            <h3>Is the navy island trend going to look dated in a few years?</h3>
-            <p>
-              Navy blue has appeared in well-designed kitchens for decades — it&apos;s a classic color, not a passing trend. The two-tone concept is also well-established. That said, the specific execution matters: clean lines, quality hardware, and a timeless white on the uppers all contribute to a look that ages well rather than dating quickly.
-            </p>
-
-            <h3>Can I paint just the island and leave the perimeter cabinets as-is?</h3>
-            <p>
-              Yes — island-only projects are common and entirely practical. If the perimeter cabinets are in good condition and a color you&apos;re happy with, painting just the island is a cost-effective way to achieve the two-tone look without a full kitchen repaint.
-            </p>
-
-            <h3>Does navy show fingerprints more than lighter colors?</h3>
-            <p>
-              Darker cabinet colors can show fingerprints and smudges more readily than whites or light neutrals, especially in kitchens with young children. A higher-sheen finish (satin or semi-gloss) with a damp cloth wipes clean easily. Most homeowners find the look worth the marginally higher maintenance.
-            </p>
-
-            <h3>What hardware finish looks best with navy cabinets in a Houston home?</h3>
-            <p>
-              Matte black is the most popular hardware choice with navy in the current Houston market — it&apos;s clean, modern, and works with almost any countertop. Brushed gold or antique brass is a warm, transitional alternative that works particularly well when the kitchen has warm-toned flooring and countertops.
-            </p>
+            {faqs.map((faq) => (
+              <Fragment key={faq.question}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </Fragment>
+            ))}
 
           </div>
         </article>

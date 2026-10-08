@@ -85,61 +85,6 @@ const SERVICE_JSONLD = {
   },
 };
 
-const FAQ_JSONLD = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does soft washing cost in Houston?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Soft washing in Houston typically ranges from a few hundred dollars to over a thousand, depending on home size, surface condition, and accessibility. Most single-story homes fall between $350 and $650, and larger two-story homes between $550 and $1,000. Houston Superior Painting provides free on-site quotes with no minimum charge.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is soft washing safe for painted surfaces?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Soft washing is specifically designed to clean painted and delicate surfaces safely. It uses low pressure (under 500 PSI) combined with biodegradable cleaning solutions, so it lifts mold, algae, and dirt without stripping paint, etching stucco, or forcing water behind siding.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long do soft washing results last?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most Houston homes stay visibly cleaner for 12–24 months depending on shade, tree cover, and humidity. Because soft washing kills mold and algae at the root rather than just rinsing the surface, results last significantly longer than a standard water rinse.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you use bleach for soft washing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We use professional-grade cleaning solutions formulated to kill algae, mold, and mildew while protecting surrounding landscaping. Plants are pre-wet and covered, solutions are applied at safe concentrations, and foliage is thoroughly rinsed after the wash. We have zero plant-damage claims to date.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the difference between soft washing and pressure washing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Pressure washing uses high-PSI water for hard surfaces like concrete and brick. Soft washing uses low pressure under 500 PSI plus biodegradable detergents for delicate surfaces like painted siding, stucco, roofs, and windows. Using the wrong method can damage surfaces, so we match the method to each material.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Should I soft wash my home before painting?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Soft washing is one of the most important steps before exterior painting. Removing mildew, dirt, chalking, and contaminants allows primers and paint to bond properly for maximum durability. Pre-paint soft washing is included with all Houston Superior Painting exterior projects.",
-      },
-    },
-  ],
-};
-
 const BREADCRUMB_JSONLD = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -225,6 +170,18 @@ const faqItems = [
   { q: "What's the difference between soft washing and pressure washing?", a: "Pressure washing uses high-PSI water for hard surfaces like concrete and brick. Soft washing uses low pressure under 500 PSI plus detergents for delicate surfaces like siding, stucco, and roofs. We match the method to the material." },
   { q: "Should I soft wash before painting?", a: "Yes. Removing mildew, dirt, and chalking lets primer and paint bond properly for maximum durability. Pre-paint soft washing is included with all our exterior painting projects." },
 ];
+
+// FAQPage schema is generated from the same faqItems rendered on the page,
+// so the structured data always matches the visible questions and answers.
+const FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
 
 export default function SoftWashingHoustonPage() {
   return (

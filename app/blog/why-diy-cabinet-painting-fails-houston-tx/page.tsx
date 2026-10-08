@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Fragment } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Header } from "@/components/header"
@@ -51,6 +52,32 @@ const breadcrumbSchema = {
   ]
 }
 
+// Single source for the FAQ: the visible questions/answers and the FAQPage
+// JSON-LD are both rendered from this array, so the schema always matches
+// the text on the page.
+const faqs: { question: string; answer: string }[] = [
+  {
+    question: "Is it possible to fix a bad DIY cabinet paint job, or do you have to start over?",
+    answer: "It depends on the extent of the failure. Minor imperfections in an otherwise sound DIY job can sometimes be addressed with additional prep and a professional finish coat. If the existing paint is lifting, chipping, or peeling, it typically needs to be stripped back before proper painting can begin — which is more labor-intensive than starting from scratch.",
+  },
+  {
+    question: "What's the biggest single mistake DIY cabinet painters make?",
+    answer: "Using a brush or roller instead of spray equipment is the most universally visible mistake — it's what makes most DIY cabinet jobs look like DIY cabinet jobs. A close second is failing to properly degrease surfaces before any prep work begins.",
+  },
+  {
+    question: "Can I rent spray equipment and do this myself?",
+    answer: "Rental sprayers are available, but using them correctly requires practice. Spray distance, overlap pattern, product thinning, and technique all affect the result significantly. Many homeowners who rent sprayers for the first time experience runs, uneven coverage, or overspray on surfaces that weren't properly masked. If you're committed to DIY, consider practicing on scrap material first.",
+  },
+  {
+    question: "What paint should I actually use if I do attempt DIY cabinet painting?",
+    answer: "Use a waterborne alkyd enamel specifically designed for cabinets and trim — not standard interior wall paint. Brands like Benjamin Moore Advance and Sherwin-Williams Emerald Urethane Trim Enamel are formulated for hardness and durability far beyond standard interior paint. Pair with a shellac-based primer on oak surfaces.",
+  },
+  {
+    question: "How long should I wait before using cabinets after painting?",
+    answer: "Even after paint feels dry, the finish continues curing. Most professional cabinet finishes need 7–14 days before they reach full hardness. During this period, handle doors gently and avoid cleaning with anything other than a very lightly damp cloth. Full cure time before heavy cleaning is typically 30 days.",
+  },
+]
+
 export default function DIYCabinetBlog() {
   return (
     <>
@@ -92,48 +119,11 @@ export default function DIYCabinetBlog() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What's the biggest single mistake DIY cabinet painters make?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Using a brush or roller instead of spray equipment is the most universally visible mistake — it's what makes most DIY cabinet jobs look like DIY cabinet jobs. A close second is failing to properly degrease surfaces before any prep work begins."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Is it possible to fix a bad DIY cabinet paint job or do you have to start over?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "It depends on the failure extent. Minor imperfections can sometimes be addressed with additional prep and a professional finish coat. If paint is lifting or peeling, it typically needs to be stripped before proper painting can begin — more labor-intensive than starting fresh."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What paint should I use for DIY cabinet painting?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Use a waterborne alkyd enamel designed for cabinets and trim — such as Benjamin Moore Advance or Sherwin-Williams Emerald Urethane Trim Enamel — not standard interior wall paint. Pair with a shellac-based primer on oak surfaces."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can I rent spray equipment and do this myself?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Rental sprayers are available, but using them correctly requires practice. Spray distance, overlap pattern, product thinning, and technique all affect the result. Many first-time users experience runs, uneven coverage, or overspray. If committed to DIY, practice on scrap material first."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How long should I wait before using cabinets after painting?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Even after paint feels dry, the finish continues curing. Most professional cabinet finishes need 7–14 days before reaching full hardness. Handle doors gently during this period, and wait roughly 30 days before heavy cleaning."
-                }
-              }
-            ]
+            "mainEntity": faqs.map((faq) => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+            }))
           })
         }}
       />
@@ -300,30 +290,12 @@ export default function DIYCabinetBlog() {
             {/* FAQ Section */}
             <h2>Frequently Asked Questions</h2>
 
-            <h3>Is it possible to fix a bad DIY cabinet paint job, or do you have to start over?</h3>
-            <p>
-              It depends on the extent of the failure. Minor imperfections in an otherwise sound DIY job can sometimes be addressed with additional prep and a professional finish coat. If the existing paint is lifting, chipping, or peeling, it typically needs to be stripped back before proper painting can begin — which is more labor-intensive than starting from scratch.
-            </p>
-
-            <h3>What&apos;s the biggest single mistake DIY cabinet painters make?</h3>
-            <p>
-              Using a brush or roller instead of spray equipment is the most universally visible mistake — it&apos;s what makes most DIY cabinet jobs look like DIY cabinet jobs. A close second is failing to properly degrease surfaces before any prep work begins.
-            </p>
-
-            <h3>Can I rent spray equipment and do this myself?</h3>
-            <p>
-              Rental sprayers are available, but using them correctly requires practice. Spray distance, overlap pattern, product thinning, and technique all affect the result significantly. Many homeowners who rent sprayers for the first time experience runs, uneven coverage, or overspray on surfaces that weren&apos;t properly masked. If you&apos;re committed to DIY, consider practicing on scrap material first.
-            </p>
-
-            <h3>What paint should I actually use if I do attempt DIY cabinet painting?</h3>
-            <p>
-              Use a waterborne alkyd enamel specifically designed for cabinets and trim — not standard interior wall paint. Brands like Benjamin Moore Advance and Sherwin-Williams Emerald Urethane Trim Enamel are formulated for hardness and durability far beyond standard interior paint. Pair with a shellac-based primer on oak surfaces.
-            </p>
-
-            <h3>How long should I wait before using cabinets after painting?</h3>
-            <p>
-              Even after paint feels dry, the finish continues curing. Most professional cabinet finishes need 7–14 days before they reach full hardness. During this period, handle doors gently and avoid cleaning with anything other than a very lightly damp cloth. Full cure time before heavy cleaning is typically 30 days.
-            </p>
+            {faqs.map((faq) => (
+              <Fragment key={faq.question}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </Fragment>
+            ))}
 
           </div>
         </article>

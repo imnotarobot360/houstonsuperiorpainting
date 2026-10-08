@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Fragment } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Header } from "@/components/header"
@@ -52,6 +53,32 @@ const breadcrumbSchema = {
   ]
 }
 
+// Single source for the FAQ: the visible questions/answers and the FAQPage
+// JSON-LD are both rendered from this array, so the schema always matches
+// the text on the page.
+const faqs: { question: string; answer: string }[] = [
+  {
+    question: "What's the most popular cabinet painting color in Katy TX and Sugar Land TX right now?",
+    answer: "White — specifically warm whites like Alabaster and White Dove — remains the most requested cabinet color in both markets by a significant margin. Two-tone kitchens with white uppers and a navy or sage island are the fastest-growing style. Greige is consistently popular for homeowners who want warmth without going fully white.",
+  },
+  {
+    question: "Can professional cabinet painting cover oak grain completely?",
+    answer: "Yes — when done correctly. Oak requires grain filler applied before primer to close the open wood grain, and a tannin-blocking primer to prevent the wood's natural oils from bleeding through the finish. A professional cabinet painter who regularly works on oak cabinets handles both steps as a matter of course.",
+  },
+  {
+    question: "Is cabinet painting a good investment before selling in Katy or Sugar Land TX?",
+    answer: `Consistently yes. A dated-looking kitchen is one of the top objections buyers have in the Houston suburb resale market. Professional cabinet painting in a current, neutral color directly improves listing photos, buyer perception, and sometimes sale price. The investment typically runs ${PRICES_2026.cabinetsPerKitchen} for most kitchens and can affect buyer offers meaningfully.`,
+  },
+  {
+    question: "How do I pick between white, navy, and greige for my cabinets?",
+    answer: "Start with your countertops and flooring — they're not changing. If you have light-toned countertops and flooring, all three options work well. Navy works best with light quartz or marble-look countertops. Greige works best with warm stone or granite. White is the most versatile. A color consultation in your actual kitchen, with large samples of your top contenders, makes the decision clear.",
+  },
+  {
+    question: "Can you paint just some of my cabinets — like only the lowers?",
+    answer: "Yes. Upper-only, lower-only, and island-only projects are all common. The most important thing is that the transition points between painted and unpainted cabinets are clean and deliberate. A professional painter will discuss where those transitions land and how to handle them so the result looks intentional.",
+  },
+]
+
 export default function CabinetTransformationsBlog() {
   return (
     <>
@@ -93,48 +120,11 @@ export default function CabinetTransformationsBlog() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What's the most popular cabinet painting color in Katy TX and Sugar Land TX right now?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "White — specifically Alabaster and White Dove — remains the most requested cabinet color in both markets. Two-tone kitchens with white uppers and a navy or sage island are the fastest-growing style. Greige is consistently popular for homeowners who want warmth without going fully white."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can professional cabinet painting cover oak grain completely?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, when done correctly. Oak requires grain filler to close the open wood grain and a tannin-blocking primer to prevent bleed-through. A professional cabinet painter who regularly works on oak handles both steps as a matter of course."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Is cabinet painting a good investment before selling in Katy or Sugar Land TX?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": `Consistently yes. Professional cabinet painting in a current, neutral color directly improves listing photos and buyer perception. The investment typically runs ${PRICES_2026.cabinetsPerKitchen} for most kitchens and can affect buyer offers meaningfully.`
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How do I pick between white, navy, and greige for my cabinets?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Start with your countertops and flooring — they're not changing. Navy works best with light quartz or marble-look countertops. Greige works best with warm stone or granite. White is the most versatile. A color consultation in your actual kitchen makes the decision clear."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can you paint just some of my cabinets — like only the lowers?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. Upper-only, lower-only, and island-only projects are all common. The most important thing is that the transition points between painted and unpainted cabinets are clean and deliberate so the result looks intentional."
-                }
-              }
-            ]
+            "mainEntity": faqs.map((faq) => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+            }))
           })
         }}
       />
@@ -339,30 +329,12 @@ export default function CabinetTransformationsBlog() {
             {/* FAQ Section */}
             <h2>Frequently Asked Questions</h2>
 
-            <h3>What&apos;s the most popular cabinet painting color in Katy TX and Sugar Land TX right now?</h3>
-            <p>
-              White — specifically warm whites like Alabaster and White Dove — remains the most requested cabinet color in both markets by a significant margin. Two-tone kitchens with white uppers and a navy or sage island are the fastest-growing style. Greige is consistently popular for homeowners who want warmth without going fully white.
-            </p>
-
-            <h3>Can professional cabinet painting cover oak grain completely?</h3>
-            <p>
-              Yes — when done correctly. Oak requires grain filler applied before primer to close the open wood grain, and a tannin-blocking primer to prevent the wood&apos;s natural oils from bleeding through the finish. A professional cabinet painter who regularly works on oak cabinets handles both steps as a matter of course.
-            </p>
-
-            <h3>Is cabinet painting a good investment before selling in Katy or Sugar Land TX?</h3>
-            <p>
-              Consistently yes. A dated-looking kitchen is one of the top objections buyers have in the Houston suburb resale market. Professional cabinet painting in a current, neutral color directly improves listing photos, buyer perception, and sometimes sale price. The investment typically runs {PRICES_2026.cabinetsPerKitchen} for most kitchens and can affect buyer offers meaningfully.
-            </p>
-
-            <h3>How do I pick between white, navy, and greige for my cabinets?</h3>
-            <p>
-              Start with your countertops and flooring — they&apos;re not changing. If you have light-toned countertops and flooring, all three options work well. Navy works best with light quartz or marble-look countertops. Greige works best with warm stone or granite. White is the most versatile. A color consultation in your actual kitchen, with large samples of your top contenders, makes the decision clear.
-            </p>
-
-            <h3>Can you paint just some of my cabinets — like only the lowers?</h3>
-            <p>
-              Yes. Upper-only, lower-only, and island-only projects are all common. The most important thing is that the transition points between painted and unpainted cabinets are clean and deliberate. A professional painter will discuss where those transitions land and how to handle them so the result looks intentional.
-            </p>
+            {faqs.map((faq) => (
+              <Fragment key={faq.question}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </Fragment>
+            ))}
 
           </div>
         </article>

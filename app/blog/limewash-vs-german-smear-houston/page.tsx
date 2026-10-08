@@ -64,10 +64,10 @@ const relatedPosts = [
     image: "/images/blog/exterior-paint-durability-houston.jpg"
   },
   {
-    title: "Houston Paint Color Trends 2026",
-    href: "/best-paint-colors-houston-homes",
-    excerpt: "The most popular exterior colors for 2026.",
-    image: "/images/blog/paint-color-trends-2026.jpg"
+    title: "Painting Brick in Houston: Paint, Limewash, or Leave It",
+    href: "/blog/painting-brick-houston",
+    excerpt: "When painting brick makes sense, when limewash is the better finish, and when to leave it alone.",
+    image: "/images/projects/west-university-painted-brick/01-front-and-garage.jpg"
   }
 ]
 

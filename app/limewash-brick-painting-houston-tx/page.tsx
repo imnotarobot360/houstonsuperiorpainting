@@ -213,6 +213,8 @@ A typical exterior limewash takes 3-5 days, longer than standard exterior painti
   ],
   relatedServices: [
     { title: "Venetian Plaster", href: "/venetian-plaster-houston-tx" },
+    { title: "Paint vs Limewash vs Leave It", href: "/blog/painting-brick-houston" },
+    { title: "Limewash vs German Smear", href: "/blog/limewash-vs-german-smear-houston" },
     { title: "Exterior Painting", href: "/exterior-painting-houston-tx" },
     { title: "Interior Painting", href: "/interior-painting-houston-tx" },
     { title: "Pressure Washing", href: "/pressure-washing-houston-tx" },

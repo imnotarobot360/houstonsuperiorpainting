@@ -47,21 +47,6 @@ const SERVICE_JSONLD = {
   offers: { "@type": "Offer", priceCurrency: "USD", priceSpecification: { "@type": "PriceSpecification", minPrice: 4000, maxPrice: 18000, priceCurrency: "USD" }, availability: "https://schema.org/InStock" },
 };
 
-const FAQ_JSONLD = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much does it cost to remove a load bearing wall in Houston?", acceptedAnswer: { "@type": "Answer", text: "Load bearing wall removal in Houston typically costs $4,000–$15,000+. Simple removals with a single LVL beam run $4,000–$7,500. Walls with HVAC, plumbing, or electrical re-routing run $7,500–$12,000. Long spans requiring steel beams or multi-story support run $12,000–$18,000+. Pricing includes structural engineer letter, City of Houston permit, beam install, drywall repair, texture match, and paint." } },
-    { "@type": "Question", name: "How do I know if a wall is load bearing?", acceptedAnswer: { "@type": "Answer", text: "Load bearing walls typically run perpendicular to ceiling joists, sit directly above another wall or beam in the level below, are exterior walls, or are central walls in the home's footprint. Never assume — we provide free on-site assessment and bring a structural engineer if the answer isn't obvious. A wrong assumption can collapse a ceiling." } },
-    { "@type": "Question", name: "Do you handle the engineer letter and permit?", acceptedAnswer: { "@type": "Answer", text: "Yes. Houston Superior Painting handles every step: licensed structural engineer assessment and stamped letter, City of Houston building permit application, plan submission, and inspection coordination. You don't need to hire anyone separately." } },
-    { "@type": "Question", name: "How long does load bearing wall removal take?", acceptedAnswer: { "@type": "Answer", text: "Total project: 2–4 weeks. Breakdown: engineer assessment 1 week, permit 1–2 weeks, demo and beam install 2–4 days, drywall and texture 3–5 days, paint 1–2 days. We can often run permit and demo prep in parallel to compress timeline." } },
-    { "@type": "Question", name: "Will my insurance or HOA require approval?", acceptedAnswer: { "@type": "Answer", text: "Insurance typically doesn't require notice but check your policy. HOAs in Houston (Cinco Ranch, Bridgeland, Riverstone, etc.) often require ARB approval for any structural change. We provide engineer letter, plans, and rendering for ARB submission and handle revisions if requested." } },
-    { "@type": "Question", name: "What about electrical, plumbing, and HVAC inside the wall?", acceptedAnswer: { "@type": "Answer", text: "We coordinate licensed electricians, plumbers, and HVAC techs to re-route utilities found inside the wall. These are quoted as separate line items in the bid so you see exactly what each trade costs. Houston Superior Painting manages the schedule so each trade arrives at the right phase." } },
-    { "@type": "Question", name: "Do you do flush beams or drop beams?", acceptedAnswer: { "@type": "Answer", text: "Both. Flush beams (hidden inside the ceiling) require structural engineering, joist hangers, and often LVL or steel — more expensive but cleaner aesthetics. Drop beams sit below the ceiling line and are less expensive but visible. The engineer recommends which is feasible based on span, load, and existing framing." } },
-    { "@type": "Question", name: "What areas do you serve for wall removal?", acceptedAnswer: { "@type": "Answer", text: "Houston Superior Painting performs load bearing wall removal throughout Houston, Katy, Cypress, Sugar Land, Richmond, Pearland, Memorial, The Heights, Bellaire, and The Woodlands TX. Free assessments at (346) 594-5960." } },
-  ],
-};
-
 const BREADCRUMB_JSONLD = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -110,6 +95,18 @@ const faqItems = [
   { q: "Flush beam or drop beam — which is better?", a: "Flush beams hide inside the ceiling for a clean look but cost more (LVL or steel, more engineering). Drop beams sit below the ceiling and cost less but are visible. The engineer recommends based on span, load, and existing framing." },
   { q: "Can you do this for a kitchen-to-living-room opening?", a: "This is our most common project. Removing the wall between kitchen and living room is the #1 open-concept request in Houston. We coordinate with cabinet, flooring, and counter contractors so the finished result blends seamlessly." },
 ];
+
+// FAQPage schema is generated from the same faqItems rendered on the page,
+// so the structured data always matches the visible questions and answers.
+const FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
 
 export default function LoadBearingWallRemovalHoustonPage() {
   return (
