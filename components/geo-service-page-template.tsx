@@ -84,6 +84,8 @@ const ZONE_PROJECT_PLACES: Record<string, string[]> = {
   richmond: ["Richmond"],
   fulshear: ["Fulshear"],
   "cypress-bridgeland": ["Cypress"],
+  // Richmond borders Sugar Land; the card is labelled Richmond, never Sugar Land.
+  "sugar-land": ["Richmond"],
   // Fulshear borders Katy; the card is labelled Fulshear, never Katy.
   katy: ["Fulshear"],
   "katy-cinco-ranch": ["Fulshear"],
@@ -386,7 +388,7 @@ export function GeoServicePageTemplate({
           <section className="py-16 bg-muted/30">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-3xl mx-auto">
-                <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">Project Near {place}</h2>
+                <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">{projects.length > 1 ? "Projects" : "Project"} Near {place}</h2>
                 <div className="grid gap-4">
                   {projects.map((p) => (
                     <Link
