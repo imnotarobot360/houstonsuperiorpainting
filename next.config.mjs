@@ -265,6 +265,15 @@ const nextConfig = {
       // Already canonicalised to the service page; the 301 finishes the job.
       { source: '/blog/soft-washing-houston-tx', destination: '/soft-washing-houston-tx', permanent: true },
 
+      // ─── Oct 8, 2026 (approved by Juan; docs/aeo-geo-implementation-report-2026-10.md §5) ──
+      // Tanglewood pages had no local project and 67–74% the same text as their
+      // siblings; the Houston service hubs own these queries.
+      { source: '/interior-painting-tanglewood', destination: '/interior-painting-houston-tx', permanent: true },
+      { source: '/exterior-painting-tanglewood', destination: '/exterior-painting-houston-tx', permanent: true },
+      { source: '/cabinet-refinishing-tanglewood', destination: '/cabinet-refinishing-houston-tx', permanent: true },
+      // Same intent as /interior-painting-memorial, which has the real Memorial project.
+      { source: '/luxury-interior-painting-memorial', destination: '/interior-painting-memorial', permanent: true },
+
       // Cypress interior page renamed to the community-scoped canonical URL.
       { source: '/interior-painting-cypress-tx', destination: '/interior-painting-cypress-bridgeland', permanent: true },
     ]

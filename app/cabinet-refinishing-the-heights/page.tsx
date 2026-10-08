@@ -79,7 +79,6 @@ export default function CabinetRefinishingHeightsPage() {
       ]}
       relatedPages={[
         { title: "Cabinet Refinishing Memorial", href: "/cabinet-refinishing-memorial" },
-        { title: "Cabinet Refinishing Tanglewood", href: "/cabinet-refinishing-tanglewood" },
         { title: "Cabinet Refinishing Bellaire", href: "/cabinet-refinishing-bellaire-west-university" },
         { title: "Cabinet Refinishing Sugar Land", href: "/cabinet-refinishing-sugar-land" },
         { title: "Cabinet Refinishing Katy", href: "/cabinet-refinishing-katy-cinco-ranch" },

@@ -87,7 +87,6 @@ export default function ExteriorPaintingMemorialPage() {
         { title: "Interior Painting Memorial", href: "/interior-painting-memorial" },
         { title: "Brick Painting Memorial", href: "/brick-painting-memorial" },
         { title: "Painters in Memorial", href: "/painters-memorial-tx" },
-        { title: "Exterior Painting Tanglewood", href: "/exterior-painting-tanglewood" },
         { title: "Exterior Painting Bellaire & West University", href: "/exterior-painting-bellaire-west-university" },
         { title: "Wood Rot Repair", href: "/wood-rot-repair-houston-tx" },
       ]}

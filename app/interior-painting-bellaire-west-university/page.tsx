@@ -79,7 +79,6 @@ export default function InteriorPaintingBellaireWestUPage() {
       ]}
       relatedPages={[
         { title: "Interior Painting Memorial", href: "/interior-painting-memorial" },
-        { title: "Interior Painting Tanglewood", href: "/interior-painting-tanglewood" },
         { title: "Interior Painting The Heights", href: "/interior-painting-the-heights" },
         { title: "Interior Painting Sugar Land", href: "/interior-painting-sugar-land" },
         { title: "Interior Painting Katy", href: "/interior-painting-katy-cinco-ranch" },

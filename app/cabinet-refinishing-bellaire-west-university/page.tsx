@@ -75,7 +75,6 @@ export default function CabinetRefinishingBellaireWestUPage() {
       ]}
       relatedPages={[
         { title: "Cabinet Refinishing Memorial", href: "/cabinet-refinishing-memorial" },
-        { title: "Cabinet Refinishing Tanglewood", href: "/cabinet-refinishing-tanglewood" },
         { title: "Cabinet Refinishing The Heights", href: "/cabinet-refinishing-the-heights" },
         { title: "Cabinet Refinishing Sugar Land", href: "/cabinet-refinishing-sugar-land" },
         { title: "Cabinet Refinishing Katy", href: "/cabinet-refinishing-katy-cinco-ranch" },

@@ -79,7 +79,6 @@ export default function ExteriorPaintingHeightsPage() {
       ]}
       relatedPages={[
         { title: "Exterior Painting Memorial", href: "/exterior-painting-memorial" },
-        { title: "Exterior Painting Tanglewood", href: "/exterior-painting-tanglewood" },
         { title: "Exterior Painting Bellaire", href: "/exterior-painting-bellaire-west-university" },
         { title: "Exterior Painting Sugar Land", href: "/exterior-painting-sugar-land" },
         { title: "Exterior Painting Katy", href: "/exterior-painting-katy-cinco-ranch" },

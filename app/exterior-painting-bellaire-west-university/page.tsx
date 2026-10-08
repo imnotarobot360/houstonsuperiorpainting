@@ -79,7 +79,6 @@ export default function ExteriorPaintingBellaireWestUPage() {
       ]}
       relatedPages={[
         { title: "Exterior Painting Memorial", href: "/exterior-painting-memorial" },
-        { title: "Exterior Painting Tanglewood", href: "/exterior-painting-tanglewood" },
         { title: "Exterior Painting The Heights", href: "/exterior-painting-the-heights" },
         { title: "Exterior Painting Sugar Land", href: "/exterior-painting-sugar-land" },
         { title: "Exterior Painting Katy", href: "/exterior-painting-katy-cinco-ranch" },

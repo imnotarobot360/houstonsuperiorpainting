@@ -86,8 +86,7 @@ export default function LuxuryExteriorPaintingRiverOaksPage() {
         { title: "Exterior Painting Houston", href: "/exterior-painting-houston-tx" },
         { title: "Painters in River Oaks", href: "/painters-river-oaks-tx" },
         { title: "Luxury House Painters Houston", href: "/luxury-house-painters-houston" },
-        { title: "Luxury Interior Painting Memorial", href: "/luxury-interior-painting-memorial" },
-        { title: "Exterior Painting Tanglewood", href: "/exterior-painting-tanglewood" },
+        { title: "Interior Painting Memorial", href: "/interior-painting-memorial" },
         { title: "Wood Rot Repair", href: "/wood-rot-repair-houston-tx" },
         { title: "Limewash & Brick Painting Houston", href: "/limewash-brick-painting-houston-tx" },
       ]}

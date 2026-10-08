@@ -73,9 +73,9 @@ Fulshear. **No project yet:** Katy, Sugar Land, Magnolia (priority cities), Tomb
 
 | Page(s) | Problem | Proposal |
 |---|---|---|
-| interior/exterior/cabinet-refinishing-**tanglewood** | No local project, 67–74% same text as sibling pages | 301 → `/interior-painting-houston-tx`, `/exterior-painting-houston-tx`, `/cabinet-refinishing-houston-tx` |
+| interior/exterior/cabinet-refinishing-**tanglewood** | No local project, 67–74% same text as sibling pages | **DONE Oct 8** — 301 → `/interior-painting-houston-tx`, `/exterior-painting-houston-tx`, `/cabinet-refinishing-houston-tx` |
 | interior/exterior-painting-**the-woodlands** | No project, thin | Keep until a Woodlands job is photographed, then rewrite; else 301 → `/painters-the-woodlands-tx` |
-| luxury-interior-painting-memorial | Same intent as `/interior-painting-memorial` (which has the real project) | 301 → `/interior-painting-memorial` |
+| luxury-interior-painting-memorial | Same intent as `/interior-painting-memorial` (which has the real project) | **DONE Oct 8** — 301 → `/interior-painting-memorial` |
 | interior/exterior/cabinet **sugar-land** | Priority city, no project | Keep; show the Richmond project as "nearby" (as Katy shows Fulshear) — say yes and I'll wire it |
 
 ## 6. Case studies (point 9)

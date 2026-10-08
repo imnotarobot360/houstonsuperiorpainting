@@ -86,7 +86,6 @@ export default function CabinetRefinishingMemorialPage() {
         { title: "Cabinet Refinishing Houston", href: "/cabinet-refinishing-houston-tx" },
         { title: "Interior Painting Memorial", href: "/interior-painting-memorial" },
         { title: "Painters in Memorial", href: "/painters-memorial-tx" },
-        { title: "Cabinet Refinishing Tanglewood", href: "/cabinet-refinishing-tanglewood" },
         { title: "Cabinet Refinishing Bellaire & West University", href: "/cabinet-refinishing-bellaire-west-university" },
         { title: "Cabinet Refinishing The Heights", href: "/cabinet-refinishing-the-heights" },
       ]}

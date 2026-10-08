@@ -87,7 +87,6 @@ export default function InteriorPaintingMemorialPage() {
         { title: "Exterior Painting Memorial", href: "/exterior-painting-memorial" },
         { title: "Cabinet Refinishing Memorial", href: "/cabinet-refinishing-memorial" },
         { title: "Painters in Memorial", href: "/painters-memorial-tx" },
-        { title: "Interior Painting Tanglewood", href: "/interior-painting-tanglewood" },
         { title: "Interior Painting Bellaire & West University", href: "/interior-painting-bellaire-west-university" },
         { title: "Interior Painting The Heights", href: "/interior-painting-the-heights" },
       ]}

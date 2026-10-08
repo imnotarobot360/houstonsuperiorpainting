@@ -87,7 +87,7 @@ export default function LuxuryHousePaintersHoustonPage() {
         { title: "Exterior Painting Houston", href: "/exterior-painting-houston-tx" },
         { title: "Cabinet Refinishing Houston", href: "/cabinet-refinishing-houston-tx" },
         { title: "Venetian Plaster", href: "/venetian-plaster-houston-tx" },
-        { title: "Luxury Interior Painting Memorial", href: "/luxury-interior-painting-memorial" },
+        { title: "Interior Painting Memorial", href: "/interior-painting-memorial" },
         { title: "Luxury Exterior Painting River Oaks", href: "/luxury-exterior-painting-river-oaks" },
         { title: "Painters in Houston", href: "/painters-houston-tx" },
       ]}
