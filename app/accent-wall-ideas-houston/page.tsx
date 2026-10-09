@@ -1,7 +1,9 @@
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { BUSINESS, PHONE_HREF, SMS_HREF } from "@/lib/business";
+import { BUSINESS, PHONE_HREF, SMS_HREF, PRICES_2026 } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Accent Wall Ideas Houston TX | Modern Designs for 2026",
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
 const faqs = [
   { q: "What is the most popular accent wall color in Houston right now?", a: "In 2026, deep greens (like Sherwin-Williams Pewter Green) and warm terracottas are the most popular accent wall colors in Houston homes. These earth tones complement Texas natural light beautifully." },
   { q: "Can you do a limewash accent wall?", a: "Yes! Limewash is one of our most requested accent wall finishes. It creates a soft, European plaster look with natural depth and variation. We use Romabio limewash products for authentic results." },
-  { q: "How much does an accent wall cost in Houston?", a: "A single accent wall typically costs $200-$600 depending on size, technique, and prep work. Specialty finishes like limewash or German smear run $400-$1,200. We provide free detailed estimates." },
+  { q: "How much does an accent wall cost in Houston?", a: `A single painted accent wall typically costs ${PRICES_2026.accentWall} depending on size, color and prep work. Specialty finishes like limewash, German smear or Venetian plaster are quoted on site. We provide free detailed estimates.` },
   { q: "Which wall should be the accent wall?", a: "The best accent wall is usually the focal wall -- the wall you see first when entering the room. In bedrooms, it is typically the headboard wall. In living rooms, the fireplace wall or the wall behind the TV." },
   { q: "Do accent walls make a room look smaller?", a: "Not if done correctly. Dark accent walls can actually add depth and make a room feel larger. The key is limiting the bold color to one wall and using lighter, complementary tones on the remaining three walls." },
   { q: "How long does it take to paint an accent wall?", a: "A single accent wall takes 3-5 hours for standard paint (including prep and two coats). Specialty finishes like limewash or texture work may take a full day. The wall is typically dry and usable within 24 hours." },
@@ -38,6 +40,7 @@ const faqs = [
 export default function AccentWallIdeasHouston() {
   return (
     <>
+      <Header />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -80,7 +83,7 @@ export default function AccentWallIdeasHouston() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold mb-3">Quick Answer</h2>
           <p className="text-lg leading-relaxed">
-            The most popular accent wall ideas for Houston homes in 2026 include deep greens, warm terracottas, limewash finishes, and textured plaster effects. A single accent wall costs $200-$600 for standard paint or $400-$1,200 for specialty finishes like limewash. Houston Superior Painting creates stunning accent walls across Houston, Katy, and Cypress. Call{" "}
+            The most popular accent wall ideas for Houston homes in 2026 include deep greens, warm terracottas, limewash finishes, and textured plaster effects. A single painted accent wall costs {PRICES_2026.accentWall}; specialty finishes like limewash are quoted on site. Houston Superior Painting creates stunning accent walls across Houston, Katy, and Cypress. Call{" "}
             <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a> for a free consultation.
           </p>
         </div>
@@ -174,12 +177,12 @@ export default function AccentWallIdeasHouston() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
-                <tr><td className="p-4">Standard paint (2 coats)</td><td className="p-4 font-semibold">$200 &ndash; $400</td><td className="p-4">3-5 hours</td></tr>
-                <tr><td className="p-4">Color-blocked geometric</td><td className="p-4 font-semibold">$300 &ndash; $600</td><td className="p-4">4-6 hours</td></tr>
-                <tr><td className="p-4">Limewash finish</td><td className="p-4 font-semibold">$400 &ndash; $900</td><td className="p-4">1 day</td></tr>
-                <tr><td className="p-4">German smear on brick</td><td className="p-4 font-semibold">$500 &ndash; $1,200</td><td className="p-4">1-2 days</td></tr>
-                <tr><td className="p-4">Venetian plaster / texture</td><td className="p-4 font-semibold">$600 &ndash; $1,500</td><td className="p-4">1-2 days</td></tr>
-                <tr><td className="p-4">Board and batten + paint</td><td className="p-4 font-semibold">$800 &ndash; $2,000</td><td className="p-4">2-3 days</td></tr>
+                <tr><td className="p-4">Standard paint (2 coats)</td><td className="p-4 font-semibold">{PRICES_2026.accentWall}</td><td className="p-4">3-5 hours</td></tr>
+                <tr><td className="p-4">Color-blocked geometric</td><td className="p-4 font-semibold">Quoted on site</td><td className="p-4">4-6 hours</td></tr>
+                <tr><td className="p-4">Limewash finish</td><td className="p-4 font-semibold">Quoted on site</td><td className="p-4">1 day</td></tr>
+                <tr><td className="p-4">German smear on brick</td><td className="p-4 font-semibold">Quoted on site</td><td className="p-4">1-2 days</td></tr>
+                <tr><td className="p-4">Venetian plaster / texture</td><td className="p-4 font-semibold">Quoted on site</td><td className="p-4">1-2 days</td></tr>
+                <tr><td className="p-4">Board and batten + paint</td><td className="p-4 font-semibold">Quoted on site</td><td className="p-4">2-3 days</td></tr>
               </tbody>
             </table>
           </div>
@@ -241,6 +244,7 @@ export default function AccentWallIdeasHouston() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

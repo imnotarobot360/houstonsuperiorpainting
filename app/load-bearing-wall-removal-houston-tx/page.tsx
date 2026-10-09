@@ -1,3 +1,5 @@
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 // app/load-bearing-wall-removal-houston-tx/page.tsx
 // Houston Superior Painting — Load Bearing Wall Removal page
 
@@ -111,6 +113,7 @@ const FAQ_JSONLD = {
 export default function LoadBearingWallRemovalHoustonPage() {
   return (
     <>
+      <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_JSONLD) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSONLD) }} />
@@ -329,6 +332,7 @@ export default function LoadBearingWallRemovalHoustonPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

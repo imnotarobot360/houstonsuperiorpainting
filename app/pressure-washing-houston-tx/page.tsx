@@ -1,3 +1,5 @@
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 // app/pressure-washing-houston-tx/page.tsx
 // Houston Superior Painting — Pressure Washing service page
 
@@ -130,6 +132,7 @@ const FAQ_JSONLD = {
 export default function PressureWashingHoustonPage() {
   return (
     <>
+      <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_JSONLD) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSONLD) }} />
@@ -350,6 +353,7 @@ export default function PressureWashingHoustonPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
