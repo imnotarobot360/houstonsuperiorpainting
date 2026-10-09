@@ -33,6 +33,7 @@ export default function InteriorPaintingCostHouston() {
   return (
     <>
       <Header />
+      <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
         articleNode({ path: "/interior-painting-cost-houston", headline: "How Much Does Interior Painting Cost in Houston in 2026?", description: `Interior painting in Houston costs ${PRICES_2026.interiorPerSqFt} per square foot in 2026: ${PRICES_2026.singleRoom} per room and ${PRICES_2026.fullInterior2500} for a full 2,500 sq ft interior.`, datePublished: "2026-05-16" }),
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Interior Painting Cost Houston", "item": "https://houstonsuperiorpainting.com/interior-painting-cost-houston" }] },
@@ -167,6 +168,7 @@ export default function InteriorPaintingCostHouston() {
         ))}
       </div></div></section>
       <AuthorByline />
+      </main>
       <Footer />
     </>
   )

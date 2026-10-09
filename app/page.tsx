@@ -71,6 +71,7 @@ export default function Home() {
   return (
     <>
       <Header overHero />
+      <main>
       <LuxuryHero />
       <LuxuryAssurance />
       <LuxuryTrust />
@@ -88,6 +89,7 @@ export default function Home() {
       <HomeKeyLinks />
       <FAQ items={homeFaqs} variant="default" />
       <LuxuryCTA />
+      </main>
       <Footer />
     </>
   )

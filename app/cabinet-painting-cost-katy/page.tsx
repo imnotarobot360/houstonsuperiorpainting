@@ -33,6 +33,7 @@ export default function CabinetPaintingCostKaty() {
   return (
     <>
       <Header />
+      <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
         { "@type": "Article", "headline": "How Much Does Cabinet Painting Cost in Katy TX?", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-10-07", "mainEntityOfPage": "https://houstonsuperiorpainting.com/cabinet-painting-cost-katy" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Cabinet Painting Katy", "item": "https://houstonsuperiorpainting.com/cabinet-painting-katy-tx" }, { "@type": "ListItem", "position": 3, "name": "Cabinet Painting Cost Katy", "item": "https://houstonsuperiorpainting.com/cabinet-painting-cost-katy" }] },
@@ -134,6 +135,7 @@ export default function CabinetPaintingCostKaty() {
           <Link key={p.href} href={p.href} className="bg-card rounded-lg p-4 border border-border hover:border-secondary transition-colors"><span className="font-semibold text-sm text-foreground">{p.title}</span></Link>
         ))}
       </div></div></section>
+      </main>
       <Footer />
     </>
   )

@@ -31,6 +31,7 @@ export default function HowOftenPaintHouseHouston() {
   return (
     <>
       <Header />
+      <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
         { "@type": "Article", "headline": "How Often Should You Paint a House in Houston?", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@type": "Organization", "name": "Houston Superior Painting" }, "datePublished": "2026-05-16", "dateModified": "2026-10-05", "mainEntityOfPage": "https://houstonsuperiorpainting.com/how-often-paint-house-houston" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "How Often Paint House Houston", "item": "https://houstonsuperiorpainting.com/how-often-paint-house-houston" }] },
@@ -171,6 +172,7 @@ export default function HowOftenPaintHouseHouston() {
           <Link key={p.href} href={p.href} className="bg-card rounded-lg p-4 border border-border hover:border-secondary transition-colors"><span className="font-semibold text-sm text-foreground">{p.title}</span></Link>
         ))}
       </div></div></section>
+      </main>
       <Footer />
     </>
   )

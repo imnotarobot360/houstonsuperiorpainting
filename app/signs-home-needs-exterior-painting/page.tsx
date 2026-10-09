@@ -38,6 +38,7 @@ export default function SignsHomeNeedsExteriorPainting() {
   return (
     <>
       <Header />
+      <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
         { "@type": "Article", "headline": "10 Signs Your Home Needs Exterior Painting in Houston", "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" }, "publisher": { "@id": "https://houstonsuperiorpainting.com/#organization" }, "datePublished": "2026-05-16", "dateModified": "2026-05-16", "mainEntityOfPage": "https://houstonsuperiorpainting.com/signs-home-needs-exterior-painting" },
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Exterior Painting", "item": "https://houstonsuperiorpainting.com/exterior-painting-houston-tx" }, { "@type": "ListItem", "position": 3, "name": "Signs You Need Exterior Painting", "item": "https://houstonsuperiorpainting.com/signs-home-needs-exterior-painting" }] },
@@ -136,6 +137,7 @@ export default function SignsHomeNeedsExteriorPainting() {
           </div>
         </div>
       </section>
+      </main>
       <Footer />
     </>
   );

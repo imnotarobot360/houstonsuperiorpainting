@@ -27,6 +27,7 @@ export default function ExteriorHousePaintingHoustonCostGuide() {
   return (
     <>
       <Header />
+      <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
         articleNode({ path: "/exterior-house-painting-houston-cost-guide", headline: "Exterior House Painting Houston Cost Guide 2026", description: `Exterior house painting in Houston costs ${PRICES_2026.exteriorPerSqFt} per sq ft in 2026, or ${PRICES_2026.exterior2500TwoStory} for a 2,500 sq ft two-story home.`, datePublished: "2026-05-16" }),
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Exterior Painting", "item": "https://houstonsuperiorpainting.com/exterior-painting-houston-tx" }, { "@type": "ListItem", "position": 3, "name": "Cost Guide", "item": "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide" }] },
@@ -203,6 +204,7 @@ export default function ExteriorHousePaintingHoustonCostGuide() {
         </div>
       </section>
       <AuthorByline />
+      </main>
       <Footer />
     </>
   );

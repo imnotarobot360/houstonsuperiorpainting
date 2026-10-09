@@ -3,7 +3,8 @@
 import { useHidesStickyCta } from "@/lib/focused-routes"
 
 /**
- * The app's <main> wrapper.
+ * The app's page wrapper. A plain div: each page renders its own <main>, so
+ * wrapping them in another <main> would nest the landmark.
  *
  * Exists only to own one piece of conditional padding. The global `pb-20` on
  * mobile is there to clear the fixed StickyMobileCTA bar; where that bar is
@@ -18,5 +19,5 @@ import { useHidesStickyCta } from "@/lib/focused-routes"
 export function SiteMain({ children }: { children: React.ReactNode }) {
   const focused = useHidesStickyCta()
 
-  return <main className={focused ? undefined : "pb-20 md:pb-0"}>{children}</main>
+  return <div className={focused ? undefined : "pb-20 md:pb-0"}>{children}</div>
 }

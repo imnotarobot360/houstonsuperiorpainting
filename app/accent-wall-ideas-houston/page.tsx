@@ -41,6 +41,7 @@ export default function AccentWallIdeasHouston() {
   return (
     <>
       <Header />
+      <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -244,6 +245,7 @@ export default function AccentWallIdeasHouston() {
           </div>
         </div>
       </section>
+      </main>
       <Footer />
     </>
   );

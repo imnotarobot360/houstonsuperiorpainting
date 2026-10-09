@@ -249,7 +249,9 @@ export default function LimewashBrickPaintingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Header />
+      <main>
       <ServicePageTemplate {...pageData} />
+      </main>
       <Footer />
     </>
   )
