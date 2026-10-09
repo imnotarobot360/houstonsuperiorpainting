@@ -672,6 +672,35 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Photos of a two-story Magnolia, TX home with green lap siding and yellow trim on a wooded lot, after exterior painting.",
   },
+  {
+    // Job photos supplied by Juan on 2026-10-08: exterior painting in Pearland,
+    // TX. House number, a license plate and a security-company sign blurred.
+    // Finished photos only; scope and products unconfirmed.
+    slug: "pearland-exterior-hardie-repaint",
+    title: "Exterior Painting on a Pearland Hardie Home",
+    neighborhood: "Pearland, TX",
+    service: "Exterior Painting",
+    serviceSlug: "exterior-painting-houston-tx",
+    summary:
+      "A one-story Pearland home with sage-green lap and shingle siding and cream trim, gutters and garage door, photographed after the exterior work.",
+    heroImage: "/images/projects/pearland-exterior-hardie/01-side-elevation.jpg",
+    afterImage: "/images/projects/pearland-exterior-hardie/01-side-elevation.jpg",
+    afterAlt: "Pearland home with sage-green lap siding, a shingle-siding accent panel, cream window trim and cream downspouts",
+    gallery: [
+      { src: "/images/projects/pearland-exterior-hardie/02-front-and-garage.jpg", alt: "Front of the home with a sage-green gable, cream trim around the garage openings and a cream garage door" },
+      { src: "/images/projects/pearland-exterior-hardie/03-front-corner.jpg", alt: "Front corner with sage-green siding, cream trim and columns at the entry" },
+      { src: "/images/projects/pearland-exterior-hardie/04-garage-angle.jpg", alt: "Garage elevation with sage-green siding, a round gable vent and cream trim and gutters" },
+    ],
+    stats: [
+      { label: "Location", value: "Pearland, TX" },
+      { label: "Service", value: "Exterior" },
+      { label: "Siding", value: "Lap and shingle" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Exterior Painting Project in Pearland, TX",
+    metaDescription:
+      "Photos of a Pearland, TX home after exterior painting: sage-green lap and shingle siding with cream trim, gutters and garage door.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */

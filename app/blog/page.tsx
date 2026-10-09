@@ -102,7 +102,7 @@ const blogPosts = [
     author: "Juan Serra",
     publishDate: "October 7, 2026",
     readTime: "7 min read",
-    image: "/images/blog/hoa-paint-rules-houston.png",
+    image: "/images/projects/pearland-exterior-hardie/01-side-elevation.jpg",
     featured: false,
   },
   {

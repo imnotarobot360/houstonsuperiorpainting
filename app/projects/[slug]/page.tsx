@@ -30,6 +30,7 @@ const NEIGHBORHOOD_CITY_PAGE: Record<string, string> = {
   Richmond: "painters-richmond-tx",
   Fulshear: "painters-fulshear-tx",
   Magnolia: "painters-magnolia-tx",
+  Pearland: "painters-pearland-tx",
 }
 
 function cityPageFor(neighborhood: string): { name: string; slug: string } | undefined {

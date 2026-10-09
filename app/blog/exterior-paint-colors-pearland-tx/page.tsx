@@ -5,9 +5,9 @@ import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 const URL = "https://houstonsuperiorpainting.com/blog/exterior-paint-colors-pearland-tx"
 
-// TODO(juan): replace featured image with a real job photo
-const IMAGE = "/images/blog/hoa-paint-rules-houston.png"
-const IMAGE_ALT = "Row of two-story suburban homes with tan siding and brick under a blue sky"
+// Real job photo: our Pearland exterior (see /projects/pearland-exterior-hardie-repaint).
+const IMAGE = "/images/projects/pearland-exterior-hardie/01-side-elevation.jpg"
+const IMAGE_ALT = "Pearland home with sage-green lap siding, a shingle-siding accent panel, cream window trim and cream downspouts"
 
 export const metadata: Metadata = {
   title: "Best Exterior Paint Colors in Pearland TX (2026)",
@@ -116,6 +116,10 @@ export default function ExteriorPaintColorsPearlandTxPage() {
       <p>
         West walls chalk first, same as everywhere else in unshaded Brazoria-side sun. Recaulk the butt joints on the
         repaint or the new color will open at the same lines.
+      </p>
+      <p>
+        See a real Pearland example: our{" "}
+        <Link href="/projects/pearland-exterior-hardie-repaint">sage-green Hardie exterior with cream trim</Link>.
       </p>
 
       <h2>Cost</h2>
