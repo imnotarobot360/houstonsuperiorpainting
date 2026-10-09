@@ -40,8 +40,8 @@ each Google Business Profile share link should be added to
 ### 6. "15 years combined crew experience"
 `BUSINESS.trust.crewExperienceYears = 15` — 5 pages. Verifiable?
 
-### 7. Commercial page claims
-"Trusted by Houston Property Managers" five-star badge; "background-checked crew"; "1,000–30,000 sq ft floor plates".
+### 7. Commercial page claims — RESOLVED 2026-10-09
+Page rewritten from Juan's brief; the unverified badge, "background-checked crew", floor-plate sizes, HIPAA, antimicrobial, food-grade, maintenance-contract, "48-hour bid" and storage-facility before/after claims were removed. Still unconfirmed: are the storage-facility photos (`/images/commercial-before-1.jpg`, `commercial-after-1.jpg`) our job? If yes they can come back as a case study.
 
 ### 8. Social / directory profiles (Organization `sameAs`)
 Facebook and Instagram URLs resolve — confirm they are ours. Yelp was removed (unverified). Google Maps link points
