@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import type { ReactNode } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { TrustBar } from "@/components/trust-bar"
@@ -19,14 +20,18 @@ import {
   breadcrumbNode,
   ESTIMATE_PATH,
 } from "@/components/aeo/blocks"
-import { PRICES_2026, SERVICE_AREAS, officeForPage } from "@/lib/business"
-import { PROJECTS } from "@/lib/projects"
+import { BUSINESS, PHONE_HREF, PRICES_2026, officeForPage } from "@/lib/business"
+import { LOCAL_PROOF_PROJECTS } from "@/lib/projects"
+
+// Houston office hub. Inner Loop focus (Heights, Memorial, Bellaire, West U,
+// River Oaks). "Painting company in Houston" is the homepage's phrase: keep it
+// out of this page's title and headings.
 
 const PAGE_PATH = "/painters-houston-tx"
 const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
-const TITLE = "House Painters in Houston TX | Houston Superior Painting"
+const TITLE = "House Painters in Houston, TX | Heights, Memorial & Bellaire"
 const DESCRIPTION =
-  "Interior, exterior & cabinet painters serving Houston since 2019. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960."
+  "House painters for Houston homes in the Heights, Memorial, Bellaire, West U, and River Oaks. Prep-first crews since 2019. Free estimates. (346) 594-5960."
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -49,59 +54,93 @@ export const metadata: Metadata = {
   },
 }
 
+const T = BUSINESS.trust
+
 const FAQS = [
   {
-    q: "Are you insured in Texas?",
-    a: 'Texas does not license painters, so any painter claiming a "state painting license" is misleading you. Houston Superior Painting carries $2M general liability and workers\' compensation. Ask any painter for the certificate of insurance before they start.',
+    q: "How much does it cost to paint a house in Houston?",
+    a: `Interior painting runs about ${PRICES_2026.interiorPerSqFt} per square foot of floor area in 2026. Most exterior repaints land between ${PRICES_2026.exteriorPerHome}, depending on size, stories, siding and how much prep and wood repair the house needs. Kitchen cabinets run ${PRICES_2026.cabinetsPerKitchen}. Your written estimate gives the exact number before anything is due.`,
   },
   {
-    q: "How much does it cost to paint a house in Houston?",
-    a: `A full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} in 2026. A two-story exterior of the same size runs ${PRICES_2026.exterior2500TwoStory}.`,
+    q: "When is the best time to paint a house exterior in Houston?",
+    a: "October through April is the most reliable window. Summer work is possible, but we start early and stop before the hottest part of the afternoon, and we do not paint over damp siding after rain or heavy morning dew.",
   },
   {
     q: "How long does it take to paint a house in Houston?",
-    a: "A full interior on a 2,500 sq ft home takes three to five days with a crew of three. A single-story exterior of the same size takes three to five days, a two-story five to eight, and kitchen cabinets four to six. Your written estimate states the timeline before any work starts.",
+    a: "A full interior on a 2,500 sq ft home takes three to five days with a crew of three. A single-story exterior takes three to five days, a two-story five to eight, and kitchen cabinets four to six. Rain days add time on exteriors. The timeline is in your written estimate.",
   },
   {
-    q: "Do you require a deposit?",
-    a: "Only after you approve the estimate. The estimate is free and we collect nothing before you approve it. Once you approve, a down payment schedules the job, and the balance is due after the final walkthrough. Be cautious of any painter who wants a large share of the price before you have a written, approved estimate.",
+    q: "Are you licensed and insured?",
+    a: `Texas does not issue a state license for house painters, so insurance is the check that matters. We carry ${T.liabilityCoverage} general liability and workers' comp, and we send the certificate of insurance before work starts.`,
   },
   {
-    q: "What does the 5-year warranty cover?",
-    a: "Peeling, blistering, and flaking caused by our workmanship. It does not cover damage from water intrusion, settling, or surfaces you asked us not to prep.",
-  },
-  {
-    q: "Do you work with HOAs?",
-    a: "Yes. We pull the approved color list and submit the ARC form for Katy, Cypress, Sugar Land, and Woodlands communities.",
-  },
-  {
-    q: "When is the best time to paint an exterior in Houston?",
-    a: "October through April. Summer afternoons are too hot and humid for paint to cure properly.",
-  },
-  {
-    q: "Should I paint my house myself or hire a painter?",
-    a: "A single bedroom, accent wall, or closet is a reasonable DIY project. Exteriors are different: ladder work, summer heat, humidity-sensitive timing, and prep that is easy to get wrong. Rushed or skipped prep is the usual reason a Houston exterior peels early, and a DIY job carries no warranty.",
-  },
-  {
-    q: "How long does exterior paint last in Houston?",
-    a: "With full prep and a premium exterior paint such as Sherwin-Williams Duration or Emerald, plan on roughly five to seven years before a full repaint, longer on shaded walls. Budget paint or skipped prep fails much sooner, with peeling, fading, and chalking on the sunny sides first.",
-  },
-  {
-    q: "Do you have an office near me?",
-    a: "Our headquarters is in Cypress, and we also list locations in Houston, Katy, Sugar Land, and Magnolia. Crews work across Greater Houston, so call (346) 594-5960 or request a free estimate online to confirm we cover your address.",
+    q: "Do I have to pay a deposit before the estimate?",
+    a: "No. The estimate is free and nothing is due until you approve it in writing. After you approve, a down payment schedules the job, and the balance is due after the final walkthrough.",
   },
 ]
 
-const NEARBY = ["Katy", "Cypress", "Sugar Land", "Magnolia", "The Woodlands", "Memorial", "The Heights", "Pearland"]
-const nearbyAreas = NEARBY.map((name) => SERVICE_AREAS.find((a) => a.name === name)!).filter(Boolean)
-
-const HOUSTON_PROJECT_SLUGS = [
-  "memorial-whole-home-interior-repaint",
-  "river-oaks-exterior-restoration",
-  "west-university-kitchen-cabinet-refinishing",
+const NEIGHBORHOODS: { name: string; href: string; note: ReactNode }[] = [
+  {
+    name: "The Heights",
+    href: "/painters-the-heights-tx",
+    note: (
+      <>
+        Many homes are older wood-sided bungalows. Expect more scraping, sanding and sill and trim repair than on newer
+        homes, and on houses built before 1978, lead-safe work practices under the EPA&apos;s RRP rule. See our{" "}
+        <Link href="/projects/heights-exterior-siding-repaint">two-story Heights exterior</Link> and{" "}
+        <Link href="/projects/heights-painted-brick-bungalow">painted brick bungalow</Link>.
+      </>
+    ),
+  },
+  {
+    name: "Memorial",
+    href: "/painters-memorial-tx",
+    note: (
+      <>
+        Tall trees keep a lot of siding in shade, which is where mildew grows. Shaded walls get a soft wash and a full
+        dry-out before primer goes on.
+      </>
+    ),
+  },
+  {
+    name: "Bellaire",
+    href: "/painters-bellaire-tx",
+    note: (
+      <>
+        A mix of original homes and newer rebuilds, many with stucco. Hairline stucco cracks are filled and coated before
+        paint so water does not get behind it (<Link href="/stucco-painting-houston-tx">stucco painting</Link>).
+      </>
+    ),
+  },
+  {
+    name: "West University",
+    href: "/exterior-painting-bellaire-west-university",
+    note: (
+      <>
+        Brick is common, and painted brick needs a breathable masonry primer, not a standard exterior primer. See our{" "}
+        <Link href="/projects/west-university-painted-brick-exterior">painted brick exterior in West U</Link>.
+      </>
+    ),
+  },
+  {
+    name: "River Oaks",
+    href: "/painters-river-oaks-tx",
+    note: (
+      <>
+        Larger homes with detailed wood trim, columns and windows. Most of the time on these jobs goes into trim prep,
+        rot repair and caulking, which we list line by line in the estimate.
+      </>
+    ),
+  },
 ]
-const houstonProjects = HOUSTON_PROJECT_SLUGS.map((slug) => PROJECTS.find((p) => p.slug === slug)).filter(
-  (p): p is (typeof PROJECTS)[number] => Boolean(p),
+
+const PROJECT_SLUGS = [
+  "heights-exterior-siding-repaint",
+  "heights-painted-brick-bungalow",
+  "west-university-painted-brick-exterior",
+]
+const projects = PROJECT_SLUGS.map((slug) => LOCAL_PROOF_PROJECTS.find((p) => p.slug === slug)).filter(
+  (p): p is (typeof LOCAL_PROOF_PROJECTS)[number] => Boolean(p),
 )
 
 const office = officeForPage("painters-houston-tx")!
@@ -123,203 +162,158 @@ export default function PaintersHoustonTX() {
       <TrustBar />
       <Header />
       <main>
-        <PageHero h1="House Painters in Houston, TX" eyebrow="Houston Superior Painting" />
+        <PageHero h1="House painters in Houston, TX" eyebrow="Houston Superior Painting" />
 
         <QuickAnswer>
-          Houston Superior Painting is a Houston painting contractor founded in 2019 by Juan Serra and headquartered in
-          Cypress. Our crews paint interiors, exteriors, and kitchen cabinets and repair drywall across Houston and Greater
-          Houston. We carry $2M general liability + workers&apos; comp and back every job with a 5-year workmanship
-          warranty. For a free estimate, call (346) 594-5960 or{" "}
-          <Link href={ESTIMATE_PATH}>request one online</Link>.
+          Houston Superior Painting paints homes across Houston&apos;s Inner Loop, including the Heights, Memorial,
+          Bellaire, West University and River Oaks. Founded in {BUSINESS.founded} by {BUSINESS.founder.name}, we are
+          headquartered in Cypress with a Houston office on Bissonnet St. We carry {T.liabilityCoverage} general liability
+          and workers&apos; comp, back the work with a {T.warrantyYears}-year workmanship warranty, and collect nothing
+          until you approve the estimate. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a> or{" "}
+          <Link href={ESTIMATE_PATH}>request a free estimate</Link>.
         </QuickAnswer>
 
-        <Section title="Who we paint for">
+        <Section title="Who this page is for">
           <p>
-            Homeowners in Houston, Katy, Cypress, Sugar Land, Magnolia, The Woodlands, and the surrounding suburbs. Most of
-            our work is full interior repaints, exterior repaints on brick, stucco, and HardiePlank homes, and kitchen
-            cabinet refinishing. We also paint offices, retail, and{" "}
-            <Link href="/commercial-painting-houston-tx">light commercial buildings</Link>.
+            Homeowners in Houston proper, especially the older and close-in neighborhoods inside and just outside the Loop:
+            the Heights, Memorial, Bellaire, West University, River Oaks, and nearby areas such as Montrose, Upper Kirby
+            and Rice Village. If you are repainting a whole house, refreshing a few rooms before a sale, or refinishing a
+            kitchen, this is the right place to start. Businesses should see our{" "}
+            <Link href="/commercial-painting-houston-tx">commercial painting</Link> page instead.
           </p>
         </Section>
 
-        <Section title="Our painting services">
+        <Section title="What we paint on Houston homes">
           <Bullets
             items={[
               <>
-                <Link href="/interior-painting-houston-tx">Interior painting</Link> — walls, ceilings, trim, doors, accent
-                walls. Two coats of Sherwin-Williams or Benjamin Moore, low-VOC.
+                <Link href="/interior-painting-houston-tx">Interior painting</Link>: walls, ceilings, trim, doors and
+                accent walls, with Benjamin Moore Aura or Regal Select.
               </>,
               <>
-                <Link href="/exterior-painting-houston-tx">Exterior painting</Link> — pressure wash, scrape, caulk, prime,
-                two coats. Brick, stucco, Hardie, wood siding.
+                <Link href="/exterior-painting-houston-tx">Exterior painting</Link>: wood, Hardie, brick and stucco, with
+                Sherwin-Williams Duration or Emerald.
               </>,
               <>
-                <Link href="/cabinet-refinishing-houston-tx">Cabinet refinishing</Link> — degrease, sand, bonding primer,
-                sprayed cabinet enamel. Factory-smooth finish.
+                <Link href="/cabinet-refinishing-houston-tx">Cabinet refinishing</Link>: degreased, sanded, primed with a
+                bonding primer and sprayed with cabinet enamel.
               </>,
               <>
-                <Link href="/drywall-repair-houston-tx">Drywall repair</Link> — patches, water damage, texture matching
+                <Link href="/drywall-repair-houston-tx">Drywall repair</Link>: patches, water damage and texture matching
                 before paint.
               </>,
               <>
-                <Link href="/limewash-brick-painting-houston-tx">Limewash</Link> and{" "}
-                <Link href="/stucco-painting-houston-tx">stucco finishes</Link> — limewash brick, German smear, elastomeric
-                stucco coatings.
-              </>,
-              <>
-                <Link href="/soft-washing-houston-tx">Soft washing</Link> and{" "}
-                <Link href="/pressure-washing-houston-tx">pressure washing</Link> — mildew removal before exterior
-                painting.
+                <Link href="/limewash-brick-painting-houston-tx">Limewash</Link>: a breathable, matte mineral finish for
+                brick, applied by hand.
               </>,
             ]}
           />
         </Section>
 
-        <Section title="How we paint a Houston home">
+        <Section title="Houston humidity and why prep comes first">
+          <p>
+            Houston air stays humid most of the year, rain comes fast, and summer sun is hard on south- and west-facing
+            walls. Paint that goes on over damp, chalky or dirty surfaces loses its grip and peels early. That is why most
+            of a job&apos;s time goes into prep, and every step is written into your estimate:
+          </p>
           <Steps
             items={[
+              { title: "Scrape", text: "remove every loose and peeling flake down to a sound edge." },
+              { title: "Sand", text: "feather the edges and dull glossy surfaces so the next coat bonds." },
+              { title: "Caulk", text: "seal joints, gaps and trim seams so rain cannot get behind the paint." },
+              { title: "Prime", text: "spot-prime bare wood, repairs and stains with the right primer for the surface." },
               {
-                title: "Estimate",
-                text: "on-site walkthrough, written scope with square footage, product, and coat count. Free, and nothing is due until you approve it.",
-              },
-              {
-                title: "Prep",
-                text: "the step that decides how long Houston paint lasts. Wash off mildew and chalk, scrape and sand, replace rotted wood, caulk every gap, prime bare surfaces.",
-              },
-              {
-                title: "Paint",
-                text: "two full coats, sprayed and back-rolled on exteriors, cut and rolled on interiors. We schedule around rain, dew, and afternoon heat so each coat can cure.",
-              },
-              {
-                title: "Walkthrough",
-                text: "you inspect every room or elevation with the crew lead before final payment.",
+                title: "Two coats",
+                text: "two full finish coats, applied only when surfaces are dry and the weather allows each coat to cure.",
               },
             ]}
           />
         </Section>
 
-        <Section title="Why Houston is hard on paint">
-          <p>
-            Houston&apos;s humidity, heavy rain, and long, hot summers are hard on paint. Paint applied over damp or chalky
-            surfaces peels early. South- and west-facing walls fade and chalk fastest. Mildew grows on shaded north
-            walls. HOA communities in Katy, Cypress, and Sugar Land restrict exterior colors and require approval before
-            work starts. We handle the ARC submission for you.
-          </p>
+        <Section title="Neighborhoods we paint in Houston">
+          <ul>
+            {NEIGHBORHOODS.map((n) => (
+              <li key={n.name}>
+                <strong>
+                  <Link href={n.href}>{n.name}</Link>:
+                </strong>{" "}
+                {n.note}
+              </li>
+            ))}
+          </ul>
         </Section>
 
-        <Section title="How to choose a painter in Houston">
-          <Bullets
-            items={[
-              <>
-                <strong>Proof of insurance.</strong>{" "}Ask for the certificate showing general liability and workers&apos;
-                comp. Texas has no painting license, so insurance is the check that matters.
-              </>,
-              <>
-                <strong>Prep in writing.</strong> The estimate should list pressure washing, scraping, caulking, and priming,
-                plus the product and number of coats. A verbal quote is not a scope.
-              </>,
-              <>
-                <strong>A written workmanship warranty.</strong> Ours is 5 years. No warranty usually means no confidence in
-                the prep.
-              </>,
-              <>
-                <strong>No large upfront payment.</strong> Nothing should be due before you approve a written estimate.
-              </>,
-              <>
-                <strong>A plan for Houston weather.</strong> Ask how they schedule around humidity, heat, and rain. Painting
-                at high humidity causes adhesion failure.
-              </>,
-              <>
-                <strong>Be wary of the lowest bid.</strong> A price far below the others usually means skipped prep or
-                uninsured labor.
-              </>,
-            ]}
-          />
-        </Section>
-
-        <Section title="Houston painting prices (2026)">
+        <Section title="Houston house painting prices (2026)">
           <PriceTable
             head={["Project", "2026 Houston range"]}
             rows={[
-              ["Single room (12×14)", PRICES_2026.singleRoom],
-              ["Full interior, 2,500 sq ft", PRICES_2026.fullInterior2500],
-              ["Exterior, 2,500 sq ft two-story", PRICES_2026.exterior2500TwoStory],
-              ["Kitchen cabinets, 15–25 doors", PRICES_2026.cabinetsAverage],
-              ["Whole-home trim and baseboards", PRICES_2026.trimWholeHome],
+              ["Interior painting", `${PRICES_2026.interiorPerSqFt} per sq ft of floor area`],
+              ["Exterior repaint, whole house", PRICES_2026.exteriorPerHome],
+              ["Kitchen cabinet refinishing", PRICES_2026.cabinetsPerKitchen],
             ]}
             note={
               <>
-                These are 2026 Houston estimates, not quotes. Peeling paint, wood rot, and heavy patching add cost. See the
-                full <Link href="/houston-painting-cost-guide" className="text-primary font-medium underline">Houston Painting Cost Guide</Link>.
+                These are 2026 ranges, not quotes. Peeling paint, wood rot and heavy drywall patching add cost. Room-by-room
+                and home-size tables are in the{" "}
+                <Link href="/houston-painting-cost-guide" className="text-primary font-medium underline">
+                  Houston painting cost guide
+                </Link>
+                .
               </>
             }
           />
         </Section>
 
-        <Section title="Paints we use">
-          <p>
-            Sherwin-Williams Duration and Emerald for exteriors — both hold up to Gulf Coast UV and moisture. Benjamin
-            Moore Aura or Regal Select for interiors. Cabinet enamel: Benjamin Moore Advance or Sherwin-Williams Emerald
-            Urethane.
-          </p>
-        </Section>
-
-        <Section title="Recent Houston projects">
-          <div className="not-prose grid md:grid-cols-3 gap-6">
-            {houstonProjects.map((p) => (
-              <Link
-                key={p.slug}
-                href={`/projects/${p.slug}`}
-                className="group block bg-card border border-border rounded-xl overflow-hidden hover:border-primary transition-colors"
-              >
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={p.heroImage}
-                    alt={p.title}
-                    fill
-                    sizes="(min-width: 768px) 33vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-5">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{p.neighborhood}</p>
-                  <h3 className="font-semibold text-lg text-foreground mb-2 group-hover:text-primary">{p.title}</h3>
-                  <p className="text-muted-foreground text-sm">{p.summary}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </Section>
+        {projects.length > 0 && (
+          <Section title="Recent Houston projects">
+            <div className="not-prose grid md:grid-cols-3 gap-6">
+              {projects.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/projects/${p.slug}`}
+                  className="group block bg-card border border-border rounded-xl overflow-hidden hover:border-primary transition-colors"
+                >
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={p.heroImage}
+                      alt={p.title}
+                      fill
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{p.neighborhood}</p>
+                    <h3 className="font-semibold text-lg text-foreground mb-2 group-hover:text-primary">{p.title}</h3>
+                    <p className="text-muted-foreground text-sm">{p.summary}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </Section>
+        )}
 
         <FAQ items={FAQS} title="Frequently asked questions" variant="compact" />
 
         <Section title="Our Houston office">
           <OfficeNap office={office} />
           <p className="mt-6">
-            Other offices: <Link href="/painters-cypress-tx">Cypress painters (HQ)</Link>,{" "}
-            <Link href="/painters-katy-tx">Katy painters</Link>,{" "}
-            <Link href="/painters-sugar-land-tx">Sugar Land painters</Link>, and{" "}
-            <Link href="/painters-magnolia-tx">Magnolia painters</Link>.
+            Other offices: <Link href="/painters-cypress-tx">Cypress (HQ)</Link>,{" "}
+            <Link href="/painters-katy-tx">Katy</Link>, <Link href="/painters-sugar-land-tx">Sugar Land</Link> and{" "}
+            <Link href="/painters-magnolia-tx">Magnolia</Link>.
           </p>
         </Section>
 
-        <Section title="Nearby areas we serve">
-          <p>
-            {nearbyAreas.map((a, i) => (
-              <span key={a.slug}>
-                {i > 0 && " · "}
-                <Link href={`/${a.slug}`}>{a.name}</Link>
-              </span>
-            ))}
-          </p>
-        </Section>
-
-        <CtaBlock title="Get a free Houston painting estimate">
-          Call (346) 594-5960 or{" "}
+        <CtaBlock title="Book a free Houston estimate">
+          Call <a href={PHONE_HREF} className="underline">{BUSINESS.phone}</a>,{" "}
+          <a href={BUSINESS.scheduler.embedUrl} target="_blank" rel="noopener noreferrer" className="underline">
+            book a walkthrough time
+          </a>{" "}
+          or{" "}
           <Link href={ESTIMATE_PATH} className="underline">
             request an estimate online
           </Link>
-          . Written scope in 24 hours, nothing due until you approve, 5-year warranty.
+          . Written and itemized, nothing due until you approve, {T.warrantyYears}-year workmanship warranty.
         </CtaBlock>
 
         <AuthorByline />

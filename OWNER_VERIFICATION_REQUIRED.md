@@ -33,8 +33,8 @@ Last reviewed: 2026-10-08 (live crawl of 160 indexable pages + source).
 
 ### 1. Physical office locations — CONFIRMED by Juan 2026-10-08
 Juan confirmed all five locations (Cypress HQ, Houston, Katy, Sugar Land, Magnolia) are legitimate. They stay as offices
-with LocalBusiness schema on their city pages. Remaining housekeeping only: the Houston suite number (#443 vs #405)
-must match the Google Business Profile character for character, and each profile share link should be added to
+with LocalBusiness schema on their city pages. Houston suite CONFIRMED #443 by Juan 2026-10-09 (matches the Google Business Profile: 2617 Bissonnet St #443, Houston, TX 77005). Remaining housekeeping only:
+each Google Business Profile share link should be added to
 `BUSINESS.locations[].mapsUrl`.
 
 ### 6. "15 years combined crew experience"
