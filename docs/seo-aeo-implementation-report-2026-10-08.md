@@ -85,7 +85,7 @@ each now shows a real project (own city or a clearly labelled nearby one). Decis
 
 ## 7. Remaining risks
 
-- Unverified sitewide claims (offices, 4.9/200+, 500+, bonded, "Preferred Application Partner") — see `OWNER_VERIFICATION_REQUIRED.md`. The office question also blocks Google Business Profile work.
+- Unverified sitewide claims (4.9/200+, 500+, bonded, "Preferred Application Partner") — see `OWNER_VERIFICATION_REQUIRED.md`. The five offices were confirmed by Juan on Oct 8.
 - Benjamin Moore Stix page shows "currently unavailable" — swap the citation if it stays down.
 - `/warranty` (7 business days) and `/blog/paint-warranty-texas` (5) disagree on claim response time.
 - Runner API request shapes were taken from provider docs but never called — expect to adjust on the first real run.

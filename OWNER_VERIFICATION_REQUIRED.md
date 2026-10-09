@@ -21,25 +21,16 @@ Last reviewed: 2026-10-08 (live crawl of 160 indexable pages + source).
 | Paint brands | Sherwin-Williams, Benjamin Moore, Farrow & Ball | owner, 2026-10-07 |
 | Specialty finishes | Venetian plaster, Roman Clay, limewash, faux, metallic, lacquer, grasscloth | owner, 2026-10-07 |
 | Residential remodeling | offered (page built from existing services: wall removal, drywall, carpentry/rot, wallpaper, painting) | owner, 2026-10-08 |
+| Five locations | Cypress (HQ), Houston, Katy, Sugar Land, Magnolia — all legitimate | owner, 2026-10-08 |
 | BBB | listed, **not accredited**, not rated (bbb.org, checked 2026-10-07) | public record |
 
 ## Needs your answer
 
-### 1. Physical office locations (blocks Google Business Profile + LocalBusiness schema)
-The site calls five addresses "offices" and emits LocalBusiness schema for each. Google only allows a profile
-at a staffed location customers can visit.
-
-| Office | Address in `lib/business.ts` | Concern |
-|---|---|---|
-| Cypress (HQ) | 14150 Huffmeister Rd, Suite 410, Cypress, TX 77429 | Also on the BBB listing — likely fine; confirm staffed |
-| Houston | 2617 Bissonnet St #443, Houston, TX 77005 | Suite #443 vs #405 unresolved |
-| Katy | 3230 FM 1463 **APT 3201**, Katy, TX 77494 | An apartment unit |
-| Sugar Land | 18722 University Blvd, Suite 254, 2nd Floor | Confirm staffed |
-| Magnolia | 14512 Cottontop Mtn, Magnolia, TX 77354 | Looks residential |
-
-"Five offices" text appears on ~41 pages (About, founder bio, contact, footer). If an address is not a staffed,
-customer-facing office, tell me and it becomes a service area: address, office block and LocalBusiness schema
-removed for it, "five offices" reworded everywhere.
+### 1. Physical office locations — CONFIRMED by Juan 2026-10-08
+Juan confirmed all five locations (Cypress HQ, Houston, Katy, Sugar Land, Magnolia) are legitimate. They stay as offices
+with LocalBusiness schema on their city pages. Remaining housekeeping only: the Houston suite number (#443 vs #405)
+must match the Google Business Profile character for character, and each profile share link should be added to
+`BUSINESS.locations[].mapsUrl`.
 
 ### 2. Review rating and count
 `BUSINESS.trust.googleRating = 4.9`, `reviewCount = 200` — shown on 12 pages (homepage, Houston page,
@@ -58,6 +49,10 @@ Partner of whom? Remove unless it is a real manufacturer program you are enrolle
 
 ### 6. "15 years combined crew experience"
 `BUSINESS.trust.crewExperienceYears = 15` — 5 pages. Verifiable?
+
+### 7a. CertaPro comparison page
+`/houston-superior-painting-vs-certapro` says CertaPro offers a "typical 1-2 year warranty". That is a claim about a
+competitor with no source on the page. Confirm it (link their published warranty) or soften it.
 
 ### 7. Commercial page claims
 "Trusted by Houston Property Managers" five-star badge; "background-checked crew"; "1,000–30,000 sq ft floor plates".
