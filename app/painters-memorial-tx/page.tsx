@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Houston Superior Painting",
     type: "website",
     images: [{
-      url: "https://houstonsuperiorpainting.com/images/og/og-painters-memorial.jpg",
+      url: "https://houstonsuperiorpainting.com/images/og/og-painters-houston.jpg",
       width: 1200,
       height: 630,
       alt: "House Painters Memorial TX - Houston Superior Painting",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "House Painters Memorial TX — Houston Superior Painting",
     description: DESCRIPTION,
-    images: ["https://houstonsuperiorpainting.com/images/og/og-painters-memorial.jpg"],
+    images: ["https://houstonsuperiorpainting.com/images/og/og-painters-houston.jpg"],
   },
   other: {
     'geo.region': 'US-TX',

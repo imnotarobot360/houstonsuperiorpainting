@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://houstonsuperiorpainting.com/images/og/og-soft-washing.jpg",
+        url: "https://houstonsuperiorpainting.com/images/og/og-pressure-washing.jpg",
         width: 1200,
         height: 630,
         alt: "Soft Washing Houston TX - Houston Superior Painting",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Soft Washing Houston TX — Houston Superior Painting",
     description:
       "Safely remove mold, algae, mildew & black stains without damaging your home. Low-pressure soft washing for delicate Houston exteriors.",
-    images: ["https://houstonsuperiorpainting.com/images/og/og-soft-washing.jpg"],
+    images: ["https://houstonsuperiorpainting.com/images/og/og-pressure-washing.jpg"],
   },
 };
 
