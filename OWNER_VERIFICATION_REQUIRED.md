@@ -61,6 +61,10 @@ Drywall repair (patch / water damage / texture match), wallpaper removal + skim 
 facts (days on site, product, dry vs full cure, when cabinets can be used). Briefs are in
 `docs/aeo-geo-implementation-report-2026-10.md` §7.
 
+### 13. Warranty claim response time
+`/warranty` says an inspection is scheduled within **7 business days**; `/blog/paint-warranty-texas` says
+**5 business days** (repairs within 30 days of confirmation). Which is right? Both pages will be set to the same number.
+
 ### 12. Epoxy content
 The garage-epoxy blog draft is on hold: its prices ($5–$11/sq ft, $2,200 minimum) conflict with
 houstonsuperiorepoxy.com ($4.50/sq ft, $1,000 minimum). Epoxy facts are never copied into this site.
