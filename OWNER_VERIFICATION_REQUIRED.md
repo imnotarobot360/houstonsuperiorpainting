@@ -22,6 +22,11 @@ Last reviewed: 2026-10-08 (live crawl of 160 indexable pages + source).
 | Specialty finishes | Venetian plaster, Roman Clay, limewash, faux, metallic, lacquer, grasscloth | owner, 2026-10-07 |
 | Residential remodeling | offered (page built from existing services: wall removal, drywall, carpentry/rot, wallpaper, painting) | owner, 2026-10-08 |
 | Five locations | Cypress (HQ), Houston, Katy, Sugar Land, Magnolia — all legitimate | owner, 2026-10-08 |
+| Google rating | 4.9 with 200+ Google reviews | owner, 2026-10-08 |
+| Projects completed | 500+ | owner, 2026-10-08 |
+| Bonded | bonded and insured | owner, 2026-10-08 |
+| Preferred Application Partner | authorized (homepage badge) | owner, 2026-10-08 |
+| Competitor comparison | the CertaPro page was replaced by a neutral local-vs-franchise guide; no competitor is named on the site | 2026-10-08 |
 | BBB | listed, **not accredited**, not rated (bbb.org, checked 2026-10-07) | public record |
 
 ## Needs your answer
@@ -32,27 +37,8 @@ with LocalBusiness schema on their city pages. Remaining housekeeping only: the 
 must match the Google Business Profile character for character, and each profile share link should be added to
 `BUSINESS.locations[].mapsUrl`.
 
-### 2. Review rating and count
-`BUSINESS.trust.googleRating = 4.9`, `reviewCount = 200` — shown on 12 pages (homepage, Houston page,
-estimate page, pressure/soft washing pages, ad landing pages). Which Google profile is this, and is it current?
-No rating schema is published (correct). If unverifiable, the figure is removed and replaced with a link to the profile.
-
-### 3. Project count
-`BUSINESS.trust.projectsCompleted = 500` — "500+ projects" on ~148 pages (footer trust strip, About, Houston page).
-Is there a record (job list / ERP export)? If not, it becomes "Founded 2019" or is removed.
-
-### 4. "Bonded"
-`BUSINESS.trust.bonded = true` — homepage FAQ and estimate page. Is there a surety bond? Provide the bond holder.
-
-### 5. Homepage badge "Preferred Application Partner"
-Partner of whom? Remove unless it is a real manufacturer program you are enrolled in.
-
 ### 6. "15 years combined crew experience"
 `BUSINESS.trust.crewExperienceYears = 15` — 5 pages. Verifiable?
-
-### 7a. CertaPro comparison page
-`/houston-superior-painting-vs-certapro` says CertaPro offers a "typical 1-2 year warranty". That is a claim about a
-competitor with no source on the page. Confirm it (link their published warranty) or soften it.
 
 ### 7. Commercial page claims
 "Trusted by Houston Property Managers" five-star badge; "background-checked crew"; "1,000–30,000 sq ft floor plates".

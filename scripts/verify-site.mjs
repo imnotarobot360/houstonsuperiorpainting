@@ -71,6 +71,7 @@ for (const { loc } of urls) {
   if (/noindex/i.test((r.text.match(/<meta name="robots" content="([^"]+)"/) || [])[1] || "")) fail(`${path} is noindex but in sitemap`)
   for (const b of jsonld(r.text)) { jsonldBlocks++; if (b.__error) fail(`${path} JSON-LD parse error: ${b.__error}`) }
   if (/jj\s*semo/i.test(r.text)) fail(`${path} contains "JJ Semo"`)
+  if (/certa\s*pro/i.test(r.text)) fail(`${path} names a competitor (CertaPro)`)
   for (const m of r.text.matchAll(/href="(\/[^"#?]*)/g)) if (!m[1].startsWith("/_next")) internalLinks.add(m[1].replace(/\/$/, "") || "/")
 }
 console.log(`crawled ${pages.size} pages, JSON-LD blocks parsed: ${jsonldBlocks}`)
@@ -152,6 +153,14 @@ if (contact.status !== 200 || !/<form|book\/houston-superior|widget\.js/i.test(c
 const booking = await fetch("https://app.houstonsuperiorgroups.com/book/houston-superior", { redirect: "follow" })
 if (booking.status !== 200) fail(`booking URL returned ${booking.status}`)
 console.log(`tel link ${tel}; estimate ${est.status}; contact ${contact.status}; booking ${booking.status}`)
+
+// 7. Retired competitor page: exactly one 301 hop to the neutral guide
+const old = await get("/houston-superior-painting-vs-certapro")
+const oldTarget = old.location && new URL(old.location, BASE).pathname
+if (old.status !== 301 || oldTarget !== "/local-painter-vs-national-franchise-houston") fail(`old comparison URL returned ${old.status} -> ${old.location}`)
+if (!pages.has("/local-painter-vs-national-franchise-houston")) fail("neutral comparison guide not in sitemap")
+if (/certa\s*pro/i.test(llms.text)) fail("llms.txt names a competitor")
+console.log(`old comparison URL ${old.status} -> ${oldTarget}`)
 
 console.log(failures.length ? `\nFAILED (${failures.length}):\n- ${failures.join("\n- ")}` : "\nALL CHECKS PASSED")
 process.exit(failures.length ? 1 : 0)

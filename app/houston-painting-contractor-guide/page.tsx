@@ -22,7 +22,7 @@ import { BUSINESS, CORE_SERVICES, PRICES_2026 } from "@/lib/business"
 // (that URL is to be 301'd here). Every section of the old page is carried
 // over below: the 8 questions, licensed vs insured, references, red flags,
 // the estimate checklist, comparing quotes, signs of a well-run company,
-// specialty-work questions and the franchise comparison link.
+// specialty-work questions and the local-vs-franchise guide link.
 
 const PAGE_PATH = "/houston-painting-contractor-guide"
 const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
@@ -626,8 +626,8 @@ export default function HoustonPaintingContractorGuidePage() {
             ]}
           />
           <p>
-            Size doesn&apos;t predict quality. Comparing a local crew with a national franchise? Here is{" "}
-            <Link href="/houston-superior-painting-vs-certapro">how Houston Superior Painting compares with CertaPro</Link>.
+            Size doesn&apos;t predict quality. Comparing a local crew with a national franchise? Read{" "}
+            <Link href="/local-painter-vs-national-franchise-houston">what to compare between a local painter and a national franchise</Link>.
           </p>
         </Section>
 

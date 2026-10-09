@@ -275,6 +275,9 @@ const nextConfig = {
       { source: '/luxury-interior-painting-memorial', destination: '/interior-painting-memorial', permanent: true },
       // Oct 8, 2026: the hiring guide was rebuilt as the anchor article; its content lives there.
       { source: '/questions-to-ask-before-hiring-painters', destination: '/houston-painting-contractor-guide', permanent: true },
+      // Oct 8, 2026: the competitor comparison was replaced by a neutral guide that names no competitor.
+      // statusCode 301 (not the 308 that `permanent: true` sends), as requested by the owner.
+      { source: '/houston-superior-painting-vs-certapro', destination: '/local-painter-vs-national-franchise-houston', statusCode: 301 },
 
       // Cypress interior page renamed to the community-scoped canonical URL.
       { source: '/interior-painting-cypress-tx', destination: '/interior-painting-cypress-bridgeland', permanent: true },
