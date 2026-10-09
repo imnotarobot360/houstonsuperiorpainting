@@ -1,11 +1,10 @@
 // Shared template for the office city pages (Cypress, Katy, Sugar Land,
-// Magnolia). Renders the plan's "City page skeleton" in order — see
-// docs/aeo-seo-plan-2026-09.md. Each page file supplies only city-specific
-// data; NAP, prices, schema and the standard FAQ answers come from
-// lib/business.ts so no two pages can disagree.
+// Magnolia). The layout is shared; every paragraph is supplied by the page so
+// no two office pages repeat the same text (Juan's brief, 2026-10-09). NAP,
+// prices and schema come from lib/business.ts so no two pages can disagree.
 //
 // No rating numbers are printed here: the 4.9 / 200+ figure belongs to the
-// Houston GBP only. Each office links to its own Google profile instead.
+// Houston GBP only.
 
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
@@ -20,32 +19,21 @@ import {
   QuickAnswer,
   Section,
   PriceTable,
-  ServiceCards,
   LinkGrid,
   CtaBlock,
   OfficeNap,
   breadcrumbNode,
   SITE,
-  ESTIMATE_PATH,
 } from "@/components/aeo/blocks"
-import {
-  BUSINESS,
-  CORE_SERVICES,
-  PRICES_2026,
-  SERVICE_AREAS,
-  officeAddressLine,
-  officeForPage,
-  type Office,
-} from "@/lib/business"
+import { BUSINESS, CORE_SERVICES, PRICES_2026, SERVICE_AREAS, officeForPage, type Office } from "@/lib/business"
 import { LOCAL_PROOF_PROJECTS, type CaseStudy } from "@/lib/projects"
 
 export const COST_GUIDE_PATH = "/houston-painting-cost-guide"
 
 type OfficePageSlug = (typeof BUSINESS.locations)[number]["pageSlug"]
-type CoreServiceSlug = (typeof CORE_SERVICES)[number]["slug"]
 type AreaSlug = (typeof SERVICE_AREAS)[number]["slug"]
 
-export type Neighborhood = { name: string; note: string }
+export type Neighborhood = { name: string; note: ReactNode }
 export type FaqItem = { q: string; a: string }
 
 export type OfficeCityPageData = {
@@ -53,22 +41,22 @@ export type OfficeCityPageData = {
   city: string
   /** Page slug; must be one of the five office pageSlugs in BUSINESS.locations. */
   slug: Exclude<OfficePageSlug, "painters-houston-tx">
-  /** Short list of areas for the Quick Answer ("Katy, Cinco Ranch, and Fulshear"). */
-  areasPhrase: string
-  /** One-line blurb per core service card. */
-  serviceBlurbs: Record<CoreServiceSlug, string>
-  /** 8–12 real subdivisions / communities, one factual sentence each. */
+  /** Opening answer paragraph (Speakable). Unique per page. */
+  quickAnswer: ReactNode
+  /** The neighborhoods named in the page brief, one factual sentence each. */
   neighborhoods: Neighborhood[]
-  /** Paragraphs for "Why [City] homes need different prep". */
-  prep: string[]
-  /** Answer to "What areas of [City] do you serve?" */
-  areasAnswer: string
-  /** Answer to "How soon can you start a job in [City]?" (defaults to 1–2 weeks, confirmed at estimate). */
-  startAnswer?: string
-  /** Nearby city pages (4–6), in display order. */
+  /** Gulf Coast humidity / local prep paragraphs. */
+  prep: ReactNode[]
+  /** Which paints we use, phrased for this city. */
+  products: ReactNode
+  /** Sentence under the price table; must link to the cost guide. */
+  pricesNote: ReactNode
+  /** Exactly four city-specific questions; plain text (also used for FAQPage schema). */
+  faqs: FaqItem[]
+  /** Closing call to action. */
+  cta: { title: string; body: ReactNode }
+  /** Nearby city pages, in display order. */
   nearby: AreaSlug[]
-  /** Extra copy under the nearby links (e.g. a blog link). */
-  nearbyNote?: ReactNode
   /** Visible sentence rendered right under the office block (e.g. official-site disclaimer). */
   officeNote?: ReactNode
 }
@@ -79,10 +67,6 @@ function requireOffice(slug: string): Office {
   const office = officeForPage(slug)
   if (!office) throw new Error(`No office in BUSINESS.locations for page slug "${slug}"`)
   return office
-}
-
-function isHeadquarters(office: Office): boolean {
-  return "isHeadquarters" in office && office.isHeadquarters === true
 }
 
 /**
@@ -103,57 +87,6 @@ export function projectsForCity(city: string): CaseStudy[] {
 
 function areaName(slug: AreaSlug): string {
   return SERVICE_AREAS.find((a) => a.slug === slug)?.name ?? slug
-}
-
-function quickAnswerText(city: string, office: Office, areasPhrase: string): string {
-  const hq = isHeadquarters(office) ? ", the company headquarters," : ""
-  return (
-    `${BUSINESS.name}'s ${city} office${hq} is at ${officeAddressLine(office)}; call ${BUSINESS.phone}. ` +
-    `We paint interiors, exteriors, and kitchen cabinets and repair drywall across ${areasPhrase}. ` +
-    `We carry ${BUSINESS.trust.liabilityCoverage} in general liability insurance and back every paint job with a ` +
-    `${BUSINESS.trust.warrantyYears}-year workmanship warranty.`
-  )
-}
-
-function buildFaqs(d: OfficeCityPageData, office: Office): FaqItem[] {
-  const { city } = d
-  const hours = BUSINESS.hoursSummary.map((h) => `${h.label} ${h.value}`).join(", ")
-  const officeLead = isHeadquarters(office)
-    ? `Yes. ${city} is our headquarters. The office is at ${officeAddressLine(office)}.`
-    : `Yes. Our ${city} office is at ${officeAddressLine(office)}.`
-  return [
-    {
-      q: `Do you have an office in ${city}?`,
-      a: `${officeLead} Call ${BUSINESS.phone}. Hours: ${hours}.`,
-    },
-    { q: `What areas of ${city} do you serve?`, a: d.areasAnswer },
-    {
-      q: `How much does it cost to paint a house in ${city}?`,
-      a: `In 2026 a full interior repaint on a 2,500 sq ft ${city} home runs ${PRICES_2026.fullInterior2500} (about ${PRICES_2026.interiorPerSqFt} per sq ft). A two-story exterior of the same size runs ${PRICES_2026.exterior2500TwoStory}. Cabinet refinishing for an average kitchen runs ${PRICES_2026.cabinetsAverage}, and a single room runs ${PRICES_2026.singleRoom}.`,
-    },
-    {
-      q: `Do you work with ${city} HOAs?`,
-      a: `Yes. We pull your HOA's approved color list and submit the ARC form for you before any exterior work starts, so the job doesn't stall waiting on approval.`,
-    },
-    {
-      q: `How soon can you start a job in ${city}?`,
-      a:
-        d.startAnswer ??
-        `Most ${city} jobs start 1–2 weeks after you approve the estimate. We confirm the exact start date at the estimate, and exterior work can shift a few days for rain.`,
-    },
-    {
-      q: `Are you insured for work in ${city}, Texas?`,
-      a: `Yes. We carry ${BUSINESS.trust.liabilityCoverage} in general liability insurance plus workers' compensation, and we can send a certificate of insurance to you or your HOA. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license.`,
-    },
-    {
-      q: `Can I see reviews from ${city} customers?`,
-      a: `Yes. Our ${city} office has its own Google Business Profile. Use the "See reviews on Google" link in the Visit our ${city} office section of this page to read reviews from ${city} customers.`,
-    },
-    {
-      q: `Do you offer free estimates in ${city}?`,
-      a: `Yes. Estimates in ${city} are free. You get a written scope and price within 24 hours, nothing due until you approve it, and a ${BUSINESS.trust.warrantyYears}-year workmanship warranty on the finished job. Call ${BUSINESS.phone} or request one online.`,
-    },
-  ]
 }
 
 // ─── Metadata ─────────────────────────────────────────────────────────
@@ -207,14 +140,12 @@ export function officeCityMetadata(opts: {
 export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
   const { city, slug } = data
   const office = requireOffice(slug)
-  const hq = isHeadquarters(office)
   const ownProjects = projectsForCity(city)
   // No job in this city yet: show real projects from its listed nearby areas,
   // labelled with their own neighborhood, never as this city's work.
   const projects =
-    ownProjects.length > 0 ? ownProjects : data.nearby.flatMap((a) => projectsForCity(areaName(a))).slice(0, 2)
+    ownProjects.length > 0 ? ownProjects.slice(0, 3) : data.nearby.flatMap((a) => projectsForCity(areaName(a))).slice(0, 1)
   const projectsAreNearby = ownProjects.length === 0
-  const faqs = buildFaqs(data, office)
 
   const breadcrumb = {
     "@context": "https://schema.org",
@@ -231,76 +162,41 @@ export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
       <JsonLd data={breadcrumb} />
       <Header />
       <main className="bg-background">
-        <PageHero
-          h1={`House Painters in ${city}, TX`}
-          eyebrow={hq ? `${BUSINESS.name} · ${city} headquarters` : `${BUSINESS.name} · ${office.label}`}
-        />
+        <PageHero h1={`House painters in ${city}, TX`} eyebrow={`${BUSINESS.name} · ${office.label}`} />
 
-        <QuickAnswer>{quickAnswerText(city, office, data.areasPhrase)}</QuickAnswer>
-
-        <Section title={`Painting services in ${city}`}>
-          <ServiceCards city={city} blurbs={data.serviceBlurbs} />
-        </Section>
+        <QuickAnswer>{data.quickAnswer}</QuickAnswer>
 
         <Section title={`Neighborhoods we paint in ${city}`}>
           <ul>
             {data.neighborhoods.map((n) => (
               <li key={n.name}>
-                <strong>{n.name}.</strong> {n.note}
+                <strong>{n.name}:</strong> {n.note}
               </li>
             ))}
           </ul>
         </Section>
 
-        <Section title={`${city} painting prices (2026)`}>
-          <PriceTable
-            head={["Project", `Typical ${city} price`, "What it covers"]}
-            rows={[
-              [
-                "Interior repaint",
-                `${PRICES_2026.fullInterior2500} (2,500 sq ft home)`,
-                `About ${PRICES_2026.interiorPerSqFt} per sq ft: walls, ceilings, trim, and doors`,
-              ],
-              [
-                "Exterior repaint",
-                `${PRICES_2026.exterior2500TwoStory} (2,500 sq ft two-story)`,
-                "Wash, scrape, caulk, spot-prime, and two finish coats",
-              ],
-              [
-                "Cabinet refinishing",
-                `${PRICES_2026.cabinetsAverage} (average kitchen)`,
-                "Degrease, sand, bonding primer, sprayed finish",
-              ],
-              ["Single room", PRICES_2026.singleRoom, "Walls and trim in one standard room"],
-            ]}
-            note={
-              <>
-                Ranges are 2026 prices. Size, prep, and access move the number. See the
-                full{" "}
-                <Link href={COST_GUIDE_PATH} className="text-primary font-medium hover:underline">
-                  Houston painting cost guide
-                </Link>{" "}
-                for how each price is built, the{" "}
-                <Link href="/blog/cost-to-paint-2000-sq-ft-house-houston" className="text-primary font-medium hover:underline">
-                  cost to paint a 2,000 sq ft house
-                </Link>
-                , or get an exact{" "}
-                <Link href={ESTIMATE_PATH} className="text-primary font-medium hover:underline">
-                  free painting estimate in {city}
-                </Link>
-                .
-              </>
-            }
-          />
-        </Section>
-
-        <Section title={`Why ${city} homes need different prep`}>
+        <Section title={`Humidity and prep in ${city}`}>
           {data.prep.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
+          <p>{data.products}</p>
         </Section>
 
-        {/* Renders only when lib/projects.ts has a real project in this city. */}
+        <Section title={`${city} painting prices (2026)`}>
+          <PriceTable
+            head={["Project", "Typical 2026 range"]}
+            rows={[
+              ["Interior, per sq ft of floor area", PRICES_2026.interiorPerSqFt],
+              ["Full interior, 2,500 sq ft", PRICES_2026.fullInterior2500],
+              ["Exterior, most homes", PRICES_2026.exteriorPerHome],
+              ["Kitchen cabinets, most kitchens", PRICES_2026.cabinetsPerKitchen],
+            ]}
+            note={data.pricesNote}
+          />
+        </Section>
+
+        {/* Renders only when lib/projects.ts has a real project in this city (or a listed nearby one). */}
         {projects.length > 0 && (
           <Section title={projectsAreNearby ? `Recent projects near ${city}` : `Recent ${city} projects`}>
             <div className="not-prose grid gap-6">
@@ -324,19 +220,23 @@ export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
           </Section>
         )}
 
-        <FAQ items={faqs} title="Frequently asked questions" />
+        <FAQ items={data.faqs} title="Frequently asked questions" />
 
         <Section title={`Visit our ${city} office`}>
           <OfficeNap office={office} />
           {data.officeNote && <p className="mt-6 text-base text-muted-foreground">{data.officeNote}</p>}
         </Section>
 
-        <Section title="Nearby areas">
-          <LinkGrid links={data.nearby.map((s) => ({ label: `House painters in ${areaName(s)}`, href: `/${s}` }))} />
-          {data.nearbyNote && <p className="mt-6">{data.nearbyNote}</p>}
+        <Section title="Services and nearby areas">
+          <LinkGrid
+            links={[
+              ...CORE_SERVICES.slice(0, 3).map((s) => ({ label: s.name, href: `/${s.slug}` })),
+              ...data.nearby.map((s) => ({ label: `Painters in ${areaName(s)}`, href: `/${s}` })),
+            ]}
+          />
         </Section>
 
-        <CtaBlock title={`Get a free painting estimate in ${city}`} />
+        <CtaBlock title={data.cta.title}>{data.cta.body}</CtaBlock>
       </main>
       <Footer />
     </>

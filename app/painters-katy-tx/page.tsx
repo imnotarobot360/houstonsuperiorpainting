@@ -1,60 +1,98 @@
 import Link from "next/link"
-import { OfficeCityPage, officeCityMetadata, type OfficeCityPageData } from "@/components/aeo/office-city-page"
+import { OfficeCityPage, officeCityMetadata, COST_GUIDE_PATH, type OfficeCityPageData } from "@/components/aeo/office-city-page"
+import { BUSINESS, PHONE_HREF, PRICES_2026, officeAddressLine, officeForPage } from "@/lib/business"
 
 export const metadata = officeCityMetadata({
   city: "Katy",
   slug: "painters-katy-tx",
-  title: "House Painters in Katy TX | Houston Superior Painting",
+  title: "House Painters in Katy, TX | Cinco Ranch & Firethorne",
   description:
-    "Interior, exterior & cabinet painting in Katy, TX. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960.",
+    "House painters in Katy, TX for Cinco Ranch, Firethorne, Cross Creek Ranch & Seven Meadows. $2M insured, 5-year warranty. (346) 594-5960",
   ogImage: "https://houstonsuperiorpainting.com/images/og/og-painters-katy.jpg",
 })
 
-// TODO(juan): add 2–3 real Katy jobs with photos to lib/projects.ts (neighborhood like "Cinco Ranch, Katy");
+const T = BUSINESS.trust
+const OFFICE = officeAddressLine(officeForPage("painters-katy-tx")!)
+
+// TODO(juan): add real Katy jobs with photos to lib/projects.ts (neighborhood like "Cinco Ranch, Katy");
 // the "Recent Katy projects" section renders automatically when they exist.
 const DATA: OfficeCityPageData = {
   city: "Katy",
   slug: "painters-katy-tx",
-  areasPhrase: "Katy, Cinco Ranch, and Fulshear",
-  serviceBlurbs: {
-    "interior-painting-houston-tx": "Repaints that replace flat builder-grade paint with washable finishes, walls to trim.",
-    "exterior-painting-houston-tx": "Brick, Hardie siding, and trim repainted in HOA-approved colors with full prep.",
-    "cabinet-refinishing-houston-tx": "Sprayed cabinet finishes that update a Katy kitchen without new boxes or doors.",
-    "drywall-repair-houston-tx": "Settling cracks, nail pops, and corner-bead damage fixed and texture-matched.",
-    "limewash-brick-painting-houston-tx": "Limewash or painted brick to update the brick fronts common across Katy.",
-    "soft-washing-houston-tx": "Low-pressure washing that cleans siding, soffits, and brick before paint.",
-  },
-  neighborhoods: [
-    { name: "Cinco Ranch", note: "One of the largest master-planned communities in the Katy area, with homes built from the 1990s onward and HOA review of exterior colors." },
-    { name: "Cross Creek Ranch", note: "A newer master-planned community along FM 1463 on the Fulshear side of Katy." },
-    { name: "Elyson", note: "A newer master-planned community in north Katy with HOA design guidelines for exterior colors." },
-    { name: "Cane Island", note: "A master-planned community inside Katy city limits, north of I-10, with mostly newer construction." },
-    { name: "Firethorne", note: "An established master-planned community off FM 1463 with brick and fiber-cement homes." },
-    { name: "Seven Meadows", note: "A master-planned community near Cinco Ranch off the Grand Parkway with two-story brick homes." },
-    { name: "Grand Lakes", note: "An established Katy-area neighborhood south of I-10 where many homes are due for a second repaint." },
-    { name: "Old Katy", note: "The historic area around downtown Katy, with older homes and more wood siding and trim than the master-planned communities." },
-    { name: "Tamarron", note: "A newer master-planned community on the Fulshear side of Katy." },
-    { name: "Nottingham Country", note: "An older, established Katy-area neighborhood where trim repair is often part of an exterior repaint." },
-  ],
-  prep: [
-    "Katy is mostly master-planned communities built from the 2000s through the 2020s, and nearly every one has an HOA that controls exterior colors. We pull the approved color list and submit the ARC form before work starts, so the job is not held up waiting on approval.",
-    "Most of these homes are brick with Hardie (fiber-cement) siding and wood or composite trim. The brick rarely needs paint, but the siding and trim on south- and west-facing walls take the full afternoon sun and chalk and fade first. We wash off the chalk, re-caulk the joints where siding meets brick, and prime any bare spots so the new coat bonds instead of peeling.",
-  ],
-  areasAnswer:
-    "All of Katy, including Cinco Ranch, Cross Creek Ranch, Elyson, Cane Island, Firethorne, Seven Meadows, Grand Lakes, Old Katy, Tamarron, and Nottingham Country. We also cover nearby Fulshear, Richmond, and Rosenberg.",
-  nearby: [
-    "painters-cinco-ranch-tx",
-    "painters-fulshear-tx",
-    "painters-richmond-tx",
-    "painters-cypress-tx",
-    "painters-sugar-land-tx",
-  ],
-  nearbyNote: (
+  quickAnswer: (
     <>
-      Comparing contractors? Read our guide to finding{" "}
-      <Link href="/blog/painters-near-me-katy-tx">painters near me in Katy</Link>.
+      Houston Superior Painting paints homes across Katy&apos;s master-planned communities from our office at {OFFICE}.
+      Since {BUSINESS.founded} our crews have handled interiors, exteriors and kitchen cabinets on the brick and Hardie
+      homes typical of Cinco Ranch, Firethorne, Cross Creek Ranch and Seven Meadows. We are insured for{" "}
+      {T.liabilityCoverage}, the estimate is free, you pay nothing until you approve it, and the work carries a{" "}
+      {T.warrantyYears}-year workmanship warranty. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
     </>
   ),
+  neighborhoods: [
+    {
+      name: "Cinco Ranch",
+      note: "one of the largest master-planned communities in the Katy area, with homes from the 1990s onward that are now due for second and third repaints.",
+    },
+    {
+      name: "Firethorne",
+      note: "an established community off FM 1463 with brick and fiber-cement homes, where trim and siding joints usually need fresh caulk.",
+    },
+    {
+      name: "Cross Creek Ranch",
+      note: "a newer master-planned community along FM 1463 on the Fulshear side, often painting for the first time since the builder.",
+    },
+    {
+      name: "Seven Meadows",
+      note: "a community near Cinco Ranch off the Grand Parkway with two-story brick homes and tall Hardie gables.",
+    },
+  ],
+  prep: [
+    "Katy is flat and open, so many walls get full Gulf Coast sun all afternoon and stay humid overnight. Builder-grade paint on south- and west-facing Hardie siding chalks and fades first. We wash the chalk off, re-caulk where siding meets brick, and spot-prime bare fiber cement so the new coat bonds instead of peeling.",
+    "Nearly every Katy community has an HOA that approves exterior colors. We work from your approved color list and submit the request before work starts.",
+  ],
+  products: (
+    <>
+      On Katy exteriors we use Sherwin-Williams Duration or Emerald. Interiors get Benjamin Moore, and cabinets get Benjamin
+      Moore Advance or Sherwin-Williams Emerald Urethane.
+    </>
+  ),
+  pricesNote: (
+    <>
+      A two-story Katy home of 2,500 sq ft often runs {PRICES_2026.exterior2500TwoStory} outside. These are typical ranges,
+      not a quote; the <Link href={COST_GUIDE_PATH}>Houston painting cost guide</Link> breaks them down by home size.
+    </>
+  ),
+  faqs: [
+    {
+      q: "Is there a Katy office?",
+      a: `Yes. Our Katy office is at ${OFFICE}. Call ${BUSINESS.phone} to set up a free estimate.`,
+    },
+    {
+      q: "Do you handle HOA color approval in Cinco Ranch and Cross Creek Ranch?",
+      a: "Yes. We pick colors from your community's approved list and submit the request with you before any exterior work begins, so the crew is not waiting on a decision.",
+    },
+    {
+      q: "What does it cost to paint a two-story house exterior in Katy?",
+      a: `A 2,500 sq ft two-story exterior typically runs ${PRICES_2026.exterior2500TwoStory} in 2026. Rotted trim and heavy caulk failure add to that, and both are priced in writing before work starts.`,
+    },
+    {
+      q: "Do you paint Hardie siding?",
+      a: "Yes. Fiber-cement siding is most of what we paint in Katy. It needs washing, fresh caulk at the joints and spot priming of any bare edges before two finish coats.",
+    },
+  ],
+  cta: {
+    title: "Get a free painting estimate in Katy",
+    body: (
+      <>
+        Call <a href={PHONE_HREF} className="underline">{BUSINESS.phone}</a> or{" "}
+        <a href={BUSINESS.scheduler.embedUrl} target="_blank" rel="noopener noreferrer" className="underline">
+          book a walkthrough
+        </a>
+        . We will look at your home, then send a written, itemized price.
+      </>
+    ),
+  },
+  nearby: ["painters-cinco-ranch-tx", "painters-fulshear-tx", "painters-richmond-tx", "painters-cypress-tx"],
 }
 
 export default function PaintersKatyTX() {

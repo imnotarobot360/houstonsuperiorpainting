@@ -1,56 +1,98 @@
-import { OfficeCityPage, officeCityMetadata, type OfficeCityPageData } from "@/components/aeo/office-city-page"
+import Link from "next/link"
+import { OfficeCityPage, officeCityMetadata, COST_GUIDE_PATH, type OfficeCityPageData } from "@/components/aeo/office-city-page"
+import { BUSINESS, PHONE_HREF, PRICES_2026, officeAddressLine, officeForPage } from "@/lib/business"
 
 export const metadata = officeCityMetadata({
   city: "Sugar Land",
   slug: "painters-sugar-land-tx",
-  title: "House Painters in Sugar Land TX | Houston Superior Painting",
+  title: "House Painters in Sugar Land, TX | First Colony & Riverstone",
   description:
-    "Interior, exterior & cabinet painting in Sugar Land, TX. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960.",
+    "House painters in Sugar Land, TX: First Colony, Riverstone, Telfair & New Territory. Free estimates, 5-year warranty. (346) 594-5960",
   ogImage: "https://houstonsuperiorpainting.com/images/og/og-painters-sugar-land.jpg",
 })
 
-// TODO(juan): add 2–3 real Sugar Land jobs with photos to lib/projects.ts (neighborhood like "First Colony, Sugar Land");
+const T = BUSINESS.trust
+const OFFICE = officeAddressLine(officeForPage("painters-sugar-land-tx")!)
+
+// TODO(juan): add real Sugar Land jobs with photos to lib/projects.ts (neighborhood like "First Colony, Sugar Land");
 // the "Recent Sugar Land projects" section renders automatically when they exist.
 const DATA: OfficeCityPageData = {
   city: "Sugar Land",
   slug: "painters-sugar-land-tx",
-  areasPhrase: "Sugar Land, Missouri City, and Stafford",
-  serviceBlurbs: {
-    "interior-painting-houston-tx": "Full interior repaints, from a single room to the whole house, walls to trim.",
-    "exterior-painting-houston-tx": "Exterior repaints with rotted trim repaired first and colors matched to HOA rules.",
-    "cabinet-refinishing-houston-tx": "Sprayed cabinet finishes that modernize an older Sugar Land kitchen.",
-    "drywall-repair-houston-tx": "Settling cracks, water stains, and old anchor holes patched and texture-matched.",
-    "limewash-brick-painting-houston-tx": "Limewash or mineral paint to refresh dated brick without hiding its texture.",
-    "soft-washing-houston-tx": "Low-pressure washing that removes mildew and chalk before a repaint.",
-  },
+  quickAnswer: (
+    <>
+      For Sugar Land homeowners, our office is at {OFFICE}. We repaint interiors and exteriors and refinish cabinets in
+      First Colony, Riverstone, Telfair and New Territory, from older homes that need trim repair to newer builds on their
+      first repaint. Houston Superior Painting has worked in Fort Bend County since {BUSINESS.founded}, carries{" "}
+      {T.liabilityCoverage} in liability coverage, and backs the work with a {T.warrantyYears}-year warranty. The estimate
+      is free and no money changes hands until you approve it. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
+    </>
+  ),
   neighborhoods: [
-    { name: "First Colony", note: "Sugar Land's largest master-planned community, with many homes from the 1980s and 1990s that are now on their second or third repaint." },
-    { name: "Sugar Creek", note: "One of Sugar Land's older established neighborhoods, with mature trees and more original wood trim." },
-    { name: "Sweetwater", note: "An established community of larger custom homes where detailed trim work is a big part of the job." },
-    { name: "Telfair", note: "A newer master-planned community near US-59 with HOA design guidelines for exterior colors." },
-    { name: "Riverstone", note: "A master-planned community near the Brazos River that spans Sugar Land and Missouri City, with HOA review of exterior colors." },
-    { name: "Imperial", note: "Newer homes built around the historic Imperial Sugar site near downtown Sugar Land." },
-    { name: "New Territory", note: "A 1990s master-planned community now part of Sugar Land, where many homes are due for exterior repaints." },
-    { name: "Greatwood", note: "A master-planned community with a Sugar Land address in unincorporated Fort Bend County." },
-    { name: "Commonwealth", note: "An established Sugar Land neighborhood where older homes often need trim repair before an exterior repaint." },
-    { name: "Sienna (Missouri City)", note: "A large master-planned community in neighboring Missouri City." },
+    {
+      name: "First Colony",
+      note: "Sugar Land's largest master-planned community, mostly built in the 1980s and 1990s, so many homes are on their second or third repaint.",
+    },
+    {
+      name: "Riverstone",
+      note: "a master-planned community near the Brazos River that spans Sugar Land and Missouri City, with HOA review of exterior colors.",
+    },
+    {
+      name: "Telfair",
+      note: "a newer community near US-59 where homes are reaching their first repaint and design guidelines set the color palette.",
+    },
+    {
+      name: "New Territory",
+      note: "a 1990s community now part of Sugar Land, where wood trim, sills and fascia often need repair before an exterior repaint.",
+    },
   ],
   prep: [
-    "Much of Sugar Land, especially First Colony, was built in the 1980s and 1990s. Those homes have wood trim, fascia, and window sills that have been through several Houston summers and repaints. Before we paint, we probe the trim for soft wood, replace what has rotted, and prime the new wood, because paint over rot fails within a season or two.",
-    "Many Sugar Land HOAs restrict exterior colors and require approval before a repaint. We pull your community's approved color list and submit the ARC form before work starts, so the job is not held up waiting on approval.",
+    "Older Sugar Land homes have wood trim and window sills that have absorbed decades of Gulf Coast humidity. Paint seals moisture in if the wood underneath is already soft. During prep we probe trim and sills, replace what has rotted, and prime new wood on all sides before caulk and paint.",
+    "On newer Telfair and Riverstone homes the issue is different: builder paint on fiber-cement siding wears thin on the sunny sides. Those walls need a thorough wash and spot priming more than carpentry.",
   ],
-  areasAnswer:
-    "All of Sugar Land, including First Colony, Sugar Creek, Sweetwater, Telfair, Riverstone, Imperial, New Territory, Greatwood, and Commonwealth. We also cover nearby Missouri City, Sienna, and Stafford.",
-  // The previous version of this page said 2–3 weeks; kept to avoid over-promising.
-  startAnswer:
-    "We typically book Sugar Land jobs 2–3 weeks out. We confirm the exact start date at the estimate and can sometimes fit in urgent projects sooner.",
-  nearby: [
-    "painters-missouri-city-tx",
-    "painters-riverstone-tx",
-    "painters-sienna-tx",
-    "painters-richmond-tx",
-    "painters-houston-tx",
+  products: (
+    <>
+      For Sugar Land homes we spec Sherwin-Williams Duration or Emerald on exteriors, Benjamin Moore on interior walls and
+      trim, and Benjamin Moore Advance or Sherwin-Williams Emerald Urethane on kitchen cabinets.
+    </>
+  ),
+  pricesNote: (
+    <>
+      Trim and sill repair on older homes is priced separately, in writing. For home-size tables and what is included, read
+      the <Link href={COST_GUIDE_PATH}>Houston painting cost guide</Link>.
+    </>
+  ),
+  faqs: [
+    {
+      q: "Where is your Sugar Land office?",
+      a: `It is at ${OFFICE}. Call ${BUSINESS.phone} to book a free estimate at your home.`,
+    },
+    {
+      q: "Do you repair rotted trim on older First Colony homes?",
+      a: "Yes. We replace soft trim, sills and fascia before painting and prime the new wood. The repair is listed and priced in your estimate, and anything found mid-job is approved by you first.",
+    },
+    {
+      q: "Can you match HOA colors in Riverstone and Telfair?",
+      a: "Yes. We work from your community's approved palette and help you submit the exterior color request before work is scheduled.",
+    },
+    {
+      q: "How much does an interior repaint cost in Sugar Land?",
+      a: `Interiors typically run ${PRICES_2026.interiorPerSqFt} per sq ft of floor area in 2026, so a 2,500 sq ft home is usually ${PRICES_2026.fullInterior2500}. Ceiling height, color changes and drywall repair move the price.`,
+    },
   ],
+  cta: {
+    title: "Free painting estimates in Sugar Land",
+    body: (
+      <>
+        Call <a href={PHONE_HREF} className="underline">{BUSINESS.phone}</a> or{" "}
+        <a href={BUSINESS.scheduler.embedUrl} target="_blank" rel="noopener noreferrer" className="underline">
+          schedule your walkthrough online
+        </a>
+        . You get an itemized estimate and decide with no deposit due.
+      </>
+    ),
+  },
+  nearby: ["painters-missouri-city-tx", "painters-riverstone-tx", "painters-sienna-tx", "painters-richmond-tx"],
 }
 
 export default function PaintersSugarLandTX() {
