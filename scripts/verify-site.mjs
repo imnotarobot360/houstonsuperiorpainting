@@ -150,8 +150,12 @@ const est = await get("/painting-estimate-houston")
 // The estimate page is a step-by-step quote wizard: its first step is a row of service buttons.
 if (est.status !== 200 || !/Interior Painting[\s\S]{0,600}Exterior Painting/.test(est.text) || !/<button/.test(est.text)) fail("estimate page quote wizard missing")
 if (contact.status !== 200 || !/<form|book\/houston-superior|widget\.js/i.test(contact.text)) fail("contact page has no form or booking embed")
-const booking = await fetch("https://app.houstonsuperiorgroups.com/book/houston-superior", { redirect: "follow" })
+const BOOKING_URL = "https://app.insightpaint.com/book/houston-superior"
+const booking = await fetch(BOOKING_URL, { redirect: "follow" })
 if (booking.status !== 200) fail(`booking URL returned ${booking.status}`)
+for (const [name, html] of [["homepage", pages.get("/")?.text || ""], ["estimate page", est.text]])
+  if (!html.includes(`href="${BOOKING_URL}"`)) fail(`${name} has no "Book an Appointment" link to ${BOOKING_URL}`)
+if (/houstonsuperiorgroups\.com\/book\/houston-superior"/.test(contact.text)) fail("contact page still embeds the old booking domain")
 console.log(`tel link ${tel}; estimate ${est.status}; contact ${contact.status}; booking ${booking.status}`)
 
 // 7. Retired competitor page: exactly one 301 hop to the neutral guide

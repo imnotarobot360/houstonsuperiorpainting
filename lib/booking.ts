@@ -18,7 +18,7 @@ import type { FunnelService } from "./funnel-config"
  * Verified against the live API on 2026-08-19.
  */
 
-const ERP_BASE = "https://app.houstonsuperiorgroups.com/api/book"
+const ERP_BASE = "https://app.insightpaint.com/api/book"
 
 /**
  * Booking *pages*, which are not the same thing as services.

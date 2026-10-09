@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Star, ShieldCheck, Phone } from "lucide-react"
+import { Star, ShieldCheck, Phone, CalendarDays } from "lucide-react"
 import { BUSINESS, PHONE_HREF } from "@/lib/business"
 
 export function LuxuryHero() {
@@ -48,11 +48,20 @@ export function LuxuryHero() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Link
-              href="/contact"
+              href="/painting-estimate-houston"
               className="font-manrope text-sm font-semibold bg-secondary text-secondary-foreground px-8 py-4 rounded-md hover:bg-secondary/90 transition-colors text-center"
             >
               Get My Free Estimate
             </Link>
+            <a
+              href={BUSINESS.scheduler.embedUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-manrope text-sm font-semibold border border-gold text-soft-white px-8 py-4 rounded-md hover:bg-soft-white/10 transition-colors text-center flex items-center justify-center gap-2"
+            >
+              <CalendarDays className="h-4 w-4" aria-hidden="true" />
+              Book an Appointment
+            </a>
             <a
               href={PHONE_HREF}
               className="font-manrope text-sm font-semibold border border-soft-white/30 text-soft-white px-8 py-4 rounded-md hover:bg-soft-white/10 hover:border-gold transition-colors text-center flex items-center justify-center gap-2"

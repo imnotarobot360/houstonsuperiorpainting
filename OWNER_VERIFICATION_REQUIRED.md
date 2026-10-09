@@ -15,7 +15,7 @@ Last reviewed: 2026-10-08 (live crawl of 160 indexable pages + source).
 | Phone | (346) 594-5960 — identical on all 146 occurrences | site |
 | Email | info@houstonsuperiorpainting.com | site |
 | Workmanship warranty | **5-year** written workmanship warranty (Juan, 2026-10-08: keep 5 years) | owner |
-| Booking | scheduler at https://app.houstonsuperiorgroups.com/book/houston-superior (Juan, 2026-10-08: keep current). https://app.insightpaint.com/book/houston-superior also responds. | owner |
+| Booking | scheduler at https://app.insightpaint.com/book/houston-superior (Juan, 2026-10-08: switched from app.houstonsuperiorgroups.com, same system). "Book an Appointment" buttons on the homepage hero and the estimate page; embedded on /contact | owner |
 | Payment policy | "No Upfront Payment": nothing due until the written estimate is approved; then a down payment; balance after walkthrough | owner, 2026-09 |
 | Insurance | $2M general liability + workers' comp | CLAUDE.md |
 | Paint brands | Sherwin-Williams, Benjamin Moore, Farrow & Ball | owner, 2026-10-07 |

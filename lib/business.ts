@@ -20,13 +20,13 @@ export const BUSINESS = {
   phoneE164: "+1-346-594-5960",        // for schema.org
   email: "info@houstonsuperiorpainting.com",
 
-  // ─── Scheduler (Houston Superior Groups — Contractor ERP) ─────────
+  // ─── Scheduler (InsightPaint Contractor ERP; switched from app.houstonsuperiorgroups.com 2026-10-08, same system) ─
   // Single source of truth for the online booking / photo-quote widget.
   //  - widgetSrc: the widget.js script (preferred embed method)
   //  - embedUrl:  direct booking page URL (embedded inline as an iframe)
   scheduler: {
-    widgetSrc: "https://app.houstonsuperiorgroups.com/api/book/houston-superior/widget.js",
-    embedUrl: "https://app.houstonsuperiorgroups.com/book/houston-superior",
+    widgetSrc: "https://app.insightpaint.com/api/book/houston-superior/widget.js",
+    embedUrl: "https://app.insightpaint.com/book/houston-superior",
     label: "Houston Superior Painting Scheduler",
   },
 

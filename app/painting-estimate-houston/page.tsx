@@ -11,6 +11,7 @@ import {
   FileText,
   ArrowRight,
   Plus,
+  CalendarDays,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Footer } from "@/components/footer"
@@ -306,6 +307,17 @@ export default function PaintingEstimatePage() {
                 Know exactly what&apos;s included before the project starts — preparation,
                 coatings, scope, timeline and warranty. In writing, itemized, with no obligation.
               </p>
+              {/* Direct scheduler link for visitors who just want a time slot
+                  without going through the quote questions. */}
+              <a
+                href={BUSINESS.scheduler.embedUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex w-fit items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
+              >
+                <CalendarDays className="h-4 w-4" aria-hidden="true" />
+                Book an Appointment
+              </a>
 
               {/* Rendered once here for desktop and again after the form for
                   mobile — see HeroSupportingDetail. */}
@@ -661,6 +673,17 @@ export default function PaintingEstimatePage() {
                 <a href={PHONE_HREF}>
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                   {BUSINESS.phone}
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground/25 bg-transparent text-base font-semibold text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              >
+                <a href={BUSINESS.scheduler.embedUrl} target="_blank" rel="noopener noreferrer">
+                  <CalendarDays className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Book an Appointment
                 </a>
               </Button>
             </div>
