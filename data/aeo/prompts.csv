@@ -1,0 +1,211 @@
+id,city,service,intent,branded,prompt
+AEO-HOU-INT-REC,Houston,interior painting,recommendation,false,My wife and I just closed on a 1950s bungalow in the Heights and want every room repainted before we move in next month. Who would you recommend for interior painting in Houston?
+AEO-HOU-INT-BEST,Houston,interior painting,best-company shortlist,false,"Give me a shortlist of 3 to 5 well-reviewed interior painting companies in Houston, TX, and tell me what each one is known for."
+AEO-HOU-INT-COST,Houston,interior painting,cost and value,false,"What should I expect to pay to repaint the inside of a 2,200 sq ft two-story house in Houston, walls and ceilings only? Is it worth paying extra to do the trim and doors too?"
+AEO-HOU-INT-CMP,Houston,interior painting,comparison,false,"For interior painting in Houston, is it better to hire a small owner-run crew or a bigger painting company? What are the tradeoffs on price, scheduling and warranty?"
+AEO-HOU-INT-PROB,Houston,interior painting,problem-solving / purchase intent,false,We had a slow leak from the upstairs bathroom in our Meyerland house and now the ceiling below has brown stains and bubbling paint. Who in Houston can fix the stain and repaint it so it doesn't bleed through?
+AEO-HOU-EXT-REC,Houston,exterior painting,recommendation,false,The paint on the south side of my house in Houston is peeling off in sheets. Who should I call for exterior painting that actually does proper prep?
+AEO-HOU-EXT-BEST,Houston,exterior painting,best-company shortlist,false,Which exterior house painters in Houston have the best reputation for paint jobs that hold up in the heat and humidity? I want a few names to get quotes from.
+AEO-HOU-EXT-COST,Houston,exterior painting,cost and value,false,"How much does it cost to paint the exterior of a two-story wood-siding house in Houston in 2026, and what makes the quote go up?"
+AEO-HOU-EXT-CMP,Houston,exterior painting,comparison,false,Sherwin-Williams Duration vs Emerald vs Benjamin Moore Aura for a house exterior in Houston: which holds up best in Gulf Coast humidity?
+AEO-HOU-EXT-PROB,Houston,exterior painting,problem-solving / purchase intent,false,We're listing our Montrose house in six weeks and the exterior trim is faded and the siding has mildew. Who can paint the outside quickly in Houston before the listing photos?
+AEO-HOU-CAB-REC,Houston,cabinet painting,recommendation,false,Can you recommend someone in Houston who paints kitchen cabinets with a smooth sprayed finish instead of brush marks?
+AEO-HOU-CAB-BEST,Houston,cabinet painting,best-company shortlist,false,Who are the top-rated cabinet painting companies in Houston? I'd like a short list and what to ask each of them.
+AEO-HOU-CAB-COST,Houston,cabinet painting,cost and value,false,Is it worth painting my oak kitchen cabinets instead of replacing them? Roughly what does cabinet painting cost in Houston for about 30 doors and drawers?
+AEO-HOU-CAB-CMP,Houston,cabinet painting,comparison,false,Cabinet painting vs refacing vs new cabinets for a dated 1990s kitchen in Houston: which is the best value if we might sell in three years?
+AEO-HOU-CAB-PROB,Houston,cabinet painting,problem-solving / purchase intent,false,Someone painted my kitchen cabinets two years ago and now the paint is chipping around the handles and peeling at the edges. Who in Houston can strip them and redo them properly?
+AEO-HOU-DRY-REC,Houston,drywall repair,recommendation,false,"I need someone in Houston to patch the holes left by a TV mount and some shelves, and make it invisible after painting. Who do people use for that?"
+AEO-HOU-DRY-BEST,Houston,drywall repair,best-company shortlist,false,What are the best-rated drywall repair companies in Houston for small to medium jobs that also handle the texture match and paint?
+AEO-HOU-DRY-COST,Houston,drywall repair,cost and value,false,"How much does it cost in Houston to replace and finish a 4x8 section of water-damaged drywall, including texture and paint?"
+AEO-HOU-DRY-CMP,Houston,drywall repair,comparison,false,Should I hire a handyman or a drywall and painting company to fix cracks and nail pops all over my Houston house? Which gets a better result for the money?
+AEO-HOU-DRY-PROB,Houston,drywall repair,problem-solving / purchase intent,false,"After the last big storm, water got into our Houston home and the bottom two feet of drywall in the living room is soft and smells musty. Who can cut it out, replace it and repaint?"
+AEO-HOU-LIM-REC,Houston,limewash and brick finishing,recommendation,false,"We want to limewash the red brick on our ranch house in Houston for a softer, old-world look. Who would you recommend?"
+AEO-HOU-LIM-BEST,Houston,limewash and brick finishing,best-company shortlist,false,"Give me a few Houston companies that do limewash or German smear on brick homes well, and how I can tell if they know what they're doing."
+AEO-HOU-LIM-COST,Houston,limewash and brick finishing,cost and value,false,"What does it cost to limewash the brick exterior of a 2,000 sq ft one-story house in Houston? How does that compare to painting the brick?"
+AEO-HOU-LIM-CMP,Houston,limewash and brick finishing,comparison,false,Limewash vs mineral paint vs regular masonry paint on brick in Houston's humidity: which lasts longest and which is easiest to maintain?
+AEO-HOU-LIM-PROB,Houston,limewash and brick finishing,problem-solving / purchase intent,false,"Our Houston house has orange 1980s brick that looks dated next to the newer homes on our street. What's the best way to update it without replacing the brick, and who does that here?"
+AEO-HOU-REM-REC,Houston,residential remodeling,recommendation,false,"We're planning a kitchen and primary bath remodel in our Houston home. Who would you recommend that can handle the whole job, including drywall and paint?"
+AEO-HOU-REM-BEST,Houston,residential remodeling,best-company shortlist,false,Which residential remodeling contractors in Houston are worth getting bids from for a mid-size kitchen update? Give me a shortlist.
+AEO-HOU-REM-COST,Houston,residential remodeling,cost and value,false,"What's a realistic budget for a mid-range kitchen remodel in Houston in 2026, and which parts of the project usually blow the budget?"
+AEO-HOU-REM-CMP,Houston,residential remodeling,comparison,false,"For a remodel in Houston, is it better to hire a general contractor or hire the trades (cabinets, drywall, paint) separately myself? Which saves more without causing headaches?"
+AEO-HOU-REM-PROB,Houston,residential remodeling,problem-solving / purchase intent,false,"We want to open up the wall between our kitchen and living room in our Houston house. Who handles that kind of remodel, including checking whether it's load-bearing and finishing the drywall and paint afterward?"
+AEO-KAT-INT-REC,Katy,interior painting,recommendation,false,We just bought a house in Cinco Ranch and the previous owners painted every room a different bold color. Who in Katy can repaint the whole interior in a neutral?
+AEO-KAT-INT-BEST,Katy,interior painting,best-company shortlist,false,"Shortlist of interior painters in Katy, TX that homeowners actually like. I'd like 3 or 4 to get estimates from."
+AEO-KAT-INT-COST,Katy,interior painting,cost and value,false,"Ballpark cost to paint just the walls in a 4-bedroom, 3,000 sq ft house in Katy? We're keeping the ceilings and trim as they are."
+AEO-KAT-INT-CMP,Katy,interior painting,comparison,false,"In Katy, is it cheaper to paint the interior while the house is empty before move-in, or after we're settled? Does it actually change the quote?"
+AEO-KAT-INT-PROB,Katy,interior painting,problem-solving / purchase intent,false,"My kids' walls in our Katy home are covered in scuffs and crayon and the flat builder paint won't wipe clean. Who can repaint with something washable, and what sheen should I use?"
+AEO-KAT-EXT-REC,Katy,exterior painting,recommendation,false,Our HOA in Katy sent a letter saying our exterior trim and garage door need repainting within 60 days. Who would you recommend that can work with the HOA color approval?
+AEO-KAT-EXT-BEST,Katy,exterior painting,best-company shortlist,false,"Best exterior house painting companies in Katy, TX? I'd like a few options that offer a solid warranty."
+AEO-KAT-EXT-COST,Katy,exterior painting,cost and value,false,"How much does it usually cost to repaint the exterior trim, fascia, soffits and garage door on a brick house in Katy?"
+AEO-KAT-EXT-CMP,Katy,exterior painting,comparison,false,Should I repaint the Hardie siding on my Katy house now or wait another couple of years? How do I tell whether it really needs paint or just a good wash?
+AEO-KAT-EXT-PROB,Katy,exterior painting,problem-solving / purchase intent,false,The wood trim around our windows in Katy is peeling and a few spots feel soft. Who can repair the rot and repaint before it gets worse?
+AEO-KAT-CAB-REC,Katy,cabinet painting,recommendation,false,"Who does good kitchen cabinet painting in Katy? Our builder-grade cabinets are fine structurally, they're just a boring honey oak."
+AEO-KAT-CAB-BEST,Katy,cabinet painting,best-company shortlist,false,Top cabinet refinishing companies in the Katy area: which ones spray and which ones brush? Give me a short list.
+AEO-KAT-CAB-COST,Katy,cabinet painting,cost and value,false,"How much would it cost to paint the kitchen cabinets and the bathroom vanities in a Katy home, about 40 doors and drawers in total?"
+AEO-KAT-CAB-CMP,Katy,cabinet painting,comparison,false,"All-white painted cabinets vs a two-tone kitchen with a darker island: which holds up better with kids, and does it change the cost in Katy?"
+AEO-KAT-CAB-PROB,Katy,cabinet painting,problem-solving / purchase intent,false,"We're hosting family at our Katy house in a month and the kitchen looks tired. Can cabinets be painted that fast, and how long would we be without a usable kitchen?"
+AEO-KAT-DRY-REC,Katy,drywall repair,recommendation,false,"Who fixes drywall cracks in Katy? We have cracks above several doorways that keep coming back, and I think it's the clay soil moving."
+AEO-KAT-DRY-BEST,Katy,drywall repair,best-company shortlist,false,Which Katy companies are best for drywall repair plus a paint match? I want it to look like it never happened.
+AEO-KAT-DRY-COST,Katy,drywall repair,cost and value,false,What does a typical drywall repair cost in Katy for a few fist-sized holes and some nail pops?
+AEO-KAT-DRY-CMP,Katy,drywall repair,comparison,false,"Should I repair the cracked drywall in my Katy house now, or wait until after the foundation work is done? What order makes sense?"
+AEO-KAT-DRY-PROB,Katy,drywall repair,problem-solving / purchase intent,false,"A plumber cut a big hole in our Katy hallway wall to get to a pipe. Who can patch it, match the orange-peel texture and repaint the wall?"
+AEO-KAT-LIM-REC,Katy,limewash and brick finishing,recommendation,false,Can anyone in Katy limewash brick? We want our two-story house to look more like a modern farmhouse.
+AEO-KAT-LIM-BEST,Katy,limewash and brick finishing,best-company shortlist,false,"Who are the most experienced limewash and brick finishing companies around Katy, TX?"
+AEO-KAT-LIM-COST,Katy,limewash and brick finishing,cost and value,false,Roughly how much would it cost to limewash just the front elevation of a brick home in Katy versus the whole house?
+AEO-KAT-LIM-CMP,Katy,limewash and brick finishing,comparison,false,"Do Katy HOAs usually allow limewash or painted brick? How do people get it approved, and which option is less risky?"
+AEO-KAT-LIM-PROB,Katy,limewash and brick finishing,problem-solving / purchase intent,false,I tried a DIY limewash on a test patch of my Katy house and it came out blotchy. Who can fix it and do the whole house properly?
+AEO-KAT-REM-REC,Katy,residential remodeling,recommendation,false,"We want to update our 2005 Katy house with new flooring, paint, lighting and a bathroom refresh. Who would you recommend to manage all of that?"
+AEO-KAT-REM-BEST,Katy,residential remodeling,best-company shortlist,false,Best remodeling contractors in Katy for bathroom renovations? I need a shortlist with good reviews.
+AEO-KAT-REM-COST,Katy,residential remodeling,cost and value,false,"How much does a primary bathroom remodel cost in Katy, TX if we swap the tub for a walk-in shower?"
+AEO-KAT-REM-CMP,Katy,residential remodeling,comparison,false,Remodel our current Katy house or move to a newer one in Fulshear? Which remodel projects actually add value in Katy?
+AEO-KAT-REM-PROB,Katy,residential remodeling,problem-solving / purchase intent,false,"Our upstairs shower in Katy leaked into the ceiling below. Who can handle the shower repair, the drywall and the repaint as one job?"
+AEO-CYP-INT-REC,Cypress,interior painting,recommendation,false,"Looking for an interior painter you'd recommend in Cypress, TX for a two-story house with very high ceilings in the family room. Who handles tall walls safely?"
+AEO-CYP-INT-BEST,Cypress,interior painting,best-company shortlist,false,Who are the top interior painting companies in Cypress and Cy-Fair right now? Short list please.
+AEO-CYP-INT-COST,Cypress,interior painting,cost and value,false,How much do painters in Cypress charge to paint a two-story foyer and the staircase wall? It's about 20 feet high.
+AEO-CYP-INT-CMP,Cypress,interior painting,comparison,false,Benjamin Moore vs Sherwin-Williams for interior walls in a Cypress home with lots of natural light: is there a real difference painters notice?
+AEO-CYP-INT-PROB,Cypress,interior painting,problem-solving / purchase intent,false,"We're selling our house in Bridgeland next month. Which rooms should we repaint before listing, and who in Cypress can do it quickly?"
+AEO-CYP-EXT-REC,Cypress,exterior painting,recommendation,false,Who do people in Cypress use for exterior painting? The siding on our 15-year-old house is badly faded on the west side.
+AEO-CYP-EXT-BEST,Cypress,exterior painting,best-company shortlist,false,"Give me a few well-regarded exterior painters in Cypress, TX and tell me what I should compare in their quotes."
+AEO-CYP-EXT-COST,Cypress,exterior painting,cost and value,false,"What does it cost to paint the exterior of a 2,800 sq ft house in Cypress that's brick on the bottom and siding on top?"
+AEO-CYP-EXT-CMP,Cypress,exterior painting,comparison,false,"Pressure wash and repaint, or just pressure wash? How do I know if my Cypress home's exterior actually needs new paint?"
+AEO-CYP-EXT-PROB,Cypress,exterior painting,problem-solving / purchase intent,false,Green mildew keeps coming back on the north side of our house in Cypress even after washing. Who can treat it and repaint so it doesn't return so fast?
+AEO-CYP-CAB-REC,Cypress,cabinet painting,recommendation,false,I'd like to paint my kitchen cabinets a sage green. Who in Cypress does cabinet painting with a finish that really lasts?
+AEO-CYP-CAB-BEST,Cypress,cabinet painting,best-company shortlist,false,"Which cabinet painting companies in Cypress, TX have the best reviews for a smooth sprayed finish?"
+AEO-CYP-CAB-COST,Cypress,cabinet painting,cost and value,false,Cabinet painting in Cypress: what's the price difference between painting just the doors and fronts versus the inside of the boxes too?
+AEO-CYP-CAB-CMP,Cypress,cabinet painting,comparison,false,"Is painting the kitchen cabinets in our Cypress house worth it if we'll sell in two years, or do buyers prefer the original wood?"
+AEO-CYP-CAB-PROB,Cypress,cabinet painting,problem-solving / purchase intent,false,"The laundry room and bathroom cabinets in our Cypress house have swollen, peeling paint near the bottom from moisture. Can they be repaired and repainted, and who does that?"
+AEO-CYP-DRY-REC,Cypress,drywall repair,recommendation,false,I need a drywall repair person in Cypress who also textures and paints. There are several patches left over from an electrical job.
+AEO-CYP-DRY-BEST,Cypress,drywall repair,best-company shortlist,false,"Top-rated drywall repair services near Cypress, TX? I'd like a couple of options for a ceiling repair."
+AEO-CYP-DRY-COST,Cypress,drywall repair,cost and value,false,How much does it cost to fix a sagging drywall ceiling in a garage in Cypress?
+AEO-CYP-DRY-CMP,Cypress,drywall repair,comparison,false,Patch the popcorn ceiling or remove it entirely and retexture? We're in Cypress and the ceiling has a few damaged spots.
+AEO-CYP-DRY-PROB,Cypress,drywall repair,problem-solving / purchase intent,false,The AC condensate line overflowed in our Cypress attic and left a wet spot on the bedroom ceiling. Who can repair and repaint it once it dries out?
+AEO-CYP-LIM-REC,Cypress,limewash and brick finishing,recommendation,false,Who would you recommend in Cypress for limewash on brick? We like the whitewashed look we've seen on some houses in Towne Lake.
+AEO-CYP-LIM-BEST,Cypress,limewash and brick finishing,best-company shortlist,false,"Best companies for limewash, German schmear or whitewashed brick in the Cypress area?"
+AEO-CYP-LIM-COST,Cypress,limewash and brick finishing,cost and value,false,"Limewash vs painting brick in Cypress: which costs more upfront, and which costs more over 10 years?"
+AEO-CYP-LIM-CMP,Cypress,limewash and brick finishing,comparison,false,Will limewash wash off in Houston-area rain? I'm comparing limewash and silicate mineral paint for the brick on my Cypress house.
+AEO-CYP-LIM-PROB,Cypress,limewash and brick finishing,problem-solving / purchase intent,false,The fireplace surround in our Cypress living room is dark brick that makes the room feel small. Who can limewash or paint it so it looks intentional and not DIY?
+AEO-CYP-REM-REC,Cypress,residential remodeling,recommendation,false,"We're finishing the bonus room over the garage in our Cypress house. Who would you recommend to handle the drywall, trim and paint?"
+AEO-CYP-REM-BEST,Cypress,residential remodeling,best-company shortlist,false,"Shortlist of reputable home remodeling contractors in Cypress, TX for a kitchen update."
+AEO-CYP-REM-COST,Cypress,residential remodeling,cost and value,false,"What does it cost in Cypress to remodel a small half bath with a new vanity, lighting, tile and paint?"
+AEO-CYP-REM-CMP,Cypress,residential remodeling,comparison,false,"Kitchen refresh (painted cabinets, new counters, new hardware) vs a full gut remodel in Cypress: what's the price difference and which makes more sense?"
+AEO-CYP-REM-PROB,Cypress,residential remodeling,problem-solving / purchase intent,false,"We just bought an older house off Jones Road in Cypress that needs work in every room. How should we prioritize the remodeling, and who can take on several rooms at once?"
+AEO-SUG-INT-REC,Sugar Land,interior painting,recommendation,false,Can you recommend an interior painter in Sugar Land who is careful with furniture and floors? We'll be living in the house while they work.
+AEO-SUG-INT-BEST,Sugar Land,interior painting,best-company shortlist,false,"Which interior painting companies in Sugar Land, TX have the strongest reputation? Give me 3 to 5 to compare."
+AEO-SUG-INT-COST,Sugar Land,interior painting,cost and value,false,"How much does it cost to paint the interior trim, baseboards and doors in a Sugar Land house? The walls are fine."
+AEO-SUG-INT-CMP,Sugar Land,interior painting,comparison,false,"Eggshell vs satin vs matte for the main living areas in a Sugar Land home: what do painters recommend, and does it affect the price?"
+AEO-SUG-INT-PROB,Sugar Land,interior painting,problem-solving / purchase intent,false,"Our Sugar Land house has cracked, yellowing oil-based paint on the trim. Who can repaint over it properly so the new paint doesn't peel?"
+AEO-SUG-EXT-REC,Sugar Land,exterior painting,recommendation,false,We live in First Colony and need the exterior repainted. Who would you recommend for a brick-and-siding home in Sugar Land?
+AEO-SUG-EXT-BEST,Sugar Land,exterior painting,best-company shortlist,false,Best exterior painters in Sugar Land for houses with a lot of wood trim? Short list.
+AEO-SUG-EXT-COST,Sugar Land,exterior painting,cost and value,false,"How much does it cost to paint the trim and siding on a one-story brick house in Sugar Land, and how long does the job usually take?"
+AEO-SUG-EXT-CMP,Sugar Land,exterior painting,comparison,false,One coat or two on an exterior repaint in Sugar Land? Some of my quotes include two coats and some don't. Which is the better value?
+AEO-SUG-EXT-PROB,Sugar Land,exterior painting,problem-solving / purchase intent,false,"Our Sugar Land HOA approved new colors, but we're not sure whether repainting only the front door and shutters will look odd. Who can help pick colors and do the work?"
+AEO-SUG-CAB-REC,Sugar Land,cabinet painting,recommendation,false,Who paints kitchen cabinets in Sugar Land? We want to go from cherry wood to a soft white.
+AEO-SUG-CAB-BEST,Sugar Land,cabinet painting,best-company shortlist,false,Give me a shortlist of cabinet painting or refinishing companies in Sugar Land with good reviews.
+AEO-SUG-CAB-COST,Sugar Land,cabinet painting,cost and value,false,"What does it usually cost to paint the kitchen cabinets and island in Sugar Land, including filling the old hardware holes for new pulls?"
+AEO-SUG-CAB-CMP,Sugar Land,cabinet painting,comparison,false,Cabinet painting in Sugar Land: sprayed lacquer vs urethane enamel vs brushed paint. Which lasts longer in a busy family kitchen?
+AEO-SUG-CAB-PROB,Sugar Land,cabinet painting,problem-solving / purchase intent,false,"Grease stains around the stove keep showing through on the cabinets in our Sugar Land kitchen no matter how much I clean. Is painting the right fix, and who should do it?"
+AEO-SUG-DRY-REC,Sugar Land,drywall repair,recommendation,false,I need a recommendation for drywall repair in Sugar Land: a cracked corner bead and a dent where a door handle hit the wall.
+AEO-SUG-DRY-BEST,Sugar Land,drywall repair,best-company shortlist,false,"Which Sugar Land drywall repair companies are reliable for quick, small jobs?"
+AEO-SUG-DRY-COST,Sugar Land,drywall repair,cost and value,false,How much does a drywall patch and repaint usually run in Sugar Land for a single room?
+AEO-SUG-DRY-CMP,Sugar Land,drywall repair,comparison,false,DIY drywall patch vs paying a pro in Sugar Land: when is hiring someone actually worth it?
+AEO-SUG-DRY-PROB,Sugar Land,drywall repair,problem-solving / purchase intent,false,"A roof leak left a stained, cracked ceiling in the living room of our Sugar Land house. The roof is fixed now. Who can repair the drywall and repaint the ceiling?"
+AEO-SUG-LIM-REC,Sugar Land,limewash and brick finishing,recommendation,false,"Who would you recommend for limewashing brick in Sugar Land? We want a subtle, mottled look that lets some of the brick show through."
+AEO-SUG-LIM-BEST,Sugar Land,limewash and brick finishing,best-company shortlist,false,Top-rated limewash and brick finishing contractors around Sugar Land and Fort Bend County?
+AEO-SUG-LIM-COST,Sugar Land,limewash and brick finishing,cost and value,false,What would it cost to limewash the brick on a Sugar Land house and paint the trim at the same time?
+AEO-SUG-LIM-CMP,Sugar Land,limewash and brick finishing,comparison,false,"Limewash vs whitewash vs painted brick: which looks best on a 1990s Sugar Land home, and which matters more for resale?"
+AEO-SUG-LIM-PROB,Sugar Land,limewash and brick finishing,problem-solving / purchase intent,false,"The painted brick on our Sugar Land house is peeling and seems to be trapping moisture. Can it be stripped and limewashed instead, and who does that?"
+AEO-SUG-REM-REC,Sugar Land,residential remodeling,recommendation,false,"We want to remodel our Sugar Land kitchen: new backsplash, new counters and fresh paint. Who would you recommend?"
+AEO-SUG-REM-BEST,Sugar Land,residential remodeling,best-company shortlist,false,Best home remodeling companies in Sugar Land for updating an entire house? Short list please.
+AEO-SUG-REM-COST,Sugar Land,residential remodeling,cost and value,false,How much does it cost in 2026 to remodel the kitchen and two bathrooms of a 1990s home in Sugar Land?
+AEO-SUG-REM-CMP,Sugar Land,residential remodeling,comparison,false,Sugar Land remodel: design-build firm vs an independent contractor. Which is better for a mid-budget project?
+AEO-SUG-REM-PROB,Sugar Land,residential remodeling,problem-solving / purchase intent,false,"We're getting older and want to make our Sugar Land home easier to live in, with a wider shower, grab bars and better lighting. Who does that kind of remodeling?"
+AEO-RIC-INT-REC,Richmond,interior painting,recommendation,false,"Our new build in Harvest Green has flat builder paint that marks if you so much as touch it. Who in Richmond, TX can repaint with a more durable finish?"
+AEO-RIC-INT-BEST,Richmond,interior painting,best-company shortlist,false,"Who are the best interior painting contractors in Richmond, TX? I want a few to call this week."
+AEO-RIC-INT-COST,Richmond,interior painting,cost and value,false,"Typical price to paint the interior of a newly built home in Richmond after we move in? Mostly walls, about 2,600 sq ft."
+AEO-RIC-INT-CMP,Richmond,interior painting,comparison,false,Is it better to pay the builder for a paint upgrade before closing or hire a painter in Richmond after closing? Which ends up cheaper?
+AEO-RIC-INT-PROB,Richmond,interior painting,problem-solving / purchase intent,false,"Nail pops and hairline cracks are showing up all over our one-year-old house in Richmond. Should we paint now or wait, and who fixes it right?"
+AEO-RIC-EXT-REC,Richmond,exterior painting,recommendation,false,"Can you recommend an exterior painter for an older house near historic downtown Richmond, TX? Lots of wood siding and trim."
+AEO-RIC-EXT-BEST,Richmond,exterior painting,best-company shortlist,false,"Shortlist of reliable exterior house painters serving Richmond and Rosenberg, TX."
+AEO-RIC-EXT-COST,Richmond,exterior painting,cost and value,false,"How much would it cost to repaint the exterior of an older wood-sided home in Richmond, TX that needs some scraping and carpentry repairs?"
+AEO-RIC-EXT-CMP,Richmond,exterior painting,comparison,false,Elastomeric paint vs regular acrylic for the outside of a Richmond home: which do local painters recommend for our climate?
+AEO-RIC-EXT-PROB,Richmond,exterior painting,problem-solving / purchase intent,false,We're getting our Richmond house ready to sell and the buyer's inspector flagged peeling paint and exposed wood. Who can take care of it before closing?
+AEO-RIC-CAB-REC,Richmond,cabinet painting,recommendation,false,"Who paints cabinets in Richmond, TX? Our home is newer but the cabinet color is too dark for us."
+AEO-RIC-CAB-BEST,Richmond,cabinet painting,best-company shortlist,false,Top-rated cabinet painters near Richmond and the rest of Fort Bend County? I need a few names.
+AEO-RIC-CAB-COST,Richmond,cabinet painting,cost and value,false,"What's a fair price to paint only the bathroom vanities (three bathrooms) in Richmond, TX?"
+AEO-RIC-CAB-CMP,Richmond,cabinet painting,comparison,false,Should we paint our Richmond kitchen cabinets or just replace the doors? Which gives the better result for the cost?
+AEO-RIC-CAB-PROB,Richmond,cabinet painting,problem-solving / purchase intent,false,"The factory finish on our Richmond cabinets is already wearing through at the edges after one year. Is that normal, and who can refinish them?"
+AEO-RIC-DRY-REC,Richmond,drywall repair,recommendation,false,"Who does drywall repair in Richmond, TX? We have settling cracks in a few rooms."
+AEO-RIC-DRY-BEST,Richmond,drywall repair,best-company shortlist,false,"Best drywall repair and painting companies around Richmond, TX for a whole-house touch-up?"
+AEO-RIC-DRY-COST,Richmond,drywall repair,cost and value,false,How much does it cost to repair drywall after removing wallpaper in a Richmond house? The wall surface got torn up in spots.
+AEO-RIC-DRY-CMP,Richmond,drywall repair,comparison,false,"After wallpaper removal, should we skim coat the whole wall or just patch the damaged spots? What do pros in Richmond recommend?"
+AEO-RIC-DRY-PROB,Richmond,drywall repair,problem-solving / purchase intent,false,We had minor flooding near the Brazos in Richmond and the drywall in our garage got wet. Who can replace it and make it look finished again?
+AEO-RIC-LIM-REC,Richmond,limewash and brick finishing,recommendation,false,"Can you recommend someone who limewashes brick near Richmond, TX? We want a classic look on a newer house in Long Meadow Farms."
+AEO-RIC-LIM-BEST,Richmond,limewash and brick finishing,best-company shortlist,false,"Which companies near Richmond, TX are known for limewash, whitewash or German smear finishes?"
+AEO-RIC-LIM-COST,Richmond,limewash and brick finishing,cost and value,false,"Is limewash cheaper than painting brick for a home of about 2,400 sq ft in Richmond, TX?"
+AEO-RIC-LIM-CMP,Richmond,limewash and brick finishing,comparison,false,Does limewash work the same on new brick as on older brick? We're in a newer Richmond subdivision.
+AEO-RIC-LIM-PROB,Richmond,limewash and brick finishing,problem-solving / purchase intent,false,"The brick on our Richmond house has white chalky stains (efflorescence). Should we limewash over it or fix something first, and who can tell us?"
+AEO-RIC-REM-REC,Richmond,residential remodeling,recommendation,false,"Who would you recommend for a remodel in Richmond, TX? We want to convert a formal dining room into a home office with built-ins."
+AEO-RIC-REM-BEST,Richmond,residential remodeling,best-company shortlist,false,Shortlist of remodeling contractors serving Richmond and Fulshear for kitchen and bath work.
+AEO-RIC-REM-COST,Richmond,residential remodeling,cost and value,false,"What does it cost to turn a formal dining room into an enclosed office in Richmond, TX, including a door, drywall and paint?"
+AEO-RIC-REM-CMP,Richmond,residential remodeling,comparison,false,"Remodeling for resale vs remodeling for ourselves: which renovations in Richmond, TX actually pay for themselves?"
+AEO-RIC-REM-PROB,Richmond,residential remodeling,problem-solving / purchase intent,false,"We want to replace the carpet, repaint and update the lighting before moving into an older Richmond house. Who can coordinate it so everything's done before move-in day?"
+AEO-TOM-INT-REC,Tomball,interior painting,recommendation,false,We're moving into an older ranch house in Tomball and want the inside repainted before we unload the truck. Who would you recommend?
+AEO-TOM-INT-BEST,Tomball,interior painting,best-company shortlist,false,"Give me a shortlist of interior painters serving Tomball, TX with solid reviews."
+AEO-TOM-INT-COST,Tomball,interior painting,cost and value,false,"How much do painters around Tomball charge to paint the interior of an 1,800 sq ft house, ceilings included?"
+AEO-TOM-INT-CMP,Tomball,interior painting,comparison,false,Are painters based in Tomball cheaper than companies coming up from Houston? Does it matter who I hire for interior work out here?
+AEO-TOM-INT-PROB,Tomball,interior painting,problem-solving / purchase intent,false,The previous owners smoked in our Tomball house and the walls are yellow and smell. Who can seal and repaint to get rid of the stains and odor?
+AEO-TOM-EXT-REC,Tomball,exterior painting,recommendation,false,Who would you recommend in Tomball for painting the exterior of a house surrounded by pine trees? Sap and constant shade are a problem.
+AEO-TOM-EXT-BEST,Tomball,exterior painting,best-company shortlist,false,"Best exterior painting companies in Tomball, TX? Looking for a couple to quote a farmhouse-style home."
+AEO-TOM-EXT-COST,Tomball,exterior painting,cost and value,false,"Rough cost to paint the board-and-batten siding on a farmhouse with a metal roof in Tomball, TX?"
+AEO-TOM-EXT-CMP,Tomball,exterior painting,comparison,false,Paint vs stain for the cedar siding and wraparound porch on our Tomball house: which lasts longer and costs less over time?
+AEO-TOM-EXT-PROB,Tomball,exterior painting,problem-solving / purchase intent,false,Woodpeckers and moisture damaged a few spots on the siding of our Tomball house. Who repairs the wood and repaints so it matches?
+AEO-TOM-CAB-REC,Tomball,cabinet painting,recommendation,false,"Who paints kitchen cabinets near Tomball, TX? I want a navy island with white perimeter cabinets."
+AEO-TOM-CAB-BEST,Tomball,cabinet painting,best-company shortlist,false,Top cabinet painting companies around Tomball and Spring with good reviews?
+AEO-TOM-CAB-COST,Tomball,cabinet painting,cost and value,false,How much does cabinet painting cost in Tomball compared with buying new cabinets?
+AEO-TOM-CAB-CMP,Tomball,cabinet painting,comparison,false,"Can old knotty pine cabinets in a Tomball house be painted so they look good, or is replacing them the better value?"
+AEO-TOM-CAB-PROB,Tomball,cabinet painting,problem-solving / purchase intent,false,"Our 1970s kitchen cabinets in Tomball have decades of grease and old varnish on them. Can a painter prep and paint them so the finish lasts, and who should I call?"
+AEO-TOM-DRY-REC,Tomball,drywall repair,recommendation,false,I need a drywall repair recommendation in Tomball for some cracks and a busted outside corner in our hallway.
+AEO-TOM-DRY-BEST,Tomball,drywall repair,best-company shortlist,false,"Reliable drywall repair contractors in Tomball, TX? Shortlist please."
+AEO-TOM-DRY-COST,Tomball,drywall repair,cost and value,false,What does it cost in Tomball to repair drywall after a small leak under the kitchen sink and repaint the wall?
+AEO-TOM-DRY-CMP,Tomball,drywall repair,comparison,false,Repair vs replace: an older Tomball home has walls covered in old patches. Does it make more sense to keep patching or hang new drywall?
+AEO-TOM-DRY-PROB,Tomball,drywall repair,problem-solving / purchase intent,false,"We're turning over a Tomball rental between tenants and the walls have holes, scuffs and sloppy old patches. Who can repair and repaint quickly?"
+AEO-TOM-LIM-REC,Tomball,limewash and brick finishing,recommendation,false,Can you recommend someone near Tomball who does limewash on brick for a farmhouse look?
+AEO-TOM-LIM-BEST,Tomball,limewash and brick finishing,best-company shortlist,false,"Which contractors around Tomball, TX have real experience with limewash and other brick finishes?"
+AEO-TOM-LIM-COST,Tomball,limewash and brick finishing,cost and value,false,How much does it cost to limewash a brick fireplace and chimney in Tomball?
+AEO-TOM-LIM-CMP,Tomball,limewash and brick finishing,comparison,false,Limewash or painted brick for a Tomball home on a wooded lot with a lot of shade and moisture?
+AEO-TOM-LIM-PROB,Tomball,limewash and brick finishing,problem-solving / purchase intent,false,"Our brick ranch in Tomball looks outdated and we're thinking about limewashing it before we list. Will it help it sell, and who can do it?"
+AEO-TOM-REM-REC,Tomball,residential remodeling,recommendation,false,"Who would you recommend in Tomball for a whole-house refresh on an older home? Drywall, paint, trim, and maybe opening up a wall."
+AEO-TOM-REM-BEST,Tomball,residential remodeling,best-company shortlist,false,"Shortlist of home remodelers serving Tomball, TX for a kitchen renovation."
+AEO-TOM-REM-COST,Tomball,residential remodeling,cost and value,false,"What's a realistic 2026 budget for updating a 1980s home in Tomball: paint, flooring and a kitchen refresh?"
+AEO-TOM-REM-CMP,Tomball,residential remodeling,comparison,false,"Tomball remodel: hire a general contractor, or have a painting and drywall company do the finish work and manage the rest myself?"
+AEO-TOM-REM-PROB,Tomball,residential remodeling,problem-solving / purchase intent,false,"We inherited an older family house in Tomball that needs updating before we can live in it or sell it. Where do we start, and who can do the work?"
+AEO-FUL-INT-REC,Fulshear,interior painting,recommendation,false,Can you recommend an interior painter in Fulshear for our new home in Cross Creek Ranch? The builder's paint is thin and patchy.
+AEO-FUL-INT-BEST,Fulshear,interior painting,best-company shortlist,false,"Who are the most reputable interior painters in Fulshear, TX? Give me a short list."
+AEO-FUL-INT-COST,Fulshear,interior painting,cost and value,false,How much would it cost to paint a few accent walls and a two-story living room in Fulshear?
+AEO-FUL-INT-CMP,Fulshear,interior painting,comparison,false,"Hire a painter for the whole Fulshear house at once, or do a few rooms at a time? Which is better on price and disruption?"
+AEO-FUL-INT-PROB,Fulshear,interior painting,problem-solving / purchase intent,false,Builder touch-ups in our Fulshear house left shiny patches all over the walls that show in the afternoon light. Who can fix it so the walls look even?
+AEO-FUL-EXT-REC,Fulshear,exterior painting,recommendation,false,Who would you recommend for exterior painting in Fulshear? Our house is only 8 years old but the trim is already chalky.
+AEO-FUL-EXT-BEST,Fulshear,exterior painting,best-company shortlist,false,Best exterior house painters serving Fulshear and Katy for HOA-approved color changes?
+AEO-FUL-EXT-COST,Fulshear,exterior painting,cost and value,false,"What's the cost to repaint the exterior of a 3,500 sq ft home in Fulshear that has stone, brick and Hardie siding?"
+AEO-FUL-EXT-CMP,Fulshear,exterior painting,comparison,false,"Is it worth paying for premium exterior paint with Fulshear's sun and humidity, or is a mid-grade paint fine?"
+AEO-FUL-EXT-PROB,Fulshear,exterior painting,problem-solving / purchase intent,false,Our Fulshear house exterior was painted three years ago and it's already peeling near the gutters. Who can figure out why and fix it properly?
+AEO-FUL-CAB-REC,Fulshear,cabinet painting,recommendation,false,"Who paints cabinets in Fulshear? Our kitchen is fairly new, but we want greige instead of the espresso stain."
+AEO-FUL-CAB-BEST,Fulshear,cabinet painting,best-company shortlist,false,Give me a few cabinet painting companies around Fulshear and Katy that do sprayed finishes.
+AEO-FUL-CAB-COST,Fulshear,cabinet painting,cost and value,false,How much does it cost in Fulshear to paint a large kitchen with an island and a butler's pantry?
+AEO-FUL-CAB-CMP,Fulshear,cabinet painting,comparison,false,"Painting dark builder cabinets a lighter color in a newer Fulshear home: is it worth it, or will it look worse than the factory finish?"
+AEO-FUL-CAB-PROB,Fulshear,cabinet painting,problem-solving / purchase intent,false,"We just bought a newer Fulshear home with dark cabinets that make the kitchen feel like a cave. What's the fastest way to brighten it up, and who does that?"
+AEO-FUL-DRY-REC,Fulshear,drywall repair,recommendation,false,Who does drywall repair in Fulshear? We want new-construction cracks fixed before our builder warranty runs out.
+AEO-FUL-DRY-BEST,Fulshear,drywall repair,best-company shortlist,false,"Top drywall repair and paint companies serving Fulshear, TX?"
+AEO-FUL-DRY-COST,Fulshear,drywall repair,cost and value,false,How much does it cost to fix drywall cracks and nail pops throughout a two-year-old house in Fulshear?
+AEO-FUL-DRY-CMP,Fulshear,drywall repair,comparison,false,"Make the builder fix the drywall cracks in our Fulshear home under warranty, or hire someone ourselves? What are the pros and cons?"
+AEO-FUL-DRY-PROB,Fulshear,drywall repair,problem-solving / purchase intent,false,"We mounted a TV over the fireplace in our Fulshear home and then moved it, and now there are big holes and anchor damage. Who can patch and paint it seamlessly?"
+AEO-FUL-LIM-REC,Fulshear,limewash and brick finishing,recommendation,false,Can you recommend a contractor for limewash on a newer brick home in Fulshear? Our HOA allows it but wants to approve it first.
+AEO-FUL-LIM-BEST,Fulshear,limewash and brick finishing,best-company shortlist,false,Who does high-quality limewash or whitewashed brick in the Fulshear area?
+AEO-FUL-LIM-COST,Fulshear,limewash and brick finishing,cost and value,false,What's the price range to limewash the front of a two-story brick house in Fulshear?
+AEO-FUL-LIM-CMP,Fulshear,limewash and brick finishing,comparison,false,"Limewash vs painted brick on a new house in Fulshear: which one is reversible, and which fits a modern farmhouse style better?"
+AEO-FUL-LIM-PROB,Fulshear,limewash and brick finishing,problem-solving / purchase intent,false,"The brick color on our Fulshear house clashes with the stone the builder used. Can limewash tie them together, and who can show us samples on our wall?"
+AEO-FUL-REM-REC,Fulshear,residential remodeling,recommendation,false,"We want to add built-ins, shiplap and new lighting to our living room in Fulshear. Who would you recommend?"
+AEO-FUL-REM-BEST,Fulshear,residential remodeling,best-company shortlist,false,Shortlist of residential remodelers in Fulshear for upgrading a builder-grade home.
+AEO-FUL-REM-COST,Fulshear,residential remodeling,cost and value,false,"What's a typical cost to upgrade a builder-grade home in Fulshear with new trim, paint, lighting and bathroom vanities?"
+AEO-FUL-REM-CMP,Fulshear,residential remodeling,comparison,false,"Builder upgrades during construction vs remodeling after closing in Fulshear: which is cheaper, and which gets better quality?"
+AEO-FUL-REM-PROB,Fulshear,residential remodeling,problem-solving / purchase intent,false,"We just moved into a new build in Fulshear and want a home office with a door, built-ins and paint. Who can do it without causing problems with the builder warranty?"

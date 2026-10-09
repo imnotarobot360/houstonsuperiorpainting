@@ -235,7 +235,7 @@ export default function HoustonPaintingCostGuidePage() {
           </p>
           <p>
             If you hire it out, read{" "}
-            <Link href="/questions-to-ask-before-hiring-painters">how to hire a painter in Houston</Link> before you compare
+            <Link href="/houston-painting-contractor-guide">how to hire a painter in Houston</Link> before you compare
             quotes.
           </p>
         </Section>

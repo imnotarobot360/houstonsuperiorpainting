@@ -3,6 +3,8 @@
 // Each entry maps to a real before/after image pair in /public/images.
 // Content is structured for EEAT + rich snippets (problem → process → result).
 
+import { SERVICE_AREAS, type ServiceArea } from "./business"
+
 export interface ProjectStat {
   label: string
   value: string
@@ -39,6 +41,32 @@ export interface CaseStudy {
   /** Outcome paragraph. */
   results?: string
   testimonial?: { quote: string; name: string }
+  /*
+   * Optional case-study fields (see docs/case-study-template.md). Every one is
+   * rendered only when present. Fill a field only with facts Juan has confirmed
+   * for this job; leave it out otherwise. Never a street address, house number,
+   * plate, person or another company's sign: neighborhood or ZIP only.
+   */
+  /** e.g. "Two-story single-family home", "Single-story office suite". */
+  propertyType?: string
+  /** One-line scope, e.g. "Full exterior: siding, trim, doors and garage door". */
+  scope?: string
+  /** Condition of the surfaces before work started. */
+  existingCondition?: string
+  /** Preparation steps actually done on this job, in order. */
+  preparation?: string[]
+  /** Repairs actually done (wood rot, drywall, caulk, etc.). */
+  repairs?: string[]
+  /** Paint colors, ONLY when the homeowner authorized publishing them. */
+  colors?: string[]
+  /** How long the job took on site, e.g. "6 working days". */
+  timeline?: string
+  /** Job-specific obstacles (weather, occupied home, HOA approval...). */
+  challenges?: string
+  /** Completion date, YYYY-MM-DD. Shown as month + year. */
+  dateCompleted?: string
+  /** Extra city pages to link from this project (slugs from SERVICE_AREAS). */
+  relatedServiceAreas?: ServiceArea["slug"][]
   /**
    * True when the before/after images have not been confirmed as photos of this
    * job. These three entries use square 1024x1024 PNGs that read as generated
@@ -712,4 +740,43 @@ export function getProject(slug: string): CaseStudy | undefined {
 
 export function getAllProjectSlugs(): string[] {
   return PROJECTS.map((p) => p.slug)
+}
+
+const ISO_DATE = /^(\d{4})-(\d{2})-(\d{2})$/
+
+/** The project's dateCompleted when it is a real YYYY-MM-DD date, else undefined. */
+export function getCompletedDate(project: CaseStudy): string | undefined {
+  const m = project.dateCompleted?.match(ISO_DATE)
+  if (!m) return undefined
+  const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]))
+  if (d.getUTCFullYear() !== +m[1] || d.getUTCMonth() !== +m[2] - 1 || d.getUTCDate() !== +m[3]) return undefined
+  return project.dateCompleted
+}
+
+/** "March 2026" for a valid dateCompleted (UTC, so no timezone day-shift). */
+export function formatCompletedMonth(project: CaseStudy): string | undefined {
+  const iso = getCompletedDate(project)
+  if (!iso) return undefined
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  })
+}
+
+/** Related city pages, resolved against SERVICE_AREAS (unknown slugs dropped, no duplicates). */
+export function getRelatedServiceAreas(
+  project: CaseStudy,
+  exclude: string[] = [],
+): { name: string; slug: string }[] {
+  const seen = new Set(exclude)
+  const out: { name: string; slug: string }[] = []
+  for (const slug of project.relatedServiceAreas ?? []) {
+    if (seen.has(slug)) continue
+    const area = SERVICE_AREAS.find((a) => a.slug === slug)
+    if (!area) continue
+    seen.add(slug)
+    out.push({ name: area.name, slug: area.slug })
+  }
+  return out
 }

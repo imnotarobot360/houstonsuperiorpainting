@@ -7,7 +7,14 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { BeforeAfter } from "@/components/luxury/before-after"
 import { Reveal } from "@/components/luxury/reveal"
-import { PROJECTS, getProject, getAllProjectSlugs } from "@/lib/projects"
+import {
+  PROJECTS,
+  getProject,
+  getAllProjectSlugs,
+  getCompletedDate,
+  formatCompletedMonth,
+  getRelatedServiceAreas,
+} from "@/lib/projects"
 import { BUSINESS, PHONE_HREF, SERVICE_AREAS } from "@/lib/business"
 import { ORG_ID, PUBLISHER_REF } from "@/components/structured-data"
 import { ArrowLeft, Phone, CheckCircle } from "lucide-react"
@@ -89,6 +96,27 @@ export default async function ProjectPage({
   const url = `https://houstonsuperiorpainting.com/projects/${project.slug}`
   const related = PROJECTS.filter((p) => p.slug !== project.slug).slice(0, 3)
   const cityPage = cityPageFor(project.neighborhood)
+  const completedIso = getCompletedDate(project)
+  const completedMonth = formatCompletedMonth(project)
+  const nearbyAreas = getRelatedServiceAreas(project, cityPage ? [cityPage.slug] : [])
+
+  /** Property & scope facts shown under the stats (only the ones present). */
+  const facts = [
+    { label: "Property", value: project.propertyType },
+    { label: "Scope", value: project.scope },
+    { label: "Completed", value: completedMonth },
+  ].filter((f): f is { label: string; value: string } => Boolean(f.value))
+
+  const hasPrep = Boolean(project.preparation?.length)
+  const hasRepairs = Boolean(project.repairs?.length)
+  const hasProducts = Boolean(project.products?.length)
+  const hasColors = Boolean(project.colors?.length)
+  /**
+   * Projects without timeline/challenges keep the original two-column
+   * "products + result" block. With them, the order becomes
+   * products/colors, then timeline/challenges, then the result.
+   */
+  const splitResult = Boolean(project.timeline || project.challenges)
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -100,6 +128,9 @@ export default async function ProjectPage({
     author: { "@type": "Organization", "@id": ORG_ID, name: BUSINESS.name },
     publisher: PUBLISHER_REF,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    // Article has no "dateCompleted" property; temporalCoverage is the
+    // CreativeWork property for the date the content is about (job completion).
+    ...(completedIso ? { temporalCoverage: completedIso } : {}),
     about: {
       "@type": "Service",
       name: project.service,
@@ -222,6 +253,25 @@ export default async function ProjectPage({
                 </div>
               ))}
             </div>
+
+            {facts.length > 0 && (
+              <dl className="mt-6 grid gap-4 sm:grid-cols-3 rounded-lg border border-border bg-card p-5">
+                {facts.map((f) => (
+                  <div key={f.label}>
+                    <dt className="font-manrope text-xs uppercase tracking-[0.15em] text-muted-foreground">
+                      {f.label}
+                    </dt>
+                    <dd className="mt-1 text-foreground leading-snug">
+                      {f.label === "Completed" && completedIso ? (
+                        <time dateTime={completedIso}>{f.value}</time>
+                      ) : (
+                        f.value
+                      )}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            )}
           </div>
         </section>
 
@@ -240,6 +290,63 @@ export default async function ProjectPage({
           </div>
         </section>
           </>
+        )}
+
+        {project.existingCondition && (
+          <section className="bg-background py-16 sm:py-20">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="kicker mb-3">Existing Condition</p>
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-5 text-balance">
+                  What we found on day one
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">{project.existingCondition}</p>
+              </Reveal>
+            </div>
+          </section>
+        )}
+
+        {(hasPrep || hasRepairs) && (
+          <section className="bg-muted py-16 sm:py-20">
+            <div
+              className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 ${hasPrep && hasRepairs ? "lg:grid-cols-2" : ""}`}
+            >
+              {hasPrep && (
+                <Reveal>
+                  <p className="kicker mb-3">Preparation</p>
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+                    How we prepped the surfaces
+                  </h2>
+                  <ol className="space-y-3">
+                    {project.preparation!.map((step, i) => (
+                      <li key={step} className="flex items-start gap-3">
+                        <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-midnight text-gold font-display text-xs font-bold mt-0.5">
+                          {i + 1}
+                        </span>
+                        <span className="text-muted-foreground leading-relaxed">{step}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </Reveal>
+              )}
+              {hasRepairs && (
+                <Reveal delay={hasPrep ? 80 : 0}>
+                  <p className="kicker mb-3">Repairs</p>
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+                    What we fixed before painting
+                  </h2>
+                  <ul className="space-y-3">
+                    {project.repairs!.map((repair) => (
+                      <li key={repair} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground leading-relaxed">{repair}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Reveal>
+              )}
+            </div>
+          </section>
         )}
 
         {project.approach && project.approach.length > 0 && (
@@ -273,35 +380,100 @@ export default async function ProjectPage({
           </>
         )}
 
-        {(project.products?.length || project.results) && (
+        {(hasProducts || hasColors || (!splitResult && project.results)) && (
           <>
-        {/* Products + Results */}
+        {/* Products / colors (+ the result, when there is no timeline/challenges section) */}
         <section className="bg-muted py-16 sm:py-20">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2">
-            <Reveal>
-              <p className="kicker mb-3">Products Specified</p>
-              <h2 className="font-display text-2xl font-bold text-foreground mb-6">
-                What we used
-              </h2>
-              <ul className="space-y-3">
-                {(project.products ?? []).map((product) => (
-                  <li key={product} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground leading-relaxed">{product}</span>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-            <Reveal delay={80}>
-              <p className="kicker mb-3">The Result</p>
-              <h2 className="font-display text-2xl font-bold text-foreground mb-6">
-                Where we finished
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">{project.results}</p>
-            </Reveal>
+            {(hasProducts || hasColors) && (
+              <Reveal>
+                {hasProducts && (
+                  <>
+                    <p className="kicker mb-3">Products Specified</p>
+                    <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+                      What we used
+                    </h2>
+                    <ul className="space-y-3">
+                      {project.products!.map((product) => (
+                        <li key={product} className="flex items-start gap-3">
+                          <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground leading-relaxed">{product}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+                {hasColors && (
+                  <div className={hasProducts ? "mt-10" : ""}>
+                    <p className="kicker mb-3">Colors</p>
+                    <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+                      The palette
+                    </h2>
+                    <ul className="space-y-3">
+                      {project.colors!.map((color) => (
+                        <li key={color} className="flex items-start gap-3">
+                          <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground leading-relaxed">{color}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </Reveal>
+            )}
+            {!splitResult && project.results && (
+              <Reveal delay={80}>
+                <p className="kicker mb-3">The Result</p>
+                <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+                  Where we finished
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">{project.results}</p>
+              </Reveal>
+            )}
           </div>
         </section>
           </>
+        )}
+
+        {splitResult && (
+          <section className="bg-background py-16 sm:py-20">
+            <div
+              className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 ${project.timeline && project.challenges ? "lg:grid-cols-2" : ""}`}
+            >
+              {project.timeline && (
+                <Reveal>
+                  <p className="kicker mb-3">Timeline</p>
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+                    How long it took
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">{project.timeline}</p>
+                </Reveal>
+              )}
+              {project.challenges && (
+                <Reveal delay={project.timeline ? 80 : 0}>
+                  <p className="kicker mb-3">On-Site Challenges</p>
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-6">
+                    What we worked around
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">{project.challenges}</p>
+                </Reveal>
+              )}
+            </div>
+          </section>
+        )}
+
+        {splitResult && project.results && (
+          <section className="bg-muted py-16 sm:py-20">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="kicker mb-3">The Result</p>
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-5 text-balance">
+                  Where we finished
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">{project.results}</p>
+              </Reveal>
+            </div>
+          </section>
         )}
 
         {/* Testimonials hidden until they can be matched to real Google reviews (see docs/aeo-seo-plan-2026-09.md). TODO(juan) */}
@@ -347,6 +519,22 @@ export default async function ProjectPage({
               </Link>{" "}
               for your home.
             </p>
+            {nearbyAreas.length > 0 && (
+              <p className="font-manrope text-sm text-soft-white/70 -mt-4 mb-8">
+                Also near this project:{" "}
+                {nearbyAreas.map((a, i) => (
+                  <span key={a.slug}>
+                    {i > 0 && ", "}
+                    <Link
+                      href={`/${a.slug}`}
+                      className="text-gold underline underline-offset-4 hover:text-soft-white transition-colors"
+                    >
+                      painters in {a.name}
+                    </Link>
+                  </span>
+                ))}
+              </p>
+            )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"

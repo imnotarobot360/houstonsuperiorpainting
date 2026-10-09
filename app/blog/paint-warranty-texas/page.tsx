@@ -61,7 +61,7 @@ const faqs = [
 const relatedPosts = [
   {
     title: "How to Hire a Painter in Houston: 8 Questions to Ask",
-    href: "/questions-to-ask-before-hiring-painters",
+    href: "/houston-painting-contractor-guide",
     excerpt: "How to vet, hire, and avoid being burned by Houston painters — with the 8 questions you must ask.",
     image: "/images/blog/best-painters-houston-tx.png",
   },
@@ -326,7 +326,7 @@ export default function PaintWarrantyTexasPage() {
       <p>
         Explore our <Link href="/exterior-painting-houston-tx">exterior painting</Link> and{" "}
         <Link href="/interior-painting-houston-tx">interior painting</Link> services, or see how to{" "}
-        <Link href="/questions-to-ask-before-hiring-painters">vet a Houston painter</Link> before you hire. Warranty
+        <Link href="/houston-painting-contractor-guide">vet a Houston painter</Link> before you hire. Warranty
         coverage is included in every price in our <Link href="/houston-painting-cost-guide">Houston painting cost guide</Link>.
       </p>
       <p>

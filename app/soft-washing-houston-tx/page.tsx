@@ -386,6 +386,12 @@ export default function SoftWashingHoustonPage() {
                 </Link>
               ))}
             </div>
+            <p className="mt-6 text-center text-zinc-700">
+              Related project:{" "}
+              <Link href="/projects/magnolia-exterior-siding-repaint" className="font-semibold text-emerald-700 underline">
+                exterior painting on a wooded Magnolia home
+              </Link>
+            </p>
           </div>
         </section>
       </main>

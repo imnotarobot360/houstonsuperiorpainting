@@ -206,6 +206,7 @@ export const BUSINESS = {
     { name: "Wood Rot Repair",            slug: "wood-rot-repair-houston-tx" },
     { name: "Wallpaper Removal",          slug: "wallpaper-removal-houston-tx" },
     { name: "Venetian Plaster",           slug: "venetian-plaster-houston-tx" },
+    { name: "Residential Remodeling",     slug: "residential-remodeling-houston-tx" },
   ],
 
   // ─── Trust signals ─────────────────────────────────────

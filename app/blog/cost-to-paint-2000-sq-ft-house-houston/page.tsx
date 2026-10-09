@@ -340,7 +340,7 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
       </ul>
       <p>
         More on vetting contractors in{" "}
-        <Link href="/questions-to-ask-before-hiring-painters">how to hire a painter in Houston</Link>.
+        <Link href="/houston-painting-contractor-guide">how to hire a painter in Houston</Link>.
       </p>
 
       <h2>What You Get With Houston Superior Painting</h2>

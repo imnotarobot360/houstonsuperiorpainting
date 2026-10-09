@@ -414,7 +414,7 @@ export default function ExteriorPaintingCostHoustonPage() {
       </ul>
       <p>
         If a Houston painter resists putting any of these in writing, walk away. Our guide to{" "}
-        <Link href="/questions-to-ask-before-hiring-painters" className="text-primary underline">
+        <Link href="/houston-painting-contractor-guide" className="text-primary underline">
           finding the best painters in Houston
         </Link>{" "}
         covers the full vetting process.

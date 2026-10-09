@@ -312,10 +312,10 @@ const insights = [
     cat: "Specialty Finishes",
   },
   {
-    title: "Best Paint Colors for Houston Homes",
-    href: "/best-paint-colors-houston-homes",
+    title: "How to Choose a Painting Contractor in Houston",
+    href: "/houston-painting-contractor-guide",
     img: "/images/luxury/project-interior.png",
-    cat: "Color",
+    cat: "Guide",
   },
 ]
 

@@ -51,3 +51,5 @@ v0 also opens PRs against this repo, so run `git pull` before starting work.
 - Add real Katy, Sugar Land and Magnolia projects to `lib/projects.ts`. The office pages show them automatically.
 - Testimonials on the 18 non-office city pages and on project pages are hidden until they can be matched to real Google reviews.
 - The named reviews on the interior funnel (`components/interior/interior-proof.tsx`, `components/testimonials.tsx`, e.g. Sarah Mitchell, Catherine R. in `lib/projects.ts`) are real Google reviews, confirmed by Juan 2026-10-01. Leave them.
+- Anchor guide: `/houston-painting-contractor-guide` (owns "how to choose a painter"; includes the "Houston Superior Painting 10-Point Preparation Standard" — our internal process, never call it a certification). Keep `docs/press/` 10-point list identical to it.
+- AI-visibility measurement: `data/aeo/` (210 prompts, results schema), `scripts/aeo/run.mjs` (dry-run by default) and `report.mjs`; plan in `docs/aeo/measurement-plan.md`. Unverified facts: `OWNER_VERIFICATION_REQUIRED.md`.

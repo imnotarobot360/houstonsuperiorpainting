@@ -182,7 +182,12 @@ export function Footer() {
 
         {/* Service Areas */}
         <div className="mt-8 pt-6 border-t border-background/10">
-          <p className="text-background/80 text-sm font-medium text-center mb-2">Service Areas:</p>
+          <p className="text-background/80 text-sm font-medium text-center mb-2">
+            <Link href="/service-areas" className="hover:text-background underline-offset-4 hover:underline">
+              Service Areas
+            </Link>
+            :
+          </p>
           {/*
             Rendered from BUSINESS.SERVICE_AREAS rather than hardcoded. This list
             previously held 12 of the 21 location pages, which left the other 9

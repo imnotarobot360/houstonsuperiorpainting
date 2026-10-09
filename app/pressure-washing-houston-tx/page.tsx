@@ -341,6 +341,12 @@ export default function PressureWashingHoustonPage() {
                 </Link>
               ))}
             </div>
+            <p className="mt-6 text-center text-zinc-700">
+              Related project:{" "}
+              <Link href="/projects/heights-exterior-siding-repaint" className="font-semibold text-emerald-700 underline">
+                exterior painting on a two-story Heights home
+              </Link>
+            </p>
           </div>
         </section>
       </main>

@@ -303,6 +303,53 @@ export default function WoodRotRepairHoustonTX() {
             </ol>
           </section>
 
+          {/* Replace before painting */}
+          <section id="replace-before-exterior-painting" className="mb-16">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
+              When Rotten Wood Should Be Replaced Before Exterior Painting
+            </h2>
+            <p className="text-foreground/80 leading-relaxed mb-6">
+              Before an{" "}
+              <Link href="/exterior-painting-houston-tx" className="text-primary font-medium hover:underline">
+                exterior paint job
+              </Link>
+              , we probe every fascia board, sill, trim run, and bottom siding course. These are the signs that wood
+              needs repair or replacement before any paint goes on:
+            </p>
+            <ul className="space-y-3 mb-6">
+              {[
+                "Soft or punky wood: a screwdriver or awl sinks in with light pressure, or the wood crumbles instead of splintering.",
+                "Paint peeling or cracking at joints, miters, and board ends, where water gets into the end grain.",
+                "Dark staining, swelling, or mildew that keeps coming back in the same spot.",
+                "Gaps opening at corners and where trim meets siding, and caulk that has pulled away.",
+              ].map((sign, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
+                  <span className="text-foreground/90">{sign}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-foreground/80 leading-relaxed mb-4">
+              <strong className="text-foreground">Why painting over rot fails:</strong> paint cannot bond to wood that is
+              breaking down, and the decay keeps spreading under the new film. Moisture trapped in soft wood pushes the
+              paint off, so it blisters and peels at the repair, often within a season or two, and the rot underneath has
+              grown by the time anyone sees it.
+            </p>
+            <p className="text-foreground/80 leading-relaxed mb-4">
+              <strong className="text-foreground">Replace vs patch:</strong> small, surface-level soft spots in otherwise
+              solid wood can be cleaned out and rebuilt with structural epoxy filler. Boards that are structurally
+              compromised, or more than about 25% decayed, are replaced with primed, rot-resistant material. Either way, we
+              fix the moisture source, prime every face of new wood, and caulk the seams before the paint goes on.
+            </p>
+            <p className="text-foreground/80 leading-relaxed">
+              Planning around Houston weather? Read{" "}
+              <Link href="/blog/exterior-painting-timeline-rain-houston" className="text-primary font-medium hover:underline">
+                how long exterior painting takes and how rain affects the schedule
+              </Link>
+              .
+            </p>
+          </section>
+
           {/* FAQ */}
           <section className="mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">

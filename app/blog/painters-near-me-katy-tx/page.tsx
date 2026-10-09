@@ -83,7 +83,7 @@ const relatedPosts = [
   },
   {
     title: "How to Hire a Painter in Houston: Insurance, Prep, Warranty",
-    href: "/questions-to-ask-before-hiring-painters",
+    href: "/houston-painting-contractor-guide",
     excerpt: "How to vet, hire, and avoid being burned by Houston painters — with the 8 questions you must ask.",
     image: "/images/blog/best-painters-houston-tx.png",
   },

@@ -185,6 +185,7 @@ export default function DrywallRepairHoustonPage() {
         { label: "Interior painting in Houston", href: "/interior-painting-houston-tx" },
         { label: "Cabinet refinishing in Houston", href: "/cabinet-refinishing-houston-tx" },
         { label: "Wallpaper removal in Houston", href: "/wallpaper-removal-houston-tx" },
+        { label: "Residential remodeling in Houston", href: "/residential-remodeling-houston-tx" },
       ]}
       schema={[serviceSchema]}
     />

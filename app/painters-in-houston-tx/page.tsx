@@ -342,7 +342,7 @@ export default function PaintersInHoustonTX() {
               { title: "Painting Company Near Me", href: "/painting-company-near-me" },
               { title: "Exterior House Painting Houston Cost Guide", href: "/exterior-house-painting-houston-cost-guide" },
               { title: "Interior Painters Katy TX", href: "/interior-painters-katy-tx" },
-              { title: "Questions to Ask Before Hiring Painters", href: "/questions-to-ask-before-hiring-painters" },
+              { title: "Questions to Ask Before Hiring Painters", href: "/houston-painting-contractor-guide" },
               { title: "Best Exterior Paint for Houston Weather", href: "/best-exterior-paint-houston-weather" },
             ].map((post) => (
               <Link key={post.href} href={post.href} className="bg-background rounded-lg p-4 border border-border hover:border-secondary transition-colors group">

@@ -145,7 +145,7 @@ export default function LoadBearingWallRemovalHoustonPage() {
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Single Point of Contact</li>
                 </ul>
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                  <Link href="/contact" className="inline-flex items-center justify-center px-6 py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg text-base shadow-md transition">Schedule Free Assessment →</Link>
+                  <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center px-6 py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg text-base shadow-md transition">Schedule Free Assessment →</Link>
                   <a href="tel:+13465945960" className="inline-flex items-center justify-center px-6 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">📞 (346) 594-5960</a>
                 </div>
                 <p className="mt-4 text-sm text-zinc-500">On-site engineer assessment available within <strong className="text-zinc-700">5 business days</strong>.</p>
@@ -301,7 +301,7 @@ export default function LoadBearingWallRemovalHoustonPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Open Up Your Houston Home?</h2>
             <p className="text-emerald-50 text-lg mb-8 max-w-2xl mx-auto">Free assessment, engineer letter, permit, beam, drywall, paint — one quote, one contractor, one timeline.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 font-semibold rounded-lg text-base shadow-md transition">Schedule Free Assessment →</Link>
+              <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 font-semibold rounded-lg text-base shadow-md transition">Schedule Free Assessment →</Link>
               <a href="tel:+13465945960" className="inline-flex items-center justify-center px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">📞 (346) 594-5960</a>
               <a href="sms:+13465945960" className="inline-flex items-center justify-center px-8 py-4 bg-emerald-900 hover:bg-emerald-950 text-white font-semibold rounded-lg text-base transition">💬 Text Us</a>
             </div>
@@ -314,6 +314,7 @@ export default function LoadBearingWallRemovalHoustonPage() {
             <h2 className="text-2xl font-bold text-center mb-8">Related Services</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
+                { href: "/residential-remodeling-houston-tx", title: "Residential Remodeling", desc: "Wall removal through finish paint" },
                 { href: "/drywall-repair-houston-tx", title: "Drywall Repair", desc: "Seamless texture match" },
                 { href: "/interior-painting-houston-tx", title: "Interior Painting", desc: "Whole-home repaints" },
                 { href: "/exterior-painting-houston-tx", title: "Exterior Painting", desc: "Built for Houston climate" },

@@ -33,7 +33,7 @@ export const SERVICE_PAGE_CITIES = [
   { label: "Painters in The Woodlands, TX", href: "/painters-the-woodlands-tx" },
 ] as const
 
-export const HIRE_GUIDE_PATH = "/questions-to-ask-before-hiring-painters"
+export const HIRE_GUIDE_PATH = "/houston-painting-contractor-guide"
 export const MAIN_COST_GUIDE_PATH = "/houston-painting-cost-guide"
 
 export type ServiceSkeletonData = {

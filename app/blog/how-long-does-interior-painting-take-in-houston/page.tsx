@@ -68,7 +68,7 @@ const relatedPosts = [
   },
   {
     title: "How to Choose the Best Painters in Houston",
-    href: "/questions-to-ask-before-hiring-painters",
+    href: "/houston-painting-contractor-guide",
     excerpt: "What to look for when hiring a painting contractor in Houston.",
     image: "/images/blog/best-time-paint-houston.jpg",
   },

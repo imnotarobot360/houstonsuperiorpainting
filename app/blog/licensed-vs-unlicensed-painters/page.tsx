@@ -212,7 +212,7 @@ export default function LicensedVsUnlicensedPaintersPage() {
               We maintain $2M general liability insurance, full workers&apos; compensation coverage, and are registered with the Texas Secretary of State. We provide Certificates of Insurance on request and offer written warranties on all work.
             </p>
             <p>
-              Our <Link href="/questions-to-ask-before-hiring-painters" className="text-primary hover:underline">15-question checklist</Link> can help you vet any painting contractor - including us. We&apos;re happy to answer every question.
+              Our <Link href="/houston-painting-contractor-guide" className="text-primary hover:underline">15-question checklist</Link> can help you vet any painting contractor - including us. We&apos;re happy to answer every question.
             </p>
           </div>
 

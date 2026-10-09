@@ -215,8 +215,8 @@ const nextConfig = {
       { source: '/blog/interior-painting-cost-houston-tx', destination: '/interior-painting-cost-houston', permanent: true },
       { source: '/blog/exterior-painting-cost-houston-tx-2026', destination: '/exterior-house-painting-houston-cost-guide', permanent: true },
       { source: '/blog/best-time-to-paint-houston-home-exterior', destination: '/blog/best-time-to-paint-house-houston', permanent: true },
-      { source: '/blog/how-to-choose-best-painters-houston', destination: '/questions-to-ask-before-hiring-painters', permanent: true },
-      { source: '/blog/licensed-vs-unlicensed-painters', destination: '/questions-to-ask-before-hiring-painters', permanent: true },
+      { source: '/blog/how-to-choose-best-painters-houston', destination: '/houston-painting-contractor-guide', permanent: true },
+      { source: '/blog/licensed-vs-unlicensed-painters', destination: '/houston-painting-contractor-guide', permanent: true },
       // Three near-duplicate paint-color-trend slugs (none built as pages) fold
       // into the single canonical best-paint-colors page so they never split
       // ranking for the same intent.
@@ -233,7 +233,7 @@ const nextConfig = {
       { source: '/blog/interior-paint-colors-houston-2026', destination: '/blog/best-interior-paint-colors-houston-homes', permanent: true },
       { source: '/blog/cabinet-painting-vs-replacement', destination: '/blog/cabinet-refinishing-vs-replacement-houston', permanent: true },
       { source: '/blog/best-painting-company-katy-tx', destination: '/blog/painters-near-me-katy-tx', permanent: true },
-      { source: '/blog/best-painters-houston-tx', destination: '/questions-to-ask-before-hiring-painters', permanent: true },
+      { source: '/blog/best-painters-houston-tx', destination: '/houston-painting-contractor-guide', permanent: true },
       { source: '/blog/how-often-repaint-home-houston-climate', destination: '/how-often-paint-house-houston', permanent: true },
       { source: '/blog/best-exterior-paints-houston-humidity', destination: '/best-exterior-paint-houston-weather', permanent: true },
       // The epoxy domain already publishes these two topics; send each to its
@@ -273,6 +273,8 @@ const nextConfig = {
       { source: '/cabinet-refinishing-tanglewood', destination: '/cabinet-refinishing-houston-tx', permanent: true },
       // Same intent as /interior-painting-memorial, which has the real Memorial project.
       { source: '/luxury-interior-painting-memorial', destination: '/interior-painting-memorial', permanent: true },
+      // Oct 8, 2026: the hiring guide was rebuilt as the anchor article; its content lives there.
+      { source: '/questions-to-ask-before-hiring-painters', destination: '/houston-painting-contractor-guide', permanent: true },
 
       // Cypress interior page renamed to the community-scoped canonical URL.
       { source: '/interior-painting-cypress-tx', destination: '/interior-painting-cypress-bridgeland', permanent: true },

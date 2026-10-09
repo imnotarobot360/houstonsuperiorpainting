@@ -1,0 +1,1765 @@
+{
+  "version": "2026-10-08",
+  "description": "Non-branded homeowner prompts for measuring AI-answer visibility. 7 cities x 6 services x 5 intents. Never edit a prompt's wording in place: wording changes break comparisons. Retire it and add a new id instead.",
+  "cities": [
+    {
+      "code": "HOU",
+      "name": "Houston"
+    },
+    {
+      "code": "KAT",
+      "name": "Katy"
+    },
+    {
+      "code": "CYP",
+      "name": "Cypress"
+    },
+    {
+      "code": "SUG",
+      "name": "Sugar Land"
+    },
+    {
+      "code": "RIC",
+      "name": "Richmond"
+    },
+    {
+      "code": "TOM",
+      "name": "Tomball"
+    },
+    {
+      "code": "FUL",
+      "name": "Fulshear"
+    }
+  ],
+  "services": [
+    {
+      "code": "INT",
+      "name": "interior painting"
+    },
+    {
+      "code": "EXT",
+      "name": "exterior painting"
+    },
+    {
+      "code": "CAB",
+      "name": "cabinet painting"
+    },
+    {
+      "code": "DRY",
+      "name": "drywall repair"
+    },
+    {
+      "code": "LIM",
+      "name": "limewash and brick finishing"
+    },
+    {
+      "code": "REM",
+      "name": "residential remodeling"
+    }
+  ],
+  "intents": [
+    {
+      "code": "REC",
+      "name": "recommendation"
+    },
+    {
+      "code": "BEST",
+      "name": "best-company shortlist"
+    },
+    {
+      "code": "COST",
+      "name": "cost and value"
+    },
+    {
+      "code": "CMP",
+      "name": "comparison"
+    },
+    {
+      "code": "PROB",
+      "name": "problem-solving / purchase intent"
+    }
+  ],
+  "count": 210,
+  "prompts": [
+    {
+      "id": "AEO-HOU-INT-REC",
+      "city": "Houston",
+      "service": "interior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "My wife and I just closed on a 1950s bungalow in the Heights and want every room repainted before we move in next month. Who would you recommend for interior painting in Houston?"
+    },
+    {
+      "id": "AEO-HOU-INT-BEST",
+      "city": "Houston",
+      "service": "interior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Give me a shortlist of 3 to 5 well-reviewed interior painting companies in Houston, TX, and tell me what each one is known for."
+    },
+    {
+      "id": "AEO-HOU-INT-COST",
+      "city": "Houston",
+      "service": "interior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What should I expect to pay to repaint the inside of a 2,200 sq ft two-story house in Houston, walls and ceilings only? Is it worth paying extra to do the trim and doors too?"
+    },
+    {
+      "id": "AEO-HOU-INT-CMP",
+      "city": "Houston",
+      "service": "interior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "For interior painting in Houston, is it better to hire a small owner-run crew or a bigger painting company? What are the tradeoffs on price, scheduling and warranty?"
+    },
+    {
+      "id": "AEO-HOU-INT-PROB",
+      "city": "Houston",
+      "service": "interior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We had a slow leak from the upstairs bathroom in our Meyerland house and now the ceiling below has brown stains and bubbling paint. Who in Houston can fix the stain and repaint it so it doesn't bleed through?"
+    },
+    {
+      "id": "AEO-HOU-EXT-REC",
+      "city": "Houston",
+      "service": "exterior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "The paint on the south side of my house in Houston is peeling off in sheets. Who should I call for exterior painting that actually does proper prep?"
+    },
+    {
+      "id": "AEO-HOU-EXT-BEST",
+      "city": "Houston",
+      "service": "exterior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Which exterior house painters in Houston have the best reputation for paint jobs that hold up in the heat and humidity? I want a few names to get quotes from."
+    },
+    {
+      "id": "AEO-HOU-EXT-COST",
+      "city": "Houston",
+      "service": "exterior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does it cost to paint the exterior of a two-story wood-siding house in Houston in 2026, and what makes the quote go up?"
+    },
+    {
+      "id": "AEO-HOU-EXT-CMP",
+      "city": "Houston",
+      "service": "exterior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Sherwin-Williams Duration vs Emerald vs Benjamin Moore Aura for a house exterior in Houston: which holds up best in Gulf Coast humidity?"
+    },
+    {
+      "id": "AEO-HOU-EXT-PROB",
+      "city": "Houston",
+      "service": "exterior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We're listing our Montrose house in six weeks and the exterior trim is faded and the siding has mildew. Who can paint the outside quickly in Houston before the listing photos?"
+    },
+    {
+      "id": "AEO-HOU-CAB-REC",
+      "city": "Houston",
+      "service": "cabinet painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Can you recommend someone in Houston who paints kitchen cabinets with a smooth sprayed finish instead of brush marks?"
+    },
+    {
+      "id": "AEO-HOU-CAB-BEST",
+      "city": "Houston",
+      "service": "cabinet painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Who are the top-rated cabinet painting companies in Houston? I'd like a short list and what to ask each of them."
+    },
+    {
+      "id": "AEO-HOU-CAB-COST",
+      "city": "Houston",
+      "service": "cabinet painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "Is it worth painting my oak kitchen cabinets instead of replacing them? Roughly what does cabinet painting cost in Houston for about 30 doors and drawers?"
+    },
+    {
+      "id": "AEO-HOU-CAB-CMP",
+      "city": "Houston",
+      "service": "cabinet painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Cabinet painting vs refacing vs new cabinets for a dated 1990s kitchen in Houston: which is the best value if we might sell in three years?"
+    },
+    {
+      "id": "AEO-HOU-CAB-PROB",
+      "city": "Houston",
+      "service": "cabinet painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Someone painted my kitchen cabinets two years ago and now the paint is chipping around the handles and peeling at the edges. Who in Houston can strip them and redo them properly?"
+    },
+    {
+      "id": "AEO-HOU-DRY-REC",
+      "city": "Houston",
+      "service": "drywall repair",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "I need someone in Houston to patch the holes left by a TV mount and some shelves, and make it invisible after painting. Who do people use for that?"
+    },
+    {
+      "id": "AEO-HOU-DRY-BEST",
+      "city": "Houston",
+      "service": "drywall repair",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "What are the best-rated drywall repair companies in Houston for small to medium jobs that also handle the texture match and paint?"
+    },
+    {
+      "id": "AEO-HOU-DRY-COST",
+      "city": "Houston",
+      "service": "drywall repair",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does it cost in Houston to replace and finish a 4x8 section of water-damaged drywall, including texture and paint?"
+    },
+    {
+      "id": "AEO-HOU-DRY-CMP",
+      "city": "Houston",
+      "service": "drywall repair",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Should I hire a handyman or a drywall and painting company to fix cracks and nail pops all over my Houston house? Which gets a better result for the money?"
+    },
+    {
+      "id": "AEO-HOU-DRY-PROB",
+      "city": "Houston",
+      "service": "drywall repair",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "After the last big storm, water got into our Houston home and the bottom two feet of drywall in the living room is soft and smells musty. Who can cut it out, replace it and repaint?"
+    },
+    {
+      "id": "AEO-HOU-LIM-REC",
+      "city": "Houston",
+      "service": "limewash and brick finishing",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "We want to limewash the red brick on our ranch house in Houston for a softer, old-world look. Who would you recommend?"
+    },
+    {
+      "id": "AEO-HOU-LIM-BEST",
+      "city": "Houston",
+      "service": "limewash and brick finishing",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Give me a few Houston companies that do limewash or German smear on brick homes well, and how I can tell if they know what they're doing."
+    },
+    {
+      "id": "AEO-HOU-LIM-COST",
+      "city": "Houston",
+      "service": "limewash and brick finishing",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What does it cost to limewash the brick exterior of a 2,000 sq ft one-story house in Houston? How does that compare to painting the brick?"
+    },
+    {
+      "id": "AEO-HOU-LIM-CMP",
+      "city": "Houston",
+      "service": "limewash and brick finishing",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Limewash vs mineral paint vs regular masonry paint on brick in Houston's humidity: which lasts longest and which is easiest to maintain?"
+    },
+    {
+      "id": "AEO-HOU-LIM-PROB",
+      "city": "Houston",
+      "service": "limewash and brick finishing",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Our Houston house has orange 1980s brick that looks dated next to the newer homes on our street. What's the best way to update it without replacing the brick, and who does that here?"
+    },
+    {
+      "id": "AEO-HOU-REM-REC",
+      "city": "Houston",
+      "service": "residential remodeling",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "We're planning a kitchen and primary bath remodel in our Houston home. Who would you recommend that can handle the whole job, including drywall and paint?"
+    },
+    {
+      "id": "AEO-HOU-REM-BEST",
+      "city": "Houston",
+      "service": "residential remodeling",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Which residential remodeling contractors in Houston are worth getting bids from for a mid-size kitchen update? Give me a shortlist."
+    },
+    {
+      "id": "AEO-HOU-REM-COST",
+      "city": "Houston",
+      "service": "residential remodeling",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What's a realistic budget for a mid-range kitchen remodel in Houston in 2026, and which parts of the project usually blow the budget?"
+    },
+    {
+      "id": "AEO-HOU-REM-CMP",
+      "city": "Houston",
+      "service": "residential remodeling",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "For a remodel in Houston, is it better to hire a general contractor or hire the trades (cabinets, drywall, paint) separately myself? Which saves more without causing headaches?"
+    },
+    {
+      "id": "AEO-HOU-REM-PROB",
+      "city": "Houston",
+      "service": "residential remodeling",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We want to open up the wall between our kitchen and living room in our Houston house. Who handles that kind of remodel, including checking whether it's load-bearing and finishing the drywall and paint afterward?"
+    },
+    {
+      "id": "AEO-KAT-INT-REC",
+      "city": "Katy",
+      "service": "interior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "We just bought a house in Cinco Ranch and the previous owners painted every room a different bold color. Who in Katy can repaint the whole interior in a neutral?"
+    },
+    {
+      "id": "AEO-KAT-INT-BEST",
+      "city": "Katy",
+      "service": "interior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Shortlist of interior painters in Katy, TX that homeowners actually like. I'd like 3 or 4 to get estimates from."
+    },
+    {
+      "id": "AEO-KAT-INT-COST",
+      "city": "Katy",
+      "service": "interior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "Ballpark cost to paint just the walls in a 4-bedroom, 3,000 sq ft house in Katy? We're keeping the ceilings and trim as they are."
+    },
+    {
+      "id": "AEO-KAT-INT-CMP",
+      "city": "Katy",
+      "service": "interior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "In Katy, is it cheaper to paint the interior while the house is empty before move-in, or after we're settled? Does it actually change the quote?"
+    },
+    {
+      "id": "AEO-KAT-INT-PROB",
+      "city": "Katy",
+      "service": "interior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "My kids' walls in our Katy home are covered in scuffs and crayon and the flat builder paint won't wipe clean. Who can repaint with something washable, and what sheen should I use?"
+    },
+    {
+      "id": "AEO-KAT-EXT-REC",
+      "city": "Katy",
+      "service": "exterior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Our HOA in Katy sent a letter saying our exterior trim and garage door need repainting within 60 days. Who would you recommend that can work with the HOA color approval?"
+    },
+    {
+      "id": "AEO-KAT-EXT-BEST",
+      "city": "Katy",
+      "service": "exterior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Best exterior house painting companies in Katy, TX? I'd like a few options that offer a solid warranty."
+    },
+    {
+      "id": "AEO-KAT-EXT-COST",
+      "city": "Katy",
+      "service": "exterior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does it usually cost to repaint the exterior trim, fascia, soffits and garage door on a brick house in Katy?"
+    },
+    {
+      "id": "AEO-KAT-EXT-CMP",
+      "city": "Katy",
+      "service": "exterior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Should I repaint the Hardie siding on my Katy house now or wait another couple of years? How do I tell whether it really needs paint or just a good wash?"
+    },
+    {
+      "id": "AEO-KAT-EXT-PROB",
+      "city": "Katy",
+      "service": "exterior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "The wood trim around our windows in Katy is peeling and a few spots feel soft. Who can repair the rot and repaint before it gets worse?"
+    },
+    {
+      "id": "AEO-KAT-CAB-REC",
+      "city": "Katy",
+      "service": "cabinet painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who does good kitchen cabinet painting in Katy? Our builder-grade cabinets are fine structurally, they're just a boring honey oak."
+    },
+    {
+      "id": "AEO-KAT-CAB-BEST",
+      "city": "Katy",
+      "service": "cabinet painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Top cabinet refinishing companies in the Katy area: which ones spray and which ones brush? Give me a short list."
+    },
+    {
+      "id": "AEO-KAT-CAB-COST",
+      "city": "Katy",
+      "service": "cabinet painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much would it cost to paint the kitchen cabinets and the bathroom vanities in a Katy home, about 40 doors and drawers in total?"
+    },
+    {
+      "id": "AEO-KAT-CAB-CMP",
+      "city": "Katy",
+      "service": "cabinet painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "All-white painted cabinets vs a two-tone kitchen with a darker island: which holds up better with kids, and does it change the cost in Katy?"
+    },
+    {
+      "id": "AEO-KAT-CAB-PROB",
+      "city": "Katy",
+      "service": "cabinet painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We're hosting family at our Katy house in a month and the kitchen looks tired. Can cabinets be painted that fast, and how long would we be without a usable kitchen?"
+    },
+    {
+      "id": "AEO-KAT-DRY-REC",
+      "city": "Katy",
+      "service": "drywall repair",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who fixes drywall cracks in Katy? We have cracks above several doorways that keep coming back, and I think it's the clay soil moving."
+    },
+    {
+      "id": "AEO-KAT-DRY-BEST",
+      "city": "Katy",
+      "service": "drywall repair",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Which Katy companies are best for drywall repair plus a paint match? I want it to look like it never happened."
+    },
+    {
+      "id": "AEO-KAT-DRY-COST",
+      "city": "Katy",
+      "service": "drywall repair",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What does a typical drywall repair cost in Katy for a few fist-sized holes and some nail pops?"
+    },
+    {
+      "id": "AEO-KAT-DRY-CMP",
+      "city": "Katy",
+      "service": "drywall repair",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Should I repair the cracked drywall in my Katy house now, or wait until after the foundation work is done? What order makes sense?"
+    },
+    {
+      "id": "AEO-KAT-DRY-PROB",
+      "city": "Katy",
+      "service": "drywall repair",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "A plumber cut a big hole in our Katy hallway wall to get to a pipe. Who can patch it, match the orange-peel texture and repaint the wall?"
+    },
+    {
+      "id": "AEO-KAT-LIM-REC",
+      "city": "Katy",
+      "service": "limewash and brick finishing",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Can anyone in Katy limewash brick? We want our two-story house to look more like a modern farmhouse."
+    },
+    {
+      "id": "AEO-KAT-LIM-BEST",
+      "city": "Katy",
+      "service": "limewash and brick finishing",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Who are the most experienced limewash and brick finishing companies around Katy, TX?"
+    },
+    {
+      "id": "AEO-KAT-LIM-COST",
+      "city": "Katy",
+      "service": "limewash and brick finishing",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "Roughly how much would it cost to limewash just the front elevation of a brick home in Katy versus the whole house?"
+    },
+    {
+      "id": "AEO-KAT-LIM-CMP",
+      "city": "Katy",
+      "service": "limewash and brick finishing",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Do Katy HOAs usually allow limewash or painted brick? How do people get it approved, and which option is less risky?"
+    },
+    {
+      "id": "AEO-KAT-LIM-PROB",
+      "city": "Katy",
+      "service": "limewash and brick finishing",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "I tried a DIY limewash on a test patch of my Katy house and it came out blotchy. Who can fix it and do the whole house properly?"
+    },
+    {
+      "id": "AEO-KAT-REM-REC",
+      "city": "Katy",
+      "service": "residential remodeling",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "We want to update our 2005 Katy house with new flooring, paint, lighting and a bathroom refresh. Who would you recommend to manage all of that?"
+    },
+    {
+      "id": "AEO-KAT-REM-BEST",
+      "city": "Katy",
+      "service": "residential remodeling",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Best remodeling contractors in Katy for bathroom renovations? I need a shortlist with good reviews."
+    },
+    {
+      "id": "AEO-KAT-REM-COST",
+      "city": "Katy",
+      "service": "residential remodeling",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does a primary bathroom remodel cost in Katy, TX if we swap the tub for a walk-in shower?"
+    },
+    {
+      "id": "AEO-KAT-REM-CMP",
+      "city": "Katy",
+      "service": "residential remodeling",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Remodel our current Katy house or move to a newer one in Fulshear? Which remodel projects actually add value in Katy?"
+    },
+    {
+      "id": "AEO-KAT-REM-PROB",
+      "city": "Katy",
+      "service": "residential remodeling",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Our upstairs shower in Katy leaked into the ceiling below. Who can handle the shower repair, the drywall and the repaint as one job?"
+    },
+    {
+      "id": "AEO-CYP-INT-REC",
+      "city": "Cypress",
+      "service": "interior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Looking for an interior painter you'd recommend in Cypress, TX for a two-story house with very high ceilings in the family room. Who handles tall walls safely?"
+    },
+    {
+      "id": "AEO-CYP-INT-BEST",
+      "city": "Cypress",
+      "service": "interior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Who are the top interior painting companies in Cypress and Cy-Fair right now? Short list please."
+    },
+    {
+      "id": "AEO-CYP-INT-COST",
+      "city": "Cypress",
+      "service": "interior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much do painters in Cypress charge to paint a two-story foyer and the staircase wall? It's about 20 feet high."
+    },
+    {
+      "id": "AEO-CYP-INT-CMP",
+      "city": "Cypress",
+      "service": "interior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Benjamin Moore vs Sherwin-Williams for interior walls in a Cypress home with lots of natural light: is there a real difference painters notice?"
+    },
+    {
+      "id": "AEO-CYP-INT-PROB",
+      "city": "Cypress",
+      "service": "interior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We're selling our house in Bridgeland next month. Which rooms should we repaint before listing, and who in Cypress can do it quickly?"
+    },
+    {
+      "id": "AEO-CYP-EXT-REC",
+      "city": "Cypress",
+      "service": "exterior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who do people in Cypress use for exterior painting? The siding on our 15-year-old house is badly faded on the west side."
+    },
+    {
+      "id": "AEO-CYP-EXT-BEST",
+      "city": "Cypress",
+      "service": "exterior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Give me a few well-regarded exterior painters in Cypress, TX and tell me what I should compare in their quotes."
+    },
+    {
+      "id": "AEO-CYP-EXT-COST",
+      "city": "Cypress",
+      "service": "exterior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What does it cost to paint the exterior of a 2,800 sq ft house in Cypress that's brick on the bottom and siding on top?"
+    },
+    {
+      "id": "AEO-CYP-EXT-CMP",
+      "city": "Cypress",
+      "service": "exterior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Pressure wash and repaint, or just pressure wash? How do I know if my Cypress home's exterior actually needs new paint?"
+    },
+    {
+      "id": "AEO-CYP-EXT-PROB",
+      "city": "Cypress",
+      "service": "exterior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Green mildew keeps coming back on the north side of our house in Cypress even after washing. Who can treat it and repaint so it doesn't return so fast?"
+    },
+    {
+      "id": "AEO-CYP-CAB-REC",
+      "city": "Cypress",
+      "service": "cabinet painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "I'd like to paint my kitchen cabinets a sage green. Who in Cypress does cabinet painting with a finish that really lasts?"
+    },
+    {
+      "id": "AEO-CYP-CAB-BEST",
+      "city": "Cypress",
+      "service": "cabinet painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Which cabinet painting companies in Cypress, TX have the best reviews for a smooth sprayed finish?"
+    },
+    {
+      "id": "AEO-CYP-CAB-COST",
+      "city": "Cypress",
+      "service": "cabinet painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "Cabinet painting in Cypress: what's the price difference between painting just the doors and fronts versus the inside of the boxes too?"
+    },
+    {
+      "id": "AEO-CYP-CAB-CMP",
+      "city": "Cypress",
+      "service": "cabinet painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Is painting the kitchen cabinets in our Cypress house worth it if we'll sell in two years, or do buyers prefer the original wood?"
+    },
+    {
+      "id": "AEO-CYP-CAB-PROB",
+      "city": "Cypress",
+      "service": "cabinet painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "The laundry room and bathroom cabinets in our Cypress house have swollen, peeling paint near the bottom from moisture. Can they be repaired and repainted, and who does that?"
+    },
+    {
+      "id": "AEO-CYP-DRY-REC",
+      "city": "Cypress",
+      "service": "drywall repair",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "I need a drywall repair person in Cypress who also textures and paints. There are several patches left over from an electrical job."
+    },
+    {
+      "id": "AEO-CYP-DRY-BEST",
+      "city": "Cypress",
+      "service": "drywall repair",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Top-rated drywall repair services near Cypress, TX? I'd like a couple of options for a ceiling repair."
+    },
+    {
+      "id": "AEO-CYP-DRY-COST",
+      "city": "Cypress",
+      "service": "drywall repair",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does it cost to fix a sagging drywall ceiling in a garage in Cypress?"
+    },
+    {
+      "id": "AEO-CYP-DRY-CMP",
+      "city": "Cypress",
+      "service": "drywall repair",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Patch the popcorn ceiling or remove it entirely and retexture? We're in Cypress and the ceiling has a few damaged spots."
+    },
+    {
+      "id": "AEO-CYP-DRY-PROB",
+      "city": "Cypress",
+      "service": "drywall repair",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "The AC condensate line overflowed in our Cypress attic and left a wet spot on the bedroom ceiling. Who can repair and repaint it once it dries out?"
+    },
+    {
+      "id": "AEO-CYP-LIM-REC",
+      "city": "Cypress",
+      "service": "limewash and brick finishing",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who would you recommend in Cypress for limewash on brick? We like the whitewashed look we've seen on some houses in Towne Lake."
+    },
+    {
+      "id": "AEO-CYP-LIM-BEST",
+      "city": "Cypress",
+      "service": "limewash and brick finishing",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Best companies for limewash, German schmear or whitewashed brick in the Cypress area?"
+    },
+    {
+      "id": "AEO-CYP-LIM-COST",
+      "city": "Cypress",
+      "service": "limewash and brick finishing",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "Limewash vs painting brick in Cypress: which costs more upfront, and which costs more over 10 years?"
+    },
+    {
+      "id": "AEO-CYP-LIM-CMP",
+      "city": "Cypress",
+      "service": "limewash and brick finishing",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Will limewash wash off in Houston-area rain? I'm comparing limewash and silicate mineral paint for the brick on my Cypress house."
+    },
+    {
+      "id": "AEO-CYP-LIM-PROB",
+      "city": "Cypress",
+      "service": "limewash and brick finishing",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "The fireplace surround in our Cypress living room is dark brick that makes the room feel small. Who can limewash or paint it so it looks intentional and not DIY?"
+    },
+    {
+      "id": "AEO-CYP-REM-REC",
+      "city": "Cypress",
+      "service": "residential remodeling",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "We're finishing the bonus room over the garage in our Cypress house. Who would you recommend to handle the drywall, trim and paint?"
+    },
+    {
+      "id": "AEO-CYP-REM-BEST",
+      "city": "Cypress",
+      "service": "residential remodeling",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Shortlist of reputable home remodeling contractors in Cypress, TX for a kitchen update."
+    },
+    {
+      "id": "AEO-CYP-REM-COST",
+      "city": "Cypress",
+      "service": "residential remodeling",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What does it cost in Cypress to remodel a small half bath with a new vanity, lighting, tile and paint?"
+    },
+    {
+      "id": "AEO-CYP-REM-CMP",
+      "city": "Cypress",
+      "service": "residential remodeling",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Kitchen refresh (painted cabinets, new counters, new hardware) vs a full gut remodel in Cypress: what's the price difference and which makes more sense?"
+    },
+    {
+      "id": "AEO-CYP-REM-PROB",
+      "city": "Cypress",
+      "service": "residential remodeling",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We just bought an older house off Jones Road in Cypress that needs work in every room. How should we prioritize the remodeling, and who can take on several rooms at once?"
+    },
+    {
+      "id": "AEO-SUG-INT-REC",
+      "city": "Sugar Land",
+      "service": "interior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Can you recommend an interior painter in Sugar Land who is careful with furniture and floors? We'll be living in the house while they work."
+    },
+    {
+      "id": "AEO-SUG-INT-BEST",
+      "city": "Sugar Land",
+      "service": "interior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Which interior painting companies in Sugar Land, TX have the strongest reputation? Give me 3 to 5 to compare."
+    },
+    {
+      "id": "AEO-SUG-INT-COST",
+      "city": "Sugar Land",
+      "service": "interior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does it cost to paint the interior trim, baseboards and doors in a Sugar Land house? The walls are fine."
+    },
+    {
+      "id": "AEO-SUG-INT-CMP",
+      "city": "Sugar Land",
+      "service": "interior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Eggshell vs satin vs matte for the main living areas in a Sugar Land home: what do painters recommend, and does it affect the price?"
+    },
+    {
+      "id": "AEO-SUG-INT-PROB",
+      "city": "Sugar Land",
+      "service": "interior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Our Sugar Land house has cracked, yellowing oil-based paint on the trim. Who can repaint over it properly so the new paint doesn't peel?"
+    },
+    {
+      "id": "AEO-SUG-EXT-REC",
+      "city": "Sugar Land",
+      "service": "exterior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "We live in First Colony and need the exterior repainted. Who would you recommend for a brick-and-siding home in Sugar Land?"
+    },
+    {
+      "id": "AEO-SUG-EXT-BEST",
+      "city": "Sugar Land",
+      "service": "exterior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Best exterior painters in Sugar Land for houses with a lot of wood trim? Short list."
+    },
+    {
+      "id": "AEO-SUG-EXT-COST",
+      "city": "Sugar Land",
+      "service": "exterior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does it cost to paint the trim and siding on a one-story brick house in Sugar Land, and how long does the job usually take?"
+    },
+    {
+      "id": "AEO-SUG-EXT-CMP",
+      "city": "Sugar Land",
+      "service": "exterior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "One coat or two on an exterior repaint in Sugar Land? Some of my quotes include two coats and some don't. Which is the better value?"
+    },
+    {
+      "id": "AEO-SUG-EXT-PROB",
+      "city": "Sugar Land",
+      "service": "exterior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Our Sugar Land HOA approved new colors, but we're not sure whether repainting only the front door and shutters will look odd. Who can help pick colors and do the work?"
+    },
+    {
+      "id": "AEO-SUG-CAB-REC",
+      "city": "Sugar Land",
+      "service": "cabinet painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who paints kitchen cabinets in Sugar Land? We want to go from cherry wood to a soft white."
+    },
+    {
+      "id": "AEO-SUG-CAB-BEST",
+      "city": "Sugar Land",
+      "service": "cabinet painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Give me a shortlist of cabinet painting or refinishing companies in Sugar Land with good reviews."
+    },
+    {
+      "id": "AEO-SUG-CAB-COST",
+      "city": "Sugar Land",
+      "service": "cabinet painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What does it usually cost to paint the kitchen cabinets and island in Sugar Land, including filling the old hardware holes for new pulls?"
+    },
+    {
+      "id": "AEO-SUG-CAB-CMP",
+      "city": "Sugar Land",
+      "service": "cabinet painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Cabinet painting in Sugar Land: sprayed lacquer vs urethane enamel vs brushed paint. Which lasts longer in a busy family kitchen?"
+    },
+    {
+      "id": "AEO-SUG-CAB-PROB",
+      "city": "Sugar Land",
+      "service": "cabinet painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Grease stains around the stove keep showing through on the cabinets in our Sugar Land kitchen no matter how much I clean. Is painting the right fix, and who should do it?"
+    },
+    {
+      "id": "AEO-SUG-DRY-REC",
+      "city": "Sugar Land",
+      "service": "drywall repair",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "I need a recommendation for drywall repair in Sugar Land: a cracked corner bead and a dent where a door handle hit the wall."
+    },
+    {
+      "id": "AEO-SUG-DRY-BEST",
+      "city": "Sugar Land",
+      "service": "drywall repair",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Which Sugar Land drywall repair companies are reliable for quick, small jobs?"
+    },
+    {
+      "id": "AEO-SUG-DRY-COST",
+      "city": "Sugar Land",
+      "service": "drywall repair",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does a drywall patch and repaint usually run in Sugar Land for a single room?"
+    },
+    {
+      "id": "AEO-SUG-DRY-CMP",
+      "city": "Sugar Land",
+      "service": "drywall repair",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "DIY drywall patch vs paying a pro in Sugar Land: when is hiring someone actually worth it?"
+    },
+    {
+      "id": "AEO-SUG-DRY-PROB",
+      "city": "Sugar Land",
+      "service": "drywall repair",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "A roof leak left a stained, cracked ceiling in the living room of our Sugar Land house. The roof is fixed now. Who can repair the drywall and repaint the ceiling?"
+    },
+    {
+      "id": "AEO-SUG-LIM-REC",
+      "city": "Sugar Land",
+      "service": "limewash and brick finishing",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who would you recommend for limewashing brick in Sugar Land? We want a subtle, mottled look that lets some of the brick show through."
+    },
+    {
+      "id": "AEO-SUG-LIM-BEST",
+      "city": "Sugar Land",
+      "service": "limewash and brick finishing",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Top-rated limewash and brick finishing contractors around Sugar Land and Fort Bend County?"
+    },
+    {
+      "id": "AEO-SUG-LIM-COST",
+      "city": "Sugar Land",
+      "service": "limewash and brick finishing",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What would it cost to limewash the brick on a Sugar Land house and paint the trim at the same time?"
+    },
+    {
+      "id": "AEO-SUG-LIM-CMP",
+      "city": "Sugar Land",
+      "service": "limewash and brick finishing",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Limewash vs whitewash vs painted brick: which looks best on a 1990s Sugar Land home, and which matters more for resale?"
+    },
+    {
+      "id": "AEO-SUG-LIM-PROB",
+      "city": "Sugar Land",
+      "service": "limewash and brick finishing",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "The painted brick on our Sugar Land house is peeling and seems to be trapping moisture. Can it be stripped and limewashed instead, and who does that?"
+    },
+    {
+      "id": "AEO-SUG-REM-REC",
+      "city": "Sugar Land",
+      "service": "residential remodeling",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "We want to remodel our Sugar Land kitchen: new backsplash, new counters and fresh paint. Who would you recommend?"
+    },
+    {
+      "id": "AEO-SUG-REM-BEST",
+      "city": "Sugar Land",
+      "service": "residential remodeling",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Best home remodeling companies in Sugar Land for updating an entire house? Short list please."
+    },
+    {
+      "id": "AEO-SUG-REM-COST",
+      "city": "Sugar Land",
+      "service": "residential remodeling",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does it cost in 2026 to remodel the kitchen and two bathrooms of a 1990s home in Sugar Land?"
+    },
+    {
+      "id": "AEO-SUG-REM-CMP",
+      "city": "Sugar Land",
+      "service": "residential remodeling",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Sugar Land remodel: design-build firm vs an independent contractor. Which is better for a mid-budget project?"
+    },
+    {
+      "id": "AEO-SUG-REM-PROB",
+      "city": "Sugar Land",
+      "service": "residential remodeling",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We're getting older and want to make our Sugar Land home easier to live in, with a wider shower, grab bars and better lighting. Who does that kind of remodeling?"
+    },
+    {
+      "id": "AEO-RIC-INT-REC",
+      "city": "Richmond",
+      "service": "interior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Our new build in Harvest Green has flat builder paint that marks if you so much as touch it. Who in Richmond, TX can repaint with a more durable finish?"
+    },
+    {
+      "id": "AEO-RIC-INT-BEST",
+      "city": "Richmond",
+      "service": "interior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Who are the best interior painting contractors in Richmond, TX? I want a few to call this week."
+    },
+    {
+      "id": "AEO-RIC-INT-COST",
+      "city": "Richmond",
+      "service": "interior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "Typical price to paint the interior of a newly built home in Richmond after we move in? Mostly walls, about 2,600 sq ft."
+    },
+    {
+      "id": "AEO-RIC-INT-CMP",
+      "city": "Richmond",
+      "service": "interior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Is it better to pay the builder for a paint upgrade before closing or hire a painter in Richmond after closing? Which ends up cheaper?"
+    },
+    {
+      "id": "AEO-RIC-INT-PROB",
+      "city": "Richmond",
+      "service": "interior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Nail pops and hairline cracks are showing up all over our one-year-old house in Richmond. Should we paint now or wait, and who fixes it right?"
+    },
+    {
+      "id": "AEO-RIC-EXT-REC",
+      "city": "Richmond",
+      "service": "exterior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Can you recommend an exterior painter for an older house near historic downtown Richmond, TX? Lots of wood siding and trim."
+    },
+    {
+      "id": "AEO-RIC-EXT-BEST",
+      "city": "Richmond",
+      "service": "exterior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Shortlist of reliable exterior house painters serving Richmond and Rosenberg, TX."
+    },
+    {
+      "id": "AEO-RIC-EXT-COST",
+      "city": "Richmond",
+      "service": "exterior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much would it cost to repaint the exterior of an older wood-sided home in Richmond, TX that needs some scraping and carpentry repairs?"
+    },
+    {
+      "id": "AEO-RIC-EXT-CMP",
+      "city": "Richmond",
+      "service": "exterior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Elastomeric paint vs regular acrylic for the outside of a Richmond home: which do local painters recommend for our climate?"
+    },
+    {
+      "id": "AEO-RIC-EXT-PROB",
+      "city": "Richmond",
+      "service": "exterior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We're getting our Richmond house ready to sell and the buyer's inspector flagged peeling paint and exposed wood. Who can take care of it before closing?"
+    },
+    {
+      "id": "AEO-RIC-CAB-REC",
+      "city": "Richmond",
+      "service": "cabinet painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who paints cabinets in Richmond, TX? Our home is newer but the cabinet color is too dark for us."
+    },
+    {
+      "id": "AEO-RIC-CAB-BEST",
+      "city": "Richmond",
+      "service": "cabinet painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Top-rated cabinet painters near Richmond and the rest of Fort Bend County? I need a few names."
+    },
+    {
+      "id": "AEO-RIC-CAB-COST",
+      "city": "Richmond",
+      "service": "cabinet painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What's a fair price to paint only the bathroom vanities (three bathrooms) in Richmond, TX?"
+    },
+    {
+      "id": "AEO-RIC-CAB-CMP",
+      "city": "Richmond",
+      "service": "cabinet painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Should we paint our Richmond kitchen cabinets or just replace the doors? Which gives the better result for the cost?"
+    },
+    {
+      "id": "AEO-RIC-CAB-PROB",
+      "city": "Richmond",
+      "service": "cabinet painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "The factory finish on our Richmond cabinets is already wearing through at the edges after one year. Is that normal, and who can refinish them?"
+    },
+    {
+      "id": "AEO-RIC-DRY-REC",
+      "city": "Richmond",
+      "service": "drywall repair",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who does drywall repair in Richmond, TX? We have settling cracks in a few rooms."
+    },
+    {
+      "id": "AEO-RIC-DRY-BEST",
+      "city": "Richmond",
+      "service": "drywall repair",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Best drywall repair and painting companies around Richmond, TX for a whole-house touch-up?"
+    },
+    {
+      "id": "AEO-RIC-DRY-COST",
+      "city": "Richmond",
+      "service": "drywall repair",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does it cost to repair drywall after removing wallpaper in a Richmond house? The wall surface got torn up in spots."
+    },
+    {
+      "id": "AEO-RIC-DRY-CMP",
+      "city": "Richmond",
+      "service": "drywall repair",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "After wallpaper removal, should we skim coat the whole wall or just patch the damaged spots? What do pros in Richmond recommend?"
+    },
+    {
+      "id": "AEO-RIC-DRY-PROB",
+      "city": "Richmond",
+      "service": "drywall repair",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We had minor flooding near the Brazos in Richmond and the drywall in our garage got wet. Who can replace it and make it look finished again?"
+    },
+    {
+      "id": "AEO-RIC-LIM-REC",
+      "city": "Richmond",
+      "service": "limewash and brick finishing",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Can you recommend someone who limewashes brick near Richmond, TX? We want a classic look on a newer house in Long Meadow Farms."
+    },
+    {
+      "id": "AEO-RIC-LIM-BEST",
+      "city": "Richmond",
+      "service": "limewash and brick finishing",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Which companies near Richmond, TX are known for limewash, whitewash or German smear finishes?"
+    },
+    {
+      "id": "AEO-RIC-LIM-COST",
+      "city": "Richmond",
+      "service": "limewash and brick finishing",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "Is limewash cheaper than painting brick for a home of about 2,400 sq ft in Richmond, TX?"
+    },
+    {
+      "id": "AEO-RIC-LIM-CMP",
+      "city": "Richmond",
+      "service": "limewash and brick finishing",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Does limewash work the same on new brick as on older brick? We're in a newer Richmond subdivision."
+    },
+    {
+      "id": "AEO-RIC-LIM-PROB",
+      "city": "Richmond",
+      "service": "limewash and brick finishing",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "The brick on our Richmond house has white chalky stains (efflorescence). Should we limewash over it or fix something first, and who can tell us?"
+    },
+    {
+      "id": "AEO-RIC-REM-REC",
+      "city": "Richmond",
+      "service": "residential remodeling",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who would you recommend for a remodel in Richmond, TX? We want to convert a formal dining room into a home office with built-ins."
+    },
+    {
+      "id": "AEO-RIC-REM-BEST",
+      "city": "Richmond",
+      "service": "residential remodeling",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Shortlist of remodeling contractors serving Richmond and Fulshear for kitchen and bath work."
+    },
+    {
+      "id": "AEO-RIC-REM-COST",
+      "city": "Richmond",
+      "service": "residential remodeling",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What does it cost to turn a formal dining room into an enclosed office in Richmond, TX, including a door, drywall and paint?"
+    },
+    {
+      "id": "AEO-RIC-REM-CMP",
+      "city": "Richmond",
+      "service": "residential remodeling",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Remodeling for resale vs remodeling for ourselves: which renovations in Richmond, TX actually pay for themselves?"
+    },
+    {
+      "id": "AEO-RIC-REM-PROB",
+      "city": "Richmond",
+      "service": "residential remodeling",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We want to replace the carpet, repaint and update the lighting before moving into an older Richmond house. Who can coordinate it so everything's done before move-in day?"
+    },
+    {
+      "id": "AEO-TOM-INT-REC",
+      "city": "Tomball",
+      "service": "interior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "We're moving into an older ranch house in Tomball and want the inside repainted before we unload the truck. Who would you recommend?"
+    },
+    {
+      "id": "AEO-TOM-INT-BEST",
+      "city": "Tomball",
+      "service": "interior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Give me a shortlist of interior painters serving Tomball, TX with solid reviews."
+    },
+    {
+      "id": "AEO-TOM-INT-COST",
+      "city": "Tomball",
+      "service": "interior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much do painters around Tomball charge to paint the interior of an 1,800 sq ft house, ceilings included?"
+    },
+    {
+      "id": "AEO-TOM-INT-CMP",
+      "city": "Tomball",
+      "service": "interior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Are painters based in Tomball cheaper than companies coming up from Houston? Does it matter who I hire for interior work out here?"
+    },
+    {
+      "id": "AEO-TOM-INT-PROB",
+      "city": "Tomball",
+      "service": "interior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "The previous owners smoked in our Tomball house and the walls are yellow and smell. Who can seal and repaint to get rid of the stains and odor?"
+    },
+    {
+      "id": "AEO-TOM-EXT-REC",
+      "city": "Tomball",
+      "service": "exterior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who would you recommend in Tomball for painting the exterior of a house surrounded by pine trees? Sap and constant shade are a problem."
+    },
+    {
+      "id": "AEO-TOM-EXT-BEST",
+      "city": "Tomball",
+      "service": "exterior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Best exterior painting companies in Tomball, TX? Looking for a couple to quote a farmhouse-style home."
+    },
+    {
+      "id": "AEO-TOM-EXT-COST",
+      "city": "Tomball",
+      "service": "exterior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "Rough cost to paint the board-and-batten siding on a farmhouse with a metal roof in Tomball, TX?"
+    },
+    {
+      "id": "AEO-TOM-EXT-CMP",
+      "city": "Tomball",
+      "service": "exterior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Paint vs stain for the cedar siding and wraparound porch on our Tomball house: which lasts longer and costs less over time?"
+    },
+    {
+      "id": "AEO-TOM-EXT-PROB",
+      "city": "Tomball",
+      "service": "exterior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Woodpeckers and moisture damaged a few spots on the siding of our Tomball house. Who repairs the wood and repaints so it matches?"
+    },
+    {
+      "id": "AEO-TOM-CAB-REC",
+      "city": "Tomball",
+      "service": "cabinet painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who paints kitchen cabinets near Tomball, TX? I want a navy island with white perimeter cabinets."
+    },
+    {
+      "id": "AEO-TOM-CAB-BEST",
+      "city": "Tomball",
+      "service": "cabinet painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Top cabinet painting companies around Tomball and Spring with good reviews?"
+    },
+    {
+      "id": "AEO-TOM-CAB-COST",
+      "city": "Tomball",
+      "service": "cabinet painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does cabinet painting cost in Tomball compared with buying new cabinets?"
+    },
+    {
+      "id": "AEO-TOM-CAB-CMP",
+      "city": "Tomball",
+      "service": "cabinet painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Can old knotty pine cabinets in a Tomball house be painted so they look good, or is replacing them the better value?"
+    },
+    {
+      "id": "AEO-TOM-CAB-PROB",
+      "city": "Tomball",
+      "service": "cabinet painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Our 1970s kitchen cabinets in Tomball have decades of grease and old varnish on them. Can a painter prep and paint them so the finish lasts, and who should I call?"
+    },
+    {
+      "id": "AEO-TOM-DRY-REC",
+      "city": "Tomball",
+      "service": "drywall repair",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "I need a drywall repair recommendation in Tomball for some cracks and a busted outside corner in our hallway."
+    },
+    {
+      "id": "AEO-TOM-DRY-BEST",
+      "city": "Tomball",
+      "service": "drywall repair",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Reliable drywall repair contractors in Tomball, TX? Shortlist please."
+    },
+    {
+      "id": "AEO-TOM-DRY-COST",
+      "city": "Tomball",
+      "service": "drywall repair",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What does it cost in Tomball to repair drywall after a small leak under the kitchen sink and repaint the wall?"
+    },
+    {
+      "id": "AEO-TOM-DRY-CMP",
+      "city": "Tomball",
+      "service": "drywall repair",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Repair vs replace: an older Tomball home has walls covered in old patches. Does it make more sense to keep patching or hang new drywall?"
+    },
+    {
+      "id": "AEO-TOM-DRY-PROB",
+      "city": "Tomball",
+      "service": "drywall repair",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We're turning over a Tomball rental between tenants and the walls have holes, scuffs and sloppy old patches. Who can repair and repaint quickly?"
+    },
+    {
+      "id": "AEO-TOM-LIM-REC",
+      "city": "Tomball",
+      "service": "limewash and brick finishing",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Can you recommend someone near Tomball who does limewash on brick for a farmhouse look?"
+    },
+    {
+      "id": "AEO-TOM-LIM-BEST",
+      "city": "Tomball",
+      "service": "limewash and brick finishing",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Which contractors around Tomball, TX have real experience with limewash and other brick finishes?"
+    },
+    {
+      "id": "AEO-TOM-LIM-COST",
+      "city": "Tomball",
+      "service": "limewash and brick finishing",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does it cost to limewash a brick fireplace and chimney in Tomball?"
+    },
+    {
+      "id": "AEO-TOM-LIM-CMP",
+      "city": "Tomball",
+      "service": "limewash and brick finishing",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Limewash or painted brick for a Tomball home on a wooded lot with a lot of shade and moisture?"
+    },
+    {
+      "id": "AEO-TOM-LIM-PROB",
+      "city": "Tomball",
+      "service": "limewash and brick finishing",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Our brick ranch in Tomball looks outdated and we're thinking about limewashing it before we list. Will it help it sell, and who can do it?"
+    },
+    {
+      "id": "AEO-TOM-REM-REC",
+      "city": "Tomball",
+      "service": "residential remodeling",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who would you recommend in Tomball for a whole-house refresh on an older home? Drywall, paint, trim, and maybe opening up a wall."
+    },
+    {
+      "id": "AEO-TOM-REM-BEST",
+      "city": "Tomball",
+      "service": "residential remodeling",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Shortlist of home remodelers serving Tomball, TX for a kitchen renovation."
+    },
+    {
+      "id": "AEO-TOM-REM-COST",
+      "city": "Tomball",
+      "service": "residential remodeling",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What's a realistic 2026 budget for updating a 1980s home in Tomball: paint, flooring and a kitchen refresh?"
+    },
+    {
+      "id": "AEO-TOM-REM-CMP",
+      "city": "Tomball",
+      "service": "residential remodeling",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Tomball remodel: hire a general contractor, or have a painting and drywall company do the finish work and manage the rest myself?"
+    },
+    {
+      "id": "AEO-TOM-REM-PROB",
+      "city": "Tomball",
+      "service": "residential remodeling",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We inherited an older family house in Tomball that needs updating before we can live in it or sell it. Where do we start, and who can do the work?"
+    },
+    {
+      "id": "AEO-FUL-INT-REC",
+      "city": "Fulshear",
+      "service": "interior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Can you recommend an interior painter in Fulshear for our new home in Cross Creek Ranch? The builder's paint is thin and patchy."
+    },
+    {
+      "id": "AEO-FUL-INT-BEST",
+      "city": "Fulshear",
+      "service": "interior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Who are the most reputable interior painters in Fulshear, TX? Give me a short list."
+    },
+    {
+      "id": "AEO-FUL-INT-COST",
+      "city": "Fulshear",
+      "service": "interior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much would it cost to paint a few accent walls and a two-story living room in Fulshear?"
+    },
+    {
+      "id": "AEO-FUL-INT-CMP",
+      "city": "Fulshear",
+      "service": "interior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Hire a painter for the whole Fulshear house at once, or do a few rooms at a time? Which is better on price and disruption?"
+    },
+    {
+      "id": "AEO-FUL-INT-PROB",
+      "city": "Fulshear",
+      "service": "interior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Builder touch-ups in our Fulshear house left shiny patches all over the walls that show in the afternoon light. Who can fix it so the walls look even?"
+    },
+    {
+      "id": "AEO-FUL-EXT-REC",
+      "city": "Fulshear",
+      "service": "exterior painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who would you recommend for exterior painting in Fulshear? Our house is only 8 years old but the trim is already chalky."
+    },
+    {
+      "id": "AEO-FUL-EXT-BEST",
+      "city": "Fulshear",
+      "service": "exterior painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Best exterior house painters serving Fulshear and Katy for HOA-approved color changes?"
+    },
+    {
+      "id": "AEO-FUL-EXT-COST",
+      "city": "Fulshear",
+      "service": "exterior painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What's the cost to repaint the exterior of a 3,500 sq ft home in Fulshear that has stone, brick and Hardie siding?"
+    },
+    {
+      "id": "AEO-FUL-EXT-CMP",
+      "city": "Fulshear",
+      "service": "exterior painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Is it worth paying for premium exterior paint with Fulshear's sun and humidity, or is a mid-grade paint fine?"
+    },
+    {
+      "id": "AEO-FUL-EXT-PROB",
+      "city": "Fulshear",
+      "service": "exterior painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "Our Fulshear house exterior was painted three years ago and it's already peeling near the gutters. Who can figure out why and fix it properly?"
+    },
+    {
+      "id": "AEO-FUL-CAB-REC",
+      "city": "Fulshear",
+      "service": "cabinet painting",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who paints cabinets in Fulshear? Our kitchen is fairly new, but we want greige instead of the espresso stain."
+    },
+    {
+      "id": "AEO-FUL-CAB-BEST",
+      "city": "Fulshear",
+      "service": "cabinet painting",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Give me a few cabinet painting companies around Fulshear and Katy that do sprayed finishes."
+    },
+    {
+      "id": "AEO-FUL-CAB-COST",
+      "city": "Fulshear",
+      "service": "cabinet painting",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does it cost in Fulshear to paint a large kitchen with an island and a butler's pantry?"
+    },
+    {
+      "id": "AEO-FUL-CAB-CMP",
+      "city": "Fulshear",
+      "service": "cabinet painting",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Painting dark builder cabinets a lighter color in a newer Fulshear home: is it worth it, or will it look worse than the factory finish?"
+    },
+    {
+      "id": "AEO-FUL-CAB-PROB",
+      "city": "Fulshear",
+      "service": "cabinet painting",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We just bought a newer Fulshear home with dark cabinets that make the kitchen feel like a cave. What's the fastest way to brighten it up, and who does that?"
+    },
+    {
+      "id": "AEO-FUL-DRY-REC",
+      "city": "Fulshear",
+      "service": "drywall repair",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Who does drywall repair in Fulshear? We want new-construction cracks fixed before our builder warranty runs out."
+    },
+    {
+      "id": "AEO-FUL-DRY-BEST",
+      "city": "Fulshear",
+      "service": "drywall repair",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Top drywall repair and paint companies serving Fulshear, TX?"
+    },
+    {
+      "id": "AEO-FUL-DRY-COST",
+      "city": "Fulshear",
+      "service": "drywall repair",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "How much does it cost to fix drywall cracks and nail pops throughout a two-year-old house in Fulshear?"
+    },
+    {
+      "id": "AEO-FUL-DRY-CMP",
+      "city": "Fulshear",
+      "service": "drywall repair",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Make the builder fix the drywall cracks in our Fulshear home under warranty, or hire someone ourselves? What are the pros and cons?"
+    },
+    {
+      "id": "AEO-FUL-DRY-PROB",
+      "city": "Fulshear",
+      "service": "drywall repair",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We mounted a TV over the fireplace in our Fulshear home and then moved it, and now there are big holes and anchor damage. Who can patch and paint it seamlessly?"
+    },
+    {
+      "id": "AEO-FUL-LIM-REC",
+      "city": "Fulshear",
+      "service": "limewash and brick finishing",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "Can you recommend a contractor for limewash on a newer brick home in Fulshear? Our HOA allows it but wants to approve it first."
+    },
+    {
+      "id": "AEO-FUL-LIM-BEST",
+      "city": "Fulshear",
+      "service": "limewash and brick finishing",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Who does high-quality limewash or whitewashed brick in the Fulshear area?"
+    },
+    {
+      "id": "AEO-FUL-LIM-COST",
+      "city": "Fulshear",
+      "service": "limewash and brick finishing",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What's the price range to limewash the front of a two-story brick house in Fulshear?"
+    },
+    {
+      "id": "AEO-FUL-LIM-CMP",
+      "city": "Fulshear",
+      "service": "limewash and brick finishing",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Limewash vs painted brick on a new house in Fulshear: which one is reversible, and which fits a modern farmhouse style better?"
+    },
+    {
+      "id": "AEO-FUL-LIM-PROB",
+      "city": "Fulshear",
+      "service": "limewash and brick finishing",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "The brick color on our Fulshear house clashes with the stone the builder used. Can limewash tie them together, and who can show us samples on our wall?"
+    },
+    {
+      "id": "AEO-FUL-REM-REC",
+      "city": "Fulshear",
+      "service": "residential remodeling",
+      "intent": "recommendation",
+      "branded": false,
+      "prompt": "We want to add built-ins, shiplap and new lighting to our living room in Fulshear. Who would you recommend?"
+    },
+    {
+      "id": "AEO-FUL-REM-BEST",
+      "city": "Fulshear",
+      "service": "residential remodeling",
+      "intent": "best-company shortlist",
+      "branded": false,
+      "prompt": "Shortlist of residential remodelers in Fulshear for upgrading a builder-grade home."
+    },
+    {
+      "id": "AEO-FUL-REM-COST",
+      "city": "Fulshear",
+      "service": "residential remodeling",
+      "intent": "cost and value",
+      "branded": false,
+      "prompt": "What's a typical cost to upgrade a builder-grade home in Fulshear with new trim, paint, lighting and bathroom vanities?"
+    },
+    {
+      "id": "AEO-FUL-REM-CMP",
+      "city": "Fulshear",
+      "service": "residential remodeling",
+      "intent": "comparison",
+      "branded": false,
+      "prompt": "Builder upgrades during construction vs remodeling after closing in Fulshear: which is cheaper, and which gets better quality?"
+    },
+    {
+      "id": "AEO-FUL-REM-PROB",
+      "city": "Fulshear",
+      "service": "residential remodeling",
+      "intent": "problem-solving / purchase intent",
+      "branded": false,
+      "prompt": "We just moved into a new build in Fulshear and want a home office with a door, built-ins and paint. Who can do it without causing problems with the builder warranty?"
+    }
+  ]
+}

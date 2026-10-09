@@ -127,7 +127,7 @@ const GROUPS: Group[] = [
       },
     ],
     related: [
-      { label: "How to hire a painter in Houston", href: "/questions-to-ask-before-hiring-painters" },
+      { label: "How to hire a painter in Houston", href: "/houston-painting-contractor-guide" },
       { label: `${W}-year painting warranty`, href: "/warranty" },
       { label: "About Houston Superior Painting", href: "/about" },
     ],

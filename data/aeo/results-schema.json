@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://houstonsuperiorpainting.com/schemas/aeo-observation.json",
+  "title": "AI-visibility observation",
+  "description": "One AI answer to one prompt, on one platform, at one moment. Stored one per line in data/aeo/results/<runId>.jsonl. Auto-detected fields (companyMentioned, companyCited, sourceUrls, positionInAnswer, competitorsMentioned) are a first pass; a human reviewer fills sentiment, accuracyIssues and recommendationType and may correct the rest. One observation is never a ranking: see docs/aeo/measurement-plan.md.",
+  "type": "object",
+  "required": [
+    "promptId", "prompt", "platform", "model", "timestamp", "sessionType",
+    "companyMentioned", "companyCited", "recommendationType", "runId", "sampleIndex"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "example": { "type": "boolean", "description": "true marks a placeholder row. report.mjs skips every row with example: true." },
+    "promptId": { "type": "string", "pattern": "^AEO-[A-Z]{3}-[A-Z]{3}-[A-Z]{3,4}$|^BR-.+$", "description": "Id from data/aeo/prompts.json (AEO-...) or a branded-prompt id (BR-...)." },
+    "prompt": { "type": "string", "minLength": 1, "description": "Exact text sent, copied from the catalog." },
+    "branded": { "type": "boolean", "default": false, "description": "true when the prompt names the company. Reported separately from non-branded prompts." },
+    "city": { "type": "string" },
+    "service": { "type": "string" },
+    "intent": { "type": "string" },
+    "platform": { "type": "string", "enum": ["chatgpt", "openai-api", "claude", "anthropic-api", "perplexity", "perplexity-api", "gemini", "gemini-api", "google-ai-overview", "google-ai-mode", "copilot", "other"], "description": "Consumer app (chatgpt, claude, perplexity, gemini, google-ai-overview, google-ai-mode, copilot) or API (*-api). Keep the two apart: API answers are not what a logged-in homeowner sees." },
+    "model": { "type": "string", "description": "Model id returned by the API, or the model label shown in the app (\"unknown\" if the app does not say)." },
+    "timestamp": { "type": "string", "format": "date-time", "description": "ISO 8601 time the answer was received." },
+    "locationContext": {
+      "type": ["object", "null"],
+      "description": "Location the platform was given or inferred. For manual runs, where the device actually was (and VPN, if any).",
+      "properties": {
+        "city": { "type": "string" },
+        "region": { "type": "string" },
+        "country": { "type": "string" },
+        "method": { "type": "string", "enum": ["api-user-location", "prompt-only", "device-location", "vpn", "none"] }
+      },
+      "additionalProperties": true
+    },
+    "sessionType": { "type": "string", "enum": ["new", "personalized"], "description": "new = logged out, incognito, or a fresh account / API call with no memory. personalized = a logged-in account with history or memory." },
+    "companyMentioned": { "type": "boolean", "description": "The answer text names Houston Superior Painting." },
+    "companyCited": { "type": "boolean", "description": "A cited or linked source is on houstonsuperiorpainting.com." },
+    "positionInAnswer": { "type": ["integer", "null"], "minimum": 1, "description": "1-based order in which our company appears among the companies named in the answer. null when not mentioned." },
+    "recommendationType": { "type": "string", "enum": ["recommended", "mentioned", "none"], "description": "recommended = the answer suggests hiring or contacting us; mentioned = named neutrally or in a list without endorsement; none = not named." },
+    "sentiment": { "type": ["string", "null"], "enum": ["positive", "neutral", "negative", "mixed", null], "description": "Human review only. null until reviewed." },
+    "competitorsMentioned": { "type": "array", "items": { "type": "string" }, "uniqueItems": true, "description": "Other painting or remodeling companies named, in order of appearance." },
+    "sourceUrls": { "type": "array", "items": { "type": "string" }, "description": "Every URL the answer cited or linked, in order, de-duplicated." },
+    "accuracyIssues": {
+      "type": ["array", "null"],
+      "description": "Human review only. Wrong facts about us (phone, service area, warranty, prices, services, a look-alike domain). null = not reviewed yet; [] = reviewed, nothing wrong.",
+      "items": {
+        "type": "object",
+        "required": ["field", "stated"],
+        "properties": {
+          "field": { "type": "string", "description": "e.g. phone, warranty, serviceArea, price, services, website, owner" },
+          "stated": { "type": "string", "description": "What the AI said." },
+          "correct": { "type": "string", "description": "What lib/business.ts says." },
+          "severity": { "type": "string", "enum": ["low", "medium", "high"] }
+        }
+      }
+    },
+    "rawResponse": { "type": ["string", "object", "null"], "description": "Full answer text (manual runs) or the full API response body (API runs). Never edited." },
+    "answerText": { "type": ["string", "null"], "description": "Extracted plain answer text, for review." },
+    "screenshotRef": { "type": ["string", "null"], "description": "Path or link to the screenshot of a manual observation." },
+    "reviewerNotes": { "type": ["string", "null"] },
+    "reviewed": { "type": "boolean", "default": false, "description": "true once a human has checked the auto-detected fields and filled sentiment and accuracyIssues." },
+    "runId": { "type": "string", "description": "Groups the observations of one measurement round, e.g. 2026-10-baseline or 2026-11-day30. Also the file name." },
+    "sampleIndex": { "type": "integer", "minimum": 1, "description": "1..N when the same prompt is asked several times in the same run (we ask 3 times)." },
+    "error": { "type": ["string", "null"], "description": "Set when the call failed. Rows with an error are excluded from the rates." }
+  }
+}

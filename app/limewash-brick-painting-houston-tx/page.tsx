@@ -219,7 +219,9 @@ A typical exterior limewash takes 3-5 days, longer than standard exterior painti
     { title: "Interior Painting", href: "/interior-painting-houston-tx" },
     { title: "Pressure Washing", href: "/pressure-washing-houston-tx" },
     { title: "Soft Washing", href: "/soft-washing-houston-tx" },
-    { title: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx" }
+    { title: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx" },
+    { title: "Project: Painted Brick Exterior in West University", href: "/projects/west-university-painted-brick-exterior" },
+    { title: "Project: Painted Brick Bungalow in The Heights", href: "/projects/heights-painted-brick-bungalow" }
   ]
 }
 
