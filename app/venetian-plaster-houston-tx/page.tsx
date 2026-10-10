@@ -1,3 +1,4 @@
+import { ReviewsInline } from "@/components/office-reviews"
 import { BUSINESS } from "@/lib/business"
 import type { Metadata } from 'next'
 import Link from "next/link"
@@ -250,8 +251,7 @@ export default function VenetianPlasterHoustonTX() {
                 <span className="font-medium">500+ Houston Homes Painted</span>
               </div>
               <div className="flex items-center gap-2">
-                <Star className="h-5 w-5 fill-accent text-accent" />
-                <span className="font-medium">{BUSINESS.trust.googleRating} Rating ({BUSINESS.trust.reviewCount}+ Google Reviews)</span>
+                <ReviewsInline className="font-medium" />
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-accent" />

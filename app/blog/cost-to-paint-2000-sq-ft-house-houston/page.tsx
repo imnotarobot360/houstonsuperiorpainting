@@ -1,3 +1,4 @@
+import { reviewSummaryText } from "@/components/office-reviews"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
@@ -362,7 +363,7 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
           <strong>500+ projects completed</strong> across Greater Houston since 2019
         </li>
         <li>
-          <strong>{BUSINESS.trust.googleRating}-star rating from {BUSINESS.trust.reviewCount}+ Google reviews across our offices</strong>
+          <strong>Google reviews by office:</strong> {reviewSummaryText()}
         </li>
       </ul>
       <p>

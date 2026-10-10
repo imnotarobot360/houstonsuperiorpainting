@@ -1,3 +1,4 @@
+import { ReviewsInline } from "@/components/office-reviews";
 import { BUSINESS } from "@/lib/business";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -156,7 +157,7 @@ export default function PressureWashingHoustonPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 text-sm font-medium px-3 py-1.5 rounded-full mb-5">
-                  <span aria-hidden>⭐⭐⭐⭐⭐</span><span>Rated {BUSINESS.trust.googleRating}/5 across {BUSINESS.trust.reviewCount}+ Google reviews</span>
+                  <ReviewsInline />
                 </div>
                 <h1 className="hero-h1 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
                   Pressure Washing in Houston, Katy &amp; Cypress, TX

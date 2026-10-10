@@ -1,3 +1,4 @@
+import { OfficeReviewBadge } from "@/components/office-reviews"
 // Shared template for the office city pages (Cypress, Katy, Sugar Land,
 // Magnolia). The layout is shared; every paragraph is supplied by the page so
 // no two office pages repeat the same text (Juan's brief, 2026-10-09). NAP,
@@ -166,6 +167,10 @@ export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
         <PageHero h1={`House painters in ${city}, TX`} eyebrow={`${BUSINESS.name} · ${office.label}`} />
 
         <QuickAnswer>{data.quickAnswer}</QuickAnswer>
+
+        <p className="container mx-auto px-4 max-w-4xl -mt-6 mb-10 text-base font-medium text-foreground">
+          <OfficeReviewBadge pageSlug={slug} className="text-primary" />
+        </p>
 
         <Section title={`Neighborhoods we paint in ${city}`}>
           <ul>

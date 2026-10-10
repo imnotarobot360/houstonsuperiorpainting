@@ -1,41 +1,26 @@
-"use client"
-
-import { Star, Shield, CheckCircle, Clock } from "lucide-react"
+import { Shield, Clock } from "lucide-react"
 import { BUSINESS } from "@/lib/business"
+import { OfficeReviewBadge, ReviewsInline, ReviewsLink } from "@/components/office-reviews"
 
 /**
- * `hideRating`: pass on every city page except /painters-houston-tx. The
- * 4.9 / 170+ figure is the combined total across all five Google profiles, so other
- * city pages show a "See reviews on Google" link instead.
+ * Google ratings are shown per office, never combined (owner, 2026-10-10).
+ * `office`: the office page slug (e.g. "painters-houston-tx") to show only that
+ * office's own Google rating and link. Without it, every office is listed.
+ * `hideRating` is kept for older callers and has the same effect as omitting `office`.
  */
-export function TrustBar({ hideRating = false }: { hideRating?: boolean } = {}) {
-  const { googleRating, reviewCount, projectsCompleted, warrantyYears } = BUSINESS.trust
+export function TrustBar({ office }: { office?: string; hideRating?: boolean } = {}) {
+  const { projectsCompleted, warrantyYears } = BUSINESS.trust
 
   return (
     <div className="bg-primary text-primary-foreground py-2 text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center gap-3 sm:gap-6 flex-wrap text-center">
-          {hideRating ? (
-            <a
-              href={BUSINESS.social.googleMaps}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 underline-offset-2 hover:underline"
-            >
-              <Star className="h-4 w-4 fill-secondary text-secondary" />
-              <span className="font-semibold">See reviews on Google</span>
-            </a>
+          {office ? (
+            <OfficeReviewBadge pageSlug={office} className="font-semibold" />
           ) : (
             <>
-              <div className="flex items-center gap-1.5">
-                <Star className="h-4 w-4 fill-secondary text-secondary" />
-                <span className="font-semibold">{googleRating} Stars</span>
-              </div>
-              <span className="hidden sm:inline text-primary-foreground/50">|</span>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle className="h-4 w-4" />
-                <span>{reviewCount}+ Google Reviews</span>
-              </div>
+              <ReviewsInline className="hidden lg:inline-flex" />
+              <ReviewsLink className="lg:hidden font-semibold" />
             </>
           )}
           <span className="hidden sm:inline text-primary-foreground/50">|</span>
@@ -48,8 +33,8 @@ export function TrustBar({ hideRating = false }: { hideRating?: boolean } = {}) 
             <Shield className="h-4 w-4" />
             <span>{warrantyYears}-Year Warranty</span>
           </div>
-          <span className="hidden lg:inline text-primary-foreground/50">|</span>
-          <div className="hidden lg:flex items-center gap-1.5">
+          <span className="hidden xl:inline text-primary-foreground/50">|</span>
+          <div className="hidden xl:flex items-center gap-1.5">
             <span className="font-semibold text-secondary">No Upfront Payment</span>
           </div>
         </div>

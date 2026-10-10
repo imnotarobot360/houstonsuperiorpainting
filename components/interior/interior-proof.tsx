@@ -1,3 +1,4 @@
+import { ReviewsInline } from "@/components/office-reviews"
 import Image from "next/image"
 import { BadgeCheck, Brush, CalendarCheck, ClipboardList, Quote, ShieldCheck, Sparkles, Star } from "lucide-react"
 import { BUSINESS } from "@/lib/business"
@@ -152,9 +153,7 @@ export function InteriorProof() {
                   <Star key={i} className="size-5 fill-accent text-accent" />
                 ))}
               </div>
-              <span className="text-sm font-semibold text-foreground">
-                {BUSINESS.trust.googleRating} · {BUSINESS.trust.reviewCount}+ Google reviews
-              </span>
+              <ReviewsInline className="text-sm font-semibold text-foreground" />
             </div>
             <h2 className="font-serif text-3xl leading-tight text-foreground text-balance sm:text-4xl">
               Houston homeowners keep saying the same thing

@@ -1,3 +1,4 @@
+import { OfficeReviewCards } from "@/components/office-reviews"
 import { PUBLISHED_REVIEWS } from "@/data/reviews"
 import Link from "next/link"
 import Image from "next/image"
@@ -226,11 +227,10 @@ export function LuxuryProjects() {
 
 /* ─────────────────────────  TESTIMONIALS  ───────────────────────── */
 
-// Only owner-approved quotes from data/reviews.ts; the section hides when none are published.
-const testimonials = PUBLISHED_REVIEWS.map((r) => ({ quote: r.excerpt, name: r.name, area: r.area }))
+// Per-office Google figures always show; quotes only when owner-approved in data/reviews.ts.
+const testimonials = PUBLISHED_REVIEWS.map((r) => ({ quote: r.excerpt, name: r.name, area: r.area, sourceUrl: r.sourceUrl }))
 
 export function LuxuryTestimonials() {
-  if (testimonials.length === 0) return null
   return (
     <section id="reviews" className="scroll-mt-24 bg-champagne py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -239,18 +239,14 @@ export function LuxuryTestimonials() {
           <h2 className="font-display text-3xl sm:text-5xl text-foreground leading-tight text-balance">
             Trusted inside Houston&apos;s finest homes
           </h2>
-          <div className="mt-5 flex items-center justify-center gap-2">
-            <span className="flex">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-gold text-gold" />
-              ))}
-            </span>
-            <span className="font-manrope text-sm text-graphite">
-              {BUSINESS.trust.googleRating} on Google · {BUSINESS.trust.reviewCount}+ reviews across our five offices
-            </span>
-          </div>
+          <p className="mt-5 font-manrope text-sm text-graphite">Each office has its own Google profile. Ratings as listed on Google:</p>
         </Reveal>
 
+        <div className="mb-14">
+          <OfficeReviewCards />
+        </div>
+
+        {testimonials.length > 0 && (
         <div
           className={
             testimonials.length === 1
@@ -276,11 +272,17 @@ export function LuxuryTestimonials() {
                   <p className="font-manrope text-xs uppercase tracking-[0.18em] text-muted-foreground mt-1">
                     {t.area}, TX
                   </p>
+                  {t.sourceUrl && (
+                    <a href={t.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-manrope text-xs text-primary underline mt-2 inline-block">
+                      Read on Google
+                    </a>
+                  )}
                 </figcaption>
               </figure>
             </Reveal>
           ))}
         </div>
+        )}
       </div>
     </section>
   )

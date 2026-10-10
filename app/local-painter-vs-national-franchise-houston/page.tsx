@@ -1,3 +1,4 @@
+import { reviewSummaryText } from "@/components/office-reviews"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -195,8 +196,8 @@ export default function LocalPainterVsNationalFranchisePage() {
                 since {BUSINESS.founded} (<Link href="/contact">see all locations</Link>).
               </>,
               <>
-                <strong>Track record:</strong> {T.googleRating} rating from {T.reviewCount}+ Google reviews and{" "}
-                {T.projectsCompleted}+ completed projects.
+                <strong>Track record:</strong> {T.projectsCompleted}+ completed projects. Google reviews by office:{" "}
+                {reviewSummaryText()} (<Link href="/reviews">see each office</Link>).
               </>,
               <>
                 <strong>Products:</strong> {BUSINESS.paintPartners.join(", ")} products, named in your estimate. Authorized

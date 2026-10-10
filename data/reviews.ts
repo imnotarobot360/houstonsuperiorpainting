@@ -54,6 +54,93 @@ export const REVIEWS: ApprovedReview[] = [
     publish: false,
     notes: "Removed from the homepage 2026-10-10: no source or permission confirmed.",
   },
+  // ── Shortlist from the five Google Business Profiles (read 2026-10-10). ──
+  // Text is NOT filled in here: paste each review's exact wording from the
+  // Google Business Profile dashboard into `excerpt`, then set publish: true.
+  // Entries with an empty excerpt never render.
+  {
+    name: "Bill M.",
+    area: "Houston",
+    excerpt: "",
+    date: null,
+    sourceUrl: "https://maps.app.goo.gl/fdVmNamNHyNZ3gBD8",
+    verification: "source-verified",
+    publish: false,
+    notes: "5 stars, Houston profile, ~4 months before 2026-10-10. Two-story home with lots of trim and two porches.",
+  },
+  {
+    name: "Brandon R.",
+    area: "Houston",
+    excerpt: "",
+    date: null,
+    sourceUrl: "https://maps.app.goo.gl/fdVmNamNHyNZ3gBD8",
+    verification: "source-verified",
+    publish: false,
+    notes: "5 stars, Houston profile, ~5 months before 2026-10-10. Professional, thorough house painting; would recommend.",
+  },
+  {
+    name: "Yashica V.",
+    area: "Houston",
+    excerpt: "",
+    date: null,
+    sourceUrl: "https://maps.app.goo.gl/fdVmNamNHyNZ3gBD8",
+    verification: "source-verified",
+    publish: false,
+    notes: "5 stars, Houston profile, ~1 year before 2026-10-10. Clean, neat, timely, affordable; treated the home with care.",
+  },
+  {
+    name: "Tony G.",
+    area: "Cypress",
+    excerpt: "",
+    date: null,
+    sourceUrl: "https://maps.app.goo.gl/G2cRQy8Cth7UM6d6A",
+    verification: "source-verified",
+    publish: false,
+    notes: "5 stars, Cypress profile, ~1 month before 2026-10-10. Professional, reliable, detail-oriented, good communication.",
+  },
+  {
+    name: "Sarah K.",
+    area: "Sugar Land",
+    excerpt: "",
+    date: null,
+    sourceUrl: "https://maps.app.goo.gl/kda3QDeyq89B4u9R9",
+    verification: "source-verified",
+    publish: false,
+    notes: "5 stars, Sugar Land profile, ~1 month before 2026-10-10. Juan fixed another painter's poor job and scheduled her within days.",
+  },
+  {
+    name: "Mari",
+    area: "Magnolia",
+    excerpt: "",
+    date: null,
+    sourceUrl: "https://maps.app.goo.gl/WXxysgBJ6CWMrjg18",
+    verification: "source-verified",
+    publish: false,
+    notes: "5 stars, Magnolia profile, ~2 months before 2026-10-10. Quality of work and service; would hire again.",
+  },
+  {
+    name: "Edna R.",
+    area: "Magnolia",
+    excerpt: "",
+    date: null,
+    sourceUrl: "https://maps.app.goo.gl/WXxysgBJ6CWMrjg18",
+    verification: "source-verified",
+    publish: false,
+    notes: "5 stars, Magnolia profile, ~4 months before 2026-10-10. Master bathroom renovation; would recommend.",
+  },
+  {
+    name: "Kayla D.",
+    area: "Katy",
+    excerpt: "",
+    date: null,
+    sourceUrl: "https://maps.app.goo.gl/zcUY9dT1KYdoPmiy6",
+    verification: "source-verified",
+    publish: false,
+    notes: "5 stars, Katy profile, ~2 years before 2026-10-10. Four accent walls (living room, office, stairs, media room); fast scheduling.",
+  },
+  // Not shortlisted: the Magnolia review posted under "Juan Serra" and the Cypress
+  // review under "JJ Semo" (owner / insider reviews break Google policy), and Katy
+  // reviews that name "S&L Painting" until the owner confirms that history.
 ]
 
-export const PUBLISHED_REVIEWS = REVIEWS.filter((r) => r.publish)
+export const PUBLISHED_REVIEWS = REVIEWS.filter((r) => r.publish && r.excerpt.trim().length > 0)

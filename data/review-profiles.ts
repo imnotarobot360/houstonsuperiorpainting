@@ -59,7 +59,7 @@ export const REVIEW_PROFILES: ReviewProfile[] = [
     url: "https://maps.app.goo.gl/kda3QDeyq89B4u9R9",
     locationSlug: "sugar-land-university",
     rating: 5.0,
-    reviewCount: 2,
+    reviewCount: 3,
     lastVerified: "2026-10-10",
     verification: "checked-on-google",
   },

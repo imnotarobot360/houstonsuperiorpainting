@@ -1,3 +1,4 @@
+import { reviewSummaryText } from "@/components/office-reviews"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
@@ -389,7 +390,7 @@ export default function HousePaintingCostHoustonPage() {
         <li><strong>Premium materials:</strong> Sherwin-Williams and Benjamin Moore products</li>
         <li><strong>5-year warranty:</strong> We stand behind our work</li>
         <li><strong>Clean, professional crews:</strong> We respect your home and property</li>
-        <li><strong>{BUSINESS.trust.googleRating}-star Google rating:</strong> {BUSINESS.trust.reviewCount}+ reviews across our offices</li>
+        <li><strong>Google reviews by office:</strong> {reviewSummaryText()}</li>
       </ul>
 
       <p>

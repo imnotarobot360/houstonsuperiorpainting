@@ -1,3 +1,4 @@
+import { ReviewsInline } from "@/components/office-reviews"
 import Link from "next/link"
 import Image from "next/image"
 import { Star, ShieldCheck, Phone, CalendarDays } from "lucide-react"
@@ -74,14 +75,7 @@ export function LuxuryHero() {
           {/* Trust strip — credibility above the fold */}
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
             <div className="flex items-center gap-2">
-              <span className="flex" aria-hidden="true">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <Star key={i} className="h-4 w-4 fill-gold text-gold" />
-                ))}
-              </span>
-              <span className="font-manrope text-sm text-soft-white/90">
-                {BUSINESS.trust.googleRating} ({BUSINESS.trust.reviewCount}+ Google Reviews)
-              </span>
+              <ReviewsInline className="font-manrope text-sm text-soft-white/90 [&_svg]:text-gold" />
             </div>
             {[
               "Fully Insured",

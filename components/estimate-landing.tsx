@@ -1,3 +1,4 @@
+import { ReviewsInline } from "@/components/office-reviews"
 import Image from "next/image"
 import { BadgeCheck, Check, Clock, ShieldCheck, Star } from "lucide-react"
 import { EstimateFunnel } from "@/components/estimate-funnel"
@@ -50,7 +51,7 @@ export function EstimateLanding({ config }: { config: FunnelConfig }) {
                     produced that average, which the review count does not
                     establish and which we cannot substantiate. */}
                 <p className="text-sm text-muted-foreground">
-                  {BUSINESS.trust.googleRating} Google rating · {BUSINESS.trust.reviewCount}+ reviews
+                  <ReviewsInline />
                 </p>
               </div>
 

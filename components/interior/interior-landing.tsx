@@ -1,5 +1,7 @@
 "use client"
 
+import { ReviewsInline } from "@/components/office-reviews"
+
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { BadgeCheck, Check, Clock, Phone, ShieldCheck, Star } from "lucide-react"
@@ -84,7 +86,7 @@ export function InteriorLanding() {
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  {BUSINESS.trust.googleRating} Google rating · {BUSINESS.trust.reviewCount}+ reviews
+                  <ReviewsInline />
                 </p>
               </div>
 

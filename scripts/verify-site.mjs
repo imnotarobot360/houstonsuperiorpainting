@@ -176,6 +176,13 @@ if (!/not a final quote/.test(visible(pages.get("/houston-painting-cost-guide")?
 for (const [p, r] of pages) if (/coi\.pdf|certificate-of-insurance\.pdf/i.test(r.text)) fail(`${p} links a public certificate of insurance`)
 // 200+ was the combined review count before Google removed reviews (owner, 2026-10-10).
 for (const [p, r] of pages) if (/200\+ (google )?reviews|200\+ houston homeowners|200\+ five-star|\(200\+ reviews\)/i.test(visible(r.text))) fail(`${p} still shows the old 200+ review count`)
+// Ratings are per office, never combined (owner, 2026-10-10).
+for (const [p, r] of pages) if (/170\+|reviews across our (five )?offices/i.test(visible(r.text))) fail(`${p} shows a combined review figure`)
+if (!pages.has("/reviews")) fail("/reviews not in sitemap")
+for (const o of OFFICES) {
+  const t = pages.get(o.page)?.text || ""
+  if (!/href="https:\/\/maps\.app\.goo\.gl\/[A-Za-z0-9]+"/.test(t)) fail(`${o.page} has no link to its Google profile`)
+}
 console.log("trust rules checked")
 
 console.log(failures.length ? `\nFAILED (${failures.length}):\n- ${failures.join("\n- ")}` : "\nALL CHECKS PASSED")

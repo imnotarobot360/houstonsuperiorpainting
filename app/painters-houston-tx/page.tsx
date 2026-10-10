@@ -160,7 +160,7 @@ export default function PaintersHoustonTX() {
           ]),
         }}
       />
-      <TrustBar />
+      <TrustBar office="painters-houston-tx" />
       <Header />
       <main>
         <PageHero h1="House painters in Houston, TX" eyebrow="Houston Superior Painting" />

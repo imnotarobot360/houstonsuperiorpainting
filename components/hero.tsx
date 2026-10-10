@@ -1,5 +1,7 @@
 "use client"
 
+import { ReviewsInline } from "@/components/office-reviews"
+
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -59,7 +61,7 @@ export function Hero() {
                   <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
                 ))}
               </div>
-              <span className="text-sm text-muted-foreground">Rated {BUSINESS.trust.googleRating}/5 across {BUSINESS.trust.reviewCount}+ Google reviews</span>
+              <ReviewsInline className="text-sm text-muted-foreground" />
             </div>
 
             <h1 className="hero-h1 font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">

@@ -1,3 +1,4 @@
+import { ReviewsInline } from "@/components/office-reviews"
 import Image from "next/image"
 import { Phone, Star, ShieldCheck, BadgeCheck, Check, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -269,8 +270,7 @@ function Credentials() {
       className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-6"
     >
       <li className="inline-flex items-center gap-2 text-sm font-medium text-foreground">
-        <Star className="h-4 w-4 fill-accent text-accent" aria-hidden="true" />
-        {BUSINESS.trust.googleRating} on Google · {BUSINESS.trust.reviewCount}+ reviews
+        <ReviewsInline />
       </li>
       <li className="inline-flex items-center gap-2 text-sm font-medium text-foreground">
         <ShieldCheck className="h-4 w-4 text-secondary" aria-hidden="true" />

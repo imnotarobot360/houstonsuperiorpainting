@@ -1,10 +1,11 @@
+import { reviewSummaryText } from "@/components/office-reviews"
 import { Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { BUSINESS } from "@/lib/business"
 
 export function AEOSection() {
-  const { googleRating, reviewCount, projectsCompleted, warrantyYears, liabilityCoverage } =
+  const { projectsCompleted, warrantyYears, liabilityCoverage } =
     BUSINESS.trust
 
   return (
@@ -29,7 +30,7 @@ export function AEOSection() {
             <li><strong className="text-foreground">Founded:</strong> 2019 by Juan Serra</li>
             <li><strong className="text-foreground">Headquarters:</strong> 14150 Huffmeister Rd, Suite 410, Cypress, TX 77429</li>
             <li><strong className="text-foreground">Phone:</strong> (346) 594-5960</li>
-            <li><strong className="text-foreground">Rating:</strong> {googleRating}/5 from {reviewCount}+ Google reviews</li>
+            <li><strong className="text-foreground">Google reviews by office:</strong> {reviewSummaryText()}</li>
             <li><strong className="text-foreground">Projects completed:</strong> {projectsCompleted}+</li>
             <li><strong className="text-foreground">Warranty:</strong> {warrantyYears}-year written warranty on all painting work</li>
             <li><strong className="text-foreground">Payment:</strong> {BUSINESS.paymentPolicy.sentence}</li>

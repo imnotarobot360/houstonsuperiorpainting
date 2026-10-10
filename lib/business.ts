@@ -200,11 +200,8 @@ export const BUSINESS = {
 
   // ─── Trust signals ─────────────────────────────────────
   trust: {
-    googleRating: 4.9,
-    // Combined across the 5 Google Business Profiles, checked on Google 2026-10-10:
-    // Katy 130 (4.9), Houston 25, Magnolia 11, Cypress 3, Sugar Land 2 (all 5.0) = 171.
-    // Rendered as "170+". Re-check monthly; see data/review-profiles.ts.
-    reviewCount: 170,
+    // Google ratings are per office, never combined: see data/review-profiles.ts
+    // and components/office-reviews.tsx (owner, 2026-10-10).
     projectsCompleted: 500,
     warrantyYears: 5,
     yearsInBusiness: 6,   // Founded 2019; calc programatically if preferred
