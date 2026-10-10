@@ -145,11 +145,12 @@ export const REVIEWS: ApprovedReview[] = [
   {
     name: "Edna R.",
     area: "Magnolia",
-    excerpt: "",
+    excerpt:
+      "Thank you one more time for the beautiful job you did and being part of my master bathroom renovation. I will definitely recommend you.",
     date: null,
     sourceUrl: "https://maps.app.goo.gl/WXxysgBJ6CWMrjg18",
     verification: "source-verified",
-    publish: false,
+    publish: true,
     notes: "5 stars, Magnolia profile, ~4 months before 2026-10-10. Master bathroom renovation; would recommend.",
   },
   {
