@@ -251,7 +251,7 @@ export function LuxuryTestimonials() {
           className={
             testimonials.length === 1
               ? "max-w-2xl mx-auto"
-              : testimonials.length === 2
+              : testimonials.length === 2 || testimonials.length === 4
                 ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                 : "grid grid-cols-1 md:grid-cols-3 gap-6"
           }

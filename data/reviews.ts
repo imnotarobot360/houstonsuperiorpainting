@@ -81,12 +81,35 @@ export const REVIEWS: ApprovedReview[] = [
   {
     name: "Yashica V.",
     area: "Houston",
-    excerpt: "",
+    excerpt:
+      "This company is by far the best in the business. They treated my home as if it was their own. The work was clean, neat, timely and affordable I will definitely use them again. Thanks Houston superior painting company.",
     date: null,
     sourceUrl: "https://maps.app.goo.gl/fdVmNamNHyNZ3gBD8",
     verification: "source-verified",
-    publish: false,
+    publish: true,
     notes: "5 stars, Houston profile, ~1 year before 2026-10-10. Clean, neat, timely, affordable; treated the home with care.",
+  },
+  {
+    name: "Paul T.",
+    area: "Houston",
+    excerpt:
+      "Absolutely thrilled with the work Houston Superior Painting did on our home! The team was professional, punctual, and paid attention to every detail. Our house looks brand new again. Highly recommend them for anyone looking for quality painting services.",
+    date: null,
+    sourceUrl: "https://maps.app.goo.gl/fdVmNamNHyNZ3gBD8",
+    verification: "source-verified",
+    publish: true,
+    notes: "Text supplied by the owner 2026-10-10; Google highlights this review on the Houston profile.",
+  },
+  {
+    name: "Andoure G.",
+    area: "",
+    excerpt:
+      "Houston Superior Painting painted my house and they did an amazing job. They were very professional and before the finished quickly.",
+    date: null,
+    sourceUrl: null,
+    verification: "owner-confirmed",
+    publish: false,
+    notes: "Text supplied by the owner 2026-10-10. Waiting for which office's Google profile it is on before publishing.",
   },
   {
     name: "Tony G.",
@@ -101,11 +124,12 @@ export const REVIEWS: ApprovedReview[] = [
   {
     name: "Sarah K.",
     area: "Sugar Land",
-    excerpt: "",
+    excerpt:
+      "I made the mistake of hiring an inexperienced painter and was really unhappy with the results. I called Juan in complete distress and he not only assured me that he would take care of it, he put me on his schedule just a couple of days later. Juan’s team completely transformed the look of my home interior with their precision and attention to detail. I chose a very dark color for one of the walls and there is no room for error for that dark to light transition. Yet there are no mistakes, everything is pristine and perfect - even to my discerning eye. Don’t ever just hire anyone for a paint job. Let the professionals take care of it for you - thank you Juan!! But now I have to paint all the walls.",
     date: null,
     sourceUrl: "https://maps.app.goo.gl/kda3QDeyq89B4u9R9",
     verification: "source-verified",
-    publish: false,
+    publish: true,
     notes: "5 stars, Sugar Land profile, ~1 month before 2026-10-10. Juan fixed another painter's poor job and scheduled her within days.",
   },
   {
