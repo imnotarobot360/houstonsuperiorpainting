@@ -102,14 +102,14 @@ export const REVIEWS: ApprovedReview[] = [
   },
   {
     name: "Andoure G.",
-    area: "",
+    area: "Katy",
     excerpt:
       "Houston Superior Painting painted my house and they did an amazing job. They were very professional and before the finished quickly.",
     date: null,
-    sourceUrl: null,
+    sourceUrl: "https://maps.app.goo.gl/zcUY9dT1KYdoPmiy6",
     verification: "owner-confirmed",
-    publish: false,
-    notes: "Text supplied by the owner 2026-10-10. Waiting for which office's Google profile it is on before publishing.",
+    publish: true,
+    notes: "Text supplied by the owner 2026-10-10 (Katy profile); kept exactly as written at the owner's request.",
   },
   {
     name: "Tony G.",
