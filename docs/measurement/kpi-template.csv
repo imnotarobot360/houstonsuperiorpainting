@@ -1,0 +1,21 @@
+week_start,source,metric,segment,value,notes
+2026-10-12,Google Search Console,impressions,branded,,"queries containing 'houston superior'"
+2026-10-12,Google Search Console,impressions,non-branded,,
+2026-10-12,Google Search Console,clicks,branded,,
+2026-10-12,Google Search Console,clicks,non-branded,,
+2026-10-12,Google Search Console,indexed pages,all,,"Pages report: indexed count"
+2026-10-12,Google Search Console,crawl errors,all,,"Pages report: not indexed reasons"
+2026-10-12,Bing Webmaster Tools,impressions,all,,
+2026-10-12,Google Business Profile,calls,houston,,"repeat per office: houston, cypress, katy, sugar-land, magnolia"
+2026-10-12,Google Business Profile,website clicks,houston,,
+2026-10-12,Google Business Profile,direction requests,houston,,
+2026-10-12,Google Business Profile,review count,houston,,"record the number shown on Google, with date"
+2026-10-12,Google Business Profile,rating,houston,,
+2026-10-12,Local pack check,position,"house painters houston",,"manual check, logged-out, note location"
+2026-10-12,Website,estimate submissions,all,,"/painting-estimate-houston completions"
+2026-10-12,Website,booking link clicks,all,,"app.insightpaint.com/book/houston-superior"
+2026-10-12,Website,phone clicks,all,,"tel:+13465945960"
+2026-10-12,InsightPaint,bookings,all,,
+2026-10-12,Backlinks,referring domains,all,,"from Search Console Links report"
+2026-10-12,Citations,NAP consistency,all,,"count of listings that match the website exactly"
+2026-10-12,Paid placements,spend,all,,"keep separate from organic metrics"

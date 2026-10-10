@@ -1,3 +1,4 @@
+import { TrustChecklist } from "@/components/trust-checklist"
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
@@ -18,7 +19,7 @@ import {
   ESTIMATE_PATH,
 } from "@/components/aeo/blocks"
 import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business"
-import { LOCAL_PROOF_PROJECTS } from "@/lib/projects"
+import { COMMERCIAL_PROJECTS } from "@/data/commercial-projects"
 
 // Commercial service page. Facts only from lib/business.ts; no project names or
 // review quotes beyond real case studies in lib/projects.ts. Do not reuse the
@@ -90,7 +91,7 @@ const FAQS = [
   },
 ]
 
-const project = LOCAL_PROOF_PROJECTS.find((p) => p.slug === "cypress-commercial-office-repaint")
+const project = COMMERCIAL_PROJECTS[0]
 
 export default function CommercialPaintingHoustonPage() {
   return (
@@ -158,11 +159,23 @@ export default function CommercialPaintingHoustonPage() {
                 <strong>After-hours and weekend shifts</strong> so staff, tenants and customers keep using the space.
               </>,
               <>
-                <strong>Low-VOC paint</strong> on interiors that will be occupied the next morning.
+                <strong>Low-odor, low-VOC paint</strong> on interiors that will be occupied the next morning.
               </>,
               <>
                 <strong>Phased work</strong>, one area at a time, with furniture moved, floors and fixtures covered, and the
                 space cleaned and usable at the end of every shift.
+              </>,
+              <>
+                <strong>Furniture and technology protection:</strong> desks, computers, phones and equipment are moved or
+                covered before work starts in a room, and put back afterward.
+              </>,
+              <>
+                <strong>Occupant communication:</strong> a written schedule showing which areas are painted on which days, so
+                your building manager can tell tenants and staff in advance.
+              </>,
+              <>
+                <strong>Building-management coordination:</strong> access, keys, alarms, elevators, parking and loading are
+                agreed with your manager before the first shift.
               </>,
               <>
                 <strong>One point of contact</strong> for your site manager, with the schedule agreed before the first
@@ -184,8 +197,8 @@ export default function CommercialPaintingHoustonPage() {
                 text: "a line-by-line scope: areas, prep, primer, product line, sheen, number of coats, schedule, payment terms and the after-hours premium if it applies.",
               },
               {
-                title: "Certificate of insurance",
-                text: "sent to your property manager or board before the start date.",
+                title: "Insurance documentation",
+                text: "sent to your property manager or board before the start date. Project-specific insurance documentation and additional-insured requests can be reviewed during project setup, subject to insurer approval and policy terms.",
               },
               {
                 title: "The work",
@@ -291,6 +304,8 @@ export default function CommercialPaintingHoustonPage() {
             ]}
           />
         </Section>
+
+        <TrustChecklist />
 
         <CtaBlock title="Get a free commercial painting estimate">
           Call <a href={PHONE_HREF} className="underline">{BUSINESS.phone}</a>,{" "}

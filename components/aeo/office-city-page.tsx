@@ -6,6 +6,7 @@
 // No rating numbers are printed here: the 4.9 / 200+ figure belongs to the
 // Houston GBP only.
 
+import { TrustChecklist } from "@/components/trust-checklist"
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import Link from "next/link"
@@ -235,6 +236,8 @@ export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
             ]}
           />
         </Section>
+
+        <TrustChecklist />
 
         <CtaBlock title={data.cta.title}>{data.cta.body}</CtaBlock>
       </main>

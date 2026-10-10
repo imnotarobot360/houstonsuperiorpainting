@@ -20,6 +20,7 @@ const companyLinks = [
   { label: "Houston Painting Cost Guide", href: "/houston-painting-cost-guide" },
   { label: "Free Painting Estimate", href: "/painting-estimate-houston" },
   { label: `${BUSINESS.trust.warrantyYears}-Year Painting Warranty`, href: "/warranty" },
+  { label: "Insurance & Warranty", href: "/insurance-and-warranty" },
   { label: "Painting Financing", href: "/painting-financing-houston" },
   { label: "Houston Painting FAQ", href: "/faq" },
   { label: "Projects", href: "/projects" },

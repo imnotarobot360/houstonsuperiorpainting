@@ -1,3 +1,4 @@
+import { TrustChecklist } from "@/components/trust-checklist"
 import type { Metadata } from "next"
 import Link from "next/link"
 import type { ReactNode } from "react"
@@ -297,6 +298,8 @@ export default function HoustonPaintingCostGuidePage() {
           title="Frequently asked questions"
           variant="compact"
         />
+
+        <TrustChecklist />
 
         <CtaBlock title="Get a free itemized estimate">
           Call <a href={PHONE_HREF} className="underline">{BUSINESS.phone}</a> or{" "}

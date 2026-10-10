@@ -385,7 +385,12 @@ export default function HoustonPaintingContractorGuidePage() {
             </li>
             <li>If the crew includes subcontractors, confirm the COI covers them or that they carry their own.</li>
           </ol>
-          <p>Houston Superior Painting carries {INSURANCE}, and we send the COI with the estimate.</p>
+          <p>
+            Houston Superior Painting carries {INSURANCE}. Proof of insurance is available upon request, and customers who
+            approve a project receive our current insurance documentation before work begins (
+            <Link href="/insurance-and-warranty#request-proof-of-insurance">request it here</Link>). Step-by-step detail:{" "}
+            <Link href="/blog/how-to-verify-painting-contractor-insurance-houston">how to verify a painting contractor&apos;s insurance</Link>.
+          </p>
         </Section>
 
         <Section title="How to evaluate a warranty">
@@ -537,7 +542,7 @@ export default function HoustonPaintingContractorGuidePage() {
             </li>
             <li>
               <strong>Written estimate.</strong> Prep steps, primer, product and sheen per surface, coat count, repairs,
-              warranty, and our certificate of insurance.
+              and warranty. Proof of insurance on request, and insurance documentation with the approved project documents.
             </li>
             <li>
               <strong>Approval.</strong> {BUSINESS.paymentPolicy.sentence}

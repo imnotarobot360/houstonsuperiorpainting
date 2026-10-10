@@ -1,3 +1,4 @@
+import { PUBLISHED_REVIEWS } from "@/data/reviews"
 import Link from "next/link"
 import Image from "next/image"
 import { ShieldCheck, Award, Sparkles, Star, ArrowUpRight } from "lucide-react"
@@ -225,28 +226,11 @@ export function LuxuryProjects() {
 
 /* ─────────────────────────  TESTIMONIALS  ───────────────────────── */
 
-const testimonials = [
-  {
-    quote:
-      "From the consultation to the final walkthrough, the experience felt genuinely white-glove. The prep work on our Memorial home was extraordinary.",
-    name: "Catherine R.",
-    area: "Memorial",
-  },
-  {
-    quote:
-      "The cabinet refinishing transformed our kitchen into something out of a design magazine. Flawless, durable, and beautifully done.",
-    name: "Daniel & Priya M.",
-    area: "West University",
-  },
-  {
-    quote:
-      "Meticulous, communicative, and respectful of our home throughout. The finish on our River Oaks exterior still looks immaculate.",
-    name: "Robert H.",
-    area: "River Oaks",
-  },
-]
+// Only owner-approved quotes from data/reviews.ts; the section hides when none are published.
+const testimonials = PUBLISHED_REVIEWS.map((r) => ({ quote: r.excerpt, name: r.name, area: r.area }))
 
 export function LuxuryTestimonials() {
+  if (testimonials.length === 0) return null
   return (
     <section id="reviews" className="scroll-mt-24 bg-champagne py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -267,7 +251,15 @@ export function LuxuryTestimonials() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          className={
+            testimonials.length === 1
+              ? "max-w-2xl mx-auto"
+              : testimonials.length === 2
+                ? "grid grid-cols-1 md:grid-cols-2 gap-6"
+                : "grid grid-cols-1 md:grid-cols-3 gap-6"
+          }
+        >
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={i * 90}>
               <figure className="h-full bg-background rounded-lg p-8 border border-border flex flex-col">

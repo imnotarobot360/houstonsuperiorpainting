@@ -2,6 +2,7 @@
 // (interior, exterior, cabinets, drywall). See docs/aeo-seo-plan-2026-09.md.
 // Every page renders the same sections in the same order; only the data changes.
 
+import { TrustChecklist } from "@/components/trust-checklist"
 import Link from "next/link"
 import Image from "next/image"
 import type { ReactNode } from "react"
@@ -184,6 +185,8 @@ export function ServiceSkeleton(d: ServiceSkeletonData) {
         <Section id="related-services" title="Related services">
           <LinkGrid links={d.related} />
         </Section>
+
+        <TrustChecklist />
 
         <CtaBlock />
 

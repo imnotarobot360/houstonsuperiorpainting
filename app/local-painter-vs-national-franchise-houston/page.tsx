@@ -28,6 +28,7 @@ const DESCRIPTION =
   "Local painting company or national franchise? What Houston homeowners should compare: warranty, prep, insurance, supervision, products, payment and reviews."
 const H1 = "Local Painting Company vs National Franchise: What Houston Homeowners Should Compare"
 const DATE_PUBLISHED = "2026-10-08"
+const DATE_MODIFIED = "2026-10-10"
 const DATE_LABEL = "Oct 8, 2026"
 
 const T = BUSINESS.trust
@@ -99,7 +100,7 @@ export default function LocalPainterVsNationalFranchisePage() {
               headline: H1,
               description: DESCRIPTION,
               datePublished: DATE_PUBLISHED,
-              dateModified: DATE_PUBLISHED,
+              dateModified: DATE_MODIFIED,
             }),
             breadcrumbNode([
               { name: "Home", path: "/" },
@@ -185,7 +186,9 @@ export default function LocalPainterVsNationalFranchisePage() {
                 , our internal workmanship process (not an industry certification).
               </>,
               <>
-                <strong>Insurance and bonding:</strong> bonded and insured with {INSURANCE}.
+                <strong>Insurance and bonding:</strong> bonded and insured with {INSURANCE}. Proof of insurance is available
+                upon request and provided with approved project documents (
+                <Link href="/insurance-and-warranty#request-proof-of-insurance">request it here</Link>).
               </>,
               <>
                 <strong>Local presence:</strong> {OFFICE_COUNT} locations across Greater Houston, headquartered in Cypress
@@ -217,6 +220,8 @@ export default function LocalPainterVsNationalFranchisePage() {
               { label: "How to choose a painting contractor", href: "/houston-painting-contractor-guide" },
               { label: "What to expect from an estimate", href: "/blog/what-to-expect-painting-estimate" },
               { label: "Warranty", href: "/warranty" },
+              { label: "How to verify a painter's insurance", href: "/blog/how-to-verify-painting-contractor-insurance-houston" },
+              { label: "Insurance and warranty", href: "/insurance-and-warranty" },
               { label: "Projects", href: "/projects" },
               { label: "Service areas", href: "/service-areas" },
               ...CORE_SERVICES.slice(0, 3).map((s) => ({ label: s.name, href: `/${s.slug}` })),

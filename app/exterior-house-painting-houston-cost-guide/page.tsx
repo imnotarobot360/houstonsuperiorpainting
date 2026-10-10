@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BUSINESS, PHONE_HREF, SMS_HREF, PRICES_2026 } from "@/lib/business";
+import { BUSINESS, PHONE_HREF, SMS_HREF, PRICES_2026, PRICING_DISCLAIMER } from "@/lib/business";
 import { EstimateCalculator } from "@/components/estimate-calculator";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -70,6 +70,7 @@ export default function ExteriorHousePaintingHoustonCostGuide() {
             </table>
           </div>
           <p className="text-center text-muted-foreground mt-4 text-sm">Prices include power wash, scrape, caulk, prime, and 2 coats of premium Sherwin-Williams paint. Three-story homes and steep lots add 20&ndash;40% for lifts and ladders.</p>
+          <p className="text-sm text-muted-foreground mb-4">{PRICING_DISCLAIMER}</p>
           <p className="text-foreground/90 mt-6 leading-relaxed">These ranges match our <Link href="/houston-painting-cost-guide" className="font-medium text-primary underline">Houston painting cost guide</Link>, which also covers interior and cabinet pricing. For what the job includes step by step, see <Link href="/exterior-painting-houston-tx" className="font-medium text-primary underline">exterior painting in Houston</Link>. The same ranges apply to exterior work from our <Link href="/painters-katy-tx" className="font-medium text-primary underline">Katy painters</Link>, <Link href="/painters-cypress-tx" className="font-medium text-primary underline">Cypress painters</Link>, and <Link href="/painters-sugar-land-tx" className="font-medium text-primary underline">Sugar Land painters</Link>. <Link href={ESTIMATE_PATH} className="font-medium text-primary underline">Request a free exterior painting estimate</Link> for a fixed price.</p>
         </div>
       </section>

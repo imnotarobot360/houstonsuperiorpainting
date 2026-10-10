@@ -263,7 +263,7 @@ export default function PaintWarrantyTexasPage() {
           days. Covered repairs are completed at no charge within 30 days of confirmation.
         </li>
         <li>
-          <strong>What we use to back it:</strong> Sherwin-Williams and Benjamin Moore product lines only — we never use
+          <strong>What we use to back it:</strong> Sherwin-Williams, Benjamin Moore and Farrow &amp; Ball products — we never use
           contractor-grade or private-label paint. The manufacturer&apos;s product warranty complements our workmanship
           warranty.
         </li>
@@ -273,8 +273,8 @@ export default function PaintWarrantyTexasPage() {
         </li>
       </ul>
       <p>
-        This warranty travels with the property. If you sell your home within the 5-year period, the remaining warranty
-        transfers to the new owner — a meaningful point of differentiation when listing your home. Learn more on our{" "}
+        The complete warranty terms are included in your approved estimate and project documents, and those documents
+        control. Learn more on our{" "}
         <Link href="/warranty">warranty page</Link>.
       </p>
 

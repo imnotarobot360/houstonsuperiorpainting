@@ -1,3 +1,4 @@
+import { TrustChecklist } from "@/components/trust-checklist"
 import type { Metadata } from 'next'
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -87,6 +88,9 @@ export default function Home() {
       */}
       <LocationsSection />
       <HomeKeyLinks />
+      <div className="bg-white pt-16">
+        <TrustChecklist className="!mb-0" />
+      </div>
       <FAQ items={homeFaqs} variant="default" />
       <LuxuryCTA />
       </main>

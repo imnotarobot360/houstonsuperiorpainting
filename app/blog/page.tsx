@@ -22,6 +22,66 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "how-to-verify-painting-contractor-insurance-houston",
+    title: "How to Verify a Painting Contractor's Insurance in Houston",
+    excerpt:
+      "Texas does not license painters, so insurance is the check that matters. How to read a certificate of insurance and confirm it is active.",
+    category: "Hiring Guide",
+    author: "Juan Serra",
+    publishDate: "October 10, 2026",
+    readTime: "7 min read",
+    image: "/images/blog/licensed-vs-unlicensed-painters.jpg",
+    featured: false,
+  },
+  {
+    slug: "cabinet-painting-company-houston-guide",
+    title: "How to Choose a Cabinet Painting Company in Houston",
+    excerpt:
+      "Degreasing, sanding, bonding primer, spray application and cure time: what separates a lasting cabinet finish, and the questions to ask.",
+    category: "Cabinet Refinishing",
+    author: "Juan Serra",
+    publishDate: "October 10, 2026",
+    readTime: "8 min read",
+    image: "/images/projects/cypress-two-tone-kitchen/01-kitchen-perimeter-and-island.jpg",
+    featured: false,
+  },
+  {
+    slug: "exterior-house-painting-cypress-tx-guide",
+    title: "Exterior House Painting in Cypress: Preparation, Products and Pricing",
+    excerpt:
+      "How Cypress shade, mildew and humidity affect exterior paint, the prep that makes it last, HOA approvals and how pricing is built.",
+    category: "Exterior Painting",
+    author: "Juan Serra",
+    publishDate: "October 10, 2026",
+    readTime: "8 min read",
+    image: "/images/blog/exterior-painting-cypress-problems.jpg",
+    featured: false,
+  },
+  {
+    slug: "painting-contractor-sugar-land-insurance-warranty",
+    title: "Hiring a Painting Contractor in Sugar Land: Insurance, Reviews and Warranty Checklist",
+    excerpt:
+      "A checklist for Sugar Land homeowners: verify insurance, read reviews, compare written warranties and handle HOA approval.",
+    category: "Hiring Guide",
+    author: "Juan Serra",
+    publishDate: "October 10, 2026",
+    readTime: "7 min read",
+    image: "/images/blog/choose-best-painters-houston.jpg",
+    featured: false,
+  },
+  {
+    slug: "commercial-office-painting-houston",
+    title: "Commercial Office Painting in Houston Without Disrupting Operations",
+    excerpt:
+      "After-hours and phased schedules, low-odor paint, protecting furniture and IT, and coordinating with building management.",
+    category: "Commercial Painting",
+    author: "Juan Serra",
+    publishDate: "October 10, 2026",
+    readTime: "7 min read",
+    image: "/images/projects/cypress-commercial-office/03-after-office.jpg",
+    featured: false,
+  },
+  {
     slug: "hardieplank-painting-houston",
     title: "How to Paint HardiePlank in Houston: Prep, Paint, and What Lasts",
     excerpt:

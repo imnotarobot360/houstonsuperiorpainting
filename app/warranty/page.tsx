@@ -55,10 +55,10 @@ export default function WarrantyPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Shield className="h-16 w-16 mx-auto mb-6 opacity-90" />
             <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-4">
-              Our 5-Year Warranty
+              Our 5-Year Written Workmanship Warranty
             </h1>
             <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              We stand behind every project with a comprehensive warranty that protects your investment. Here's exactly what's covered.
+              Houston Superior Painting backs qualifying painting projects with a 5-Year Written Workmanship Warranty. Complete warranty terms are included in the customer's approved estimate and project documents.
             </p>
           </div>
         </section>
@@ -125,7 +125,7 @@ export default function WarrantyPage() {
               <CardContent className="p-8 prose prose-zinc max-w-none">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Coverage Period</h3>
                 <p className="text-muted-foreground mb-6">
-                  Our warranty begins on the date of project completion and extends for five (5) full years. The warranty is transferable to new homeowners if the property is sold during the coverage period — a valuable selling point for your home.
+                  Our warranty begins on the date of project completion and extends for five (5) full years.
                 </p>
 
                 <h3 className="text-xl font-semibold text-foreground mb-4">Warranty Coverage by Service</h3>
@@ -134,8 +134,14 @@ export default function WarrantyPage() {
                   <li><strong>Exterior Painting:</strong> 5 years on workmanship; paint manufacturer warranty on materials</li>
                   <li><strong>Cabinet Refinishing:</strong> 5 years on finish durability and adhesion</li>
                   <li><strong>Drywall Repair:</strong> 5 years on repairs; painting warranty applies to painted surfaces</li>
-                  <li><strong>Garage Floor Epoxy:</strong> 15 years on delamination and hot tire pickup</li>
                 </ul>
+                <p className="text-muted-foreground mb-6">
+                  Garage floor coating warranties are provided separately by Houston Superior Epoxy. Visit{" "}
+                  <a href="https://houstonsuperiorepoxy.com" className="underline">https://houstonsuperiorepoxy.com</a> for current system and warranty information.
+                </p>
+                <p className="text-muted-foreground mb-6">
+                  Paint and coating products also carry their own manufacturer warranties, which are separate from our workmanship warranty.
+                </p>
 
                 <h3 className="text-xl font-semibold text-foreground mb-4">Conditions for Warranty Coverage</h3>
                 <p className="text-muted-foreground mb-4">
@@ -152,9 +158,13 @@ export default function WarrantyPage() {
                 <h3 className="text-xl font-semibold text-foreground mb-4">Sample Warranty Language</h3>
                 <div className="bg-muted/50 p-6 rounded-lg border border-border text-sm text-muted-foreground italic">
                   <p>
-                    "Houston Superior Painting LLC warrants all labor and materials provided under this contract against defects in workmanship for a period of five (5) years from the date of substantial completion. Should any defect covered by this warranty appear during the warranty period, Houston Superior Painting LLC will, at its sole discretion, repair or repaint the affected area at no charge to the homeowner. This warranty is transferable to subsequent owners of the property. This warranty does not cover damage caused by acts of nature, normal wear and tear, improper maintenance, or alterations made by parties other than Houston Superior Painting LLC."
+                    "Houston Superior Painting LLC warrants all labor and materials provided under this contract against defects in workmanship for a period of five (5) years from the date of substantial completion. Should any defect covered by this warranty appear during the warranty period, Houston Superior Painting LLC will, at its sole discretion, repair or repaint the affected area at no charge to the homeowner. This warranty does not cover damage caused by acts of nature, normal wear and tear, improper maintenance, or alterations made by parties other than Houston Superior Painting LLC."
                   </p>
                 </div>
+                <p className="text-sm text-muted-foreground mt-4">
+                  This is sample language for reference. The warranty terms in your signed estimate and project documents control.
+                  For insurance documentation, see <Link href="/insurance-and-warranty" className="underline">insurance and warranty</Link>.
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -232,7 +242,7 @@ export default function WarrantyPage() {
               Get a free estimate and see why Houston homeowners choose our 5-year warranty protection.
             </p>
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">
+              <Link href="/painting-estimate-houston">
                 Get Free Estimate
               </Link>
             </Button>

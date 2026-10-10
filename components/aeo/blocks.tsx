@@ -9,6 +9,7 @@ import {
   BUSINESS,
   PHONE_HREF,
   CORE_SERVICES,
+  PRICING_DISCLAIMER,
   officeAddressLine,
   officeMapsUrl,
   type Office,
@@ -122,6 +123,7 @@ export function PriceTable({ head, rows, note }: { head: string[]; rows: ReactNo
         </table>
       </div>
       {note && <p className="mt-3 text-sm text-muted-foreground">{note}</p>}
+      <p className="mt-2 text-sm text-muted-foreground">{PRICING_DISCLAIMER}</p>
     </div>
   )
 }
@@ -200,7 +202,7 @@ export function AuthorByline({ updated = UPDATED_LABEL, extra }: { updated?: str
   return (
     <p className="container mx-auto px-4 max-w-4xl mb-14 text-sm text-muted-foreground">
       By{" "}
-      <Link href="/about" rel="author" className="font-medium text-foreground hover:text-primary">
+      <Link href="/about#juan-serra" rel="author" className="font-medium text-foreground hover:text-primary">
         {BUSINESS.founder.name}
       </Link>
       , owner, {BUSINESS.name}. Updated {updated}.{extra ? ` ${extra}` : ""}

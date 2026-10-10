@@ -1,3 +1,4 @@
+import { TrustChecklist } from "@/components/trust-checklist"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -638,6 +639,10 @@ export default function PaintingEstimatePage() {
             </div>
           </div>
         </section>
+
+        <div className="pt-14">
+          <TrustChecklist />
+        </div>
 
         {/* ── Closing CTA ────────────────────────────────────────── */}
         <section className="bg-primary">

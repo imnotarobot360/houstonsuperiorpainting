@@ -52,9 +52,13 @@ Bellaire stucco, Heights wallpaper and Cypress wood-rot case studies use images 
 (flagged `photosNeedReview`; not used as local proof). Real job photos, or unpublish? River Oaks photo shows the
 house number — crop/blur approval.
 
-### 10. Testimonials
-Robert H. (River Oaks) and Daniel & Priya M. (West University) quotes in `lib/projects.ts` — written permission?
-(Catherine R. confirmed real 2026-10-01.) No testimonials appear on city pages until matched to real reviews.
+### 10. Testimonials — DECIDED 2026-10-10
+Juan kept Catherine R. (confirmed real) and removed Robert H. and Daniel & Priya M. (not confirmed). Quotes now live in
+`data/reviews.ts`; only `publish: true` entries render. Still needed: Catherine R.'s Google review URL and date.
+
+### 14. Warranty terms
+Is the warranty transferable? ("transferable" was removed from /warranty and the warranty blog on 2026-10-10 until the
+written terms confirm it.) Do the covered / not-covered lists on /warranty match the real warranty document?
 
 ### 11. Prices still needed for content
 Drywall repair (patch / water damage / texture match), wallpaper removal + skim coat, and cabinet timeline/cure

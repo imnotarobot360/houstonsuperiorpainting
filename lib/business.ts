@@ -395,6 +395,10 @@ export const CORE_SERVICES = [
 ] as const
 
 /** One set of 2026 Houston price ranges. Every page reads from here so no two pages disagree. Review quarterly. */
+/** Shown under every price table (owner brief, 2026-10-10). */
+export const PRICING_DISCLAIMER =
+  "Pricing is provided for general planning only and is not a final quote. Final pricing depends on paintable surface area, preparation, repairs, ceiling height, trim, doors, number of colors, paint products, access and project conditions. Houston Superior Painting provides a written estimate for the final scope and price."
+
 export const PRICES_2026 = {
   interiorPerSqFt: "$2.50–$4.50",
   exteriorPerSqFt: "$1.50–$4",

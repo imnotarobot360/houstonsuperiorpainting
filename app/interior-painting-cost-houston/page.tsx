@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import FAQ from "@/components/faq"
 import { EstimateCalculator } from "@/components/estimate-calculator"
 import { Phone, MessageSquare, ChevronRight, CheckCircle2 } from "lucide-react"
-import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, PRICES_2026, PRICING_DISCLAIMER, SMS_HREF } from "@/lib/business"
 import { AuthorByline, articleNode, ESTIMATE_PATH } from "@/components/aeo/blocks"
 
 export const metadata: Metadata = {
@@ -83,6 +83,7 @@ export default function InteriorPaintingCostHouston() {
             </table>
           </div>
           <p className="text-sm text-muted-foreground mb-4">Prices reflect 2026 Houston market rates with premium Sherwin-Williams or Benjamin Moore paint. All prices include two coats, preparation, and cleanup.</p>
+          <p className="text-sm text-muted-foreground mb-4">{PRICING_DISCLAIMER}</p>
           <p className="text-foreground/90 mb-8 leading-relaxed">These numbers match our <Link href="/houston-painting-cost-guide" className="font-medium text-primary underline">Houston painting cost guide</Link>, which also covers exterior and cabinet pricing. See what the work itself involves on our <Link href="/interior-painting-houston-tx" className="font-medium text-primary underline">interior painting in Houston</Link> page. We quote the same ranges for <Link href="/painters-katy-tx" className="font-medium text-primary underline">Katy painters</Link>, <Link href="/painters-cypress-tx" className="font-medium text-primary underline">Cypress painters</Link>, and <Link href="/painters-sugar-land-tx" className="font-medium text-primary underline">Sugar Land painters</Link> jobs.</p>
 
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Factors That Affect Interior Painting Cost</h2>
