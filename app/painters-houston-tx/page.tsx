@@ -1,3 +1,4 @@
+import { OfficeQuotes } from "@/components/office-reviews"
 import { TrustChecklist } from "@/components/trust-checklist"
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
@@ -293,6 +294,8 @@ export default function PaintersHoustonTX() {
             </div>
           </Section>
         )}
+
+        <OfficeQuotes pageSlug="painters-houston-tx" />
 
         <FAQ items={FAQS} title="Frequently asked questions" variant="compact" />
 

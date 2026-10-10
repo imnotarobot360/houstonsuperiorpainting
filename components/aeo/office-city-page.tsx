@@ -1,4 +1,4 @@
-import { OfficeReviewBadge } from "@/components/office-reviews"
+import { OfficeReviewBadge, OfficeQuotes } from "@/components/office-reviews"
 // Shared template for the office city pages (Cypress, Katy, Sugar Land,
 // Magnolia). The layout is shared; every paragraph is supplied by the page so
 // no two office pages repeat the same text (Juan's brief, 2026-10-09). NAP,
@@ -225,6 +225,8 @@ export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
             </div>
           </Section>
         )}
+
+        <OfficeQuotes pageSlug={slug} />
 
         <FAQ items={data.faqs} title="Frequently asked questions" />
 

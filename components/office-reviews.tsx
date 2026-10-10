@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Star } from "lucide-react"
 import { BUSINESS } from "@/lib/business"
 import { REVIEW_PROFILES, type ReviewProfile } from "@/data/review-profiles"
+import { PUBLISHED_REVIEWS } from "@/data/reviews"
 
 // Location-specific Google review figures (owner, 2026-10-10). Each office shows
 // its own rating and count from its own Google Business Profile, linked to that
@@ -76,6 +77,32 @@ export function ReviewsLink({ className = "" }: { className?: string }) {
       <Star className="h-4 w-4 fill-current" aria-hidden="true" />
       <span>Google reviews by office</span>
     </Link>
+  )
+}
+
+/** Published quotes from this office's own Google profile; renders nothing when there are none. */
+export function OfficeQuotes({ pageSlug }: { pageSlug: string }) {
+  const p = profileForPage(pageSlug)
+  if (!p) return null
+  const quotes = PUBLISHED_REVIEWS.filter((r) => r.sourceUrl === p.url)
+  if (quotes.length === 0) return null
+  return (
+    <section className="container mx-auto px-4 max-w-4xl mb-14">
+      <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">What {p.city} customers say</h2>
+      <div className="grid gap-6 md:grid-cols-2">
+        {quotes.map((r) => (
+          <figure key={r.name} className="rounded-xl border border-border bg-card p-6">
+            <blockquote className="text-lg leading-relaxed text-foreground">&ldquo;{r.excerpt}&rdquo;</blockquote>
+            <figcaption className="mt-4 text-sm text-muted-foreground">
+              <span className="font-semibold text-foreground">{r.name}</span>, {r.area} ·{" "}
+              <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-primary underline">
+                Read on Google
+              </a>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
   )
 }
 
