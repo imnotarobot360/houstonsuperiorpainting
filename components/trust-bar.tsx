@@ -5,7 +5,7 @@ import { BUSINESS } from "@/lib/business"
 
 /**
  * `hideRating`: pass on every city page except /painters-houston-tx. The
- * 4.9 / 200+ figure belongs to the Houston Google Business Profile, so other
+ * 4.9 / 170+ figure is the combined total across all five Google profiles, so other
  * city pages show a "See reviews on Google" link instead.
  */
 export function TrustBar({ hideRating = false }: { hideRating?: boolean } = {}) {

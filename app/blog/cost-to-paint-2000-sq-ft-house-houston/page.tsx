@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
-import { PRICES_2026 } from "@/lib/business"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 const URL = "https://houstonsuperiorpainting.com/blog/cost-to-paint-2000-sq-ft-house-houston"
 
@@ -362,7 +362,7 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
           <strong>500+ projects completed</strong> across Greater Houston since 2019
         </li>
         <li>
-          <strong>4.9-star rating from 200+ Google reviews</strong>
+          <strong>{BUSINESS.trust.googleRating}-star rating from {BUSINESS.trust.reviewCount}+ Google reviews across our offices</strong>
         </li>
       </ul>
       <p>

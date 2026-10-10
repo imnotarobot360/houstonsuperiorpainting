@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
-import { PRICES_2026 } from "@/lib/business"
+import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "House Painting Cost in Houston | 2026 Price Guide",
@@ -389,7 +389,7 @@ export default function HousePaintingCostHoustonPage() {
         <li><strong>Premium materials:</strong> Sherwin-Williams and Benjamin Moore products</li>
         <li><strong>5-year warranty:</strong> We stand behind our work</li>
         <li><strong>Clean, professional crews:</strong> We respect your home and property</li>
-        <li><strong>4.9-star Google rating:</strong> 200+ reviews from satisfied customers</li>
+        <li><strong>{BUSINESS.trust.googleRating}-star Google rating:</strong> {BUSINESS.trust.reviewCount}+ reviews across our offices</li>
       </ul>
 
       <p>

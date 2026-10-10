@@ -1,3 +1,4 @@
+import { BUSINESS } from "@/lib/business";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 // app/soft-washing-houston-tx/page.tsx
@@ -212,7 +213,7 @@ export default function SoftWashingHoustonPage() {
               <div>
                 <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 text-sm font-medium px-3 py-1.5 rounded-full mb-5">
                   <span aria-hidden>★★★★★</span>
-                  <span>Rated 4.9/5 by 200+ Houston Homeowners</span>
+                  <span>Rated {BUSINESS.trust.googleRating}/5 across {BUSINESS.trust.reviewCount}+ Google reviews</span>
                 </div>
                 <h1 className="hero-h1 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-balance">
                   Houston Soft Washing Services

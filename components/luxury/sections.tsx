@@ -246,7 +246,7 @@ export function LuxuryTestimonials() {
               ))}
             </span>
             <span className="font-manrope text-sm text-graphite">
-              {BUSINESS.trust.googleRating} on Google · {BUSINESS.trust.reviewCount}+ reviews
+              {BUSINESS.trust.googleRating} on Google · {BUSINESS.trust.reviewCount}+ reviews across our five offices
             </span>
           </div>
         </Reveal>

@@ -174,6 +174,8 @@ if (/15 years on delamination|Garage Floor Epoxy:/i.test(warrantyText)) fail("/w
 if (!pages.has("/insurance-and-warranty")) fail("/insurance-and-warranty not in sitemap")
 if (!/not a final quote/.test(visible(pages.get("/houston-painting-cost-guide")?.text || ""))) fail("cost guide missing the pricing disclaimer")
 for (const [p, r] of pages) if (/coi\.pdf|certificate-of-insurance\.pdf/i.test(r.text)) fail(`${p} links a public certificate of insurance`)
+// 200+ was the combined review count before Google removed reviews (owner, 2026-10-10).
+for (const [p, r] of pages) if (/200\+ (google )?reviews|200\+ houston homeowners|200\+ five-star|\(200\+ reviews\)/i.test(visible(r.text))) fail(`${p} still shows the old 200+ review count`)
 console.log("trust rules checked")
 
 console.log(failures.length ? `\nFAILED (${failures.length}):\n- ${failures.join("\n- ")}` : "\nALL CHECKS PASSED")

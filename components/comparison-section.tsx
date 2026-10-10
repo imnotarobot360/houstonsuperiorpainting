@@ -8,7 +8,7 @@ const rows = [
   },
   {
     feature: "Crew",
-    us: "Background-checked, in-house W-2 employees",
+    us: "In-house crew",
     them: "Rotating day-labor subcontractors",
   },
   {

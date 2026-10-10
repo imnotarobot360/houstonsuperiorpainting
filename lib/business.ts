@@ -201,7 +201,10 @@ export const BUSINESS = {
   // ─── Trust signals ─────────────────────────────────────
   trust: {
     googleRating: 4.9,
-    reviewCount: 200,
+    // Combined across the 5 Google Business Profiles, checked on Google 2026-10-10:
+    // Katy 130 (4.9), Houston 25, Magnolia 11, Cypress 3, Sugar Land 2 (all 5.0) = 171.
+    // Rendered as "170+". Re-check monthly; see data/review-profiles.ts.
+    reviewCount: 170,
     projectsCompleted: 500,
     warrantyYears: 5,
     yearsInBusiness: 6,   // Founded 2019; calc programatically if preferred
@@ -246,8 +249,9 @@ export const BUSINESS = {
 
   // ─── Social / SameAs (for Organization schema) ─────────
   social: {
-    googleMaps:
-      "https://www.google.com/maps/place/Houston+Superior+Painting../@29.7143308,-95.4349558,17z/data=!4m8!3m7!1s0x1c94ce195628f7bf:0xcc8b6e63c1c05fe7!8m2!3d29.7143308!4d-95.4349558!9m1!1b1!16s%2Fg%2F11y71l36d3",
+    // The listing this pointed to (place 0x1c94ce195628f7bf) no longer exists on Google
+    // (checked 2026-10-10). Now the Katy profile, which holds most of the reviews.
+    googleMaps: "https://maps.app.goo.gl/zcUY9dT1KYdoPmiy6",
     facebook: "https://www.facebook.com/houstonsuperiorpainting",
     instagram: "https://www.instagram.com/houstonsuperiorpainting",
     // Yelp removed 2026-10-07: the listing could not be confirmed (yelp.com

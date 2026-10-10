@@ -1,3 +1,4 @@
+import { BUSINESS } from "@/lib/business"
 import type { Metadata } from 'next'
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -212,11 +213,11 @@ export default function WallpaperRemovalHoustonTX() {
               </div>
               <div className="flex items-center gap-2">
                 <Star className="h-5 w-5 fill-accent text-accent" />
-                <span className="font-medium">4.9 Rating (200+ Reviews)</span>
+                <span className="font-medium">{BUSINESS.trust.googleRating} Rating ({BUSINESS.trust.reviewCount}+ Google Reviews)</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-accent" />
-                <span className="font-medium">Background-Checked Crew</span>
+                <span className="font-medium">In-House Crew</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-accent" />

@@ -259,8 +259,8 @@ export default function PaintersInHoustonTX() {
             {[
               { title: "Climate Expertise", desc: "We live and work in Houston. We know which products perform in 100-degree heat and 80% humidity. National franchises use one-size-fits-all approaches that fail here." },
               { title: "Accountability", desc: "Owner Juan Serra reviews the prep scope on every estimate. If something is not right, you call the owner directly, not a call center." },
-              { title: "Background-Checked Team", desc: "Every crew member is background-checked, drug-tested, and trained in our 8-step process. Your home and family are safe with our team." },
-              { title: "200+ Five-Star Reviews", desc: "Real Google reviews from real Houston homeowners. 4.9/5 average rating with detailed reviews from Katy, Cypress, Sugar Land, and The Woodlands clients." },
+              { title: "In-House Team", desc: "Every project is run by our own crew, trained in our 8-step process, with one crew lead from start to final walkthrough." },
+              { title: `${BUSINESS.trust.reviewCount}+ Google Reviews`, desc: `Real Google reviews across our offices, ${BUSINESS.trust.googleRating}/5 average, with detailed reviews from Katy, Cypress, Sugar Land and Houston clients.` },
               { title: "Honest, Transparent Pricing", desc: "Our itemized estimates break down every cost. No surprises, no hidden fees. Standard deposit required upon acceptance to secure your date." },
               { title: "Premium Products Only", desc: "We never use contractor-grade paint. Every project uses Sherwin-Williams or Benjamin Moore top-tier lines rated for Houston conditions." },
             ].map((item) => (

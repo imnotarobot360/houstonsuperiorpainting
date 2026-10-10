@@ -20,7 +20,7 @@ export const EPOXY = {
   phoneE164: BUSINESS.phoneE164,
   email: BUSINESS.email,
   rating: 4.9,
-  reviewCount: 200,
+  reviewCount: 170,
   warrantyYears: 15,
   foundedYear: 2019,
 
