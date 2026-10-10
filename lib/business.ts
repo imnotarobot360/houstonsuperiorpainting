@@ -62,7 +62,7 @@ export const BUSINESS = {
     zip: "77429",
     country: "US",
     latitude: 29.9745,
-    longitude: -95.6445,
+    longitude: -95.6444,
   },
 
   // ─── All Office Locations (for multi-location schema) ──
@@ -75,43 +75,40 @@ export const BUSINESS = {
       slug: "houston-bissonnet",
       /** The city page this office's Google Business Profile points to. */
       pageSlug: "painters-houston-tx",
-      // TODO(gbp): replace with this office's GBP "Share → Copy link" URL.
-      // Until then a Maps search for the exact address is used for hasMap.
-      mapsUrl: null as string | null,
+      // GBP "Share" link, supplied by the owner 2026-10-10.
+      mapsUrl: "https://maps.app.goo.gl/fdVmNamNHyNZ3gBD8" as string | null,
       label: "Houston Office",
       street: "2617 Bissonnet St #443",
       city: "Houston",
       state: "TX",
       zip: "77005",
       country: "US",
-      latitude: 29.7195,
-      longitude: -95.4254,
+      latitude: 29.7253,
+      longitude: -95.4196,
       areaServed: ["Houston", "Bellaire", "West University", "Memorial", "The Heights"],
     },
     {
       slug: "katy-fm1463",
       /** The city page this office's Google Business Profile points to. */
       pageSlug: "painters-katy-tx",
-      // TODO(gbp): replace with this office's GBP "Share → Copy link" URL.
-      // Until then a Maps search for the exact address is used for hasMap.
-      mapsUrl: null as string | null,
+      // GBP "Share" link, supplied by the owner 2026-10-10.
+      mapsUrl: "https://maps.app.goo.gl/zcUY9dT1KYdoPmiy6" as string | null,
       label: "Katy Office",
       street: "3230 FM 1463 APT 3201",
       city: "Katy",
       state: "TX",
       zip: "77494",
       country: "US",
-      latitude: 29.7474,
-      longitude: -95.8244,
+      latitude: 29.7431,
+      longitude: -95.8534,
       areaServed: ["Katy", "Fulshear", "Richmond", "Rosenberg", "Cinco Ranch"],
     },
     {
       slug: "cypress-huffmeister",
       /** The city page this office's Google Business Profile points to. */
       pageSlug: "painters-cypress-tx",
-      // TODO(gbp): replace with this office's GBP "Share → Copy link" URL.
-      // Until then a Maps search for the exact address is used for hasMap.
-      mapsUrl: null as string | null,
+      // GBP "Share" link, supplied by the owner 2026-10-10.
+      mapsUrl: "https://maps.app.goo.gl/G2cRQy8Cth7UM6d6A" as string | null,
       label: "Cypress Office (Headquarters)",
       street: "14150 Huffmeister Rd, Suite 410",
       city: "Cypress",
@@ -120,7 +117,7 @@ export const BUSINESS = {
       country: "US",
       // Same physical office as primaryAddress — keep these two in sync.
       latitude: 29.9745,
-      longitude: -95.6445,
+      longitude: -95.6444,
       areaServed: ["Cypress", "Tomball", "Spring", "Champions Forest", "The Woodlands"],
       isHeadquarters: true,
     },
@@ -128,42 +125,34 @@ export const BUSINESS = {
       slug: "sugar-land-university",
       /** The city page this office's Google Business Profile points to. */
       pageSlug: "painters-sugar-land-tx",
-      // TODO(gbp): replace with this office's GBP "Share → Copy link" URL.
-      // Until then a Maps search for the exact address is used for hasMap.
-      mapsUrl: null as string | null,
+      // GBP "Share" link, supplied by the owner 2026-10-10.
+      mapsUrl: "https://maps.app.goo.gl/kda3QDeyq89B4u9R9" as string | null,
       label: "Sugar Land Office",
       street: "18722 University Blvd, Suite 254, 2nd Floor",
       city: "Sugar Land",
       state: "TX",
       zip: "77479",
       country: "US",
-      // TODO(geo): fill in from the Google Business Profile map pin for this
-      // office. Left null rather than guessed — a lat/long that disagrees with
-      // the GBP pin weakens local ranking (see primaryAddress note above), so a
-      // wrong number here would be worse than an absent one. Consumers must
-      // null-check before emitting a GeoCoordinates block.
-      latitude: null,
-      longitude: null,
+      // Map pin from this office's Google Business Profile (2026-10-10).
+      latitude: 29.5469,
+      longitude: -95.5862,
       areaServed: ["Sugar Land", "Missouri City", "Stafford", "First Colony", "Riverstone", "Sienna"],
     },
     {
       slug: "magnolia-cottontop",
       /** The city page this office's Google Business Profile points to. */
       pageSlug: "painters-magnolia-tx",
-      // TODO(gbp): replace with this office's GBP "Share → Copy link" URL.
-      // Until then a Maps search for the exact address is used for hasMap.
-      mapsUrl: null as string | null,
+      // GBP "Share" link, supplied by the owner 2026-10-10.
+      mapsUrl: "https://maps.app.goo.gl/WXxysgBJ6CWMrjg18" as string | null,
       label: "Magnolia Office",
       street: "14512 Cottontop Mtn",
       city: "Magnolia",
       state: "TX",
       zip: "77354",
       country: "US",
-      // TODO(geo): same as Sugar Land — no verified pin available. This office
-      // was already live on /contact but had never been added here, so no
-      // coordinates existed for it anywhere in the codebase to copy from.
-      latitude: null,
-      longitude: null,
+      // Map pin from this office's Google Business Profile (2026-10-10).
+      latitude: 30.2356,
+      longitude: -95.7087,
       areaServed: ["Magnolia", "Pinehurst", "Montgomery", "Tomball", "The Woodlands"],
     },
   ],
@@ -403,7 +392,7 @@ export const PRICES_2026 = {
   interiorPerSqFt: "$2.50–$4.50",
   exteriorPerSqFt: "$1.50–$4",
   singleRoom: "$300–$800",
-  fullInterior2500: "$4,000–$8,000",
+  fullInterior2500: "$6,250–$11,250",
   exterior2500TwoStory: "$5,500–$9,000",
   cabinetsPerKitchen: "$3,000–$6,500",
   cabinetsAverage: "$3,500–$5,500",
@@ -413,11 +402,11 @@ export const PRICES_2026 = {
   exterior2000OneStory: "$3,500–$5,500",
   exterior2000TwoStory: "$4,500–$7,500",
   exterior2000: "$3,500–$7,500",
-  fullInterior2000: "$3,500–$7,000",
-  wholeHome2000: "$7,000–$14,500",
+  fullInterior2000: "$5,000–$9,000",
+  wholeHome2000: "$8,500–$16,500",
   // Remaining cost guide table rows. The instant-estimate calculator (lib/estimate-pricing.ts) is built from these.
-  fullInterior1500: "$3,000–$5,500",
-  fullInterior4000: "$7,000–$14,000",
+  fullInterior1500: "$3,750–$6,750",
+  fullInterior4000: "$10,000–$18,000",
   exterior1500OneStory: "$2,500–$4,500",
   exterior1500TwoStory: "$3,500–$6,000",
   exterior2500OneStory: "$4,000–$7,000",

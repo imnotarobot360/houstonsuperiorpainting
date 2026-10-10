@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: "How much does it cost to paint a room in Houston?", a: `A single room (12x14) costs ${PRICES_2026.singleRoom} depending on ceiling height, condition, and trim work. This includes walls, ceiling, and trim with two coats of premium paint.` },
-  { q: "How much does a whole-house interior paint job cost in Houston?", a: `A full interior repaint for a 2,000 sq ft Houston home costs ${PRICES_2026.fullInterior2000} and a 2,500 sq ft home costs ${PRICES_2026.fullInterior2500}. A 3,000 sq ft home runs $5,500-$10,000 and 4,000+ sq ft homes run ${PRICES_2026.fullInterior4000}. These prices include all walls, ceilings, trim, and doors.` },
+  { q: "How much does a whole-house interior paint job cost in Houston?", a: `A full interior repaint for a 2,000 sq ft Houston home costs ${PRICES_2026.fullInterior2000} and a 2,500 sq ft home costs ${PRICES_2026.fullInterior2500}. A 3,000 sq ft home runs $7,500–$13,500 and 4,000+ sq ft homes run ${PRICES_2026.fullInterior4000}. These prices include all walls, ceilings, trim, and doors.` },
   { q: "Why do interior painting prices vary so much?", a: "Key factors: ceiling height (standard 8ft vs 10-12ft vaulted), surface condition (new drywall vs heavily patched), number of colors, accent walls, trim complexity, furniture moving, and paint product choice." },
   { q: "Is it cheaper to paint yourself in Houston?", a: "DIY saves labor (50-60% of total cost) but takes 3-5x longer, produces inconsistent results, and voids any warranty. Most DIY painters underestimate prep time and material waste. Professional results increase home value." },
   { q: "Does paint quality affect interior painting cost?", a: "Yes. Premium paint (Sherwin-Williams Emerald, Benjamin Moore Aura) adds $0.50-$1.00/sq ft vs builder-grade. But premium paint covers better, lasts 2-3x longer, and is more washable. We include premium paint in all quotes." },
@@ -70,7 +70,7 @@ export default function InteriorPaintingCostHouston() {
                   ["Full Interior – 1,500 sq ft", PRICES_2026.fullInterior1500, "$4,000"],
                   ["Full Interior – 2,000 sq ft", PRICES_2026.fullInterior2000, "$5,000"],
                   ["Full Interior – 2,500 sq ft", PRICES_2026.fullInterior2500, "$6,000"],
-                  ["Full Interior – 3,000 sq ft", "$5,500–$10,000", "$7,500"],
+                  ["Full Interior – 3,000 sq ft", "$7,500–$13,500", "$7,500"],
                   ["Full Interior – 4,000+ sq ft", PRICES_2026.fullInterior4000, "$10,000"],
                   ["Trim & Baseboards (whole home)", PRICES_2026.trimWholeHome, "$2,000"],
                   ["Ceiling (whole home)", PRICES_2026.ceilingsWholeHome, "$2,500"],

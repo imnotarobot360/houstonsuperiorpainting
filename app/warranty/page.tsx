@@ -125,7 +125,7 @@ export default function WarrantyPage() {
               <CardContent className="p-8 prose prose-zinc max-w-none">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Coverage Period</h3>
                 <p className="text-muted-foreground mb-6">
-                  Our warranty begins on the date of project completion and extends for five (5) full years.
+                  Our warranty begins on the date of project completion and extends for five (5) full years. The warranty is transferable to new homeowners if the property is sold during the coverage period.
                 </p>
 
                 <h3 className="text-xl font-semibold text-foreground mb-4">Warranty Coverage by Service</h3>
@@ -158,7 +158,7 @@ export default function WarrantyPage() {
                 <h3 className="text-xl font-semibold text-foreground mb-4">Sample Warranty Language</h3>
                 <div className="bg-muted/50 p-6 rounded-lg border border-border text-sm text-muted-foreground italic">
                   <p>
-                    "Houston Superior Painting LLC warrants all labor and materials provided under this contract against defects in workmanship for a period of five (5) years from the date of substantial completion. Should any defect covered by this warranty appear during the warranty period, Houston Superior Painting LLC will, at its sole discretion, repair or repaint the affected area at no charge to the homeowner. This warranty does not cover damage caused by acts of nature, normal wear and tear, improper maintenance, or alterations made by parties other than Houston Superior Painting LLC."
+                    "Houston Superior Painting LLC warrants all labor and materials provided under this contract against defects in workmanship for a period of five (5) years from the date of substantial completion. Should any defect covered by this warranty appear during the warranty period, Houston Superior Painting LLC will, at its sole discretion, repair or repaint the affected area at no charge to the homeowner. This warranty is transferable to subsequent owners of the property. This warranty does not cover damage caused by acts of nature, normal wear and tear, improper maintenance, or alterations made by parties other than Houston Superior Painting LLC."
                   </p>
                 </div>
                 <p className="text-sm text-muted-foreground mt-4">

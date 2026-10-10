@@ -273,8 +273,9 @@ export default function PaintWarrantyTexasPage() {
         </li>
       </ul>
       <p>
-        The complete warranty terms are included in your approved estimate and project documents, and those documents
-        control. Learn more on our{" "}
+        The warranty is transferable: if you sell your home within the 5-year period, the remaining coverage passes to the
+        new owner. The complete warranty terms are included in your approved estimate and project documents, and those
+        documents control. Learn more on our{" "}
         <Link href="/warranty">warranty page</Link>.
       </p>
 

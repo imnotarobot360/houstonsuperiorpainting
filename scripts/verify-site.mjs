@@ -171,7 +171,6 @@ const homeHtml = pages.get("/")?.text || ""
 for (const name of ["Robert H.", "Priya M."]) if (homeHtml.includes(name)) fail(`homepage shows unconfirmed testimonial ${name}`)
 const warrantyText = visible(pages.get("/warranty")?.text || "")
 if (/15 years on delamination|Garage Floor Epoxy:/i.test(warrantyText)) fail("/warranty still lists the epoxy 15-year warranty")
-for (const [p, r] of pages) if (/warranty (is )?transferable|transfers to the new owner/i.test(visible(r.text))) fail(`${p} claims a transferable warranty`)
 if (!pages.has("/insurance-and-warranty")) fail("/insurance-and-warranty not in sitemap")
 if (!/not a final quote/.test(visible(pages.get("/houston-painting-cost-guide")?.text || ""))) fail("cost guide missing the pricing disclaimer")
 for (const [p, r] of pages) if (/coi\.pdf|certificate-of-insurance\.pdf/i.test(r.text)) fail(`${p} links a public certificate of insurance`)

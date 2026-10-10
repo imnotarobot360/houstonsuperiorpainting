@@ -57,8 +57,8 @@ Juan kept Catherine R. (confirmed real) and removed Robert H. and Daniel & Priya
 `data/reviews.ts`; only `publish: true` entries render. Still needed: Catherine R.'s Google review URL and date.
 
 ### 14. Warranty terms
-Is the warranty transferable? ("transferable" was removed from /warranty and the warranty blog on 2026-10-10 until the
-written terms confirm it.) Do the covered / not-covered lists on /warranty match the real warranty document?
+TRANSFERABLE — confirmed by Juan 2026-10-10 (wording restored on /warranty, the warranty blog and llms.txt).
+Still open: do the covered / not-covered lists on /warranty match the real warranty document?
 
 ### 11. Prices still needed for content
 Drywall repair (patch / water damage / texture match), wallpaper removal + skim coat, and cabinet timeline/cure
