@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "How long does cabinet refinishing take?",
-    a: "Most kitchens take three to five days. Large kitchens or oak cabinets that need grain filling can take longer, because each coat of enamel needs time to cure in Houston humidity.",
+    a: "Most kitchens take three to five days. Large kitchens or oak cabinets that need grain filling can take longer, because each coat of enamel needs time to cure in Houston humidity. After the cabinets are back in use, the finish takes 7–10 days to fully cure.",
   },
   {
     q: "Do you use Sherwin-Williams or Benjamin Moore?",

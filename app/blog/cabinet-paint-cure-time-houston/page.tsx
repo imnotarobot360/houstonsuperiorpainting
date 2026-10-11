@@ -6,11 +6,12 @@ import { BUSINESS } from "@/lib/business"
 // Figures from the manufacturers (checked 2026-10-11):
 // - Sherwin-Williams Emerald Urethane Trim Enamel PDS: touch 1 h, recoat 4 h @ 77°F / 50% RH; no full-cure figure.
 // - Benjamin Moore Advance product pages: dry 4–6 h, recoat 16 h, return to service 7 days, apply 50–90°F.
+// Owner (2026-10-11): kitchen cabinets take 7–10 days to fully cure with both brands.
 // Company-specific day counts (days on site, when doors go back on) are NOT stated: the estimate sets them.
 
 const D: GuideArticleData = {
   path: "/blog/cabinet-paint-cure-time-houston",
-  title: "How Long Do Painted Cabinets Take to Cure? | Houston Guide",
+  title: "How Long Do Painted Cabinets Take to Cure? (7–10 Days) | Houston",
   description:
     "Dry is not cured. Dry, recoat and return-to-service times for Benjamin Moore Advance and Sherwin-Williams Emerald Urethane, why Houston humidity slows them, and how to care for new cabinets.",
   h1: "How long do painted cabinets take to cure?",
@@ -19,10 +20,10 @@ const D: GuideArticleData = {
   updated: "2026-10-11",
   quickAnswer: (
     <>
-      Painted cabinets are dry to the touch within hours, but the finish keeps hardening for days. Benjamin Moore lists
-      Advance as dry in 4–6 hours, ready to recoat in 16 hours and returned to service in 7 days. Sherwin-Williams lists
-      Emerald Urethane Trim Enamel as dry to the touch in 1 hour and ready to recoat in 4 hours at 77°F and 50% humidity.
-      Houston humidity and thick coats slow both, so treat the first week gently.
+      Painted kitchen cabinets take 7–10 days to fully cure, whether we use Sherwin-Williams or Benjamin Moore. The
+      finish is dry to the touch within hours (1 hour for Sherwin-Williams Emerald Urethane, 4–6 hours for Benjamin Moore
+      Advance), and you can use the kitchen carefully once the doors are back on, but the paint keeps hardening for 7–10
+      days. Houston humidity pushes it toward the longer end, so treat the cabinets gently during that time.
     </>
   ),
   sections: [
@@ -57,7 +58,8 @@ const D: GuideArticleData = {
                 {[
                   ["Dry to the touch", "4–6 hours", "1 hour"],
                   ["Ready to recoat", "16 hours", "4 hours"],
-                  ["Return to service", "7 days", "Not stated on the data sheet"],
+                  ["Return to service (manufacturer)", "7 days", "Not stated on the data sheet"],
+                  ["Full cure (our experience in Houston)", "7–10 days", "7–10 days"],
                   ["Conditions", "Apply at 50–90°F", "Times at 77°F, 50% humidity"],
                 ].map((r) => (
                   <tr key={r[0]} className="border-t border-border odd:bg-card">
@@ -95,7 +97,7 @@ const D: GuideArticleData = {
       ),
     },
     {
-      title: "How to treat new cabinets in the first week",
+      title: "How to treat new cabinets during the 7–10 day cure",
       body: (
         <Bullets
           items={[
@@ -126,11 +128,11 @@ const D: GuideArticleData = {
   faqs: [
     {
       q: "How long before I can use my kitchen cabinets after painting?",
-      a: "You can usually use them carefully once the final coat is dry to the touch and the doors are back on, but the finish keeps hardening for days. Benjamin Moore lists 7 days to return to service for Advance. Treat the cabinets gently for the first week.",
+      a: "You can use them carefully once the final coat is dry and the doors are back on, but the finish takes 7–10 days to fully cure with either Sherwin-Williams or Benjamin Moore. Treat the cabinets gently during that time.",
     },
     {
       q: "How long does cabinet paint take to fully cure?",
-      a: "It depends on the product and conditions. Benjamin Moore lists Advance at 7 days to return to service. Sherwin-Williams lists drying and recoat times for Emerald Urethane but no full-cure figure on its data sheet. Humidity, cool temperatures and thick coats lengthen curing.",
+      a: "7–10 days for kitchen cabinets, with either Sherwin-Williams Emerald Urethane or Benjamin Moore Advance. Benjamin Moore lists 7 days to return to service for Advance; in Houston humidity we plan for up to 10 days for both brands.",
     },
     {
       q: "Why are my freshly painted cabinet doors sticking?",

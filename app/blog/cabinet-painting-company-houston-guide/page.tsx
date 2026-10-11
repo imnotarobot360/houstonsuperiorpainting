@@ -129,7 +129,7 @@ const D: GuideArticleData = {
     },
     {
       q: "How long before I can use my kitchen?",
-      a: "It depends on the product and the humidity. Ask your painter for the product's dry time and full cure time in writing. Doors can usually go back on before the finish is fully cured, but heavy use should wait.",
+      a: "With the cabinet enamels we use (Sherwin-Williams and Benjamin Moore), the finish takes 7–10 days to fully cure. It depends on the product and the humidity, so ask your painter for the dry time and full cure time in writing. Doors can usually go back on before the finish is fully cured, but heavy use should wait.",
     },
     {
       q: "Is painting cabinets worth it compared with replacing them?",
