@@ -713,6 +713,63 @@ export const PROJECTS: CaseStudy[] = [
       "Photos of a Cypress, TX kitchen with white raised-panel cabinets, a white range hood and a teal island.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-11: "cabinets in the heights" (two
+    // kitchens; Juan confirmed both are in The Heights). Close-up with counter
+    // clutter and low-res duplicates left out. Scope, products, colors unconfirmed.
+    slug: "heights-charcoal-kitchen-cabinets",
+    title: "Charcoal Shaker Kitchen Cabinets in The Heights",
+    neighborhood: "The Heights, Houston",
+    service: "Cabinet Refinishing",
+    serviceSlug: "cabinet-refinishing-houston-tx",
+    summary:
+      "A Heights kitchen with charcoal shaker cabinets, a white waterfall island and a farmhouse sink, photographed after the work.",
+    heroImage: "/images/projects/heights-charcoal-kitchen/01-charcoal-cabinets-waterfall-island.jpg",
+    afterImage: "/images/projects/heights-charcoal-kitchen/01-charcoal-cabinets-waterfall-island.jpg",
+    afterAlt: "Heights kitchen with charcoal shaker upper and lower cabinets, white counters and a white waterfall island",
+    gallery: [
+      {
+        src: "/images/projects/heights-charcoal-kitchen/02-sink-wall-and-range.jpg",
+        alt: "Charcoal shaker cabinets around the farmhouse sink, range and refrigerator",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "The Heights" },
+      { label: "Service", value: "Cabinets" },
+      { label: "Finish", value: "Charcoal" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Charcoal Kitchen Cabinets in The Heights, Houston",
+    metaDescription: "Photos of a Heights, Houston kitchen with charcoal shaker cabinets and a white waterfall island.",
+  },
+  {
+    // Second Heights kitchen (same 2026-10-11 batch). Island photo cropped to remove
+    // a bleach jug; two photos with cleaning supplies on the counter left out.
+    slug: "heights-white-beadboard-kitchen-cabinets",
+    title: "White Beadboard Kitchen Cabinets in The Heights",
+    neighborhood: "The Heights, Houston",
+    service: "Cabinet Refinishing",
+    serviceSlug: "cabinet-refinishing-houston-tx",
+    summary:
+      "A Heights kitchen with white beadboard cabinets, a beadboard island with open shelves and a lattice wine rack, and matching built-ins, photographed after the work.",
+    heroImage: "/images/projects/heights-white-beadboard-kitchen/01-kitchen-and-built-ins.jpg",
+    afterImage: "/images/projects/heights-white-beadboard-kitchen/01-kitchen-and-built-ins.jpg",
+    afterAlt: "Heights kitchen with white beadboard cabinets and black counters, a lattice-end island and white built-in shelves",
+    gallery: [
+      {
+        src: "/images/projects/heights-white-beadboard-kitchen/02-beadboard-island.jpg",
+        alt: "White beadboard island with open end shelves under a black granite top",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "The Heights" },
+      { label: "Service", value: "Cabinets" },
+      { label: "Finish", value: "White" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "White Beadboard Kitchen Cabinets in The Heights, Houston",
+    metaDescription: "Photos of a Heights, Houston kitchen with white beadboard cabinets, a beadboard island and built-ins.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-11: "cabinets in katy". Kitchen photo
     // cropped to remove a ladder; a dining-room photo with a broom on the floor was
     // left out. Finished photos only; scope, products and colors unconfirmed.
