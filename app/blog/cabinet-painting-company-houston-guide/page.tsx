@@ -147,6 +147,7 @@ const D: GuideArticleData = {
     { label: "Houston painting cost guide", href: "/houston-painting-cost-guide" },
     { label: "Why DIY cabinet painting fails", href: "/blog/why-diy-cabinet-painting-fails-houston-tx" },
     { label: "Cabinet refinishing vs replacement", href: "/blog/cabinet-refinishing-vs-replacement-houston" },
+    { label: "How long cabinet paint takes to cure", href: "/blog/cabinet-paint-cure-time-houston" },
     { label: "Insurance and warranty", href: "/insurance-and-warranty" },
   ],
 }

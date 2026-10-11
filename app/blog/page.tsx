@@ -22,6 +22,18 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "cabinet-paint-cure-time-houston",
+    title: "How Long Do Painted Cabinets Take to Cure?",
+    excerpt:
+      "Dry is not cured. Dry, recoat and return-to-service times for the cabinet paints we use, and how to treat new cabinets in Houston humidity.",
+    category: "Cabinet Refinishing",
+    author: "Juan Serra",
+    publishDate: "October 11, 2026",
+    readTime: "5 min read",
+    image: "/images/projects/cypress-two-tone-kitchen/02-kitchen-peninsula-and-island.jpg",
+    featured: false,
+  },
+  {
     slug: "pressure-washing-cost-houston",
     title: "Pressure Washing Cost in Houston (2026)",
     excerpt:
