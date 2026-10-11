@@ -184,7 +184,7 @@ export function GeoServicePageTemplate({
   const quickAnswer =
     `${BUSINESS.name} provides ${service.toLowerCase()} in ${place}, TX, from our Greater Houston crews. ` +
     (pricing ? `Published pricing: ${pricing.range} (${pricing.basis.split(".")[0].toLowerCase()}). ` : "") +
-    `Estimates are free and nothing is due until you approve the written estimate. ` +
+    `Estimates are free. ${"Your written estimate includes the complete scope, price, and payment schedule before you approve the project."} ` +
     `Work is insured (${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp) and backed by a ${warrantyYears}-year workmanship warranty. ` +
     `Request an estimate online or call ${BUSINESS.phone}.`
 
@@ -505,7 +505,7 @@ export function GeoServicePageTemplate({
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Get a Written Estimate</h2>
             <p className="text-lg mb-8 opacity-90">
-              Free on-site estimate. Nothing is due until you approve it. {warrantyYears}-year{" "}
+              Free on-site estimate with clear written payment terms. {warrantyYears}-year{" "}
               {warrantyType.toLowerCase()} warranty.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

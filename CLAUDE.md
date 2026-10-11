@@ -32,7 +32,7 @@ v0 also opens PRs against this repo, so run `git pull` before starting work.
 ## Business rules (do not break)
 - Owner is **Juan Serra**, founded 2019, headquartered in Cypress. Never "JJ Semo". No owner photo on the site, by Juan's choice.
 - Never say "licensed". Texas doesn't license painters. Say "insured: $2M general liability + workers' comp".
-- Payment: badge text is **"No Upfront Payment"**. Policy: free estimate; nothing is due until the customer approves the written estimate; then a down payment; balance after the final walkthrough. Don't state a deposit percentage.
+- Payment (owner, 2026-10-11): never say "No Upfront Payment", "no deposit", "nothing due until you approve", "no money until you approve" or "pay only when completed". Use: "Your written estimate includes the complete scope, price, and payment schedule before you approve the project." Badge: **"Clear Written Payment Terms"**, subtitle "Scope, pricing, and payment terms are provided in writing before project approval." (all in `BUSINESS.paymentPolicy`). Don't publish a deposit percentage or a 40/40/20-style schedule unless approved for that page. `scripts/verify-site.mjs` fails on the old phrases.
 - 5-year workmanship warranty.
 - LocalBusiness schema only on the 5 office pages. No aggregateRating / review-star schema anywhere.
 - Don't use `/locations/*` URLs. They 301 to `/painters-{city}-tx`. Keep the existing URLs.

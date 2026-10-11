@@ -4,14 +4,14 @@ import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "The Woodlands Interior Painting | Houston Superior Painting",
-  description: "Interior painting in The Woodlands, TX: walls, ceilings, trim and doors. Free written estimate, nothing due until you approve. 5-year warranty.",
+  description: "Interior painting in The Woodlands, TX: walls, ceilings, trim and doors. Free written estimate with clear payment terms. 5-year warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-the-woodlands",
   },
   openGraph: {
     images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "The Woodlands Interior Painting | Houston Superior Painting",
-    description: "Interior painting in The Woodlands, TX: walls, ceilings, trim and doors. Free written estimate, nothing due until you approve. 5-year warranty.",
+    description: "Interior painting in The Woodlands, TX: walls, ceilings, trim and doors. Free written estimate with clear payment terms. 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/interior-painting-the-woodlands",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -26,7 +26,7 @@ export default function InteriorPaintingTheWoodlandsPage() {
       zone="The Woodlands"
       zoneSlug="the-woodlands"
       metaTitle={"The Woodlands Interior Painting | Houston Superior Painting"}
-      metaDescription={"Interior painting in The Woodlands, TX: walls, ceilings, trim and doors. Free written estimate, nothing due until you approve. 5-year warranty."}
+      metaDescription={"Interior painting in The Woodlands, TX: walls, ceilings, trim and doors. Free written estimate with clear payment terms. 5-year warranty."}
       h1={"Interior Painters in The Woodlands, TX"}
       heroSubheading={"Interior painting for homes across The Woodlands' villages, from older homes in Grogan's Mill and Panther Creek to newer builds in Creekside Park."}
       introLocal={"The Woodlands' villages span several decades of construction. Homes in the earlier villages, such as Grogan's Mill and Panther Creek, often have years of touch-ups, older oil-based trim and dated colors, while newer homes in Creekside Park and Sterling Ridge tend to have flat builder-grade paint and tall, open rooms. Oil-based trim needs a bonding primer before it will hold water-based paint, and tall rooms need the right equipment; both are planned for in the written estimate."}

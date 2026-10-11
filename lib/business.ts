@@ -220,11 +220,13 @@ export const BUSINESS = {
   // Payment policy confirmed by Juan (2026-09). Never state a deposit
   // percentage — none has been set. Never claim "no deposit" or "pay only
   // after completion": a down payment is collected once the estimate is approved.
+  // Owner, 2026-10-11: never say "no upfront payment", "no deposit" or "nothing due until
+  // approved". Do not publish a specific payment schedule unless approved for that page.
   paymentPolicy: {
-    short: "No Upfront Payment",
-    badgeSubtitle: "Nothing due until you approve your estimate",
+    short: "Clear Written Payment Terms",
+    badgeSubtitle: "Scope, pricing, and payment terms are provided in writing before project approval.",
     sentence:
-      "Estimates are free and we don't collect any money until you approve the written estimate. After you approve, we collect a down payment to schedule the job, and the balance is due after the final walkthrough.",
+      "Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
   },
 
   // ─── Brands / partners ─────────────────────────────────

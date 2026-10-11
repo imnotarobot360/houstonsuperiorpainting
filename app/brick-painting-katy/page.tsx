@@ -37,7 +37,7 @@ export default function BrickPaintingKatyPage() {
         "Breathable masonry primer and paint, so trapped moisture doesn't blister the finish.",
         `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
         "5-year written workmanship warranty.",
-        "No upfront payment: the estimate is free and nothing is due until you approve it in writing."
+        "Free estimate. Your written estimate includes the complete scope, price, and payment schedule before you approve the project."
       ]}
       priceDetails="Brick painting is priced after an on-site look. The amount of brick, how many stories, its condition, mortar repairs and the color change all affect the cost, so we don't publish a range for this work. The estimate is free."
       faqs={[

@@ -294,8 +294,8 @@ export default function BenjaminMooreVsSherwinWilliamsPage() {
       </p>
       <p>
         We&apos;ve completed 500+ projects across Greater Houston and back every job with a{" "}
-        <strong>5-year workmanship warranty</strong>. And there&apos;s <strong>no upfront payment</strong> — you pay
-        nothing until you approve your estimate.
+        <strong>5-year workmanship warranty</strong>. And you get <strong>clear written payment terms</strong>: the scope, price and
+        payment schedule are in writing before you approve your estimate.
       </p>
       <p>
         <Link href="/painting-estimate-houston">Book your free estimate</Link> or call{" "}

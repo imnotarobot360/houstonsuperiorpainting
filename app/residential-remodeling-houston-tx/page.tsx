@@ -109,8 +109,8 @@ const faqs = [
     a: "Yes. We carry $2M general liability and workers' compensation, and the certificate of insurance comes with every estimate.",
   },
   {
-    q: "Do you require a deposit?",
-    a: "Only after you approve the estimate. The estimate is free and nothing is due before you approve it. Once you approve, a down payment schedules the job, and the balance is due after the final walkthrough.",
+    q: "How does payment work?",
+    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
   },
   {
     q: "How do I get an estimate?",
@@ -220,7 +220,7 @@ export default function ResidentialRemodelingHoustonTX() {
               },
               {
                 title: "Written estimate",
-                text: "One estimate with each part of the work on its own line: wall removal, drywall, trim, rot repair, wallpaper, and paint. Nothing is due until you approve it.",
+                text: "One estimate with each part of the work on its own line: wall removal, drywall, trim, rot repair, wallpaper, and paint, with the price and payment schedule in writing before you approve it.",
               },
               {
                 title: "Permits and protection",
@@ -292,7 +292,7 @@ export default function ResidentialRemodelingHoustonTX() {
 
         <CtaBlock title="Get a free remodeling estimate">
           Call {BUSINESS.phone} or <Link href={ESTIMATE_PATH} className="underline">request an estimate online</Link>.
-          We quote every remodel after an on-site visit, nothing is due until you approve, and the work carries a{" "}
+          We quote every remodel after an on-site visit, with the price and payment schedule in writing before you approve, and the work carries a{" "}
           {BUSINESS.trust.warrantyYears}-year workmanship warranty.
         </CtaBlock>
 

@@ -86,8 +86,8 @@ const faqs = [
     a: "Plan on every 5–7 years for stucco, wood siding, and trim with premium paint and proper prep. South- and west-facing walls usually need it first. Repainting before the paint fails costs less than repairing rot and water damage later.",
   },
   {
-    q: "Do you require a deposit?",
-    a: "Only after you approve the estimate. The estimate is free and we collect nothing before you approve it. Once you approve, a down payment schedules the job, and the balance is due after the final walkthrough.",
+    q: "How does payment work?",
+    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
   },
   {
     q: "How do I get an estimate?",

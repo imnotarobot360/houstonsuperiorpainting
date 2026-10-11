@@ -63,8 +63,8 @@ const homeFaqs = [
     a: "Our exterior painting includes: pressure washing, scraping and sanding loose paint, wood rot repair (minor), caulking gaps and cracks, priming bare wood and problem areas, two coats of premium exterior paint, trim and fascia painting, and cleanup. Major repairs are quoted separately. We also offer stucco, brick, and hardie board painting.",
   },
   {
-    q: "Do you require payment upfront?",
-    a: "Not before you approve the estimate. Estimates are free and we don't collect any money until you approve the written estimate. After you approve, we collect a down payment to schedule the job, and the balance is due after the final walkthrough. We accept all major credit cards and checks, and offer financing options for larger projects.",
+    q: "How does payment work?",
+    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project. We accept all major credit cards and checks, and offer financing options for larger projects.",
   },
 ]
 

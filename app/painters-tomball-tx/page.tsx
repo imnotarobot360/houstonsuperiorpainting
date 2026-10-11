@@ -64,7 +64,7 @@ Older wood-sided homes need the most prep. We probe siding, trim, and window sil
 
 Tomball has the same heat, humidity, and heavy rain as the rest of Greater Houston, and wooded lots add shade and mildew. We wash off mildew and chalk and let the surfaces dry fully before painting. Tomball is a short drive from our Cypress headquarters.`}
           whyChooseUs={[
-            "Free on-site estimate with a written scope; nothing is due until you approve it",
+            "Free on-site estimate with the scope, price and payment schedule in writing before you approve",
             "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
             "5-year written workmanship warranty",
             "Sherwin-Williams and Benjamin Moore paints",

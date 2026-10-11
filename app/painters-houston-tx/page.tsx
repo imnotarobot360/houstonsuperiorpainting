@@ -77,7 +77,7 @@ const FAQS = [
   },
   {
     q: "Do I have to pay a deposit before the estimate?",
-    a: "No. The estimate is free and nothing is due until you approve it in writing. After you approve, a down payment schedules the job, and the balance is due after the final walkthrough.",
+    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
   },
 ]
 
@@ -170,8 +170,8 @@ export default function PaintersHoustonTX() {
           Houston Superior Painting paints homes across Houston&apos;s Inner Loop, including the Heights, Memorial,
           Bellaire, West University and River Oaks. Founded in {BUSINESS.founded} by {BUSINESS.founder.name}, we are
           headquartered in Cypress with a Houston office on Bissonnet St. We carry {T.liabilityCoverage} general liability
-          and workers&apos; comp, back the work with a {T.warrantyYears}-year workmanship warranty, and collect nothing
-          until you approve the estimate. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a> or{" "}
+          and workers&apos; comp, back the work with a {T.warrantyYears}-year workmanship warranty, and put the
+          scope, price and payment schedule in writing before you approve. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a> or{" "}
           <Link href={ESTIMATE_PATH}>request a free estimate</Link>.
         </QuickAnswer>
 
@@ -319,7 +319,7 @@ export default function PaintersHoustonTX() {
           <Link href={ESTIMATE_PATH} className="underline">
             request an estimate online
           </Link>
-          . Written and itemized, nothing due until you approve, {T.warrantyYears}-year workmanship warranty.
+          . Written and itemized, with clear payment terms before you approve, {T.warrantyYears}-year workmanship warranty.
         </CtaBlock>
 
         <AuthorByline />

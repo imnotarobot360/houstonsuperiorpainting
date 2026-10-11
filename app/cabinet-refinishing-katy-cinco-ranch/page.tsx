@@ -29,7 +29,7 @@ export default function CabinetRefinishingKatyPage() {
         "Cabinet-grade enamel from Sherwin-Williams or Benjamin Moore.",
         `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
         "5-year written workmanship warranty.",
-        "No upfront payment: the estimate is free and nothing is due until you approve it in writing."
+        "Free estimate. Your written estimate includes the complete scope, price, and payment schedule before you approve the project."
       ]}
       priceDetails="Where your kitchen falls depends on the number of doors and drawers, an island or built-ins, detailed or glass-front doors, and color changes, especially dark wood to white. Your free written estimate itemizes it."
       faqs={[
@@ -55,7 +55,7 @@ export default function CabinetRefinishingKatyPage() {
         },
         {
           question: "When do I pay?",
-          answer: "The estimate is free, and nothing is due until you approve the written estimate. A down payment is collected at that point, and the balance is due after the final walkthrough.",
+          answer: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
         }
       ]}
       testimonials={[

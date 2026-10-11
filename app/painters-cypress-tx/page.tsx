@@ -22,8 +22,8 @@ const DATA: OfficeCityPageData = {
       Cypress is home base. {BUSINESS.founder.name} founded Houston Superior Painting here in {BUSINESS.founded}, and our
       headquarters is at {OFFICE}. Crews leave from here every morning for interior, exterior and cabinet work in
       Bridgeland, Towne Lake, Fairfield and Coles Crossing. Every job is covered by {T.liabilityCoverage} liability
-      insurance and a {T.warrantyYears}-year workmanship warranty, and nothing is due until you approve the written
-      estimate. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
+      insurance and a {T.warrantyYears}-year workmanship warranty, and the scope, price and payment schedule
+      are in writing before you approve. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
     </>
   ),
   neighborhoods: [

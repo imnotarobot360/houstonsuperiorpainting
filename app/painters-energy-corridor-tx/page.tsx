@@ -45,14 +45,14 @@ Many single-family homes here date from the 1970s through the 1990s, so exterior
 
 Parts of the area have flooded in past storms. If your walls have had water damage, the damaged drywall needs to be replaced or repaired and any stains sealed with a stain-blocking primer before paint goes on, or the stains will bleed back through.
 
-For townhomes and condos, exterior work is often controlled by the HOA or property manager, so check what you are allowed to change before scheduling. Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every estimate is free and written, and nothing is due until you approve it.`}
+For townhomes and condos, exterior work is often controlled by the HOA or property manager, so check what you are allowed to change before scheduling. Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Drywall repair and stain-blocking primer before painting water-damaged walls",
             "Exterior prep for older homes: caulk, wood repair and priming",
             "Sherwin-Williams and Benjamin Moore products",
             "Insured: $2M general liability plus workers' comp",
             "5-year written workmanship warranty",
-            "No upfront payment: nothing is due until you approve the written estimate"
+            "Clear written payment terms: scope, price and payment schedule in writing before you approve"
           ]}
           services={[
             {

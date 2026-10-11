@@ -83,7 +83,7 @@ const FAQS = [
   },
   {
     q: "How does payment work on a commercial job?",
-    a: "The estimate is free and nothing is due until you approve it in writing. After approval, a down payment schedules the work, and the balance is due after the final walkthrough.",
+    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
   },
   {
     q: "How much does commercial painting cost in Houston?",
@@ -115,7 +115,7 @@ export default function CommercialPaintingHoustonPage() {
           {BUSINESS.founded}. We repaint offices, retail, restaurants, HOA and multifamily properties, medical offices and
           light industrial space, including after hours and on weekends in occupied buildings. We carry {INSURANCE}, send a
           certificate of insurance before work starts, back the work with a {T.warrantyYears}-year workmanship warranty, and
-          collect nothing until you approve the written estimate. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
+          put the complete scope, price and payment schedule in writing before you approve the project. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
         </QuickAnswer>
 
         <Section title="Who we work with">
@@ -253,7 +253,7 @@ export default function CommercialPaintingHoustonPage() {
                 <strong>In-house crew</strong> run by a crew lead from the first shift to the final walkthrough.
               </>,
               <>
-                <strong>No money up front:</strong> free estimate, nothing due until you approve it in writing.
+                <strong>Clear written payment terms:</strong> free estimate, with the scope, price and payment schedule in writing before you approve.
               </>,
               <>
                 <strong>Five offices:</strong>{" "}
@@ -316,7 +316,7 @@ export default function CommercialPaintingHoustonPage() {
           <Link href={ESTIMATE_PATH} className="underline">
             request an estimate online
           </Link>
-          . Written and itemized, certificate of insurance before the start date, nothing due until you approve.
+          . Written and itemized, certificate of insurance before the start date, payment terms in writing before you approve.
         </CtaBlock>
       </main>
       <Footer />

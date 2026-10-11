@@ -223,8 +223,8 @@ const GROUPS: Group[] = [
     title: "Estimates & payment",
     items: [
       {
-        q: "Do you require a deposit?",
-        a: "Only after you approve the estimate. The estimate is free and we collect nothing before you approve it. Once you approve, a down payment schedules the job, and the balance is due after the final walkthrough.",
+        q: "How does payment work?",
+        a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
       },
       {
         q: "Are painting estimates free?",
@@ -271,7 +271,7 @@ export default function FaqPage() {
         {BUSINESS.name} is an insured Houston painting contractor founded in {BUSINESS.founded} by{" "}
         {BUSINESS.founder.name}, with five offices across Greater Houston. Interior painting costs{" "}
         {P.interiorPerSqFt}/sq ft and exterior painting {P.exteriorPerSqFt}/sq ft in 2026. We carry{" "}
-        {BUSINESS.trust.liabilityCoverage} liability plus workers&apos; comp, collect nothing until you approve the written estimate, and back every job with a{" "}
+        {BUSINESS.trust.liabilityCoverage} liability plus workers&apos; comp, put the scope, price and payment schedule in writing before you approve, and back every job with a{" "}
         {W}-year workmanship warranty. Call {BUSINESS.phone}.
       </QuickAnswer>
 

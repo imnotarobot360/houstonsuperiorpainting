@@ -453,7 +453,7 @@ export default function ExteriorPaintingCostHoustonPage() {
         Houston Superior Painting serves Houston, Katy, Cypress, Sugar Land, The Woodlands, and all surrounding
         communities. Free on-site estimates, typically scheduled within 24–48 hours. Every exterior estimate includes a
         full written prep scope, exact paint products and grade, a written timeline and crew size, a 5-year workmanship
-        warranty, and HOA color guidance at no charge — with no upfront payment required.
+        warranty, and HOA color guidance at no charge — with clear written payment terms before you approve.
       </p>
       <p>
         Call or text <strong>(346) 594-5960</strong> seven days a week, or{" "}

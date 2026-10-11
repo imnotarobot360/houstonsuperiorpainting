@@ -59,7 +59,7 @@ const faqs = [
   {
     question: "Do you charge for estimates?",
     answer:
-      "No. Our estimates are free, and we do not collect any payment until you approve the estimate.",
+      "No. Our estimates are free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
   },
 ]
 
@@ -351,7 +351,7 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
       </p>
       <ul>
         <li>
-          <strong>No upfront payment</strong> — you pay nothing until you approve the estimate
+          <strong>Clear written payment terms</strong>: the scope, price and payment schedule are in writing before you approve
         </li>
         <li>
           <strong>5-year workmanship warranty</strong>

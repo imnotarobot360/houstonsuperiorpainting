@@ -44,7 +44,7 @@ export function EpoxyPricing() {
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground text-pretty">
             Pick your garage size for an honest installed range. Your exact price is locked in after we measure the
-            slab, and nothing is due until the floor is finished and you have signed off.
+            slab, and your written estimate includes the payment schedule before you approve.
           </p>
         </Reveal>
 

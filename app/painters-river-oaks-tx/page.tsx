@@ -46,7 +46,7 @@ Older homes here usually need careful prep: repairing cracked plaster and settli
 
 Mature landscaping and close attention to finished surfaces inside the home mean protection is part of every job: covering beds and hardscape, and protecting floors and furnishings. We paint walls, ceilings, trim and cabinets, and specialty finishes such as Venetian plaster, Roman Clay and faux finishes are priced after an on-site look.
 
-Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every estimate is free and written, and nothing is due until you approve it.`}
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Prep for older homes: plaster and crack repair, caulk, wood repair and priming",
             "Protection for landscaping, floors and furnishings",

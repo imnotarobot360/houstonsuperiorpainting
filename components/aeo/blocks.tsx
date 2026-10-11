@@ -174,7 +174,7 @@ export function CtaBlock({ title = "Get a free Houston painting estimate", child
         <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
           {children ?? (
             <>
-              Call {BUSINESS.phone} or request an estimate online. Written scope in 24 hours, nothing due until you approve,{" "}
+              Call {BUSINESS.phone} or request an estimate online. Written scope in 24 hours, clear payment terms before you approve,{" "}
               {BUSINESS.trust.warrantyYears}-year workmanship warranty.
             </>
           )}

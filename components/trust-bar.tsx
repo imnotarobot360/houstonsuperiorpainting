@@ -35,7 +35,7 @@ export function TrustBar({ office }: { office?: string; hideRating?: boolean } =
           </div>
           <span className="hidden xl:inline text-primary-foreground/50">|</span>
           <div className="hidden xl:flex items-center gap-1.5">
-            <span className="font-semibold text-secondary">No Upfront Payment</span>
+            <span className="font-semibold text-secondary">Clear Written Payment Terms</span>
           </div>
         </div>
       </div>

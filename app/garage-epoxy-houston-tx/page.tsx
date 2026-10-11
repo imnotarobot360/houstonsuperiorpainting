@@ -458,7 +458,7 @@ export default function GarageEpoxyHoustonPage() {
         <section className="py-16 md:py-24 bg-white">
           <div className="mx-auto max-w-4xl px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Garage Epoxy Cost in Houston</h2>
-            <p className="text-center text-zinc-600 max-w-2xl mx-auto mb-10">All projects include diamond grinding, crack repair, primer, base coat, flake or pigment, UV-stable topcoat, and 15-year warranty. No upfront payment.</p>
+            <p className="text-center text-zinc-600 max-w-2xl mx-auto mb-10">All projects include diamond grinding, crack repair, primer, base coat, flake or pigment, UV-stable topcoat, and 15-year warranty. Clear written payment terms.</p>
 
             <div className="pricing-snippet overflow-x-auto rounded-xl border border-zinc-200 shadow-sm">
               <table className="w-full text-left">

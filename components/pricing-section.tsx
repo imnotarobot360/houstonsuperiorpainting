@@ -109,7 +109,7 @@ export function PricingSection() {
             <a href="/contact">Get Your Free Estimate</a>
           </Button>
           <p className="text-sm text-muted-foreground">
-            No obligation • No upfront payment
+            No obligation • Clear written payment terms
           </p>
         </div>
       </div>

@@ -82,7 +82,7 @@ export function Hero() {
 
             {/* Trust Points */}
             <div className="flex flex-wrap gap-4">
-              {["Fully Insured", "5-Year Exterior Warranty", "No Upfront Payment"].map((point) => (
+              {["Fully Insured", "5-Year Exterior Warranty", "Clear Written Payment Terms"].map((point) => (
                 <div key={point} className="flex items-center gap-2 text-foreground">
                   <CheckCircle className="h-5 w-5 text-primary" />
                   <span className="font-medium">{point}</span>
@@ -128,7 +128,7 @@ export function Hero() {
                   <div className="mb-5">
                     <h2 className="font-serif text-2xl font-bold text-foreground">Get Your Free Estimate</h2>
                     <p className="text-muted-foreground text-sm mt-1">
-                      Free estimate, no money until you approve. Most quotes back within 24 hours.
+                      Free estimate with clear written payment terms. Most quotes back within 24 hours.
                     </p>
                   </div>
                   <form onSubmit={handleSubmit} className="space-y-4">

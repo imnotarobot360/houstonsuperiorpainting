@@ -53,7 +53,7 @@ const financingFaqs = [
   },
   {
     q: "Is there a payment due before work begins?",
-    a: "Nothing is due before you approve the written estimate, and the estimate is free. After you approve, a down payment schedules the job and the balance is due after the final walkthrough. Financing lets you spread the cost over time; ask about terms at your estimate.",
+    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project. Financing lets you spread the cost over time; ask about terms at your estimate.",
   },
   {
     q: "Will financing affect the quality or warranty of my paint job?",
@@ -74,7 +74,7 @@ const benefits = [
   },
   {
     icon: ShieldCheck,
-    title: "No Upfront Payment",
+    title: "Clear Written Payment Terms",
     description: "Financing lets you spread the cost over time; ask about terms at your estimate.",
   },
 ]
@@ -119,7 +119,7 @@ export default function PaintingFinancingPage() {
             <p className="text-xl font-semibold text-secondary mb-4">Paint Now, Pay Over Time.</p>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto text-pretty mb-8">
               Don&apos;t put off the project you&apos;ve been planning. With flexible financing, you can repaint your
-              home today and pay in affordable monthly installments &mdash; with a free estimate, nothing due until you approve it,
+              home today and pay in affordable monthly installments &mdash; with a free estimate, clear written payment terms before you approve,
               and the same premium quality on every job.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

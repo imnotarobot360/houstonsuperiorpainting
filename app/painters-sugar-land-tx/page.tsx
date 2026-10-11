@@ -25,7 +25,7 @@ const DATA: OfficeCityPageData = {
       First Colony, Riverstone, Telfair and New Territory, from older homes that need trim repair to newer builds on their
       first repaint. Houston Superior Painting has worked in Fort Bend County since {BUSINESS.founded}, carries{" "}
       {T.liabilityCoverage} in liability coverage, and backs the work with a {T.warrantyYears}-year warranty. The estimate
-      is free and no money changes hands until you approve it. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
+      is free and lists the price and payment schedule before you approve it. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
     </>
   ),
   neighborhoods: [
@@ -88,7 +88,7 @@ const DATA: OfficeCityPageData = {
         <a href={BUSINESS.scheduler.embedUrl} target="_blank" rel="noopener noreferrer" className="underline">
           schedule your walkthrough online
         </a>
-        . You get an itemized estimate and decide with no deposit due.
+        . You get an itemized estimate with the payment schedule in writing before you decide.
       </>
     ),
   },

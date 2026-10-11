@@ -34,7 +34,7 @@ The work differs by age. Older homes often need failed caulk replaced, rotted tr
 
 Many Missouri City neighborhoods have HOAs that require approval before an exterior color change. Get approval before the job is scheduled; we can provide the product names and color codes your association asks for.
 
-Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, and nothing is due until you approve it.`,
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`,
 
   neighborhoods: [
     "Sienna",
@@ -99,7 +99,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress, w
     "Sherwin-Williams and Benjamin Moore paints",
     "5-year written workmanship warranty",
     "Written estimates with the full scope spelled out",
-    "No upfront payment: nothing is due until you approve the written estimate",
+    "Clear written payment terms: scope, price and payment schedule in writing before you approve",
     "Help preparing color details for HOA submittals"
   ],
 

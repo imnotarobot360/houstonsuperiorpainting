@@ -21,7 +21,7 @@ const DATA: OfficeCityPageData = {
     <>
       Houston Superior Painting serves west Montgomery County from our Magnolia office at {OFFICE}. We paint houses in
       Magnolia, Stagecoach, Pinehurst and along the Tomball line, including homes on wooded and acreage lots. Since{" "}
-      {BUSINESS.founded} we have kept the same terms: a free written estimate, no money until you approve it,{" "}
+      {BUSINESS.founded} we have kept the same terms: a free written estimate with the price and payment schedule in writing before you approve,{" "}
       {T.liabilityCoverage} in liability insurance, and a {T.warrantyYears}-year workmanship warranty. Call{" "}
       <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
     </>

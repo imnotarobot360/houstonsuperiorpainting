@@ -112,7 +112,7 @@ export default function AboutPage() {
             {BUSINESS.founded} by {BUSINESS.founder.name}. We are headquartered in Cypress, TX, and serve Greater
             Houston from five offices: Cypress, Houston, Katy, Sugar Land, and Magnolia. We carry{" "}
             {trust.liabilityCoverage} in general liability insurance plus workers&apos; compensation, back every
-            painting job with a {trust.warrantyYears}-year workmanship warranty, and never ask for payment upfront.
+            painting job with a {trust.warrantyYears}-year workmanship warranty, and put the scope, price and payment schedule in writing before you approve the project.
             Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a>.
           </p>
         </div>
@@ -218,9 +218,7 @@ export default function AboutPage() {
             <li className="flex gap-3">
               <ClipboardList className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
               <span>
-                <strong className="text-foreground">No upfront payment.</strong> The estimate is free and nothing is
-                collected until you approve it in writing. A down payment then schedules the job, and the balance is
-                due after the final walkthrough with the crew lead.
+                <strong className="text-foreground">Clear Written Payment Terms.</strong> The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.
               </span>
             </li>
             <li className="flex gap-3">

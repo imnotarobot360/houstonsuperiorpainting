@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     q: "What should I ask an interior painter before hiring one in Houston?",
-    a: "Ask exactly what prep is included: patching, sanding, caulking at trim, and primer on bare or stained spots. Skipped prep is the usual reason a low bid starts peeling early. Get the product, sheen, and coat count in writing, ask for a written workmanship warranty and a certificate of insurance, and be wary of anyone who wants full payment before work starts. Our written estimate lists all of it, our warranty runs 5 years, and nothing is due until you approve the estimate.",
+    a: "Ask exactly what prep is included: patching, sanding, caulking at trim, and primer on bare or stained spots. Skipped prep is the usual reason a low bid starts peeling early. Get the product, sheen, and coat count in writing, ask for a written workmanship warranty and a certificate of insurance, and be wary of anyone who wants full payment before work starts. Our written estimate lists all of it, our warranty runs 5 years, and the price and payment schedule are in writing before you approve.",
   },
   {
     q: "Are you insured in Texas?",
@@ -76,8 +76,8 @@ const faqs = [
     a: "Peeling, blistering, and flaking caused by our workmanship. It does not cover damage from water intrusion, settling, or surfaces you asked us not to prep.",
   },
   {
-    q: "Do you require a deposit?",
-    a: "Only after you approve the estimate. The estimate is free and we collect nothing before you approve it. Once you approve, a down payment schedules the job, and the balance is due after the final walkthrough.",
+    q: "How does payment work?",
+    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
   },
   {
     q: "How do I get an estimate?",

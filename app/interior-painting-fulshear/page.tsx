@@ -4,14 +4,14 @@ import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Interior Painting Fulshear TX | Houston Superior Painting",
-  description: "Interior painting in Fulshear, TX, from Cross Creek Ranch to Fulbrook. Free written estimate, nothing due until you approve. Insured, 5-year warranty.",
+  description: "Interior painting in Fulshear, TX, from Cross Creek Ranch to Fulbrook. Free written estimate with clear payment terms. Insured, 5-year warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-fulshear",
   },
   openGraph: {
     images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Interior Painting Fulshear TX | Houston Superior Painting",
-    description: "Interior painting in Fulshear, TX, from Cross Creek Ranch to Fulbrook. Free written estimate, nothing due until you approve. Insured, 5-year warranty.",
+    description: "Interior painting in Fulshear, TX, from Cross Creek Ranch to Fulbrook. Free written estimate with clear payment terms. Insured, 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/interior-painting-fulshear",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -26,7 +26,7 @@ export default function InteriorPaintingFulshearPage() {
       zone="Fulshear"
       zoneSlug="fulshear"
       metaTitle={"Interior Painting Fulshear TX | Houston Superior Painting"}
-      metaDescription={"Interior painting in Fulshear, TX, from Cross Creek Ranch to Fulbrook. Free written estimate, nothing due until you approve. Insured, 5-year warranty."}
+      metaDescription={"Interior painting in Fulshear, TX, from Cross Creek Ranch to Fulbrook. Free written estimate with clear payment terms. Insured, 5-year warranty."}
       h1={"Interior Painters in Fulshear, TX"}
       heroSubheading={"Interior painting for Fulshear homes, from newer builds in Cross Creek Ranch and Jordan Ranch to established homes in Fulbrook and Weston Lakes."}
       introLocal={"Much of Fulshear's housing is newer construction in master-planned communities such as Cross Creek Ranch, Jordan Ranch and Fulbrook on Fulshear Creek. Newer homes commonly have flat builder-grade paint that marks easily, plus nail pops and corner cracks as the house settles in its first few years. A repaint is a good time to fix those and move to a more washable finish in kitchens, hallways and kids' rooms. Open-plan homes with tall ceilings and stairwells also need extension equipment or scaffolding, which we account for in the estimate."}

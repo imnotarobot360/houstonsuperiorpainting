@@ -68,10 +68,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Do you require upfront payment?",
+      "name": "How does payment work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No upfront payment is required. Payment is made after completion."
+        "text": "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project."
       }
     }
   ]
@@ -127,8 +127,8 @@ const faqs = [
     answer: "Yes. We provide free estimates with no obligation."
   },
   {
-    question: "Do you require upfront payment?",
-    answer: "No upfront payment is required. Payment is made after completion."
+    question: "How does payment work?",
+    answer: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project."
   }
 ]
 

@@ -98,7 +98,7 @@ const relatedPosts = [
 const redFlags = [
   {
     title: "Large upfront payment before anything is agreed",
-    body: "Be wary of a painter who wants a big share of the price before you have a written estimate you've approved. It often means they need your money before they've earned it, and it gives them an incentive to rush. At Houston Superior Painting nothing is due until you approve the written estimate, and the balance comes after the final walkthrough.",
+    body: "Be wary of a painter who wants a big share of the price before you have a written estimate you've approved. It often means they need your money before they've earned it, and it gives them an incentive to rush. At Houston Superior Painting, your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
   },
   {
     title: "Quote over the phone without seeing the house",
@@ -152,7 +152,7 @@ export default function PaintersNearMeKatyTxPage() {
           <strong>{PRICES_2026.exteriorPerHome}</strong> for an exterior, depending on size and prep. Because Texas requires no painting
           license, vetting matters: verify insurance by calling the carrier, confirm the crew are direct employees (not
           subcontractors), and get a line-item written estimate with a warranty. Houston Superior Painting has served Katy
-          since 2019 with free estimates, no money until you approve, and a 5-year workmanship guarantee — call or text (346) 594-5960.
+          since 2019 with free estimates, clear written payment terms, and a 5-year workmanship guarantee — call or text (346) 594-5960.
         </p>
       </div>
 
@@ -543,7 +543,7 @@ export default function PaintersNearMeKatyTxPage() {
         </li>
       </ul>
       <p>
-        Free estimates. No upfront payment. 5-year workmanship guarantee. Explore our{" "}
+        Free estimates. Clear written payment terms. 5-year workmanship guarantee. Explore our{" "}
         <Link href="/interior-painting-houston-tx">interior painting</Link> and{" "}
         <Link href="/exterior-painting-houston-tx">exterior painting</Link> services, or compare prices in our{" "}
         <Link href="/blog/exterior-painting-cost-katy-tx">Katy exterior painting cost guide</Link>.

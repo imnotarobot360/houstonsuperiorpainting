@@ -77,8 +77,8 @@ const faqs = [
     a: "Peeling, blistering, and flaking caused by our workmanship. It does not cover damage from water intrusion, settling, or surfaces you asked us not to prep.",
   },
   {
-    q: "Do you require a deposit?",
-    a: "Only after you approve the estimate. The estimate is free and we collect nothing before you approve it. Once you approve, a down payment schedules the job, and the balance is due after the final walkthrough.",
+    q: "How does payment work?",
+    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
   },
   {
     q: "How do I get an estimate?",

@@ -20,7 +20,7 @@ export default function InteriorPaintingBellaireWestUPage() {
       metaTitle="Interior Painting Bellaire & West University TX"
       metaDescription="Interior painting in Bellaire and West University Place, TX: careful prep, Sherwin-Williams and Benjamin Moore paints, 5-year written warranty. Free estimate."
       h1="Interior Painting in Bellaire and West University Place, TX"
-      heroSubheading="Careful prep, Sherwin-Williams and Benjamin Moore paints, and a 5-year written workmanship warranty, with nothing due until you approve the written estimate."
+      heroSubheading="Careful prep, Sherwin-Williams and Benjamin Moore paints, and a 5-year written workmanship warranty, with the scope, price and payment schedule in writing before you approve the project."
       introLocal="Bellaire and West University Place are separate cities surrounded by Houston, with a mix of original mid-century ranch homes and newer, larger rebuilds. Older homes often need more patching and trim prep; newer homes tend to have taller ceilings and open stairwells that take more setup. We walk through each home before pricing it."
       serviceOverview="Interior work covers walls, ceilings, trim and doors. Furniture is moved or covered, holes and cracks are patched, surfaces are sanded and spot-primed, and finish coats go on in Sherwin-Williams or Benjamin Moore paint, with a more washable sheen where rooms take more wear."
       whyChooseUs={[
@@ -57,7 +57,7 @@ export default function InteriorPaintingBellaireWestUPage() {
         },
         {
           question: "When do I pay?",
-          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+          answer: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
         },
       ]}
       testimonials={[

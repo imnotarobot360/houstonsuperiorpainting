@@ -19,7 +19,7 @@ Houston Superior Painting is a fully insured professional painting contractor se
 ### Core Values
 - Old-school preparation techniques
 - Premium paint products (Sherwin-Williams, Benjamin Moore)
-- Free estimates; no money until you approve the written estimate
+- Free estimates; the complete scope, price, and payment schedule are in writing before you approve the project
 - Clean and organized worksites
 - Professional communication with daily updates
 - 5-year workmanship warranty on all painting
@@ -248,8 +248,8 @@ Proper preparation is the foundation of a long-lasting paint job. Our preparatio
 ### What paint brands do you use?
 We use premium paint products from Sherwin-Williams and Benjamin Moore. For interiors, we recommend Sherwin-Williams Duration or Benjamin Moore Regal Select. For exteriors in Houston's climate, we use Sherwin-Williams Duration Exterior or Benjamin Moore Aura Exterior. For cabinets, we use Sherwin-Williams Emerald Urethane Trim Enamel or Benjamin Moore Advance.
 
-### Do you require upfront payment?
-Not before you approve the estimate. Estimates are free and we don't collect any money until you approve the written estimate. After you approve, we collect a down payment to schedule the job, and the balance is due after the final walkthrough.
+### How does payment work?
+The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.
 
 ### What warranty do you offer?
 We offer a 5-year written warranty on all painting work — exterior painting, interior painting, and cabinet refinishing all carry the same 5-year term. If paint fails due to our workmanship within the warranty period, we will repair it at no cost.
@@ -283,5 +283,5 @@ Offices:
 - In business since 2019
 - 100% satisfaction guarantee
 - Fully insured ($2M general liability + workers' compensation)
-- Free estimates; down payment only after you approve the written estimate, balance after the final walkthrough
+- Free estimates; clear written payment terms before you approve the project
 - 5-year workmanship warranty on all painting

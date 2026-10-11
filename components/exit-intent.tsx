@@ -80,7 +80,7 @@ export function ExitIntent() {
             {[
               "Takes less than 2 minutes",
               "No obligation - completely free",
-              `Nothing due until you approve, ${BUSINESS.trust.warrantyYears}-year workmanship warranty`
+              `Clear written payment terms, ${BUSINESS.trust.warrantyYears}-year workmanship warranty`
             ].map((benefit) => (
               <div key={benefit} className="flex items-center gap-2 text-sm">
                 <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />

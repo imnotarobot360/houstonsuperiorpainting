@@ -57,7 +57,7 @@ export default function CabinetRefinishingHeightsPage() {
         },
         {
           question: "When do I pay?",
-          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+          answer: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
         },
       ]}
       testimonials={[

@@ -38,7 +38,7 @@ export default function BrickPaintingMemorialPage() {
         "Both solid paint and limewash available, so the recommendation fits your brick.",
         "A written estimate with the prep, products and coats spelled out.",
       ]}
-      priceDetails={"We don't publish a price range for brick painting. The cost depends on the surface, its condition, the area and the technique, so it is priced after an on-site look. The estimate is free, and nothing is due until you approve it."}
+      priceDetails={"We don't publish a price range for brick painting. The cost depends on the surface, its condition, the area and the technique, so it is priced after an on-site look. The estimate is free and includes the complete scope, price, and payment schedule before you approve the project."}
       faqs={[
         {
           question: "Should I paint or limewash my brick?",

@@ -4,14 +4,14 @@ import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Interior Painting Richmond TX | Houston Superior Painting",
-  description: "Interior painting in Richmond, TX: walls, ceilings, trim and doors. Free written estimate, nothing due until you approve. Insured, 5-year warranty.",
+  description: "Interior painting in Richmond, TX: walls, ceilings, trim and doors. Free written estimate with clear payment terms. Insured, 5-year warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-richmond",
   },
   openGraph: {
     images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Interior Painting Richmond TX | Houston Superior Painting",
-    description: "Interior painting in Richmond, TX: walls, ceilings, trim and doors. Free written estimate, nothing due until you approve. Insured, 5-year warranty.",
+    description: "Interior painting in Richmond, TX: walls, ceilings, trim and doors. Free written estimate with clear payment terms. Insured, 5-year warranty.",
     url: "https://houstonsuperiorpainting.com/interior-painting-richmond",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -26,7 +26,7 @@ export default function InteriorPaintingRichmondPage() {
       zone="Richmond"
       zoneSlug="richmond"
       metaTitle={"Interior Painting Richmond TX | Houston Superior Painting"}
-      metaDescription={"Interior painting in Richmond, TX: walls, ceilings, trim and doors. Free written estimate, nothing due until you approve. Insured, 5-year warranty."}
+      metaDescription={"Interior painting in Richmond, TX: walls, ceilings, trim and doors. Free written estimate with clear payment terms. Insured, 5-year warranty."}
       h1={"Interior Painters in Richmond, TX"}
       heroSubheading={"Interior painting for Richmond homes, from older houses near the historic downtown to newer builds in communities like Pecan Grove, Greatwood and Long Meadow Farms."}
       introLocal={"Richmond mixes older homes near its historic downtown with newer houses in master-planned communities such as Pecan Grove, Greatwood and Long Meadow Farms. Older homes often need more prep before paint goes on: settled cracks patched, gaps at trim caulked and stains primed. Newer homes often have flat builder-grade paint that scuffs easily and benefits from a more washable finish. We look at the walls before quoting, so the estimate reflects the prep your home actually needs."}

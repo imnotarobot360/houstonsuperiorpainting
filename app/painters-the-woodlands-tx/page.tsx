@@ -64,7 +64,7 @@ Exterior color changes in The Woodlands generally need approval from the communi
 
 Inside, many Woodlands homes have tall ceilings, two-story entries, and detailed trim. Those add ladder and scaffold time, which your written estimate lists room by room.`}
           whyChooseUs={[
-            "Free on-site estimate with a written scope; nothing is due until you approve it",
+            "Free on-site estimate with the scope, price and payment schedule in writing before you approve",
             "Insured: $2M general liability + workers' comp, with certificates available on request",
             "5-year written workmanship warranty",
             "Sherwin-Williams and Benjamin Moore paints",

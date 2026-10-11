@@ -38,7 +38,7 @@ export default function LuxuryExteriorPaintingRiverOaksPage() {
         "Landscaping, hardscape and windows protected, and the site cleaned at the end of each day.",
         "A written estimate with repairs, prep and products spelled out.",
       ]}
-      priceDetails={"We don't publish a price range for high-end exterior work. The cost depends on the surface, its condition, the area and the technique, so it is priced after an on-site look. The estimate is free, and nothing is due until you approve it."}
+      priceDetails={"We don't publish a price range for high-end exterior work. The cost depends on the surface, its condition, the area and the technique, so it is priced after an on-site look. The estimate is free and includes the complete scope, price, and payment schedule before you approve the project."}
       faqs={[
         {
           question: "My home is older. Is lead paint a concern?",

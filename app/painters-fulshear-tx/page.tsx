@@ -62,7 +62,7 @@ Fulshear has the same Gulf Coast climate as the rest of Greater Houston, and the
 
 Nearly every Fulshear master-planned community has an HOA that reviews exterior color changes. We can pull your community's approved color list and help with the approval paperwork before work starts.`}
           whyChooseUs={[
-            "Free on-site estimate with a written scope; nothing is due until you approve it",
+            "Free on-site estimate with the scope, price and payment schedule in writing before you approve",
             "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
             "5-year written workmanship warranty",
             "Sherwin-Williams and Benjamin Moore paints in place of flat builder-grade finishes",

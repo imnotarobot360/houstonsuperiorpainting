@@ -20,7 +20,7 @@ export default function InteriorPaintingHeightsPage() {
       metaTitle="Interior Painting The Heights, Houston TX"
       metaDescription="Interior painting in the Houston Heights: prep for plaster, old trim and new builds, Sherwin-Williams and Benjamin Moore paints, 5-year warranty."
       h1="Interior Painting in The Heights, Houston, TX"
-      heroSubheading="Careful prep, Sherwin-Williams and Benjamin Moore paints, and a 5-year written workmanship warranty, with nothing due until you approve the written estimate."
+      heroSubheading="Careful prep, Sherwin-Williams and Benjamin Moore paints, and a 5-year written workmanship warranty, with the scope, price and payment schedule in writing before you approve the project."
       introLocal="The Heights has many early-1900s bungalows and Victorian homes, alongside newer townhomes and rebuilds. Older homes often have plaster walls, original wood trim and many layers of old paint, which take more prep than new drywall. We walk through each home before pricing it."
       serviceOverview="Interior work covers walls, ceilings, trim and doors. Furniture is moved or covered, holes and cracks are patched, surfaces are sanded and spot-primed, and finish coats go on in Sherwin-Williams or Benjamin Moore paint, with a more washable sheen where rooms take more wear."
       whyChooseUs={[
@@ -57,7 +57,7 @@ export default function InteriorPaintingHeightsPage() {
         },
         {
           question: "When do I pay?",
-          answer: "The estimate is free and nothing is due until you approve the written estimate. After approval there is a down payment, and the balance is due after the final walkthrough.",
+          answer: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
         },
       ]}
       testimonials={[

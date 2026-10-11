@@ -306,7 +306,7 @@ export default function HoustonPaintingCostGuidePage() {
           <Link href={ESTIMATE_PATH} className="underline">
             request an estimate online
           </Link>
-          . Written and itemized, nothing due until you approve, {BUSINESS.trust.warrantyYears}-year workmanship warranty.
+          . Written and itemized, with clear payment terms before you approve, {BUSINESS.trust.warrantyYears}-year workmanship warranty.
         </CtaBlock>
 
         <AuthorByline extra="Prices reviewed quarterly." />

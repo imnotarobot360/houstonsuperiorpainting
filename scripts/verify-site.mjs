@@ -183,6 +183,13 @@ for (const o of OFFICES) {
   const t = pages.get(o.page)?.text || ""
   if (!/href="https:\/\/maps\.app\.goo\.gl\/[A-Za-z0-9]+"/.test(t)) fail(`${o.page} has no link to its Google profile`)
 }
+// Payment wording (owner, 2026-10-11): never imply no deposit / nothing due until approval.
+const payBad = /no upfront payment|no money up ?front|nothing (is )?due until|no money until|nothing (is )?collected until|collect nothing until|pay nothing until|no deposit due|payment is made after completion|don.t pay anything until/i
+for (const [p, r] of pages) {
+  const m = r.text.replace(/<[^>]+>/g, " ").match(payBad)
+  if (m) fail(`${p}: misleading payment wording "${m[0]}"`)
+}
+if (llms.text && payBad.test(llms.text)) fail("llms.txt has misleading payment wording")
 console.log("trust rules checked")
 
 console.log(failures.length ? `\nFAILED (${failures.length}):\n- ${failures.join("\n- ")}` : "\nALL CHECKS PASSED")
