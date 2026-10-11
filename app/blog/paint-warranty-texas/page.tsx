@@ -259,7 +259,7 @@ export default function PaintWarrantyTexasPage() {
           surfaces included in your original scope, for 5 years from project completion date.
         </li>
         <li>
-          <strong>Process:</strong> Call or text (346) 594-5960. We schedule a warranty inspection within 5 business
+          <strong>Process:</strong> Call or text (346) 594-5960. We schedule a warranty inspection within 7 business
           days. Covered repairs are completed at no charge within 30 days of confirmation.
         </li>
         <li>

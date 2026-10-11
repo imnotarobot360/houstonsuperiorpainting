@@ -190,6 +190,8 @@ for (const [p, r] of pages) {
   if (m) fail(`${p}: misleading payment wording "${m[0]}"`)
 }
 if (llms.text && payBad.test(llms.text)) fail("llms.txt has misleading payment wording")
+// The Katy profile's earlier business name must never appear (owner, 2026-10-11).
+for (const [p, r] of pages) if (/\bS\s?(&|&amp;)\s?L\b/.test(visible(r.text))) fail(`${p} mentions the earlier business name`)
 console.log("trust rules checked")
 
 console.log(failures.length ? `\nFAILED (${failures.length}):\n- ${failures.join("\n- ")}` : "\nALL CHECKS PASSED")

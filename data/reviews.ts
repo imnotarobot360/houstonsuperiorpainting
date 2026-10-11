@@ -114,11 +114,12 @@ export const REVIEWS: ApprovedReview[] = [
   {
     name: "Tony G.",
     area: "Cypress",
-    excerpt: "",
+    excerpt:
+      "Highly recommend Houston Superior Painting! They are professional, reliable, and pay close attention to every detail. Excellent quality, great communication, and outstanding customer service from start to finish. I would definitely work with them again!",
     date: null,
     sourceUrl: "https://maps.app.goo.gl/G2cRQy8Cth7UM6d6A",
     verification: "source-verified",
-    publish: false,
+    publish: true,
     notes: "5 stars, Cypress profile, ~1 month before 2026-10-10. Professional, reliable, detail-oriented, good communication.",
   },
   {
@@ -165,7 +166,8 @@ export const REVIEWS: ApprovedReview[] = [
   },
   // Not shortlisted: the Magnolia review posted under "Juan Serra" and the Cypress
   // review under "JJ Semo" (owner / insider reviews break Google policy), and Katy
-  // reviews that name "S&L Painting" until the owner confirms that history.
+  // reviews that name the business's earlier name. Owner (2026-10-11): same business,
+  // but never mention the earlier name on the site, so only quote Katy reviews that do not use it.
 ]
 
 export const PUBLISHED_REVIEWS = REVIEWS.filter((r) => r.publish && r.excerpt.trim().length > 0)

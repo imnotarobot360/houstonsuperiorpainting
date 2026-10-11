@@ -60,14 +60,13 @@ Juan kept Catherine R. (confirmed real) and removed Robert H. and Daniel & Priya
 TRANSFERABLE — confirmed by Juan 2026-10-10 (wording restored on /warranty, the warranty blog and llms.txt).
 Still open: do the covered / not-covered lists on /warranty match the real warranty document?
 
-### 11. Prices still needed for content
+### 11. Prices still needed for content — mostly RESOLVED 2026-10-11 (service prices confirmed; cabinet cure times still open)
 Drywall repair (patch / water damage / texture match), wallpaper removal + skim coat, and cabinet timeline/cure
 facts (days on site, product, dry vs full cure, when cabinets can be used). Briefs are in
 `docs/aeo-geo-implementation-report-2026-10.md` §7.
 
-### 13. Warranty claim response time
-`/warranty` says an inspection is scheduled within **7 business days**; `/blog/paint-warranty-texas` says
-**5 business days** (repairs within 30 days of confirmation). Which is right? Both pages will be set to the same number.
+### 13. Warranty claim response time — RESOLVED 2026-10-11
+Juan: inspection within **7 business days**. /warranty and /blog/paint-warranty-texas both say 7.
 
 ### 12. Epoxy content
 The garage-epoxy blog draft is on hold: its prices ($5–$11/sq ft, $2,200 minimum) conflict with

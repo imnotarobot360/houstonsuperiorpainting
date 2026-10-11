@@ -35,3 +35,7 @@ Paint-can prices (Sherwin-Williams/Benjamin Moore per gallon), DIY supply costs,
 costs quoted for comparison on blog posts: /best-exterior-paint-houston-weather, /blog/benjamin-moore-vs-sherwin-williams,
 /blog/emerald-vs-duration-paint, /blog/diy-vs-professional-painting-cost-houston, /blog/cabinet-refinishing-vs-replacement-houston,
 /blog/cost-to-paint-kitchen-cabinets-houston-tx, /paint-or-replace-cabinets, /signs-home-needs-exterior-painting.
+
+## Update 2026-10-11
+
+Juan confirmed the section A prices for pressure washing, soft washing, wall removal, drywall repair, wallpaper removal, stucco painting, Venetian plaster (per sq ft), wood rot repair and limewash. They are now in `PRICES_2026` and used by eight new cost articles under `/blog/*-cost-houston`. Sub-prices not listed in the confirmation (e.g. deck and fence washing, wall-removal tiers by span, drywall tiers) are still unconfirmed.

@@ -451,4 +451,15 @@ export const PRICES_2026 = {
   commercialWarehouse: "$0.75–$2",
   commercialDoorEach: "$75–$150",
   commercialAfterHoursPremium: "15–30%",
+  // ─── Confirmed by Juan 2026-10-11 (were on service pages, unconfirmed until then). ───
+  pressureWashing: "$150–$1,200",
+  pressureWashingHouse: "$300–$700",
+  softWashOneStory: "$350–$650",
+  softWashTwoStory: "$550–$1,000",
+  wallRemoval: "$4,000–$30,000+",
+  drywallRepair: "$200–$2,500",
+  wallpaperRemovalPerSqFt: "$3–$8",
+  stuccoPainting: "$2,500–$8,000",
+  venetianPlasterPerSqFt: "$8–$20",
+  woodRotRepair: "$300–$2,500",
 } as const

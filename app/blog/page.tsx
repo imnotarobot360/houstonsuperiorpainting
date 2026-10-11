@@ -22,6 +22,102 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "pressure-washing-cost-houston",
+    title: "Pressure Washing Cost in Houston (2026)",
+    excerpt:
+      "What pressure washing costs in Houston, what moves the price, and when to soft wash instead.",
+    category: "Cost Guides",
+    author: "Juan Serra",
+    publishDate: "October 11, 2026",
+    readTime: "6 min read",
+    image: "/images/blog/exterior-paint-houston-humidity.jpg",
+    featured: false,
+  },
+  {
+    slug: "soft-washing-cost-houston",
+    title: "Soft Washing Cost in Houston (2026)",
+    excerpt:
+      "Soft washing prices for one- and two-story Houston homes, and why it beats high pressure on painted siding.",
+    category: "Cost Guides",
+    author: "Juan Serra",
+    publishDate: "October 11, 2026",
+    readTime: "6 min read",
+    image: "/images/blog/houston-weather-paint-damage.png",
+    featured: false,
+  },
+  {
+    slug: "load-bearing-wall-removal-cost-houston",
+    title: "Load-Bearing Wall Removal Cost in Houston (2026)",
+    excerpt:
+      "What removing a load-bearing wall costs in Houston and what drives it: span, beam, engineer, permit and finish work.",
+    category: "Cost Guides",
+    author: "Juan Serra",
+    publishDate: "October 11, 2026",
+    readTime: "6 min read",
+    image: "/images/blog/interior-painting-houston-guide.jpg",
+    featured: false,
+  },
+  {
+    slug: "drywall-repair-cost-houston",
+    title: "Drywall Repair Cost in Houston (2026)",
+    excerpt:
+      "From small patches to water-damaged ceilings: what drywall repair costs in Houston and what moves the price.",
+    category: "Cost Guides",
+    author: "Juan Serra",
+    publishDate: "October 11, 2026",
+    readTime: "6 min read",
+    image: "/images/blog/drywall-repair-guide.jpg",
+    featured: false,
+  },
+  {
+    slug: "wallpaper-removal-cost-houston",
+    title: "Wallpaper Removal Cost in Houston (2026)",
+    excerpt:
+      "Per-square-foot wallpaper removal prices in Houston, and why the wall underneath matters.",
+    category: "Cost Guides",
+    author: "Juan Serra",
+    publishDate: "October 11, 2026",
+    readTime: "6 min read",
+    image: "/images/projects/richmond-interior/01-bedroom-wide.jpg",
+    featured: false,
+  },
+  {
+    slug: "stucco-painting-cost-houston",
+    title: "Stucco Painting Cost in Houston (2026)",
+    excerpt:
+      "What painting a stucco home costs in Houston: crack repair, elastomeric vs acrylic, height and washing.",
+    category: "Cost Guides",
+    author: "Juan Serra",
+    publishDate: "October 11, 2026",
+    readTime: "6 min read",
+    image: "/images/blog/exterior-house-painting-guide.jpg",
+    featured: false,
+  },
+  {
+    slug: "wood-rot-repair-cost-houston",
+    title: "Wood Rot Repair Cost in Houston (2026)",
+    excerpt:
+      "Where rot shows up on Houston homes, replace vs fill, and what wood rot repair costs.",
+    category: "Cost Guides",
+    author: "Juan Serra",
+    publishDate: "October 11, 2026",
+    readTime: "6 min read",
+    image: "/images/blog/exterior-paint-durability-houston.jpg",
+    featured: false,
+  },
+  {
+    slug: "limewash-cost-houston",
+    title: "Limewash Brick Cost in Houston (2026)",
+    excerpt:
+      "Limewash prices per square foot of brick in Houston, and what a typical home costs.",
+    category: "Cost Guides",
+    author: "Juan Serra",
+    publishDate: "October 11, 2026",
+    readTime: "6 min read",
+    image: "/images/blog/limewash-brick-houston.jpg",
+    featured: false,
+  },
+  {
     slug: "how-to-verify-painting-contractor-insurance-houston",
     title: "How to Verify a Painting Contractor's Insurance in Houston",
     excerpt:
