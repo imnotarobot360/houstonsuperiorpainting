@@ -713,6 +713,44 @@ export const PROJECTS: CaseStudy[] = [
       "Photos of a Cypress, TX kitchen with white raised-panel cabinets, a white range hood and a teal island.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-11: "cabinets in sienna". Uppers photo
+    // cropped to remove coffee items; island close-up cropped to remove counter items.
+    // Photos with towels, boxes, dishes or a paint can left out. Scope, products and
+    // colors unconfirmed.
+    slug: "sienna-white-kitchen-cabinets",
+    title: "White Raised-Panel Kitchen Cabinets in Sienna",
+    neighborhood: "Sienna, TX",
+    service: "Cabinet Refinishing",
+    serviceSlug: "cabinet-refinishing-houston-tx",
+    summary:
+      "A Sienna kitchen with white raised-panel cabinets, black hardware and black granite counters, photographed after the work.",
+    heroImage: "/images/projects/sienna-white-kitchen/01-white-cabinet-wall.jpg",
+    afterImage: "/images/projects/sienna-white-kitchen/01-white-cabinet-wall.jpg",
+    afterAlt: "Sienna kitchen wall of white raised-panel cabinets with black bar pulls and a black granite counter",
+    gallery: [
+      {
+        src: "/images/projects/sienna-white-kitchen/02-long-cabinet-run.jpg",
+        alt: "Long run of white upper and lower cabinets along the kitchen wall toward the hallway",
+      },
+      {
+        src: "/images/projects/sienna-white-kitchen/03-uppers-and-wall-oven.jpg",
+        alt: "White upper cabinets with crown molding around the corner and above the wall oven",
+      },
+      {
+        src: "/images/projects/sienna-white-kitchen/04-island-door-detail.jpg",
+        alt: "Close view of the white raised-panel doors and drawer fronts on the island",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "Sienna, TX" },
+      { label: "Service", value: "Cabinets" },
+      { label: "Finish", value: "White" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "White Kitchen Cabinets in Sienna, TX",
+    metaDescription: "Photos of a Sienna, TX kitchen with white raised-panel cabinets, black hardware and black granite counters.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-11: "cabinets in the heights" (two
     // kitchens; Juan confirmed both are in The Heights). Close-up with counter
     // clutter and low-res duplicates left out. Scope, products, colors unconfirmed.
