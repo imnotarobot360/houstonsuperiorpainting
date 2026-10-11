@@ -88,9 +88,9 @@ const ZONE_PROJECT_PLACES: Record<string, string[]> = {
   "sugar-land": ["Richmond"],
   // Magnolia borders The Woodlands; the card is labelled Magnolia.
   "the-woodlands": ["Magnolia"],
-  // Fulshear borders Katy; the card is labelled Fulshear, never Katy.
-  katy: ["Fulshear"],
-  "katy-cinco-ranch": ["Fulshear"],
+  // Real Katy job first (2026-10-11); Fulshear (borders Katy) as a labelled nearby fallback.
+  katy: ["Katy", "Fulshear"],
+  "katy-cinco-ranch": ["Katy", "Fulshear"],
 }
 
 interface FAQ {

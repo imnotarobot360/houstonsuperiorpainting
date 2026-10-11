@@ -671,6 +671,44 @@ export const PROJECTS: CaseStudy[] = [
       "Photos of a Cypress, TX kitchen with blue painted lower cabinets and island and white painted uppers.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-11: "cabinets in katy". Kitchen photo
+    // cropped to remove a ladder; a dining-room photo with a broom on the floor was
+    // left out. Finished photos only; scope, products and colors unconfirmed.
+    slug: "katy-white-navy-kitchen-cabinets",
+    title: "White and Navy Kitchen Cabinets in Katy",
+    neighborhood: "Katy, TX",
+    service: "Cabinet Refinishing",
+    serviceSlug: "cabinet-refinishing-houston-tx",
+    summary:
+      "A Katy kitchen with white shaker cabinets and a navy island, plus white built-in cabinets beside the living-room fireplace, photographed after the work.",
+    heroImage: "/images/projects/katy-cabinets-built-ins/01-white-kitchen-navy-island.jpg",
+    afterImage: "/images/projects/katy-cabinets-built-ins/01-white-kitchen-navy-island.jpg",
+    afterAlt: "Katy kitchen with white shaker cabinets to the ceiling, glass-front uppers and a navy island with a white counter",
+    gallery: [
+      {
+        src: "/images/projects/katy-cabinets-built-ins/02-wall-ovens-and-uppers.jpg",
+        alt: "White cabinets around double wall ovens and stacked glass-front uppers beside the range hood",
+      },
+      {
+        src: "/images/projects/katy-cabinets-built-ins/03-living-room-built-in.jpg",
+        alt: "White shaker built-in cabinet with a stone top and two oak floating shelves",
+      },
+      {
+        src: "/images/projects/katy-cabinets-built-ins/04-fireplace-wall-built-ins.jpg",
+        alt: "Living-room fireplace wall with white built-in cabinets and oak floating shelves on both sides",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "Katy, TX" },
+      { label: "Service", value: "Cabinets" },
+      { label: "Finish", value: "White and navy" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "White and Navy Kitchen Cabinets in Katy, TX",
+    metaDescription:
+      "Photos of a Katy, TX kitchen with white shaker cabinets and a navy island, plus white living-room built-ins.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-08: exterior painting in Magnolia,
     // TX. Cropped to remove another contractor's yard sign, our van and
     // construction debris. Finished photos only; scope and products unconfirmed.
