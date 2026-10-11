@@ -671,6 +671,48 @@ export const PROJECTS: CaseStudy[] = [
       "Photos of a Cypress, TX kitchen with blue painted lower cabinets and island and white painted uppers.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-11: "cabinets in cypress". A photo with
+    // people in the background was left out. Finished photos only; scope, products
+    // and colors unconfirmed.
+    slug: "cypress-white-teal-kitchen-cabinets",
+    title: "White Kitchen Cabinets with a Teal Island in Cypress",
+    neighborhood: "Cypress, TX",
+    service: "Cabinet Refinishing",
+    serviceSlug: "cabinet-refinishing-houston-tx",
+    summary:
+      "A Cypress kitchen with white raised-panel cabinets, a matching range hood and a teal island under a reclaimed-wood top, photographed after the work.",
+    heroImage: "/images/projects/cypress-white-teal-kitchen/01-kitchen-through-arch.jpg",
+    afterImage: "/images/projects/cypress-white-teal-kitchen/01-kitchen-through-arch.jpg",
+    afterAlt: "Cypress kitchen seen through an arch: white raised-panel cabinets, beadboard bar panels and a teal island",
+    gallery: [
+      {
+        src: "/images/projects/cypress-white-teal-kitchen/02-teal-island-white-uppers.jpg",
+        alt: "Teal island with fluted posts below white upper cabinets with glass doors",
+      },
+      {
+        src: "/images/projects/cypress-white-teal-kitchen/03-teal-island-detail.jpg",
+        alt: "Close view of the teal island drawers, beadboard panel and fluted corner posts",
+      },
+      {
+        src: "/images/projects/cypress-white-teal-kitchen/04-range-wall-and-hood.jpg",
+        alt: "White cabinets and a white wood range hood with beadboard detail around the cooktop",
+      },
+      {
+        src: "/images/projects/cypress-white-teal-kitchen/05-uppers-and-wall-ovens.jpg",
+        alt: "White upper cabinets and the tall cabinet around the double wall ovens",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "Cypress, TX" },
+      { label: "Service", value: "Cabinets" },
+      { label: "Finish", value: "White and teal" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "White Kitchen Cabinets and Teal Island in Cypress, TX",
+    metaDescription:
+      "Photos of a Cypress, TX kitchen with white raised-panel cabinets, a white range hood and a teal island.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-11: "cabinets in katy". Kitchen photo
     // cropped to remove a ladder; a dining-room photo with a broom on the floor was
     // left out. Finished photos only; scope, products and colors unconfirmed.
