@@ -149,7 +149,7 @@ export default function HoustonPaintingCostGuidePage() {
             ]}
             note={
               <>
-                More detail: <Link href="/interior-painting-cost-houston">interior painting cost in Houston</Link>.
+                More detail: <Link href="/interior-painting-cost-houston">interior painting cost in Houston</Link>, the <Link href="/cost-to-paint-a-room-houston">cost to paint a room</Link>, and <Link href="/small-painting-jobs-houston">small painting jobs</Link>.
               </>
             }
           />

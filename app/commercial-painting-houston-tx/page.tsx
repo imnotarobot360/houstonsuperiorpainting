@@ -224,7 +224,7 @@ export default function CommercialPaintingHoustonPage() {
               ["Doors and frames", `${PRICES_2026.commercialDoorEach} each`],
               ["After-hours or weekend work", `adds ${PRICES_2026.commercialAfterHoursPremium}`],
             ]}
-            note={<>Ranges for budgeting, not quotes. Exteriors are quoted from the elevations.</>}
+            note={<>Ranges for budgeting, not quotes. Exteriors are quoted from the elevations. How these are measured: <Link href="/commercial-painting-cost-per-square-foot-houston">commercial painting cost per square foot</Link>.</>}
           />
         </Section>
 
