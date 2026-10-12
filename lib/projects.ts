@@ -500,7 +500,8 @@ export const PROJECTS: CaseStudy[] = [
   },
   {
     // Job photos supplied by Juan on 2026-10-12; he confirmed the sage kitchen and
-    // the blue vanity are the same Richmond house. Cropped to drop a ladder in the
+    // the blue vanity are the same Richmond house, and later that the gray living
+    // room (accent wall behind the fireplace) is too. Cropped to drop a ladder in the
     // hallway and foreground clutter. Doors are shown open while drying.
     // Finished photos only; products and timeline unconfirmed, so left out.
     slug: "richmond-sage-green-kitchen-cabinets",
@@ -509,7 +510,7 @@ export const PROJECTS: CaseStudy[] = [
     service: "Cabinet Refinishing",
     serviceSlug: "cabinet-refinishing-houston-tx",
     summary:
-      "Raised-panel kitchen cabinets and island painted sage green in a Richmond home, plus the primary bathroom vanity in blue.",
+      "Raised-panel kitchen cabinets and island painted sage green in a Richmond home, plus the primary bathroom vanity in blue and gray living room walls with a darker accent wall behind the fireplace.",
     heroImage: "/images/projects/richmond-sage-kitchen/01-sage-kitchen-corner.jpg",
     afterImage: "/images/projects/richmond-sage-kitchen/01-sage-kitchen-corner.jpg",
     afterAlt: "Richmond kitchen with raised-panel upper and lower cabinets painted sage green under dark granite counters",
@@ -518,16 +519,17 @@ export const PROJECTS: CaseStudy[] = [
       { src: "/images/projects/richmond-sage-kitchen/03-sage-upper-cabinets.jpg", alt: "Sage green upper cabinets around the microwave, with crown molding painted to match" },
       { src: "/images/projects/richmond-sage-kitchen/04-sage-island.jpg", alt: "Angled kitchen island with raised-panel doors and drawers painted sage green" },
       { src: "/images/projects/richmond-sage-kitchen/05-blue-bathroom-vanity.jpg", alt: "Double bathroom vanity with raised-panel doors and drawers painted blue" },
+      { src: "/images/projects/richmond-sage-kitchen/06-living-room-accent-wall.jpg", alt: "Living room with light gray walls, a dark gray accent wall behind the fireplace and white crown molding" },
     ],
     stats: [
       { label: "Location", value: "Richmond, TX" },
-      { label: "Service", value: "Cabinets" },
-      { label: "Areas shown", value: "Kitchen, island, vanity" },
+      { label: "Service", value: "Cabinets + interior" },
+      { label: "Areas shown", value: "Kitchen, vanity, living room" },
       { label: "Warranty", value: "5 years" },
     ],
     metaTitle: "Sage Green Kitchen Cabinets in Richmond, TX",
     metaDescription:
-      "Photos of raised-panel kitchen cabinets and an island painted sage green in Richmond, TX, plus a bathroom vanity painted blue.",
+      "Photos of raised-panel kitchen cabinets and an island painted sage green in Richmond, TX, plus a blue bathroom vanity and a living room with a dark gray fireplace accent wall.",
   },
   {
     // Job photos supplied by Juan on 2026-10-12 (a different Richmond house).
