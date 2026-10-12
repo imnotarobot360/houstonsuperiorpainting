@@ -719,6 +719,35 @@ export const PROJECTS: CaseStudy[] = [
       "Photos of a Cypress, TX kitchen with white raised-panel cabinets, a white range hood and a teal island.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-12: "exterior house in bellaire". Cropped tight to
+    // remove paint buckets, plywood, cords and a ladder; a photo with a crew member left out.
+    // Scope, products and colors unconfirmed.
+    slug: "bellaire-painted-brick-ranch",
+    title: "Painted Brick Ranch Exterior in Bellaire",
+    neighborhood: "Bellaire, Houston",
+    service: "Exterior Painting",
+    serviceSlug: "exterior-painting-houston-tx",
+    summary:
+      "A one-story Bellaire ranch home with gray painted brick and white trim, windows and porch post, photographed after the work.",
+    heroImage: "/images/projects/bellaire-painted-brick-ranch/01-painted-brick-front.jpg",
+    afterImage: "/images/projects/bellaire-painted-brick-ranch/01-painted-brick-front.jpg",
+    afterAlt: "Bellaire ranch home with gray painted brick walls, white trim and white divided-light windows",
+    gallery: [
+      {
+        src: "/images/projects/bellaire-painted-brick-ranch/02-painted-brick-side.jpg",
+        alt: "Side of the gray painted brick ranch with white window trim, fascia and porch post",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "Bellaire" },
+      { label: "Service", value: "Painted brick" },
+      { label: "Finish", value: "Gray, white trim" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Painted Brick Ranch Exterior in Bellaire, TX",
+    metaDescription: "Photos of a Bellaire ranch home with gray painted brick and white trim, windows and porch post.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-12: "exterior painting in katy" (two houses; Juan
     // confirmed both are in Katy). House number and two small yard signs blurred.
     // Scope, products and colors unconfirmed.
