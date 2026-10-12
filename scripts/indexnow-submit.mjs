@@ -13,7 +13,10 @@ const KEY = "1420b82ee04537fa3207aa41a201f7f7"
 const args = process.argv.slice(2)
 const dry = args.includes("--dry-run")
 const sinceIdx = args.indexOf("--since")
-let urls = args.filter((a, i) => !a.startsWith("--") && i !== sinceIdx + 1)
+let urls = args
+  .filter((a, i) => !a.startsWith("--") && !(sinceIdx >= 0 && i === sinceIdx + 1))
+  // Git Bash on Windows rewrites "/path" into "C:/Program Files/Git/path"; undo that.
+  .map((a) => a.replace(/^[A-Za-z]:\/.*?\/Git(?=\/)/, ""))
 
 if (sinceIdx >= 0) {
   const since = Date.parse(args[sinceIdx + 1])
@@ -36,11 +39,16 @@ if (urls.length === 0) {
 console.log(`${urls.length} URL(s):\n${urls.map((u) => "  " + u).join("\n")}`)
 if (dry) process.exit(0)
 
-const res = await fetch("https://api.indexnow.org/indexnow", {
-  method: "POST",
-  headers: { "Content-Type": "application/json; charset=utf-8" },
-  body: JSON.stringify({ host: "houstonsuperiorpainting.com", key: KEY, keyLocation: `${SITE}/${KEY}.txt`, urlList: urls }),
-})
-// 200 = accepted, 202 = accepted (key validation pending). 4xx = problem with key or URLs.
-console.log(`IndexNow responded ${res.status} ${res.statusText}`)
-process.exit(res.status === 200 || res.status === 202 ? 0 : 1)
+// The shared endpoint relays to all engines; Bing's own endpoint is the fallback when it is down.
+const body = JSON.stringify({ host: "houstonsuperiorpainting.com", key: KEY, keyLocation: `${SITE}/${KEY}.txt`, urlList: urls })
+for (const endpoint of ["https://api.indexnow.org/indexnow", "https://www.bing.com/indexnow"]) {
+  try {
+    const res = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/json; charset=utf-8" }, body })
+    // 200 = accepted, 202 = accepted (key validation pending). 4xx = problem with key or URLs.
+    console.log(`${endpoint} responded ${res.status} ${res.statusText}`)
+    process.exit(res.status === 200 || res.status === 202 ? 0 : 1)
+  } catch (e) {
+    console.log(`${endpoint} unreachable (${e.cause?.code || e.message}); trying the next endpoint`)
+  }
+}
+process.exit(1)
