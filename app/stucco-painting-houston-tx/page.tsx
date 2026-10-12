@@ -2,12 +2,17 @@ import { ReviewsInline } from "@/components/office-reviews"
 import { BUSINESS } from "@/lib/business"
 import type { Metadata } from 'next'
 import Link from "next/link"
+import Image from "next/image"
+import { LOCAL_PROOF_PROJECTS } from "@/lib/projects"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { BeforeAfter } from "@/components/luxury/before-after"
 import { RelatedLinks } from "@/components/luxury/related-links"
 import { CheckCircle, Phone, Star, Shield, Clock, Users, ArrowRight } from "lucide-react"
+
+// Real stucco jobs with confirmed photos (lib/projects.ts); the section hides when empty.
+const STUCCO_PROJECTS = LOCAL_PROOF_PROJECTS.filter((p) => p.serviceSlug === "stucco-painting-houston-tx")
 
 export const metadata: Metadata = {
   title: 'Stucco Painting & Repair Houston TX | Houston Superior Painting',
@@ -304,6 +309,29 @@ export default function StuccoPaintingHoustonTX() {
               ))}
             </ol>
           </section>
+
+          {STUCCO_PROJECTS.length > 0 && (
+            <section className="mb-16">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Recent Stucco Project</h2>
+              <div className="grid gap-6 sm:grid-cols-2">
+                {STUCCO_PROJECTS.map((p) => (
+                  <Link
+                    key={p.slug}
+                    href={`/projects/${p.slug}`}
+                    className="group block overflow-hidden rounded-xl border border-border bg-card hover:border-primary transition-colors"
+                  >
+                    <div className="relative aspect-[4/3]">
+                      <Image src={p.heroImage} alt={p.afterAlt} fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
+                    </div>
+                    <div className="p-4">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{p.neighborhood}</p>
+                      <h3 className="font-semibold text-foreground group-hover:text-primary">{p.title}</h3>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* FAQ */}
           <section className="mb-16">

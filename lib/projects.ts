@@ -719,6 +719,39 @@ export const PROJECTS: CaseStudy[] = [
       "Photos of a Cypress, TX kitchen with white raised-panel cabinets, a white range hood and a teal island.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-12: "exterior paint, stucco in west university".
+    // House number blurred; a parked car cropped out; three photos with ladders/car left out.
+    // Scope, products and colors unconfirmed.
+    slug: "west-university-stucco-exterior",
+    title: "Stucco Exterior Painting in West University",
+    neighborhood: "West University, Houston",
+    service: "Stucco Painting",
+    serviceSlug: "stucco-painting-houston-tx",
+    summary:
+      "A two-story West University home with white painted stucco, stone accents, dark trim and dormers, photographed after the work.",
+    heroImage: "/images/projects/west-university-stucco-exterior/01-front-stucco-and-stone.jpg",
+    afterImage: "/images/projects/west-university-stucco-exterior/01-front-stucco-and-stone.jpg",
+    afterAlt: "West University home with white painted stucco, a stone entry tower and dark window trim",
+    gallery: [
+      {
+        src: "/images/projects/west-university-stucco-exterior/02-garage-wing-and-dormers.jpg",
+        alt: "White stucco garage wing with an arched header, two dormers and a dark garage door",
+      },
+      {
+        src: "/images/projects/west-university-stucco-exterior/03-side-elevation.jpg",
+        alt: "Side elevation of the white stucco garage wing with dark gutters and downspouts",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "West University" },
+      { label: "Service", value: "Stucco exterior" },
+      { label: "Finish", value: "White, dark trim" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Stucco Exterior Painting in West University, Houston",
+    metaDescription: "Photos of a West University home with white painted stucco, stone accents and dark trim.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-12: "cabinets in bellaire". Two photos cropped
     // to remove a spray bottle and broom handle in the sink; a mid-job photo (ladder, drop
     // cloths) and a cluttered counter photo left out. Scope, products, colors unconfirmed.

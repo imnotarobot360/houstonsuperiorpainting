@@ -203,6 +203,7 @@ export default function ExteriorPaintingHoustonTX() {
         { label: "Soft washing in Houston", href: "/soft-washing-houston-tx" },
         { label: "How often to paint a house in Houston", href: "/how-often-paint-house-houston" },
         { label: "Project: two-story exterior in The Heights", href: "/projects/heights-exterior-siding-repaint" },
+        { label: "Project: stucco exterior in West University", href: "/projects/west-university-stucco-exterior" },
       ]}
       schema={[serviceSchema]}
     />
