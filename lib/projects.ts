@@ -719,6 +719,68 @@ export const PROJECTS: CaseStudy[] = [
       "Photos of a Cypress, TX kitchen with white raised-panel cabinets, a white range hood and a teal island.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-12: "exterior painting in katy" (two houses; Juan
+    // confirmed both are in Katy). House number and two small yard signs blurred.
+    // Scope, products and colors unconfirmed.
+    slug: "katy-tan-stucco-exterior",
+    title: "Tan Stucco Exterior Painting in Katy",
+    neighborhood: "Katy, TX",
+    service: "Exterior Painting",
+    serviceSlug: "exterior-painting-houston-tx",
+    summary:
+      "A two-story Katy home with tan stucco, a stone-clad turret entry, dark brown trim, shutters and garage doors, photographed after the work.",
+    heroImage: "/images/projects/katy-tan-stucco-exterior/01-front-and-garages.jpg",
+    afterImage: "/images/projects/katy-tan-stucco-exterior/01-front-and-garages.jpg",
+    afterAlt: "Katy two-story home with tan stucco walls, dark brown trim and shutters, and brown garage doors",
+    gallery: [
+      {
+        src: "/images/projects/katy-tan-stucco-exterior/02-turret-and-entry.jpg",
+        alt: "Tan stucco turret with stone base, dark trim around the arched windows and a brown single garage door",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "Katy, TX" },
+      { label: "Service", value: "Exterior" },
+      { label: "Finish", value: "Tan, brown trim" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Tan Stucco Exterior Painting in Katy, TX",
+    metaDescription: "Photos of a Katy, TX home with tan painted stucco, dark brown trim and shutters, and a stone turret entry.",
+  },
+  {
+    // Second Katy house from the same 2026-10-12 batch. House number blurred; a parked car
+    // cropped out; a photo shadow cropped out. Photos with a license plate or lawn-chair
+    // clutter left out. Scope, products and colors unconfirmed.
+    slug: "katy-white-stucco-exterior",
+    title: "White Stucco Exterior Painting in Katy",
+    neighborhood: "Katy, TX",
+    service: "Exterior Painting",
+    serviceSlug: "exterior-painting-houston-tx",
+    summary:
+      "A two-story Katy home with white stucco, an arched entry, white trim and gutters, and a rear patio with a pergola, photographed after the work.",
+    heroImage: "/images/projects/katy-white-stucco-exterior/01-front-entry-arch.jpg",
+    afterImage: "/images/projects/katy-white-stucco-exterior/01-front-entry-arch.jpg",
+    afterAlt: "Katy two-story home with white stucco walls, an arched front entry and white trim behind palm trees",
+    gallery: [
+      {
+        src: "/images/projects/katy-white-stucco-exterior/02-rear-patio-and-pergola.jpg",
+        alt: "Back of the white stucco home with a second-floor balcony, covered patio and wood pergola",
+      },
+      {
+        src: "/images/projects/katy-white-stucco-exterior/03-side-elevation.jpg",
+        alt: "Side elevation of the white stucco home with white gutters, downspouts and a side door",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "Katy, TX" },
+      { label: "Service", value: "Exterior" },
+      { label: "Finish", value: "White" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "White Stucco Exterior Painting in Katy, TX",
+    metaDescription: "Photos of a Katy, TX home with white painted stucco, white trim and gutters, and a rear patio with a pergola.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-12: "exterior paint, stucco in west university".
     // House number blurred; a parked car cropped out; three photos with ladders/car left out.
     // Scope, products and colors unconfirmed.
