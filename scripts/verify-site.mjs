@@ -72,6 +72,10 @@ for (const { loc } of urls) {
   for (const b of jsonld(r.text)) { jsonldBlocks++; if (b.__error) fail(`${path} JSON-LD parse error: ${b.__error}`) }
   if (/jj\s*semo/i.test(r.text)) fail(`${path} contains "JJ Semo"`)
   if (/certa\s*pro/i.test(r.text)) fail(`${path} names a competitor (CertaPro)`)
+  // Owner 2026-10-12: our cabinet finish is Benjamin Moore Command only.
+  const cab = /(Moore Advance|Emerald Urethane)[^.<]{0,80}(cabinet)|cabinets?[^.<]{0,80}(Moore Advance|Emerald Urethane)/i.exec(visible(r.text))
+  // The brand comparison table lists each brand's cabinet lines; that is not what we use.
+  if (cab && path !== "/blog/benjamin-moore-vs-sherwin-williams") fail(`${path} names a non-Command cabinet paint: "${cab[0].slice(0, 90)}"`)
   for (const m of r.text.matchAll(/href="(\/[^"#?]*)/g)) if (!m[1].startsWith("/_next")) internalLinks.add(m[1].replace(/\/$/, "") || "/")
 }
 console.log(`crawled ${pages.size} pages, JSON-LD blocks parsed: ${jsonldBlocks}`)

@@ -464,6 +464,41 @@ export const PROJECTS: CaseStudy[] = [
       "Photos of a completed interior painting job in a two-story Richmond, TX home: bedrooms, the upstairs landing and the stairwell.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-12 ("interior painting in richmond"):
+    // a second Richmond home, a two-story great room, foyer and dining room.
+    // Finished photos only; scope, products and timeline unconfirmed, so left out.
+    // Dining-room shot cropped to drop a wall mirror and its reflections; one wall
+    // close-up skipped (uneven lighting made the finish look patchy).
+    slug: "richmond-two-story-great-room",
+    title: "Two-Story Great Room Interior in Richmond, TX",
+    neighborhood: "Richmond, TX",
+    service: "Interior Painting",
+    serviceSlug: "interior-painting-houston-tx",
+    summary:
+      "A completed interior painting job in a Richmond home with a two-story great room: tall taupe walls, white crown molding and trim, the foyer and stair wall, and the dining room.",
+    heroImage: "/images/projects/richmond-great-room/01-great-room-fireplace.jpg",
+    afterImage: "/images/projects/richmond-great-room/01-great-room-fireplace.jpg",
+    afterAlt: "Two-story great room in Richmond with taupe walls, white crown molding and baseboards around a stone fireplace",
+    gallery: [
+      { src: "/images/projects/richmond-great-room/02-foyer-and-stairs.jpg", alt: "Wide view of the foyer with taupe walls, white columns, trim and stair skirt" },
+      { src: "/images/projects/richmond-great-room/03-two-story-ceiling.jpg", alt: "Two-story ceiling and white crown molding above the great room fireplace and tall windows" },
+      { src: "/images/projects/richmond-great-room/04-columns-and-stair-wall.jpg", alt: "White columns and door casing beside the stair wall, with taupe walls and white baseboards" },
+      { src: "/images/projects/richmond-great-room/05-french-doors-wall.jpg", alt: "Tall taupe wall beside white French doors and the upstairs overlook" },
+      { src: "/images/projects/richmond-great-room/06-balcony-wall-crown.jpg", alt: "Upper great room wall with white crown molding and the trimmed balcony opening" },
+      { src: "/images/projects/richmond-great-room/07-ceiling-and-overlook.jpg", alt: "Great room ceiling, crown molding and the white overlook railing and panels" },
+      { src: "/images/projects/richmond-great-room/08-dining-room.jpg", alt: "Dining room with taupe walls, white chair rail and wainscot panels and tall windows" },
+    ],
+    stats: [
+      { label: "Location", value: "Richmond, TX" },
+      { label: "Service", value: "Interior" },
+      { label: "Areas shown", value: "Great room, foyer, dining" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Two-Story Great Room Painting in Richmond, TX",
+    metaDescription:
+      "Photos of a completed interior painting job in Richmond, TX: a two-story great room with tall walls and crown molding, the foyer and stair wall, and the dining room.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-07 (exterior painting in The
     // Heights). Cropped to remove a person, part of the house number and the
     // street-side bins. Finished photos only; scope and products unconfirmed.
