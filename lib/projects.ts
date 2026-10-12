@@ -499,6 +499,64 @@ export const PROJECTS: CaseStudy[] = [
       "Photos of a completed interior painting job in Richmond, TX: a two-story great room with tall walls and crown molding, the foyer and stair wall, and the dining room.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-12; he confirmed the sage kitchen and
+    // the blue vanity are the same Richmond house. Cropped to drop a ladder in the
+    // hallway and foreground clutter. Doors are shown open while drying.
+    // Finished photos only; products and timeline unconfirmed, so left out.
+    slug: "richmond-sage-green-kitchen-cabinets",
+    title: "Sage Green Kitchen Cabinets and Blue Vanity in Richmond",
+    neighborhood: "Richmond, TX",
+    service: "Cabinet Refinishing",
+    serviceSlug: "cabinet-refinishing-houston-tx",
+    summary:
+      "Raised-panel kitchen cabinets and island painted sage green in a Richmond home, plus the primary bathroom vanity in blue.",
+    heroImage: "/images/projects/richmond-sage-kitchen/01-sage-kitchen-corner.jpg",
+    afterImage: "/images/projects/richmond-sage-kitchen/01-sage-kitchen-corner.jpg",
+    afterAlt: "Richmond kitchen with raised-panel upper and lower cabinets painted sage green under dark granite counters",
+    gallery: [
+      { src: "/images/projects/richmond-sage-kitchen/02-sage-kitchen-wide.jpg", alt: "Wide view of the sage green kitchen cabinets and island, doors open while the finish dries" },
+      { src: "/images/projects/richmond-sage-kitchen/03-sage-upper-cabinets.jpg", alt: "Sage green upper cabinets around the microwave, with crown molding painted to match" },
+      { src: "/images/projects/richmond-sage-kitchen/04-sage-island.jpg", alt: "Angled kitchen island with raised-panel doors and drawers painted sage green" },
+      { src: "/images/projects/richmond-sage-kitchen/05-blue-bathroom-vanity.jpg", alt: "Double bathroom vanity with raised-panel doors and drawers painted blue" },
+    ],
+    stats: [
+      { label: "Location", value: "Richmond, TX" },
+      { label: "Service", value: "Cabinets" },
+      { label: "Areas shown", value: "Kitchen, island, vanity" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Sage Green Kitchen Cabinets in Richmond, TX",
+    metaDescription:
+      "Photos of raised-panel kitchen cabinets and an island painted sage green in Richmond, TX, plus a bathroom vanity painted blue.",
+  },
+  {
+    // Job photos supplied by Juan on 2026-10-12 (a different Richmond house).
+    // Small originals; cropped to drop a crew member, a broom and paint cans.
+    // Finished photos only; products and timeline unconfirmed, so left out.
+    slug: "richmond-two-tone-kitchen-cabinets",
+    title: "Two-Tone White and Black Kitchen Cabinets in Richmond",
+    neighborhood: "Richmond, TX",
+    service: "Cabinet Refinishing",
+    serviceSlug: "cabinet-refinishing-houston-tx",
+    summary:
+      "A two-tone kitchen in Richmond: white shaker uppers, near-black lowers, tall pantry cabinets and a large island, with brass pulls.",
+    heroImage: "/images/projects/richmond-two-tone-kitchen/01-two-tone-kitchen-island.jpg",
+    afterImage: "/images/projects/richmond-two-tone-kitchen/01-two-tone-kitchen-island.jpg",
+    afterAlt: "Richmond kitchen with white shaker upper cabinets, near-black lower and tall cabinets, and a dark island",
+    gallery: [
+      { src: "/images/projects/richmond-two-tone-kitchen/02-two-tone-kitchen-pantry-wall.jpg", alt: "White upper cabinets beside near-black tall cabinets around the refrigerator" },
+    ],
+    stats: [
+      { label: "Location", value: "Richmond, TX" },
+      { label: "Service", value: "Cabinets" },
+      { label: "Colors", value: "White and black" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Two-Tone Kitchen Cabinets in Richmond, TX",
+    metaDescription:
+      "Photos of a two-tone kitchen in Richmond, TX: white shaker upper cabinets, near-black lowers and tall cabinets, and a large dark island.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-07 (exterior painting in The
     // Heights). Cropped to remove a person, part of the house number and the
     // street-side bins. Finished photos only; scope and products unconfirmed.
