@@ -5,7 +5,12 @@
 import { LOCAL_PROOF_PROJECTS, type CaseStudy } from "@/lib/projects"
 
 // houston-retail-center-exterior: photos sent by Juan for the site, 2026-10-12.
-const APPROVED_COMMERCIAL_SLUGS = ["houston-retail-center-exterior", "cypress-commercial-office-repaint"]
+// houston-storefront-exterior: same day, a separate Houston job (Juan confirmed).
+const APPROVED_COMMERCIAL_SLUGS = [
+  "houston-retail-center-exterior",
+  "houston-storefront-exterior",
+  "cypress-commercial-office-repaint",
+]
 
 export const COMMERCIAL_PROJECTS: CaseStudy[] = APPROVED_COMMERCIAL_SLUGS.map((slug) =>
   LOCAL_PROOF_PROJECTS.find((p) => p.slug === slug),

@@ -745,6 +745,34 @@ export const PROJECTS: CaseStudy[] = [
       "Photos of a Houston retail strip center painted outside: tan stucco, white cornices and arches, orange column accents and green block bases.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-12; he confirmed it is a separate
+    // Houston project from the retail center. Unit numbers blurred; cropped to drop
+    // crew members, a neighboring tenant's logo and litter. Tenants never named.
+    // Finished photos only; scope, products and timeline unconfirmed.
+    slug: "houston-storefront-exterior",
+    title: "Storefront Exterior Painting in Houston",
+    neighborhood: "Houston, TX",
+    service: "Commercial Painting",
+    serviceSlug: "commercial-painting-houston-tx",
+    summary:
+      "A Houston strip-center storefront painted outside in a soft yellow-green with black cornices, column caps and trim, including the stucco parapet, brick walls and columns.",
+    heroImage: "/images/projects/houston-storefront-exterior/01-storefront-angle.jpg",
+    afterImage: "/images/projects/houston-storefront-exterior/01-storefront-angle.jpg",
+    afterAlt: "Storefront with soft yellow-green stucco and brick, black cornice and trim, and black column caps",
+    gallery: [
+      { src: "/images/projects/houston-storefront-exterior/02-storefront-front.jpg", alt: "Front view of the yellow-green storefront with black cornice, black diamond accents and stone column bases" },
+    ],
+    stats: [
+      { label: "Location", value: "Houston, TX" },
+      { label: "Service", value: "Commercial exterior" },
+      { label: "Colors", value: "Yellow-green and black" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Storefront Exterior Painting in Houston, TX",
+    metaDescription:
+      "Photos of a Houston storefront painted outside in soft yellow-green with black cornices, column caps and trim over stucco and brick.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-07: exterior painting in West
     // University. The house number was blurred and a security-company yard sign
     // cropped out. Finished photos only; whether the dark trim, gutters and
