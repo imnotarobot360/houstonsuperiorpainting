@@ -719,6 +719,39 @@ export const PROJECTS: CaseStudy[] = [
       "Photos of a Cypress, TX kitchen with white raised-panel cabinets, a white range hood and a teal island.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-12: "cabinets in bellaire". Two photos cropped
+    // to remove a spray bottle and broom handle in the sink; a mid-job photo (ladder, drop
+    // cloths) and a cluttered counter photo left out. Scope, products, colors unconfirmed.
+    slug: "bellaire-white-glass-front-cabinets",
+    title: "White Glass-Front Kitchen Cabinets in Bellaire",
+    neighborhood: "Bellaire, Houston",
+    service: "Cabinet Refinishing",
+    serviceSlug: "cabinet-refinishing-houston-tx",
+    summary:
+      "A Bellaire kitchen with white glass-front upper cabinets and white beadboard base cabinets, photographed after the work.",
+    heroImage: "/images/projects/bellaire-white-glass-cabinets/01-glass-front-uppers.jpg",
+    afterImage: "/images/projects/bellaire-white-glass-cabinets/01-glass-front-uppers.jpg",
+    afterAlt: "Bellaire kitchen with a run of white glass-front upper cabinets under a vaulted ceiling",
+    gallery: [
+      {
+        src: "/images/projects/bellaire-white-glass-cabinets/02-glass-cabinets-by-refrigerator.jpg",
+        alt: "White glass-front cabinets with mullions mounted beside the refrigerator",
+      },
+      {
+        src: "/images/projects/bellaire-white-glass-cabinets/03-beadboard-base-cabinets.jpg",
+        alt: "White beadboard base cabinet door and drawer at the end of the counter",
+      },
+    ],
+    stats: [
+      { label: "Location", value: "Bellaire" },
+      { label: "Service", value: "Cabinets" },
+      { label: "Finish", value: "White" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "White Glass-Front Kitchen Cabinets in Bellaire, TX",
+    metaDescription: "Photos of a Bellaire kitchen with white glass-front upper cabinets and white beadboard base cabinets.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-11: "cabinets in sienna". Uppers photo
     // cropped to remove coffee items; island close-up cropped to remove counter items.
     // Photos with towels, boxes, dishes or a paint can left out. Scope, products and

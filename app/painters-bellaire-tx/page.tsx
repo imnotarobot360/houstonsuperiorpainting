@@ -169,19 +169,19 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
         <section className="container mx-auto px-4 max-w-4xl pb-12">
           <div className="bg-card rounded-xl p-8 border border-border">
             <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
-              Recent Project Nearby
+              Recent Project in Bellaire
             </h2>
             <p className="text-foreground leading-relaxed">
-              In nearby West University, we painted a two-story brick home white.{" "}
+              In Bellaire, we painted a kitchen of glass-front upper cabinets and beadboard base cabinets white.{" "}
               <Link
-                href="/projects/west-university-painted-brick-exterior"
+                href="/projects/bellaire-white-glass-front-cabinets"
                 className="text-primary font-medium hover:underline"
               >
-                See the West University painted brick project
+                See the Bellaire cabinet project
               </Link>
               , or read about our{" "}
-              <Link href="/exterior-painting-houston-tx" className="text-primary font-medium hover:underline">
-                exterior painting service
+              <Link href="/cabinet-refinishing-houston-tx" className="text-primary font-medium hover:underline">
+                cabinet refinishing service
               </Link>
               .
             </p>
