@@ -92,6 +92,14 @@ export function LocationPageTemplate({
     ? undefined
     : LOCAL_PROOF_PROJECTS.find((p) => p.neighborhood.split(",")[0].trim() === nearbyCity)
   const shownProject = cityProject ?? nearbyProject ?? exampleProject
+  // Any other real projects in this city, listed as links under the featured one.
+  const moreCityProjects = cityProject
+    ? LOCAL_PROOF_PROJECTS.filter(
+        (p) =>
+          p.slug !== cityProject.slug &&
+          p.neighborhood.split(",")[0].trim().toLowerCase() === city.trim().toLowerCase(),
+      )
+    : []
 
   const crumbs = [
     { name: "Home", url: `${SITE}/` },
@@ -384,6 +392,20 @@ export function LocationPageTemplate({
               </Link>
               .
             </p>
+            {moreCityProjects.length > 0 && (
+              <div className="mt-4">
+                <p className="font-semibold text-foreground">More projects in {city}:</p>
+                <ul className="mt-2 list-disc pl-5 text-foreground/80">
+                  {moreCityProjects.map((p) => (
+                    <li key={p.slug}>
+                      <Link href={`/projects/${p.slug}`} className="text-primary hover:underline">
+                        {p.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </section>
         )}
 
