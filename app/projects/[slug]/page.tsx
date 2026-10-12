@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { BeforeAfter } from "@/components/luxury/before-after"
 import { Reveal } from "@/components/luxury/reveal"
 import {
-  PROJECTS,
+  LOCAL_PROOF_PROJECTS,
   getProject,
   getAllProjectSlugs,
   getCompletedDate,
@@ -38,6 +38,8 @@ const NEIGHBORHOOD_CITY_PAGE: Record<string, string> = {
   Fulshear: "painters-fulshear-tx",
   Magnolia: "painters-magnolia-tx",
   Pearland: "painters-pearland-tx",
+  Katy: "painters-katy-tx",
+  Sienna: "painters-sienna-tx",
 }
 
 function cityPageFor(neighborhood: string): { name: string; slug: string } | undefined {
@@ -94,7 +96,10 @@ export default async function ProjectPage({
   if (!project) notFound()
 
   const url = `https://houstonsuperiorpainting.com/projects/${project.slug}`
-  const related = PROJECTS.filter((p) => p.slug !== project.slug).slice(0, 3)
+  // Real-photo jobs only, same service first.
+  const related = LOCAL_PROOF_PROJECTS.filter((p) => p.slug !== project.slug)
+    .sort((a, b) => Number(b.serviceSlug === project.serviceSlug) - Number(a.serviceSlug === project.serviceSlug))
+    .slice(0, 3)
   const cityPage = cityPageFor(project.neighborhood)
   const completedIso = getCompletedDate(project)
   const completedMonth = formatCompletedMonth(project)

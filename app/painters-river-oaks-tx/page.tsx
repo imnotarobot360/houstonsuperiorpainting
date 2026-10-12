@@ -134,15 +134,15 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
         <section className="container mx-auto px-4 max-w-4xl pb-12">
           <div className="bg-card rounded-xl p-8 border border-border">
             <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
-              Recent Project in River Oaks
+              Recent Project Nearby
             </h2>
             <p className="text-foreground leading-relaxed">
-              On a two-story River Oaks home, we did a full exterior repaint with rot repair and re-caulking before the finish coats.{" "}
+              In nearby West University, we painted a two-story brick home white.{" "}
               <Link
-                href="/projects/river-oaks-exterior-restoration"
+                href="/projects/west-university-painted-brick-exterior"
                 className="text-primary font-medium hover:underline"
               >
-                See the River Oaks exterior restoration
+                See the West University painted brick project
               </Link>
               , or read about our{" "}
               <Link href="/exterior-painting-houston-tx" className="text-primary font-medium hover:underline">

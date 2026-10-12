@@ -137,12 +137,12 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
               Recent Project Nearby
             </h2>
             <p className="text-foreground leading-relaxed">
-              In the nearby Memorial area of Houston, we repainted the interior of a home with one cohesive palette across walls and trim.{" "}
+              In The Heights, we repainted the exterior of a two-story home, front elevation to porch.{" "}
               <Link
-                href="/projects/memorial-whole-home-interior-repaint"
+                href="/projects/heights-exterior-siding-repaint"
                 className="text-primary font-medium hover:underline"
               >
-                See the Memorial whole-home interior repaint
+                See the Heights exterior project
               </Link>
               . For homes along the Memorial Drive corridor outside the villages, see our{" "}
               <Link href="/painters-memorial-tx" className="text-primary font-medium hover:underline">

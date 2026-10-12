@@ -172,16 +172,16 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
               Recent Project Nearby
             </h2>
             <p className="text-foreground leading-relaxed">
-              In nearby West University, we refinished a kitchen&apos;s oak cabinets with a sprayed, painted finish.{" "}
+              In nearby West University, we painted a two-story brick home white.{" "}
               <Link
-                href="/projects/west-university-kitchen-cabinet-refinishing"
+                href="/projects/west-university-painted-brick-exterior"
                 className="text-primary font-medium hover:underline"
               >
-                See the West University cabinet refinishing project
+                See the West University painted brick project
               </Link>
               , or read about our{" "}
-              <Link href="/cabinet-refinishing-houston-tx" className="text-primary font-medium hover:underline">
-                cabinet refinishing service
+              <Link href="/exterior-painting-houston-tx" className="text-primary font-medium hover:underline">
+                exterior painting service
               </Link>
               .
             </p>

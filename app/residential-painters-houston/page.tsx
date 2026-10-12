@@ -104,9 +104,9 @@ export default function ResidentialPaintersHouston() {
 
           <h2 className="text-2xl font-serif font-bold mt-10 mb-4">Houston Projects</h2>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li><Link href="/projects/memorial-whole-home-interior-repaint" className="text-primary underline">Whole-home interior repaint in Memorial</Link></li>
-            <li><Link href="/projects/river-oaks-exterior-restoration" className="text-primary underline">Exterior restoration in River Oaks</Link></li>
-            <li><Link href="/projects/west-university-kitchen-cabinet-refinishing" className="text-primary underline">Kitchen cabinet refinishing in West University</Link></li>
+            <li><Link href="/projects/richmond-interior-repaint" className="text-primary underline">Interior repaint in Richmond</Link></li>
+            <li><Link href="/projects/heights-exterior-siding-repaint" className="text-primary underline">Two-story exterior in The Heights</Link></li>
+            <li><Link href="/projects/katy-white-navy-kitchen-cabinets" className="text-primary underline">White and navy kitchen cabinets in Katy</Link></li>
           </ul>
         </div>
       </section>

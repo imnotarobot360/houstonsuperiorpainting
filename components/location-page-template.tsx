@@ -19,7 +19,7 @@ import { LOCAL_PROOF_PROJECTS, getProject } from "@/lib/projects"
 
 // The River Oaks exterior is a project with real job photos. City pages show it
 // as an example of our exterior work, labelled with its own neighborhood.
-const exampleProject = getProject("river-oaks-exterior-restoration")
+const exampleProject = getProject("heights-exterior-siding-repaint")
 
 // City pages with no project of their own, mapped to a bordering city that has
 // one. The project is always labelled with its real city.

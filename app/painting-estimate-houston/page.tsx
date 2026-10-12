@@ -138,7 +138,7 @@ const ESTIMATE_LINES = [
  * This page sells estimates on the promise that nothing is hidden, so an
  * invented before/after would undercut the one thing it is arguing.
  */
-const GALLERY_SLUGS = ["memorial-whole-home-interior-repaint", "river-oaks-exterior-restoration"]
+const GALLERY_SLUGS = ["cypress-commercial-office-repaint"]
 
 const GALLERY_PROJECTS = PROJECTS.filter((project) => GALLERY_SLUGS.includes(project.slug))
 
@@ -437,7 +437,7 @@ export default function PaintingEstimatePage() {
                 grid leaves a conspicuous empty cell. Two wider cards fill the
                 row and give the photographs more room, which suits a section
                 whose whole job is letting people look closely. */}
-            <ul className="mt-12 grid gap-8 sm:grid-cols-2">
+            <ul className={`mt-12 grid gap-8 ${GALLERY_PROJECTS.length > 1 ? "sm:grid-cols-2" : "max-w-3xl mx-auto"}`}>
               {GALLERY_PROJECTS.map((project) => (
                 <li key={project.slug}>
                   <Link

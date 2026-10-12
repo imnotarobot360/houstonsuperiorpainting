@@ -11,6 +11,7 @@ import { Footer } from "@/components/footer"
 import FAQ from "@/components/faq"
 import { JsonLd } from "@/components/structured-data"
 import { BUSINESS } from "@/lib/business"
+import { LOCAL_PROOF_PROJECTS } from "@/lib/projects"
 import {
   PageHero,
   QuickAnswer,
@@ -173,6 +174,36 @@ export function ServiceSkeleton(d: ServiceSkeletonData) {
         <Section id="paints" title={d.paintsTitle ?? "Paints we use"}>
           {d.paints}
         </Section>
+
+        {(() => {
+          // Real jobs with confirmed photos for this service; hidden when there are none.
+          const projects = LOCAL_PROOF_PROJECTS.filter((p) => p.serviceSlug === d.slug).slice(0, 6)
+          if (projects.length === 0) return null
+          return (
+            <Section id="projects" title="Recent projects">
+              <div className="not-prose grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {projects.map((p) => (
+                  <Link
+                    key={p.slug}
+                    href={`/projects/${p.slug}`}
+                    className="group block overflow-hidden rounded-xl border border-border bg-card hover:border-primary transition-colors"
+                  >
+                    <div className="relative aspect-[4/3]">
+                      <Image src={p.heroImage} alt={p.afterAlt} fill sizes="(min-width: 1024px) 300px, (min-width: 640px) 50vw, 100vw" className="object-cover" />
+                    </div>
+                    <div className="p-4">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{p.neighborhood}</p>
+                      <h3 className="font-semibold text-foreground group-hover:text-primary">{p.title}</h3>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <p className="mt-4">
+                <Link href="/projects">See all projects</Link>
+              </p>
+            </Section>
+          )
+        })()}
 
         <div className="container mx-auto max-w-4xl mb-14">
           <FAQ items={d.faqs} title="Frequently asked questions" variant="compact" />

@@ -165,7 +165,7 @@ export const REVIEWS: ApprovedReview[] = [
     notes: "5 stars, Katy profile, ~2 years before 2026-10-10. Four accent walls (living room, office, stairs, media room); fast scheduling.",
   },
   // Not shortlisted: the Magnolia review posted under "Juan Serra" and the Cypress
-  // review under "JJ Semo" (owner / insider reviews break Google policy), and Katy
+  // review posted by a company insider (owner / insider reviews break Google policy), and Katy
   // reviews that name the business's earlier name. Owner (2026-10-11): same business,
   // but never mention the earlier name on the site, so only quote Katy reviews that do not use it.
 ]

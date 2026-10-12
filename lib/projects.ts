@@ -81,6 +81,8 @@ export interface CaseStudy {
 export const PROJECTS: CaseStudy[] = [
   {
     slug: "memorial-whole-home-interior-repaint",
+    // Stock /images/luxury photo, not a job photo; unconfirmed by the owner (2026-10-12).
+    photosNeedReview: true,
     title: "Whole-Home Interior Repaint in Memorial",
     neighborhood: "Memorial, Houston",
     service: "Interior Painting",
@@ -140,6 +142,8 @@ export const PROJECTS: CaseStudy[] = [
   },
   {
     slug: "river-oaks-exterior-restoration",
+    // Stock /images/luxury photo, not a job photo; unconfirmed by the owner (2026-10-12).
+    photosNeedReview: true,
     title: "Exterior Restoration in River Oaks",
     neighborhood: "River Oaks, Houston",
     service: "Exterior Painting",
@@ -199,6 +203,8 @@ export const PROJECTS: CaseStudy[] = [
   },
   {
     slug: "west-university-kitchen-cabinet-refinishing",
+    // Stock /images/luxury photo, not a job photo; unconfirmed by the owner (2026-10-12).
+    photosNeedReview: true,
     title: "Kitchen Cabinet Refinishing in West University",
     neighborhood: "West University, Houston",
     service: "Cabinet Refinishing",
