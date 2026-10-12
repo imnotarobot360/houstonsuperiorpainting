@@ -52,7 +52,7 @@ const homeFaqs = [
   },
   {
     q: "What paint brands do you use?",
-    a: "We exclusively use premium paints from Sherwin-Williams and Benjamin Moore. For interiors, we use Benjamin Moore Aura or Regal Select. For exteriors in Houston's climate, we use Sherwin-Williams Duration or Emerald. For cabinets, we use Benjamin Moore Advance or Sherwin-Williams Emerald Urethane Trim Enamel for a factory-smooth finish.",
+    a: "We exclusively use premium paints from Sherwin-Williams and Benjamin Moore. For interiors, we use Benjamin Moore Aura or Regal Select. For exteriors in Houston's climate, we use Sherwin-Williams Duration or Emerald. For cabinets, we use Benjamin Moore Command, a waterborne acrylic urethane, for a factory-smooth finish.",
   },
   {
     q: "Do I need to move furniture before you paint?",

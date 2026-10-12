@@ -40,7 +40,7 @@ const faqItems = [
   },
   {
     q: "What finish should I use on kitchen cabinets?",
-    a: "Semi-gloss or satin is best for kitchen cabinets. We recommend Sherwin-Williams Emerald Urethane or Benjamin Moore Advance in semi-gloss for maximum durability and a smooth, factory-like finish.",
+    a: "Semi-gloss or satin is best for kitchen cabinets. We use Benjamin Moore Command, a waterborne acrylic urethane (satin or gloss), for durability and a smooth, factory-like finish.",
   },
   {
     q: "Does paint finish affect how long paint lasts?",

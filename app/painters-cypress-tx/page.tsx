@@ -51,7 +51,7 @@ const DATA: OfficeCityPageData = {
   products: (
     <>
       Products are named in the estimate: Sherwin-Williams Duration or Emerald outside, Benjamin Moore inside, and Benjamin
-      Moore Advance or Sherwin-Williams Emerald Urethane on cabinets, like the{" "}
+      Moore Command on cabinets, like the{" "}
       <Link href="/projects/cypress-two-tone-kitchen-cabinets">two-tone kitchen we refinished in Cypress</Link>.
     </>
   ),

@@ -53,7 +53,7 @@ const DATA: OfficeCityPageData = {
   products: (
     <>
       For Sugar Land homes we spec Sherwin-Williams Duration or Emerald on exteriors, Benjamin Moore on interior walls and
-      trim, and Benjamin Moore Advance or Sherwin-Williams Emerald Urethane on kitchen cabinets.
+      trim, and Benjamin Moore Command on kitchen cabinets.
     </>
   ),
   pricesNote: (

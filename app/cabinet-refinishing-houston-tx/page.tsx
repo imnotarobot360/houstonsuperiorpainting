@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "Do you use Sherwin-Williams or Benjamin Moore?",
-    a: "Both. Benjamin Moore Advance or Sherwin-Williams Emerald Urethane Trim Enamel over a bonding primer. Both cure hard, level smoothly, and hold up to daily cleaning.",
+    a: "We spray Benjamin Moore Command, a waterborne acrylic urethane made for cabinets, doors and trim, over a bonding primer. It levels smoothly, cures hard (7–10 days for full cure), and holds up to daily cleaning. Colors can be matched from any Sherwin-Williams or Benjamin Moore fan deck.",
   },
   {
     q: "What prep do you do before painting cabinets in Houston humidity?",
@@ -96,7 +96,7 @@ export default function CabinetRefinishingPage() {
         <>
           Painting kitchen cabinets in Houston costs {PRICES_2026.cabinetsPerDoor} per door and drawer front in 2026, or{" "}
           {PRICES_2026.cabinetsPerKitchen} for most kitchens. {BUSINESS.name} degreases, sands, bonding-primes, and
-          sprays Benjamin Moore Advance or Sherwin-Williams Emerald Urethane for a factory-smooth finish, with a{" "}
+          sprays Benjamin Moore Command for a factory-smooth finish, with a{" "}
           {BUSINESS.trust.warrantyYears}-year workmanship warranty. Free estimates: {BUSINESS.phone}.
         </>
       }
@@ -168,9 +168,8 @@ export default function CabinetRefinishingPage() {
       paints={
         <>
           <p>
-            <strong>Benjamin Moore Advance</strong> and <strong>Sherwin-Williams Emerald Urethane Trim Enamel</strong>{" "}
-            are our cabinet enamels. Both are waterborne, level out like an oil finish, cure harder than wall paint, and
-            wipe clean. They go over a bonding primer made for slick factory finishes. Colors can be matched from any
+            <strong>Benjamin Moore Command</strong> is our cabinet finish: a waterborne acrylic urethane that levels out
+            smoothly, cures harder than wall paint, and wipes clean. It reaches full cure in 7–10 days. They go over a bonding primer made for slick factory finishes. Colors can be matched from any
             Sherwin-Williams or Benjamin Moore fan deck.
           </p>
           <p>

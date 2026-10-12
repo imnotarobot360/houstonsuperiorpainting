@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: "Is it worth it to paint kitchen cabinets?", a: "Absolutely. Professional cabinet painting costs " + PRICES_2026.cabinetsPerKitchen + " compared to $15,000–$35,000+ for new cabinets. You save 60–70% and get a factory-quality finish that lasts 10+ years with proper prep and premium products." },
-  { q: "How long do painted cabinets last?", a: "Professionally painted cabinets last 8–12 years before needing a refresh. The key is proper preparation (degreasing, sanding, priming) and using cabinet-grade paint like Sherwin-Williams Emerald Urethane or Benjamin Moore Advance." },
+  { q: "How long do painted cabinets last?", a: "Professionally painted cabinets last 8–12 years before needing a refresh. The key is proper preparation (degreasing, sanding, priming) and using a cabinet-grade finish. We use Benjamin Moore Command." },
   { q: "Can you paint over laminate cabinets?", a: "Yes, with the right preparation. Laminate requires a bonding primer (like Stix by XIM or BIN Shellac) before paint. The finish won’t be as durable as on wood, but it can look excellent for 5–8 years." },
-  { q: "What is the best paint for kitchen cabinets?", a: "We recommend Sherwin-Williams Emerald Urethane Trim Enamel or Benjamin Moore Advance. Both are self-leveling, extremely durable, and cure to a hard, furniture-quality finish." },
+  { q: "What is the best paint for kitchen cabinets?", a: "We use Benjamin Moore Command, a waterborne acrylic urethane made for cabinets, doors and trim. It levels smoothly, is very durable, and cures to a hard finish in 7–10 days." },
   { q: "Should I paint or replace 20-year-old cabinets?", a: "If the cabinet boxes are solid wood and structurally sound, painting is almost always the better choice. Replace only if boxes are water-damaged, delaminating, or the layout needs to change." },
   { q: "How long does cabinet painting take?", a: "A full kitchen (20–30 doors) takes 5–8 working days. We remove all doors and hardware, spray in a controlled environment, and reinstall. Your kitchen is partially usable throughout." },
 ];

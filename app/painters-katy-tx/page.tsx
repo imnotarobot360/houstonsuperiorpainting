@@ -53,7 +53,7 @@ const DATA: OfficeCityPageData = {
   products: (
     <>
       On Katy exteriors we use Sherwin-Williams Duration or Emerald. Interiors get Benjamin Moore, and cabinets get Benjamin
-      Moore Advance or Sherwin-Williams Emerald Urethane.
+      Moore Command.
     </>
   ),
   pricesNote: (

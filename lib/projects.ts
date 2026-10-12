@@ -248,7 +248,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     products: [
       "BIN / specialty bonding primer",
-      "Sherwin-Williams Emerald Urethane Trim Enamel",
+      "Benjamin Moore Command waterborne acrylic urethane",
       "Grain filler & fine-finish abrasives",
     ],
     results:

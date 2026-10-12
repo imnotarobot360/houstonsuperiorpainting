@@ -147,7 +147,7 @@ export default function BenjaminMooreVsSherwinWilliamsPage() {
           </tr>
           <tr>
             <td>Trim, doors &amp; cabinets</td>
-            <td>Advance</td>
+            <td>Command, Advance</td>
             <td>Emerald Urethane Trim Enamel, ProClassic</td>
           </tr>
           <tr>
@@ -189,9 +189,9 @@ export default function BenjaminMooreVsSherwinWilliamsPage() {
         most homeowners — excellent coverage and durability without Aura&apos;s price tag.
       </p>
       <p>
-        <strong>Advance for trim and cabinets.</strong> Advance is a waterborne alkyd that levels out beautifully for a
-        smooth, hard finish on doors, trim, and cabinets. The trade-off is patience: it needs a long dry time before
-        it&apos;s ready for recoat.
+        <strong>Command for cabinets.</strong> Command is Benjamin Moore&apos;s waterborne acrylic urethane for cabinets,
+        doors, and trim. It dries fast, recoats in about an hour, and cures to a hard, washable finish; it is what we
+        spray on kitchen cabinets.
       </p>
       <p>
         <strong>Famous color library.</strong> Colors like White Dove, Hale Navy, and Revere Pewter are designer
@@ -276,8 +276,8 @@ export default function BenjaminMooreVsSherwinWilliamsPage() {
           Aura. (See <Link href="/interior-painting-houston-tx">interior painting</Link>.)
         </li>
         <li>
-          <strong>Painting cabinets, trim, or doors?</strong> A dedicated enamel — Benjamin Moore Advance or
-          Sherwin-Williams Emerald Urethane. (See{" "}
+          <strong>Painting cabinets, trim, or doors?</strong> A dedicated cabinet finish. We use Benjamin Moore
+          Command, a waterborne acrylic urethane. (See{" "}
           <Link href="/cabinet-refinishing-houston-tx">cabinet painting</Link>.)
         </li>
         <li>

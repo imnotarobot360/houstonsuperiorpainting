@@ -182,7 +182,7 @@ const GROUPS: Group[] = [
       },
       {
         q: "What paint do you use?",
-        a: "Sherwin-Williams Duration and Emerald for exteriors, Benjamin Moore Aura or Regal Select for interiors, and Benjamin Moore Advance or Sherwin-Williams Emerald Urethane for cabinets.",
+        a: "Sherwin-Williams Duration and Emerald for exteriors, Benjamin Moore Aura or Regal Select for interiors, and Benjamin Moore Command (a waterborne acrylic urethane) for cabinets.",
       },
       {
         q: "Why do Houston exteriors cost more to paint than the national average?",
