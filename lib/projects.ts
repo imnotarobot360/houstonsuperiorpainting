@@ -652,6 +652,39 @@ export const PROJECTS: CaseStudy[] = [
       "Before and after: a Cypress, TX commercial office repainted from scuffed off-white to soft blue, including hallways, offices and the break room.",
   },
   {
+    // Job photos supplied by Juan on 2026-10-12 ("exterior commercial paint in
+    // houston"). Street numbers and license plates blurred. Tenant signs are left
+    // as photographed but never named in the text (no implied endorsement).
+    // Finished photos only; scope, products and timeline unconfirmed. A separate
+    // yellow storefront in the same batch is held until Juan confirms it.
+    slug: "houston-retail-center-exterior",
+    title: "Retail Center Exterior Painting in Houston",
+    neighborhood: "Houston, TX",
+    service: "Commercial Painting",
+    serviceSlug: "commercial-painting-houston-tx",
+    summary:
+      "A Houston retail strip center painted outside: tan stucco body, white cornices, arches and trim, orange column accents and green block bases, along storefronts on both wings.",
+    heroImage: "/images/projects/houston-retail-center/01-center-entry-tower.jpg",
+    afterImage: "/images/projects/houston-retail-center/01-center-entry-tower.jpg",
+    afterAlt: "Retail center entry tower with tan stucco, white cornice and arch, stone veneer, orange columns and green block bases",
+    gallery: [
+      { src: "/images/projects/houston-retail-center/02-storefront-row.jpg", alt: "Row of storefronts with tan stucco walls, white trim band and decorative tiles, orange columns and green bases" },
+      { src: "/images/projects/houston-retail-center/03-entry-arch.jpg", alt: "Storefront entry under a white arch, with orange columns and green block bases" },
+      { src: "/images/projects/houston-retail-center/04-end-unit.jpg", alt: "End unit of the retail center with tan stucco, white cornice and arch" },
+      { src: "/images/projects/houston-retail-center/05-long-storefront.jpg", alt: "Long storefront wing with tan stucco, white cornice and orange and green column accents" },
+      { src: "/images/projects/houston-retail-center/06-center-overview.jpg", alt: "Overview of the retail center wings with tan stucco and white trim" },
+    ],
+    stats: [
+      { label: "Location", value: "Houston, TX" },
+      { label: "Service", value: "Commercial exterior" },
+      { label: "Surfaces shown", value: "Stucco, trim, columns" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Retail Center Exterior Painting in Houston, TX",
+    metaDescription:
+      "Photos of a Houston retail strip center painted outside: tan stucco, white cornices and arches, orange column accents and green block bases.",
+  },
+  {
     // Job photos supplied by Juan on 2026-10-07: exterior painting in West
     // University. The house number was blurred and a security-company yard sign
     // cropped out. Finished photos only; whether the dark trim, gutters and

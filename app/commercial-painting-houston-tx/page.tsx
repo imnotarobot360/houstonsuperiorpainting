@@ -91,7 +91,7 @@ const FAQS = [
   },
 ]
 
-const project = COMMERCIAL_PROJECTS[0]
+const projects = COMMERCIAL_PROJECTS
 
 export default function CommercialPaintingHoustonPage() {
   return (
@@ -267,8 +267,9 @@ export default function CommercialPaintingHoustonPage() {
               </>,
             ]}
           />
-          {project && (
+          {projects.map((project) => (
             <Link
+              key={project.slug}
               href={`/projects/${project.slug}`}
               className="not-prose mt-8 grid md:grid-cols-2 gap-0 bg-card border border-border rounded-xl overflow-hidden hover:border-primary transition-colors"
             >
@@ -287,7 +288,7 @@ export default function CommercialPaintingHoustonPage() {
                 <p className="text-muted-foreground text-sm">{project.summary}</p>
               </div>
             </Link>
-          )}
+          ))}
         </Section>
 
         <FAQ items={FAQS} title="Frequently asked questions" variant="compact" />
