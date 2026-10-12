@@ -1,29 +1,34 @@
 import Link from "next/link"
 import { GuideArticle, guideMetadata, type GuideArticleData } from "@/components/aeo/guide-article"
-import { Bullets } from "@/components/aeo/blocks"
+import { Bullets, Steps } from "@/components/aeo/blocks"
 import { BUSINESS } from "@/lib/business"
 
-// Figures from the manufacturers (checked 2026-10-11):
-// - Sherwin-Williams Emerald Urethane Trim Enamel PDS: touch 1 h, recoat 4 h @ 77°F / 50% RH; no full-cure figure.
-// - Benjamin Moore Advance product pages: dry 4–6 h, recoat 16 h, return to service 7 days, apply 50–90°F.
-// Owner (2026-10-11): kitchen cabinets take 7–10 days to fully cure with both brands.
-// Company-specific day counts (days on site, when doors go back on) are NOT stated: the estimate sets them.
+// Rewritten 2026-10-12: owner says the cabinet finish is Benjamin Moore Command
+// (High Performance Command® Waterborne Acrylic Urethane, HP3920 satin / HP3900 gloss).
+// Manufacturer figures from benjaminmoore.com product page HP3920 (checked 2026-10-12):
+// touch 15 min, recoat 1 h, vertical surfaces ready 1 h, foot traffic 4 h, < 50 g/L VOC,
+// applies as low as 35°F, 350–450 sq ft/gal, interior/exterior, tagged Cabinet/Door/Trim.
+// Owner (2026-10-11): kitchen cabinets take 7–10 days to fully cure.
+// Company-specific schedules (days on site, when doors go back on) are set by the estimate.
+
+const COMMAND_URL =
+  "https://www.benjaminmoore.com/en-us/product/high-performance-command-waterborne-acrylic-urethane-satin/HP3920"
 
 const D: GuideArticleData = {
   path: "/blog/cabinet-paint-cure-time-houston",
-  title: "How Long Do Painted Cabinets Take to Cure? (7–10 Days) | Houston",
+  title: "Cabinet Paint Cure Time: Benjamin Moore Command (7–10 Days)",
   description:
-    "Dry is not cured. Dry, recoat and return-to-service times for Benjamin Moore Advance and Sherwin-Williams Emerald Urethane, why Houston humidity slows them, and how to care for new cabinets.",
+    "We refinish cabinets with Benjamin Moore Command waterborne acrylic urethane. It dries in 15 minutes and recoats in an hour, but takes 7–10 days to fully cure. What that means for your kitchen.",
   h1: "How long do painted cabinets take to cure?",
   eyebrow: "Cabinet guide",
   published: "2026-10-11",
-  updated: "2026-10-11",
+  updated: "2026-10-12",
   quickAnswer: (
     <>
-      Painted kitchen cabinets take 7–10 days to fully cure, whether we use Sherwin-Williams or Benjamin Moore. The
-      finish is dry to the touch within hours (1 hour for Sherwin-Williams Emerald Urethane, 4–6 hours for Benjamin Moore
-      Advance), and you can use the kitchen carefully once the doors are back on, but the paint keeps hardening for 7–10
-      days. Houston humidity pushes it toward the longer end, so treat the cabinets gently during that time.
+      Painted kitchen cabinets take 7–10 days to fully cure. We finish cabinets with Benjamin Moore Command®, a
+      waterborne acrylic urethane that is dry to the touch in about 15 minutes and ready for its next coat in about an
+      hour. Doors and drawers can go back on and be used carefully soon after the final coat, but the finish keeps
+      hardening for 7–10 days, and Houston humidity pushes that toward the longer end.
     </>
   ),
   sections: [
@@ -32,22 +37,48 @@ const D: GuideArticleData = {
       body: (
         <Bullets
           items={[
-            <><strong>Dry to the touch:</strong> the surface will not smudge if you brush it lightly. It is still soft underneath.</>,
-            <><strong>Recoat:</strong> the earliest the next coat can go on without disturbing the one below.</>,
-            <><strong>Return to service / cure:</strong> the film is hard enough for normal use. Before then it can dent, mark or stick to itself.</>,
+            <>
+              <strong>Dry to the touch:</strong> the surface will not smudge if you brush it lightly. It is still soft
+              underneath.
+            </>,
+            <>
+              <strong>Recoat:</strong> the earliest the next coat can go on without disturbing the one below.
+            </>,
+            <>
+              <strong>Full cure:</strong> the film has reached its full hardness and resistance to scuffs, cleaners and
+              stacking. Before then it can dent, mark or stick to itself.
+            </>,
           ]}
         />
       ),
     },
     {
-      title: "Manufacturer times for the cabinet paints we use",
+      title: "Why we use Benjamin Moore Command on cabinets",
+      body: (
+        <>
+          <p>
+            Command® is Benjamin Moore&apos;s waterborne acrylic urethane. The urethane makes the cured film harder and
+            more resistant to scuffs and cleaning than ordinary wall or trim paint, which is what cabinet doors, drawer
+            fronts and edges need. Benjamin Moore lists it for cabinets, doors and trim, for interior and exterior use,
+            in satin or gloss.
+          </p>
+          <p>
+            It is also a practical product for an occupied home: it is low-odor and low-VOC (under 50 g/L), cleans up
+            with water, and dries fast enough that we can apply several coats without leaving your kitchen out of
+            service for weeks.
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Benjamin Moore Command: drying and cure times",
       body: (
         <div className="not-prose my-6">
           <div className="overflow-x-auto rounded-xl border border-border">
             <table className="w-full text-left text-base">
               <thead className="bg-midnight text-soft-white">
                 <tr>
-                  {["Stage", "Benjamin Moore Advance", "Sherwin-Williams Emerald Urethane"].map((h) => (
+                  {["Stage", "Benjamin Moore Command"].map((h) => (
                     <th key={h} scope="col" className="px-4 py-3 font-semibold">
                       {h}
                     </th>
@@ -56,28 +87,43 @@ const D: GuideArticleData = {
               </thead>
               <tbody>
                 {[
-                  ["Dry to the touch", "4–6 hours", "1 hour"],
-                  ["Ready to recoat", "16 hours", "4 hours"],
-                  ["Return to service (manufacturer)", "7 days", "Not stated on the data sheet"],
-                  ["Full cure (our experience in Houston)", "7–10 days", "7–10 days"],
-                  ["Conditions", "Apply at 50–90°F", "Times at 77°F, 50% humidity"],
+                  ["Dry to the touch (manufacturer)", "About 15 minutes"],
+                  ["Ready to recoat (manufacturer)", "About 1 hour"],
+                  ["Vertical surfaces in service (manufacturer)", "About 1 hour"],
+                  ["Full cure on kitchen cabinets (our experience in Houston)", "7–10 days"],
                 ].map((r) => (
                   <tr key={r[0]} className="border-t border-border odd:bg-card">
                     <th scope="row" className="px-4 py-3 font-medium text-foreground">
                       {r[0]}
                     </th>
                     <td className="px-4 py-3 text-foreground/90">{r[1]}</td>
-                    <td className="px-4 py-3 text-foreground/90">{r[2]}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
           <p className="mt-3 text-sm text-muted-foreground">
-            Both manufacturers note that temperature, humidity and film thickness change these times. Check the data sheet for
-            your exact product and sheen.
+            Manufacturer times are for standard conditions; temperature, humidity and film thickness change them. Fast
+            drying is not the same as fully cured: the finish keeps hardening for days after it feels dry.
           </p>
         </div>
+      ),
+    },
+    {
+      title: "How we apply it",
+      body: (
+        <Steps
+          items={[
+            { title: "Remove and label", text: "doors, drawer fronts and hardware come off and are labeled." },
+            { title: "Clean and degrease", text: "every surface is degreased; paint will not bond to kitchen grease." },
+            { title: "Sand and prime", text: "the old finish is scuffed and a bonding primer goes on so the topcoat grips." },
+            {
+              title: "Spray Command",
+              text: "thin, even coats of Command are sprayed, with time between coats for each to dry. Thin coats dry and cure better than heavy ones.",
+            },
+            { title: "Reinstall", text: "doors and drawers go back on once the final coat has dried, and the cure continues in place." },
+          ]}
+        />
       ),
     },
     {
@@ -85,13 +131,13 @@ const D: GuideArticleData = {
       body: (
         <>
           <p>
-            Waterborne cabinet paints dry as water leaves the film. Houston&apos;s humid air slows that, and cool or
-            closed-up rooms slow it more. Thick coats take longer than thin ones, and doors stacked or hung too soon can
-            stick to their frames (painters call this blocking).
+            Waterborne finishes like Command dry as water leaves the film. Houston&apos;s humid air slows that, and cool
+            or closed-up rooms slow it more. Doors pressed against frames before the finish hardens can stick (painters
+            call this blocking).
           </p>
           <p>
-            Running the air conditioning, keeping air moving, and spraying thin, even coats all help. A good cabinet painter
-            plans the schedule around these conditions rather than a fixed number of hours.
+            Running the air conditioning, keeping air moving and spraying thin coats all help. We plan the schedule
+            around the weather rather than a fixed number of hours.
           </p>
         </>
       ),
@@ -112,14 +158,13 @@ const D: GuideArticleData = {
       ),
     },
     {
-      title: "What your estimate should say",
+      title: "What your estimate says",
       body: (
         <p>
-          Ask for the primer and topcoat by name, the number of coats, and the schedule: when doors and drawer fronts are
-          removed, when they go back on, and when the kitchen can be used normally. Our{" "}
-          <Link href="/cabinet-refinishing-houston-tx">cabinet refinishing</Link> estimates name the products and the
-          schedule in writing, and the work carries a {BUSINESS.trust.warrantyYears}-year written workmanship warranty under
-          the terms in the estimate. For choosing a painter, see{" "}
+          Our <Link href="/cabinet-refinishing-houston-tx">cabinet refinishing</Link> estimates name the primer and the
+          Command topcoat, the sheen, the number of coats and the schedule, including when the doors go back on. The work
+          carries a {BUSINESS.trust.warrantyYears}-year written workmanship warranty under the terms in the estimate. See
+          finished kitchens on our <Link href="/projects">projects page</Link>, and{" "}
           <Link href="/blog/cabinet-painting-company-houston-guide">how to choose a cabinet painting company</Link>.
         </p>
       ),
@@ -128,32 +173,29 @@ const D: GuideArticleData = {
   faqs: [
     {
       q: "How long before I can use my kitchen cabinets after painting?",
-      a: "You can use them carefully once the final coat is dry and the doors are back on, but the finish takes 7–10 days to fully cure with either Sherwin-Williams or Benjamin Moore. Treat the cabinets gently during that time.",
+      a: "You can use them carefully once the final coat is dry and the doors are back on. Benjamin Moore Command dries to the touch in about 15 minutes, but the finish takes 7–10 days to fully cure, so treat the cabinets gently during that time.",
     },
     {
       q: "How long does cabinet paint take to fully cure?",
-      a: "7–10 days for kitchen cabinets, with either Sherwin-Williams Emerald Urethane or Benjamin Moore Advance. Benjamin Moore lists 7 days to return to service for Advance; in Houston humidity we plan for up to 10 days for both brands.",
+      a: "With Benjamin Moore Command, which we use on cabinets, plan on 7–10 days for kitchen cabinets to fully cure. Houston humidity, cool temperatures and thick coats lengthen curing.",
+    },
+    {
+      q: "What paint do you use on kitchen cabinets?",
+      a: "Benjamin Moore Command, a waterborne acrylic urethane made for cabinets, doors and trim, over a bonding primer. It is low-odor, low-VOC and dries hard and smooth.",
     },
     {
       q: "Why are my freshly painted cabinet doors sticking?",
-      a: "Usually because the paint is dry on the surface but not cured, and the door is pressing against the frame or bumpers. Leave the doors closed gently, keep air moving, and the sticking normally stops as the finish hardens.",
-    },
-    {
-      q: "Can I clean painted cabinets right away?",
-      a: "Wipe spills with a soft, damp cloth. Wait until the finish has cured before scrubbing or using stronger cleaners.",
+      a: "Usually because the paint is dry on the surface but not fully cured, and the door is pressing against the frame or bumpers. Close the doors gently, keep air moving, and the sticking normally stops as the finish hardens.",
     },
   ],
   limitations: (
     <>
-      Times are the manufacturers&apos; published figures under stated conditions, not a promise for your kitchen. Your
-      written estimate sets the schedule for your project. Checked October 2026.
+      Manufacturer times are Benjamin Moore&apos;s published figures for standard conditions. The 7–10 day cure is our
+      experience on Houston kitchen cabinets, not a guarantee for every kitchen. Your written estimate sets the schedule
+      for your project. Checked October 2026.
     </>
   ),
-  sources: [
-    { label: "Benjamin Moore: Advance Interior Paint, Semi-Gloss (dry, recoat, return to service)", url: "https://benjaminmoore.com/en-ca/product/K793" },
-    { label: "Benjamin Moore: Advance Interior Paint, Satin (recoat, application temperature)", url: "https://www.benjaminmoore.com/en-us/product/0792" },
-    { label: "Sherwin-Williams: Emerald Urethane Trim Enamel product data sheet", url: "https://www.sherwin-williams.com/document/PDS/en/035777948040/" },
-  ],
+  sources: [{ label: "Benjamin Moore: High Performance Command® Waterborne Acrylic Urethane (product page)", url: COMMAND_URL }],
   related: [
     { label: "Cabinet refinishing in Houston", href: "/cabinet-refinishing-houston-tx" },
     { label: "How to choose a cabinet painting company", href: "/blog/cabinet-painting-company-houston-guide" },
