@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "How long does garage epoxy flooring last?",
     answer:
-      "A professionally installed epoxy floor can last 10 to 20 years or more, depending on traffic, maintenance, and the quality of the installation. Proper surface preparation is one of the biggest factors in its longevity.",
+      "A professionally installed epoxy floor can last many years, depending on traffic, maintenance, and the quality of the installation. Proper surface preparation is one of the biggest factors in its longevity.",
   },
   {
     question: "Is epoxy flooring worth it for a garage?",
@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "How long does epoxy flooring take to install?",
     answer:
-      "Most residential garage epoxy flooring projects are completed in 2 to 3 days, depending on the condition of the concrete and the coating system selected.",
+      "It depends on the condition of the concrete and the coating system selected. Your written estimate lists the schedule.",
   },
   {
     question: "Can epoxy flooring handle hot tires?",
@@ -157,7 +157,7 @@ export default function GarageEpoxyFlooringHoustonPage() {
 
       <ul>
         <li>Resists oil, grease, chemicals, and automotive fluids</li>
-        <li>Protects concrete from moisture and cracking</li>
+        <li>Helps protect concrete from wear and moisture</li>
         <li>Makes cleaning quick and easy</li>
         <li>Brightens the space by reflecting light</li>
         <li>Creates a clean, modern, showroom-quality finish</li>
@@ -245,7 +245,9 @@ export default function GarageEpoxyFlooringHoustonPage() {
 
       <p>
         <a href="/contact">Contact Houston Superior Painting today</a> to schedule your free estimate and discover how a
-        professionally installed epoxy floor can completely transform your garage.
+        professionally installed epoxy floor can completely transform your garage. Garage floors are offered through our
+        garage floor brand, Houston Superior Epoxy — see{" "}
+        <a href="https://houstonsuperiorepoxy.com/">houstonsuperiorepoxy.com</a> for details.
       </p>
     </BlogPostTemplate>
   )

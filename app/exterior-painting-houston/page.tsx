@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ServicePageTemplate } from '@/components/service-page-template'
+import { BUSINESS, PRICES_2026 } from '@/lib/business'
 
 export const metadata: Metadata = {
   alternates: {
@@ -28,15 +29,15 @@ const serviceSchema = {
 const pageData = {
   title: "Exterior House Painting in Houston TX",
   subtitle: "Weather-Resistant Exterior Painters",
-  heroDescription: "Protect and beautify your home's exterior with durable, weather-resistant finishes engineered specifically for Houston's challenging climate. Our elastomeric and acrylic coatings stand up to Texas heat, high humidity, heavy rains, and intense UV without cracking, peeling, or fading.",
+  heroDescription: "Protect and beautify your home's exterior with durable, weather-resistant finishes engineered specifically for Houston's challenging climate. We choose elastomeric and acrylic coatings for Texas heat, high humidity, heavy rains, and intense UV.",
   sections: [
     {
       title: "Why Exterior Paint Fails in Houston—And How We Prevent It",
       content: `Houston's climate is brutal on exterior paint. Temperatures regularly exceed 100°F in summer, humidity hovers around 90%, and sudden storms dump inches of rain in hours. This combination causes paint to expand, contract, and absorb moisture—leading to peeling, cracking, bubbling, and premature failure.
 
-Most painting contractors use standard latex paints that can't withstand these conditions. Within 2-3 years, you'll see the signs of failure: chalking, fading, and paint lifting away from the surface. At Houston Superior Painting, we take a different approach.
+Paint that isn't suited to these conditions, or that goes over poorly prepared surfaces, shows the signs of failure early: chalking, fading, and paint lifting away from the surface. At Houston Superior Painting, we take a different approach.
 
-We exclusively use premium exterior coatings specifically formulated for Gulf Coast conditions. Our elastomeric paints flex with temperature changes, bridge hairline cracks, and create a waterproof barrier that protects your home for years. Combined with meticulous surface preparation, our exterior paint jobs last 7-10 years—far exceeding industry averages.`
+We use premium exterior coatings suited to Gulf Coast conditions. Elastomeric paints flex with temperature changes and bridge hairline cracks. Combined with meticulous surface preparation, that is what makes an exterior paint job last.`
     },
     {
       title: "Our Exterior Painting Process",
@@ -46,7 +47,7 @@ After power washing, we conduct a detailed inspection of your home's exterior. W
 
 Next comes priming. We apply specialized exterior primers that seal porous surfaces, block stains, and provide optimal adhesion for topcoats. Different substrates require different primers—we select the right product for your specific siding material.
 
-Finally, we apply two coats of premium exterior paint using professional spray equipment for siding and careful brush work for trim and detail areas. The result is a uniform, durable finish that protects your home and enhances its curb appeal for years to come.`
+Finally, we apply premium exterior paint (your written estimate names the primer and the number of coats needed for even coverage) using professional spray equipment for siding and careful brush work for trim and detail areas. The result is a uniform, durable finish that protects your home and enhances its curb appeal for years to come.`
     },
     {
       title: "Exterior Surfaces We Paint",
@@ -70,14 +71,13 @@ We also paint shutters, garage doors, gutters, downspouts, and any other exterio
     "Garage door painting"
   ],
   benefits: [
-    "Weather-resistant coatings rated for Houston climate",
-    "7-10 year durability vs. 2-3 year industry average",
+    "Weather-resistant coatings chosen for Houston's climate",
     "Thorough preparation including power washing",
     "Repair of wood rot, cracks, and damaged areas",
     "Premium Sherwin-Williams and Benjamin Moore paints",
-    "No payment until you're completely satisfied",
-    "5-year warranty on all exterior work",
-    "Bonded and fully insured"
+    "Scope, price, and payment schedule in writing before you approve",
+    "5-year written workmanship warranty, transferable",
+    "$2M general liability + workers' comp; bonded"
   ],
   beforeAfterImages: [
     {
@@ -89,11 +89,11 @@ We also paint shutters, garage doors, gutters, downspouts, and any other exterio
   faqs: [
     {
       question: "How much does exterior painting cost in Houston?",
-      answer: "Exterior painting in Houston typically costs between $3 to $6 per square foot depending on home size, siding condition, and prep work required. Two-story homes and homes needing repairs will be on the higher end. We provide free detailed estimates."
+      answer: `Exterior painting in Houston typically costs ${PRICES_2026.exteriorPerSqFt} per square foot, or ${PRICES_2026.exteriorPerHome} for a typical home, depending on home size, siding condition, and prep work required. Two-story homes and homes needing repairs will be on the higher end. We provide free detailed estimates. ${BUSINESS.paymentPolicy.sentence}`
     },
     {
       question: "How long does exterior paint last in Houston?",
-      answer: "With proper preparation and premium coatings, exterior paint can last 7-10 years in Houston. Standard paint jobs often fail within 2-3 years due to our harsh climate. Quality preparation is the key to longevity."
+      answer: "It depends on the surface, the sun exposure, the coating, and above all the preparation. Paint over poorly prepared surfaces fails early in our harsh climate. Quality preparation is the key to longevity."
     },
     {
       question: "What's the best time of year to paint exterior in Houston?",

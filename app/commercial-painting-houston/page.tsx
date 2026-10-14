@@ -2,6 +2,11 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ServicePageTemplate } from '@/components/service-page-template'
+import { BUSINESS, PRICES_2026 } from '@/lib/business'
+
+const COST_ANSWER = `Commercial repaints typically cost ${PRICES_2026.commercialPerSqFt} per square foot of wall: offices ${PRICES_2026.commercialOffice}, retail ${PRICES_2026.commercialRetail}, and warehouses ${PRICES_2026.commercialWarehouse}. After-hours scheduling adds ${PRICES_2026.commercialAfterHoursPremium}. Final pricing depends on surface conditions and coating requirements. We provide free detailed estimates. ${BUSINESS.paymentPolicy.sentence}`
+const OFF_HOURS_ANSWER = `Yes. After-hours and weekend work is available to minimize business disruption, and it adds ${PRICES_2026.commercialAfterHoursPremium} to the price. We'll schedule around your operations.`
+const INSURANCE_ANSWER = "Yes. We carry $2M general liability + workers' comp, and we are bonded. Certificates of insurance are available upon request."
 
 export const metadata: Metadata = {
   title: 'Commercial Painting Houston TX | Houston Superior Painting',
@@ -36,8 +41,6 @@ const serviceSchema = {
     "priceCurrency": "USD",
     "priceSpecification": {
       "@type": "PriceSpecification",
-      "minPrice": 5000,
-      "maxPrice": 50000,
       "priceCurrency": "USD"
     },
     "availability": "https://schema.org/InStock"
@@ -64,7 +67,7 @@ const faqSchema = {
       "name": "Can you paint during off-hours?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we routinely work nights, weekends, and holidays to minimize business disruption. We'll schedule around your operations to ensure your business continues running smoothly during the project."
+        "text": OFF_HOURS_ANSWER
       }
     },
     {
@@ -72,7 +75,7 @@ const faqSchema = {
       "name": "How much does commercial painting cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Commercial painting typically costs $1.50-4.00 per square foot depending on surface conditions, coating requirements, and scheduling needs. We provide free detailed estimates for accurate pricing."
+        "text": COST_ANSWER
       }
     },
     {
@@ -80,7 +83,7 @@ const faqSchema = {
       "name": "Do you carry commercial insurance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, we maintain comprehensive insurance including general liability and workers' compensation coverage appropriate for commercial environments. Certificates of insurance are available upon request."
+        "text": INSURANCE_ANSWER
       }
     }
   ]
@@ -90,11 +93,11 @@ const pageData = {
   title: "Commercial Painting Services in Houston TX",
   subtitle: "Professional Commercial Painters",
   heroDescription: "Minimize business disruption with our efficient commercial painting services. We work around your schedule—including nights and weekends—to deliver professional results that enhance your brand image and protect your investment.",
-  quickAnswer: "Houston Superior Painting provides commercial painting in Houston, Katy, Cypress, and Sugar Land TX. Commercial painting costs $1.50-4.00 per square foot. We offer after-hours and weekend scheduling to minimize business disruption. We serve offices, retail, restaurants, HOAs, and industrial facilities. Free estimates at (346) 594-5960.",
+  quickAnswer: `Houston Superior Painting provides commercial painting in Houston, Katy, Cypress, and Sugar Land TX. Commercial painting costs ${PRICES_2026.commercialPerSqFt} per square foot of wall. We offer after-hours and weekend scheduling to minimize business disruption. We serve offices, retail, restaurants, HOAs, and industrial facilities. Free estimates at ${BUSINESS.phone}.`,
   sections: [
     {
       title: "Commercial Painting That Works Around Your Business",
-      content: `Every hour your business is disrupted costs money. That's why Houston Superior Painting offers flexible scheduling options designed to minimize impact on your operations. We routinely complete projects during off-hours, nights, and weekends to ensure your business continues running smoothly.
+      content: `Every hour your business is disrupted costs money. That's why Houston Superior Painting offers flexible scheduling options designed to minimize impact on your operations. After-hours and weekend scheduling is available so your business can keep running.
 
 Our commercial painting crews are trained for efficiency without sacrificing quality. We understand the difference between residential and commercial environments—the need for speed, the importance of cleanliness, and the durability requirements of high-traffic spaces. Our systematic approach allows us to complete projects on time and within budget.
 
@@ -106,19 +109,19 @@ We serve diverse commercial clients throughout the Houston area, from small prof
 
 Retail environments face constant customer traffic, product handling, and frequent changes. Our retail painting services use durable finishes that maintain appearance despite heavy use. We understand the importance of brand consistency and can match corporate color standards precisely.
 
-Restaurants and hospitality venues need frequent updates to maintain fresh, inviting atmospheres. We specialize in food service environments, using appropriate products and techniques that meet health department requirements. Our after-hours scheduling ensures your restaurant remains open during peak business periods.
+Restaurants and hospitality venues need frequent updates to maintain fresh, inviting atmospheres. After-hours scheduling helps keep your restaurant open during peak business periods.
 
 Industrial and warehouse facilities require coatings that withstand harsh conditions including chemicals, moisture, and physical abuse. We apply industrial-grade epoxies, urethanes, and specialty coatings designed for these demanding environments. Safety markings, equipment painting, and floor coatings are also available.`
     },
     {
       title: "Why Houston Businesses Choose Us",
-      content: `Reputation matters in commercial painting. A botched job reflects poorly on your business and requires expensive remediation. Houston Superior Painting has built our commercial reputation on reliability, quality, and professionalism. Our portfolio includes projects for businesses across Greater Houston, and we're happy to provide references from satisfied commercial clients.
+      content: `Reputation matters in commercial painting. A botched job reflects poorly on your business and requires expensive remediation. Houston Superior Painting focuses on reliability, quality, and professionalism.
 
-We carry comprehensive insurance coverage appropriate for commercial environments, including general liability and workers' compensation. Our team follows proper safety protocols and maintains a clean, professional presence on your jobsite. We respect your employees, customers, and property throughout every project.
+We carry $2M general liability + workers' comp, and we are bonded. Our team follows proper safety protocols and maintains a clean, professional presence on your jobsite. We respect your employees, customers, and property throughout every project.
 
-Communication keeps commercial projects on track. You'll have a dedicated project manager as your single point of contact throughout the job. We provide detailed schedules, regular progress updates, and immediate response to any concerns. Our goal is a seamless experience from initial estimate through final walkthrough.
+Communication keeps commercial projects on track. We agree on the schedule up front and keep you updated as the work progresses. Our goal is a seamless experience from initial estimate through final walkthrough.
 
-Competitive pricing doesn't mean cutting corners. We provide transparent, detailed estimates that break down all costs. There are no surprise charges, and we guarantee our quoted price. Our efficiency and buying power allow us to deliver premium results at competitive rates.`
+Competitive pricing doesn't mean cutting corners. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.`
     }
   ],
   features: [
@@ -136,10 +139,10 @@ Competitive pricing doesn't mean cutting corners. We provide transparent, detail
     "Minimal disruption to operations",
     "Industrial-grade coatings available",
     "Fast, efficient crews",
-    "Comprehensive insurance coverage",
-    "Dedicated project manager",
+    "$2M general liability + workers' comp; bonded",
+    "Written scope, price, and payment schedule",
     "Transparent, competitive pricing",
-    "Experience with all commercial environments"
+    "Offices, retail, restaurants, and warehouses"
   ],
   beforeAfterImages: [
     {
@@ -151,19 +154,19 @@ Competitive pricing doesn't mean cutting corners. We provide transparent, detail
   faqs: [
     {
       question: "Can you paint during off-hours?",
-      answer: "Yes, we routinely work nights, weekends, and holidays to minimize business disruption. We'll schedule around your operations to ensure your business continues running smoothly during the project."
+      answer: OFF_HOURS_ANSWER
     },
     {
       question: "How much does commercial painting cost?",
-      answer: "Commercial painting typically costs $1.50-4.00 per square foot depending on surface conditions, coating requirements, and scheduling needs. We provide free detailed estimates for accurate pricing."
+      answer: COST_ANSWER
     },
     {
       question: "How long does commercial painting take?",
-      answer: "Project duration depends on scope and scheduling constraints. A typical office suite might take 2-3 days during off-hours. We provide detailed schedules during the estimate process and meet agreed deadlines."
+      answer: "Project duration depends on scope and scheduling constraints.  We provide a schedule during the estimate process."
     },
     {
       question: "Do you carry commercial insurance?",
-      answer: "Yes, we maintain comprehensive insurance including general liability and workers' compensation coverage appropriate for commercial environments. Certificates of insurance are available upon request."
+      answer: INSURANCE_ANSWER
     },
     {
       question: "Can you match our brand colors?",
@@ -171,7 +174,7 @@ Competitive pricing doesn't mean cutting corners. We provide transparent, detail
     },
     {
       question: "Do you work with property managers?",
-      answer: "Yes, we have extensive experience with property management companies, handling both individual unit turnovers and common area maintenance. We offer competitive rates for ongoing partnerships."
+      answer: "Yes, we work with property management companies on both individual unit turnovers and common area maintenance."
     }
   ],
   relatedServices: [

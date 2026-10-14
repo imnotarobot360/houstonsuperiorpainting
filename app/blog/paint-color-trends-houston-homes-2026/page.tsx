@@ -296,7 +296,7 @@ export default function PaintColorTrends2026Blog() {
 
             <h3>What&apos;s Moving Out: Cool Gray Exteriors</h3>
             <p>
-              The cool, blue-gray exteriors that dominated Houston suburban repaints from roughly 2015 to 2022 are now firmly in the &quot;fading trend&quot; category. Homeowners who painted in this palette a decade ago are now repainting, and the vast majority are moving toward warmer alternatives. Listing photos of cool gray homes are beginning to date them in the same way honey oak dated kitchens.
+              The cool, blue-gray exteriors that dominated Houston suburban repaints from roughly 2015 to 2022 are now firmly in the &quot;fading trend&quot; category. Homeowners who painted in this palette a decade ago are now repainting, and many are moving toward warmer alternatives. Listing photos of cool gray homes are beginning to date them in the same way honey oak dated kitchens.
             </p>
 
             <h2>2026 Interior Color Trends in Houston</h2>
@@ -356,7 +356,7 @@ export default function PaintColorTrends2026Blog() {
 
             <h3>White Still Leads — But the Shade Has Gotten More Specific</h3>
             <p>
-              White kitchen cabinets remain the most-requested cabinet color in Houston by a significant margin in 2026. What&apos;s changed is specificity. Homeowners in 2026 are asking for Chantilly Lace or White Dove by name — not just &quot;white.&quot; The shift from warm to bright to warm again in white cabinet preferences is complete, and specific product knowledge from homeowners (driven by design media and social platforms) is more common than it was five years ago.
+              White kitchen cabinets remain the most-requested cabinet color in Houston in 2026. What&apos;s changed is specificity. Homeowners in 2026 are asking for Chantilly Lace or White Dove by name — not just &quot;white.&quot; The shift from warm to bright to warm again in white cabinet preferences is complete, and specific product knowledge from homeowners (driven by design media and social platforms) is more common than it was five years ago.
             </p>
 
             <h3>Navy Island — Consolidated, Not Passing</h3>

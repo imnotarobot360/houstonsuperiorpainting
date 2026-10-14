@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "What is the most popular interior paint color in Houston TX in 2026?",
     answer:
-      "Sherwin-Williams Alabaster (SW 7008) is the most-requested interior color, particularly for walls and trim together. Among neutrals with more character, Sherwin-Williams Accessible Beige and Benjamin Moore Pale Oak are consistently popular.",
+      "Sherwin-Williams Alabaster (SW 7008) is one of the most-requested interior colors, particularly for walls and trim together. Among neutrals with more character, Sherwin-Williams Accessible Beige and Benjamin Moore Pale Oak are consistently popular.",
   },
   {
     question: "What exterior colors are HOA-approved in Katy and Cypress?",
@@ -383,7 +383,7 @@ export default function PaintColorsHoustonHomes2026Page() {
         4&quot;x4&quot; square. The right way to test paint colors in Houston:
       </p>
       <ul>
-        <li>Buy full samples of your top 2–3 colors ($5–$8 per sample).</li>
+        <li>Buy samples of your top 2–3 colors.</li>
         <li>Paint large boards or directly on the wall — at least 12&quot;x18&quot;, bigger is better.</li>
         <li>Observe at three times: morning, midday, and evening with your lights on.</li>
         <li>Compare samples next to your major fixed elements: flooring, countertops, cabinets, trim.</li>
@@ -411,8 +411,8 @@ export default function PaintColorsHoustonHomes2026Page() {
       <p>
         Explore our <Link href="/interior-painting-houston-tx">interior painting</Link> and{" "}
         <Link href="/exterior-painting-houston-tx">exterior painting</Link> services, or learn{" "}
-        <Link href="/houston-painting-contractor-guide">how to vet the best painters in Houston</Link> before you hire. A
-        color change costs the same as any repaint; see the{" "}
+        <Link href="/houston-painting-contractor-guide">how to vet the best painters in Houston</Link> before you hire. For
+        budgeting, see the{" "}
         <Link href="/houston-painting-cost-guide">Houston painting cost guide</Link> for 2026 prices.
       </p>
       <p>

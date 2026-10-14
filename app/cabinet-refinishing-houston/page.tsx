@@ -33,9 +33,9 @@ const pageData = {
   sections: [
     {
       title: "Why Refinish Instead of Replace Your Cabinets?",
-      content: `Cabinet replacement is one of the most expensive kitchen renovation projects, often costing $15,000 to $50,000 or more for a typical Houston home. But if your cabinet boxes are structurally sound, refinishing offers a smarter alternative that delivers stunning results at 20-30% of replacement cost.
+      content: `Cabinet replacement is one of the most expensive kitchen renovation projects, But if your cabinet boxes are structurally sound, refinishing offers a smarter alternative that delivers stunning results for a fraction of the cost.
 
-Cabinet refinishing updates the look of your kitchen without the mess, expense, and weeks of disruption that come with a full renovation. There's no demolition, no waiting for custom cabinets to be manufactured, and no need to replace countertops or appliances. In most cases, we complete cabinet refinishing projects in 3-5 days.
+Cabinet refinishing updates the look of your kitchen without the mess, expense, and weeks of disruption that come with a full renovation. There's no demolition, no waiting for custom cabinets to be manufactured, and no need to replace countertops or appliances. Your written estimate lists the schedule for your kitchen.
 
 The results speak for themselves. Our factory-finish spray techniques eliminate brush marks, drips, and uneven coverage that plague DIY and traditional brush-painted cabinets. The smooth, uniform finish we achieve rivals factory-applied coatings and transforms even the most dated golden oak or honey maple cabinets into modern, stylish focal points.`
     },
@@ -47,7 +47,7 @@ Thorough cleaning and degreasing remove years of cooking oils, smoke residue, an
 
 Next comes sanding. We sand all surfaces to create proper adhesion for primers and topcoats. For cabinets with heavy grain (like oak), we apply grain filler to create a smooth surface that won't show wood texture through the finish.
 
-We apply specialized bonding primers formulated for cabinet work, then spray multiple coats of premium cabinet-grade enamel. Between coats, we sand lightly to ensure perfect adhesion and a glass-smooth final finish. The result is a durable, washable surface that resists chips, scratches, and stains.`
+We apply a bonding primer, then spray Benjamin Moore Command, a waterborne acrylic urethane. Between coats, we sand lightly for adhesion and a smooth final finish. The finish reaches full cure in 7–10 days, so treat it gently for that first stretch.`
     },
     {
       title: "Cabinet Colors and Finishes",
@@ -71,13 +71,13 @@ We offer multiple sheen levels including matte, satin, and semi-gloss. Satin and
     "Color matching available"
   ],
   benefits: [
-    "Save 70-80% vs. cabinet replacement",
+    "A fraction of the cost of replacement",
     "Factory-finish spray application",
-    "Most projects completed in 3-5 days",
+    "Schedule set in your written estimate",
     "No demolition or countertop removal",
-    "Premium cabinet-grade enamels",
-    "Durable, washable, chip-resistant finish",
-    "5-year warranty on cabinet work",
+    "Benjamin Moore Command over a bonding primer",
+    "Full cure in 7–10 days",
+    "5-year written workmanship warranty, transferable",
     "Color consultation included"
   ],
   beforeAfterImages: [
@@ -90,11 +90,11 @@ We offer multiple sheen levels including matte, satin, and semi-gloss. Satin and
   faqs: [
     {
       question: "How much does cabinet refinishing cost in Houston?",
-      answer: `Cabinet refinishing in Houston typically costs ${PRICES_2026.cabinetsPerKitchen} depending on kitchen size and cabinet construction. This is 70-80% less than replacement. We provide free detailed estimates.`
+      answer: `Cabinet refinishing in Houston typically costs ${PRICES_2026.cabinetsPerKitchen} per kitchen, or ${PRICES_2026.cabinetsPerDoor} per door or drawer front, depending on kitchen size and cabinet construction. We provide free detailed estimates.`
     },
     {
       question: "How long does cabinet refinishing take?",
-      answer: "Most cabinet refinishing projects take 3-5 days. We remove doors and drawers to our spray facility, refinish them, then reinstall. Larger kitchens or extensive prep work may require additional time."
+      answer: "It depends on the size of the kitchen and the prep it needs; your written estimate lists the schedule. We remove doors and drawers, refinish them, then reinstall. The finish reaches full cure in 7–10 days."
     },
     {
       question: "Can you paint over oak cabinets?",
@@ -102,7 +102,7 @@ We offer multiple sheen levels including matte, satin, and semi-gloss. Satin and
     },
     {
       question: "How durable is cabinet paint?",
-      answer: "Our cabinet-grade finishes are extremely durable. They resist chipping, scratching, and staining better than factory finishes. With proper care, refinished cabinets last 10-15 years before needing touch-ups."
+      answer: "We use Benjamin Moore Command, a waterborne acrylic urethane, over a bonding primer. It reaches full cure in 7–10 days; until then, clean gently and avoid hard knocks. Our work is backed by a 5-year written workmanship warranty."
     },
     {
       question: "Can I use my kitchen during refinishing?",

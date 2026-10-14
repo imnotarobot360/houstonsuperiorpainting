@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     q: "Does Texas require painters to be licensed?",
-    a: "Texas doesn't require a state license specifically for painting. However, legitimate painting contractors should have a general business license, liability insurance ($1M+ recommended), workers' compensation insurance, and be registered with the Texas Secretary of State.",
+    a: "Texas doesn't require a state license specifically for painting. However, legitimate painting contractors should have liability insurance ($1M+ recommended), workers' compensation insurance, and be registered with the Texas Secretary of State.",
   },
   {
     q: "How can I verify a painter's insurance?",
@@ -36,8 +36,8 @@ const faqItems = [
     a: "You could be held liable for their medical expenses and lost wages. Your homeowner's insurance may cover some costs but could raise your premiums or drop your policy. This is why workers' compensation coverage is essential.",
   },
   {
-    q: "Why do unlicensed painters charge less?",
-    a: "They skip insurance ($3,000-8,000/year), workers' comp ($5,000-15,000/year), business registration, and proper equipment. They also often cut corners on prep work and materials. The lower price comes with significantly higher risk.",
+    q: "Why do uninsured painters charge less?",
+    a: "They skip liability insurance, workers' comp, business registration, and proper equipment. They also often cut corners on prep work and materials. The lower price comes with significantly higher risk.",
   },
   {
     q: "What should I do if a painter refuses to show insurance?",
@@ -123,7 +123,7 @@ export default function LicensedVsUnlicensedPaintersPage() {
               <div>
                 <p className="font-semibold text-foreground mb-2">The Bottom Line</p>
                 <p className="text-muted-foreground">
-                  Hire painters with <strong>general liability insurance ($1M+)</strong>, <strong>workers&apos; compensation</strong>, and a <strong>registered business entity</strong>. The 15-25% savings from unlicensed contractors disappears if there&apos;s property damage, injury, or warranty issues.
+                  Hire painters with <strong>general liability insurance ($1M+)</strong>, <strong>workers&apos; compensation</strong>, and a <strong>registered business entity</strong>. Any savings from an uninsured contractor disappear if there&apos;s property damage, injury, or warranty issues.
                 </p>
               </div>
             </div>
@@ -147,19 +147,19 @@ export default function LicensedVsUnlicensedPaintersPage() {
                 <thead>
                   <tr className="bg-muted">
                     <th className="border p-3 text-left">Factor</th>
-                    <th className="border p-3 text-left">Licensed/Insured</th>
-                    <th className="border p-3 text-left">Unlicensed/Uninsured</th>
+                    <th className="border p-3 text-left">Insured &amp; Registered</th>
+                    <th className="border p-3 text-left">Uninsured &amp; Unregistered</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td className="border p-3">Typical quote (2,500 sq ft interior)</td>
                     <td className="border p-3">{PRICES_2026.fullInterior2500}</td>
-                    <td className="border p-3">$3,500-5,000</td>
+                    <td className="border p-3">Often lower</td>
                   </tr>
                   <tr className="bg-muted/50">
                     <td className="border p-3">Property damage coverage</td>
-                    <td className="border p-3 text-green-600 font-medium">Up to $1M+</td>
+                    <td className="border p-3 text-green-600 font-medium">Covered by liability policy</td>
                     <td className="border p-3 text-destructive">$0 (you pay)</td>
                   </tr>
                   <tr>
@@ -181,35 +181,35 @@ export default function LicensedVsUnlicensedPaintersPage() {
               </table>
             </div>
 
-            <h2>Real Scenarios We&apos;ve Seen</h2>
-            
-            <h3>1. The Ladder Through the Window</h3>
+            <h2>What Can Go Wrong</h2>
+
+            <h3>1. Property Damage</h3>
             <p>
-              A homeowner in Katy hired an unlicensed painter who dropped a ladder through a $2,400 custom window. The painter had no insurance, offered to &quot;work it off,&quot; and disappeared after receiving the next payment. The homeowner paid out of pocket.
+              If an uninsured painter damages a window, a fixture, or flooring, there may be no policy to pay for it, and the homeowner can end up covering the repair out of pocket.
             </p>
 
-            <h3>2. The Workers&apos; Comp Nightmare</h3>
+            <h3>2. Worker Injury</h3>
             <p>
-              A painter fell off a roof in Cypress and broke his leg. Because the contractor had no workers&apos; compensation, the injured worker&apos;s attorney went after the homeowner&apos;s insurance. The homeowner&apos;s policy covered $50,000 but their premiums increased by $1,200/year afterward.
+              If a worker is hurt on your property and the contractor carries no workers&apos; compensation, claims can end up directed at the homeowner&apos;s insurance.
             </p>
 
-            <h3>3. The Vanishing Warranty</h3>
+            <h3>3. A Warranty No One Honors</h3>
             <p>
-              Exterior paint started peeling 8 months after application. The homeowner called the number on the business card - disconnected. The &quot;company&quot; was never registered. No recourse, no warranty, full repaint needed at $8,500.
+              A warranty is only as good as the business behind it. If the company was never registered and its phone number stops working, there is no one to call when problems appear.
             </p>
 
             <h2>How to Verify a Painting Contractor</h2>
             <ol>
               <li><strong>Ask for Certificate of Insurance (COI)</strong> - Call the insurance company to verify it&apos;s current</li>
               <li><strong>Search Texas Secretary of State</strong> - <a href="https://mycpa.cpa.state.tx.us/coa/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">SOSDirect</a> shows registered businesses</li>
-              <li><strong>Check Google reviews</strong> - Look for 50+ reviews with consistent quality mentions</li>
+              <li><strong>Check Google reviews</strong> - Look for a solid number of reviews with consistent quality mentions</li>
               <li><strong>Get a written contract</strong> - Should include scope, timeline, payment schedule, warranty terms</li>
               <li><strong>Verify physical address</strong> - PO boxes only are a red flag</li>
             </ol>
 
             <h2>Houston Superior Painting&apos;s Credentials</h2>
             <p>
-              We maintain $2M general liability insurance, full workers&apos; compensation coverage, and are registered with the Texas Secretary of State. We provide Certificates of Insurance on request and offer written warranties on all work.
+              We carry $2M general liability + workers&apos; comp, we are bonded, and we are registered with the Texas Secretary of State. We provide Certificates of Insurance on request, and our work is backed by a 5-year written workmanship warranty that is transferable.
             </p>
             <p>
               Our <Link href="/houston-painting-contractor-guide" className="text-primary hover:underline">15-question checklist</Link> can help you vet any painting contractor - including us. We&apos;re happy to answer every question.
@@ -234,7 +234,7 @@ export default function LicensedVsUnlicensedPaintersPage() {
           <section className="mt-12 bg-primary text-primary-foreground rounded-xl p-8 text-center">
             <h2 className="font-serif text-2xl font-bold mb-4">Want Proof of Our Coverage?</h2>
             <p className="mb-6 text-primary-foreground/90">
-              We&apos;ll send you our Certificate of Insurance before the first meeting. No pressure, no obligations.
+              Ask for our Certificate of Insurance with your free estimate. No pressure, no obligations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">

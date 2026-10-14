@@ -42,6 +42,12 @@ export const metadata: Metadata = {
   },
 }
 
+// Confirmed garage epoxy pricing (Houston Superior Epoxy, houstonsuperiorepoxy.com).
+const EPOXY_COST_ANSWER =
+  "Garage floor epoxy from Houston Superior Epoxy, our garage floor brand, is $4.50 per square foot with a $1,000 minimum. Final pricing depends on garage size, slab condition, and prep. Details and estimates at houstonsuperiorepoxy.com. DIY kits cost less in materials but carry significant failure risk if prep is done incorrectly."
+const EPOXY_LIFESPAN_ANSWER =
+  "A professionally installed, properly prepared epoxy or polyaspartic system in a Houston garage can last many years with reasonable maintenance. Longevity depends on UV exposure, vehicle traffic, chemical exposure, and routine cleaning. UV-stable topcoats and proper surface prep are the biggest factors in long-term performance."
+
 const systemGuide = [
   {
     system: "Traditional Epoxy",
@@ -125,7 +131,7 @@ export default function GarageEpoxyBlog() {
                 name: "How much does garage epoxy cost in Houston TX?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Professional garage epoxy installation in Houston typically runs $800–$1,500 for a single-car garage, $1,500–$3,000 for a two-car garage, and $2,500–$4,500+ for a three-car garage. These ranges reflect proper prep including mechanical grinding, moisture testing, and a multi-coat system. DIY kits cost less in materials but carry significant failure risk if prep is done incorrectly.",
+                  text: EPOXY_COST_ANSWER,
                 },
               },
               {
@@ -149,7 +155,7 @@ export default function GarageEpoxyBlog() {
                 name: "How long does garage epoxy last in Houston?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "A professionally installed, properly prepared epoxy or polyaspartic system in a Houston garage can last 10 to 20 years with reasonable maintenance. Longevity depends on UV exposure, vehicle traffic, chemical exposure, and routine cleaning. UV-stable topcoats and proper surface prep are the biggest factors in long-term performance.",
+                  text: EPOXY_LIFESPAN_ANSWER,
                 },
               },
               {
@@ -220,8 +226,8 @@ export default function GarageEpoxyBlog() {
                   Garage epoxy works well in Houston when it&apos;s installed correctly for our climate — but our high
                   humidity, slab moisture, and extreme summer heat make prep and timing critical. Mechanical grinding,
                   moisture vapor testing, and a UV-stable coating system (often a polyaspartic topcoat) are the
-                  difference between a floor that lasts 10–20 years and one that peels within a season. Professional
-                  installation typically runs $1,500–$3,000 for a two-car garage.
+                  difference between a floor that lasts and one that peels early. Our garage floor brand, Houston
+                  Superior Epoxy, charges $4.50 per square foot with a $1,000 minimum.
                 </p>
               </CardContent>
             </Card>
@@ -399,23 +405,20 @@ export default function GarageEpoxyBlog() {
             <h2>What Does Garage Epoxy Cost in Houston?</h2>
             <p>
               Pricing for professional garage epoxy installation in the Houston area varies based on system type, garage
-              size, surface condition, and prep requirements. As a general reference point:
+              size, surface condition, and prep requirements. For reference, our garage floor brand charges:
             </p>
             <ul>
               <li>
-                <strong>Single-car garage</strong> (approximately 200–250 sq ft): $800–$1,500 for a professional-grade
-                system
+                <strong>Garage floor coating:</strong> $4.50 per square foot
               </li>
               <li>
-                <strong>Two-car garage</strong> (approximately 400–500 sq ft): $1,500–$3,000
-              </li>
-              <li>
-                <strong>Three-car garage</strong> (600+ sq ft): $2,500–$4,500+
+                <strong>Project minimum:</strong> $1,000
               </li>
             </ul>
             <p>
-              These ranges reflect professional installation with proper prep — mechanical grinding, moisture testing,
-              and a multi-coat system. DIY kits from home improvement stores run significantly less in materials but
+              Details and estimates are at{" "}
+              <a href="https://houstonsuperiorepoxy.com/">houstonsuperiorepoxy.com</a>. DIY kits from home improvement
+              stores run significantly less in materials but
               carry significant failure risk if the prep isn&apos;t done correctly. Stripping a failed DIY epoxy coating
               from concrete is labor-intensive and adds cost to any subsequent professional installation. If budget is a
               concern, ask about <Link href="/painting-financing-houston">financing options</Link> rather than cutting
@@ -424,8 +427,8 @@ export default function GarageEpoxyBlog() {
 
             <h2>How Long Does Garage Epoxy Last in Houston?</h2>
             <p>
-              A professionally installed, properly prepared epoxy or polyaspartic system in a Houston garage can last 10
-              to 20 years with reasonable maintenance. Factors that affect longevity include:
+              A professionally installed, properly prepared epoxy or polyaspartic system in a Houston garage can last
+              many years with reasonable maintenance. Factors that affect longevity include:
             </p>
             <ul>
               <li>
@@ -526,10 +529,7 @@ export default function GarageEpoxyBlog() {
 
             <h3>How much does garage epoxy cost in Houston TX?</h3>
             <p>
-              Professional garage epoxy installation in Houston typically runs $800–$1,500 for a single-car garage,
-              $1,500–$3,000 for a two-car garage, and $2,500–$4,500+ for a three-car garage. These ranges reflect proper
-              prep including mechanical grinding, moisture testing, and a multi-coat system. DIY kits cost less in
-              materials but carry significant failure risk if prep is done incorrectly.
+              {EPOXY_COST_ANSWER}
             </p>
 
             <h3>Why does epoxy fail in Houston garages?</h3>
@@ -550,10 +550,7 @@ export default function GarageEpoxyBlog() {
 
             <h3>How long does garage epoxy last in Houston?</h3>
             <p>
-              A professionally installed, properly prepared epoxy or polyaspartic system in a Houston garage can last 10
-              to 20 years with reasonable maintenance. Longevity depends on UV exposure, vehicle traffic, chemical
-              exposure, and routine cleaning. UV-stable topcoats and proper surface prep are the biggest factors in
-              long-term performance.
+              {EPOXY_LIFESPAN_ANSWER}
             </p>
 
             <h3>Should garage epoxy use grinding or acid etching for prep?</h3>

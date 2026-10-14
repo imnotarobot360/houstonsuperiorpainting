@@ -13,13 +13,13 @@ import { EpoxyReviews } from "@/components/epoxy/epoxy-reviews"
 import { EpoxyFAQ } from "@/components/epoxy/epoxy-faq"
 import { EpoxyEstimate } from "@/components/epoxy/epoxy-estimate"
 import { EpoxyFooter } from "@/components/epoxy/epoxy-footer"
-import { EPOXY, FAQS, PROCESS, SERVICE_AREAS, RATE_PER_SQFT } from "@/lib/epoxy"
+import { EPOXY, FAQS, PROCESS, SERVICE_AREAS } from "@/lib/epoxy"
 import { BUSINESS } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Epoxy Flooring Houston TX | Garage Floor Coatings",
   description:
-    "Houston's premium epoxy flooring contractor. Diamond-ground prep, industrial epoxy and polyaspartic topcoats, 15-year written warranty.",
+    "Houston's premium epoxy flooring contractor. Diamond-ground prep and industrial epoxy and polyaspartic topcoats. $4.50/sq ft with a $1,000 minimum.",
   keywords: [
     "epoxy flooring houston",
     "garage floor epoxy houston",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Epoxy Flooring Houston TX | Houston Superior Epoxy",
     description:
-      "Showroom floors, industrial strength. Diamond-ground prep and a 15-year written warranty on garage epoxy across the Houston metro.",
+      "Showroom floors, industrial strength. Diamond-ground prep on garage epoxy across the Houston metro.",
     url: EPOXY.url,
     siteName: EPOXY.name,
     type: "website",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Epoxy Flooring Houston TX | Houston Superior Epoxy",
-    description: "Diamond-ground prep. 15-year warranty. Garage epoxy from $5/sq ft.",
+    description: "Diamond-ground prep. Garage epoxy at $4.50/sq ft with a $1,000 minimum.",
     images: [`${EPOXY.url}/images/epoxy/hero-luxury-garage.png`],
   },
   robots: { index: true, follow: true },
@@ -122,7 +122,7 @@ function EpoxySchema() {
             itemOffered: { "@type": "Service", name: "Garage Epoxy Flooring" },
             priceSpecification: {
               "@type": "UnitPriceSpecification",
-              price: RATE_PER_SQFT.low,
+              price: 4.5,
               priceCurrency: "USD",
               unitText: "square foot",
             },
@@ -142,7 +142,7 @@ function EpoxySchema() {
         "@id": `${EPOXY.url}/#process`,
         name: "Our 8-Step Epoxy Floor Installation Process",
         description:
-          "How Houston Superior Epoxy installs a garage floor coating that lasts 15 to 20 years, from slab inspection through polyaspartic topcoat.",
+          "How Houston Superior Epoxy installs a garage floor coating, from slab inspection through polyaspartic topcoat.",
         totalTime: "P2D",
         step: PROCESS.map((s) => ({
           "@type": "HowToStep",

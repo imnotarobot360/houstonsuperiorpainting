@@ -2,7 +2,7 @@ import { reviewSummaryText } from "@/components/office-reviews"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
-import { BUSINESS, PRICES_2026 } from "@/lib/business"
+import { BUSINESS, PRICES_2026, PRICING_DISCLAIMER } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "House Painting Cost in Houston | 2026 Price Guide",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does it cost to paint the interior of a house in Houston?",
-    answer: `Interior painting in Houston costs ${PRICES_2026.interiorPerSqFt} per square foot, or roughly ${PRICES_2026.fullInterior2000} for a typical 2,000 sq ft home. This includes walls, ceilings, trim, and two coats of premium paint. Factors like ceiling height, trim complexity, and color changes affect final pricing.`
+    answer: `Interior painting in Houston costs ${PRICES_2026.interiorPerSqFt} per square foot, or roughly ${PRICES_2026.fullInterior2000} for a typical 2,000 sq ft home. This includes walls, ceilings, trim, and premium paint; your estimate names the primer and the number of coats needed for even coverage. Factors like ceiling height, trim complexity, and color changes affect final pricing.`
   },
   {
     question: "How much does exterior house painting cost in Houston?",
@@ -123,28 +123,29 @@ export default function HousePaintingCostHoustonPage() {
           <tr>
             <td className="border border-border p-3">1,500 sq ft</td>
             <td className="border border-border p-3">{PRICES_2026.fullInterior1500}</td>
-            <td className="border border-border p-3">2-3 days</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">2,000 sq ft</td>
             <td className="border border-border p-3">{PRICES_2026.fullInterior2000}</td>
-            <td className="border border-border p-3">3-4 days</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
           <tr>
             <td className="border border-border p-3">2,500 sq ft</td>
             <td className="border border-border p-3">{PRICES_2026.fullInterior2500}</td>
-            <td className="border border-border p-3">4-5 days</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
           <tr className="bg-muted/50">
-            <td className="border border-border p-3">3,000+ sq ft</td>
-            <td className="border border-border p-3">$5,500 – $12,000+</td>
-            <td className="border border-border p-3">5-7 days</td>
+            <td className="border border-border p-3">4,000 sq ft</td>
+            <td className="border border-border p-3">{PRICES_2026.fullInterior4000}</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
         </tbody>
       </table>
+      <p className="text-sm text-muted-foreground">{PRICING_DISCLAIMER}</p>
 
       <p>
-        These prices assume standard 8-9 foot ceilings, two coats of premium paint, and typical preparation work. 
+        These prices assume standard 8-9 foot ceilings, premium paint, and typical preparation work. 
         Your actual cost may vary based on factors we&apos;ll discuss below.
       </p>
 
@@ -153,7 +154,7 @@ export default function HousePaintingCostHoustonPage() {
       <p>Several factors can push your interior painting cost toward the higher or lower end of the range:</p>
 
       <ul>
-        <li><strong>Ceiling height:</strong> 10+ foot ceilings require ladders and scaffolding, increasing labor time by 20-30%</li>
+        <li><strong>Ceiling height:</strong> 10+ foot ceilings require ladders and scaffolding, increasing labor time</li>
         <li><strong>Trim complexity:</strong> Crown molding, wainscoting, and detailed trim take more time to cut in properly</li>
         <li><strong>Color changes:</strong> Going from dark to light (or light to dark) requires additional primer coats</li>
         <li><strong>Wall condition:</strong> Homes with cracks, holes, or texture damage need repair before painting</li>
@@ -166,13 +167,10 @@ export default function HousePaintingCostHoustonPage() {
       <p>If you&apos;re painting select rooms rather than your entire home, here are typical Houston prices:</p>
 
       <ul>
-        <li><strong>Single bedroom:</strong> {PRICES_2026.singleRoom}</li>
-        <li><strong>Master bedroom:</strong> $500-1,000</li>
-        <li><strong>Living room:</strong> $600-1,200</li>
-        <li><strong>Kitchen:</strong> $400-800 (walls only, not cabinets)</li>
-        <li><strong>Bathroom:</strong> $250-500</li>
+        <li><strong>Single room (bedroom, living room, kitchen walls, bathroom):</strong> {PRICES_2026.singleRoom}</li>
         <li><strong>Accent wall:</strong> {PRICES_2026.accentWall}</li>
-        <li><strong>Ceiling (per room):</strong> $150-350</li>
+        <li><strong>Ceilings (whole home):</strong> {PRICES_2026.ceilingsWholeHome}</li>
+        <li><strong>Trim (whole home):</strong> {PRICES_2026.trimWholeHome}</li>
       </ul>
 
       <p>
@@ -198,30 +196,31 @@ export default function HousePaintingCostHoustonPage() {
           <tr>
             <td className="border border-border p-3">1,500 sq ft</td>
             <td className="border border-border p-3">{PRICES_2026.exterior1500OneStory} (1-story) / {PRICES_2026.exterior1500TwoStory} (2-story)</td>
-            <td className="border border-border p-3">2-3 days</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">2,000 sq ft</td>
             <td className="border border-border p-3">{PRICES_2026.exterior2000OneStory} (1-story) / {PRICES_2026.exterior2000TwoStory} (2-story)</td>
-            <td className="border border-border p-3">3-4 days</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
           <tr>
             <td className="border border-border p-3">2,500 sq ft</td>
             <td className="border border-border p-3">{PRICES_2026.exterior2500OneStory} (1-story) / {PRICES_2026.exterior2500TwoStory} (2-story)</td>
-            <td className="border border-border p-3">4-5 days</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">3,000 sq ft</td>
             <td className="border border-border p-3">{PRICES_2026.exterior3000OneStory} (1-story) / {PRICES_2026.exterior3000TwoStory} (2-story)</td>
-            <td className="border border-border p-3">5-6 days</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
           <tr>
-            <td className="border border-border p-3">3,500+ sq ft</td>
-            <td className="border border-border p-3">$9,000 – $15,000+</td>
-            <td className="border border-border p-3">6-8 days</td>
+            <td className="border border-border p-3">4,000 sq ft</td>
+            <td className="border border-border p-3">{PRICES_2026.exterior4000OneStory} (1-story) / {PRICES_2026.exterior4000TwoStory} (2-story)</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
         </tbody>
       </table>
+      <p className="text-sm text-muted-foreground">{PRICING_DISCLAIMER}</p>
 
       <h3>Exterior Cost by Siding Type</h3>
 
@@ -232,7 +231,7 @@ export default function HousePaintingCostHoustonPage() {
         <li><strong>Wood siding:</strong> Requires more prep, caulking, and may need primer</li>
         <li><strong>Stucco:</strong> Textured surface uses more paint, requires crack repair</li>
         <li><strong>Brick (paint, not limewash):</strong> Highest paint consumption, extensive prep</li>
-        <li><strong>Brick (limewash):</strong> $4,000-15,000 depending on home size</li>
+        <li><strong>Brick (limewash):</strong> {PRICES_2026.limewashPerSqFt} per sq ft of brick, or about {PRICES_2026.limewashHome2500} for a 2,500 sq ft home</li>
         <li><strong>Aluminum/vinyl:</strong> Requires specialized bonding primers</li>
       </ul>
 
@@ -244,7 +243,7 @@ export default function HousePaintingCostHoustonPage() {
 
       <p>
         Professional cabinet refinishing is one of the best values in home improvement. 
-        Rather than replacing cabinets for $20,000-50,000, refinishing delivers a like-new appearance for a fraction of the cost:
+        Rather than replacing cabinets, refinishing delivers a like-new appearance for a fraction of the cost:
       </p>
 
       <table className="w-full border-collapse my-6">
@@ -259,20 +258,21 @@ export default function HousePaintingCostHoustonPage() {
           <tr>
             <td className="border border-border p-3">Small (under 100 sq ft)</td>
             <td className="border border-border p-3">{PRICES_2026.cabinetsGalley}</td>
-            <td className="border border-border p-3">3-4 days</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">Average (100-175 sq ft)</td>
             <td className="border border-border p-3">{PRICES_2026.cabinetsAverage}</td>
-            <td className="border border-border p-3">4-5 days</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
           <tr>
             <td className="border border-border p-3">Large (175+ sq ft)</td>
             <td className="border border-border p-3">{PRICES_2026.cabinetsLarge}</td>
-            <td className="border border-border p-3">5-6 days</td>
+            <td className="border border-border p-3">Set in your estimate</td>
           </tr>
         </tbody>
       </table>
+      <p className="text-sm text-muted-foreground">{PRICING_DISCLAIMER}</p>
 
       <p>
         Learn more about <Link href="/cabinet-refinishing-houston-tx" className="text-primary underline">cabinet refinishing in Houston</Link> and see before/after examples.
@@ -291,9 +291,9 @@ export default function HousePaintingCostHoustonPage() {
         <li><strong>Preparation work:</strong> Patching, caulking, sanding, priming</li>
         <li><strong>Protection:</strong> Covering floors, furniture, and fixtures</li>
         <li><strong>Cleanup:</strong> Daily cleanup and final walkthrough</li>
-        <li><strong>Warranty:</strong> Written warranty on labor and materials</li>
+        <li><strong>Warranty:</strong> Our 5-year written workmanship warranty</li>
         <li><strong>Timeline:</strong> Expected start and completion dates</li>
-        <li><strong>Payment terms:</strong> Deposit amount and payment schedule</li>
+        <li><strong>Payment terms:</strong> The complete payment schedule, in writing before you approve</li>
       </ul>
 
       <p>
@@ -309,7 +309,7 @@ export default function HousePaintingCostHoustonPage() {
 
       <h3>1. Bundle Interior and Exterior</h3>
       <p>
-        Painting both interior and exterior in one project often saves 10-15% compared to separate projects. 
+        Painting both interior and exterior in one project can cost less than two separate projects. 
         The painter can mobilize once and work more efficiently.
       </p>
 
@@ -374,13 +374,13 @@ export default function HousePaintingCostHoustonPage() {
       <p>
         At Houston Superior Painting, we provide free, no-obligation estimates for homeowners throughout 
         Houston, Katy, Cypress, Sugar Land, and surrounding areas. Our estimates are detailed, transparent, 
-        and honored for 30 days.
+        and in writing. {BUSINESS.paymentPolicy.sentence}
       </p>
 
       <h2>Why Choose Houston Superior Painting?</h2>
 
       <p>
-        Since 2019, we&apos;ve helped hundreds of Houston homeowners transform their properties with professional painting services. 
+        Since 2019, we&apos;ve completed 500+ projects across Greater Houston. 
         Here&apos;s what sets us apart:
       </p>
 
@@ -388,7 +388,7 @@ export default function HousePaintingCostHoustonPage() {
         <li><strong>Local expertise:</strong> We understand Houston&apos;s climate and use products that perform here</li>
         <li><strong>Detailed estimates:</strong> No surprises—you&apos;ll know exactly what you&apos;re getting</li>
         <li><strong>Premium materials:</strong> Sherwin-Williams and Benjamin Moore products</li>
-        <li><strong>5-year warranty:</strong> We stand behind our work</li>
+        <li><strong>5-year written workmanship warranty:</strong> Transferable if you sell your home</li>
         <li><strong>Clean, professional crews:</strong> We respect your home and property</li>
         <li><strong>Google reviews by office:</strong> {reviewSummaryText()}</li>
       </ul>

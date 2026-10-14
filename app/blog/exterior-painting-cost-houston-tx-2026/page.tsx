@@ -1,12 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
-import { PRICES_2026 } from "@/lib/business"
+import { BUSINESS, PRICES_2026, PRICING_DISCLAIMER } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Exterior Painting Cost in Houston TX (2026)",
   description:
-    `Exterior painting in Houston TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026 ($1.75–$4.00/sq ft). Real prices by home size, siding type & stories.`,
+    `Exterior painting in Houston TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026 (${PRICES_2026.exteriorPerSqFt}/sq ft). Real prices by home size, siding type & stories.`,
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide",
   },
@@ -35,17 +35,17 @@ const faqs = [
   {
     question: "How much does exterior painting cost per square foot in Houston?",
     answer:
-      "$1.75–$4.00 per square foot of paintable exterior surface. Note that paintable surface differs from living area — a 2,000 sq ft home typically has 2,500–3,500 sq ft of paintable exterior.",
+      `${PRICES_2026.exteriorPerSqFt} per square foot of paintable exterior surface. Note that paintable surface differs from living area — a home usually has more paintable exterior surface than living area.`,
   },
   {
     question: "How long does an exterior paint job last in Houston?",
     answer:
-      "With proper prep and premium paint, 8–12 years on Hardie board and wood siding, 10–15 years on brick. Builder-grade paint in Houston's climate can fail in as little as 3–5 years.",
+      "It depends on the surface, sun exposure, paint grade, and above all the prep. Premium paint over well-prepared surfaces lasts far longer than builder-grade paint, which fails early in Houston's climate.",
   },
   {
     question: "Is it cheaper to paint a house exterior in winter in Houston?",
     answer:
-      "Often, yes. December–January is the slowest season and many contractors offer discounts. Houston winters are mild enough to paint between cold fronts, as long as temps stay above 50°F and surfaces are dry.",
+      "Sometimes. December–January is a slower season, which can make scheduling easier. Houston winters are mild enough to paint between cold fronts, as long as temps stay above 50°F and surfaces are dry.",
   },
   {
     question: "Does the quote include pressure washing?",
@@ -55,17 +55,17 @@ const faqs = [
   {
     question: "How much does it cost to paint brick in Houston?",
     answer:
-      "$2.25–$4.00 per sq ft, or roughly $4,500–$10,000 for a typical brick home. Brick requires masonry primer and absorbs more paint.",
+      `${PRICES_2026.paintedBrickPerSqFt} per sq ft, or roughly ${PRICES_2026.paintedBrickRanch} for a typical brick ranch home. Brick requires masonry primer and absorbs more paint.`,
   },
   {
     question: "Do I need HOA approval to repaint my exterior?",
     answer:
-      "In most Greater Houston master-planned communities, yes — even for the same color. Approval typically takes 2–4 weeks.",
+      "In most Greater Houston master-planned communities, yes — even for the same color. Build the approval time into your schedule.",
   },
   {
     question: "How long does exterior painting take in Houston?",
     answer:
-      "Most single-story homes take 2–4 days; two-story homes take 3–6 days. Weather can add buffer days — a professional crew builds those into the schedule rather than rushing between rain bands.",
+      "It depends on the size of the home, the number of stories, and the prep needed; your written estimate lists the schedule. Weather can add buffer days — a professional crew builds those into the schedule rather than rushing between rain bands.",
   },
 ]
 
@@ -94,7 +94,7 @@ export default function ExteriorPaintingCostHoustonPage() {
   return (
     <BlogPostTemplate
       title="How Much Does Exterior Painting Cost in Houston TX in 2026?"
-      excerpt={`Exterior painting in Houston TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026, or roughly $1.75–$4.00 per square foot of paintable surface. Here's the full breakdown by home size, siding type, and stories.`}
+      excerpt={`Exterior painting in Houston TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026, or roughly ${PRICES_2026.exteriorPerSqFt} per square foot of paintable surface. Here's the full breakdown by home size, siding type, and stories.`}
       author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 11, 2026"
@@ -113,7 +113,7 @@ export default function ExteriorPaintingCostHoustonPage() {
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
           Exterior painting in Houston TX costs <strong>{PRICES_2026.exteriorPerHome}</strong> for most homes in 2026, or roughly{" "}
-          <strong>$1.75–$4.00 per square foot</strong> of paintable surface. A typical single-story 2,000 sq ft Houston
+          <strong>{PRICES_2026.exteriorPerSqFt} per square foot</strong> of paintable surface. A typical single-story 2,000 sq ft Houston
           home runs <strong>{PRICES_2026.exterior2000OneStory}</strong>; a two-story home of the same footprint runs{" "}
           <strong>{PRICES_2026.exterior2000TwoStory}</strong> because of ladder and equipment work. Brick, Hardie board, and stucco each
           price differently — full breakdown below.
@@ -122,7 +122,7 @@ export default function ExteriorPaintingCostHoustonPage() {
 
       <p>
         Houston is actually one of the most affordable major metros in the country for exterior painting — but quotes
-        here still vary by 2–3x for the same house. The difference is almost always prep work, paint grade, and whether
+        here still vary widely for the same house. The difference is almost always prep work, paint grade, and whether
         the crew is insured. This guide shows you exactly what drives the number so you can compare estimates
         intelligently.
       </p>
@@ -167,9 +167,10 @@ export default function ExteriorPaintingCostHoustonPage() {
           </tr>
         </tbody>
       </table>
+      <p className="text-sm text-muted-foreground">{PRICING_DISCLAIMER}</p>
 
       <p>
-        <strong>Why stories matter so much:</strong> each additional story adds roughly 30–50% to the price. Two-story
+        <strong>Why stories matter so much:</strong> each additional story adds noticeably to the price. Two-story
         work requires extension ladders, sometimes scaffolding, more setup and teardown time, and slower, more careful
         application near rooflines.
       </p>
@@ -180,59 +181,60 @@ export default function ExteriorPaintingCostHoustonPage() {
         <thead>
           <tr className="bg-muted">
             <th className="border border-border p-3 text-left">Exterior Surface</th>
-            <th className="border border-border p-3 text-left">Cost per sq ft</th>
+            <th className="border border-border p-3 text-left">Typical Cost</th>
             <th className="border border-border p-3 text-left">Notes</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td className="border border-border p-3">Hardie board / fiber cement</td>
-            <td className="border border-border p-3">$1.75 – $3.25</td>
+            <td className="border border-border p-3">Quoted on site</td>
             <td className="border border-border p-3">Holds paint extremely well; absorbs more paint than brick</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">Wood siding</td>
-            <td className="border border-border p-3">$2.00 – $3.75</td>
+            <td className="border border-border p-3">Quoted on site</td>
             <td className="border border-border p-3">Most prep-intensive: scraping, sanding, priming bare spots</td>
           </tr>
           <tr>
             <td className="border border-border p-3">Brick (painted)</td>
-            <td className="border border-border p-3">$2.25 – $4.00</td>
+            <td className="border border-border p-3">{PRICES_2026.paintedBrickPerSqFt} per sq ft</td>
             <td className="border border-border p-3">Masonry primer required; porous surface drinks paint</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">Stucco</td>
-            <td className="border border-border p-3">$2.00 – $4.00</td>
+            <td className="border border-border p-3">{PRICES_2026.stuccoPainting} per home</td>
             <td className="border border-border p-3">Hairline crack repair and elastomeric coating add cost</td>
           </tr>
           <tr>
             <td className="border border-border p-3">Vinyl siding</td>
-            <td className="border border-border p-3">$1.50 – $2.75</td>
+            <td className="border border-border p-3">Quoted on site</td>
             <td className="border border-border p-3">Needs vinyl-safe colors to prevent warping</td>
           </tr>
         </tbody>
       </table>
+      <p className="text-sm text-muted-foreground">{PRICING_DISCLAIMER}</p>
 
       <h3>Common Add-Ons</h3>
 
       <ul>
         <li>
-          <strong>Pressure washing (should be included):</strong> $0 – $400 if quoted separately
+          <strong>Pressure washing (should be included):</strong> {PRICES_2026.pressureWashingHouse} for a house if quoted separately
         </li>
         <li>
-          <strong>Trim, fascia, and soffits only:</strong> $1,000 – $2,500
+          <strong>Trim, fascia, and soffits only:</strong> quoted by scope
         </li>
         <li>
-          <strong>Front door (paint or stain):</strong> $150 – $400
+          <strong>Front door only:</strong> {PRICES_2026.frontDoorOnly}
         </li>
         <li>
-          <strong>Shutters (per pair):</strong> $75 – $150
+          <strong>Shutters:</strong> priced per item in your estimate
         </li>
         <li>
-          <strong>Garage door:</strong> $200 – $500
+          <strong>Garage door:</strong> priced per item in your estimate
         </li>
         <li>
-          <strong>Wood rot repair (per area):</strong> $150 – $800
+          <strong>Wood rot repair:</strong> {PRICES_2026.woodRotRepair}
         </li>
         <li>
           <strong>Full caulking of windows/doors:</strong> included in professional quotes
@@ -254,7 +256,7 @@ export default function ExteriorPaintingCostHoustonPage() {
         <li>Masking windows, fixtures, landscaping, and concrete</li>
       </ul>
       <p>
-        Crews that skip prep can quote 30–40% less — and the paint fails in 2–3 years instead of 8–12. If two quotes
+        Crews that skip prep can quote much less — and the paint fails years early. If two quotes
         are far apart, the prep scope is almost always the reason. Learn more about{" "}
         <Link href="/blog/pressure-washing-before-painting" className="text-primary underline">
           pressure washing before painting
@@ -269,34 +271,34 @@ export default function ExteriorPaintingCostHoustonPage() {
           <tr className="bg-muted">
             <th className="border border-border p-3 text-left">Grade</th>
             <th className="border border-border p-3 text-left">Product Examples</th>
-            <th className="border border-border p-3 text-left">Cost Per Gallon</th>
-            <th className="border border-border p-3 text-left">Expected Life in Houston</th>
+            <th className="border border-border p-3 text-left">Relative Cost</th>
+            <th className="border border-border p-3 text-left">Relative Life in Houston</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td className="border border-border p-3">Builder-grade</td>
             <td className="border border-border p-3">Generic flat exterior</td>
-            <td className="border border-border p-3">$30–$45</td>
-            <td className="border border-border p-3">3–5 years</td>
+            <td className="border border-border p-3">$</td>
+            <td className="border border-border p-3">Shortest</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">Good</td>
             <td className="border border-border p-3">Sherwin-Williams SuperPaint</td>
-            <td className="border border-border p-3">$60–$75</td>
-            <td className="border border-border p-3">6–8 years</td>
+            <td className="border border-border p-3">$$</td>
+            <td className="border border-border p-3">Moderate</td>
           </tr>
           <tr>
             <td className="border border-border p-3">Better</td>
             <td className="border border-border p-3">Sherwin-Williams Duration</td>
-            <td className="border border-border p-3">$80–$95</td>
-            <td className="border border-border p-3">8–12 years</td>
+            <td className="border border-border p-3">$$$</td>
+            <td className="border border-border p-3">Long</td>
           </tr>
           <tr className="bg-muted/50">
             <td className="border border-border p-3">Best</td>
             <td className="border border-border p-3">SW Emerald, BM Aura Exterior</td>
-            <td className="border border-border p-3">$95–$115</td>
-            <td className="border border-border p-3">10–15 years</td>
+            <td className="border border-border p-3">$$$$</td>
+            <td className="border border-border p-3">Longest</td>
           </tr>
         </tbody>
       </table>
@@ -311,9 +313,9 @@ export default function ExteriorPaintingCostHoustonPage() {
 
       <h3>3. Home Condition</h3>
       <p>
-        A home painted 6 years ago with sound existing paint is a straightforward repaint. A home that&apos;s gone 12+
-        years needs more: heavy scraping, wood rot replacement, extra primer, and sometimes a third coat on sun-blasted
-        south and west walls. Deferred maintenance typically adds 15–30% to the project.
+        A home with sound existing paint is a straightforward repaint. A home that&apos;s gone much longer
+        needs more: heavy scraping, wood rot replacement, extra primer, and sometimes an extra coat on sun-blasted
+        south and west walls. Deferred maintenance adds to the project.
       </p>
 
       <h3>4. Architectural Complexity</h3>
@@ -373,10 +375,8 @@ export default function ExteriorPaintingCostHoustonPage() {
 
       <h2>How Houston Compares to the National Average</h2>
       <p>
-        The 2026 national average for a professional exterior repaint is $1.50–$4.50/sq ft, with most homeowners
-        spending $3,800–$9,200 on a 2,000–2,500 sq ft home. Houston runs at or slightly below the national midpoint
-        thanks to a competitive contractor market — one 2026 city-by-city analysis ranked Houston the most affordable
-        major U.S. metro for exterior painting.
+        Houston has a large, competitive contractor market, which helps keep exterior painting prices reasonable
+        compared with many other major metros.
       </p>
       <p>
         The catch: that affordability attracts a high volume of uninsured, here-today-gone-tomorrow crews. The cheapest
@@ -396,8 +396,8 @@ export default function ExteriorPaintingCostHoustonPage() {
           <strong>Exact products</strong> — brand, line, and sheen (not just &quot;premium paint&quot;)
         </li>
         <li>
-          <strong>Number of coats</strong> — two finish coats is standard; one coat only on sound existing paint, in
-          writing
+          <strong>Primer and number of coats</strong> — the estimate should name the primer and the number of coats
+          needed for even coverage
         </li>
         <li>
           <strong>Wood rot policy</strong> — how repairs are priced if discovered
@@ -406,10 +406,10 @@ export default function ExteriorPaintingCostHoustonPage() {
           <strong>Certificate of Insurance</strong> — liability coverage you can verify
         </li>
         <li>
-          <strong>Written workmanship warranty</strong> — 2 years minimum; we offer 5
+          <strong>Written workmanship warranty</strong> — ours is a 5-year written workmanship warranty, transferable
         </li>
         <li>
-          <strong>Payment terms</strong> — no large cash deposits; legitimate contractors accept cards
+          <strong>Payment terms</strong> — get the payment schedule in writing
         </li>
       </ul>
       <p>
@@ -440,8 +440,8 @@ export default function ExteriorPaintingCostHoustonPage() {
         </li>
       </ul>
       <p>
-        The cost difference is real: repainting at the first signs of failure is a standard job. Waiting 2–3 more years
-        often adds $1,000–$3,000 in wood rot repair and extra prep. Need patches and texture work first? See{" "}
+        The cost difference is real: repainting at the first signs of failure is a standard job. Waiting longer
+        often adds wood rot repair and extra prep. Need patches and texture work first? See{" "}
         <Link href="/blog/drywall-repair-before-painting" className="text-primary underline">
           drywall and surface repair before painting
         </Link>
@@ -451,12 +451,12 @@ export default function ExteriorPaintingCostHoustonPage() {
       <h2>Get a Free Exterior Painting Estimate in Houston TX</h2>
       <p>
         Houston Superior Painting serves Houston, Katy, Cypress, Sugar Land, The Woodlands, and all surrounding
-        communities. Free on-site estimates, typically scheduled within 24–48 hours. Every exterior estimate includes a
-        full written prep scope, exact paint products and grade, a written timeline and crew size, a 5-year workmanship
-        warranty, and HOA color guidance at no charge — with clear written payment terms before you approve.
+        communities. Free on-site estimates. Every exterior estimate includes a
+        full written prep scope, exact paint products and grade, a written timeline, our 5-year written workmanship
+        warranty, and HOA color guidance at no charge. {BUSINESS.paymentPolicy.sentence}
       </p>
       <p>
-        Call or text <strong>(346) 594-5960</strong> seven days a week, or{" "}
+        Call or text <strong>(346) 594-5960</strong>, or{" "}
         <Link href="/exterior-painting-houston-tx" className="text-primary underline">
           learn more about our exterior painting services
         </Link>{" "}

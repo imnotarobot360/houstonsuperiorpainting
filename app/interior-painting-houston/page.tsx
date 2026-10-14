@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ServicePageTemplate } from '@/components/service-page-template'
+import { BUSINESS, PRICES_2026 } from '@/lib/business'
 
 export const metadata: Metadata = {
   alternates: {
@@ -28,7 +29,7 @@ const serviceSchema = {
 const pageData = {
   title: "Interior Painting Services in Houston TX",
   subtitle: "Professional Interior Painters",
-  heroDescription: "Transform your living spaces with expert interior painting from Houston Superior Painting. We deliver flawless, brush-mark-free results using factory-finish spray techniques that look better and last longer than traditional methods.",
+  heroDescription: "Transform your living spaces with expert interior painting from Houston Superior Painting. We deliver flawless, brush-mark-free results using factory-finish spray techniques where they suit the job.",
   sections: [
     {
       title: "Why Houston Homeowners Trust Us for Interior Painting",
@@ -36,7 +37,7 @@ const pageData = {
 
 Our team understands that your home is your sanctuary. We treat every project with the care and respect it deserves, protecting your furniture, floors, and belongings while transforming your walls into works of art. From single accent walls to complete whole-home repaints, we approach each job with the same commitment to excellence.
 
-Houston's humidity and temperature fluctuations demand paint products specifically formulated for our climate. We exclusively use premium paints from Sherwin-Williams and Benjamin Moore that resist moisture, maintain color integrity, and provide lasting durability in our challenging environment.`
+Houston's humidity and temperature fluctuations demand paint products specifically formulated for our climate. We use premium paints from Sherwin-Williams and Benjamin Moore chosen for moisture resistance, color retention, and durability in our challenging environment.`
     },
     {
       title: "Our Interior Painting Process",
@@ -70,10 +71,10 @@ Ceiling painting requires specialized techniques to prevent drips and ensure eve
     "Premium Sherwin-Williams and Benjamin Moore paints",
     "Thorough preparation and surface repair",
     "Clean, professional work with furniture protection",
-    "No payment until you're completely satisfied",
-    "5-year warranty on all interior work",
-    "Bonded and insured team",
-    "Flexible scheduling including weekends"
+    "Scope, price, and payment schedule in writing before you approve",
+    "5-year written workmanship warranty, transferable",
+    "$2M general liability + workers' comp; bonded",
+    "Flexible scheduling"
   ],
   beforeAfterImages: [
     {
@@ -85,11 +86,11 @@ Ceiling painting requires specialized techniques to prevent drips and ensure eve
   faqs: [
     {
       question: "How much does interior painting cost in Houston?",
-      answer: "Interior painting in Houston typically costs between $2 to $4 per square foot, depending on wall condition, ceiling height, and prep work required. We provide free detailed estimates for accurate pricing."
+      answer: `Interior painting in Houston typically costs ${PRICES_2026.interiorPerSqFt} per square foot, depending on wall condition, ceiling height, and prep work required. A single room typically runs ${PRICES_2026.singleRoom}. We provide free detailed estimates for accurate pricing. ${BUSINESS.paymentPolicy.sentence}`
     },
     {
       question: "How long does it take to paint the interior of a house?",
-      answer: "Most interior painting projects take 2-4 days depending on the size of your home and scope of work. A single room can often be completed in one day, while whole-home repaints may take a week."
+      answer: "It depends on the size of your home and the scope of work, including how much repair and prep the walls need. Your written estimate lists the schedule for your project."
     },
     {
       question: "Do I need to move my furniture?",
@@ -97,7 +98,7 @@ Ceiling painting requires specialized techniques to prevent drips and ensure eve
     },
     {
       question: "What type of paint do you use?",
-      answer: "We exclusively use premium paints from Sherwin-Williams and Benjamin Moore. These brands offer superior coverage, durability, and color retention, especially important in Houston's humid climate."
+      answer: "We use premium paints from Sherwin-Williams and Benjamin Moore, chosen for coverage, durability, and color retention, which matter in Houston's humid climate. Your written estimate names the primer and the number of coats needed for even coverage."
     },
     {
       question: "How do I choose the right paint colors?",

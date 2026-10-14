@@ -320,7 +320,7 @@ export default function BestTimeToPaintBlog() {
 
             <h2>Why You Should Book Earlier Than You Think</h2>
             <p>
-              Houston&apos;s painting season operates on a clear supply-and-demand cycle. The best contractors — those with established processes, proper equipment, and experience in our climate — are typically booked 4–8 weeks out during peak season. If you call in April hoping for a May start, many quality painters will already be full. If you call in August for fall work, the October slots may be gone.
+              Houston&apos;s painting season operates on a clear supply-and-demand cycle. The best contractors — those with established processes, proper equipment, and experience in our climate — are often booked weeks out during peak season. If you call in April hoping for a May start, many quality painters will already be full. If you call in August for fall work, the October slots may be gone.
             </p>
             <p>
               <strong>The practical advice:</strong> Once you&apos;ve decided to have your home painted, contact your preferred contractor immediately. Get on their schedule before confirming every detail. Quality goes fast in Houston.

@@ -20,7 +20,7 @@ const relatedPosts = [
   {
     title: "Why Proper Paint Preparation Matters",
     href: "/blog/paint-preparation-houston-climate",
-    excerpt: "The secret to paint that lasts 10+ years in Houston weather.",
+    excerpt: "Why preparation is what makes paint last in Houston weather.",
     image: "/images/blog/paint-preparation-houston.jpg"
   },
   {
@@ -35,7 +35,7 @@ export default function HowToChooseBestPaintersPage() {
   return (
     <BlogPostTemplate slug="how-to-choose-best-painters-houston"
       title="How to Choose the Best House Painters in Houston, TX"
-      excerpt="Finding the right painting contractor can feel overwhelming. Houston homeowners have hundreds of options when searching for house painters near me, but not all painting companies deliver the same quality, professionalism, or durability."
+      excerpt="Finding the right painting contractor can feel overwhelming. Houston homeowners have many options when searching for house painters near me, but not all painting companies deliver the same quality, professionalism, or durability."
       author="Houston Superior Painting"
       authorRole="Professional Painting Contractor"
       publishDate="May 4, 2026"

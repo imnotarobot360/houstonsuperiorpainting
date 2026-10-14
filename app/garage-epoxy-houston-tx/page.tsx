@@ -5,16 +5,25 @@ import Link from "next/link";
 import Image from "next/image";
 import { RelatedLinks } from "@/components/luxury/related-links";
 import type { Metadata } from "next";
+import { BUSINESS, PRICING_DISCLAIMER } from "@/lib/business";
+
+// Confirmed garage epoxy pricing (Houston Superior Epoxy, houstonsuperiorepoxy.com).
+const EPOXY_RATE = "$4.50 per sq ft";
+const EPOXY_MINIMUM = "$1,000";
+const COST_ANSWER = `Garage floor epoxy from Houston Superior Epoxy, our garage floor brand, is ${EPOXY_RATE} with a ${EPOXY_MINIMUM} minimum. Details and estimates at houstonsuperiorepoxy.com.`;
+const INSTALL_TIME_ANSWER = "It depends on the system and the condition of the slab. Your written estimate lists the schedule, including when the floor is ready for foot traffic and vehicles.";
+const LIFT_ANSWER = "Not when prepped correctly. Most failures come from inadequate surface prep — acid wash is not enough. We use diamond grinders to mechanically open the concrete pores, creating a true mechanical bond.";
+const CRACKS_ANSWER = "Yes. We repair cracks with flexible polyurea, fill pits and spalled areas with patching compound, and grind everything flat before coating. Cracks are common in Houston slabs because of foundation movement. Repair work is listed in your quote.";
 
 export const metadata: Metadata = {
   title: "Garage Floor Epoxy Houston TX — Houston Superior Painting",
-  description: "Professional garage floor epoxy in Houston TX. Flake, metallic, solid color. Diamond-ground prep. 15-year warranty. $2,500-$8,500. Free estimates.",
+  description: "Professional garage floor epoxy in Houston TX. Flake, metallic, solid color. Diamond-ground prep. $4.50/sq ft, $1,000 minimum. Free estimates.",
   alternates: {
     canonical: "https://houstonsuperiorepoxy.com/",
   },
   openGraph: {
     title: "Garage Floor Epoxy Houston TX — Houston Superior Painting",
-    description: "Professional garage floor epoxy in Houston TX. Flake, metallic, solid color. Diamond-ground prep. 15-year warranty.",
+    description: "Professional garage floor epoxy in Houston TX. Flake, metallic, solid color. Diamond-ground prep.",
     url: "https://houstonsuperiorepoxy.com/",
     siteName: "Houston Superior Painting",
     type: "website",
@@ -28,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Garage Floor Epoxy Houston TX — Houston Superior Painting",
-    description: "Professional garage floor epoxy in Houston TX. Flake, metallic, solid color. Diamond-ground prep. 15-year warranty.",
+    description: "Professional garage floor epoxy in Houston TX. Flake, metallic, solid color. Diamond-ground prep.",
     images: ["https://houstonsuperiorpainting.com/images/og/og-garage-epoxy.jpg"],
   },
 }
@@ -40,7 +49,7 @@ const SERVICE_JSONLD = {
     "https://houstonsuperiorepoxy.com/#service",
   name: "Garage Floor Epoxy & Polyaspartic Coatings in Houston, TX",
   description:
-    "Professional garage floor epoxy, polyaspartic, and concrete coating installation in Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands TX. Diamond grind prep, flake systems, metallic finishes, solid color. Built for Houston heat and humidity. 15-year warranty.",
+    "Professional garage floor epoxy, polyaspartic, and concrete coating installation in Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands TX. Diamond grind prep, flake systems, metallic finishes, solid color. Built for Houston heat and humidity.",
   serviceType: "Garage Floor Coating",
   provider: { "@type": "Organization", "@id": "https://houstonsuperiorpainting.com/#organization" },
   areaServed: [
@@ -61,8 +70,7 @@ const SERVICE_JSONLD = {
     priceCurrency: "USD",
     priceSpecification: {
       "@type": "PriceSpecification",
-      minPrice: 2500,
-      maxPrice: 12000,
+      minPrice: 1000,
       priceCurrency: "USD",
     },
     availability: "https://schema.org/InStock",
@@ -71,7 +79,7 @@ const SERVICE_JSONLD = {
     "@type": "OfferCatalog",
     name: "Garage Floor Coating Options",
     itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Polyaspartic Flake System (1-Day)" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Polyaspartic Flake System" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Epoxy Flake System" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Metallic Epoxy Finish" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Solid Color Epoxy" } },
@@ -91,7 +99,7 @@ const FAQ_JSONLD = {
       name: "How much does garage floor epoxy cost in Houston?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Garage floor epoxy in Houston typically costs $5–$12 per square foot installed. A standard 2-car garage (400–500 sq ft) runs $2,500–$5,500. A 3-car garage (600–800 sq ft) runs $3,500–$8,500. Metallic finishes add 20–30%. Pricing includes diamond grinding, crack repair, primer, base coat, flake or pigment, and clear topcoat with 15-year warranty.",
+        text: COST_ANSWER,
       },
     },
     {
@@ -99,7 +107,7 @@ const FAQ_JSONLD = {
       name: "What is the difference between epoxy and polyaspartic?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Epoxy is a 2-part resin that takes 24–72 hours to cure per coat, ideal for budget-conscious installs. Polyaspartic cures in 1–2 hours per coat, allowing same-day install and same-day walk-on. Polyaspartic is also more UV-stable (won't yellow) and more flexible (won't crack with concrete movement). For Houston heat we recommend polyaspartic for premium installs, epoxy for budget jobs.",
+        text: "Epoxy is a two-part resin that cures more slowly and suits budget-conscious installs. Polyaspartic cures much faster and is more UV-stable and more flexible. For Houston heat we recommend polyaspartic for premium installs, epoxy for budget jobs.",
       },
     },
     {
@@ -107,7 +115,7 @@ const FAQ_JSONLD = {
       name: "How long does garage epoxy installation take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Polyaspartic flake systems install in 1 day with car-ready in 24 hours. Traditional epoxy takes 2–3 days plus 5–7 days full cure before parking vehicles. We schedule around your needs and can usually start within 1–2 weeks of estimate signoff.",
+        text: INSTALL_TIME_ANSWER,
       },
     },
     {
@@ -115,7 +123,7 @@ const FAQ_JSONLD = {
       name: "Will epoxy lift off my Houston garage floor?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Not when prepped correctly. Most epoxy failures come from inadequate surface prep — acid wash is not enough. Houston Superior Painting uses diamond grinders to mechanically open the concrete pores, creating a true mechanical bond. Properly prepped polyaspartic and epoxy systems last 15+ years in Houston garages.",
+        text: LIFT_ANSWER,
       },
     },
     {
@@ -123,7 +131,7 @@ const FAQ_JSONLD = {
       name: "Can you repair cracks and pits before coating?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We repair cracks with flexible polyurea, fill pits and spalled areas with patching compound, and grind everything flat before coating. Cracked Houston slabs (very common due to foundation movement) become invisible after our prep. Repair work is included in the quote.",
+        text: CRACKS_ANSWER,
       },
     },
     {
@@ -197,36 +205,30 @@ const cities = [
 ];
 
 const pricingRows = [
-  { project: "1-car garage (250 sq ft)", price: "$1,800 – $3,200", note: "1 day" },
-  { project: "2-car garage (400–500 sq ft)", price: "$2,500 – $5,500", note: "1–2 days" },
-  { project: "3-car garage (600–800 sq ft)", price: "$3,500 – $8,500", note: "1–2 days" },
-  { project: "4-car / oversized (900+ sq ft)", price: "$5,500 – $12,000", note: "2–3 days" },
-  { project: "Metallic finish upgrade", price: "+20–30%", note: "Same timeline" },
-  { project: "Covered patio coating", price: "$8 – $14 / sq ft", note: "1–2 days" },
-  { project: "Pool deck (anti-slip)", price: "$10 – $16 / sq ft", note: "2–3 days" },
-  { project: "Concrete crack & pit repair (single)", price: "$150 – $400", note: "Included if minor" },
+  { project: "Garage floor coating", price: EPOXY_RATE, note: "Listed in your written estimate" },
+  { project: "Project minimum", price: EPOXY_MINIMUM, note: "Listed in your written estimate" },
 ];
 
 const faqItems = [
   {
     q: "How much does garage floor epoxy cost in Houston?",
-    a: "Garage floor epoxy in Houston typically costs $5–$12 per sq ft installed. A standard 2-car garage (400–500 sq ft) runs $2,500–$5,500. A 3-car garage runs $3,500–$8,500. Metallic finishes add 20–30%. Pricing includes diamond grinding, crack repair, primer, base coat, flake or pigment, and clear topcoat with 15-year warranty.",
+    a: COST_ANSWER,
   },
   {
     q: "What's the difference between epoxy and polyaspartic?",
-    a: "Epoxy is a 2-part resin that takes 24–72 hours per coat — budget choice. Polyaspartic cures in 1–2 hours per coat, allowing 1-day install with same-day walk-on. Polyaspartic is also more UV-stable (won't yellow) and more flexible (won't crack). For Houston heat we recommend polyaspartic for premium, epoxy for budget.",
+    a: "Epoxy is a two-part resin that cures more slowly — the budget choice. Polyaspartic cures much faster and is more UV-stable and more flexible. For Houston heat we recommend polyaspartic for premium, epoxy for budget.",
   },
   {
     q: "How long does installation take?",
-    a: "Polyaspartic flake systems install in 1 day with car-ready in 24 hours. Traditional epoxy takes 2–3 days plus 5–7 days full cure before parking vehicles. We schedule around your needs and can usually start within 1–2 weeks of signoff.",
+    a: INSTALL_TIME_ANSWER,
   },
   {
     q: "Will epoxy lift off my Houston garage floor?",
-    a: "Not when prepped correctly. Most failures come from inadequate prep — acid wash is not enough. We use diamond grinders to mechanically open concrete pores, creating a true mechanical bond. Properly prepped polyaspartic and epoxy systems last 15+ years in Houston garages.",
+    a: LIFT_ANSWER,
   },
   {
     q: "Can you repair cracks and pits before coating?",
-    a: "Yes. We repair cracks with flexible polyurea, fill pits and spalled areas with patching compound, and grind everything flat. Cracked Houston slabs (very common due to foundation movement) become invisible after our prep. Repair work is included in your quote.",
+    a: CRACKS_ANSWER,
   },
   {
     q: "Can I get flake or metallic finishes?",
@@ -241,8 +243,8 @@ const faqItems = [
     a: "Yes. We coat covered patios, garage extensions, mud rooms, sunrooms, and pool decks. UV-stable polyaspartic is required for any sun-exposed area. Pool decks include anti-slip aggregate. We also re-coat existing failed coatings after grind-back.",
   },
   {
-    q: "How long does the warranty last?",
-    a: "Houston Superior Painting backs every garage coating with a 15-year written warranty against peeling, delamination, and topcoat failure. We honor warranty claims with same-week response.",
+    q: "What warranty comes with a garage floor coating?",
+    a: "Ask about the warranty terms for your floor system during your estimate. Garage floor details are at houstonsuperiorepoxy.com.",
   },
 ];
 
@@ -270,7 +272,7 @@ export default function GarageEpoxyHoustonPage() {
               <div>
                 <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 text-sm font-medium px-3 py-1.5 rounded-full mb-5">
                   <span aria-hidden>🏁</span>
-                  <span>15-Year Warranty • 1-Day Install Available</span>
+                  <span>Diamond-Ground Prep • Flake, Metallic &amp; Solid</span>
                 </div>
 
                 <h1 className="hero-h1 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
@@ -278,14 +280,14 @@ export default function GarageEpoxyHoustonPage() {
                 </h1>
 
                 <p className="mt-6 text-xl text-zinc-700 leading-relaxed">
-                  Premium diamond-ground floor systems built for Houston heat. Flake, metallic, and solid finishes. Car-ready in <strong>24 hours</strong> with our 1-day polyaspartic install. 15-year warranty in writing.
+                  Premium diamond-ground floor systems built for Houston heat. Flake, metallic, and solid finishes. <strong>{EPOXY_RATE}</strong> with a {EPOXY_MINIMUM} minimum.
                 </p>
 
                 <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-zinc-700">
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Diamond-Grind Prep</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> UV-Stable Polyaspartic</li>
-                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> 15-Year Warranty</li>
-                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> 100+ Color/Flake Options</li>
+                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Crack &amp; Pit Repair</li>
+                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Flake, Metallic &amp; Solid Finishes</li>
                 </ul>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -296,7 +298,7 @@ export default function GarageEpoxyHoustonPage() {
                     📞 (346) 594-5960
                   </a>
                 </div>
-                <p className="mt-4 text-sm text-zinc-500">Average response time: <strong className="text-zinc-700">23 minutes</strong> during business hours.</p>
+                <p className="mt-4 text-sm text-zinc-500">Garage floors are offered through our garage floor brand, <strong className="text-zinc-700">houstonsuperiorepoxy.com</strong>.</p>
               </div>
 
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-zinc-100">
@@ -317,7 +319,7 @@ export default function GarageEpoxyHoustonPage() {
           <div className="mx-auto max-w-3xl px-4">
             <h2 className="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Quick Answer</h2>
             <p className="quick-answer text-lg md:text-xl text-zinc-800 leading-relaxed">
-              Houston Superior Painting installs garage floor epoxy and polyaspartic coatings in Houston, Katy, Cypress, Sugar Land, and surrounding TX cities. Cost is <strong>$5–$12 per square foot</strong> ($2,500–$8,500 for typical 2-3 car garages). Polyaspartic systems install in <strong>1 day</strong> with same-day walk-on and 24-hour car-ready. Backed by our <strong>15-year warranty</strong>. Free estimates at <a href="tel:+13465945960" className="text-emerald-700 underline font-semibold">(346) 594-5960</a>.
+              Houston Superior Painting installs garage floor epoxy and polyaspartic coatings in Houston, Katy, Cypress, Sugar Land, and surrounding TX cities. Cost is <strong>{EPOXY_RATE}</strong> with a <strong>{EPOXY_MINIMUM} minimum</strong>. Garage floors are offered through our garage floor brand at houstonsuperiorepoxy.com. Free estimates at <a href="tel:+13465945960" className="text-emerald-700 underline font-semibold">(346) 594-5960</a>.
             </p>
           </div>
         </section>
@@ -334,21 +336,21 @@ export default function GarageEpoxyHoustonPage() {
                   title: "Flake Polyaspartic",
                   tag: "Most Popular",
                   body: "Colored vinyl flakes broadcast into a polyaspartic base, sealed with clear UV-stable topcoat. Natural slip resistance, granite-like beauty, hides imperfections.",
-                  bullets: ["1-day install", "24-hour car-ready", "Slip-resistant texture", "Hides hairline cracks", "100+ flake blends"],
+                  bullets: ["Fast-curing system", "Slip-resistant texture", "Hides hairline cracks", "Granite-like look"],
                   highlight: true,
                 },
                 {
                   title: "Metallic Epoxy",
                   tag: "Showroom-Grade",
                   body: "Liquid metallic pigments swirled and manipulated to create flowing, three-dimensional effects. Each floor is one-of-a-kind. Premium showroom or man-cave finish.",
-                  bullets: ["2-3 day install", "Unique 3D effect", "Mirror-finish topcoat", "Color customization", "Photo-ready finish"],
+                  bullets: ["Unique 3D effect", "Mirror-finish topcoat", "Color customization", "Photo-ready finish"],
                   highlight: false,
                 },
                 {
                   title: "Solid Color Epoxy",
                   tag: "Budget-Friendly",
                   body: "Single-color epoxy base with clear topcoat. Clean, modern, shop-style aesthetic. Best value when you want a fresh, uniform look.",
-                  bullets: ["2-day install", "5-7 day full cure", "Easiest to clean", "Solid gray, black, tan, beige", "Anti-slip add-on available"],
+                  bullets: ["Easiest to clean", "Solid gray, black, tan, beige", "Anti-slip add-on available"],
                   highlight: false,
                 },
               ].map((system) => (
@@ -383,15 +385,15 @@ export default function GarageEpoxyHoustonPage() {
         <section className="py-16 md:py-24 bg-white">
           <div className="mx-auto max-w-6xl px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Why Houston Homeowners Choose Us for Garage Floors</h2>
-            <p className="text-center text-zinc-600 max-w-2xl mx-auto mb-12 text-lg">Most "epoxy" companies in Houston spray a $99 Home Depot kit and call it done. We engineer floors that last 15+ years.</p>
+            <p className="text-center text-zinc-600 max-w-2xl mx-auto mb-12 text-lg">A floor coating is only as good as the prep under it. We grind, repair, and coat the slab instead of rolling on a DIY kit.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: "Diamond Grind, Not Acid Wash", body: "We use commercial-grade diamond grinders to mechanically open concrete pores. This is THE difference between coatings that last 15 years and ones that peel in 18 months." },
-                { title: "Premium Polyaspartic Systems", body: "We use professional-grade polyaspartic resins — not consumer epoxy kits. Higher UV stability, faster cure, better flex, longer warranty." },
-                { title: "Crack & Pit Repair Included", body: "Houston slabs crack from foundation movement. We repair with flexible polyurea before coating. Most competitors skip this step and the cracks telegraph through." },
-                { title: "1-Day Install Option", body: "Polyaspartic flake systems install in a single day. Drop the car off Friday, drive on it Saturday. We respect your schedule." },
-                { title: "15-Year Written Warranty", body: "Backed in writing against peeling, delamination, hot-tire pickup, and topcoat failure. Same-week response on warranty claims." },
-                { title: "Houston Climate Engineered", body: "Houston heat and slab moisture destroy cheap coatings. Our systems include moisture-vapor primers, UV-stable topcoats, and Texas-specific formulas." },
+                { title: "Diamond Grind, Not Acid Wash", body: "We use commercial-grade diamond grinders to mechanically open concrete pores. Acid washing alone does not give a coating that kind of bond." },
+                { title: "Premium Polyaspartic Systems", body: "We use professional-grade polyaspartic resins — not consumer epoxy kits. Higher UV stability, faster cure, better flex." },
+                { title: "Crack & Pit Repair", body: "Houston slabs crack from foundation movement. We repair with flexible polyurea before coating, so the cracks don't telegraph through." },
+                { title: "Fast-Curing Option", body: "Polyaspartic flake systems cure much faster than traditional epoxy. Your written estimate lists the schedule." },
+                { title: "Written Estimate", body: BUSINESS.paymentPolicy.sentence },
+                { title: "Houston Climate Engineered", body: "Houston heat and slab moisture are hard on cheap coatings. Our systems include moisture-vapor primers where needed and UV-stable topcoats." },
               ].map((item) => (
                 <div key={item.title} className="bg-zinc-50 border border-zinc-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
                   <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
@@ -420,7 +422,7 @@ export default function GarageEpoxyHoustonPage() {
                   "Anti-slip aggregate (on request)",
                   "Trim painting and baseboards (on request)",
                   "Full cleanup and debris haul-off",
-                  "15-year written warranty",
+                  "Written scope, price, and payment schedule",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="text-emerald-600 mt-1">✓</span>
@@ -439,7 +441,7 @@ export default function GarageEpoxyHoustonPage() {
                   { n: 3, t: "Repair cracks and pits", d: "Polyurea flexible filler in cracks, patching compound in pits and spalled areas. Ground flat once cured." },
                   { n: 4, t: "Prime & base coat", d: "Moisture-vapor primer (if moisture detected) followed by colored polyaspartic or epoxy base coat troweled or rolled uniformly." },
                   { n: 5, t: "Broadcast flakes / apply metallic", d: "Flakes broadcast to refusal across wet base coat, or metallic pigments swirled into wet metallic base for one-of-a-kind effects." },
-                  { n: 6, t: "Topcoat + sign-off", d: "UV-stable clear polyaspartic topcoat seals the entire system. Walk-on in 4 hours, car-ready in 24. We walk through with you and hand over the warranty." },
+                  { n: 6, t: "Topcoat + sign-off", d: "UV-stable clear polyaspartic topcoat seals the entire system. We walk through the finished floor with you." },
                 ].map((step) => (
                   <li key={step.n} className="flex gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center">{step.n}</div>
@@ -458,7 +460,7 @@ export default function GarageEpoxyHoustonPage() {
         <section className="py-16 md:py-24 bg-white">
           <div className="mx-auto max-w-4xl px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Garage Epoxy Cost in Houston</h2>
-            <p className="text-center text-zinc-600 max-w-2xl mx-auto mb-10">All projects include diamond grinding, crack repair, primer, base coat, flake or pigment, UV-stable topcoat, and 15-year warranty. Clear written payment terms.</p>
+            <p className="text-center text-zinc-600 max-w-2xl mx-auto mb-10">All projects include diamond grinding, crack repair, primer, base coat, flake or pigment, and UV-stable topcoat. {BUSINESS.paymentPolicy.sentence}</p>
 
             <div className="pricing-snippet overflow-x-auto rounded-xl border border-zinc-200 shadow-sm">
               <table className="w-full text-left">
@@ -481,7 +483,8 @@ export default function GarageEpoxyHoustonPage() {
               </table>
             </div>
 
-            <p className="text-sm text-zinc-500 mt-4 text-center">Final pricing depends on slab condition, square footage, flake/metallic selection, and accessibility. Free on-site estimate within 24 hours.</p>
+            <p className="text-sm text-zinc-500 mt-4 text-center">Final pricing depends on slab condition, square footage, flake/metallic selection, and accessibility. Free on-site estimate. Full details at houstonsuperiorepoxy.com.</p>
+            <p className="text-xs text-zinc-500 mt-2 text-center">{PRICING_DISCLAIMER}</p>
           </div>
         </section>
 
@@ -521,8 +524,8 @@ export default function GarageEpoxyHoustonPage() {
         {/* CTA */}
         <section className="py-16 md:py-24 bg-emerald-700 text-white">
           <div className="mx-auto max-w-4xl px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready for a Garage Floor That Lasts 15+ Years?</h2>
-            <p className="text-emerald-50 text-lg mb-8 max-w-2xl mx-auto">Free estimate, 1-day install available, 15-year warranty in writing. Houston-tough.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready for a New Garage Floor?</h2>
+            <p className="text-emerald-50 text-lg mb-8 max-w-2xl mx-auto">Free estimate. {EPOXY_RATE} with a {EPOXY_MINIMUM} minimum. Houston-tough.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 font-semibold rounded-lg text-base shadow-md transition">
                 Schedule Free Estimate →

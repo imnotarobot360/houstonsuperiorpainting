@@ -5,6 +5,11 @@ import { Footer } from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { CheckCircle, Phone } from 'lucide-react'
 import { InsightPaintWidget } from '@/components/insightpaint-widget'
+import { PRICES_2026 } from '@/lib/business'
+
+const COST_ANSWER = `In Houston, interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot and exterior painting ${PRICES_2026.exteriorPerSqFt} per square foot (${PRICES_2026.exteriorPerHome} for a typical home), depending on size, condition, and preparation needed.`
+const LIFESPAN_ANSWER = "It depends on the surface, sun exposure, the coating, and above all the preparation. Heat and humidity are hard on paint, and proper preparation extends its lifespan."
+const DURATION_ANSWER = "It depends on the size of the home and the preparation needed. Your written estimate lists the schedule."
 
 export const metadata: Metadata = {
   title: 'Houston Painting Experts | Houston Superior Painting',
@@ -23,7 +28,7 @@ const faqSchema = {
       "name": "How much does it cost to paint a house in Houston?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Painting a house in Houston typically costs between $3 to $6 per square foot depending on preparation and size."
+        "text": COST_ANSWER
       }
     },
     {
@@ -31,7 +36,7 @@ const faqSchema = {
       "name": "How long does exterior paint last in Houston?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Exterior paint lasts around 5 to 7 years in Houston depending on weather and preparation."
+        "text": LIFESPAN_ANSWER
       }
     },
     {
@@ -55,7 +60,7 @@ const faqSchema = {
       "name": "How long does it take to paint a house?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most residential projects take between 2 to 5 days depending on size and preparation."
+        "text": DURATION_ANSWER
       }
     },
     {
@@ -104,11 +109,11 @@ const preparationSteps = [
 const faqs = [
   {
     question: "How much does it cost to paint a house in Houston?",
-    answer: "The cost to paint a house in Houston typically ranges between $3 to $6 per square foot depending on size, condition, and preparation needed."
+    answer: COST_ANSWER
   },
   {
     question: "How long does exterior paint last in Houston?",
-    answer: "Exterior paint in Houston usually lasts between 5 to 7 years due to heat and humidity. Proper preparation can extend this lifespan."
+    answer: LIFESPAN_ANSWER
   },
   {
     question: "Do I need pressure washing before painting?",
@@ -120,7 +125,7 @@ const faqs = [
   },
   {
     question: "How long does it take to paint a house?",
-    answer: "Most residential projects take between 2 to 5 days depending on size and preparation."
+    answer: DURATION_ANSWER
   },
   {
     question: "Do you offer free estimates?",
@@ -246,7 +251,7 @@ export default function PaintingHoustonPage() {
               Get a Free Painting Estimate
             </h2>
             <p className="text-muted-foreground mb-6">
-              Looking for reliable house painters in Houston? Send us photos for a free quote in minutes.
+              Looking for reliable house painters in Houston? Send us photos for a free quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">

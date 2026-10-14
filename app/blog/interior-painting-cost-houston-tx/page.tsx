@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Clock, User, Calendar, ArrowLeft, Phone, DollarSign, CheckCircle, AlertTriangle, Home } from "lucide-react"
-import { PRICES_2026 } from "@/lib/business"
+import { PRICES_2026, PRICING_DISCLAIMER } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Interior Painting Cost in Houston TX | What to Expect",
@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     question: "How long does it take to paint a house interior in Houston?",
-    answer: "A typical 2,000 square foot home takes 3–5 days for a professional crew. Larger homes, more colors, or significant prep work extends that timeline. Ask your painter for a day-by-day schedule before work begins."
+    answer: "It depends on the size of the home, the number of colors, and the prep work needed. Ask your painter for a written schedule before work begins."
   },
   {
     question: "Should I supply my own paint or let the painter buy it?",
@@ -53,11 +53,11 @@ const faqs = [
   },
   {
     question: "What is included in a standard interior painting job?",
-    answer: "A standard interior repaint typically includes walls in specified rooms, prep (filling holes, light sanding, caulking where needed), two coats of finish paint, and cleanup. Trim, ceilings, and doors are often priced separately — always confirm what's included in your specific estimate."
+    answer: "A standard interior repaint typically includes walls in specified rooms, prep (filling holes, light sanding, caulking where needed), the primer and number of finish coats needed for even coverage, and cleanup. Trim, ceilings, and doors are often priced separately — always confirm what's included in your specific estimate."
   },
   {
     question: "How long should interior paint last in a Houston home?",
-    answer: "In typical residential conditions, quality interior paint holds up well for 5–10 years on walls and longer on low-traffic areas. High-traffic spaces like hallways, kitchens, and kids' rooms may need refreshing sooner depending on the finish used and daily wear."
+    answer: "In typical residential conditions, quality interior paint holds up well for years on walls and longer on low-traffic areas. High-traffic spaces like hallways, kitchens, and kids' rooms may need refreshing sooner depending on the finish used and daily wear."
   }
 ]
 
@@ -67,8 +67,8 @@ const pricingData = [
   { service: "Full interior (2,000 sq ft)", price: PRICES_2026.fullInterior2000 },
   { service: "Full interior (2,500 sq ft)", price: PRICES_2026.fullInterior2500 },
   { service: "Full interior (4,000+ sq ft)", price: PRICES_2026.fullInterior4000 },
-  { service: "Ceilings only", price: "$1–$2 per sq ft" },
-  { service: "Trim and baseboards", price: "$1.50–$3 per linear ft" },
+  { service: "Ceilings (whole home)", price: PRICES_2026.ceilingsWholeHome },
+  { service: "Trim (whole home)", price: PRICES_2026.trimWholeHome },
   { service: "Accent wall", price: PRICES_2026.accentWall },
 ]
 
@@ -77,8 +77,8 @@ const costFactors = [
   { factor: "Ceiling Height", description: "10-12 ft ceilings require ladders and more time per room" },
   { factor: "Number of Colors", description: "Each color change requires cleaning, cutting in, and sometimes priming" },
   { factor: "Prep Work Required", description: "Filling holes, skim-coating, sanding, and priming all add time" },
-  { factor: "Paint Quality", description: "Premium paints ($50-80/gal) vs budget ($30/gal) affect finish and durability" },
-  { factor: "Number of Coats", description: "Two coats standard; color changes may need primer plus two coats" },
+  { factor: "Paint Quality", description: "Premium paints vs budget paints affect finish and durability" },
+  { factor: "Number of Coats", description: "Your estimate should name the primer and the number of coats needed for even coverage; color changes may need more" },
 ]
 
 const redFlags = [
@@ -274,6 +274,7 @@ export default function InteriorPaintingCostHoustonTX() {
                 <p className="text-sm text-muted-foreground italic">
                   These are general ranges — not guarantees. Your actual quote depends on the specific factors covered below.
                 </p>
+                <p className="text-sm text-muted-foreground">{PRICING_DISCLAIMER}</p>
               </section>
 
               {/* Cost Factors */}
@@ -312,7 +313,7 @@ export default function InteriorPaintingCostHoustonTX() {
 
                 <h3 className="text-xl font-semibold text-foreground mb-4">Prep Work Required</h3>
                 <p className="text-muted-foreground mb-4">
-                  This is often what separates a $4,000 quote from a $6,000 quote on the same home. Prep includes:
+                  This is often what separates a lower quote from a higher one on the same home. Prep includes:
                 </p>
                 <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
                   <li>Filling nail holes, dings, and minor wall damage</li>
@@ -326,7 +327,7 @@ export default function InteriorPaintingCostHoustonTX() {
 
                 <h3 className="text-xl font-semibold text-foreground mb-4">Paint Product Quality</h3>
                 <p className="text-muted-foreground mb-6">
-                  Paint costs range from $30 to $80+ per gallon at retail. Professional painters typically buy at contractor pricing, but the quality tier they use still affects cost — and finish quality. Premium interior paints from lines like Sherwin-Williams Duration or Benjamin Moore Aura have better coverage, washability, and durability than budget alternatives. A home in The Woodlands or Sugar Land where the owner plans to sell in two or three years benefits from a product that holds up to cleaning and daily wear.
+                  Paint prices vary widely by product line. Professional painters typically buy at contractor pricing, but the quality tier they use still affects cost — and finish quality. Premium interior paints from lines like Sherwin-Williams Duration or Benjamin Moore Aura have better coverage, washability, and durability than budget alternatives. A home in The Woodlands or Sugar Land where the owner plans to sell in two or three years benefits from a product that holds up to cleaning and daily wear.
                 </p>
                 <p className="text-muted-foreground font-medium">
                   Your estimate should specify the brand and product line, not just &quot;interior paint.&quot;
@@ -394,14 +395,14 @@ export default function InteriorPaintingCostHoustonTX() {
                     <div className="flex items-start gap-3">
                       <Home className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                       <p className="text-muted-foreground">
-                        <strong className="text-foreground">Almost always yes.</strong> A fresh interior paint job refreshes a home&apos;s look instantly, improves air quality (especially with low-VOC products), and makes spaces feel cleaner and larger. For homeowners planning to sell, a neutral, freshly painted interior consistently helps homes sell faster and for more — real estate agents regularly recommend it as one of the highest-return pre-sale investments.
+                        <strong className="text-foreground">Almost always yes.</strong> A fresh interior paint job refreshes a home&apos;s look instantly, improves air quality (especially with low-VOC products), and makes spaces feel cleaner and larger. For homeowners planning to sell, a neutral, freshly painted interior can help a home show better to buyers.
                       </p>
                     </div>
                   </CardContent>
                 </Card>
                 
                 <p className="text-muted-foreground mb-4">
-                  Even if you&apos;re not selling, living in a space that feels clean and well-maintained is genuinely better. Most Houston homeowners should expect to repaint their interior every 5–8 years depending on traffic, family life, and finish type.
+                  Even if you&apos;re not selling, living in a space that feels clean and well-maintained is genuinely better. How often you repaint depends on traffic, family life, and finish type.
                 </p>
                 
                 <p className="text-muted-foreground">

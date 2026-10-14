@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ServicePageTemplate } from '@/components/service-page-template'
+import { PRICES_2026 } from '@/lib/business'
+
+const COST_ANSWER = `Drywall repair in Houston typically costs ${PRICES_2026.drywallRepair}, depending on the size and number of repairs, crack treatment, and texture matching. We provide free estimates.`
 
 export const metadata: Metadata = {
   title: 'Drywall Repair Houston TX | Houston Superior Painting',
@@ -36,7 +39,7 @@ const serviceSchema = {
     "priceCurrency": "USD",
     "priceSpecification": {
       "@type": "PriceSpecification",
-      "minPrice": 75,
+      "minPrice": 200,
       "maxPrice": 2500,
       "priceCurrency": "USD"
     },
@@ -64,7 +67,7 @@ const faqSchema = {
       "name": "How much does drywall repair cost in Houston?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Small hole repairs typically cost $75-150 each. Larger repairs, crack treatment, and texture matching vary based on scope. When included with painting projects, repair costs are reduced. We provide free estimates."
+        "text": COST_ANSWER
       }
     },
     {
@@ -90,15 +93,15 @@ const pageData = {
   title: "Drywall Repair Services in Houston TX",
   subtitle: "Expert Wall & Ceiling Repair",
   heroDescription: "From minor dings to major damage, we restore your walls and ceilings to perfect condition before painting. Our drywall repair specialists match existing textures seamlessly and ensure a flawless foundation for paint application.",
-  quickAnswer: "Houston Superior Painting provides professional drywall repair in Houston, Katy, Cypress, and Sugar Land TX. Small hole repairs cost $75-150, with larger repairs and texture matching priced by scope. We specialize in crack repair, water damage restoration, and texture matching (orange peel, knockdown, skip trowel). Free estimates at (346) 594-5960.",
+  quickAnswer: `Houston Superior Painting provides professional drywall repair in Houston, Katy, Cypress, and Sugar Land TX. Drywall repair typically costs ${PRICES_2026.drywallRepair}, priced by scope. We specialize in crack repair, water damage restoration, and texture matching (orange peel, knockdown, skip trowel). Free estimates at (346) 594-5960.`,
   sections: [
     {
       title: "Why Drywall Repair Matters Before Painting",
       content: `Paint can only look as good as the surface beneath it. Attempting to paint over damaged drywall results in visible flaws that become even more noticeable once fresh paint highlights every imperfection. Cracks telegraph through, holes remain visible, and uneven textures create shadows that detract from your home's appearance.
 
-At Houston Superior Painting, we include drywall assessment and repair as part of every painting project. Our team identifies issues that many painters overlook—hairline cracks, nail pops, settling cracks, and subtle texture inconsistencies. By addressing these problems before painting, we ensure results that look flawless from every angle.
+At Houston Superior Painting, we assess the drywall on every painting project, and any repairs are listed in your written estimate. Our team identifies issues that many painters overlook—hairline cracks, nail pops, settling cracks, and subtle texture inconsistencies. By addressing these problems before painting, we ensure results that look flawless from every angle.
 
-Houston's clay soil causes significant foundation movement that stresses drywall throughout your home. Temperature and humidity fluctuations further contribute to cracking and nail pops. Our repair techniques account for continued movement, using flexible compounds and proper taping methods that resist future cracking.`
+Houston's clay soil causes significant foundation movement that stresses drywall throughout your home. Temperature and humidity fluctuations further contribute to cracking and nail pops. Our repair techniques account for continued movement, using flexible compounds and proper taping methods.`
     },
     {
       title: "Types of Drywall Damage We Repair",
@@ -134,12 +137,12 @@ Texture application requires skill and the right equipment. We match your home's
   benefits: [
     "Seamless repairs that disappear after painting",
     "Expert texture matching for all Houston home styles",
-    "Proper techniques that prevent future cracking",
+    "Techniques that account for continued movement",
     "Water damage specialists",
-    "Included with painting projects at reduced cost",
+    "Repairs listed in your written estimate",
     "Stand-alone repair services available",
     "Fast turnaround for urgent repairs",
-    "5-year warranty on repair work"
+    "5-year written workmanship warranty"
   ],
   beforeAfterImages: [
     {
@@ -151,7 +154,7 @@ Texture application requires skill and the right equipment. We match your home's
   faqs: [
     {
       question: "How much does drywall repair cost in Houston?",
-      answer: "Small hole repairs typically cost $75-150 each. Larger repairs, crack treatment, and texture matching vary based on scope. When included with painting projects, repair costs are reduced. We provide free estimates."
+      answer: COST_ANSWER
     },
     {
       question: "Can you match my existing wall texture?",
@@ -167,11 +170,11 @@ Texture application requires skill and the right equipment. We match your home's
     },
     {
       question: "Can cracks be permanently fixed?",
-      answer: "Most cracks can be repaired to prevent recurrence. For cracks caused by foundation movement, we use flexible compounds and proper taping techniques. Some structural cracks may require foundation work before permanent repair is possible."
+      answer: "Many cracks can be repaired so they are far less likely to return. For cracks caused by foundation movement, we use flexible compounds and proper taping techniques. Some structural cracks may require foundation work before permanent repair is possible."
     },
     {
       question: "Do you repair popcorn ceilings?",
-      answer: "Yes, we repair damaged popcorn ceilings and can also remove popcorn texture entirely if you prefer a smooth or knockdown finish. Popcorn removal is a popular update in Houston homes."
+      answer: `Yes, we repair damaged popcorn ceilings and can also remove popcorn texture entirely if you prefer a smooth or knockdown finish. Popcorn removal typically runs ${PRICES_2026.popcornRemovalPerSqFt} per sq ft, or ${PRICES_2026.popcornSingleRoom} for a single room.`
     }
   ],
   relatedServices: [

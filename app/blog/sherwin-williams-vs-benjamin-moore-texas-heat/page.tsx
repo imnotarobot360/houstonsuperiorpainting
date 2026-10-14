@@ -36,7 +36,7 @@ export default function SherwinVsBenjaminMoorePage() {
   return (
     <BlogPostTemplate slug="sherwin-williams-vs-benjamin-moore-texas-heat"
       title="Sherwin-Williams vs Benjamin Moore: Which Is Better for Texas Heat?"
-      excerpt="We've used both brands extensively across hundreds of Houston homes. Here's our honest comparison of how Sherwin-Williams and Benjamin Moore perform in Texas conditions."
+      excerpt="We've used both brands extensively across 500+ projects in Greater Houston. Here's our honest comparison of how Sherwin-Williams and Benjamin Moore perform in Texas conditions."
       author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="April 1, 2026"
@@ -47,7 +47,7 @@ export default function SherwinVsBenjaminMoorePage() {
       relatedPosts={relatedPosts}
     >
       <p>
-        &quot;Should I go with Sherwin-Williams or Benjamin Moore?&quot; This is probably the question I get asked most often by Houston homeowners. Both are premium paint brands with excellent reputations, and honestly, you can&apos;t go wrong with either one. But after using both extensively across hundreds of Houston homes since starting Houston Superior Painting in 2019, I&apos;ve noticed some real differences worth discussing.
+        &quot;Should I go with Sherwin-Williams or Benjamin Moore?&quot; This is probably the question I get asked most often by Houston homeowners. Both are premium paint brands with excellent reputations, and honestly, you can&apos;t go wrong with either one. But after using both extensively across 500+ projects since starting Houston Superior Painting in 2019, I&apos;ve noticed some real differences worth discussing.
       </p>
 
       <p>
@@ -74,13 +74,13 @@ export default function SherwinVsBenjaminMoorePage() {
 
       <p><strong>UV Resistance and Fade Prevention</strong></p>
       <p>
-        Both paints offer excellent UV resistance, but in my experience, Duration holds its color slightly better on south and west-facing walls that get hammered by afternoon sun. Benjamin Moore&apos;s Color Lock technology is impressive, but I&apos;ve seen slightly more fading on darker colors after 7-8 years compared to Duration.
+        Both paints offer excellent UV resistance, but in my experience, Duration holds its color slightly better on south and west-facing walls that get hammered by afternoon sun. Benjamin Moore&apos;s Color Lock technology is impressive, but I&apos;ve seen slightly more fading on darker colors over time compared to Duration.
       </p>
       <p><strong>Edge: Sherwin-Williams (slight)</strong></p>
 
       <p><strong>Mold and Mildew Resistance</strong></p>
       <p>
-        This is critical in Houston. Both paints contain mildewcides, but Duration seems to maintain its mold resistance longer. I&apos;ve seen Benjamin Moore exteriors develop mold spots on north-facing walls around year 6-7, while Duration typically makes it to year 8-9 before needing treatment.
+        This is critical in Houston. Both paints contain mildewcides, but Duration seems to maintain its mold resistance longer. In my experience, Benjamin Moore exteriors tend to develop mold spots on north-facing walls somewhat sooner than Duration does.
       </p>
       <p><strong>Edge: Sherwin-Williams</strong></p>
 
@@ -98,7 +98,7 @@ export default function SherwinVsBenjaminMoorePage() {
 
       <p><strong>Price</strong></p>
       <p>
-        At the time of writing, Duration runs about $75-85 per gallon, while Aura Exterior is $80-90 per gallon. Not a huge difference, but Duration is slightly more economical.
+        Duration typically costs a little less per gallon than Aura Exterior. Not a huge difference, but Duration is slightly more economical.
       </p>
       <p><strong>Edge: Sherwin-Williams</strong></p>
 
@@ -195,7 +195,7 @@ export default function SherwinVsBenjaminMoorePage() {
       <h2>The Bottom Line</h2>
 
       <p>
-        You really can&apos;t go wrong with either Sherwin-Williams or Benjamin Moore. Both make excellent paint that will hold up well in Houston. The differences I&apos;ve described are relatively minor—we&apos;re talking about an extra season or two on a shaded wall, not the difference between a 3-year failure and a full 5–7 year repaint cycle. Either brand is what we use for <Link href="/exterior-painting-houston-tx">exterior painting in Houston</Link>, and the premium-paint upgrade is priced out in our <Link href="/exterior-house-painting-houston-cost-guide">exterior painting cost guide</Link>.
+        You really can&apos;t go wrong with either Sherwin-Williams or Benjamin Moore. Both make excellent paint that will hold up well in Houston. The differences I&apos;ve described are relatively minor—we&apos;re talking about a modest difference on a shaded wall, not the difference between an early failure and a full repaint cycle. Either brand is what we use for <Link href="/exterior-painting-houston-tx">exterior painting in Houston</Link>, and the premium-paint upgrade is priced out in our <Link href="/exterior-house-painting-houston-cost-guide">exterior painting cost guide</Link>.
       </p>
 
       <p>
@@ -203,7 +203,7 @@ export default function SherwinVsBenjaminMoorePage() {
       </p>
 
       <ul>
-        <li>Proper surface preparation (this is 80% of a good paint job)</li>
+        <li>Proper surface preparation (this is what makes a paint job last)</li>
         <li>Using the right product for the application (don&apos;t use interior paint outside!)</li>
         <li>Applying the correct number of coats</li>
         <li>Painting in appropriate weather conditions</li>
