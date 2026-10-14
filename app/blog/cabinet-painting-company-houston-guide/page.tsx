@@ -59,8 +59,8 @@ const D: GuideArticleData = {
         <>
           <p>
             Wall paint is not cabinet paint. Ask for the primer and topcoat by name, and look them up. Cabinet-grade options
-            include waterborne alkyd and urethane-modified enamels; we use Benjamin Moore Command, a waterborne acrylic
-            urethane. Some shops spray specialty wood coatings from makers such as Renner. Each product
+            include waterborne alkyd and urethane-modified enamels; we use Benjamin Moore Command or Sherwin-Williams
+            Emerald Urethane Trim Enamel, and Renner wood coatings on qualifying cabinet systems. Some shops spray specialty wood coatings from makers such as Renner. Each product
             has its own dry time, recoat time and cure time, and a good painter will explain them.
           </p>
           <p>

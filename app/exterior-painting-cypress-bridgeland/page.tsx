@@ -4,7 +4,7 @@ import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Exterior Painting Cypress & Bridgeland, TX | Free Estimate",
-  description: "Exterior house painting in Cypress and Bridgeland, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty.",
+  description: "Exterior house painting in Cypress and Bridgeland, TX: washing, caulking, wood rot repair and priming. Insured, 5-year written warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/exterior-painting-cypress-bridgeland",
   },
@@ -18,7 +18,7 @@ export default function ExteriorPaintingCypressPage() {
       zone="Cypress & Bridgeland, TX"
       zoneSlug="cypress-bridgeland"
       metaTitle="Exterior Painting Cypress & Bridgeland, TX | Free Estimate"
-      metaDescription="Exterior house painting in Cypress and Bridgeland, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty."
+      metaDescription="Exterior house painting in Cypress and Bridgeland, TX: washing, caulking, wood rot repair and priming. Insured, 5-year written warranty."
       h1="Exterior Painting in Cypress and Bridgeland, TX"
       heroSubheading="Exterior repaints prepped for Houston heat and humidity: washed, caulked, repaired and primed before the finish coats, with a 5-year written workmanship warranty."
       introLocal="Houston Superior Painting is headquartered in Cypress, so Bridgeland, Towne Lake, Fairfield and the rest of the Cypress area are close to home for our crews. Many homes here are brick with fiber-cement siding and trim on the upper floors and gables. On those homes the paint usually fails first at the trim: caulk joints open up, and the bottoms of trim boards and garage door frames take on water. Houston's humidity and summer heat are hard on exterior paint everywhere in the region, which is why prep matters more than the paint can."

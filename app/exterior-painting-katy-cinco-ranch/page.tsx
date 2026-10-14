@@ -4,7 +4,7 @@ import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Exterior Painting Katy & Cinco Ranch, TX | Free Estimate",
-  description: "Exterior house painting in Katy and Cinco Ranch, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty.",
+  description: "Exterior house painting in Katy and Cinco Ranch, TX: washing, caulking, wood rot repair and priming. Insured, 5-year written warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/exterior-painting-katy-cinco-ranch",
   },
@@ -18,7 +18,7 @@ export default function ExteriorPaintingKatyPage() {
       zone="Katy & Cinco Ranch, TX"
       zoneSlug="katy-cinco-ranch"
       metaTitle="Exterior Painting Katy & Cinco Ranch, TX | Free Estimate"
-      metaDescription="Exterior house painting in Katy and Cinco Ranch, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty."
+      metaDescription="Exterior house painting in Katy and Cinco Ranch, TX: washing, caulking, wood rot repair and priming. Insured, 5-year written warranty."
       h1="Exterior Painting in Katy and Cinco Ranch, TX"
       heroSubheading="Exterior repaints prepped for Houston heat and humidity: washed, caulked, repaired and primed before the finish coats, with a 5-year written workmanship warranty."
       introLocal="Many homes in Cinco Ranch, Cross Creek Ranch, Elyson and the rest of Katy are brick on the lower floor with siding and trim above, so an exterior repaint here is mostly siding, trim, soffits, fascia and doors. Most of these communities have HOAs that require color approval before work starts. Houston's humidity and summer heat are hard on exterior paint everywhere in the region, which is why prep matters more than the paint can."

@@ -190,8 +190,8 @@ export default function BenjaminMooreVsSherwinWilliamsPage() {
       </p>
       <p>
         <strong>Command for cabinets.</strong> Command is Benjamin Moore&apos;s waterborne acrylic urethane for cabinets,
-        doors, and trim. It dries fast, recoats in about an hour, and cures to a hard, washable finish; it is what we
-        spray on kitchen cabinets.
+        doors, and trim. It dries fast, recoats in about an hour, and cures to a hard, washable finish. It is one of
+        the cabinet finishes we spray, alongside Sherwin-Williams Emerald Urethane Trim Enamel.
       </p>
       <p>
         <strong>Famous color library.</strong> Colors like White Dove, Hale Navy, and Revere Pewter are designer
@@ -277,7 +277,7 @@ export default function BenjaminMooreVsSherwinWilliamsPage() {
         </li>
         <li>
           <strong>Painting cabinets, trim, or doors?</strong> A dedicated cabinet finish. We use Benjamin Moore
-          Command, a waterborne acrylic urethane. (See{" "}
+          Command or Sherwin-Williams Emerald Urethane Trim Enamel. (See{" "}
           <Link href="/cabinet-refinishing-houston-tx">cabinet painting</Link>.)
         </li>
         <li>

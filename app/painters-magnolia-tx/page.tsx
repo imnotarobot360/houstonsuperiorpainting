@@ -56,7 +56,7 @@ const DATA: OfficeCityPageData = {
   products: (
     <>
       Exteriors in Magnolia get Sherwin-Williams Duration or Emerald for their moisture and UV resistance. Inside, we use
-      Benjamin Moore, and for cabinets, Benjamin Moore Command.
+      Benjamin Moore, and for cabinets, Benjamin Moore Command or Sherwin-Williams Emerald Urethane.
     </>
   ),
   pricesNote: (

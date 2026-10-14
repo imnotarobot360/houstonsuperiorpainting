@@ -78,7 +78,7 @@ export function LuxuryHero() {
               <ReviewsInline className="font-manrope text-sm text-soft-white/90 [&_svg]:text-gold" />
             </div>
             {[
-              "Fully Insured",
+              "$2M Liability + Workers' Comp",
               `${BUSINESS.trust.warrantyYears}-Year Warranty`,
               "Clear Written Payment Terms",
             ].map((item) => (

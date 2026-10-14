@@ -4,7 +4,7 @@ import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Interior Painting Sugar Land, TX | Free Estimate",
-  description: "Interior painting in Sugar Land, TX: walls, ceilings, trim and doors. Free written estimate, fully insured, 5-year workmanship warranty.",
+  description: "Interior painting in Sugar Land, TX: walls, ceilings, trim and doors. Free written estimate, insured, 5-year workmanship warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-sugar-land",
   },
@@ -18,7 +18,7 @@ export default function InteriorPaintingSugarLandPage() {
       zone="Sugar Land, TX"
       zoneSlug="sugar-land"
       metaTitle="Interior Painting Sugar Land, TX | Free Estimate"
-      metaDescription="Interior painting in Sugar Land, TX: walls, ceilings, trim and doors. Free written estimate, fully insured, 5-year workmanship warranty."
+      metaDescription="Interior painting in Sugar Land, TX: walls, ceilings, trim and doors. Free written estimate, insured, 5-year workmanship warranty."
       h1="Interior Painting in Sugar Land, TX"
       heroSubheading="Walls, ceilings, trim and doors painted with careful prep, protected floors and furniture, and a 5-year written workmanship warranty."
       introLocal="Sugar Land runs from older neighborhoods to master-planned communities such as First Colony, Riverstone and Sweetwater, so wall condition varies a lot from house to house. In a home built before 1978, older layers may contain lead paint, and federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask any painter you hire for that certification before sanding or scraping."

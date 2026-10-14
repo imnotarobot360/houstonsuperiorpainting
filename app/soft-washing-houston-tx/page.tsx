@@ -226,8 +226,8 @@ export default function SoftWashingHoustonPage() {
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Safe for Painted Surfaces</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> No High-Pressure Damage</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Biodegradable Solutions</li>
-                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Fully Insured</li>
-                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> 100% Satisfaction Guaranteed</li>
+                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> $2M Liability + Workers' Comp</li>
+                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Written Scope &amp; Price</li>
                 </ul>
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
                   <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center px-6 py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg text-base shadow-md transition">Free Estimate →</Link>

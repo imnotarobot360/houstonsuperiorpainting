@@ -29,7 +29,7 @@ const DESCRIPTION =
   "Local painting company or national franchise? What Houston homeowners should compare: warranty, prep, insurance, supervision, products, payment and reviews."
 const H1 = "Local Painting Company vs National Franchise: What Houston Homeowners Should Compare"
 const DATE_PUBLISHED = "2026-10-08"
-const DATE_MODIFIED = "2026-10-10"
+const DATE_MODIFIED = "2026-10-14"
 const DATE_LABEL = "Oct 8, 2026"
 
 const T = BUSINESS.trust
@@ -43,6 +43,9 @@ const COMPARE: { factor: string; ask: string }[] = [
   { factor: "Project supervision", ask: "Who runs the job day to day, how often a supervisor or owner checks the work, and who signs off at the end." },
   { factor: "Crew accountability", ask: "Whether the crew are the company's own people or subcontractors, and who is responsible if something goes wrong." },
   { factor: "Materials and products", ask: "The exact product line, sheen and number of coats for each surface, written in the estimate." },
+  { factor: "Who you talk to", ask: "Whether the person who sells the job is the same person (or team) who runs it, and who answers the phone once work starts. Some companies hand off from a salesperson to a separate project team; that works when the scope is written clearly." },
+  { factor: "Scheduling", ask: "The start date, how many days the job should take, the working hours, and what happens to the schedule if it rains." },
+  { factor: "Price transparency", ask: "Whether the estimate is itemized by surface or room, what is excluded, and how extra repairs found during the job are priced." },
   { factor: "Communication", ask: "Who your single point of contact is, how fast messages are answered, and how weather delays are communicated." },
   { factor: "Change orders", ask: "How extra work (rot, drywall damage found mid-job) is priced and approved: in writing, before the work is done." },
   { factor: "Payment terms", ask: "How much is due before work starts, what the payment schedule is, and when the final balance is due." },
@@ -172,7 +175,11 @@ export default function LocalPainterVsNationalFranchisePage() {
         </Section>
 
         <Section title="How Houston Superior Painting answers these questions">
-          <p>If you include us in your comparison, here is what we put in writing:</p>
+          <p>
+            {BUSINESS.name} is a locally owned Houston painting company with a written scope, verified insurance
+            information and a {T.warrantyYears}-year written workmanship warranty. If you include us in your comparison,
+            here is what we put in writing:
+          </p>
           <Bullets
             items={[
               <>
@@ -187,8 +194,7 @@ export default function LocalPainterVsNationalFranchisePage() {
                 , our internal workmanship process (not an industry certification).
               </>,
               <>
-                <strong>Insurance and bonding:</strong> bonded and insured with {INSURANCE}. Proof of insurance is available
-                upon request and provided with approved project documents (
+                <strong>Insurance and bonding:</strong> bonded and insured with {INSURANCE}. {BUSINESS.insuranceProof.en} (
                 <Link href="/insurance-and-warranty#request-proof-of-insurance">request it here</Link>).
               </>,
               <>
@@ -200,8 +206,8 @@ export default function LocalPainterVsNationalFranchisePage() {
                 {reviewSummaryText()} (<Link href="/reviews">see each office</Link>).
               </>,
               <>
-                <strong>Products:</strong> {BUSINESS.paintPartners.join(", ")} products, named in your estimate. Authorized
-                Preferred Application Partner.
+                <strong>Products:</strong> {BUSINESS.paintPartners.join(", ")} products, named in your estimate; on cabinets
+                and trim, {BUSINESS.cabinetFinish.sentence}. Authorized Preferred Application Partner.
               </>,
               <>
                 <strong>Payment:</strong> {BUSINESS.paymentPolicy.sentence}

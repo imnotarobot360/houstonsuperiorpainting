@@ -4,7 +4,7 @@ import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Interior Painting Cypress & Bridgeland, TX | Free Estimate",
-  description: "Interior painting in Cypress and Bridgeland, TX: walls, ceilings, trim and doors. Free written estimate, fully insured, 5-year workmanship warranty.",
+  description: "Interior painting in Cypress and Bridgeland, TX: walls, ceilings, trim and doors. Free written estimate, insured, 5-year workmanship warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-cypress-bridgeland",
   },
@@ -18,7 +18,7 @@ export default function InteriorPaintingCypressPage() {
       zone="Cypress & Bridgeland, TX"
       zoneSlug="cypress-bridgeland"
       metaTitle="Interior Painting Cypress & Bridgeland, TX | Free Estimate"
-      metaDescription="Interior painting in Cypress and Bridgeland, TX: walls, ceilings, trim and doors. Free written estimate, fully insured, 5-year workmanship warranty."
+      metaDescription="Interior painting in Cypress and Bridgeland, TX: walls, ceilings, trim and doors. Free written estimate, insured, 5-year workmanship warranty."
       h1="Interior Painting in Cypress and Bridgeland, TX"
       heroSubheading="Walls, ceilings, trim and doors painted with careful prep, protected floors and furniture, and a 5-year written workmanship warranty."
       introLocal="Houston Superior Painting is headquartered in Cypress, so Bridgeland, Towne Lake, Fairfield and the rest of the Cypress area are close to home for our crews. Many homes here are newer builds in master-planned communities, and builders often use a flat wall paint that scuffs easily and doesn't wipe clean. The first repaint is a good time to move kitchens, halls and kids' rooms to a more washable sheen."

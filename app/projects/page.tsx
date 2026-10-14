@@ -147,7 +147,7 @@ export default function ProjectsPage() {
             <span className="font-manrope text-sm text-foreground">
               {BUSINESS.trust.warrantyYears}-year workmanship warranty
             </span>
-            <span className="font-manrope text-sm text-foreground">Fully insured</span>
+            <span className="font-manrope text-sm text-foreground">$2M liability + workers' comp</span>
           </div>
         </section>
 

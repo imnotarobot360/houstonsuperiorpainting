@@ -19,6 +19,11 @@ const products = [
         why: "PermaLast technology for superior adhesion and flexibility in Houston's extreme temperature swings.",
       },
       {
+        name: "Emerald Urethane Trim Enamel",
+        use: "Cabinets, doors & trim",
+        why: "Waterborne urethane enamel that levels smoothly and cures to a hard, washable finish.",
+      },
+      {
         name: "SuperPaint",
         use: "Interior/exterior multi-use",
         why: "Advanced resin technology for excellent durability at a value price point.",
@@ -33,7 +38,7 @@ const products = [
       {
         name: "Command",
         use: "Cabinets, doors & trim",
-        why: "Waterborne acrylic urethane that dries fast and cures hard and washable. Our cabinet finish.",
+        why: "Waterborne acrylic urethane that dries fast and cures hard and washable. One of our cabinet finishes.",
       },
       {
         name: "Regal Select",

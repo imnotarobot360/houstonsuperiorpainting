@@ -168,7 +168,7 @@ export default function PressureWashingHoustonPage() {
                 <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-zinc-700">
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Soft Wash for Roofs</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Plant-Safe Detergents</li>
-                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Fully Insured</li>
+                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> $2M Liability + Workers' Comp</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> No Minimum Charge</li>
                 </ul>
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -206,7 +206,7 @@ export default function PressureWashingHoustonPage() {
                 { title: "Plant-Safe Process", body: "Pre-wet landscape, cover delicate plants, biodegradable detergents at safe concentrations, post-wash rinse. Zero plant damage claims." },
                 { title: "Pre-Paint Specialists", body: "We prep more surfaces for painting than for cleaning. We know exactly how to wash a wall so paint bonds for 8–10 years." },
                 { title: "Same-Day Service Available", body: "Small jobs (driveway, deck) often available same-day or next-day during peak season." },
-                { title: "Fully Insured", body: "Workers comp + liability insurance. Certificate of insurance provided on request before we start any job." },
+                { title: "Insured", body: "Workers comp + liability insurance. Certificate of insurance provided on request before we start any job." },
               ].map((item) => (
                 <div key={item.title} className="bg-white border border-zinc-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
                   <h3 className="text-lg font-semibold mb-2">{item.title}</h3>

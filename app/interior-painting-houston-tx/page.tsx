@@ -176,7 +176,7 @@ export default function InteriorPaintingHoustonTX() {
             <strong>Benjamin Moore Aura or Regal Select</strong> on most walls and ceilings: both level well, touch up
             cleanly, and come in low-VOC formulas. <strong>Sherwin-Williams Emerald</strong> (or Duration Home) where
             walls get scrubbed — kids&apos; rooms, hallways, mudrooms. Trim and doors get a cabinet-grade finish such as
-            Benjamin Moore Command for a hard, washable surface.
+            Benjamin Moore Command or Sherwin-Williams Emerald Urethane for a hard, washable surface.
           </p>
           <p>
             Why it matters in Houston: humid air and constant AC cycling are hard on cheap paint, which scuffs,

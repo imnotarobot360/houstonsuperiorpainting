@@ -234,6 +234,26 @@ export const BUSINESS = {
   // we apply, not partner programs: never say "preferred contractor/partner".
   paintPartners: ["Sherwin-Williams", "Benjamin Moore", "Farrow & Ball"],
 
+  // Cabinet, trim and door coatings. Owner 2026-10-14 (reverses the Oct 12
+  // "Command only"): name all three. Never say Benjamin Moore Advance. Full cure
+  // on kitchen cabinets is 7–10 days (owner, 2026-10-11).
+  cabinetFinish: {
+    products: [
+      "Benjamin Moore Command",
+      "Sherwin-Williams Emerald Urethane Trim Enamel",
+      "Renner wood coatings (qualifying cabinet systems)",
+    ],
+    sentence:
+      "Benjamin Moore Command or Sherwin-Williams Emerald Urethane Trim Enamel over a bonding primer, with Renner wood coatings for qualifying cabinet systems",
+    cureDays: "7–10 days",
+  },
+
+  // Owner-approved insurance wording (brief 2026-10-14), English and Spanish.
+  insuranceProof: {
+    en: "Proof of insurance is available upon request. When applicable, customers receive a current certificate of insurance after approving their project.",
+    es: "Comprobante de seguro disponible cuando el cliente lo solicite. Cuando corresponda, el cliente recibe un certificado de seguro vigente después de aprobar el proyecto.",
+  },
+
   // Specialty finishes Juan confirmed we offer (2026-10-07), beyond the
   // services list below. Fine to name on pages; prices are quoted on site.
   specialtyFinishes: [

@@ -70,7 +70,7 @@ const faqs: { question: string; answer: string }[] = [
   },
   {
     question: "What paint should I actually use if I do attempt DIY cabinet painting?",
-    answer: "Use a finish specifically designed for cabinets and trim — not standard interior wall paint. We use Benjamin Moore Command, a waterborne acrylic urethane formulated for hardness and durability far beyond standard interior paint. Pair with a shellac-based primer on oak surfaces.",
+    answer: "Use a finish specifically designed for cabinets and trim — not standard interior wall paint. We use cabinet-grade coatings such as Benjamin Moore Command or Sherwin-Williams Emerald Urethane Trim Enamel, formulated for hardness and durability far beyond standard interior paint. Pair with a shellac-based primer on oak surfaces.",
   },
   {
     question: "How long should I wait before using cabinets after painting?",

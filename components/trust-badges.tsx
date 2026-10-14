@@ -4,7 +4,7 @@ import { BUSINESS } from "@/lib/business"
 const badges = [
   {
     icon: ShieldCheck,
-    title: "Fully Insured",
+    title: "Insured & Bonded",
     subtitle: "$2M liability + workers' comp",
   },
   {

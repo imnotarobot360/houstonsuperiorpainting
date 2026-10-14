@@ -8,7 +8,6 @@ import {
   LuxuryTrust,
   LuxuryServices,
   LuxuryBeforeAfter,
-  LuxuryProcess,
   LuxuryProjects,
   LuxuryTestimonials,
   LuxuryInsights,
@@ -16,6 +15,8 @@ import {
 } from "@/components/luxury/sections"
 import { LocationsSection } from "@/components/locations-section"
 import FAQ from "@/components/faq"
+import { FinishSystem } from "@/components/finish-system"
+import { PopularServicesByArea } from "@/components/popular-services-by-area"
 import Link from "next/link"
 import { OFFICE_PAGES, PRICES_2026 } from "@/lib/business"
 
@@ -44,7 +45,7 @@ const homeFaqs = [
   },
   {
     q: "Are you insured for painting in Texas?",
-    a: "Yes, Houston Superior Painting is fully insured with $2 million general liability coverage. We're also bonded for your protection and carry workers' compensation insurance. Certificates of insurance are available upon request for HOA requirements or property managers.",
+    a: "Yes, Houston Superior Painting is insured with $2 million general liability coverage. We're also bonded for your protection and carry workers' compensation insurance. Certificates of insurance are available upon request for HOA requirements or property managers.",
   },
   {
     q: "How long does it take to paint a house interior?",
@@ -52,7 +53,7 @@ const homeFaqs = [
   },
   {
     q: "What paint brands do you use?",
-    a: "We exclusively use premium paints from Sherwin-Williams and Benjamin Moore. For interiors, we use Benjamin Moore Aura or Regal Select. For exteriors in Houston's climate, we use Sherwin-Williams Duration or Emerald. For cabinets, we use Benjamin Moore Command, a waterborne acrylic urethane, for a factory-smooth finish.",
+    a: "We exclusively use premium paints from Sherwin-Williams and Benjamin Moore. For interiors, we use Benjamin Moore Aura or Regal Select. For exteriors in Houston's climate, we use Sherwin-Williams Duration or Emerald. For cabinets, we use Benjamin Moore Command or Sherwin-Williams Emerald Urethane Trim Enamel, with Renner wood coatings on qualifying cabinet systems.",
   },
   {
     q: "Do I need to move furniture before you paint?",
@@ -78,7 +79,7 @@ export default function Home() {
       <LuxuryTrust />
       <LuxuryServices />
       <LuxuryBeforeAfter />
-      <LuxuryProcess />
+      <FinishSystem className="bg-white" />
       <LuxuryProjects />
       <LuxuryTestimonials />
       <LuxuryInsights />
@@ -88,6 +89,7 @@ export default function Home() {
       */}
       <LocationsSection />
       <HomeKeyLinks />
+      <PopularServicesByArea />
       <div className="bg-white pt-16">
         <TrustChecklist className="!mb-0" />
       </div>

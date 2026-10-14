@@ -396,7 +396,7 @@ export function LuxuryCTA() {
 /* Small icon trust row used under the hero (optional accent) */
 export function LuxuryAssurance() {
   const items = [
-    { icon: ShieldCheck, label: "Fully Insured" },
+    { icon: ShieldCheck, label: "$2M Liability + Workers' Comp" },
     { icon: Award, label: `${BUSINESS.trust.warrantyYears}-Year Workmanship Warranty` },
     { icon: Sparkles, label: "Premium Materials Only" },
   ]

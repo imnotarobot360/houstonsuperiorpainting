@@ -3,7 +3,7 @@ import { GuideArticle, guideMetadata, type GuideArticleData } from "@/components
 import { Bullets, Steps } from "@/components/aeo/blocks"
 import { BUSINESS } from "@/lib/business"
 
-// Rewritten 2026-10-12: owner says the cabinet finish is Benjamin Moore Command
+// Rewritten 2026-10-12 around Benjamin Moore Command; 2026-10-14 owner added Emerald Urethane + Renner as cabinet finishes
 // (High Performance Command® Waterborne Acrylic Urethane, HP3920 satin / HP3900 gloss).
 // Manufacturer figures from benjaminmoore.com product page HP3920 (checked 2026-10-12):
 // touch 15 min, recoat 1 h, vertical surfaces ready 1 h, foot traffic 4 h, < 50 g/L VOC,
@@ -18,15 +18,15 @@ const D: GuideArticleData = {
   path: "/blog/cabinet-paint-cure-time-houston",
   title: "Cabinet Paint Cure Time: Benjamin Moore Command (7–10 Days)",
   description:
-    "We refinish cabinets with Benjamin Moore Command waterborne acrylic urethane. It dries in 15 minutes and recoats in an hour, but takes 7–10 days to fully cure. What that means for your kitchen.",
+    "Benjamin Moore Command, one of the cabinet finishes we use, dries in 15 minutes and recoats in an hour, but kitchen cabinets take 7–10 days to fully cure. What that means for your kitchen.",
   h1: "How long do painted cabinets take to cure?",
   eyebrow: "Cabinet guide",
   published: "2026-10-11",
-  updated: "2026-10-12",
+  updated: "2026-10-14",
   quickAnswer: (
     <>
-      Painted kitchen cabinets take 7–10 days to fully cure. We finish cabinets with Benjamin Moore Command®, a
-      waterborne acrylic urethane that is dry to the touch in about 15 minutes and ready for its next coat in about an
+      Painted kitchen cabinets take 7–10 days to fully cure. One of the cabinet finishes we spray is Benjamin Moore
+      Command®, a waterborne acrylic urethane that is dry to the touch in about 15 minutes and ready for its next coat in about an
       hour. Doors and drawers can go back on and be used carefully soon after the final coat, but the finish keeps
       hardening for 7–10 days, and Houston humidity pushes that toward the longer end.
     </>
@@ -53,7 +53,7 @@ const D: GuideArticleData = {
       ),
     },
     {
-      title: "Why we use Benjamin Moore Command on cabinets",
+      title: "Why Benjamin Moore Command works on cabinets",
       body: (
         <>
           <p>
@@ -162,7 +162,7 @@ const D: GuideArticleData = {
       body: (
         <p>
           Our <Link href="/cabinet-refinishing-houston-tx">cabinet refinishing</Link> estimates name the primer and the
-          Command topcoat, the sheen, the number of coats and the schedule, including when the doors go back on. The work
+          topcoat product, the sheen, the number of coats and the schedule, including when the doors go back on. The work
           carries a {BUSINESS.trust.warrantyYears}-year written workmanship warranty under the terms in the estimate. See
           finished kitchens on our <Link href="/projects">projects page</Link>, and{" "}
           <Link href="/blog/cabinet-painting-company-houston-guide">how to choose a cabinet painting company</Link>.
@@ -177,11 +177,11 @@ const D: GuideArticleData = {
     },
     {
       q: "How long does cabinet paint take to fully cure?",
-      a: "With Benjamin Moore Command, which we use on cabinets, plan on 7–10 days for kitchen cabinets to fully cure. Houston humidity, cool temperatures and thick coats lengthen curing.",
+      a: "Plan on 7–10 days for kitchen cabinets to fully cure, whether we spray Benjamin Moore Command or Sherwin-Williams Emerald Urethane. Houston humidity, cool temperatures and thick coats lengthen curing.",
     },
     {
       q: "What paint do you use on kitchen cabinets?",
-      a: "Benjamin Moore Command, a waterborne acrylic urethane made for cabinets, doors and trim, over a bonding primer. It is low-odor, low-VOC and dries hard and smooth.",
+      a: "Benjamin Moore Command or Sherwin-Williams Emerald Urethane Trim Enamel over a bonding primer, and Renner wood coatings on qualifying cabinet systems. Your estimate names the exact product.",
     },
     {
       q: "Why are my freshly painted cabinet doors sticking?",

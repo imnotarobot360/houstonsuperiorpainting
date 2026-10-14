@@ -4,7 +4,7 @@ import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Exterior Painting Sugar Land, TX | Free Estimate",
-  description: "Exterior house painting in Sugar Land, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty.",
+  description: "Exterior house painting in Sugar Land, TX: washing, caulking, wood rot repair and priming. Insured, 5-year written warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/exterior-painting-sugar-land",
   },
@@ -18,7 +18,7 @@ export default function ExteriorPaintingSugarLandPage() {
       zone="Sugar Land, TX"
       zoneSlug="sugar-land"
       metaTitle="Exterior Painting Sugar Land, TX | Free Estimate"
-      metaDescription="Exterior house painting in Sugar Land, TX: washing, caulking, wood rot repair and priming. Fully insured, 5-year written warranty."
+      metaDescription="Exterior house painting in Sugar Land, TX: washing, caulking, wood rot repair and priming. Insured, 5-year written warranty."
       h1="Exterior Painting in Sugar Land, TX"
       heroSubheading="Exterior repaints prepped for Houston heat and humidity: washed, caulked, repaired and primed before the finish coats, with a 5-year written workmanship warranty."
       introLocal="Exteriors in Sugar Land include brick, fiber-cement and wood siding, and stucco, so prep differs by house: stucco cracks need filling and a masonry-rated coating, and wood trim needs rot checked and replaced before it is painted. Houston's humidity and summer heat are hard on exterior paint everywhere in the region, which is why prep matters more than the paint can."

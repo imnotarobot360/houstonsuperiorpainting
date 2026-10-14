@@ -4,7 +4,7 @@ import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Interior Painting Katy & Cinco Ranch, TX | Free Estimate",
-  description: "Interior painting in Katy and Cinco Ranch, TX: walls, ceilings, trim and doors. Free written estimate, fully insured, 5-year workmanship warranty.",
+  description: "Interior painting in Katy and Cinco Ranch, TX: walls, ceilings, trim and doors. Free written estimate, insured, 5-year workmanship warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-katy-cinco-ranch",
   },
@@ -18,7 +18,7 @@ export default function InteriorPaintingKatyPage() {
       zone="Katy & Cinco Ranch, TX"
       zoneSlug="katy-cinco-ranch"
       metaTitle="Interior Painting Katy & Cinco Ranch, TX | Free Estimate"
-      metaDescription="Interior painting in Katy and Cinco Ranch, TX: walls, ceilings, trim and doors. Free written estimate, fully insured, 5-year workmanship warranty."
+      metaDescription="Interior painting in Katy and Cinco Ranch, TX: walls, ceilings, trim and doors. Free written estimate, insured, 5-year workmanship warranty."
       h1="Interior Painting in Katy and Cinco Ranch, TX"
       heroSubheading="Walls, ceilings, trim and doors painted with careful prep, protected floors and furniture, and a 5-year written workmanship warranty."
       introLocal="Much of the area, including Cinco Ranch, Cross Creek Ranch and Elyson, is two-story suburban housing, often with tall family rooms and open stairwells. Those high walls need taller ladders or scaffolding and careful cut lines where colors meet, and we price that access into the written estimate up front."

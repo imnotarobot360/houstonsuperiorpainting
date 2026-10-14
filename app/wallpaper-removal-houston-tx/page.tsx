@@ -221,7 +221,7 @@ export default function WallpaperRemovalHoustonTX() {
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-accent" />
-                <span className="font-medium">Fully Insured</span>
+                <span className="font-medium">$2M Liability + Workers' Comp</span>
               </div>
             </div>
           </div>

@@ -47,7 +47,7 @@ Thorough cleaning and degreasing remove years of cooking oils, smoke residue, an
 
 Next comes sanding. We sand all surfaces to create proper adhesion for primers and topcoats. For cabinets with heavy grain (like oak), we apply grain filler to create a smooth surface that won't show wood texture through the finish.
 
-We apply a bonding primer, then spray Benjamin Moore Command, a waterborne acrylic urethane. Between coats, we sand lightly for adhesion and a smooth final finish. The finish reaches full cure in 7–10 days, so treat it gently for that first stretch.`
+We apply a bonding primer, then spray Benjamin Moore Command or Sherwin-Williams Emerald Urethane Trim Enamel (Renner wood coatings on qualifying cabinet systems). Between coats, we sand lightly for adhesion and a smooth final finish. The finish reaches full cure in 7–10 days, so treat it gently for that first stretch.`
     },
     {
       title: "Cabinet Colors and Finishes",
@@ -75,7 +75,7 @@ We offer multiple sheen levels including matte, satin, and semi-gloss. Satin and
     "Factory-finish spray application",
     "Schedule set in your written estimate",
     "No demolition or countertop removal",
-    "Benjamin Moore Command over a bonding primer",
+    "Benjamin Moore Command, Sherwin-Williams Emerald Urethane or Renner over a bonding primer",
     "Full cure in 7–10 days",
     "5-year written workmanship warranty, transferable",
     "Color consultation included"
@@ -102,7 +102,7 @@ We offer multiple sheen levels including matte, satin, and semi-gloss. Satin and
     },
     {
       question: "How durable is cabinet paint?",
-      answer: "We use Benjamin Moore Command, a waterborne acrylic urethane, over a bonding primer. It reaches full cure in 7–10 days; until then, clean gently and avoid hard knocks. Our work is backed by a 5-year written workmanship warranty."
+      answer: "We use Benjamin Moore Command or Sherwin-Williams Emerald Urethane Trim Enamel over a bonding primer, with Renner wood coatings for qualifying cabinet systems. It reaches full cure in 7–10 days; until then, clean gently and avoid hard knocks. Our work is backed by a 5-year written workmanship warranty."
     },
     {
       question: "Can I use my kitchen during refinishing?",

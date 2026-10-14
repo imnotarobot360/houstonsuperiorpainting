@@ -196,7 +196,7 @@ export default function PaintingFinancingPage() {
         <section className="py-12 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-              {["Same premium prep on every job", "Sherwin-Williams & Benjamin Moore", "5-year exterior warranty", "Fully insured"].map(
+              {["Same premium prep on every job", "Sherwin-Williams & Benjamin Moore", "5-year exterior warranty", "$2M liability + workers' comp"].map(
                 (point) => (
                   <div key={point} className="flex items-center gap-2 text-foreground">
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />

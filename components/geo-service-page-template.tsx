@@ -239,7 +239,7 @@ export function GeoServicePageTemplate({
 
   // Each line is a fact stored in lib/business.ts.
   const trustSignals = [
-    `Fully insured: ${BUSINESS.trust.liabilityCoverage} general liability + workers' comp`,
+    `Insured: ${BUSINESS.trust.liabilityCoverage} general liability + workers' comp`,
     `${warrantyYears}-year written ${warrantyType.toLowerCase()} warranty`,
     `${BUSINESS.paymentPolicy.short}: ${BUSINESS.paymentPolicy.badgeSubtitle.toLowerCase()}`,
     `${BUSINESS.paintPartners.join(" & ")} products`,
@@ -284,7 +284,7 @@ export function GeoServicePageTemplate({
               <div className="flex flex-wrap gap-4 mb-8 text-sm">
                 <span className="flex items-center gap-2">
                   <Shield className="h-4 w-4" aria-hidden="true" />
-                  Fully Insured
+                  Insured
                 </span>
                 <span className="flex items-center gap-2">
                   <Clock className="h-4 w-4" aria-hidden="true" />

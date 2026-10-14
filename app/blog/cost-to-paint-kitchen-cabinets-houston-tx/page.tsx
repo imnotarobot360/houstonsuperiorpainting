@@ -55,7 +55,7 @@ const faqs = [
   {
     question: "What kind of paint is used on kitchen cabinets in Houston?",
     answer:
-      "We use Benjamin Moore Command, a waterborne acrylic urethane made for cabinets, applied by spray for a factory-smooth finish. It cures hard, resist grease and moisture, and hold up to Houston's humidity far better than standard wall paint, which stays soft and chips easily on cabinets.",
+      "We spray Benjamin Moore Command or Sherwin-Williams Emerald Urethane Trim Enamel over a bonding primer, with Renner wood coatings for qualifying cabinet systems, for a smooth, even finish. These cabinet-grade coatings cure hard, resist grease and moisture, and hold up to Houston's humidity far better than standard wall paint, which stays soft and chips easily on cabinets.",
   },
   {
     question: "Do painted cabinets hold up in Houston's humidity?",
