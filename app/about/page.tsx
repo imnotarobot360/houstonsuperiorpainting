@@ -7,6 +7,7 @@
 // them by @id instead of redefining them. No LocalBusiness, no aggregateRating.
 
 import Link from "next/link"
+import Image from "next/image"
 import type { Metadata } from "next"
 import { MapPin, Phone, ShieldCheck, Languages, ClipboardList, Star } from "lucide-react"
 import { Header } from "@/components/header"
@@ -25,7 +26,7 @@ import { breadcrumbNode, ESTIMATE_PATH, CtaBlock } from "@/components/aeo/blocks
 const PAGE_URL = "https://houstonsuperiorpainting.com/about"
 const TITLE = "About Houston Superior Painting | Juan Serra, Owner, Since 2019"
 const DESCRIPTION =
-  "Houston Superior Painting was founded in 2019 by Juan Serra. Headquartered in Cypress with five Greater Houston offices, $2M insured, 5-year warranty."
+  "Houston Superior Painting was founded in 2019 by Juan Serra: a Houston painting company built around preparation, written scopes and a 5-year written workmanship warranty. Cypress HQ, five offices."
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -75,7 +76,57 @@ const SERVICES = [
   { label: "Limewash and brick painting", href: "/limewash-brick-painting-houston-tx", text: "Limewash, German smear, and painted brick." },
   { label: "Stucco painting and repair", href: "/stucco-painting-houston-tx", text: "Crack repair and elastomeric stucco coatings." },
   { label: "Soft washing", href: "/soft-washing-houston-tx", text: "Low-pressure mildew removal before exterior painting." },
+  { label: "Fine finish painting", href: "/fine-finish-painting-houston", text: "Trim, doors, crown molding, built-ins and millwork." },
+  { label: "Commercial painting", href: "/commercial-painting-houston-tx", text: "Offices, retail, restaurants, HOAs and multifamily." },
+  { label: "Wallpaper removal", href: "/wallpaper-removal-houston-tx", text: "Removal, wall repair and priming before paint." },
+  { label: "Wood rot repair", href: "/wood-rot-repair-houston-tx", text: "Rotted trim, fascia and siding replaced before paint." },
+  { label: "Color consultation", href: "/paint-color-consultation-houston", text: "Free color and sheen guidance with your estimate." },
 ]
+
+/**
+ * Owner-supplied founder extras. Everything here is empty until Juan provides
+ * approved content in BUSINESS.founderProfile, and nothing renders while empty.
+ */
+function FounderExtras() {
+  const p = BUSINESS.founderProfile
+  const any = p.photo || p.videoUrl || p.statement || p.timeline.length || p.community.length
+  if (!any) return null
+  return (
+    <div className="mb-8 space-y-6">
+      {p.photo && (
+        <Image
+          src={p.photo.src}
+          alt={p.photo.alt}
+          width={p.photo.width}
+          height={p.photo.height}
+          className="rounded-xl border border-border"
+        />
+      )}
+      {p.statement && (
+        <blockquote className="border-l-4 border-gold pl-5 text-lg italic text-foreground/90">{p.statement}</blockquote>
+      )}
+      {p.videoUrl && (
+        <video src={p.videoUrl} controls preload="none" className="w-full rounded-xl border border-border" />
+      )}
+      {p.timeline.length > 0 && (
+        <ol className="space-y-2">
+          {p.timeline.map((t) => (
+            <li key={t.year + t.text}>
+              <strong>{t.year}</strong> · {t.text}
+            </li>
+          ))}
+        </ol>
+      )}
+      {p.community.length > 0 && (
+        <ul className="list-disc pl-5">
+          {p.community.map((c) => (
+            <li key={c}>{c}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
 
 export default function AboutPage() {
   const { trust } = BUSINESS
@@ -111,8 +162,8 @@ export default function AboutPage() {
             Houston Superior Painting is a residential and commercial painting contractor founded in{" "}
             {BUSINESS.founded} by {BUSINESS.founder.name}. We are headquartered in Cypress, TX, and serve Greater
             Houston from five offices: Cypress, Houston, Katy, Sugar Land, and Magnolia. We carry{" "}
-            {trust.liabilityCoverage} in general liability insurance plus workers&apos; compensation, back every
-            painting job with a {trust.warrantyYears}-year workmanship warranty, and put the scope, price and payment schedule in writing before you approve the project.
+            {trust.liabilityCoverage} in general liability insurance plus workers&apos; compensation, back our
+            painting with a {trust.warrantyYears}-year written workmanship warranty, and put the scope, price and payment schedule in writing before you approve the project.
             Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a>.
           </p>
         </div>
@@ -120,18 +171,50 @@ export default function AboutPage() {
         {/* ─── OWNER ─── */}
         <section className="container mx-auto px-4 max-w-4xl mb-14" id="juan-serra">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Who runs Houston Superior Painting</h2>
-          {/* No owner photo on the site, by choice. */}
+          <p className="font-display text-2xl text-foreground mb-5 text-balance">
+            A Houston painting company built around preparation, written expectations and finishes designed for
+            Houston conditions.
+          </p>
+          {/* Owner photo, video, statement, timeline and community items render only
+              when Juan supplies them (BUSINESS.founderProfile); empty values show nothing. */}
+          <FounderExtras />
           <div className="space-y-4 text-lg leading-relaxed text-foreground/85">
             <p>
               <strong className="text-foreground">{BUSINESS.founder.name}</strong> founded Houston Superior Painting
-              in {BUSINESS.founded} and is the company&apos;s owner. He runs it from our Cypress headquarters,
-              oversees crews across all five Greater Houston offices, and personally reviews the prep scope on
-              every estimate.
+              in {BUSINESS.founded} and is the company&apos;s owner. He runs it from our Cypress headquarters, and the
+              company now serves Greater Houston from five offices.
             </p>
             <p>
               The company was built on one idea: in Houston&apos;s heat and humidity, paint only lasts as long as the
               prep underneath it. That is why our estimates spell out the prep work line by line, and why our
               slogan is &ldquo;{BUSINESS.slogan}&rdquo;
+            </p>
+          </div>
+        </section>
+
+        {/* ─── APPROACH ─── */}
+        <section className="container mx-auto px-4 max-w-4xl mb-14" id="approach">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">How we approach a project</h2>
+          <div className="space-y-4 text-lg leading-relaxed text-foreground/85">
+            <p>
+              <strong className="text-foreground">Written scopes.</strong> The estimate names every surface included and
+              excluded, the preparation for each, the primer, the product line, the sheen and the number of coats or
+              the coverage standard. If something isn&apos;t written down, ask for it to be added before you approve.
+            </p>
+            <p>
+              <strong className="text-foreground">Product selection.</strong> Products are chosen for the surface and
+              for Houston&apos;s heat, sun and humidity: {BUSINESS.paintPartners.join(", ")} lines on walls and
+              exteriors, and on cabinets and trim {BUSINESS.cabinetFinish.sentence}.
+            </p>
+            <p>
+              <strong className="text-foreground">Final walkthrough.</strong> When the work is done we walk it with you,
+              note anything that needs attention and finish it before the job is closed out.
+            </p>
+            <p>
+              <strong className="text-foreground">Communication.</strong> You can reach the office by phone or text at{" "}
+              <a href={PHONE_HREF} className="text-primary underline underline-offset-2">{BUSINESS.phone}</a>. The start
+              date and schedule are agreed before work begins, and any extra work found during the job is priced and
+              approved in writing before it is done.
             </p>
           </div>
         </section>
@@ -196,18 +279,14 @@ export default function AboutPage() {
         {/* ─── HOW WE WORK ─── */}
         <section className="container mx-auto px-4 max-w-4xl mb-14" id="how-we-work">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">How we work</h2>
+          <p className="text-lg text-foreground/85 mb-4">
+            Every estimate is written and itemized so you can compare bids line by line.{" "}
+            <Link href={ESTIMATE_PATH} className="text-primary underline underline-offset-2">
+              Request a free painting estimate in Houston
+            </Link>
+            .
+          </p>
           <ul className="space-y-4 text-lg text-foreground/85">
-            <li className="flex gap-3">
-              <ClipboardList className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
-              <span>
-                <strong className="text-foreground">Written scope.</strong> Every estimate lists square footage,
-                product, coat count, and the prep work, so you can compare bids line by line.{" "}
-                <Link href={ESTIMATE_PATH} className="text-primary underline underline-offset-2">
-                  Request a free painting estimate in Houston
-                </Link>
-                .
-              </span>
-            </li>
             <li className="flex gap-3">
               <ClipboardList className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
               <span>
@@ -224,8 +303,8 @@ export default function AboutPage() {
             <li className="flex gap-3">
               <ShieldCheck className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
               <span>
-                <strong className="text-foreground">{trust.warrantyYears}-year workmanship warranty</strong> on all
-                painting.{" "}
+                <strong className="text-foreground">{trust.warrantyYears}-year written workmanship warranty.</strong>{" "}
+                {BUSINESS.warrantyTermsSentence}{" "}
                 <Link href="/warranty" className="text-primary underline underline-offset-2">
                   Read our painting warranty
                 </Link>
@@ -236,9 +315,13 @@ export default function AboutPage() {
               <ShieldCheck className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
               <span>
                 <strong className="text-foreground">Insured, not &ldquo;licensed.&rdquo;</strong> We carry{" "}
-                {trust.liabilityCoverage} general liability and workers&apos; compensation, and we will send the
-                certificate of insurance before work starts. Texas does not issue a state license for painting
-                contractors, so we don&apos;t claim one, and you should be wary of any painter who does.
+                {trust.liabilityCoverage} general liability and workers&apos; compensation, and we are bonded.{" "}
+                {BUSINESS.insuranceProof.en}{" "}
+                <Link href="/insurance-and-warranty#request-proof-of-insurance" className="text-primary underline underline-offset-2">
+                  Request proof of insurance
+                </Link>
+                . Texas does not issue a state license for painting contractors, so we don&apos;t claim one, and you
+                should be wary of any painter who does.
               </span>
             </li>
             <li className="flex gap-3">
@@ -261,15 +344,10 @@ export default function AboutPage() {
               Houston painting projects
             </Link>
             , and read what customers say on{" "}
-            <a
-              href={BUSINESS.social.googleMaps}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary underline underline-offset-2"
-            >
-              our Google reviews
-            </a>
-            . We use Sherwin-Williams and Benjamin Moore products.
+            <Link href="/reviews" className="text-primary underline underline-offset-2">
+              each office&apos;s Google reviews
+            </Link>
+            .
           </p>
         </section>
 

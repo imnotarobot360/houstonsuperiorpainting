@@ -39,7 +39,9 @@ export const BUSINESS = {
     familyName: "Serra",
     jobTitle: "Owner",
     image: null as string | null,
-    bio: "Juan Serra founded Houston Superior Painting in 2019. He runs the company from its Cypress headquarters, oversees crews across five Greater Houston offices, and personally reviews the prep scope on every estimate.",
+    // Softened 2026-10-14 (owner brief): do not claim Juan personally supervises
+    // or reviews every job unless he confirms it.
+    bio: "Juan Serra founded Houston Superior Painting in 2019 and runs the company from its Cypress headquarters. He built it around preparation, written scopes and finishes designed for Houston conditions.",
     url: "https://houstonsuperiorpainting.com/about",
     id: "https://houstonsuperiorpainting.com/about#juan-serra",
   },
@@ -247,6 +249,20 @@ export const BUSINESS = {
       "Benjamin Moore Command or Sherwin-Williams Emerald Urethane Trim Enamel over a bonding primer, with Renner wood coatings for qualifying cabinet systems",
     cureDays: "7–10 days",
   },
+
+  // Founder page extras (owner brief 2026-10-14). Each renders on /about ONLY when
+  // filled with owner-approved content; empty values show nothing publicly.
+  founderProfile: {
+    photo: null as null | { src: string; alt: string; width: number; height: number },
+    videoUrl: null as null | string,
+    statement: null as null | string,
+    timeline: [] as { year: string; text: string }[],
+    community: [] as string[],
+  },
+
+  // Warranty wording approved in the brief (2026-10-14).
+  warrantyTermsSentence:
+    "Houston Superior Painting provides a 5-year written workmanship warranty, subject to the written terms, exclusions and project scope contained in the customer's estimate.",
 
   // Owner-approved insurance wording (brief 2026-10-14), English and Spanish.
   insuranceProof: {

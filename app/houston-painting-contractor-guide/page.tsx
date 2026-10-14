@@ -682,8 +682,8 @@ export default function HoustonPaintingContractorGuidePage() {
                 {BUSINESS.founder.name}
               </Link>{" "}
               is the {BUSINESS.founder.jobTitle.toLowerCase()} of {BUSINESS.name}. He founded the company in{" "}
-              {BUSINESS.founded}, runs it from its {BUSINESS.primaryAddress.city} headquarters, and personally reviews the
-              prep scope on every estimate.
+              {BUSINESS.founded}, runs it from its {BUSINESS.primaryAddress.city} headquarters, and built it around preparation
+              and written, line-by-line scopes.
             </p>
           </div>
         </section>

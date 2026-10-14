@@ -598,8 +598,8 @@ export default function PaintingEstimatePage() {
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {BUSINESS.founder.name}, {BUSINESS.founder.jobTitle} — painting Houston homes
-                  since {BUSINESS.founded}. He personally reviews every estimate that leaves our
-                  office.
+                  since {BUSINESS.founded}. He built the company around written, line-by-line
+                  estimates.
                 </p>
               </div>
             </div>
