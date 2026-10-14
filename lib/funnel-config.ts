@@ -309,7 +309,8 @@ export const FUNNELS: Record<FunnelService, FunnelConfig> = {
       "Diamond-ground preparation and a hard-wearing coating built for Houston humidity. Tell us about your garage and we'll put a written price in your hands.",
     proofPoints: [
       "Diamond-ground preparation, not an acid wash",
-      `${BUSINESS.trust.warrantyYears}-year written warranty`,
+      // Epoxy carries the epoxy brand's warranty, not the painting 5-year (Juan, 2026-10-14).
+      EPOXY.warranty,
       "Written line-item estimate before any work starts",
     ],
     heroImage: "/images/epoxy/hero-luxury-garage.png",
