@@ -23,8 +23,8 @@ const INCLUDED = [
   },
   {
     icon: FileText,
-    title: `${EPOXY.warrantyYears}-year written warranty`,
-    body: "Adhesion warranty in writing on residential garage systems. No payment until you sign off.",
+    title: EPOXY.warranty,
+    body: "In writing on residential garage systems. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
   },
 ]
 
@@ -32,7 +32,7 @@ export function EpoxyPricing() {
   const [sizeIdx, setSizeIdx] = useState(1) // default: 2-car, the most common
 
   const size = GARAGE_SIZES[sizeIdx]
-  const { low, high } = useMemo(() => estimateGarageCost(size.sqft), [size.sqft])
+  const estimate = useMemo(() => estimateGarageCost(size.sqft), [size.sqft])
 
   return (
     <section id="pricing" className="scroll-mt-20 border-t border-border bg-background py-20 md:py-28">
@@ -83,8 +83,8 @@ export function EpoxyPricing() {
               </fieldset>
 
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-                Installed pricing runs {rate(RATE_PER_SQFT.low)}–{rate(RATE_PER_SQFT.high)} per square foot
-                depending on coating system and slab condition, with a {usd(PROJECT_MINIMUM)} project minimum.
+                Rough pricing is {rate(RATE_PER_SQFT)} per square foot with a {usd(PROJECT_MINIMUM)} minimum.
+                Slab repairs and the coating system can change it; your written estimate sets the price.
               </p>
             </div>
 
@@ -94,7 +94,7 @@ export function EpoxyPricing() {
                 Estimated project total
               </p>
               <p aria-live="polite" className="mt-3 font-manrope text-4xl font-extrabold text-primary md:text-5xl">
-                {usd(low)} – {usd(high)}
+                about {usd(estimate)}
               </p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 For a {size.label.toLowerCase()} ({size.sqft} sq ft), fully installed

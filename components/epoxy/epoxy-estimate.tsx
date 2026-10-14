@@ -5,7 +5,7 @@ import { EpoxyQuoteForm } from "./epoxy-quote-form"
 
 const ASSURANCES = [
   { icon: Clock, text: "Free on-site estimate, no obligation" },
-  { icon: ShieldCheck, text: "15-year written adhesion warranty" },
+  { icon: ShieldCheck, text: "Limited Lifetime Workmanship Warranty" },
   { icon: Phone, text: "We call back within one business day" },
 ]
 

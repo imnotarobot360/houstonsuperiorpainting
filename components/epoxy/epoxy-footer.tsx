@@ -131,7 +131,7 @@ export function EpoxyFooter() {
             &copy; {new Date().getFullYear()} {EPOXY.name}. A division of {EPOXY.parent}.
             Fully insured.
           </p>
-          <p>{EPOXY.warrantyYears}-year written adhesion warranty on residential garage systems.</p>
+          <p>{EPOXY.warranty} on residential garage systems.</p>
         </div>
       </div>
     </footer>

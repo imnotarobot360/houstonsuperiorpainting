@@ -19,9 +19,9 @@ export const EPOXY = {
   smsHref: `sms:${BUSINESS.phoneTel}`,
   phoneE164: BUSINESS.phoneE164,
   email: BUSINESS.email,
-  rating: 4.9,
-  reviewCount: 170,
-  warrantyYears: 15,
+  // Owner-confirmed 2026-10-09 for houstonsuperiorepoxy.com. No review figures:
+  // ratings are per Google office profile and belong to the painting company.
+  warranty: "Limited Lifetime Workmanship Warranty",
   foundedYear: 2019,
 
   // ─── Scheduler (Houston Superior Groups — Contractor ERP) ─────────
@@ -78,7 +78,7 @@ export const WHY_US: Array<{ title: string; body: string; icon: string }> = [
   {
     icon: "award",
     title: "Written Warranty",
-    body: "Residential garage systems carry a written 15-year adhesion warranty against peeling and delamination, backed by a fully insured company since 2019.",
+    body: "Residential garage systems carry our written Limited Lifetime Workmanship Warranty, from a company serving Houston since 2019.",
   },
 ];
 
@@ -99,13 +99,13 @@ export const SERVICES_FEATURED: Array<{
     title: "Garage Epoxy",
     blurb:
       "Full-flake garage systems with a polyaspartic topcoat. The showroom floor most Houston homeowners are actually after.",
-    priceFrom: "From $5 / sq ft",
+    priceFrom: "From $4.50 / sq ft",
     image: "/images/epoxy/hero-luxury-garage.png",
     imageAlt:
       "Luxury residential garage with a high-gloss charcoal epoxy flake floor",
     bullets: [
-      "One-day install on most garages",
-      "15-year written adhesion warranty",
+      "Diamond-ground prep",
+      "Limited Lifetime Workmanship Warranty",
       "Hot tire pickup proof",
     ],
   },
@@ -129,7 +129,7 @@ export const SERVICES_FEATURED: Array<{
     title: "Metallic Epoxy",
     blurb:
       "Pearlescent marbled floors with real depth and movement. A statement finish for showrooms, retail, and man caves.",
-    priceFrom: "From $10 / sq ft",
+    priceFrom: "Custom quoted",
     image: "/images/epoxy/gallery-metallic.png",
     imageAlt:
       "Metallic epoxy floor with swirling copper, bronze and charcoal pigments under a high-gloss coat",
@@ -467,7 +467,7 @@ export const COMPARISON_ROWS: Array<{
   },
   {
     feature: "Warranty",
-    ours: "15-year written adhesion warranty",
+    ours: "Limited Lifetime Workmanship Warranty",
     theirs: "None",
   },
   {
@@ -480,20 +480,18 @@ export const COMPARISON_ROWS: Array<{
     ours: "Rated for 140°F+ tire contact",
     theirs: "Common failure point — lifts and peels",
   },
-  { feature: "Lifespan", ours: "15–20+ years", theirs: "1–3 years" },
 ];
 
 /* ─── Pricing ──────────────────────────────────────────── */
 
 /**
- * Installed price per square foot for a full flake + polyaspartic system.
- * Every price shown anywhere on the site derives from these two numbers so the
- * calculator, the service cards, and the FAQ copy can never contradict.
+ * Rough installed price per square foot (owner-approved 2026-10-04, same as
+ * houstonsuperiorepoxy.com): max(sqft x $4.50, $1,000). The written estimate sets the price.
  */
-export const RATE_PER_SQFT = { low: 5, high: 11 } as const;
+export const RATE_PER_SQFT = 4.5;
 
 /** Mobilization floor — small jobs still need a full crew, truck, and grinder. */
-export const PROJECT_MINIMUM = 2200;
+export const PROJECT_MINIMUM = 1000;
 
 export const GARAGE_SIZES: Array<{ id: string; label: string; sqft: number }> =
   [
@@ -504,10 +502,7 @@ export const GARAGE_SIZES: Array<{ id: string; label: string; sqft: number }> =
   ];
 
 export function estimateGarageCost(sqft: number) {
-  return {
-    low: Math.max(PROJECT_MINIMUM, sqft * RATE_PER_SQFT.low),
-    high: Math.max(PROJECT_MINIMUM + 550, sqft * RATE_PER_SQFT.high),
-  };
+  return Math.max(PROJECT_MINIMUM, sqft * RATE_PER_SQFT);
 }
 
 /* ─── FAQ ──────────────────────────────────────────────── */
@@ -516,17 +511,17 @@ export const FAQS: Array<{ question: string; answer: string }> = [
   {
     question: "How much does garage epoxy flooring cost in Houston?",
     answer:
-      "A standard two-car garage (about 450 sq ft) runs $2,250–$4,950 for a full flake system with a polyaspartic topcoat. Three-car garages typically run $3,500–$7,700, and larger or heavily damaged slabs run higher. Pricing works out to $5–$11 per square foot depending on the system and how much concrete repair the slab needs, with a $2,200 project minimum. Metallic epoxy starts at $10 per square foot.",
+      "Rough pricing is $4.50 per square foot with a $1,000 minimum, so a standard two-car garage (about 450 sq ft) is roughly $2,025. Slab repairs and the chosen system can change that; your written estimate sets the final price. Metallic and commercial systems are quoted on site.",
   },
   {
     question: "How long does an epoxy garage floor last?",
     answer:
-      "A professionally installed epoxy and polyaspartic system lasts 15 to 20 years or more in a residential garage. That depends almost entirely on surface preparation — a floor installed over diamond-ground concrete lasts decades, while the same coating over acid-etched or unprepared concrete often fails within one to three years.",
+      "How long a floor lasts depends mostly on surface preparation and use. A coating over diamond-ground concrete holds far better than the same coating over acid-etched or unprepared concrete, which is why we grind every slab.",
   },
   {
     question: "How long before I can park on my new floor?",
     answer:
-      "You can walk on the floor 24 hours after the topcoat goes down, and park vehicles on it after 72 hours. The install itself takes one to two days for most residential garages. Polyaspartic systems cure fast enough that we can often finish a standard two-car garage in a single day.",
+      "Walk-on and drive-on times depend on the products and the weather; your estimate gives the schedule, and we tell you exactly when the floor is ready for foot traffic and for vehicles.",
   },
   {
     question: "Is epoxy or polyaspartic better for a Houston garage?",
@@ -536,7 +531,7 @@ export const FAQS: Array<{ question: string; answer: string }> = [
   {
     question: "Will epoxy peel off my concrete?",
     answer:
-      "Peeling is almost always a preparation failure, not a product failure. Coatings peel when they are applied over a slick, unopened, or contaminated surface — most commonly after acid etching or pressure washing instead of mechanical grinding. We diamond grind every slab and carry a 15-year written adhesion warranty against peeling and delamination.",
+      "Peeling is almost always a preparation failure, not a product failure. Coatings peel when they are applied over a slick, unopened, or contaminated surface — most commonly after acid etching or pressure washing instead of mechanical grinding. We diamond grind every slab, and residential garage systems carry our written Limited Lifetime Workmanship Warranty.",
   },
   {
     question: "Can you coat a garage floor that is already cracked or stained?",
@@ -551,7 +546,7 @@ export const FAQS: Array<{ question: string; answer: string }> = [
   {
     question: "Do you install commercial and warehouse epoxy floors?",
     answer:
-      "Yes. We install commercial epoxy for retail, restaurant, showroom, medical, and light industrial spaces, and high-build systems engineered for forklift traffic and heavy point loading in warehouses. Commercial work is scheduled on nights and weekends so your operation does not lose a day.",
+      "Yes. We install commercial epoxy for retail, restaurant, showroom, medical, and light industrial spaces, and high-build systems engineered for forklift traffic and heavy point loading in warehouses. Commercial work can be scheduled around your business hours.",
   },
   {
     question: "What areas around Houston do you serve?",
@@ -561,7 +556,7 @@ export const FAQS: Array<{ question: string; answer: string }> = [
   {
     question: "Is a garage floor coating worth the money?",
     answer:
-      "A coated garage floor stops concrete dusting, resists oil and chemical staining, cleans with a mop instead of a degreaser, brightens the space by reflecting light, and reads as finished square footage to buyers. Against a 15 to 20 year service life, a professionally installed system generally costs less per year than repeatedly cleaning and resealing bare concrete.",
+      "A coated garage floor stops concrete dusting, resists oil and chemical staining, cleans with a mop instead of a degreaser, brightens the space by reflecting light, and reads as finished square footage to buyers. Over its service life, a professionally installed system is easier to keep clean than bare concrete.",
   },
 ];
 
@@ -574,10 +569,8 @@ export const FAQS: Array<{ question: string; answer: string }> = [
  * automatically as cards; until then the section shows a "read our reviews on
  * Google" CTA plus factual trust signals instead of invented testimonials.
  *
- * Note on ratings: EPOXY.rating / EPOXY.reviewCount are inherited from the
- * PARENT painting company. They are displayed with explicit attribution and are
- * deliberately NOT emitted as AggregateRating schema for the epoxy entity —
- * attributing another entity's reviews in structured data risks a manual action.
+ * No rating figures: Google ratings are per painting-company office profile
+ * and are never combined or borrowed for the epoxy brand.
  */
 export const REVIEWS: Array<{
   name: string;

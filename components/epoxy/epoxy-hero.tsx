@@ -1,12 +1,10 @@
 import Image from "next/image"
-import { Phone, Star } from "lucide-react"
+import { Phone } from "lucide-react"
 import { EPOXY, PHONE_HREF } from "@/lib/epoxy"
 
 const TRUST = [
-  "15-Year Written Warranty",
   "Diamond-Ground Prep",
-  "Fully Insured",
-  "1-Day Installs Available",
+  "$2M General Liability + Workers' Comp",
 ]
 
 export function EpoxyHero() {
@@ -73,19 +71,7 @@ export function EpoxyHero() {
 
           {/* Above-the-fold trust signals */}
           <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/10 pt-6">
-            <span className="flex items-center gap-1.5">
-              <span className="flex" aria-hidden="true">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <Star key={i} className="size-3.5 fill-primary text-primary" />
-                ))}
-              </span>
-              <span className="text-xs font-semibold text-white">{EPOXY.rating}</span>
-              {/* Attributed to the parent company — these are Houston Superior
-                  Painting's reviews, not a rating the epoxy brand earned alone. */}
-              <span className="text-xs text-white/50">
-                from {EPOXY.reviewCount}+ reviews of {EPOXY.parent}
-              </span>
-            </span>
+            <span className="text-xs font-semibold text-white">{EPOXY.warranty}</span>
             {TRUST.map((t) => (
               <span key={t} className="text-xs font-medium text-white/55">
                 {t}

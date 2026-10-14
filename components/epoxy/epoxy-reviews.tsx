@@ -11,8 +11,8 @@ import { EPOXY, REVIEWS } from "@/lib/epoxy"
  */
 
 const TRUST = [
-  { icon: ShieldCheck, label: `${EPOXY.warrantyYears}-Year Written Warranty`, sub: "Adhesion, peeling & delamination" },
-  { icon: BadgeCheck, label: "Fully Insured", sub: "Fully covered on every job" },
+  { icon: ShieldCheck, label: EPOXY.warranty, sub: "In writing on residential garage systems" },
+  { icon: BadgeCheck, label: "$2M General Liability", sub: "Plus workers' comp" },
   { icon: Award, label: `Serving Houston Since ${EPOXY.foundedYear}`, sub: "Local crews, no subcontractors" },
 ]
 
@@ -30,34 +30,12 @@ export function EpoxyReviews() {
           <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
             {/* Attribution is explicit: this rating belongs to the parent company. */}
             Houston Superior Epoxy is the floor coating division of{" "}
-            <span className="text-foreground">{EPOXY.parent}</span>, rated{" "}
-            <span className="font-semibold text-foreground">
-              {EPOXY.rating} stars across {EPOXY.reviewCount}+ reviews
-            </span>{" "}
-            for its painting and coating work across the Houston metro.
+            <span className="text-foreground">{EPOXY.parent}</span>, which has painted and coated across the Houston metro since {EPOXY.foundedYear}.
           </p>
         </Reveal>
 
         {/* Rating summary */}
         <Reveal delay={0.08} className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-          <div className="flex items-center gap-3 rounded-sm border border-border bg-card px-5 py-4">
-            <span className="font-manrope text-3xl font-extrabold text-foreground">{EPOXY.rating}</span>
-            <div>
-              <div className="flex gap-0.5" aria-hidden="true">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="size-4 fill-primary text-primary" />
-                ))}
-              </div>
-              {/* "verified" dropped: we can't substantiate that claim ourselves. */}
-              <p className="mt-1 text-xs text-muted-foreground">
-                {EPOXY.reviewCount}+ reviews of {EPOXY.parent}
-              </p>
-            </div>
-            <span className="sr-only">
-              {EPOXY.rating} out of 5 stars from {EPOXY.reviewCount} or more reviews
-            </span>
-          </div>
-
           <a
             href={`https://www.google.com/search?q=${encodeURIComponent(EPOXY.parent + " Houston reviews")}`}
             target="_blank"
