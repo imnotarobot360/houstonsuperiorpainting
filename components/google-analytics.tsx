@@ -8,6 +8,7 @@ import {
   trackTextClick,
   trackEmailClick,
   trackEstimateClick,
+  trackEvent,
 } from "@/lib/analytics"
 
 // Estimate/quote CTA copy we treat as a lead conversion when clicked.
@@ -66,6 +67,8 @@ export function GoogleAnalytics() {
         trackEmailClick(location)
       } else if (ESTIMATE_PATTERNS.test(label) || ESTIMATE_HREFS.some((h) => href.includes(h))) {
         trackEstimateClick(location)
+        // Booking-page clicks also get their own event (owner brief 2026-10-14).
+        if (href.includes("insightpaint.com/book/")) trackEvent("appointment_click", { event_label: location })
       }
     }
 

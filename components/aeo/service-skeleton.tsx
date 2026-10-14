@@ -12,6 +12,8 @@ import FAQ from "@/components/faq"
 import { JsonLd } from "@/components/structured-data"
 import { BUSINESS } from "@/lib/business"
 import { LOCAL_PROOF_PROJECTS } from "@/lib/projects"
+import { QuickEstimateForm } from "@/components/quick-estimate-form"
+import { QUICK_PROJECT_TYPES } from "@/lib/lead-forms"
 import {
   PageHero,
   QuickAnswer,
@@ -102,6 +104,14 @@ export function ServiceSkeleton(d: ServiceSkeletonData) {
         </PageHero>
 
         <QuickAnswer>{d.quickAnswer}</QuickAnswer>
+
+        <section className="container mx-auto px-4 max-w-xl mb-14">
+          <QuickEstimateForm
+            location={`service_${d.slug}`}
+            heading={`Get a free ${d.serviceName.toLowerCase()} estimate`}
+            defaultProjectType={(QUICK_PROJECT_TYPES as readonly string[]).includes(d.serviceName) ? d.serviceName : ""}
+          />
+        </section>
 
         {d.beforeAfter && (
           <section className="container mx-auto px-4 max-w-4xl mb-14">

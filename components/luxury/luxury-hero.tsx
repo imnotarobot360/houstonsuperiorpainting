@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Star, ShieldCheck, Phone, CalendarDays } from "lucide-react"
 import { BUSINESS, PHONE_HREF } from "@/lib/business"
+import { QuickEstimateForm } from "@/components/quick-estimate-form"
 
 export function LuxuryHero() {
   return (
@@ -20,7 +21,7 @@ export function LuxuryHero() {
       <div className="absolute inset-0 bg-gradient-to-b from-midnight/80 via-midnight/55 to-midnight/90" />
       <div className="absolute inset-0 bg-midnight/20" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-20 grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-center">
         <div className="max-w-3xl">
           <p className="kicker mb-6 text-gold">Houston&apos;s Premier Painting Studio</p>
           <h1 className="font-display text-soft-white text-4xl sm:text-6xl lg:text-7xl leading-[1.05] text-balance">
@@ -89,6 +90,7 @@ export function LuxuryHero() {
             ))}
           </div>
         </div>
+        <QuickEstimateForm location="home_hero" tone="dark" heading="Get your free estimate" />
       </div>
 
       {/* Scroll indicator — hidden on small screens where the trust strip sits low */}

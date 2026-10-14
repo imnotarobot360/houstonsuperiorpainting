@@ -2,7 +2,7 @@ import { put } from "@vercel/blob"
 import { type NextRequest, NextResponse } from "next/server"
 import { db } from "@/lib/db"
 import { leads } from "@/lib/db/schema"
-import { getFunnel } from "@/lib/funnel-config"
+import { getLeadForm } from "@/lib/lead-forms"
 
 /**
  * Persists an estimate request.
@@ -34,8 +34,14 @@ export async function POST(request: NextRequest) {
     const form = await request.formData()
 
     // ── Validate ────────────────────────────────────────────────────────────
+    // Honeypot: a hidden field people never see. Bots that fill it get a quiet
+    // success so they don't retry, and nothing is stored.
+    if (str(form, "website", 200)) {
+      return NextResponse.json({ ok: true, publicToken: null })
+    }
+
     const service = str(form, "service", 40)
-    const config = getFunnel(service)
+    const config = getLeadForm(service)
     if (!config) {
       return NextResponse.json({ ok: false, error: "Unknown service." }, { status: 400 })
     }

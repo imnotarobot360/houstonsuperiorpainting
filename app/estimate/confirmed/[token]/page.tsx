@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 import { db } from "@/lib/db"
 import { leads } from "@/lib/db/schema"
 import { BUSINESS, PHONE_HREF } from "@/lib/business"
-import { getFunnel } from "@/lib/funnel-config"
+import { getLeadForm } from "@/lib/lead-forms"
 
 /**
  * Receipt for a submitted estimate request, reached by unguessable token.
@@ -42,7 +42,7 @@ export default async function ConfirmedPage({ params }: { params: Promise<{ toke
 
   if (!lead) notFound()
 
-  const config = getFunnel(lead.service)
+  const config = getLeadForm(lead.service)
   const answers = (lead.answers ?? {}) as Record<string, string>
   const photos = (lead.photoPaths ?? []) as string[]
 

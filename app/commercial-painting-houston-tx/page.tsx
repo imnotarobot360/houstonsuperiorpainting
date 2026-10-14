@@ -20,6 +20,7 @@ import {
 } from "@/components/aeo/blocks"
 import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business"
 import { COMMERCIAL_PROJECTS } from "@/data/commercial-projects"
+import { CommercialRequestForm } from "@/components/commercial-request-form"
 
 // Commercial service page. Facts only from lib/business.ts; no project names or
 // review quotes beyond real case studies in lib/projects.ts. Do not reuse the
@@ -113,8 +114,8 @@ export default function CommercialPaintingHoustonPage() {
         <QuickAnswer>
           Houston Superior Painting has painted homes and commercial buildings across Greater Houston since{" "}
           {BUSINESS.founded}. We repaint offices, retail, restaurants, HOA and multifamily properties, medical offices and
-          light industrial space, including after hours and on weekends in occupied buildings. We carry {INSURANCE}, send a
-          certificate of insurance before work starts, back the work with a {T.warrantyYears}-year workmanship warranty, and
+          light industrial space, including after hours and on weekends in occupied buildings. We carry {INSURANCE}.{" "}
+          {BUSINESS.insuranceProof.en} We back the work with a {T.warrantyYears}-year workmanship warranty, and
           put the complete scope, price and payment schedule in writing before you approve the project. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
         </QuickAnswer>
 
@@ -198,7 +199,7 @@ export default function CommercialPaintingHoustonPage() {
               },
               {
                 title: "Insurance documentation",
-                text: "sent to your property manager or board before the start date. Project-specific insurance documentation and additional-insured requests can be reviewed during project setup, subject to insurer approval and policy terms.",
+                text: "proof of insurance is available on request, and a current certificate goes to your property manager or board after you approve the project. Project-specific insurance documentation and additional-insured requests can be reviewed during project setup, subject to insurer approval and policy terms.",
               },
               {
                 title: "The work",
@@ -206,7 +207,7 @@ export default function CommercialPaintingHoustonPage() {
               },
               {
                 title: "Walkthrough",
-                text: "you or your site contact walk the finished work with our lead before final payment.",
+                text: "you or your site contact walk the finished work with our lead, and any punch-list items are written down and completed before final payment.",
               },
             ]}
           />
@@ -289,6 +290,14 @@ export default function CommercialPaintingHoustonPage() {
               </div>
             </Link>
           ))}
+        </Section>
+
+        <Section id="commercial-request" title="Request a commercial proposal">
+          <p>
+            Tell us about the property and we will arrange a site walk and a written proposal with the scope, products,
+            schedule and price.
+          </p>
+          <CommercialRequestForm />
         </Section>
 
         <FAQ items={FAQS} title="Frequently asked questions" variant="compact" />

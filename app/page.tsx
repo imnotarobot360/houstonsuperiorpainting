@@ -16,6 +16,7 @@ import {
 import { LocationsSection } from "@/components/locations-section"
 import FAQ from "@/components/faq"
 import { FinishSystem } from "@/components/finish-system"
+import { QuickEstimateForm } from "@/components/quick-estimate-form"
 import { PopularServicesByArea } from "@/components/popular-services-by-area"
 import Link from "next/link"
 import { OFFICE_PAGES, PRICES_2026 } from "@/lib/business"
@@ -94,6 +95,11 @@ export default function Home() {
         <TrustChecklist className="!mb-0" />
       </div>
       <FAQ items={homeFaqs} variant="default" />
+      <section aria-label="Request a free estimate" className="bg-champagne py-16">
+        <div className="mx-auto max-w-xl px-4">
+          <QuickEstimateForm location="home_bottom" heading="Ready for a written estimate?" />
+        </div>
+      </section>
       <LuxuryCTA />
       </main>
       <Footer />

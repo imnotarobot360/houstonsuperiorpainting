@@ -1,5 +1,6 @@
 "use client"
 
+import { QuickEstimateForm } from "@/components/quick-estimate-form"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -188,6 +189,12 @@ export function LocationPageTemplate({
           </div>
         </section>
       )}
+
+      <section className="py-10">
+        <div className="container mx-auto px-4 max-w-xl">
+          <QuickEstimateForm location={`city_${city.toLowerCase().replace(/\s+/g, "-")}`} heading={`Get a free estimate in ${city}`} />
+        </div>
+      </section>
 
       {/* Trust Indicators */}
       <section className="py-8 bg-card border-b border-border">
