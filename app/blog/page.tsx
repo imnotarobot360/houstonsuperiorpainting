@@ -22,6 +22,54 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "paint-house-before-selling-houston",
+    title: "Should You Paint Your Houston Home Before Selling?",
+    excerpt:
+      "Which rooms and exterior areas buyers notice first, what to skip, and how to keep a pre-sale paint job from turning into a renovation.",
+    category: "Interior Painting",
+    author: "Juan Serra",
+    publishDate: "October 14, 2026",
+    readTime: "5 min read",
+    image: "/images/projects/richmond-great-room/01-great-room-fireplace.jpg",
+    featured: false,
+  },
+  {
+    slug: "why-paint-peels-bubbles-houston",
+    title: "Why Paint Peels, Bubbles or Blisters in Houston Homes",
+    excerpt:
+      "Peeling paint is a symptom. The common causes, what the pattern tells you, and the repair sequence that keeps it from coming back.",
+    category: "Exterior Painting",
+    author: "Juan Serra",
+    publishDate: "October 14, 2026",
+    readTime: "5 min read",
+    image: "/images/projects/heights-exterior-siding/01-front-elevation.jpg",
+    featured: false,
+  },
+  {
+    slug: "primer-vs-two-coats-paint-houston",
+    title: "Do You Need Primer or Two Coats of Paint?",
+    excerpt:
+      "Primer and finish paint do different jobs. When walls, trim, cabinets and exteriors need primer, and how many coats is enough.",
+    category: "Interior Painting",
+    author: "Juan Serra",
+    publishDate: "October 14, 2026",
+    readTime: "5 min read",
+    image: "/images/projects/richmond-interior-arches/01-living-room-fireplace.jpg",
+    featured: false,
+  },
+  {
+    slug: "stay-home-during-interior-painting-houston",
+    title: "Can You Stay Home During Interior Painting?",
+    excerpt:
+      "When staying home works, when a few nights away is easier, and how room-by-room painting, furniture, kids and pets are planned.",
+    category: "Interior Painting",
+    author: "Juan Serra",
+    publishDate: "October 14, 2026",
+    readTime: "5 min read",
+    image: "/images/projects/richmond-great-room/02-foyer-and-stairs.jpg",
+    featured: false,
+  },
+  {
     slug: "cabinet-paint-cure-time-houston",
     title: "How Long Do Painted Cabinets Take to Cure?",
     excerpt:
