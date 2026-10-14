@@ -573,7 +573,7 @@ export default function GarageEpoxyBlog() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/contact">Request Free Estimate</Link>
+                <Link href="/painting-estimate-houston">Request Free Estimate</Link>
               </Button>
               <Button
                 size="lg"

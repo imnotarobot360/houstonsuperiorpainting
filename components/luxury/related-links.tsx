@@ -45,7 +45,7 @@ const RESOURCE_LINKS: LinkItem[] = [
   { title: "Project Case Studies", href: "/projects" },
   { title: "Our Warranty", href: "/warranty" },
   { title: "Painting Tips Blog", href: "/blog" },
-  { title: "Get a Free Estimate", href: "/contact" },
+  { title: "Get a Free Estimate", href: "/painting-estimate-houston" },
 ]
 
 function dedupeAndExclude(items: LinkItem[], exclude?: string) {

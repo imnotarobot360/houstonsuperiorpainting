@@ -255,7 +255,7 @@ export default function PaintingHoustonPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                <Link href="/contact">
+                <Link href="/painting-estimate-houston">
                   Send Photos for a Quote
                 </Link>
               </Button>

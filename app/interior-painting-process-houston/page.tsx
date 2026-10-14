@@ -127,7 +127,7 @@ export default function InteriorPaintingProcessPage() {
                 Call {BUSINESS.phone}
               </a>
               <Link
-                href="/contact"
+                href="/painting-estimate-houston"
                 className="inline-flex items-center justify-center gap-2 rounded-md border border-primary-foreground/30 px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
               >
                 Get My Free Estimate

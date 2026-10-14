@@ -241,7 +241,7 @@ export default function CabinetPaintingCostHoustonPage() {
         and process we&apos;ll use, whether you&apos;re in Houston or working with our{" "}
         <a href="/painters-cypress-tx">painters in Cypress TX</a>. If you&apos;re considering a cabinet transformation, see our{" "}
         <a href="/cabinet-refinishing-houston-tx">cabinet refinishing service</a> or{" "}
-        <a href="/contact">request a free estimate</a> and we&apos;ll give you a real number for your kitchen.
+        <a href="/painting-estimate-houston">request a free estimate</a> and we&apos;ll give you a real number for your kitchen.
       </p>
     </BlogPostTemplate>
   )

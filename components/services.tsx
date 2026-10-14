@@ -150,7 +150,7 @@ export function Services() {
             className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
             asChild
           >
-            <Link href="/contact">Get a Free Estimate for Your Project</Link>
+            <Link href="/painting-estimate-houston">Get a Free Estimate for Your Project</Link>
           </Button>
         </div>
       </div>

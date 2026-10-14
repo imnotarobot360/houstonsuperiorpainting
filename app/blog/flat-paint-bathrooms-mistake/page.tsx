@@ -221,7 +221,7 @@ export default function FlatPaintBathroomsMistakePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link href="/contact">
+                <Link href="/painting-estimate-houston">
                   <Calendar className="mr-2 h-5 w-5" />
                   Get Free Estimate
                 </Link>

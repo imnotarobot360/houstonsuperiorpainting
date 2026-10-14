@@ -106,7 +106,7 @@ export function PricingSection() {
             Every project is unique. Get an exact quote for your home — it&apos;s free and takes just 24 hours.
           </p>
           <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold" asChild>
-            <a href="/contact">Get Your Free Estimate</a>
+            <a href="/painting-estimate-houston">Get Your Free Estimate</a>
           </Button>
           <p className="text-sm text-muted-foreground">
             No obligation • Clear written payment terms

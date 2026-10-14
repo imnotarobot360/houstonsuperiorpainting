@@ -37,7 +37,7 @@ export function StickyMobileCTA() {
         Text Photos
       </a>
       <Link
-        href="/contact"
+        href="/painting-estimate-houston"
         data-contact-location="mobile_sticky_bar"
         aria-label="Get a free painting estimate"
         className="flex flex-col items-center justify-center gap-1 py-3 bg-foreground text-background text-center font-semibold text-xs active:opacity-90"

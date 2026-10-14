@@ -217,7 +217,7 @@ export default function PaintFinishesGuidePage() {
               Houston&apos;s 80%+ humidity levels mean moisture is always a factor. Using flat paint in a bathroom can lead to mildew growth. Using the wrong finish in high-traffic areas means more frequent repainting.
             </p>
             <p>
-              The right finish extends paint life by 2-3 years and keeps your home looking fresh longer. When you request a <Link href="/contact" className="text-primary hover:underline">free estimate</Link>, we&apos;ll recommend the best finish for each room based on your lifestyle and home. Finish choice doesn&apos;t change the price much; see our <Link href="/interior-painting-cost-houston" className="text-primary hover:underline">Houston interior painting costs</Link> for 2026 ranges, or reach our <Link href="/painters-cypress-tx" className="text-primary hover:underline">painters in Cypress TX</Link> and Houston offices directly.
+              The right finish extends paint life by 2-3 years and keeps your home looking fresh longer. When you request a <Link href="/painting-estimate-houston" className="text-primary hover:underline">free estimate</Link>, we&apos;ll recommend the best finish for each room based on your lifestyle and home. Finish choice doesn&apos;t change the price much; see our <Link href="/interior-painting-cost-houston" className="text-primary hover:underline">Houston interior painting costs</Link> for 2026 ranges, or reach our <Link href="/painters-cypress-tx" className="text-primary hover:underline">painters in Cypress TX</Link> and Houston offices directly.
             </p>
           </div>
 
@@ -245,7 +245,7 @@ export default function PaintFinishesGuidePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link href="/contact">
+                <Link href="/painting-estimate-houston">
                   <Calendar className="mr-2 h-5 w-5" />
                   Schedule Free Estimate
                 </Link>

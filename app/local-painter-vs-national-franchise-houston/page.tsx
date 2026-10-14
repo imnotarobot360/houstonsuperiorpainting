@@ -193,7 +193,7 @@ export default function LocalPainterVsNationalFranchisePage() {
               </>,
               <>
                 <strong>Local presence:</strong> {OFFICE_COUNT} locations across Greater Houston, headquartered in Cypress
-                since {BUSINESS.founded} (<Link href="/contact">see all locations</Link>).
+                since {BUSINESS.founded} (<Link href="/painting-estimate-houston">see all locations</Link>).
               </>,
               <>
                 <strong>Track record:</strong> {T.projectsCompleted}+ completed projects. Google reviews by office:{" "}

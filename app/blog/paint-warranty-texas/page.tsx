@@ -321,7 +321,7 @@ export default function PaintWarrantyTexasPage() {
           <strong>Call or text:</strong> <a href="tel:+13465945960">(346) 594-5960</a>
         </li>
         <li>
-          <strong>Get your estimate:</strong> <Link href="/contact">houstonsuperiorpainting.com/contact</Link>
+          <strong>Get your estimate:</strong> <Link href="/painting-estimate-houston">houstonsuperiorpainting.com/contact</Link>
         </li>
       </ul>
       <p>

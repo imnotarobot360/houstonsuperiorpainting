@@ -344,7 +344,7 @@ export default function HoustonPaintColorTrends2026Page() {
 
       <p>
         Ready to transform your home with the perfect colors? 
-        Contact us at (346) 594-5960 or <Link href="/contact" className="text-primary underline">request your free estimate</Link> today.
+        Contact us at (346) 594-5960 or <Link href="/painting-estimate-houston" className="text-primary underline">request your free estimate</Link> today.
       </p>
 
       <p>

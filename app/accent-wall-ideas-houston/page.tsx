@@ -103,7 +103,7 @@ export default function AccentWallIdeasHouston() {
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
               Get a Free Color Consultation
             </a>
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 border border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+            <Link href="/projects" className="inline-flex items-center justify-center gap-2 border border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               View Our Portfolio
             </Link>
           </div>
@@ -202,7 +202,7 @@ export default function AccentWallIdeasHouston() {
               { label: "Cabinet Refinishing", href: "/cabinet-refinishing-houston-tx" },
               { label: "Limewash & German Smear", href: "/limewash-brick-painting-houston-tx" },
               { label: "Drywall Repair", href: "/drywall-repair-houston-tx" },
-              { label: "Free Estimate", href: "/contact" },
+              { label: "Free Estimate", href: "/painting-estimate-houston" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="block bg-card border border-border rounded-lg p-4 text-center font-medium hover:border-primary hover:text-primary transition-colors">
                 {link.label}

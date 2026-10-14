@@ -225,7 +225,7 @@ export default function DiyVsProPaintingHoustonPage() {
       </p>
 
       <p>
-        Not sure which camp your project falls into? <a href="/contact">Request a free estimate</a> from our{" "}
+        Not sure which camp your project falls into? <a href="/painting-estimate-houston">Request a free estimate</a> from our{" "}
         <a href="/painters-houston-tx">painters in Houston TX</a> and we&apos;ll give
         you a straight answer — even if that answer is &quot;this one&apos;s an easy DIY.&quot; You can also read{" "}
         <a href="/blog/what-to-expect-painting-estimate">what to expect from a painting estimate</a> before you compare

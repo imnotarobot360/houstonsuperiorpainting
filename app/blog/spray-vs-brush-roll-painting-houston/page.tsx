@@ -211,7 +211,7 @@ export default function SprayVsRollHoustonPage() {
       <p>
         Want a clear plan for your home? See our <a href="/interior-painting-houston-tx">interior</a> and{" "}
         <a href="/exterior-painting-houston-tx">exterior painting</a> services, or{" "}
-        <a href="/contact">request a free estimate</a> and we&apos;ll walk you through exactly how we&apos;d approach each
+        <a href="/painting-estimate-houston">request a free estimate</a> and we&apos;ll walk you through exactly how we&apos;d approach each
         surface. Application method rarely changes the bottom line much; typical prices are in our{" "}
         <a href="/houston-painting-cost-guide">Houston painting cost guide</a>, and crews run out of all five offices,
         including our <a href="/painters-magnolia-tx">painters in Magnolia TX</a>.

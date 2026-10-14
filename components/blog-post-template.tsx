@@ -290,7 +290,7 @@ export function BlogPostTemplate({
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
                 asChild
               >
-                <Link href="/contact">Get Free Estimate</Link>
+                <Link href="/painting-estimate-houston">Get Free Estimate</Link>
               </Button>
               <Button 
                 size="lg"

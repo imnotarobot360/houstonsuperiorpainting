@@ -900,7 +900,7 @@ export default function BlogPage() {
               Our team has years of experience painting homes across the Houston area. Get a free estimate and expert advice for your project.
             </p>
             <Link
-              href="/contact"
+              href="/painting-estimate-houston"
               className="inline-flex items-center justify-center px-8 py-3 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold rounded-lg transition-colors"
             >
               Get Your Free Estimate

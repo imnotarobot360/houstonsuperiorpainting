@@ -460,7 +460,7 @@ export default function ExteriorPaintingCostHoustonPage() {
         <Link href="/exterior-painting-houston-tx" className="text-primary underline">
           learn more about our exterior painting services
         </Link>{" "}
-        and <Link href="/contact" className="text-primary underline">request a free estimate online</Link>.
+        and <Link href="/painting-estimate-houston" className="text-primary underline">request a free estimate online</Link>.
       </p>
     </BlogPostTemplate>
   )

@@ -11,7 +11,10 @@ import {
 } from "@/lib/analytics"
 
 // Estimate/quote CTA copy we treat as a lead conversion when clicked.
-const ESTIMATE_PATTERNS = /free estimate|get.*estimate|schedule|consultation|request.*quote|get a quote|text photos/i
+const ESTIMATE_PATTERNS = /free estimate|get.*estimate|schedule|consultation|request.*quote|get a quote|text photos|book an appointment|book your/i
+// Links that lead into a lead flow, whatever their label says: the contact page,
+// the estimate funnel, and the external InsightPaint booking page.
+const ESTIMATE_HREFS = ["/contact", "/painting-estimate-houston", "insightpaint.com/book/"]
 
 export function GoogleAnalytics() {
   /**
@@ -61,7 +64,7 @@ export function GoogleAnalytics() {
         trackTextClick(location)
       } else if (href.startsWith("mailto:")) {
         trackEmailClick(location)
-      } else if (ESTIMATE_PATTERNS.test(label) || href.includes("/contact")) {
+      } else if (ESTIMATE_PATTERNS.test(label) || ESTIMATE_HREFS.some((h) => href.includes(h))) {
         trackEstimateClick(location)
       }
     }

@@ -124,7 +124,7 @@ export default function PaintingFinancingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="/painting-estimate-houston"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-secondary px-8 py-4 font-semibold text-secondary-foreground text-lg shadow-lg transition-colors hover:bg-secondary/90"
               >
                 Get a Free Estimate
@@ -227,7 +227,7 @@ export default function PaintingFinancingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="/painting-estimate-houston"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-8 py-4 font-semibold text-primary-foreground text-lg shadow-lg transition-colors hover:bg-primary/90"
               >
                 Get My Free Estimate

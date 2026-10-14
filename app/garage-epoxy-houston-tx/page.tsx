@@ -291,7 +291,7 @@ export default function GarageEpoxyHoustonPage() {
                 </ul>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                  <Link href="/contact" className="inline-flex items-center justify-center px-6 py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg text-base shadow-md transition">
+                  <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center px-6 py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg text-base shadow-md transition">
                     Get My Free Estimate →
                   </Link>
                   <a href="tel:+13465945960" aria-label="Call Houston Superior Painting at 346-594-5960" className="inline-flex items-center justify-center px-6 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">
@@ -527,7 +527,7 @@ export default function GarageEpoxyHoustonPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready for a New Garage Floor?</h2>
             <p className="text-emerald-50 text-lg mb-8 max-w-2xl mx-auto">Free estimate. {EPOXY_RATE} with a {EPOXY_MINIMUM} minimum. Houston-tough.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 font-semibold rounded-lg text-base shadow-md transition">
+              <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 font-semibold rounded-lg text-base shadow-md transition">
                 Schedule Free Estimate →
               </Link>
               <a href="tel:+13465945960" className="inline-flex items-center justify-center px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">

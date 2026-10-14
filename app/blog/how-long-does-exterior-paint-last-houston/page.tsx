@@ -377,7 +377,7 @@ export default function ExteriorPaintDurabilityHoustonPage() {
 
       <p>
         Ready to protect your home with quality exterior painting? 
-        Contact us at (346) 594-5960 or <Link href="/contact" className="text-primary underline">request your free estimate</Link>.
+        Contact us at (346) 594-5960 or <Link href="/painting-estimate-houston" className="text-primary underline">request your free estimate</Link>.
       </p>
 
       <p>

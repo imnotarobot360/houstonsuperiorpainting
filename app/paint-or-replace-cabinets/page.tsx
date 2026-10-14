@@ -107,7 +107,7 @@ export default function PaintOrReplaceCabinets() {
               { label: "Cabinet Refinishing Katy & Cinco Ranch", href: "/cabinet-refinishing-katy-cinco-ranch" },
               { label: "Interior Painting Houston", href: "/interior-painting-houston-tx" },
               { label: "Best Paint Colors Houston", href: "/best-paint-colors-houston-homes" },
-              { label: "Free Estimate", href: "/contact" },
+              { label: "Free Estimate", href: "/painting-estimate-houston" },
             ].map(link => (
               <Link key={link.href} href={link.href} className="block bg-card border border-border rounded-lg p-4 text-center font-medium hover:border-primary hover:text-primary transition-colors">{link.label}</Link>
             ))}

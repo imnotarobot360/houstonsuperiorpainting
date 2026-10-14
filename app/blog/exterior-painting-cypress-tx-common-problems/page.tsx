@@ -430,7 +430,7 @@ export default function ExteriorPaintingCypressProblemsBlog() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/contact">Request Free Estimate</Link>
+                <Link href="/painting-estimate-houston">Request Free Estimate</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
                 <a href="tel:+13465945960" className="flex items-center gap-2">

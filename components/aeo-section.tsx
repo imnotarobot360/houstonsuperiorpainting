@@ -47,7 +47,7 @@ export function AEOSection() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/contact">
+              <Link href="/painting-estimate-houston">
                 Get Free Estimate
               </Link>
             </Button>

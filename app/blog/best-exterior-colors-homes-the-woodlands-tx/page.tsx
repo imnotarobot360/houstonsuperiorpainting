@@ -348,7 +348,7 @@ export default function BestExteriorColorsWoodlandsTXPage() {
       </p>
 
       <p>
-        <Link href="/contact" className="text-primary hover:underline font-semibold">
+        <Link href="/painting-estimate-houston" className="text-primary hover:underline font-semibold">
           Request your free estimate →
         </Link>
       </p>

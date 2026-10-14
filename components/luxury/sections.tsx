@@ -375,13 +375,13 @@ export function LuxuryCTA() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/painting-estimate-houston"
               className="font-manrope text-sm font-semibold bg-secondary text-secondary-foreground px-8 py-4 rounded-md hover:bg-secondary/90 transition-colors"
             >
               Request Project Assessment
             </Link>
             <Link
-              href="/contact"
+              href="/painting-estimate-houston"
               className="font-manrope text-sm font-semibold border border-soft-white/30 text-soft-white px-8 py-4 rounded-md hover:border-gold hover:bg-soft-white/10 transition-colors"
             >
               Schedule Consultation

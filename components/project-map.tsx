@@ -227,7 +227,7 @@ export function ProjectMap() {
             Want to see your neighborhood on this map? We&apos;d love to add your project!
           </p>
           <Button size="lg" asChild>
-            <a href="/contact">Get Your Free Estimate</a>
+            <a href="/painting-estimate-houston">Get Your Free Estimate</a>
           </Button>
         </div>
       </div>

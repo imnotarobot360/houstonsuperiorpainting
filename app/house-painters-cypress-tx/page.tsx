@@ -43,7 +43,7 @@ export default function HousePaintersCypressTX() {
           <p className="text-primary-foreground/90 text-lg md:text-xl max-w-3xl mb-8 leading-relaxed">Headquartered in Cypress, TX. Interior, exterior, cabinet painting, drywall repair, and more for Bridgeland, Towne Lake, and all Cypress neighborhoods.</p>
           <div className="flex flex-wrap gap-4">
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors"><Phone className="h-5 w-5" /> Call {BUSINESS.phone}</a>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary-foreground/90 transition-colors">Free Estimate</Link>
+            <Link href="/painting-estimate-houston" className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary-foreground/90 transition-colors">Free Estimate</Link>
           </div>
           <div className="flex flex-wrap gap-6 mt-8 text-primary-foreground/80 text-sm">
             <Link href="/reviews" className="flex items-center gap-1 hover:text-primary-foreground"><Star className="h-4 w-4 text-secondary" /> See our Google reviews</Link>

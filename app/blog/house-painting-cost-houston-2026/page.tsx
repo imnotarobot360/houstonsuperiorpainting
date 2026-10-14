@@ -395,7 +395,7 @@ export default function HousePaintingCostHoustonPage() {
 
       <p>
         Ready to get an accurate estimate for your painting project? 
-        Contact us today at (346) 594-5960 or <Link href="/contact" className="text-primary underline">request a free estimate online</Link>.
+        Contact us today at (346) 594-5960 or <Link href="/painting-estimate-houston" className="text-primary underline">request a free estimate online</Link>.
       </p>
 
       <p>

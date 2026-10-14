@@ -244,7 +244,7 @@ export default function GarageEpoxyFlooringHoustonPage() {
       </p>
 
       <p>
-        <a href="/contact">Contact Houston Superior Painting today</a> to schedule your free estimate and discover how a
+        <a href="/painting-estimate-houston">Contact Houston Superior Painting today</a> to schedule your free estimate and discover how a
         professionally installed epoxy floor can completely transform your garage. Garage floors are offered through our
         garage floor brand, Houston Superior Epoxy — see{" "}
         <a href="https://houstonsuperiorepoxy.com/">houstonsuperiorepoxy.com</a> for details.

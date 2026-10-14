@@ -172,7 +172,7 @@ export default function PressureWashingHoustonPage() {
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> No Minimum Charge</li>
                 </ul>
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                  <Link href="/contact" className="inline-flex items-center justify-center px-6 py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg text-base shadow-md transition">Get My Free Quote →</Link>
+                  <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center px-6 py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg text-base shadow-md transition">Get My Free Quote →</Link>
                   <a href="tel:+13465945960" aria-label="Call Houston Superior Painting" className="inline-flex items-center justify-center px-6 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">📞 (346) 594-5960</a>
                 </div>
                 <p className="mt-4 text-sm text-zinc-500">Average response time: <strong className="text-zinc-700">23 minutes</strong> during business hours.</p>
@@ -322,7 +322,7 @@ export default function PressureWashingHoustonPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Make Your Houston Home Look New Again?</h2>
             <p className="text-emerald-50 text-lg mb-8 max-w-2xl mx-auto">Free quote. Plant-safe. Mold killed at the spore. We&apos;ll show you the before/after.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 font-semibold rounded-lg text-base shadow-md transition">Schedule Free Quote →</Link>
+              <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 font-semibold rounded-lg text-base shadow-md transition">Schedule Free Quote →</Link>
               <a href="tel:+13465945960" className="inline-flex items-center justify-center px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">📞 (346) 594-5960</a>
               <a href="sms:+13465945960" className="inline-flex items-center justify-center px-8 py-4 bg-emerald-900 hover:bg-emerald-950 text-white font-semibold rounded-lg text-base transition">💬 Text Us</a>
             </div>

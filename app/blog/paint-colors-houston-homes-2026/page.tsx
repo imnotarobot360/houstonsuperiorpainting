@@ -405,7 +405,7 @@ export default function PaintColorsHoustonHomes2026Page() {
           <strong>Call or text:</strong> <a href="tel:+13465945960">(346) 594-5960</a>
         </li>
         <li>
-          <strong>Schedule online:</strong> <Link href="/contact">houstonsuperiorpainting.com/contact</Link>
+          <strong>Schedule online:</strong> <Link href="/painting-estimate-houston">houstonsuperiorpainting.com/contact</Link>
         </li>
       </ul>
       <p>
