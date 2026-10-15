@@ -142,6 +142,8 @@ const EXCLUDED_TREES = new Set([
   // near-duplicates would split ranking signals between two of our own URLs.
   // See docs/seo-audit-2026-08.md §6.
   'chatgpt',
+  // Paid-social offer landing pages (noindex), e.g. /offer/houston-painting.
+  'offer',
 ])
 
 /**

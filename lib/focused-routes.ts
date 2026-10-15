@@ -38,7 +38,8 @@ const INTERRUPTION_FREE_PATHS = new Set<string>([
   "/painting-estimate-houston",
 ])
 
-const INTERRUPTION_FREE_PREFIXES = ["/chatgpt/"]
+// /offer/ = paid-social offer landing pages (owner request 2026-10-15).
+const INTERRUPTION_FREE_PREFIXES = ["/chatgpt/", "/offer/"]
 
 /**
  * Routes that suppress the global sticky CTA bars.
