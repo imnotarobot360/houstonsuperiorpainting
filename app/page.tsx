@@ -24,6 +24,12 @@ import { OFFICE_PAGES, PRICES_2026 } from "@/lib/business"
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/',
+    // Spanish page /es (owner brief 2026-10-14); reciprocal hreflang.
+    languages: {
+      'en-us': 'https://houstonsuperiorpainting.com/',
+      'es-US': 'https://houstonsuperiorpainting.com/es',
+      'x-default': 'https://houstonsuperiorpainting.com/',
+    },
   },
 }
 

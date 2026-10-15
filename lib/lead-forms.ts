@@ -55,6 +55,7 @@ export const LEAD_FORMS: Record<"quick" | "commercial", LeadFormConfig> = {
       { id: "contactMethod", question: "Preferred contact method" },
       { id: "description", question: "Project description" },
       { id: "colorName", question: "Color selected" },
+      { id: "language", question: "Preferred language" },
     ],
   },
   commercial: {
@@ -75,4 +76,28 @@ export const LEAD_FORMS: Record<"quick" | "commercial", LeadFormConfig> = {
 /** Funnel configs first (their keys are unchanged), then the forms above. */
 export function getLeadForm(service: string): LeadFormConfig | undefined {
   return getFunnel(service) ?? LEAD_FORMS[service as keyof typeof LEAD_FORMS]
+}
+
+/** Spanish labels for the quick form (owner approved Spanish service 2026-10-14).
+ * Stored values stay in English so the office sees one vocabulary. */
+export const ES_LABELS: Record<string, string> = {
+  "Interior Painting": "Pintura interior",
+  "Exterior Painting": "Pintura exterior",
+  "Cabinet Refinishing": "Pintura y acabado de gabinetes",
+  "Commercial Painting": "Pintura comercial",
+  "Drywall Repair": "Reparación de drywall",
+  "Wallpaper Removal": "Remoción de papel tapiz",
+  Limewash: "Limewash para ladrillo",
+  "Soft Washing": "Lavado suave",
+  "Stucco Painting or Repair": "Pintura o reparación de estuco",
+  "Wood Rot or Carpentry Repair": "Reparaciones de madera",
+  "Color Consultation": "Consulta de colores",
+  Other: "Otro",
+  "As soon as possible": "Lo antes posible",
+  "Within 1 month": "En el próximo mes",
+  "1–3 months": "En 1 a 3 meses",
+  "Just planning": "Solo estoy planeando",
+  "Phone call": "Llamada",
+  "Text message": "Mensaje de texto",
+  Email: "Correo electrónico",
 }

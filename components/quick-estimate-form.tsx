@@ -6,7 +6,7 @@ import { CheckCircle2, CalendarDays, Phone } from "lucide-react"
 import { BUSINESS, PHONE_HREF } from "@/lib/business"
 import { trackEvent, trackLeadCreated } from "@/lib/analytics"
 import { getAttribution } from "@/lib/attribution"
-import { CONTACT_METHODS, QUICK_PROJECT_TYPES, TIMEFRAMES } from "@/lib/lead-forms"
+import { CONTACT_METHODS, ES_LABELS, QUICK_PROJECT_TYPES, TIMEFRAMES } from "@/lib/lead-forms"
 import { formatUsPhone, isValidUsPhone, notifyOfficeOfLead } from "@/lib/lead-notify"
 
 /**
@@ -27,18 +27,89 @@ type Props = {
   colorName?: string
   tone?: "light" | "dark"
   className?: string
+  /** "es" shows Spanish labels; stored values stay English, language is recorded. */
+  lang?: "en" | "es"
 }
 
 const MAX_PHOTOS = 6
 
+const TEXT = {
+  en: {
+    heading: "Get a free written estimate",
+    name: "Name",
+    phone: "Phone number",
+    type: "Project type",
+    choose: "Choose a project type…",
+    chooseShort: "Choose…",
+    sms: "Text me about my estimate. Message rates may apply; reply STOP any time.",
+    submit: "Request My Free Estimate",
+    sending: "Sending…",
+    fine1: "Free written estimate. A member of our team will contact you to discuss the project. By submitting, you agree that we may call you about your request. See our",
+    privacy: "privacy policy",
+    errName: "Please enter your name.",
+    errPhone: "Please enter a 10-digit phone number.",
+    errType: "Please choose a project type.",
+    errGeneric: "Something went wrong. Please call us instead.",
+    thanks: (n: string) => `Thank you${n ? `, ${n}` : ""}. Your request was received.`,
+    contact: "A member of our team will contact you to discuss the project.",
+    added: "Thanks, your details were added to the request.",
+    more: "Optional: tell us more so we can prepare",
+    email: "Email",
+    address: "Project address",
+    timeframe: "Desired timeframe",
+    method: "Preferred contact method",
+    desc: "Project description",
+    photos: (n: number) => `Photos (up to ${n}, private)`,
+    photosNote: "Photos are stored privately and only our team can see them.",
+    addDetails: "Add details",
+    saving: "Saving…",
+    book: "Book an Appointment",
+  },
+  es: {
+    heading: "Pida su estimado gratis",
+    name: "Nombre",
+    phone: "Teléfono",
+    type: "Tipo de proyecto",
+    choose: "Elija un tipo de proyecto…",
+    chooseShort: "Elija…",
+    sms: "Envíenme mensajes de texto sobre mi estimado. Pueden aplicar cargos; responda STOP en cualquier momento.",
+    submit: "Pedir mi estimado gratis",
+    sending: "Enviando…",
+    fine1: "Estimado por escrito gratis. Un miembro de nuestro equipo le contactará para hablar del proyecto. Al enviar, acepta que le llamemos sobre su solicitud. Vea nuestra",
+    privacy: "política de privacidad (en inglés)",
+    errName: "Por favor escriba su nombre.",
+    errPhone: "Por favor escriba un teléfono de 10 dígitos.",
+    errType: "Por favor elija un tipo de proyecto.",
+    errGeneric: "Algo salió mal. Por favor llámenos.",
+    thanks: (n: string) => `Gracias${n ? `, ${n}` : ""}. Recibimos su solicitud.`,
+    contact: "Un miembro de nuestro equipo le contactará para hablar del proyecto.",
+    added: "Gracias, agregamos sus datos a la solicitud.",
+    more: "Opcional: cuéntenos más para prepararnos",
+    email: "Correo electrónico",
+    address: "Dirección del proyecto",
+    timeframe: "¿Para cuándo lo necesita?",
+    method: "¿Cómo prefiere que le contactemos?",
+    desc: "Descripción del proyecto",
+    photos: (n: number) => `Fotos (hasta ${n}, privadas)`,
+    photosNote: "Las fotos se guardan de forma privada y solo nuestro equipo puede verlas.",
+    addDetails: "Agregar datos",
+    saving: "Guardando…",
+    book: "Agendar una cita",
+  },
+}
+
 export function QuickEstimateForm({
   location,
-  heading = "Get a free written estimate",
+  heading,
   defaultProjectType = "",
   colorName,
   tone = "light",
   className = "",
+  lang = "en",
 }: Props) {
+  const t = TEXT[lang]
+  const opt = (v: string) => (lang === "es" ? ES_LABELS[v] ?? v : v)
+  const title = heading ?? t.heading
   const [name, setName] = useState("")
   const [phone, setPhone] = useState("")
   const [projectType, setProjectType] = useState(defaultProjectType)
@@ -76,9 +147,9 @@ export function QuickEstimateForm({
   async function submit(e: React.FormEvent) {
     e.preventDefault()
     setError(null)
-    if (name.trim().length < 2) return fail("Please enter your name.")
-    if (!isValidUsPhone(phone)) return fail("Please enter a 10-digit phone number.")
-    if (!projectType) return fail("Please choose a project type.")
+    if (name.trim().length < 2) return fail(t.errName)
+    if (!isValidUsPhone(phone)) return fail(t.errPhone)
+    if (!projectType) return fail(t.errType)
 
     setSubmitting(true)
     try {
@@ -88,7 +159,7 @@ export function QuickEstimateForm({
       body.set("phone", phone)
       body.set("smsConsent", String(smsConsent))
       body.set("website", hp)
-      body.set("answers", JSON.stringify({ projectType, ...(colorName ? { colorName } : {}) }))
+      body.set("answers", JSON.stringify({ projectType, ...(colorName ? { colorName } : {}), ...(lang === "es" ? { language: "Spanish" } : {}) }))
       body.set("attribution", JSON.stringify({ ...getAttribution(), formLocation: location }))
       const res = await fetch("/api/leads", { method: "POST", body })
       const data = (await res.json()) as { ok?: boolean; publicToken?: string | null; error?: string }
@@ -101,10 +172,10 @@ export function QuickEstimateForm({
       setToken(data.publicToken)
       void notifyOfficeOfLead({
         publicToken: data.publicToken,
-        subject: `New Quick Estimate Request: ${projectType}`,
+        subject: `New Quick Estimate Request: ${projectType}${lang === "es" ? " (SPANISH)" : ""}`,
         name: name.trim(),
         phone,
-        fields: { service_requested: projectType, color_selected: colorName, form_location: location, sms_consent: smsConsent ? "Yes" : "No" },
+        fields: { service_requested: projectType, color_selected: colorName, preferred_language: lang === "es" ? "Spanish" : undefined, form_location: location, sms_consent: smsConsent ? "Yes" : "No" },
       })
       trackEvent("quick_estimate_submit", { form_location: location, project_type: projectType })
       void trackLeadCreated({
@@ -113,7 +184,7 @@ export function QuickEstimateForm({
         gaParams: { service: "quick", project_type: projectType, form_location: location, value: 1 },
       })
     } catch (err) {
-      fail(err instanceof Error ? err.message : "Something went wrong. Please call us instead.")
+      fail(err instanceof Error ? err.message : t.errGeneric)
     } finally {
       setSubmitting(false)
     }
@@ -159,45 +230,45 @@ export function QuickEstimateForm({
       <div className={`rounded-2xl border p-5 sm:p-6 shadow-sm ${card} ${className}`} role="status" aria-live="polite">
         <p className="flex items-center gap-2 font-semibold">
           <CheckCircle2 className="h-5 w-5 text-emerald-500" aria-hidden="true" />
-          Thank you{name ? `, ${name.trim().split(" ")[0]}` : ""}. Your request was received.
+          {t.thanks(name.trim().split(" ")[0])}
         </p>
-        <p className={`mt-2 text-sm ${muted}`}>A member of our team will contact you to discuss the project.</p>
+        <p className={`mt-2 text-sm ${muted}`}>{t.contact}</p>
 
         {detailsState === "done" ? (
-          <p className={`mt-4 text-sm ${muted}`}>Thanks, your details were added to the request.</p>
+          <p className={`mt-4 text-sm ${muted}`}>{t.added}</p>
         ) : (
           <form onSubmit={sendDetails} className="mt-5 space-y-3" aria-label="Optional project details">
-            <p className="text-sm font-semibold">Optional: tell us more so we can prepare</p>
+            <p className="text-sm font-semibold">{t.more}</p>
             <div className="grid gap-3 sm:grid-cols-2">
               <div>
-                <label htmlFor={id("email")} className="mb-1 block text-sm">Email</label>
+                <label htmlFor={id("email")} className="mb-1 block text-sm">{t.email}</label>
                 <input id={id("email")} type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className={input} />
               </div>
               <div>
-                <label htmlFor={id("address")} className="mb-1 block text-sm">Project address</label>
+                <label htmlFor={id("address")} className="mb-1 block text-sm">{t.address}</label>
                 <input id={id("address")} autoComplete="street-address" value={address} onChange={(e) => setAddress(e.target.value)} className={input} />
               </div>
               <div>
-                <label htmlFor={id("timeframe")} className="mb-1 block text-sm">Desired timeframe</label>
+                <label htmlFor={id("timeframe")} className="mb-1 block text-sm">{t.timeframe}</label>
                 <select id={id("timeframe")} value={timeframe} onChange={(e) => setTimeframe(e.target.value)} className={input}>
-                  <option value="">Choose…</option>
-                  {TIMEFRAMES.map((t) => <option key={t}>{t}</option>)}
+                  <option value="">{t.chooseShort}</option>
+                  {TIMEFRAMES.map((v) => <option key={v} value={v}>{opt(v)}</option>)}
                 </select>
               </div>
               <div>
-                <label htmlFor={id("contact")} className="mb-1 block text-sm">Preferred contact method</label>
+                <label htmlFor={id("contact")} className="mb-1 block text-sm">{t.method}</label>
                 <select id={id("contact")} value={contactMethod} onChange={(e) => setContactMethod(e.target.value)} className={input}>
-                  <option value="">Choose…</option>
-                  {CONTACT_METHODS.map((t) => <option key={t}>{t}</option>)}
+                  <option value="">{t.chooseShort}</option>
+                  {CONTACT_METHODS.map((v) => <option key={v} value={v}>{opt(v)}</option>)}
                 </select>
               </div>
             </div>
             <div>
-              <label htmlFor={id("desc")} className="mb-1 block text-sm">Project description</label>
+              <label htmlFor={id("desc")} className="mb-1 block text-sm">{t.desc}</label>
               <textarea id={id("desc")} rows={3} value={description} onChange={(e) => setDescription(e.target.value)} className={input} />
             </div>
             <div>
-              <label htmlFor={id("photos")} className="mb-1 block text-sm">Photos (up to {MAX_PHOTOS}, private)</label>
+              <label htmlFor={id("photos")} className="mb-1 block text-sm">{t.photos(MAX_PHOTOS)}</label>
               <input
                 id={id("photos")}
                 type="file"
@@ -206,7 +277,7 @@ export function QuickEstimateForm({
                 onChange={(e) => setFiles(Array.from(e.target.files ?? []).slice(0, MAX_PHOTOS))}
                 className={`block w-full text-sm ${muted}`}
               />
-              <p className={`mt-1 text-xs ${muted}`}>Photos are stored privately and only our team can see them.</p>
+              <p className={`mt-1 text-xs ${muted}`}>{t.photosNote}</p>
             </div>
             {detailsError && <p className="text-sm text-red-500" role="alert">{detailsError}</p>}
             <button
@@ -214,7 +285,7 @@ export function QuickEstimateForm({
               disabled={detailsState === "saving"}
               className="w-full rounded-lg bg-secondary px-5 py-3 font-semibold text-secondary-foreground hover:bg-secondary/90 disabled:opacity-60"
             >
-              {detailsState === "saving" ? "Saving…" : "Add details"}
+              {detailsState === "saving" ? t.saving : t.addDetails}
             </button>
           </form>
         )}
@@ -227,7 +298,7 @@ export function QuickEstimateForm({
             data-contact-location={`${location}_success`}
             className={`flex items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-semibold ${dark ? "border-gold" : "border-border"}`}
           >
-            <CalendarDays className="h-4 w-4" aria-hidden="true" /> Book an Appointment
+            <CalendarDays className="h-4 w-4" aria-hidden="true" /> {t.book}
           </a>
           <a
             href={PHONE_HREF}
@@ -247,16 +318,16 @@ export function QuickEstimateForm({
       onFocus={markStarted}
       noValidate
       className={`rounded-2xl border p-5 sm:p-6 shadow-sm ${card} ${className}`}
-      aria-label={heading}
+      aria-label={title}
     >
-      <p className="font-display text-xl sm:text-2xl">{heading}</p>
+      <p className="font-display text-xl sm:text-2xl">{title}</p>
       <div className="mt-4 space-y-3">
         <div>
-          <label htmlFor={id("name")} className="mb-1 block text-sm font-medium">Name</label>
+          <label htmlFor={id("name")} className="mb-1 block text-sm font-medium">{t.name}</label>
           <input id={id("name")} required autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} className={input} />
         </div>
         <div>
-          <label htmlFor={id("phone")} className="mb-1 block text-sm font-medium">Phone number</label>
+          <label htmlFor={id("phone")} className="mb-1 block text-sm font-medium">{t.phone}</label>
           <input
             id={id("phone")}
             required
@@ -270,10 +341,10 @@ export function QuickEstimateForm({
           />
         </div>
         <div>
-          <label htmlFor={id("type")} className="mb-1 block text-sm font-medium">Project type</label>
+          <label htmlFor={id("type")} className="mb-1 block text-sm font-medium">{t.type}</label>
           <select id={id("type")} required value={projectType} onChange={(e) => setProjectType(e.target.value)} className={input}>
-            <option value="">Choose a project type…</option>
-            {QUICK_PROJECT_TYPES.map((t) => <option key={t}>{t}</option>)}
+            <option value="">{t.choose}</option>
+            {QUICK_PROJECT_TYPES.map((v) => <option key={v} value={v}>{opt(v)}</option>)}
           </select>
         </div>
         {/* Honeypot: hidden from people and assistive tech, filled by bots. */}
@@ -283,7 +354,7 @@ export function QuickEstimateForm({
         </div>
         <label className={`flex cursor-pointer items-start gap-2 text-xs leading-relaxed ${muted}`}>
           <input type="checkbox" checked={smsConsent} onChange={(e) => setSmsConsent(e.target.checked)} className="mt-0.5 size-4 shrink-0" />
-          <span>Text me about my estimate. Message rates may apply; reply STOP any time.</span>
+          <span>{t.sms}</span>
         </label>
       </div>
 
@@ -294,12 +365,11 @@ export function QuickEstimateForm({
         disabled={submitting}
         className="mt-4 w-full rounded-lg bg-secondary px-5 py-3.5 font-semibold text-secondary-foreground hover:bg-secondary/90 disabled:opacity-60"
       >
-        {submitting ? "Sending…" : "Request My Free Estimate"}
+        {submitting ? t.sending : t.submit}
       </button>
       <p className={`mt-3 text-xs leading-relaxed ${muted}`}>
-        Free written estimate. A member of our team will contact you to discuss the project. By submitting, you agree
-        that we may call you about your request. See our{" "}
-        <Link href="/privacy-policy" className="underline">privacy policy</Link>.
+        {t.fine1}{" "}
+        <Link href="/privacy-policy" className="underline">{t.privacy}</Link>.
       </p>
     </form>
   )

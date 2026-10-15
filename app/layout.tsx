@@ -115,7 +115,9 @@ export default function RootLayout({
           <StructuredData />
           <link rel="icon" href="/favicon.png" type="image/png" />
           <link rel="apple-touch-icon" href="/favicon.png" />
-          <link rel="alternate" hrefLang="en-us" href="https://houstonsuperiorpainting.com/" />
+          {/* No sitewide hreflang: it told Google every page's English version was the
+              homepage. hreflang now lives only on pages that have a Spanish twin
+              (homepage <-> /es), via each page's metadata.alternates.languages. */}
         </PaintingSiteChrome>
       </head>
       <body className="min-h-screen font-sans antialiased">

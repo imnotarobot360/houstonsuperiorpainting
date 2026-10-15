@@ -27,6 +27,7 @@ const companyLinks = [
   { label: "Projects", href: "/projects" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
+  { label: "Español", href: "/es" },
 ]
 import { TrustBadges } from "@/components/trust-badges"
 
