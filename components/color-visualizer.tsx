@@ -1,7 +1,7 @@
 "use client"
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
-import { Brush, Eraser, Wand2, Undo2, RotateCcw, Download, ImagePlus } from "lucide-react"
+import { Brush, Eraser, Wand2, Undo2, RotateCcw, Download, ImagePlus, Sparkles, MinusCircle } from "lucide-react"
 import { PAINT_COLORS, COLOR_DISCLAIMER, type PaintColor } from "@/data/paint-colors"
 import { trackEvent } from "@/lib/analytics"
 
@@ -9,14 +9,16 @@ import { trackEvent } from "@/lib/analytics"
  * Privacy-first paint color visualizer (owner brief 2026-10-14).
  *
  * Everything happens in this browser tab: the photo is read with an object URL,
- * drawn to a canvas and never uploaded. Selection is manual (brush, eraser and a
- * tap-to-fill that grows a region of similar color), so no AI service or third
- * party is involved. Recoloring keeps the photo's own light and shadow: each
+ * drawn to a canvas and never uploaded. Selection tools: AI select (Segment
+ * Anything running ON THE DEVICE in a Web Worker, see sam.worker.ts; only the
+ * model files are downloaded, the photo is never sent), brush, eraser and a
+ * tap-to-fill that grows a region of similar color. No AI service is used. Recoloring keeps the photo's own light and shadow: each
  * selected pixel takes the chosen color scaled by how bright that pixel is
  * relative to the selection's average, then is blended in by `coverage`.
  */
 
-type Tool = "brush" | "erase" | "fill"
+type Tool = "ai" | "ai-remove" | "brush" | "erase" | "fill"
+type AiStatus = "off" | "loading" | "analyzing" | "ready" | "working" | "error"
 const MAX_SIDE = 1600
 const UNDO_LIMIT = 15
 
@@ -35,7 +37,11 @@ export function ColorVisualizer({ onColorChange }: { onColorChange?: (label: str
   const frameRef = useRef<number | null>(null)
 
   const [hasImage, setHasImage] = useState(false)
-  const [tool, setTool] = useState<Tool>("brush")
+  const [tool, setTool] = useState<Tool>("ai")
+  const workerRef = useRef<Worker | null>(null)
+  const pendingTapRef = useRef<{ x: number; y: number; remove: boolean } | null>(null)
+  const [ai, setAi] = useState<AiStatus>("off")
+  const [aiProgress, setAiProgress] = useState(0)
   const [brush, setBrush] = useState(40)
   const [tolerance, setTolerance] = useState(28)
   const [coverage, setCoverage] = useState(0.85)
@@ -100,6 +106,10 @@ export function ColorVisualizer({ onColorChange }: { onColorChange?: (label: str
     }
   }, [color.hex, coverage, split])
 
+  // Latest render for callbacks created once (the AI worker's message handler).
+  const renderRef = useRef(render)
+  renderRef.current = render
+
   const scheduleRender = useCallback(() => {
     if (frameRef.current != null) return
     frameRef.current = requestAnimationFrame(() => {
@@ -112,6 +122,57 @@ export function ColorVisualizer({ onColorChange }: { onColorChange?: (label: str
   useLayoutEffect(() => {
     render()
   }, [render])
+
+  // ── On-device AI (Segment Anything in a Web Worker) ───────────────────────
+  function getWorker() {
+    if (workerRef.current) return workerRef.current
+    const w = new Worker(new URL("./sam.worker.ts", import.meta.url), { type: "module" })
+    w.onmessage = (e: MessageEvent) => {
+      const m = e.data
+      if (m.type === "progress") setAiProgress(Math.round(m.progress ?? 0))
+      else if (m.type === "status") {
+        setAi(m.status)
+        if (m.status === "ready" && pendingTapRef.current) {
+          const t = pendingTapRef.current
+          pendingTapRef.current = null
+          segmentAt(t.x, t.y, t.remove)
+        }
+      } else if (m.type === "mask") {
+        const mask = maskRef.current
+        const add: Uint8Array = m.mask
+        const remove = (w as Worker & { _remove?: boolean })._remove
+        if (mask && add.length === mask.length) {
+          for (let i = 0; i < add.length; i++) if (add[i]) mask[i] = remove ? 0 : 255
+          renderRef.current()
+        }
+        setAi("ready")
+        trackEvent("color_visualizer_ai_select", { remove: !!remove })
+      } else if (m.type === "error") {
+        console.error("[visualizer AI]", m.message)
+        setAi("error")
+      }
+    }
+    workerRef.current = w
+    return w
+  }
+
+  /** Sends the current photo to the on-device model once per photo. */
+  function startAi() {
+    const orig = originalRef.current
+    if (!orig) return
+    setAi("loading")
+    setAiProgress(0)
+    getWorker().postMessage({ type: "embed", width: orig.width, height: orig.height, data: orig.data })
+  }
+
+  function segmentAt(x: number, y: number, remove: boolean) {
+    const w = getWorker() as Worker & { _remove?: boolean }
+    w._remove = remove
+    setAi("working")
+    w.postMessage({ type: "segment", points: [[x, y]], labels: [1] })
+  }
+
+  useEffect(() => () => workerRef.current?.terminate(), [])
 
   // ── Load photo (local only) ───────────────────────────────────────────────
   function loadFile(file: File | undefined) {
@@ -135,6 +196,7 @@ export function ColorVisualizer({ onColorChange }: { onColorChange?: (label: str
       setCanUndo(false)
       setSplit(0)
       setHasImage(true)
+      setAi((a) => (a === "off" || a === "error" ? a : "off"))
       URL.revokeObjectURL(url)
       trackEvent("color_visualizer_photo_loaded", {})
       render()
@@ -245,6 +307,17 @@ export function ColorVisualizer({ onColorChange }: { onColorChange?: (label: str
   function onPointerDown(e: React.PointerEvent<HTMLCanvasElement>) {
     if (!hasImage) return
     const { x, y, scale } = toImage(e)
+    if (tool === "ai" || tool === "ai-remove") {
+      if (ai === "loading" || ai === "analyzing" || ai === "working") return
+      pushUndo()
+      if (ai === "ready") segmentAt(x, y, tool === "ai-remove")
+      else {
+        // First tap on this photo: analyze it, then apply the tap.
+        pendingTapRef.current = { x, y, remove: tool === "ai-remove" }
+        startAi()
+      }
+      return
+    }
     pushUndo()
     if (tool === "fill") {
       fillFrom(x, y)
@@ -326,6 +399,12 @@ export function ColorVisualizer({ onColorChange }: { onColorChange?: (label: str
         <>
           {/* Tools */}
           <div className="flex flex-wrap items-center gap-2" role="toolbar" aria-label="Selection tools">
+            <button type="button" className={btn(tool === "ai")} onClick={() => setTool("ai")} aria-pressed={tool === "ai"}>
+              <Sparkles className="h-4 w-4" aria-hidden="true" /> AI select
+            </button>
+            <button type="button" className={btn(tool === "ai-remove")} onClick={() => setTool("ai-remove")} aria-pressed={tool === "ai-remove"}>
+              <MinusCircle className="h-4 w-4" aria-hidden="true" /> AI remove
+            </button>
             <button type="button" className={btn(tool === "brush")} onClick={() => setTool("brush")} aria-pressed={tool === "brush"}>
               <Brush className="h-4 w-4" aria-hidden="true" /> Paint area
             </button>
@@ -346,6 +425,16 @@ export function ColorVisualizer({ onColorChange }: { onColorChange?: (label: str
             </button>
           </div>
 
+          {(tool === "ai" || tool === "ai-remove") && (
+            <p className="text-sm text-muted-foreground" role="status" aria-live="polite">
+              {ai === "off" && (tool === "ai" ? "Tap a wall, door or cabinet and the AI selects it. Tap again to add more." : "Tap a selected area to remove it from the selection.")}
+              {ai === "loading" && `Loading the AI on your device (first time only)… ${aiProgress}%`}
+              {ai === "analyzing" && "Analyzing your photo on this device…"}
+              {ai === "working" && "Selecting…"}
+              {ai === "ready" && (tool === "ai" ? "Tap another area to add it, or use AI remove to take parts out." : "Tap an area to remove it from the selection.")}
+              {ai === "error" && "The AI couldn't run on this device. Use Tap to fill or Paint area instead."}
+            </p>
+          )}
           <div className="grid gap-4 sm:grid-cols-2">
             {tool === "fill" ? (
               <label className="text-sm text-foreground">

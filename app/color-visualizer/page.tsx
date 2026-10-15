@@ -31,7 +31,11 @@ export default function ColorVisualizerPage() {
         <section className="container mx-auto max-w-6xl px-4 pb-16">
           <ol className="mb-6 list-decimal space-y-1 pl-5 text-sm text-muted-foreground">
             <li>Choose a photo of the room, house or cabinets.</li>
-            <li>Paint over the area to recolor, or use Tap to fill on a wall or door. Erase anything you didn&apos;t mean to select.</li>
+            <li>
+              With <strong>AI select</strong>, tap a wall, door or cabinet and the AI outlines it; tap more areas to add them.
+              The AI runs on your device: the first time, your browser downloads the AI model, and your photo is never sent.
+              You can also paint the area with the brush, use Tap to fill, or erase.
+            </li>
             <li>Pick a color, adjust coverage, and drag the compare slider to see before and after.</li>
             <li>Download the preview, or send the color with a free estimate request.</li>
           </ol>
