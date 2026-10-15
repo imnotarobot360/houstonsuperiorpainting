@@ -11,7 +11,8 @@ import { BUSINESS } from "@/lib/business"
 
 // Color consultation (owner brief 2026-10-14). Juan confirmed 2026-10-14 that a
 // free color consultation is offered. No interior-design credentials are
-// claimed. Photo-based and virtual guidance are offered as preliminary only;
+// claimed. Video consultations confirmed by Juan 2026-10-14. Photo-based and
+// video guidance are preliminary;
 // final colors are always confirmed with physical samples. No manufacturer
 // sponsorship is implied: brand names identify products only.
 
@@ -19,13 +20,17 @@ const PATH = "/paint-color-consultation-houston"
 const URL = `${BUSINESS.url}${PATH}`
 const TITLE = "Paint Color Consultation in Houston | Free with Your Estimate"
 const DESCRIPTION =
-  "Free paint color consultation for Houston homes: in person or from photos, matched to your floors, counters, roof and brick, with sheen advice and real paint samples."
+  "Free paint color consultation for Houston homes: in person, by video or from photos, matched to your floors, counters, roof and brick, with sheen advice and real paint samples."
 const H1 = "Paint Color Consultation in Houston"
 
 const FAQS = [
   {
     q: "Is the color consultation free?",
     a: "Yes. Color guidance is part of our free estimate process for painting projects. We help you narrow the choices, then confirm them with physical samples before work starts.",
+  },
+  {
+    q: "Do you offer virtual color consultations?",
+    a: "Yes. We can do a video call and walk through the rooms or the exterior with you. Like photo-based advice, it is a starting point: screens shift color, so final choices are confirmed with physical samples on site.",
   },
   {
     q: "Can you help with colors from photos?",
@@ -114,12 +119,16 @@ export default function ColorConsultationPage() {
           />
         </Section>
 
-        <Section title="In person, or from photos">
+        <Section title="In person, by video, or from photos">
           <Bullets
             items={[
               <>
                 <strong>In person</strong>: during the estimate visit we look at the rooms and exterior in their real
                 light.
+              </>,
+              <>
+                <strong>By video</strong>: a video call where you walk us through the rooms or the outside of the house,
+                and we talk through options and sheens. Useful before the estimate visit or if you are out of town.
               </>,
               <>
                 <strong>From photos</strong>: send photos of the rooms or house, including the floors, counters, roof and

@@ -34,8 +34,9 @@ const serviceSchema = generateServiceSchema({
   description:
     "Kitchen and bathroom cabinet painting in Houston, Katy, Cypress, Sugar Land and nearby Texas cities. Degrease, sand, bonding primer, and sprayed cabinet-grade enamel. 5-year workmanship warranty.",
   serviceType: "Cabinet Refinishing",
-  minPrice: 2200,
-  maxPrice: 9000,
+  // Owner 2026-10-14: match the confirmed $3,000–$6,500 per-kitchen range.
+  minPrice: 3000,
+  maxPrice: 6500,
   subServices: ["Kitchen Cabinet Refinishing", "Bathroom Vanity Painting", "Two-Tone Cabinet Painting", "Oak Cabinet Grain Filling"],
 })
 

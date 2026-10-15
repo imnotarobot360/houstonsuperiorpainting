@@ -472,7 +472,10 @@ export const PRICES_2026 = {
   // Popcorn ceilings.
   popcornRemovalPerSqFt: "$1.50–$3.50",
   popcornPaintPerSqFt: "$1–$2",
-  popcornSingleRoom: "$450–$900",
+  // Owner 2026-10-14: a room including removal, ordinary patching, prep, primer
+  // and the new painted finish. Above the per-sq-ft math because it includes
+  // minimums, repairs and setup for a single room.
+  popcornSingleRoom: "$650–$1,400",
   popcornHome1500: "$3,500–$7,500",
   // Townhomes and patio homes.
   frontDoorOnly: "$250–$450",

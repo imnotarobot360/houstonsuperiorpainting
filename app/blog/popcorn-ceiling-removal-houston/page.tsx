@@ -185,7 +185,7 @@ export default function PopcornCeilingRemovalHoustonPage() {
             <td>{PRICES_2026.popcornPaintPerSqFt} / sq ft</td>
           </tr>
           <tr>
-            <td>Single room (about 150 sq ft)</td>
+            <td>Single room, removal through primed and painted ceiling (incl. ordinary patching)</td>
             <td>{PRICES_2026.popcornSingleRoom}</td>
           </tr>
           <tr>
