@@ -136,10 +136,16 @@ const NEIGHBORHOODS: { name: string; href: string; note: ReactNode }[] = [
   },
 ]
 
+// Real Houston jobs across neighborhoods and services (owner brief 2026-10-14:
+// genuine project evidence on city pages). Unverified stock-photo case studies are
+// excluded automatically because LOCAL_PROOF_PROJECTS filters them out.
 const PROJECT_SLUGS = [
   "heights-exterior-siding-repaint",
+  "west-university-stucco-exterior",
+  "bellaire-painted-brick-ranch",
+  "heights-charcoal-kitchen-cabinets",
   "heights-painted-brick-bungalow",
-  "west-university-painted-brick-exterior",
+  "houston-retail-center-exterior",
 ]
 const projects = PROJECT_SLUGS.map((slug) => LOCAL_PROOF_PROJECTS.find((p) => p.slug === slug)).filter(
   (p): p is (typeof LOCAL_PROOF_PROJECTS)[number] => Boolean(p),
@@ -292,6 +298,9 @@ export default function PaintersHoustonTX() {
                 </Link>
               ))}
             </div>
+            <p className="mt-6">
+              <Link href="/projects">See all projects</Link>
+            </p>
           </Section>
         )}
 

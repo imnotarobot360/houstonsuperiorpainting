@@ -26,6 +26,18 @@ const ESTIMATE_PATH = "/painting-estimate-houston"
  * comma in `neighborhood`). West University has no page of its own, so it
  * points to the Houston office page.
  */
+/**
+ * Service-specific cost guide for the project page link chain
+ * Service -> Location -> Project -> Cost guide -> Estimate (owner brief 2026-10-14).
+ */
+const COST_GUIDE_BY_SERVICE: Record<string, { label: string; href: string }> = {
+  "interior-painting-houston-tx": { label: "interior painting costs", href: "/interior-painting-cost-houston" },
+  "exterior-painting-houston-tx": { label: "exterior painting costs", href: "/exterior-house-painting-houston-cost-guide" },
+  "cabinet-refinishing-houston-tx": { label: "cabinet painting costs", href: "/blog/cost-to-paint-kitchen-cabinets-houston-tx" },
+  "commercial-painting-houston-tx": { label: "commercial painting costs", href: "/commercial-painting-cost-per-square-foot-houston" },
+}
+const DEFAULT_COST_GUIDE = { label: "Houston painting costs", href: "/houston-painting-cost-guide" }
+
 const NEIGHBORHOOD_CITY_PAGE: Record<string, string> = {
   Memorial: "painters-memorial-tx",
   "River Oaks": "painters-river-oaks-tx",
@@ -514,6 +526,13 @@ export default async function ProjectPage({
                 className="text-gold underline underline-offset-4 hover:text-soft-white transition-colors"
               >
                 Houston painting projects
+              </Link>
+              , check{" "}
+              <Link
+                href={(COST_GUIDE_BY_SERVICE[project.serviceSlug] ?? DEFAULT_COST_GUIDE).href}
+                className="text-gold underline underline-offset-4 hover:text-soft-white transition-colors"
+              >
+                {(COST_GUIDE_BY_SERVICE[project.serviceSlug] ?? DEFAULT_COST_GUIDE).label}
               </Link>
               , or{" "}
               <Link
