@@ -266,7 +266,7 @@ export default function PressureWashingHoustonPage() {
         <section className="py-16 md:py-24 bg-zinc-50">
           <div className="mx-auto max-w-4xl px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Pressure Washing Cost in Houston</h2>
-            <p className="text-center text-zinc-600 max-w-2xl mx-auto mb-10">All quotes include detergent, biocide treatment, plant protection, and equipment. Free on-site estimate within 24 hours.</p>
+            <p className="text-center text-zinc-600 max-w-2xl mx-auto mb-10">All quotes include detergent, biocide treatment, plant protection, and equipment. Free on-site estimate.</p>
             <div className="pricing-snippet overflow-x-auto rounded-xl border border-zinc-200 shadow-sm bg-white">
               <table className="w-full text-left">
                 <thead className="bg-zinc-900 text-white"><tr><th className="px-4 py-3 font-semibold">Project</th><th className="px-4 py-3 font-semibold">Price Range</th><th className="px-4 py-3 font-semibold">Timeline</th></tr></thead>

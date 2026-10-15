@@ -81,7 +81,7 @@ const faqs = [
   },
   {
     q: "How do I get an estimate?",
-    a: `Call ${BUSINESS.phone} or request an estimate online. Send photos for a quick range, or we come out, find the cause of the damage, and send a written scope within 24 hours.`,
+    a: `Call ${BUSINESS.phone} or request an estimate online. Send photos for a quick range, or we come out, find the cause of the damage, and send a written scope.`,
   },
 ]
 

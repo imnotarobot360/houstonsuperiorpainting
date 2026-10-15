@@ -232,7 +232,7 @@ const GROUPS: Group[] = [
       },
       {
         q: "How do I get a painting estimate?",
-        a: `Call ${BUSINESS.phone} or request an estimate online. After an on-site walkthrough you get a written scope within 24 hours listing square footage, product, and coat count.`,
+        a: `Call ${BUSINESS.phone} or request an estimate online. After an on-site walkthrough you get a written scope listing square footage, product, and coat count.`,
       },
       {
         q: "Do you offer financing?",

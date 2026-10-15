@@ -174,7 +174,7 @@ const FAQS = [
     // sequence now: you book the time, we show up, the estimate follows.
     question: "How long does it take to get an estimate?",
     answer:
-      "You choose your own walkthrough time on this page — pick a slot that suits you and it is confirmed straight away, with no waiting for a call back. The walkthrough itself takes about 45 minutes, and your written, itemized estimate follows within 24 hours of that visit.",
+      "You choose your own walkthrough time on this page — pick a slot that suits you and it is confirmed straight away, with no waiting for a call back. The walkthrough itself takes about 45 minutes, and your written, itemized estimate follows that visit.",
   },
   {
     question: "Do I need to be home for the estimate?",

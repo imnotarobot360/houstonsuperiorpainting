@@ -507,7 +507,7 @@ export default function PaintersNearMeKatyTxPage() {
           visits, measures every surface, assesses condition, and discusses your project in detail.
         </li>
         <li>
-          <strong>Within 24 hours:</strong> You receive a written, line-itemed estimate specifying surfaces, paint
+          <strong>After the visit:</strong> You receive a written, line-itemed estimate specifying surfaces, paint
           products, prep scope, timeline, and warranty.
         </li>
         <li>

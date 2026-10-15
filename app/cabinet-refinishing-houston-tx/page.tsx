@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: "How do I get an estimate?",
-    a: `Call ${BUSINESS.phone} or request an estimate online. We count doors and drawer fronts on site and send a written scope with product and coat count within 24 hours.`,
+    a: `Call ${BUSINESS.phone} or request an estimate online. We count doors and drawer fronts on site and send a written scope with product and coat count.`,
   },
 ]
 

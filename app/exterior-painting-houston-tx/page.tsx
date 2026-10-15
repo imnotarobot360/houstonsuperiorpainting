@@ -91,7 +91,7 @@ const faqs = [
   },
   {
     q: "How do I get an estimate?",
-    a: `Call ${BUSINESS.phone} or request an estimate online. We walk every elevation with you and send a written scope with prep, product, and coat count within 24 hours.`,
+    a: `Call ${BUSINESS.phone} or request an estimate online. We walk every elevation with you and send a written scope with prep, product, and coat count.`,
   },
 ]
 
