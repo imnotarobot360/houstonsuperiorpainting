@@ -37,6 +37,8 @@ const LABELS = {
 export function StickyMobileCTA() {
   const pathname = usePathname() ?? ""
   const t = pathname === "/es" || pathname.startsWith("/es/") ? LABELS.es : LABELS.en
+  // Offer landing pages keep the visitor on the offer: "Free Quote" jumps to its own form.
+  const quoteHref = pathname.startsWith("/offer/") ? "#start" : t.quoteHref
   // Hooks above run unconditionally, so the early return below is safe.
   // Note this uses the sticky-CTA flag, not the interruption flag: the
   // /chatgpt/* ad funnels suppress the modal and chat bubble but deliberately
@@ -64,7 +66,7 @@ export function StickyMobileCTA() {
         {t.text}
       </a>
       <Link
-        href={t.quoteHref}
+        href={quoteHref}
         data-contact-location="mobile_sticky_bar"
         aria-label={t.quoteAria}
         className="flex flex-col items-center justify-center gap-1 py-3 bg-foreground text-background text-center font-semibold text-xs active:opacity-90"
