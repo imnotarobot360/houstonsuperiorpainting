@@ -130,9 +130,6 @@ const EXCLUDED = new Set([
   // so listing it here keeps the sitemap from contradicting that directive —
   // Google flags "Submitted URL marked noindex" as an error otherwise.
   'estimate-confirmed',
-  // Color visualizer: noindex and unlinked until the owner approves it
-  // (owner brief 2026-10-14). Remove from here when it launches.
-  'color-visualizer',
 ])
 
 // Whole subtrees to skip, matched against the top-level segment. Unlike

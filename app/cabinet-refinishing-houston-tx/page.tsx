@@ -188,6 +188,7 @@ export default function CabinetRefinishingPage() {
         { label: "Exterior house painting in Houston", href: "/exterior-painting-houston-tx" },
         { label: "Project: white and navy kitchen cabinets in Katy", href: "/projects/katy-white-navy-kitchen-cabinets" },
         { label: "Project: two-tone kitchen cabinets in Cypress", href: "/projects/cypress-two-tone-kitchen-cabinets" },
+        { label: "Try cabinet colors on your photo (color visualizer)", href: "/color-visualizer" },
       ]}
       schema={[serviceSchema]}
     />

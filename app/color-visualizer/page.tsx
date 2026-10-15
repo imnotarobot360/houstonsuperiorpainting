@@ -7,10 +7,9 @@ import { VisualizerWithEstimate } from "@/components/visualizer-with-estimate"
 import { BRAND_DISCLAIMER } from "@/data/paint-colors"
 import { BUSINESS } from "@/lib/business"
 
-// Color visualizer (owner brief 2026-10-14). HIDDEN until the owner approves it:
-// noindex here, excluded in app/sitemap.ts, and not linked from any page or menu.
-// To launch: remove `robots` below, drop 'color-visualizer' from EXCLUDED in
-// app/sitemap.ts, and add links (color consultation, cabinet and interior pages).
+// Color visualizer (owner brief 2026-10-14). Launched 2026-10-15 after Juan's
+// approval: indexable, in the sitemap, and linked from the header Services menu,
+// the color consultation, cabinet and interior pages.
 
 const URL = `${BUSINESS.url}/color-visualizer`
 
@@ -19,7 +18,6 @@ export const metadata: Metadata = {
   description:
     "Try paint colors on a photo of your room, house or cabinets. Runs in your browser; your photo is not uploaded. Colors are approximate; confirm with a physical sample.",
   alternates: { canonical: URL },
-  robots: { index: false, follow: false },
 }
 
 export default function ColorVisualizerPage() {

@@ -192,6 +192,7 @@ export default function InteriorPaintingHoustonTX() {
         { label: "Kitchen cabinet refinishing in Houston", href: "/cabinet-refinishing-houston-tx" },
         { label: "Drywall repair in Houston", href: "/drywall-repair-houston-tx" },
         { label: "Project: interior repaint in Richmond", href: "/projects/richmond-interior-repaint" },
+        { label: "Try colors on your photo (color visualizer)", href: "/color-visualizer" },
       ]}
       schema={[serviceSchema]}
     />

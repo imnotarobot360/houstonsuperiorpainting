@@ -166,6 +166,8 @@ export default function ColorConsultationPage() {
 
         <Section title="Always confirm with a physical sample">
           <p>
+            Want to experiment first? Try colors on a photo of your own room with our{" "}
+            <Link href="/color-visualizer">color visualizer</Link>; it runs on your device and your photo is not uploaded.{" "}
             On-screen colors are approximate and may vary by screen, lighting and surrounding finishes. Confirm your final
             selection with a physical paint sample.
           </p>
@@ -207,6 +209,7 @@ export default function ColorConsultationPage() {
               { label: "Fine finish painting", href: "/fine-finish-painting-houston" },
               { label: "Popular Houston paint colors", href: "/best-paint-colors-houston-homes" },
               { label: "Accent wall ideas", href: "/accent-wall-ideas-houston" },
+              { label: "Color visualizer", href: "/color-visualizer" },
             ]}
           />
         </Section>

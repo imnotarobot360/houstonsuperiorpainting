@@ -16,11 +16,15 @@ const ESTIMATE_PATH = "/painting-estimate-houston"
 
 // 8 keeps Garage Epoxy (index 7) in the menu — trimming below that silently
 // drops it, which is how it went missing from the footer.
-const services = BUSINESS.services.slice(0, 8).map((s) => ({
-  title: s.name,
-  href: serviceHref(s.slug),
-  external: isExternalHref(serviceHref(s.slug)),
-}))
+const services = [
+  ...BUSINESS.services.slice(0, 8).map((s) => ({
+    title: s.name,
+    href: serviceHref(s.slug),
+    external: isExternalHref(serviceHref(s.slug)),
+  })),
+  // Launched 2026-10-15 (owner approved).
+  { title: "Color Visualizer", href: "/color-visualizer", external: false },
+]
 
 // The five office city pages come first (labelled "office"), then the next
 // few service-area pages. Sourced from OFFICE_PAGES + SERVICE_AREAS; the footer
