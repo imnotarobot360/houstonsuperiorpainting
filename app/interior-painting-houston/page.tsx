@@ -71,7 +71,7 @@ Ceiling painting requires specialized techniques to prevent drips and ensure eve
     "Premium Sherwin-Williams and Benjamin Moore paints",
     "Thorough preparation and surface repair",
     "Clean, professional work with furniture protection",
-    "Scope, price, and payment schedule in writing before you approve",
+    "Scope, price, deposit and payment schedule in writing before you approve",
     "5-year written workmanship warranty, transferable",
     "$2M general liability + workers' comp; bonded",
     "Flexible scheduling"

@@ -74,7 +74,7 @@ Larger Memorial homes bring their own painting challenges: tall foyer and stairw
 
 We paint walls, ceilings, trim and cabinets, and we can work from a designer's color and sheen specifications. Specialty finishes such as Venetian plaster, Roman Clay, faux finishes and limewash are priced after an on-site look.
 
-Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`}
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Equipment and planning for tall ceilings, stairwells and detailed millwork",
             "Can work from designer or architect color and sheen specifications",

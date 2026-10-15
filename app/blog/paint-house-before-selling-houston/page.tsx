@@ -126,8 +126,8 @@ const D: GuideArticleData = {
   limitations: (
     <>
       This is general guidance, not real-estate or pricing advice. Whether painting pays off depends on the home, the
-      neighborhood and the market; ask your agent. Your written estimate from {BUSINESS.name} sets the scope, price and
-      payment schedule before you approve the project.
+      neighborhood and the market; ask your agent. Your written estimate from {BUSINESS.name} sets the scope, price, deposit
+      and payment schedule before you approve the project.
     </>
   ),
   related: [

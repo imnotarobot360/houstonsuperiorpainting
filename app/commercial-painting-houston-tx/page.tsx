@@ -84,7 +84,7 @@ const FAQS = [
   },
   {
     q: "How does payment work on a commercial job?",
-    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
+    a: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.",
   },
   {
     q: "How much does commercial painting cost in Houston?",
@@ -116,7 +116,7 @@ export default function CommercialPaintingHoustonPage() {
           {BUSINESS.founded}. We repaint offices, retail, restaurants, HOA and multifamily properties, medical offices and
           light industrial space, including after hours and on weekends in occupied buildings. We carry {INSURANCE}.{" "}
           {BUSINESS.insuranceProof.en} We back the work with a {T.warrantyYears}-year workmanship warranty, and
-          put the complete scope, price and payment schedule in writing before you approve the project. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
+          put the complete scope, price, deposit and payment schedule in writing before you approve the project. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
         </QuickAnswer>
 
         <Section title="Who we work with">
@@ -254,7 +254,7 @@ export default function CommercialPaintingHoustonPage() {
                 <strong>In-house crew</strong> run by a crew lead from the first shift to the final walkthrough.
               </>,
               <>
-                <strong>Clear written payment terms:</strong> free estimate, with the scope, price and payment schedule in writing before you approve.
+                <strong>Clear written payment terms:</strong> free estimate, with the scope, price, deposit and payment schedule in writing before you approve.
               </>,
               <>
                 <strong>Five offices:</strong>{" "}

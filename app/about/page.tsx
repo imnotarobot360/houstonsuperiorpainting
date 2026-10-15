@@ -163,7 +163,7 @@ export default function AboutPage() {
             {BUSINESS.founded} by {BUSINESS.founder.name}. We are headquartered in Cypress, TX, and serve Greater
             Houston from five offices: Cypress, Houston, Katy, Sugar Land, and Magnolia. We carry{" "}
             {trust.liabilityCoverage} in general liability insurance plus workers&apos; compensation, back our
-            painting with a {trust.warrantyYears}-year written workmanship warranty, and put the scope, price and payment schedule in writing before you approve the project.
+            painting with a {trust.warrantyYears}-year written workmanship warranty, and put the scope, price, deposit and payment schedule in writing before you approve the project.
             Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a>.
           </p>
         </div>
@@ -297,7 +297,7 @@ export default function AboutPage() {
             <li className="flex gap-3">
               <ClipboardList className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
               <span>
-                <strong className="text-foreground">Clear Written Payment Terms.</strong> The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.
+                <strong className="text-foreground">Clear Written Payment Terms.</strong> The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.
               </span>
             </li>
             <li className="flex gap-3">

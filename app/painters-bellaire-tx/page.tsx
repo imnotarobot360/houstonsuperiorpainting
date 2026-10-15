@@ -74,14 +74,14 @@ That mix shapes how a paint job is planned. Older ranches often need more prep b
 
 Houston's humidity and summer heat are hard on exterior paint, so on exteriors we focus on cleaning, repairing and priming before the finish coats. Inside, we cover single rooms, whole-home repaints, trim and cabinets.
 
-Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every Bellaire project starts with a free written estimate that includes the complete scope, price, and payment schedule before you approve the project.`}
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every Bellaire project starts with a free written estimate that includes the complete scope, price, deposit and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Experience with both older ranch homes and new construction",
             "Planning for close-set lots: protecting neighboring property during prep and painting",
             "Sherwin-Williams and Benjamin Moore products",
             "Insured: $2M general liability plus workers' comp",
             "5-year written workmanship warranty",
-            "Clear written payment terms: scope, price and payment schedule in writing before you approve"
+            "Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve"
           ]}
           services={[
             {

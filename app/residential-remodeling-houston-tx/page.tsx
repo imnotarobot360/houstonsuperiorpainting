@@ -110,7 +110,7 @@ const faqs = [
   },
   {
     q: "How does payment work?",
-    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
+    a: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.",
   },
   {
     q: "How do I get an estimate?",
@@ -292,7 +292,7 @@ export default function ResidentialRemodelingHoustonTX() {
 
         <CtaBlock title="Get a free remodeling estimate">
           Call {BUSINESS.phone} or <Link href={ESTIMATE_PATH} className="underline">request an estimate online</Link>.
-          We quote every remodel after an on-site visit, with the price and payment schedule in writing before you approve, and the work carries a{" "}
+          We quote every remodel after an on-site visit, with the price, deposit and payment schedule in writing before you approve, and the work carries a{" "}
           {BUSINESS.trust.warrantyYears}-year workmanship warranty.
         </CtaBlock>
 

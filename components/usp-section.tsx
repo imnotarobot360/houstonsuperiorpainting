@@ -14,7 +14,7 @@ const uspPoints = [
   {
     icon: CreditCard,
     title: "Clear Written Payment Terms",
-    description: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project."
+    description: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."
   },
   {
     icon: Sparkles,

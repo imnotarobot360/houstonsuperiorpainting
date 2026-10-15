@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: "How does payment work?",
-    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
+    a: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.",
   },
   {
     q: "How do I get an estimate?",

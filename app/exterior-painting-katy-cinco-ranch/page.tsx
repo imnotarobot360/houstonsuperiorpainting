@@ -29,7 +29,7 @@ export default function ExteriorPaintingKatyPage() {
         "Plants, walkways and windows protected; work areas cleaned each day.",
         `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
         "5-year written workmanship warranty.",
-        "Free estimate. Your written estimate includes the complete scope, price, and payment schedule before you approve the project."
+        "Free estimate. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."
       ]}
       priceDetails={`Another way to think about it: roughly ${PRICES_2026.exteriorPerSqFt} per square foot of floor area. Number of stories, siding type, the amount of wood rot to repair and how much trim there is all move the price, and your free written estimate itemizes it.`}
       faqs={[
@@ -55,7 +55,7 @@ export default function ExteriorPaintingKatyPage() {
         },
         {
           question: "When do I pay?",
-          answer: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
+          answer: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.",
         }
       ]}
       testimonials={[

@@ -24,7 +24,7 @@ const DATA: OfficeCityPageData = {
       Houston Superior Painting paints homes across Katy&apos;s master-planned communities from our office at {OFFICE}.
       Since {BUSINESS.founded} our crews have handled interiors, exteriors and kitchen cabinets on the brick and Hardie
       homes typical of Cinco Ranch, Firethorne, Cross Creek Ranch and Seven Meadows. We are insured for{" "}
-      {T.liabilityCoverage}, the estimate is free and puts the scope, price and payment schedule in writing before you approve, and the work carries a{" "}
+      {T.liabilityCoverage}, the estimate is free and puts the scope, price, deposit and payment schedule in writing before you approve, and the work carries a{" "}
       {T.warrantyYears}-year workmanship warranty. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
     </>
   ),

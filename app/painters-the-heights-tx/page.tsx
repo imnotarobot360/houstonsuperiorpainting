@@ -61,7 +61,7 @@ Older Heights homes bring specific painting work. Original wood siding and trim 
 
 Newer Heights townhomes and custom builds tend to need less repair but have tall stairwells and a lot of trim. We paint both, inside and out, and also refinish kitchen cabinets.
 
-If your home is in a city historic district, check with the City of Houston about any exterior work before you schedule it. Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`}
+If your home is in a city historic district, check with the City of Houston about any exterior work before you schedule it. Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Prep for older wood siding and trim: scraping, wood repair, caulk and priming",
             "Interior crack and settling repair before repainting",

@@ -495,7 +495,7 @@ export default function ExteriorPaintingCostKatyPage() {
         <li>HOA color guidance at no charge</li>
       </ul>
       <p>
-        <strong>Clear written payment terms: the scope, price and payment schedule are in writing before you approve.</strong>
+        <strong>Clear written payment terms: the scope, price, deposit and payment schedule are in writing before you approve.</strong>
       </p>
       <p>
         Call or text <strong>(346) 594-5960</strong> — available 7 days a week. Learn more about our{" "}

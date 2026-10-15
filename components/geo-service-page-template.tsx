@@ -184,7 +184,7 @@ export function GeoServicePageTemplate({
   const quickAnswer =
     `${BUSINESS.name} provides ${service.toLowerCase()} in ${place}, TX, from our Greater Houston crews. ` +
     (pricing ? `Published pricing: ${pricing.range} (${pricing.basis.split(".")[0].toLowerCase()}). ` : "") +
-    `Estimates are free. ${"Your written estimate includes the complete scope, price, and payment schedule before you approve the project."} ` +
+    `Estimates are free. ${"Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."} ` +
     `Work is insured (${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp) and backed by a ${warrantyYears}-year workmanship warranty. ` +
     `Request an estimate online or call ${BUSINESS.phone}.`
 

@@ -226,9 +226,9 @@ export const BUSINESS = {
   // approved". Do not publish a specific payment schedule unless approved for that page.
   paymentPolicy: {
     short: "Clear Written Payment Terms",
-    badgeSubtitle: "Scope, pricing, and payment terms are provided in writing before project approval.",
+    badgeSubtitle: "Written scope, price, deposit and payment schedule provided before project approval.",
     sentence:
-      "Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
+      "Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.",
   },
 
   // ─── Brands / partners ─────────────────────────────────

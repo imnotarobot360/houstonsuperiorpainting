@@ -53,7 +53,7 @@ const financingFaqs = [
   },
   {
     q: "Is there a payment due before work begins?",
-    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project. Financing lets you spread the cost over time; ask about terms at your estimate.",
+    a: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project. Financing lets you spread the cost over time; ask about terms at your estimate.",
   },
   {
     q: "Will financing affect the quality or warranty of my paint job?",

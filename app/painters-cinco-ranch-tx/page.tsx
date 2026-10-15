@@ -45,14 +45,14 @@ For exterior work, the first step is usually the HOA. Exterior color changes in 
 
 Houston's humidity and summer heat are hard on exterior paint, especially on south- and west-facing siding and trim. A good exterior repaint here starts with washing, caulk and wood repair, and priming bare spots before the finish coats. Inside, common projects include updating builder-grade paint, whole-home repaints, trim and cabinets.
 
-Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Katy. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`}
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Katy. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Help preparing exterior color details for your HOA submittal",
             "Thorough exterior prep: washing, caulk, wood repair and spot priming",
             "Sherwin-Williams and Benjamin Moore products",
             "Insured: $2M general liability plus workers' comp",
             "5-year written workmanship warranty",
-            "Clear written payment terms: scope, price and payment schedule in writing before you approve"
+            "Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve"
           ]}
           services={[
             {

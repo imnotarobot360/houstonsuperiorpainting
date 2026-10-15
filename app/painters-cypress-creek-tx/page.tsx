@@ -45,14 +45,14 @@ Mature trees and the creek setting shape exterior work. Shade keeps siding and t
 
 Inside, older homes often need settling cracks and old water stains repaired and sealed before repainting, and kitchen cabinets are a common update. Many subdivisions in the area are deed-restricted, so check whether your HOA needs to approve an exterior color change before the job is scheduled.
 
-Houston Superior Painting was founded in 2019 and is headquartered in nearby Cypress. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`}
+Houston Superior Painting was founded in 2019 and is headquartered in nearby Cypress. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Prep for shaded, wooded lots: washing, mildew treatment, caulk and wood repair",
             "Interior crack and stain repair before repainting",
             "Sherwin-Williams and Benjamin Moore paints",
             "Insured: $2M general liability plus workers' comp",
             "5-year written workmanship warranty",
-            "Clear written payment terms: scope, price and payment schedule in writing before you approve"
+            "Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve"
           ]}
           services={[
             {

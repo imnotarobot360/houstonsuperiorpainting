@@ -24,7 +24,7 @@ const INCLUDED = [
   {
     icon: FileText,
     title: EPOXY.warranty,
-    body: "In writing on residential garage systems. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
+    body: "In writing on residential garage systems. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.",
   },
 ]
 
@@ -44,7 +44,7 @@ export function EpoxyPricing() {
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground text-pretty">
             Pick your garage size for an honest installed range. Your exact price is locked in after we measure the
-            slab, and your written estimate includes the payment schedule before you approve.
+            slab, and your written estimate includes the deposit and payment schedule before you approve.
           </p>
         </Reveal>
 

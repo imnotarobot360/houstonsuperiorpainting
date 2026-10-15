@@ -56,7 +56,7 @@ export default function BudgetOfferPage() {
             <ul className="mt-6 space-y-2 text-foreground/90">
               {[
                 "Interior and exterior painting in Houston and surrounding areas",
-                "Free written estimate with the scope, price and payment schedule before you approve",
+                "Free written estimate with the scope, price, deposit and payment schedule before you approve",
                 `${BUSINESS.trust.warrantyYears}-year written workmanship warranty`,
                 `${BUSINESS.trust.liabilityCoverage} general liability + workers' comp`,
               ].map((t) => (

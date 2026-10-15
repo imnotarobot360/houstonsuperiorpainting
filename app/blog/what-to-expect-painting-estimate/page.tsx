@@ -144,7 +144,7 @@ export default function WhatToExpectPaintingEstimatePage() {
       <h2>Schedule Your Free Estimate</h2>
 
       <p>
-        Houston Superior Painting provides detailed, no-obligation estimates for <Link href="/interior-painting-houston-tx">interior painting</Link> and exterior painting projects throughout Houston, <Link href="/painters-katy-tx">Katy</Link>, Cypress, and surrounding areas. Every estimate includes our 5-year workmanship warranty and puts the scope, price and payment schedule in writing before you approve.
+        Houston Superior Painting provides detailed, no-obligation estimates for <Link href="/interior-painting-houston-tx">interior painting</Link> and exterior painting projects throughout Houston, <Link href="/painters-katy-tx">Katy</Link>, Cypress, and surrounding areas. Every estimate includes our 5-year workmanship warranty and puts the scope, price, deposit and payment schedule in writing before you approve.
       </p>
 
       <p>

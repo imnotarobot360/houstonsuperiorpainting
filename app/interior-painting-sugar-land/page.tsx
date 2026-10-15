@@ -29,7 +29,7 @@ export default function InteriorPaintingSugarLandPage() {
         "Furniture moved or covered, floors protected and work areas cleaned each day.",
         `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
         "5-year written workmanship warranty.",
-        "Free estimate. Your written estimate includes the complete scope, price, and payment schedule before you approve the project."
+        "Free estimate. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."
       ]}
       priceDetails={`For a whole home, about ${PRICES_2026.interiorPerSqFt} per square foot of floor area is a reasonable rule of thumb. Ceiling height, how much trim and how many doors are included, color changes and drywall repair move the number, and your free written estimate itemizes it.`}
       faqs={[
@@ -55,7 +55,7 @@ export default function InteriorPaintingSugarLandPage() {
         },
         {
           question: "When do I pay?",
-          answer: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
+          answer: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.",
         }
       ]}
       testimonials={[

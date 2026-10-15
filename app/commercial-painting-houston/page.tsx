@@ -121,7 +121,7 @@ We carry $2M general liability + workers' comp, and we are bonded. Our team foll
 
 Communication keeps commercial projects on track. We agree on the schedule up front and keep you updated as the work progresses. Our goal is a seamless experience from initial estimate through final walkthrough.
 
-Competitive pricing doesn't mean cutting corners. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.`
+Competitive pricing doesn't mean cutting corners. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.`
     }
   ],
   features: [
@@ -140,7 +140,7 @@ Competitive pricing doesn't mean cutting corners. Your written estimate includes
     "Industrial-grade coatings available",
     "Fast, efficient crews",
     "$2M general liability + workers' comp; bonded",
-    "Written scope, price, and payment schedule",
+    "Written scope, price, deposit and payment schedule",
     "Transparent, competitive pricing",
     "Offices, retail, restaurants, and warehouses"
   ],

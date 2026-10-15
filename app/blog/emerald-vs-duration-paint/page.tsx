@@ -261,7 +261,7 @@ export default function EmeraldVsDurationPage() {
       </p>
 
       <p>
-        Every job comes with our 5-year workmanship warranty, $2M in liability coverage, and clear written payment terms: the scope, price and payment schedule are in writing before you approve your estimate. Whether it&apos;s a full{" "}
+        Every job comes with our 5-year workmanship warranty, $2M in liability coverage, and clear written payment terms: the scope, price, deposit and payment schedule are in writing before you approve the project. Whether it&apos;s a full{" "}
         <Link href="/exterior-painting-houston-tx">exterior painting</Link> project, an{" "}
         <Link href="/interior-painting-houston-tx">interior painting</Link> refresh, or getting your siding ready with a{" "}
         <Link href="/pressure-washing-houston-tx">pressure washing</Link> before we prime, we&apos;ll walk you through the right paint for the job. Need{" "}

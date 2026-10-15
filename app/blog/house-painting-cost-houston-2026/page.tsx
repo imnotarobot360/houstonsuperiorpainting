@@ -293,7 +293,7 @@ export default function HousePaintingCostHoustonPage() {
         <li><strong>Cleanup:</strong> Daily cleanup and final walkthrough</li>
         <li><strong>Warranty:</strong> Our 5-year written workmanship warranty</li>
         <li><strong>Timeline:</strong> Expected start and completion dates</li>
-        <li><strong>Payment terms:</strong> The complete payment schedule, in writing before you approve</li>
+        <li><strong>Payment terms:</strong> The deposit and complete payment schedule, in writing before you approve</li>
       </ul>
 
       <p>

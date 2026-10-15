@@ -313,7 +313,7 @@ export default function PaintWarrantyTexasPage() {
       <h2>Get a Fully Warranted Paint Job in Houston TX</h2>
       <p>
         Houston Superior Painting provides a 5-year workmanship warranty on all projects — in writing, included with
-        every signed contract, with the scope, price and payment schedule in writing before you approve. Founded 2019. 500+ completed projects across Greater Houston. The same ownership
+        every signed contract, with the scope, price, deposit and payment schedule in writing before you approve. Founded 2019. 500+ completed projects across Greater Houston. The same ownership
         and crew when you need to use your warranty.
       </p>
       <ul>

@@ -76,7 +76,7 @@ const faqSchema = {
       "name": "How does payment work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project."
+        "text": "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."
       }
     }
   ]
@@ -133,7 +133,7 @@ const faqs = [
   },
   {
     question: "How does payment work?",
-    answer: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project."
+    answer: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."
   }
 ]
 

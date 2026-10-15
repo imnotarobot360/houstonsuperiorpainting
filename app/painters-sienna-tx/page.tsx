@@ -42,7 +42,7 @@ Stucco is the one that most often catches homeowners out. Over time it can chalk
 
 The second Sienna-specific factor is architectural review. The community's residential association reviews exterior color changes, and approval is needed before work begins. We provide manufacturer color codes and sheen details for your submittal, and schedule the job once you have approval.
 
-Many Sienna homes are now due for their first repaint. Original builder paint is often a light coat, so a proper repaint with full surface preparation and two finish coats makes a real difference in how long it lasts. Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`,
+Many Sienna homes are now due for their first repaint. Original builder paint is often a light coat, so a proper repaint with full surface preparation and two finish coats makes a real difference in how long it lasts. Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`,
 
   neighborhoods: [
     "Sienna Steep Bank Village",

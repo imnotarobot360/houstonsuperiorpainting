@@ -47,7 +47,7 @@ Because each village is its own municipality, rules for contractors and exterior
 
 The tree canopy shapes exterior work. Shade keeps siding and trim damp longer, which encourages mildew and slows drying, so exterior jobs start with washing, then caulk and wood repair and priming of bare spots before the finish coats, scheduled for dry weather. Mature landscaping is covered and protected during the work. Inside, larger homes add tall walls, stairwells and a lot of trim.
 
-Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`}
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Prep for shaded, wooded lots: washing, mildew treatment, caulk and wood repair",
             "Landscape protection during exterior work",

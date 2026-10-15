@@ -23,7 +23,7 @@ const rows = [
   },
   {
     feature: "Payment",
-    us: "Scope, price and payment schedule in writing before you approve",
+    us: "Scope, price, deposit and payment schedule in writing before you approve",
     them: "Large deposit required before work starts",
   },
   {

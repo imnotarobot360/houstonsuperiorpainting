@@ -33,7 +33,7 @@ const faqs = [
   { q: "Do residential painters do drywall repair?", a: "Many residential painters handle minor to moderate drywall repair as part of painting preparation: filling nail holes, patching cracks and small holes, and texture matching. Larger drywall work may call for a dedicated drywall specialist." },
   { q: "How long does a residential painting project take?", a: "Typical ranges: a full interior 2-5 days, an exterior 3-7 days, kitchen cabinets 5-7 days, a single room about a day. Your written estimate gives the expected schedule for your home." },
   { q: "What areas do your residential painters serve?", a: "Greater Houston, including Katy, Cypress, Sugar Land, The Woodlands, Pearland, Richmond, Fulshear, Missouri City, Memorial, The Heights, Bellaire and River Oaks." },
-  { q: "How does payment work?", a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project." },
+  { q: "How does payment work?", a: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project." },
 ]
 
 export default function ResidentialPaintersHouston() {
@@ -75,7 +75,7 @@ export default function ResidentialPaintersHouston() {
             {[
               { title: "Prep First", desc: "Washing, scraping, sanding, caulking and priming are listed on the estimate, because paint over poorly prepared surfaces is what fails first in Houston's weather." },
               { title: "Sherwin-Williams and Benjamin Moore", desc: "We use Sherwin-Williams and Benjamin Moore paints, with the product line and sheen named on the estimate." },
-              { title: "Written Warranty, Clear Payment", desc: "A 5-year written workmanship warranty. Scope, pricing, and payment terms are provided in writing before project approval." },
+              { title: "Written Warranty, Clear Payment", desc: "A 5-year written workmanship warranty. Written scope, price, deposit and payment schedule provided before project approval." },
             ].map(item => (
               <div key={item.title} className="bg-card rounded-lg p-6 border border-border">
                 <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
@@ -116,7 +116,7 @@ export default function ResidentialPaintersHouston() {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary-foreground mb-4">Get a Free Residential Painting Estimate</h2>
-          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">Clear written payment terms: scope, price and payment schedule in writing before you approve. 5-year written workmanship warranty.</p>
+          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve. 5-year written workmanship warranty.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/painting-estimate-houston" className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors">Request an Estimate</Link>
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors"><Phone className="h-5 w-5" /> Call {BUSINESS.phone}</a>

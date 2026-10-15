@@ -62,7 +62,7 @@ Pearland sits south of Houston, closer to the Gulf, with the same heat, humidity
 
 Many Pearland communities have HOAs that review exterior colors. We can pull your community's approved color list and help with the approval paperwork before work starts.`}
           whyChooseUs={[
-            "Free on-site estimate with the scope, price and payment schedule in writing before you approve",
+            "Free on-site estimate with the scope, price, deposit and payment schedule in writing before you approve",
             "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
             "5-year written workmanship warranty",
             "Sherwin-Williams and Benjamin Moore paints",

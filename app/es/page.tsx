@@ -24,7 +24,7 @@ const DESCRIPTION =
 const WARRANTY_ES =
   "Ofrecemos una garantía escrita de cinco años sobre la mano de obra, sujeta a los términos, exclusiones y alcance incluidos en el estimado."
 const PAYMENT_ES =
-  "Cada cliente recibe por escrito el alcance, el precio y el calendario de pagos antes de aprobar el proyecto."
+  "Cada cliente recibe por escrito el alcance, el precio total, el depósito requerido y el calendario de pagos antes de aprobar el proyecto."
 
 const SERVICES: { id: string; title: string; text: string; en: string }[] = [
   {

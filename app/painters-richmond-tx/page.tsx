@@ -62,7 +62,7 @@ Richmond sits along the Brazos River and has the same Gulf Coast climate as the 
 
 Many Richmond communities have HOAs that review exterior colors. We can pull your community's approved color list and help with the approval paperwork before work starts. Homes built before 1978 may contain lead paint, which federal rules require be disturbed only by an EPA-certified renovation firm, so ask any painter about that before work on an older home begins.`}
           whyChooseUs={[
-            "Free on-site estimate with the scope, price and payment schedule in writing before you approve",
+            "Free on-site estimate with the scope, price, deposit and payment schedule in writing before you approve",
             "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
             "5-year written workmanship warranty",
             "Sherwin-Williams and Benjamin Moore paints",

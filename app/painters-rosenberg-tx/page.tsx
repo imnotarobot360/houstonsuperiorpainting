@@ -45,14 +45,14 @@ Older homes here often have wood siding and trim that need scraping, wood repair
 
 Newer subdivisions often have HOAs that require approval before an exterior color change, so get that approval before the job is scheduled. We can provide the product names and color codes your association asks for.
 
-Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`}
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Written estimates with the full scope spelled out",
             "Thorough preparation: washing, scraping, caulk, wood repair and priming",
             "Sherwin-Williams and Benjamin Moore products",
             "Insured: $2M general liability plus workers' comp",
             "5-year written workmanship warranty",
-            "Clear written payment terms: scope, price and payment schedule in writing before you approve"
+            "Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve"
           ]}
           services={[
             {
@@ -119,7 +119,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress, w
             },
             {
               question: "How does payment work?",
-              answer: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project."
+              answer: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."
             }
           ]}
         />

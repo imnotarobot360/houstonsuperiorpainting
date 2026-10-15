@@ -98,7 +98,7 @@ const relatedPosts = [
 const redFlags = [
   {
     title: "Large upfront payment before anything is agreed",
-    body: "Be wary of a painter who wants a big share of the price before you have a written estimate you've approved. It often means they need your money before they've earned it, and it gives them an incentive to rush. At Houston Superior Painting, your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
+    body: "Be wary of a painter who wants a big share of the price before you have a written estimate you've approved. It often means they need your money before they've earned it, and it gives them an incentive to rush. At Houston Superior Painting, your written estimate includes the complete scope, price, deposit and payment schedule before you approve the project.",
   },
   {
     title: "Quote over the phone without seeing the house",

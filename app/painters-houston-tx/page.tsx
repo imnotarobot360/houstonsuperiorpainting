@@ -77,7 +77,7 @@ const FAQS = [
   },
   {
     q: "Do I have to pay a deposit before the estimate?",
-    a: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
+    a: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.",
   },
 ]
 
@@ -177,7 +177,7 @@ export default function PaintersHoustonTX() {
           Bellaire, West University and River Oaks. Founded in {BUSINESS.founded} by {BUSINESS.founder.name}, we are
           headquartered in Cypress with a Houston office on Bissonnet St. We carry {T.liabilityCoverage} general liability
           and workers&apos; comp, back the work with a {T.warrantyYears}-year workmanship warranty, and put the
-          scope, price and payment schedule in writing before you approve. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a> or{" "}
+          scope, price, deposit and payment schedule in writing before you approve. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a> or{" "}
           <Link href={ESTIMATE_PATH}>request a free estimate</Link>.
         </QuickAnswer>
 

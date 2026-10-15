@@ -43,7 +43,7 @@ The lakes affect exterior paint. Shaded walls near water stay damp longer, so mi
 
 Two other things are worth checking before a repaint. Stucco can develop hairline cracks, often at window and door corners, as the ground and wall move; those should be patched and bridged with a flexible coating rather than just painted over. And lawn sprinklers that spray the house can leave a chalky white band of hard-water minerals along the bottom of the wall, which has to be removed before primer so the new paint bonds. Adjusting the spray heads keeps it from coming back.
 
-Exterior color changes go through the community's architectural review before work begins, and some sections have their own added guidelines. We provide color codes and sheen details for your submittal. Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`,
+Exterior color changes go through the community's architectural review before work begins, and some sections have their own added guidelines. We provide color codes and sheen details for your submittal. Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`,
 
   neighborhoods: [
     "The Manors at Riverstone",

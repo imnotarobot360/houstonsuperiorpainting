@@ -422,7 +422,7 @@ export default function GarageEpoxyHoustonPage() {
                   "Anti-slip aggregate (on request)",
                   "Trim painting and baseboards (on request)",
                   "Full cleanup and debris haul-off",
-                  "Written scope, price, and payment schedule",
+                  "Written scope, price, deposit and payment schedule",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="text-emerald-600 mt-1">✓</span>

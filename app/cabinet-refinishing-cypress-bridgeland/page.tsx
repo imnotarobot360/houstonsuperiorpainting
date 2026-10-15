@@ -29,7 +29,7 @@ export default function CabinetRefinishingCypressPage() {
         "Cabinet-grade enamel from Sherwin-Williams or Benjamin Moore.",
         `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
         "5-year written workmanship warranty.",
-        "Free estimate. Your written estimate includes the complete scope, price, and payment schedule before you approve the project."
+        "Free estimate. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."
       ]}
       priceDetails="Where your kitchen falls depends on the number of doors and drawers, an island or built-ins, detailed or glass-front doors, and color changes, especially dark wood to white. Your free written estimate itemizes it."
       faqs={[
@@ -55,7 +55,7 @@ export default function CabinetRefinishingCypressPage() {
         },
         {
           question: "When do I pay?",
-          answer: "The estimate is free. Your written estimate includes the complete scope, price, and payment schedule before you approve the project.",
+          answer: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.",
         }
       ]}
       testimonials={[

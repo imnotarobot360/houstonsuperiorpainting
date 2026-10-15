@@ -136,7 +136,7 @@ export function GuideArticle({ d }: { d: GuideArticleData }) {
           <Link href={ESTIMATE_PATH} className="underline">
             request an estimate online
           </Link>
-          . Written scope, named products, and the payment schedule in writing before you approve.
+          . Request a free written estimate. Your proposal will explain the scope, products, price, deposit and payment schedule before you decide.
         </CtaBlock>
       </main>
       <Footer />

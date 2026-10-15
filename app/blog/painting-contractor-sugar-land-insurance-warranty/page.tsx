@@ -81,7 +81,7 @@ const D: GuideArticleData = {
             "Prep steps written out: washing, scraping, caulking, priming, wood repair.",
             "Product line, sheen and number of coats for each surface.",
             "How hidden damage, such as rotted trim found during prep, will be priced and approved.",
-            "Payment schedule: nothing large should be due before you approve a written estimate.",
+            "Payment schedule: the deposit and every payment should be written into the estimate before you approve it.",
           ]}
         />
       ),

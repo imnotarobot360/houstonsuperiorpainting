@@ -75,7 +75,7 @@ We also paint shutters, garage doors, gutters, downspouts, and any other exterio
     "Thorough preparation including power washing",
     "Repair of wood rot, cracks, and damaged areas",
     "Premium Sherwin-Williams and Benjamin Moore paints",
-    "Scope, price, and payment schedule in writing before you approve",
+    "Scope, price, deposit and payment schedule in writing before you approve",
     "5-year written workmanship warranty, transferable",
     "$2M general liability + workers' comp; bonded"
   ],

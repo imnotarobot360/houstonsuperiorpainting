@@ -38,7 +38,7 @@ const faqs = [
   { q: "What preparation do you do before painting?", a: "Our 8-step process includes power washing, scraping loose paint, sanding, caulking gaps, priming bare surfaces, protecting landscaping and flooring, applying premium paint (your estimate names the primer and the number of coats needed for even coverage), and a final quality inspection. Proper prep is what makes a paint job last." },
   { q: "Can I see examples of your work?", a: "Absolutely. Visit our gallery for before-and-after photos, or see our Google reviews on our reviews page. We have completed 500+ projects across Greater Houston." },
   { q: "How do I get a free estimate?", a: "Call or text us at (346) 594-5960, or fill out our online form to schedule a free on-site estimate." },
-  { q: "How does payment work?", a: "Your written estimate includes the complete scope, price, and payment schedule before you approve the project." },
+  { q: "How does payment work?", a: "Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project." },
   { q: "What makes you different from other Houston painters?", a: "Three things: old-school preparation (we never skip steps), premium products only (Sherwin-Williams and Benjamin Moore), and a written, line-by-line scope on every estimate. We are not a franchise or a lead-generation company. We are a local, owner-operated team." },
   { q: "Do you paint in Houston summers?", a: "Yes, but we schedule exterior work during optimal conditions: early morning starts, and we stop when temperatures exceed safe application ranges. We follow manufacturer temperature guidelines strictly." },
   { q: "Can you match existing paint colors?", a: "Yes. Whether you need a touch-up or want to replicate a color from another room, we can color-match existing paint." },
@@ -194,7 +194,7 @@ export default function PaintersInHoustonTX() {
           </p>
           <div className="space-y-6">
             {[
-              { step: 1, title: "Free On-Site Estimate", desc: "We inspect your home, discuss your goals and color preferences, measure surfaces, and provide a written estimate with the complete scope, price, and payment schedule. No pressure." },
+              { step: 1, title: "Free On-Site Estimate", desc: "We inspect your home, discuss your goals and color preferences, measure surfaces, and provide a written estimate with the complete scope, price, deposit and payment schedule. No pressure." },
               { step: 2, title: "Surface Preparation", desc: "We power wash all exterior surfaces to remove dirt, mildew, and loose paint. For interiors, we fill nail holes, sand rough areas, and repair any drywall damage." },
               { step: 3, title: "Scraping & Sanding", desc: "All loose, peeling, or flaking paint is scraped and sanded smooth. We feather edges to create a seamless transition between bare and painted areas." },
               { step: 4, title: "Caulking & Sealing", desc: "Every gap, crack, and joint is caulked with premium exterior-grade sealant. This prevents moisture infiltration, a leading cause of paint failure in Houston." },

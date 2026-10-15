@@ -45,14 +45,14 @@ Heavy shade keeps siding and trim damp longer, which encourages mildew and slows
 
 Inside, homes of this era often have textured walls, older trim and settling cracks that need repair before repainting. We also refinish kitchen cabinets as an alternative to replacement.
 
-Houston Superior Painting was founded in 2019 and is headquartered in nearby Cypress. Every estimate is free and written, with the complete scope, price, and payment schedule before you approve the project.`}
+Houston Superior Painting was founded in 2019 and is headquartered in nearby Cypress. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Prep for older homes: caulk replacement, wood repair and priming",
             "Washing and mildew treatment before painting under heavy shade",
             "Sherwin-Williams and Benjamin Moore products",
             "Insured: $2M general liability plus workers' comp",
             "5-year written workmanship warranty",
-            "Clear written payment terms: scope, price and payment schedule in writing before you approve"
+            "Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve"
           ]}
           services={[
             {

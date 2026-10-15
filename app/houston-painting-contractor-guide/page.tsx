@@ -430,7 +430,7 @@ export default function HoustonPaintingContractorGuidePage() {
               <>&ldquo;We use quality paint&rdquo; instead of a named product and sheen</>,
               <>&ldquo;One coat should do it&rdquo; or paint-and-primer-in-one over bare wood</>,
               <>No mention of caulk, primer or repairs</>,
-              <>Cash only, a large deposit, or money due before you approve the estimate</>,
+              <>Cash only, or a large payment demanded before you have a written estimate to approve</>,
               <>No certificate of insurance, or one sent only as a PDF you can&apos;t confirm</>,
               <>No written warranty</>,
               <>No physical address, or reviews all posted in the same week</>,
@@ -465,7 +465,7 @@ export default function HoustonPaintingContractorGuidePage() {
               <strong>What does your warranty cover, for how long, and how do I make a claim?</strong> Get it in writing.
             </li>
             <li>
-              <strong>What is the payment schedule?</strong> Nothing due before you approve the written estimate; never the
+              <strong>What is the payment schedule?</strong> The deposit and every payment are written into the estimate before you approve it; never the
               full price upfront.
             </li>
             <li>
