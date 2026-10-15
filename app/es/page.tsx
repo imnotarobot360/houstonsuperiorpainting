@@ -258,7 +258,7 @@ export default function SpanishPage() {
           </dl>
         </section>
 
-        <section className="bg-champagne py-14">
+        <section id="estimado" className="scroll-mt-24 bg-champagne py-14">
           <div className="mx-auto max-w-xl px-4">
             <QuickEstimateForm location="es_bottom" lang="es" heading="¿Listo para su estimado?" />
             <p className="mt-4 text-center text-sm text-muted-foreground">
