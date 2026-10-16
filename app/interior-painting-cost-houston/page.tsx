@@ -117,7 +117,7 @@ export default function InteriorPaintingCostHouston() {
               <tbody>
                 {[
                   ["Material Cost (2,500 sq ft)", "$800–$1,500", "Included in quote"],
-                  ["Labor Cost", "$0 (your time)", "$2,500–$6,000 more than DIY"],
+                  ["Labor Cost", "$0 (your time)", "about $4,750–$10,450 more than DIY"],
                   ["Total Cost", "$800–$1,500", PRICES_2026.fullInterior2500],
                   ["Time Required", "2–3 weekends", "3–5 days"],
                   ["Quality", "Variable", "Consistent, factory-smooth"],

@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pressure Washing Houston TX — Houston Superior Painting",
-  description: "Professional pressure washing in Houston TX. Driveways, siding, decks, fences, roofs. Soft wash and power wash. $250-$900. Free estimates.",
+  description: "Professional pressure washing in Houston TX. Driveways, siding, decks, fences, roofs. Soft wash and power wash. $150–$1,200 depending on the job. Free estimates.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/pressure-washing-houston-tx",
   },

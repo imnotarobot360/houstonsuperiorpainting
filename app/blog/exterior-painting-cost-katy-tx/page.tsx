@@ -198,7 +198,7 @@ export default function ExteriorPaintingCostKatyPage() {
           </tr>
           <tr>
             <td className="border border-border p-3">Front door only</td>
-            <td className="border border-border p-3">$200 – $600</td>
+            <td className="border border-border p-3">$250 – $450</td>
             <td className="border border-border p-3">Can be bold color</td>
           </tr>
           <tr className="bg-muted/50">

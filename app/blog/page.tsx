@@ -30,7 +30,7 @@ const blogPosts = [
     author: "Juan Serra",
     publishDate: "October 15, 2026",
     readTime: "6 min read",
-    image: "/images/blog/best-interior-colors-houston.png",
+    image: "/images/blog/celery-sw-6421-swatch.png",
     featured: false,
   },
   {

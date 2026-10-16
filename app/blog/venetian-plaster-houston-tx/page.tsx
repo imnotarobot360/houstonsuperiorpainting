@@ -150,7 +150,7 @@ export default function VenetianPlasterHoustonPage() {
             </tr>
             <tr>
               <td className="border border-border p-3">High-polish burnished finish</td>
-              <td className="border border-border p-3">$15 – $22</td>
+              <td className="border border-border p-3">$15 – $20</td>
               <td className="border border-border p-3">Multiple layers, significant burnishing time</td>
             </tr>
             <tr>
@@ -160,7 +160,7 @@ export default function VenetianPlasterHoustonPage() {
             </tr>
             <tr>
               <td className="border border-border p-3">Marmorino (marble-chip variation)</td>
-              <td className="border border-border p-3">$16 – $25</td>
+              <td className="border border-border p-3">$16 – $20</td>
               <td className="border border-border p-3">Highest skill requirement, most dramatic result</td>
             </tr>
           </tbody>
@@ -408,7 +408,7 @@ export default function VenetianPlasterHoustonPage() {
             <tr>
               <td className="border border-border p-3 font-medium">Venetian plaster</td>
               <td className="border border-border p-3">Luminous depth, polished</td>
-              <td className="border border-border p-3">$8 – $22</td>
+              <td className="border border-border p-3">$8 – $20</td>
               <td className="border border-border p-3">Good (with sealer)</td>
               <td className="border border-border p-3">Good (with right product)</td>
             </tr>
@@ -436,7 +436,7 @@ export default function VenetianPlasterHoustonPage() {
             <tr>
               <td className="border border-border p-3 font-medium">Standard eggshell paint</td>
               <td className="border border-border p-3">Flat, uniform</td>
-              <td className="border border-border p-3">$2 – $4.50</td>
+              <td className="border border-border p-3">$2.50 – $4.50</td>
               <td className="border border-border p-3">Good</td>
               <td className="border border-border p-3">Good</td>
             </tr>

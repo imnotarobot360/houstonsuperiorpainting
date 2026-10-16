@@ -88,7 +88,7 @@ const pricingRows = [
 ];
 
 const faqItems = [
-  { q: "How much does it cost to remove a load bearing wall in Houston?", a: "Load bearing wall removal in Houston ranges $4,000–$15,000+. Simple removals with single LVL: $4,000–$7,500. Walls with HVAC/plumbing/electrical: $7,500–$12,000. Long spans requiring steel: $12,000–$18,000+. Pricing includes engineer letter, permit, beam install, drywall, texture, and paint." },
+  { q: "How much does it cost to remove a load bearing wall in Houston?", a: "Load bearing wall removal in Houston ranges $4,000–$30,000+. Simple removals with single LVL: $4,000–$7,500. Walls with HVAC/plumbing/electrical: $7,500–$11,500. Long spans requiring steel: $12,000–$18,000+. Pricing includes engineer letter, permit, beam install, drywall, texture, and paint." },
   { q: "How do I know if a wall is load bearing?", a: "Load bearing walls typically run perpendicular to ceiling joists, sit above another wall or beam below, are exterior walls, or are central in the home. Never assume — wrong assumption can collapse a ceiling. We provide free on-site assessment and bring a structural engineer when needed." },
   { q: "Do you handle the engineer letter and permit?", a: "Yes. We handle every step: licensed structural engineer assessment and stamped letter, City of Houston building permit, plan submission, and inspection coordination. You don't hire anyone separately." },
   { q: "How long does the project take?", a: "Total: 2–4 weeks. Engineer assessment 1 week, permit 1–2 weeks, demo and beam install 2–4 days, drywall and texture 3–5 days, paint 1–2 days. Permit and demo prep can sometimes run in parallel to compress timeline." },
@@ -165,7 +165,7 @@ export default function LoadBearingWallRemovalHoustonPage() {
           <div className="mx-auto max-w-3xl px-4">
             <h2 className="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Quick Answer</h2>
             <p className="quick-answer text-lg md:text-xl text-zinc-800 leading-relaxed">
-              Houston Superior Painting handles full-scope load bearing wall removal in Houston, Katy, Cypress, Sugar Land, and surrounding TX cities. Projects cost <strong>$4,000–$15,000+</strong> depending on span and utilities. Total timeline <strong>2–4 weeks</strong> including engineer letter, City of Houston permit, beam install, utility re-route, drywall texture match, and paint. Free on-site assessment at <a href="tel:+13465945960" className="text-emerald-700 underline font-semibold">(346) 594-5960</a>.
+              Houston Superior Painting handles full-scope load bearing wall removal in Houston, Katy, Cypress, Sugar Land, and surrounding TX cities. Projects cost <strong>$4,000–$30,000+</strong> depending on span and utilities. Total timeline <strong>2–4 weeks</strong> including engineer letter, City of Houston permit, beam install, utility re-route, drywall texture match, and paint. Free on-site assessment at <a href="tel:+13465945960" className="text-emerald-700 underline font-semibold">(346) 594-5960</a>.
             </p>
           </div>
         </section>

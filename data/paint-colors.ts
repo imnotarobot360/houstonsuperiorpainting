@@ -36,6 +36,8 @@ export const PAINT_COLORS: PaintColor[] = [
   { brand: "Benjamin Moore", code: "OC-23", name: "Classic Gray", hex: "#E1DED6", family: "Gray" },
   { brand: "Benjamin Moore", code: "HC-170", name: "Stonington Gray", hex: "#C2C5C4", family: "Gray" },
   // Greens
+  // Celery: Sherwin-Williams 2027 Color of the Year; hex is SW's published screen value (SW6421 page).
+  { brand: "Sherwin-Williams", code: "SW 6421", name: "Celery", hex: "#E0DDBD", family: "Green" },
   { brand: "Sherwin-Williams", code: "SW 9130", name: "Evergreen Fog", hex: "#95978A", family: "Green" },
   { brand: "Sherwin-Williams", code: "SW 6208", name: "Pewter Green", hex: "#5E6259", family: "Green" },
   { brand: "Sherwin-Williams", code: "SW 9129", name: "Jade Dragon", hex: "#9EA597", family: "Green" },

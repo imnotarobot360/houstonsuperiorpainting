@@ -153,10 +153,10 @@ const QUESTIONS = [
 ]
 
 const PRICE_BANDS = [
-  { scope: "Interior — 1 to 2 rooms", range: "$650 – $1,800" },
+  { scope: "Interior — 1 to 2 rooms", range: "$300 – $1,600" },
   { scope: "Interior — whole home (2,000 sq ft)", range: PRICES_2026.fullInterior2000 },
-  { scope: "Exterior — single-story", range: "$3,500 – $7,500" },
-  { scope: "Exterior — two-story", range: "$6,500 – $14,000" },
+  { scope: "Exterior — single-story (1,500–4,000 sq ft)", range: "$2,500 – $10,000" },
+  { scope: "Exterior — two-story (1,500–4,000 sq ft)", range: "$3,500 – $14,000" },
   { scope: "Cabinet refinishing — kitchen", range: PRICES_2026.cabinetsPerKitchen },
 ]
 

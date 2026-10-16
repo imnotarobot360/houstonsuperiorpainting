@@ -87,7 +87,7 @@ const GROUPS: Group[] = [
       },
       {
         q: "Is a low painting quote a red flag?",
-        a: "Usually. Below $1.50/sq ft for an exterior or $2/sq ft for an interior typically means one coat, no primer, or no insurance.",
+        a: "Usually. Below $1.50/sq ft for an exterior or $2.50/sq ft for an interior typically means one coat, no primer, or no insurance.",
       },
     ],
     related: [

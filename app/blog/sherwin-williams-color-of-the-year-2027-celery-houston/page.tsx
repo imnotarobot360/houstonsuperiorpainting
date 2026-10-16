@@ -51,6 +51,14 @@ const D: GuideArticleData = {
       title: "What Celery SW 6421 actually is",
       body: (
         <>
+          {/* Swatch from Sherwin-Williams' published value for SW 6421 (hex E0DDBD). */}
+          <div className="not-prose my-6 overflow-hidden rounded-xl border border-border">
+            <div className="h-40 sm:h-56" style={{ backgroundColor: "#E0DDBD" }} role="img" aria-label="Approximate on-screen swatch of Sherwin-Williams Celery SW 6421" />
+            <p className="bg-card px-4 py-3 text-sm text-muted-foreground">
+              Celery SW 6421, shown with Sherwin-Williams&apos; published screen value (hex E0DDBD). Screens vary; confirm
+              with a physical sample.
+            </p>
+          </div>
           <p>
             Celery is a green, not a gray and not a classic sage. Sherwin-Williams calls it &quot;an airy, herbal
             green&quot; and points to its &quot;subtle yellow undertones&quot;. That yellow is what keeps it from looking
