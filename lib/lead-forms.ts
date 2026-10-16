@@ -45,7 +45,24 @@ export const COMMERCIAL_PROPERTY_TYPES = [
 export const TIMEFRAMES = ["As soon as possible", "Within 1 month", "1–3 months", "Just planning"] as const
 export const CONTACT_METHODS = ["Phone call", "Text message", "Email"] as const
 
-export const LEAD_FORMS: Record<"quick" | "commercial" | "budget", LeadFormConfig> = {
+export const LEAD_FORMS: Record<"quick" | "commercial" | "budget" | "visualizer", LeadFormConfig> = {
+  // Exterior paint visualizer (/paint-visualizer, owner brief 2026-10-16). The
+  // answers are built by buildAnswers() in lib/visualizer/request.ts.
+  visualizer: {
+    service: "visualizer",
+    label: "Exterior paint visualizer",
+    questions: [
+      { id: "projectType", question: "Project type" },
+      { id: "source", question: "Source" },
+      { id: "surfaces", question: "Surfaces to paint" },
+      { id: "bodyColor", question: "Body / siding color" },
+      { id: "trimColor", question: "Trim color" },
+      { id: "doorColor", question: "Front door color" },
+      { id: "shuttersColor", question: "Shutters color" },
+      { id: "photosShared", question: "Photo and preview shared" },
+      { id: "description", question: "Notes" },
+    ],
+  },
   // Budget ad funnel (/offer/houston-painting, owner request 2026-10-15).
   budget: {
     service: "budget",
