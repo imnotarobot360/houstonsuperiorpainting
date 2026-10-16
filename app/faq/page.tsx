@@ -107,7 +107,7 @@ const GROUPS: Group[] = [
       },
       {
         q: "Is Houston Superior Painting insured?",
-        a: `Yes. We carry ${BUSINESS.trust.liabilityCoverage} general liability and workers' compensation. Ask for the certificate of insurance before any painter starts; we provide ours with every estimate.`,
+        a: `Yes. We carry ${BUSINESS.trust.liabilityCoverage} general liability and workers' compensation. Ask for the certificate of insurance before any painter starts; ours is available upon request and is provided after a project is approved, according to the project requirements.`,
       },
       {
         q: `What does the ${W}-year warranty cover?`,

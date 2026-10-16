@@ -73,7 +73,7 @@ const FAQS = [
   },
   {
     q: "Are you licensed and insured?",
-    a: `Texas does not issue a state license for house painters, so insurance is the check that matters. We carry ${T.liabilityCoverage} general liability and workers' comp, and we send the certificate of insurance before work starts.`,
+    a: `Texas does not issue a state license for house painters, so insurance is the check that matters. We carry ${T.liabilityCoverage} general liability and workers' comp, and a current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.`,
   },
   {
     q: "Do I have to pay a deposit before the estimate?",

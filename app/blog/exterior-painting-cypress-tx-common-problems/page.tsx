@@ -63,11 +63,7 @@ export default function ExteriorPaintingCypressProblemsBlog() {
             "headline": "Exterior Painting in Cypress TX: Common Problems Homeowners Face",
             "description": "Cypress TX homeowners face unique exterior paint problems. Here's what causes them, what to watch for, and how to protect your home's finish.",
             "image": "https://houstonsuperiorpainting.com/images/blog/exterior-painting-cypress-problems.jpg",
-            "author": {
-              "@type": "Organization",
-              "name": "Houston Superior Painting",
-              "url": "https://houstonsuperiorpainting.com"
-            },
+            "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
               "name": "Houston Superior Painting",

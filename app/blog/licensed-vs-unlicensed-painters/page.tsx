@@ -234,7 +234,7 @@ export default function LicensedVsUnlicensedPaintersPage() {
           <section className="mt-12 bg-primary text-primary-foreground rounded-xl p-8 text-center">
             <h2 className="font-serif text-2xl font-bold mb-4">Want Proof of Our Coverage?</h2>
             <p className="mb-6 text-primary-foreground/90">
-              Ask for our Certificate of Insurance with your free estimate. No pressure, no obligations.
+              Ask for our certificate of insurance. No pressure, no obligations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">

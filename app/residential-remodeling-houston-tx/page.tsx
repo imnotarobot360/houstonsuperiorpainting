@@ -106,7 +106,7 @@ const faqs = [
   },
   {
     q: "Are you insured?",
-    a: "Yes. We carry $2M general liability and workers' compensation, and the certificate of insurance comes with every estimate.",
+    a: "Yes. We carry $2M general liability and workers' compensation, and a current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.",
   },
   {
     q: "How does payment work?",
@@ -265,7 +265,7 @@ export default function ResidentialRemodelingHoustonTX() {
             Every remodel carries our written {BUSINESS.trust.warrantyYears}-year workmanship warranty. It covers
             peeling, blistering, and flaking and failed repairs caused by our workmanship. It does not cover damage from
             water intrusion, settling, or surfaces you asked us not to prep. We carry $2M general liability and
-            workers&apos; compensation, and the certificate of insurance comes with every estimate.
+            workers&apos; compensation, and a current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.
           </p>
         </Section>
 

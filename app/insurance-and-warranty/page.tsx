@@ -23,7 +23,7 @@ const REQUEST_MAIL = `mailto:${BUSINESS.email}?subject=${encodeURIComponent("Ins
 const FAQS = [
   {
     q: "Can I get a copy of your certificate of insurance?",
-    a: `Yes. Proof of insurance is available upon request: email ${BUSINESS.email} or call ${BUSINESS.phone}. Customers who approve a project receive a copy of our current insurance documentation before work begins.`,
+    a: `Yes. Proof of insurance is available upon request: email ${BUSINESS.email} or call ${BUSINESS.phone}. A current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.`,
   },
   {
     q: "Why isn't the certificate posted on the website?",
@@ -68,15 +68,15 @@ export default function InsuranceAndWarrantyPage() {
 
         <QuickAnswer>
           Houston Superior Painting maintains insurance coverage for its painting operations, including{" "}
-          {T.liabilityCoverage} general liability and workers&apos; comp. Proof of insurance is available upon request, and
-          customers who approve a project receive a copy of our current insurance documentation before work begins.
+          {T.liabilityCoverage} general liability and workers&apos; comp. A current certificate of insurance is available upon request
+          and is provided after a project is approved, according to the project requirements.
           Qualifying painting projects are backed by a {T.warrantyYears}-Year Written Workmanship Warranty, with complete
           terms in your approved estimate and project documents.
         </QuickAnswer>
 
         <Section id="request-proof-of-insurance" title="Request proof of insurance">
           <p>
-            Proof of insurance is available upon request and provided with approved project documents. To request it:
+            A current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements. To request it:
           </p>
           <Steps
             items={[

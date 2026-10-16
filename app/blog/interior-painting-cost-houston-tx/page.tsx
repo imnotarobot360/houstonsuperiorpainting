@@ -114,11 +114,7 @@ export default function InteriorPaintingCostHoustonTX() {
             "@type": "Article",
             "headline": "Interior Painting Cost in Houston TX: What Homeowners Should Expect",
             "description": "Wondering what interior painting costs in Houston TX? Here's an honest breakdown of pricing, what affects your quote, and how to hire right.",
-            "author": {
-              "@type": "Organization",
-              "name": "Houston Superior Painting",
-              "url": "https://houstonsuperiorpainting.com"
-            },
+            "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
               "name": "Houston Superior Painting",

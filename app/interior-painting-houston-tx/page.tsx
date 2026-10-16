@@ -65,11 +65,11 @@ const faqs = [
   },
   {
     q: "What should I ask an interior painter before hiring one in Houston?",
-    a: "Ask exactly what prep is included: patching, sanding, caulking at trim, and primer on bare or stained spots. Skipped prep is the usual reason a low bid starts peeling early. Get the product, sheen, and coat count in writing, ask for a written workmanship warranty and a certificate of insurance, and be wary of anyone who wants full payment before work starts. Our written estimate lists all of it, our warranty runs 5 years, and the price and payment schedule are in writing before you approve.",
+    a: "Ask exactly what prep is included: patching, sanding, caulking at trim, and primer on bare or stained spots. Skipped prep is the usual reason a low bid starts peeling early. Get the product, sheen, and coat count in writing, ask for a written workmanship warranty and a certificate of insurance, and be wary of anyone who wants full payment before work starts. Our written estimate lists all of it, our warranty runs 5 years, and the price, deposit and payment schedule are in writing before you approve.",
   },
   {
     q: "Are you insured in Texas?",
-    a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and the certificate of insurance comes with every estimate.",
+    a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and a current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.",
   },
   {
     q: "What does the 5-year warranty cover?",

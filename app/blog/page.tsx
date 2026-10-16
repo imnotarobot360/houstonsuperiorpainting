@@ -22,6 +22,18 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "sherwin-williams-color-of-the-year-2027-celery-houston",
+    title: "Celery SW 6421: Sherwin-Williams' 2027 Color of the Year in Houston",
+    excerpt:
+      "An airy, herbal green with subtle yellow undertones. How it reads in Houston light, where it works, and the colors Sherwin-Williams pairs with it.",
+    category: "Color Guide",
+    author: "Juan Serra",
+    publishDate: "October 15, 2026",
+    readTime: "6 min read",
+    image: "/images/blog/best-interior-colors-houston.png",
+    featured: false,
+  },
+  {
     slug: "paint-house-before-selling-houston",
     title: "Should You Paint Your Houston Home Before Selling?",
     excerpt:
@@ -674,7 +686,7 @@ const blogPosts = [
     title: "Stucco Painting in Houston: Complete Guide",
     excerpt: "Stucco homes are common throughout Houston, but painting stucco requires specialized knowledge and products. Learn how to protect and beautify your stucco exterior.",
     category: "Exterior Painting",
-    author: "Houston Superior Painting",
+    author: "Juan Serra",
     publishDate: "May 10, 2026",
     readTime: "7 min read",
     image: "/images/blog/stucco-painting-houston.jpg",
@@ -707,7 +719,7 @@ const blogPosts = [
     title: "What to Expect During a Painting Estimate",
     excerpt: "A professional painting estimate helps you understand the full scope of your project. Learn what to expect during the estimate process and how to compare quotes.",
     category: "Getting Started",
-    author: "Houston Superior Painting",
+    author: "Juan Serra",
     publishDate: "May 9, 2026",
     readTime: "5 min read",
     image: "/images/blog/painting-estimate-guide.jpg",
@@ -740,7 +752,7 @@ const blogPosts = [
     title: "Pressure Washing Before Painting: Essential Preparation",
     excerpt: "Pressure washing is one of the most important steps before exterior painting. In Houston's humid climate, proper cleaning removes mold, mildew, and debris.",
     category: "Pressure Washing",
-    author: "Houston Superior Painting",
+    author: "Juan Serra",
     publishDate: "May 7, 2026",
     readTime: "5 min read",
     image: "/images/blog/pressure-washing-houston.jpg",
@@ -751,7 +763,7 @@ const blogPosts = [
     title: "Drywall Repair Before Painting: Why It Matters",
     excerpt: "Cracks, holes, and damaged drywall can ruin an otherwise perfect paint job. Learn why professional drywall repair is essential before any interior painting project.",
     category: "Drywall Repair",
-    author: "Houston Superior Painting",
+    author: "Juan Serra",
     publishDate: "May 6, 2026",
     readTime: "5 min read",
     image: "/images/blog/drywall-repair-guide.jpg",
@@ -762,7 +774,7 @@ const blogPosts = [
     title: "Why Proper Paint Preparation Matters in Houston's Climate",
     excerpt: "Houston homeowners often wonder why some paint jobs last 10 years while others begin peeling after only 2 or 3 years. The answer is simple: preparation.",
     category: "Paint Preparation",
-    author: "Houston Superior Painting",
+    author: "Juan Serra",
     publishDate: "May 1, 2026",
     readTime: "7 min read",
     image: "/images/blog/paint-preparation-houston.jpg",

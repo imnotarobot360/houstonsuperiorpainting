@@ -78,11 +78,7 @@ export default function BestTimeToPaintBlog() {
             "headline": "Best Time to Paint Your Houston Home Exterior: A Seasonal Guide",
             "description": "Timing your exterior paint job in Houston matters. Here's the seasonal guide Houston homeowners need — including when to book and when to avoid.",
             "image": "https://houstonsuperiorpainting.com/images/blog/best-time-to-paint-houston.png",
-            "author": {
-              "@type": "Organization",
-              "name": "Houston Superior Painting",
-              "url": "https://houstonsuperiorpainting.com"
-            },
+            "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
               "name": "Houston Superior Painting",

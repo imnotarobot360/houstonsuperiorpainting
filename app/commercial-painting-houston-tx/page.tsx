@@ -72,7 +72,7 @@ const SERVICE_JSONLD = {
 const FAQS = [
   {
     q: "Can you send a certificate of insurance before the job starts?",
-    a: `Yes. We carry ${INSURANCE} and send the certificate of insurance to your property manager, HOA board or facilities team before the start date.`,
+    a: `Yes. We carry ${INSURANCE} and a current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements, so your property manager, HOA board or facilities team has it before the start date.`,
   },
   {
     q: "Do you paint after hours and on weekends?",

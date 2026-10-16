@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     q: "Are you insured in Texas?",
-    a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and the certificate of insurance comes with every estimate.",
+    a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and a current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.",
   },
   {
     q: "What does the 5-year warranty cover?",

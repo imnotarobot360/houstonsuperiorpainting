@@ -83,11 +83,7 @@ export default function BestInteriorPaintColorsHoustonHomes() {
             "@type": "Article",
             "headline": "Best Interior Paint Colors for Houston Homes",
             "description": "Interior paint colors for Houston homes: warm whites, greige, earth tones, navy and accent walls that work in our light and today's market.",
-            "author": {
-              "@type": "Organization",
-              "name": "Houston Superior Painting",
-              "url": "https://houstonsuperiorpainting.com"
-            },
+            "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
               "name": "Houston Superior Painting",

@@ -91,11 +91,7 @@ export default function CabinetTransformationsBlog() {
             "headline": "Kitchen Cabinet Color Transformations in Katy TX and Sugar Land TX",
             "description": "See how Katy and Sugar Land homeowners are transforming dated kitchens with cabinet painting — the colors, the combinations, and the results.",
             "image": "https://houstonsuperiorpainting.com/images/blog/cabinet-transformations-katy-sugar-land.png",
-            "author": {
-              "@type": "Organization",
-              "name": "Houston Superior Painting",
-              "url": "https://houstonsuperiorpainting.com"
-            },
+            "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
               "name": "Houston Superior Painting",

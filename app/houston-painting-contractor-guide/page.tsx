@@ -693,8 +693,8 @@ export default function HoustonPaintingContractorGuidePage() {
           <Link href={ESTIMATE_PATH} className="underline">
             request a free estimate
           </Link>
-          . Written scope, product spec, certificate of insurance and {WARRANTY_YEARS}-year workmanship warranty with every
-          quote.
+          . Written scope and product spec with every quote, a current certificate of insurance provided after a project is
+          approved, and a {WARRANTY_YEARS}-year written workmanship warranty.
         </CtaBlock>
       </main>
       <Footer />

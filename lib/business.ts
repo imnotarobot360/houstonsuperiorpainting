@@ -266,8 +266,8 @@ export const BUSINESS = {
 
   // Owner-approved insurance wording (brief 2026-10-14), English and Spanish.
   insuranceProof: {
-    en: "Proof of insurance is available upon request. When applicable, customers receive a current certificate of insurance after approving their project.",
-    es: "Comprobante de seguro disponible cuando el cliente lo solicite. Cuando corresponda, el cliente recibe un certificado de seguro vigente después de aprobar el proyecto.",
+    en: "A current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.",
+    es: "Hay un certificado de seguro vigente disponible cuando el cliente lo solicite, y se entrega después de aprobar el proyecto, según los requisitos del proyecto.",
   },
 
   // Specialty finishes Juan confirmed we offer (2026-10-07), beyond the

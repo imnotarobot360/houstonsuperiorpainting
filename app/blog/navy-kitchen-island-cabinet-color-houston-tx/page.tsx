@@ -91,11 +91,7 @@ export default function NavyIslandBlog() {
             "headline": "The Navy Kitchen Island Trend Houston Homeowners Are Loving Right Now",
             "description": "The navy kitchen island trend is everywhere in Houston — and it works. Here's why it looks so good, how to pull it off, and what to pair it with.",
             "image": "https://houstonsuperiorpainting.com/images/blog/navy-kitchen-island-houston.png",
-            "author": {
-              "@type": "Organization",
-              "name": "Houston Superior Painting",
-              "url": "https://houstonsuperiorpainting.com"
-            },
+            "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
               "name": "Houston Superior Painting",

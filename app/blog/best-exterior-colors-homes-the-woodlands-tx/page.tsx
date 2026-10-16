@@ -92,11 +92,7 @@ export default function BestExteriorColorsWoodlandsTXPage() {
             "@type": "Article",
             "headline": "Best Exterior Colors for Homes in The Woodlands TX",
             "description": "Choosing exterior paint colors in The Woodlands? Here's what works in this community's wooded, natural setting — and what to avoid.",
-            "author": {
-              "@type": "Organization",
-              "name": "Houston Superior Painting",
-              "url": "https://houstonsuperiorpainting.com"
-            },
+            "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
               "name": "Houston Superior Painting",
