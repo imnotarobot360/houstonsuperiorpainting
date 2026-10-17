@@ -125,13 +125,13 @@ export function strokeSegment(
 }
 
 /** Applies an on-device "smart select" mask (non-zero = inside) to one surface. */
-export function applyRegion(labels: Uint8Array, region: Uint8Array, surfaceId: number, remove: boolean) {
+export function applyRegion(labels: Uint8Array, region: Uint8Array, surfaceId: number, remove: boolean, onlyEmpty = false) {
   if (region.length !== labels.length) return
   for (let i = 0; i < region.length; i++) {
     if (!region[i]) continue
     if (remove) {
       if (labels[i] === surfaceId) labels[i] = 0
-    } else labels[i] = surfaceId
+    } else if (!onlyEmpty || labels[i] === 0) labels[i] = surfaceId
   }
 }
 
@@ -279,4 +279,248 @@ export function searchColors(colors: CatalogColor[], query: string): CatalogColo
 
 export function colorLabel(c: CatalogColor) {
   return `${c.provider} ${c.name} (${c.code})`
+}
+
+// ── Automatic surface detection (on-device) ──────────────────────────────────
+//
+// facade.worker.ts runs an open-vocabulary detector (OWL-ViT) for doors,
+// windows, shutters, garage doors, the roof and the house, then Segment
+// Anything traces each detected box. The two functions below are the pure
+// part: choosing which detections to trust, and turning the traced masks into
+// the label map. The result is a suggestion; the customer corrects it.
+
+export type Box = { x0: number; y0: number; x1: number; y1: number }
+export type Detection = { label: string; score: number; box: Box }
+
+export const DETECTION_QUERIES = {
+  house: "a house",
+  roof: "a roof",
+  window: "a window",
+  door: "a front door",
+  garage: "a garage door",
+  shutter: "a window shutter",
+} as const
+
+export type FacadeBoxes = {
+  house: Box | null
+  roofs: Box[]
+  windows: Box[]
+  doors: Box[]
+  garages: Box[]
+  shutters: Box[]
+}
+
+const area = (b: Box) => Math.max(0, b.x1 - b.x0) * Math.max(0, b.y1 - b.y0)
+const aspect = (b: Box) => (b.y1 - b.y0) / Math.max(1, b.x1 - b.x0)
+
+export function iou(a: Box, b: Box) {
+  const inter = area({ x0: Math.max(a.x0, b.x0), y0: Math.max(a.y0, b.y0), x1: Math.min(a.x1, b.x1), y1: Math.min(a.y1, b.y1) })
+  const union = area(a) + area(b) - inter
+  return union > 0 ? inter / union : 0
+}
+
+/** Share of `a` that lies inside `b`. */
+export function coverOf(a: Box, b: Box) {
+  const inter = area({ x0: Math.max(a.x0, b.x0), y0: Math.max(a.y0, b.y0), x1: Math.min(a.x1, b.x1), y1: Math.min(a.y1, b.y1) })
+  return area(a) > 0 ? inter / area(a) : 0
+}
+
+/** Non-maximum suppression: keeps the best of any overlapping boxes. */
+export function nms(dets: Detection[], maxIou = 0.45, limit = 20): Detection[] {
+  const sorted = [...dets].sort((a, b) => b.score - a.score)
+  const kept: Detection[] = []
+  for (const d of sorted) {
+    if (kept.length >= limit) break
+    if (kept.every((k) => iou(k.box, d.box) <= maxIou)) kept.push(d)
+  }
+  return kept
+}
+
+export const DETECTION_THRESHOLDS = {
+  house: 0.1,
+  roof: 0.1,
+  window: 0.1,
+  door: 0.1,
+  garage: 0.12,
+  shutter: 0.1,
+}
+
+/**
+ * Picks the detections worth tracing. Thresholds are deliberately cautious:
+ * a missed shutter costs the customer one brush stroke, a wrong one costs an
+ * erase. Only ONE front door is kept (the most confident tall door that is not
+ * a garage door); shutters must be tall and narrow.
+ */
+export function selectFacadeBoxes(dets: Detection[], width: number, height: number): FacadeBoxes {
+  const T = DETECTION_THRESHOLDS
+  const imgArea = width * height
+  const of = (q: string, t: number) => dets.filter((d) => d.label === q && d.score >= t)
+
+  const houses = of(DETECTION_QUERIES.house, T.house).filter((d) => area(d.box) >= imgArea * 0.08)
+  const house = houses.sort((a, b) => b.score - a.score)[0]?.box ?? null
+
+  const roofs = nms(of(DETECTION_QUERIES.roof, T.roof), 0.4, 6).map((d) => d.box)
+  const garages = nms(of(DETECTION_QUERIES.garage, T.garage), 0.4, 4).map((d) => d.box)
+  const windows = nms(of(DETECTION_QUERIES.window, T.window), 0.4, 24)
+    .map((d) => d.box)
+    .filter((b) => area(b) < imgArea * 0.04 && garages.every((g) => coverOf(b, g) < 0.5))
+
+  const door = nms(of(DETECTION_QUERIES.door, T.door), 0.4, 6)
+    .filter((d) => aspect(d.box) >= 1.3 && area(d.box) < imgArea * 0.15 && garages.every((g) => iou(d.box, g) < 0.3))
+    .sort((a, b) => b.score - a.score)[0]
+  const doors = door ? [door.box] : []
+
+  const openWindows = windows.filter((w) => doors.every((dr) => coverOf(w, dr) < 0.6))
+
+  // Real shutters flank a window: tall, narrow, beside a window at the same height.
+  // The detector often returns the SAME box for "window" and "window shutter";
+  // a box is a shutter only if it scores higher as a shutter than as a window,
+  // does not overlap a window, and sits beside one.
+  const windowDets = dets.filter((d) => d.label === DETECTION_QUERIES.window)
+  const shutters = nms(of(DETECTION_QUERIES.shutter, T.shutter), 0.3, 16)
+    .filter((s) => windowDets.every((w) => iou(s.box, w.box) < 0.6 || w.score < s.score))
+    .map((d) => d.box)
+    .filter((b) => aspect(b) >= 1.8 && area(b) < imgArea * 0.05 && doors.every((dr) => coverOf(b, dr) < 0.3))
+    .filter((b) => openWindows.every((w) => coverOf(b, w) < 0.5) && openWindows.some((w) => flanks(b, w)))
+
+  return { house, roofs, windows: openWindows, doors, garages, shutters }
+}
+
+/** True when `s` sits immediately left or right of window `w`, overlapping it vertically. */
+export function flanks(s: Box, w: Box) {
+  const sh = s.y1 - s.y0
+  const sw = s.x1 - s.x0
+  const wh = w.y1 - w.y0
+  const vOverlap = Math.min(s.y1, w.y1) - Math.max(s.y0, w.y0)
+  if (vOverlap < sh * 0.5) return false
+  // Same height as the window and aligned with its top (porch posts are not).
+  if (sh < wh * 0.7 || sh > wh * 1.4 || Math.abs(s.y0 - w.y0) > wh * 0.25) return false
+  const leftGap = w.x0 - s.x1
+  const rightGap = s.x0 - w.x1
+  const gap = s.x0 < w.x0 ? leftGap : rightGap
+  return gap > -sw * 0.6 && gap < sw * 1.5
+}
+
+export type TracedPart = { box: Box; mask: Uint8Array | null }
+export type FacadeMasks = {
+  house: Uint8Array | null
+  roofs: Uint8Array[]
+  windows: TracedPart[]
+  doors: TracedPart[]
+  garages: TracedPart[]
+  shutters: TracedPart[]
+}
+
+/**
+ * Builds the label map from traced masks:
+ *  body     = siding − roof − windows − garage doors − front door − shutters
+ *  trim     = a band `trimPx` wide around the traced outline of each window,
+ *             door and garage door
+ *  door     = the front door
+ *  shutters = each shutter
+ * Window glass and garage doors are left unpainted. A traced mask that covers
+ * too little of its detection box (the model missed) falls back to the box.
+ */
+export function composeFacade(width: number, height: number, m: FacadeMasks, trimPx: number): Uint8Array {
+  const n = width * height
+  const labels = new Uint8Array(n)
+  const roof = new Uint8Array(n)
+  for (const r of m.roofs) for (let i = 0; i < n; i++) if (r[i]) roof[i] = 1
+
+  if (m.house) for (let i = 0; i < n; i++) if (m.house[i] && !roof[i]) labels[i] = 1
+
+  const clampBox = (b: Box) => ({
+    x0: Math.max(0, Math.floor(b.x0)),
+    x1: Math.min(width - 1, Math.ceil(b.x1)),
+    y0: Math.max(0, Math.floor(b.y0)),
+    y1: Math.min(height - 1, Math.ceil(b.y1)),
+  })
+  const eachIn = (b: Box, fn: (i: number) => void) => {
+    const c = clampBox(b)
+    for (let y = c.y0; y <= c.y1; y++) for (let x = c.x0; x <= c.x1; x++) fn(y * width + x)
+  }
+
+  /** The part's pixels: its traced mask inside its box, or the box itself. */
+  const inPart = (p: TracedPart) => {
+    const set = new Uint8Array(n)
+    let inside = 0
+    let total = 0
+    if (p.mask) {
+      eachIn(p.box, (i) => {
+        total++
+        if (p.mask![i]) {
+          set[i] = 1
+          inside++
+        }
+      })
+    }
+    if (!p.mask || inside < total * 0.15) eachIn(p.box, (i) => (set[i] = 1))
+    return set
+  }
+
+  /** Calls fn for pixels within `r` of the part (square dilation) but outside it. */
+  const ring = (p: TracedPart, set: Uint8Array, r: number, fn: (i: number) => void) => {
+    const c = clampBox({ x0: p.box.x0 - r, y0: p.box.y0 - r, x1: p.box.x1 + r, y1: p.box.y1 + r })
+    const w = c.x1 - c.x0 + 1
+    const h = c.y1 - c.y0 + 1
+    const near = new Uint8Array(w * h)
+    // Rows: distance to the nearest set pixel, both directions.
+    for (let y = 0; y < h; y++) {
+      const dist = new Float64Array(w).fill(Infinity)
+      let last = -Infinity
+      for (let x = 0; x < w; x++) {
+        if (set[(c.y0 + y) * width + c.x0 + x]) last = x
+        dist[x] = x - last
+      }
+      last = Infinity
+      for (let x = w - 1; x >= 0; x--) {
+        if (set[(c.y0 + y) * width + c.x0 + x]) last = x
+        near[y * w + x] = Math.min(dist[x], last - x) <= r ? 1 : 0
+      }
+    }
+    // Columns, over the row result.
+    for (let x = 0; x < w; x++) {
+      const dist = new Float64Array(h).fill(Infinity)
+      let last = -Infinity
+      for (let y = 0; y < h; y++) {
+        if (near[y * w + x]) last = y
+        dist[y] = y - last
+      }
+      last = Infinity
+      for (let y = h - 1; y >= 0; y--) {
+        if (near[y * w + x]) last = y
+        const i = (c.y0 + y) * width + c.x0 + x
+        if (Math.min(dist[y], last - y) <= r && !set[i]) fn(i)
+      }
+    }
+  }
+
+  const openings = [...m.windows, ...m.garages, ...m.doors]
+  const openingSets = openings.map(inPart)
+  for (const s of openingSets) for (let i = 0; i < n; i++) if (s[i]) labels[i] = 0
+  openings.forEach((p, k) =>
+    ring(p, openingSets[k], trimPx, (i) => {
+      if (!roof[i]) labels[i] = 2
+    }),
+  )
+  m.doors.forEach((p) => {
+    const s = inPart(p)
+    for (let i = 0; i < n; i++) if (s[i]) labels[i] = 3
+  })
+  m.shutters.forEach((p) => {
+    const s = inPart(p)
+    for (let i = 0; i < n; i++) if (s[i]) labels[i] = 4
+  })
+  return labels
+}
+
+// ── Saved color combinations ────────────────────────────────────────────────
+
+export type SavedCombo = { id: string; name: string; colors: Partial<Record<number, CatalogColor | null>> }
+
+/** Short text for a combination, e.g. "Body: SW Alabaster (SW 7008); Trim: …". */
+export function describeCombo(combo: SavedCombo): string {
+  return SURFACES.filter((s) => combo.colors[s.id])
+    .map((s) => `${s.label}: ${colorLabel(combo.colors[s.id]!)}`)
+    .join("; ")
 }

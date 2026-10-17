@@ -54,13 +54,16 @@ export const LEAD_FORMS: Record<"quick" | "commercial" | "budget" | "visualizer"
     questions: [
       { id: "projectType", question: "Project type" },
       { id: "source", question: "Source" },
+      { id: "propertyPhoto", question: "Property photo" },
       { id: "surfaces", question: "Surfaces to paint" },
       { id: "bodyColor", question: "Body / siding color" },
       { id: "trimColor", question: "Trim color" },
       { id: "doorColor", question: "Front door color" },
       { id: "shuttersColor", question: "Shutters color" },
+      { id: "savedCombos", question: "Saved color combinations" },
       { id: "photosShared", question: "Photo and preview shared" },
       { id: "description", question: "Notes" },
+      { id: "testRequest", question: "Test request" },
     ],
   },
   // Budget ad funnel (/offer/houston-painting, owner request 2026-10-15).

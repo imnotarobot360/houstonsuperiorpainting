@@ -1,102 +1,104 @@
 # Exterior paint visualizer (`/paint-visualizer`)
 
-Built 2026-10-16 from the owner brief. **Not launched**: the page is `noindex`, it is excluded from
-the sitemap (`app/sitemap.ts`), and nothing links to it. The room visualizer at `/color-visualizer`
-is unchanged.
+The page is hidden: it is `noindex`, excluded from the sitemap, and not linked from anywhere.
 
-## What the customer does
+**Version 1** went live on 2026-10-16 with a photo upload, manual marking, colors, compare and a request.
+The live TEST lead (`c6746f3a…`) was received and the office email arrived.
 
-1. **Photo**: choose or drag a JPG, PNG or WebP image (up to 15 MB, at least 400 px per side). The
-   page checks it and shows it, with *Use this photo*, *Replace photo* and *Remove photo*.
-2. **Choose surfaces**: pick Body / siding, Trim, Front door or Shutters. Then mark that surface
-   with *Paint area* or *Erase* (mouse, touch or stylus), set the brush size, and use *Undo* or
-   *Clear selection*. *Smart select* is optional: the Segment Anything model runs on the device, the
-   same as on `/color-visualizer`. Its result can always be erased or undone. Finally, pick a color
-   by searching a name or code (e.g. "Alabaster", "SW 7008", "hc154"), or remove it.
-3. **Preview**: switch between *Original*, *Preview* and *Side by side*, which has a slider. You can
-   also *Download preview*.
-4. **Request estimate**: enter name, phone, email, project address, the surfaces to paint (filled
-   in from step 2) and notes, plus two consent checkboxes:
-   - **Required:** consent to share the information so the company can respond to the request.
-   - **Optional:** include the original photo and the preview.
+**Version 2** (second owner brief, 2026-10-16) adds:
+- address → Street View
+- on-device detection
+- a manufacturer filter
+- saved combinations
+- a project card
+- a separate test inbox
 
-## How the request reaches the office and InsightPaint
+It is local until pushed.
 
-No new integration was needed. It reuses the existing lead pipeline:
+## Customer flow
 
-| Step | Where |
+1. **Your home**
+   - The customer types an address and taps *Find my home*.
+   - The page shows the Street View image facing the house. Turn, tilt and zoom adjust it.
+   - *This is my home* confirms the view.
+   - *Upload a photo* is always offered as the alternative: JPG/PNG/WebP, up to 15 MB, at least 400 px.
+2. **Surfaces & colors**
+   - Detection runs on the device and selects windows with a trim band around their traced outline, garage
+     doors, one front door and shutters.
+   - **Siding is not auto-detected.** In testing, automatic siding picked trees, roofs and open garages. The
+     page asks for **one tap on the siding** instead, which selects the whole wall on the device and never
+     takes pixels already given to trim, the door or shutters.
+   - Corrections: *Paint area*, *Erase*, *Tap to select*, *Tap to remove*, *Undo*, *Clear*, *Detect again*.
+   - Colors: one per surface, a manufacturer filter, and search by name or code.
+   - *Save current* keeps up to 12 combinations, stored on this device only (localStorage).
+3. **Compare**
+   - *Before*, *After* and *Before / after* (a slider that works with touch and mouse).
+   - Other colors and saved combinations can be applied here too.
+   - *Download preview*.
+4. **Request estimate**
+   - Name, phone, email, project address (pre-filled from the search), surfaces and notes.
+   - **Project card**: address, before and after images, colors and codes per surface, saved combinations,
+     contact details, and a required consent to share the details and the photo. Optional text-message consent.
+   - Send.
+
+## Integrations
+
+| Piece | Status | What it needs |
+| --- | --- | --- |
+| Address → Street View (`/api/visualizer/address`, `/api/visualizer/streetview`) | **Blocked by Google.** `GOOGLE_MAPS_API_KEY` exists in Vercel Production, but Google answers `REQUEST_DENIED: This API is not activated` (checked 2026-10-16 from this code). | In Google Cloud project 921196166935, enable the **Geocoding API** and the **Street View Static API**, and allow both in the key's API restrictions. No code change. |
+| On-device detection (`components/paint-visualizer/facade.worker.ts`) | Works. OWL-ViT (`Xenova/owlvit-base-patch32`, q8) plus SlimSAM, loaded from Hugging Face on first use. | Nothing. The first use downloads the models, a large one-time download. |
+| Colors (`lib/visualizer/catalog.ts`) | Sherwin-Williams and Benjamin Moore, from the owner-approved list (28 colors, approximate on-screen values). | **Behr, PPG and HGTV Home: no authorized source.** None of them publishes a licensed color-data API we can use, and their sites must not be scraped. A licensed feed or a written permission is needed; plug it into `getColorCatalog()`. |
+| PRODUCTION delivery | Existing lead pipeline: `POST /api/leads` (service `visualizer`) → `leads` table + private photos → office email → InsightPaint ERP missed-lead cron. Proven live on 2026-10-16. | Nothing. |
+| TEST delivery (`/api/visualizer/test-inbox`) | Same checks and answer allow-list as `/api/leads`. Kept in memory only: no database, email or SMS. `GET` lists what arrived. Only on the local dev server, or a non-production deployment with `VISUALIZER_TEST_INBOX=on`. Never on Vercel production. | Nothing. |
+
+The mode is `live` on houstonsuperiorpainting.com and `test` everywhere else. Override it with
+`NEXT_PUBLIC_VISUALIZER_DELIVERY=live|test`.
+
+## Google terms (owner to confirm)
+
+The Street View image is not stored: it is proxied with `Cache-Control: no-store`. The lead stores the panorama
+id and camera angles ("Google Street View pano …, heading …"), so the office can open the same view. Street View
+images are **not attached** to the lead unless `NEXT_PUBLIC_VISUALIZER_ATTACH_STREETVIEW=true`. Google Maps
+Platform terms restrict caching and creating content from Google Maps content. Recoloring and storing a Street
+View image may fall under that, so confirm before turning the flag on. Uploaded photos are always attached, with
+consent.
+
+## Analytics (no address, photo or contact details)
+
+| Event | Parameters |
 | --- | --- |
-| `POST /api/leads`, `service: "visualizer"`, photos in the same request | `lib/visualizer/request.ts` → `app/api/leads/route.ts` |
-| Allowed answer keys (surfaces, body/trim/door/shutters color, photosShared, notes) | `LEAD_FORMS.visualizer` in `lib/lead-forms.ts` |
-| Photos stored privately (`leads/<token>/…`, Vercel Blob, private) | `app/api/leads/route.ts` |
-| Office email (Web3Forms, sent from the browser) and then `mark-emailed` | `lib/lead-notify.ts` |
-| If the email never goes out, the InsightPaint ERP cron reads `/api/leads/unemailed` and texts the owner | `hsp-erp/app/api/alerts/website-leads-cron` |
-| Lead record page | `/estimate/confirmed/<token>` |
+| `visualizer_started` | `start: address\|upload` |
+| `visualizer_photo_added` | `source` |
+| `visualizer_surfaces_detected` | counts only |
+| `visualizer_combo_saved` | none beyond the event |
+| `visualizer_preview_created` | none beyond the event |
+| `visualizer_estimate_submitted` | live only; `surfaces`, `source` |
 
-No InsightPaint key is in the browser, and none is needed, because the ERP pulls from the site.
-
-Photos are re-encoded from the canvas as JPEG, so camera metadata (including GPS) is never sent.
-Two images are sent: `house-original.jpg` and `house-color-preview.jpg`. The preview is only sent
-when at least one surface has a color.
-
-## Delivery mode (no real sends during testing)
-
-`resolveDeliveryMode()` in `lib/visualizer/request.ts` picks the mode:
-
-- **`live`**: only on `houstonsuperiorpainting.com` and `www.houstonsuperiorpainting.com`.
-- **`dry-run`**: everywhere else (localhost, Vercel previews). Nothing is saved, emailed or texted.
-  The form shows "Test mode" and displays the exact payload it would have sent.
-
-Override with `NEXT_PUBLIC_VISUALIZER_DELIVERY=live` or `NEXT_PUBLIC_VISUALIZER_DELIVERY=dry-run`.
-Local development uses the production database. A real test lead that is never emailed would
-trigger the ERP's missed-lead text to the owner, which is why dry-run is the default.
-
-## Before launch (needs Juan)
-
-1. Send one **TEST** request in `live` mode (name "TEST Visualizer", with photos). Check:
-   - the row in `leads` (service `visualizer`, the answers, 2 photo paths);
-   - the office email;
-   - the lead page `/estimate/confirmed/<token>`;
-   - that the ERP shows it.
-   Then mark or delete the test lead so the missed-lead alert doesn't fire.
-2. Decide how this page relates to `/color-visualizer`: link both, merge them, or keep one. Then
-   remove `noindex`, remove the sitemap exclusion, and add a menu link.
-3. Optional: connect a licensed manufacturer color catalog in `lib/visualizer/catalog.ts`.
-
-## Analytics (GA4 through `trackEvent`; no personal data)
-
-| Event | When it fires |
-| --- | --- |
-| `visualizer_started` | First click on the photo picker, or the first file chosen |
-| `visualizer_photo_added` | *Use this photo* |
-| `visualizer_preview_created` | First time the preview opens with at least one surface marked and colored |
-| `visualizer_estimate_submitted` | Live mode only, after the lead is saved |
-
-In live mode, `trackLeadCreated` (the `generate_lead` conversion) also fires, the same as the other
-forms.
+`generate_lead` also fires in live mode, as on the other forms.
 
 ## Files
 
 - `app/paint-visualizer/page.tsx`
 - `components/paint-visualizer/exterior-visualizer.tsx`
 - `components/paint-visualizer/visualizer-request-form.tsx`
-- `lib/visualizer/core.ts`: photo checks, the selection label map, brush/erase/undo, recolor, color search
-- `lib/visualizer/request.ts`: validation, payload, the duplicate-safe sender, delivery mode
-- `lib/visualizer/catalog.ts`: color source (`data/paint-colors.ts`, approximate swatches)
-- `tests/paint-visualizer.test.mjs`: run with `pnpm test`
+- `components/paint-visualizer/facade.worker.ts`
+- `lib/visualizer/core.ts`: photo checks, label map, brush, recolor, color search, detection selection and
+  composition, saved combinations
+- `lib/visualizer/request.ts`: validation, payload, duplicate-safe sender, delivery modes
+- `lib/visualizer/streetview.ts`: Google adapter, server only
+- `lib/visualizer/catalog.ts`
+- `app/api/visualizer/address/route.ts`, `app/api/visualizer/streetview/route.ts`,
+  `app/api/visualizer/test-inbox/route.ts`
+- `lib/lead-forms.ts`: `LEAD_FORMS.visualizer`
+- `tests/paint-visualizer.test.mjs` (`pnpm test`)
 
 ## Limitations
 
-- Marking is manual. Smart select is an on-device suggestion, needs a one-time model download, and
-  can fail on older phones; brush and eraser always work.
-- The recolor keeps the photo's light and shadow, but it is an approximation. It does not model
-  sheen, texture changes or material differences (brick vs siding).
-- One pixel belongs to one surface. Soft edges are not modelled, so fine trim takes care with a
-  small brush.
-- Swatches are approximate on-screen colors from a curated list (28 colors), not a manufacturer fan
-  deck.
-- Marking the photo needs a pointer (mouse, touch or stylus). Keyboard and screen-reader users can
-  complete every other step and describe their colors in the notes.
-- Notes are capped at 200 characters, because `/api/leads` caps answer values at 200.
-- Duplicate protection is on the client: one request in flight, and a success is final for that
-  page view. The server has no idempotency key.
+- Detection quality varies with the photo. Windows, trim, garage doors and doors are usually found. Shutters only
+  count when they sit beside a window at the same height. Siding always needs one tap, and may need erasing
+  around neighbors, garages or trees.
+- The recolor keeps light and shadow but does not model sheen or texture.
+- Street View images can be years old and low resolution (640×640).
+- Duplicate protection is on the client only.
+- Notes are capped at 200 characters, the same as every lead answer.
+- The local test inbox clears when the dev server restarts.
