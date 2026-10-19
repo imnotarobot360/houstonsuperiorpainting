@@ -1,1 +1,3 @@
-{}
+{
+  "crons": [{ "path": "/api/cron/indexnow-scheduled", "schedule": "30 12 * * *" }]
+}

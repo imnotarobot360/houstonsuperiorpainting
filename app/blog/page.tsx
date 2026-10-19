@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import { PRICES_2026 } from "@/lib/business"
+import { displayDate, liveScheduledPosts } from "@/lib/blog-schedule"
 
 export const metadata: Metadata = {
   title: "Painting Tips & Advice Blog | Houston Superior Painting",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   },
 }
 
-const blogPosts = [
+const staticBlogPosts = [
   {
     slug: "compare-commercial-painting-bids-houston",
     title: "How to Compare Commercial Painting Bids in Houston",
@@ -818,10 +819,23 @@ const blogPosts = [
   },
 ]
 
-const featuredPost = blogPosts.find(post => post.featured)
-const regularPosts = blogPosts.filter(post => post !== featuredPost)
-
 export default function BlogPage() {
+  // Scheduled posts (lib/blog-schedule.ts) appear on their publish date; this
+  // page renders per request, so no deploy is needed on the day.
+  const scheduled = liveScheduledPosts().map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    excerpt: p.excerpt,
+    category: p.category,
+    author: "Juan Serra",
+    publishDate: displayDate(p.publishOn),
+    readTime: p.readTime,
+    image: p.image,
+    featured: false,
+  }))
+  const blogPosts = [...scheduled, ...staticBlogPosts]
+  const featuredPost = blogPosts.find(post => post.featured)
+  const regularPosts = blogPosts.filter(post => post !== featuredPost)
   return (
     <>
       <Header />

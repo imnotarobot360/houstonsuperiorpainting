@@ -1,3 +1,4 @@
+import { isLivePath, scheduledFor } from '@/lib/blog-schedule'
 import { MetadataRoute } from 'next'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -229,8 +230,16 @@ function collectRoutes(
     const pagePath = path.join(dir, pageFile.name)
     // Skip redirect-only pages (e.g. legacy URLs that call redirect()/permanentRedirect()).
     // Including them would point crawlers at URLs that immediately 3xx elsewhere.
-    if (!isRedirectOnlyPage(pagePath)) {
-      acc.push({ route: prefix, lastModified: contentDateFor(prefix, pagePath) })
+    // Scheduled blog posts (lib/blog-schedule.ts) join the sitemap only once
+    // live; this file is built at deploy time, so the next deploy adds them.
+    if (!isRedirectOnlyPage(pagePath) && isLivePath('/' + prefix)) {
+      const scheduled = scheduledFor('/' + prefix)
+      let lastModified = contentDateFor(prefix, pagePath)
+      if (scheduled) {
+        const pub = new Date(`${scheduled.publishOn}T12:00:00Z`)
+        if (!lastModified || lastModified < pub) lastModified = pub
+      }
+      acc.push({ route: prefix, lastModified })
     }
   }
 

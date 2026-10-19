@@ -6,6 +6,8 @@
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import Link from "next/link"
+import { notFound } from "next/navigation"
+import { isLivePath } from "@/lib/blog-schedule"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import FAQ from "@/components/faq"
@@ -57,6 +59,8 @@ export function guideMetadata(d: Pick<GuideArticleData, "path" | "title" | "desc
 }
 
 export function GuideArticle({ d }: { d: GuideArticleData }) {
+  // Scheduled posts (lib/blog-schedule.ts) stay hidden until their date.
+  if (!isLivePath(d.path)) notFound()
   const parent = d.breadcrumbParent ?? { name: "Blog", path: "/blog" }
   return (
     <>
