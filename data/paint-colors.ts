@@ -83,4 +83,4 @@ export const COLOR_DISCLAIMER =
   "On-screen colors are approximate and may vary by screen, lighting and surrounding finishes. Confirm your final selection with a physical paint sample."
 
 export const BRAND_DISCLAIMER =
-  "Sherwin-Williams and Benjamin Moore are trademarks of their respective owners. Houston Superior Painting is not sponsored by or affiliated with either brand."
+  "Color names identify Sherwin-Williams and Benjamin Moore products for reference only. Houston Superior Painting is not sponsored by either manufacturer."
