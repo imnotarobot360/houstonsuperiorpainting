@@ -37,7 +37,6 @@ import {
   describeCombo,
   fitSize,
   renderPreview,
-  searchColors,
   strokeSegment,
   validatePhotoDimensions,
   validatePhotoFile,
@@ -47,6 +46,8 @@ import {
 } from "@/lib/visualizer/core"
 import type { PropertySource, RequestPhoto, SurfaceChoice } from "@/lib/visualizer/request"
 import { VisualizerRequestForm } from "@/components/paint-visualizer/visualizer-request-form"
+import { ColorPicker } from "@/components/paint-visualizer/color-picker"
+import { BRAND_DISCLAIMER } from "@/data/paint-colors"
 
 /**
  * Exterior paint visualizer (owner brief 2026-10-16, second version):
@@ -78,7 +79,6 @@ const STEPS: { n: Step; label: string }[] = [
 ]
 
 const catalog = getColorCatalog()
-const PROVIDERS = Array.from(new Set(catalog.colors.map((c) => c.provider)))
 const COMBOS_KEY = "hsp-visualizer-combos"
 const ATTACH_STREETVIEW = process.env.NEXT_PUBLIC_VISUALIZER_ATTACH_STREETVIEW === "true"
 
@@ -229,8 +229,6 @@ export function ExteriorVisualizer() {
   const [brush, setBrush] = useState(28)
   const [coverage, setCoverage] = useState(0.85)
   const [colors, setColors] = useState<Record<number, CatalogColor | null>>({})
-  const [query, setQuery] = useState("")
-  const [brand, setBrand] = useState<string>("All")
   const [view, setView] = useState<View>("compare")
   const [split, setSplit] = useState(0.5)
   const [combos, setCombos] = useState<SavedCombo[]>([])
@@ -574,7 +572,6 @@ export function ExteriorVisualizer() {
   const ghostBtn = `inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-border bg-card px-5 py-3 font-semibold text-foreground hover:border-primary ${ring}`
   const iconBtn = `inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-card text-foreground hover:border-primary disabled:opacity-50 ${ring}`
 
-  const results = searchColors(brand === "All" ? catalog.colors : catalog.colors.filter((c) => c.provider === brand), query)
   const activeColor = colors[active.id] ?? null
   const summary = SURFACES.map((s) => `${s.label}: ${counts[s.id] > 0 ? "selected" : "not selected"}${colors[s.id] ? `, ${colorLabel(colors[s.id]!)}` : ""}`).join(". ")
 
@@ -928,57 +925,21 @@ export function ExteriorVisualizer() {
                   )}
                 </div>
 
-                <div className="mt-2 flex flex-wrap gap-1.5" role="group" aria-label="Filter by manufacturer">
-                  {["All", ...PROVIDERS].map((p) => (
-                    <button key={p} type="button" aria-pressed={brand === p} onClick={() => setBrand(p)} className={`rounded-full border px-3 py-1.5 text-xs font-medium ${ring} ${brand === p ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-foreground"}`}>
-                      {p}
-                    </button>
-                  ))}
-                </div>
-                <p className="mt-1 text-[11px] text-muted-foreground">Behr, PPG and HGTV Home colors aren&apos;t available yet.</p>
-
-                <label htmlFor="pv-color-search" className="sr-only">Search colors by name or code</label>
-                <div className="relative mt-2">
-                  <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
-                  <input
-                    id="pv-color-search"
-                    type="search"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Name or code, e.g. Alabaster or SW 7008"
-                    className="w-full rounded-lg border border-border bg-background py-2.5 pl-9 pr-3 text-base text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                <div className="mt-2">
+                  <ColorPicker
+                    selected={activeColor}
+                    onPick={(c) => pickColor(c)}
+                    idPrefix="pv"
+                    listLabel={`Colors for the ${active.label.toLowerCase()}`}
                   />
                 </div>
-                <p className="mt-1 text-xs text-muted-foreground" role="status" aria-live="polite">
-                  {results.length} {results.length === 1 ? "color" : "colors"}
-                </p>
-                <ul className="mt-2 grid max-h-64 grid-cols-3 gap-2 overflow-y-auto pr-1" aria-label={`Colors for the ${active.label.toLowerCase()}`}>
-                  {results.map((c) => {
-                    const on = activeColor?.code === c.code && activeColor?.provider === c.provider
-                    return (
-                      <li key={`${c.provider}-${c.code}`}>
-                        <button
-                          type="button"
-                          onClick={() => pickColor(c)}
-                          aria-pressed={on}
-                          aria-label={`${colorLabel(c)}, approximate`}
-                          className={`w-full rounded-lg border p-1 text-left ${ring} ${on ? "border-primary ring-2 ring-primary" : "border-border"}`}
-                        >
-                          <span className="block h-10 rounded-md border border-black/10" style={{ backgroundColor: c.hex }} aria-hidden="true" />
-                          <span className="mt-1 block truncate text-[11px] font-medium text-foreground">{c.name}</span>
-                          <span className="block truncate text-[10px] text-muted-foreground">{c.code}</span>
-                        </button>
-                      </li>
-                    )
-                  })}
-                </ul>
+                <p className="mt-1 text-[11px] text-muted-foreground">Behr, PPG and HGTV Home colors aren&apos;t available yet.</p>
                 <label className="mt-3 block text-sm text-foreground">
                   Color strength: {Math.round(coverage * 100)}%
                   <input type="range" min={40} max={100} value={Math.round(coverage * 100)} onChange={(e) => setCoverage(+e.target.value / 100)} className="mt-1 w-full" />
                 </label>
                 <p className="mt-2 text-xs text-muted-foreground">
-                  On-screen colors are approximate, not manufacturer color data; confirm with a physical sample. Color names identify Sherwin-Williams and
-                  Benjamin Moore products for reference only; Houston Superior Painting is not sponsored by either manufacturer.
+                  {BRAND_DISCLAIMER}
                 </p>
 
                 <div className="mt-4 rounded-xl border border-border bg-card p-3">
