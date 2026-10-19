@@ -202,6 +202,7 @@ export default function ExteriorPaintingHoustonTX() {
         { label: "Limewash and brick painting in Houston", href: "/limewash-brick-painting-houston-tx" },
         { label: "Soft washing in Houston", href: "/soft-washing-houston-tx" },
         { label: "How often to paint a house in Houston", href: "/how-often-paint-house-houston" },
+        { label: "Primer or two coats of paint?", href: "/blog/primer-vs-two-coats-paint-houston" },
         { label: "Project: two-story exterior in The Heights", href: "/projects/heights-exterior-siding-repaint" },
         { label: "Project: stucco exterior in West University", href: "/projects/west-university-stucco-exterior" },
       ]}

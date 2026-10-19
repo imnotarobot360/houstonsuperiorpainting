@@ -193,6 +193,7 @@ export default function InteriorPaintingHoustonTX() {
         { label: "Drywall repair in Houston", href: "/drywall-repair-houston-tx" },
         { label: "Project: interior repaint in Richmond", href: "/projects/richmond-interior-repaint" },
         { label: "Try colors on your photo (color visualizer)", href: "/color-visualizer" },
+        { label: "Primer or two coats of paint?", href: "/blog/primer-vs-two-coats-paint-houston" },
       ]}
       schema={[serviceSchema]}
     />

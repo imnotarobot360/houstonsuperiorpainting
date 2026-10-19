@@ -61,11 +61,11 @@ const blogPosts = [
     slug: "primer-vs-two-coats-paint-houston",
     title: "Do You Need Primer or Two Coats of Paint?",
     excerpt:
-      "Primer and finish paint do different jobs. When walls, trim, cabinets and exteriors need primer, and how many coats is enough.",
+      "When two coats are enough, when primer is a must, and what \"paint and primer in one\" really means, with a quick guide for every surface.",
     category: "Interior Painting",
     author: "Juan Serra",
     publishDate: "October 14, 2026",
-    readTime: "5 min read",
+    readTime: "7 min read",
     image: "/images/projects/richmond-interior-arches/01-living-room-fireplace.jpg",
     featured: false,
   },

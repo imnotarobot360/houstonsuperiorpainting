@@ -58,6 +58,12 @@ const faqs = [
 
 const relatedPosts = [
   {
+    title: "Do You Need Primer or Two Coats of Paint? A Houston Painter Explains",
+    href: "/blog/primer-vs-two-coats-paint-houston",
+    excerpt: "When two coats are enough, when primer is a must, and what \"paint and primer in one\" really means.",
+    image: "/images/projects/richmond-interior-arches/01-living-room-fireplace.jpg",
+  },
+  {
     title: "Sherwin-Williams Emerald vs Duration: Which Paint Is Right for Your Houston Home?",
     href: "/blog/emerald-vs-duration-paint",
     excerpt: "Emerald and Duration cost about the same and both promise a finish that lasts. Here's which one wins where.",

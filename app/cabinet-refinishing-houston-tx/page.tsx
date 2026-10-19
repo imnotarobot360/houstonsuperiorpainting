@@ -189,6 +189,7 @@ export default function CabinetRefinishingPage() {
         { label: "Project: white and navy kitchen cabinets in Katy", href: "/projects/katy-white-navy-kitchen-cabinets" },
         { label: "Project: two-tone kitchen cabinets in Cypress", href: "/projects/cypress-two-tone-kitchen-cabinets" },
         { label: "Try cabinet colors on your photo (color visualizer)", href: "/color-visualizer" },
+        { label: "Primer or two coats of paint? (why cabinets need a bonding primer)", href: "/blog/primer-vs-two-coats-paint-houston" },
       ]}
       schema={[serviceSchema]}
     />
