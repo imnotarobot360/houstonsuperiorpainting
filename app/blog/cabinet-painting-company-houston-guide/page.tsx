@@ -6,7 +6,7 @@ const D: GuideArticleData = {
   path: "/blog/cabinet-painting-company-houston-guide",
   title: "How to Choose a Cabinet Painting Company in Houston",
   description:
-    "What separates a lasting cabinet finish from one that chips: degreasing, sanding, bonding primer, spray application and cure time. Questions to ask a Houston cabinet painter.",
+    "What separates a lasting cabinet finish from one that chips: degreasing, sanding, bonding primer, spraying and cure time. What to ask a Houston cabinet painter.",
   h1: "How to choose a cabinet painting company in Houston",
   eyebrow: "Cabinet guide",
   published: "2026-10-10",

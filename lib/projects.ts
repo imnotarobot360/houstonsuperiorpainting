@@ -529,7 +529,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     metaTitle: "Sage Green Kitchen Cabinets in Richmond, TX",
     metaDescription:
-      "Photos of raised-panel kitchen cabinets and an island painted sage green in Richmond, TX, plus a blue bathroom vanity and a living room with a dark gray fireplace accent wall.",
+      "Raised-panel kitchen cabinets and an island painted sage green in Richmond, TX, plus a blue bathroom vanity and a dark gray fireplace accent wall.",
   },
   {
     // Job photos supplied by Juan on 2026-10-12 (a different Richmond house).

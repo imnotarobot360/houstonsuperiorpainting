@@ -16,7 +16,7 @@ const URL = `${BUSINESS.url}/color-visualizer`
 export const metadata: Metadata = {
   title: "Paint Color Visualizer | Try Colors on Your Own Photo",
   description:
-    "Try paint colors on a photo of your room, house or cabinets. Runs in your browser; your photo is not uploaded. Colors are approximate; confirm with a physical sample.",
+    "Try paint colors on a photo of your room, house or cabinets. Runs in your browser; your photo isn't uploaded. Colors are approximate; confirm with a sample.",
   alternates: { canonical: URL },
 }
 

@@ -26,7 +26,7 @@ import { breadcrumbNode, ESTIMATE_PATH, CtaBlock } from "@/components/aeo/blocks
 const PAGE_URL = "https://houstonsuperiorpainting.com/about"
 const TITLE = "About Houston Superior Painting | Juan Serra, Owner, Since 2019"
 const DESCRIPTION =
-  "Houston Superior Painting was founded in 2019 by Juan Serra: a Houston painting company built around preparation, written scopes and a 5-year written workmanship warranty. Cypress HQ, five offices."
+  "Founded in 2019 by Juan Serra in Cypress: a Houston painting company built on careful prep, written scopes and a 5-year written workmanship warranty."
 
 export const metadata: Metadata = {
   title: TITLE,

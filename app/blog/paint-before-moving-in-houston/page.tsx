@@ -10,7 +10,7 @@ const D: GuideArticleData = {
   path: "/blog/paint-before-moving-in-houston",
   title: "Should You Paint Before Moving Into a Houston Home?",
   description:
-    "Painting an empty house is faster, cleaner and easier to schedule. What to paint before move-in, how to time it around closing, flooring and cabinets, and how long to wait before moving furniture in.",
+    "An empty house is faster and cleaner to paint. What to paint before move-in, how to time it around closing and flooring, and when furniture can go back in.",
   h1: "Should you paint before moving into a Houston home?",
   eyebrow: "Moving guide",
   published: "2026-10-19",

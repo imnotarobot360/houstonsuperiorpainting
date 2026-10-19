@@ -18,7 +18,7 @@ const D: GuideArticleData = {
   path: "/blog/cabinet-paint-cure-time-houston",
   title: "Cabinet Paint Cure Time: Benjamin Moore Command (7–10 Days)",
   description:
-    "Benjamin Moore Command, one of the cabinet finishes we use, dries in 15 minutes and recoats in an hour, but kitchen cabinets take 7–10 days to fully cure. What that means for your kitchen.",
+    "Benjamin Moore Command dries in 15 minutes and recoats in an hour, but painted kitchen cabinets take 7–10 days to fully cure. What that means for your kitchen.",
   h1: "How long do painted cabinets take to cure?",
   eyebrow: "Cabinet guide",
   published: "2026-10-11",

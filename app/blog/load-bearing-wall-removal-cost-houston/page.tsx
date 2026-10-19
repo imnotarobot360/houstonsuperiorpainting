@@ -6,7 +6,7 @@ import { PRICES_2026 as P } from "@/lib/business"
 const D: GuideArticleData = {
   path: "/blog/load-bearing-wall-removal-cost-houston",
   title: "Load-Bearing Wall Removal Cost in Houston (2026)",
-  description: `Removing a load-bearing wall in Houston costs ${P.wallRemoval} in 2026, mostly depending on the span. What drives the price: beam, engineer, permit, utilities and finish work.`,
+  description: `Removing a load-bearing wall in Houston costs ${P.wallRemoval} in 2026, mostly by span. What drives the price: beam, engineer, permit, utilities and finish work.`,
   h1: "Load-bearing wall removal cost in Houston (2026)",
   eyebrow: "Cost guide",
   published: "2026-10-11",

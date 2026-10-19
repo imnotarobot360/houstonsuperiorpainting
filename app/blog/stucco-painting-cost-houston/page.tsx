@@ -6,7 +6,7 @@ import { PRICES_2026 as P } from "@/lib/business"
 const D: GuideArticleData = {
   path: "/blog/stucco-painting-cost-houston",
   title: "Stucco Painting Cost in Houston (2026) | Repairs & Coatings",
-  description: `Painting a stucco home in Houston costs ${P.stuccoPainting} for most projects in 2026. What moves the price: size, crack repair, elastomeric vs acrylic, height and washing.`,
+  description: `Painting a stucco home in Houston costs ${P.stuccoPainting} for most 2026 projects. What moves the price: size, cracks, elastomeric vs acrylic, height and washing.`,
   h1: "Stucco painting cost in Houston (2026)",
   eyebrow: "Cost guide",
   published: "2026-10-11",

@@ -17,9 +17,9 @@ import { BUSINESS } from "@/lib/business"
 
 const PATH = "/fine-finish-painting-houston"
 const URL = `${BUSINESS.url}${PATH}`
-const TITLE = "Fine Finish Painting in Houston | Trim, Doors, Built-Ins & Cabinets"
+const TITLE = "Fine Finish Painting Houston | Trim, Doors, Built-Ins & Cabinets"
 const DESCRIPTION =
-  "Fine finish painting for Houston trim, doors, crown molding, built-ins, cabinetry and millwork: sanding, bonding primer, durable urethane enamels and a careful walkthrough."
+  "Fine finish painting for Houston trim, doors, crown molding, built-ins and cabinetry: sanding, bonding primer, urethane enamels and a careful walkthrough."
 const H1 = "Fine Finish Painting in Houston"
 
 const CF = BUSINESS.cabinetFinish

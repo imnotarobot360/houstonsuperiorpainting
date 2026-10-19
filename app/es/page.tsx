@@ -19,7 +19,7 @@ const PATH = "/es"
 const URL = `${BUSINESS.url}${PATH}`
 const TITLE = "Pintores en Houston | Houston Superior Painting (Español)"
 const DESCRIPTION =
-  "Pintura interior y exterior, gabinetes, drywall, estuco y pintura comercial en Houston. Estimados por escrito gratis. Garantía escrita de cinco años. Hablamos español."
+  "Pintura interior y exterior, gabinetes, drywall, estuco y comercial en Houston. Estimados por escrito gratis. Garantía escrita de 5 años. Hablamos español."
 
 const WARRANTY_ES =
   "Ofrecemos una garantía escrita de cinco años sobre la mano de obra, sujeta a los términos, exclusiones y alcance incluidos en el estimado."

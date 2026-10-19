@@ -20,7 +20,7 @@ const PATH = "/paint-color-consultation-houston"
 const URL = `${BUSINESS.url}${PATH}`
 const TITLE = "Paint Color Consultation in Houston | Free with Your Estimate"
 const DESCRIPTION =
-  "Free paint color consultation for Houston homes: in person, by video or from photos, matched to your floors, counters, roof and brick, with sheen advice and real paint samples."
+  "Free paint color consultation in Houston, in person, by video or from photos, matched to your floors, counters, roof and brick, with real paint samples."
 const H1 = "Paint Color Consultation in Houston"
 
 const FAQS = [

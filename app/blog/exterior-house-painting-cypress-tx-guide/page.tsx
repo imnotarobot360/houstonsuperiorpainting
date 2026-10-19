@@ -6,7 +6,7 @@ const D: GuideArticleData = {
   path: "/blog/exterior-house-painting-cypress-tx-guide",
   title: "Exterior House Painting in Cypress, TX: Prep, Products & Pricing",
   description:
-    "How Cypress shade, mildew and humidity affect exterior paint, the prep steps that make it last, which products to ask for, HOA approvals and how exterior pricing is built.",
+    "How Cypress shade, mildew and humidity affect exterior paint, the prep that makes it last, products to ask for, HOA approvals and how pricing is built.",
   h1: "Exterior house painting in Cypress: preparation, products and pricing",
   eyebrow: "Cypress guide",
   published: "2026-10-10",

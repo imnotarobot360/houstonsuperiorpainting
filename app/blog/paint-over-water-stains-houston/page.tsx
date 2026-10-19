@@ -14,7 +14,7 @@ const D: GuideArticleData = {
   path: "/blog/paint-over-water-stains-houston",
   title: "Can You Paint Over Water Stains? What Must Be Fixed First",
   description:
-    "Painting over a water stain only works after the leak is fixed, the area is dry, mold is ruled out and a stain-blocking primer goes on. A Houston painter's checklist.",
+    "Paint over a water stain only after the leak is fixed, the area is dry, mold is ruled out and a stain-blocking primer goes on. A Houston painter's checklist.",
   h1: "Can you paint over water stains? What must be fixed first",
   eyebrow: "Repair guide",
   published: "2026-10-19",

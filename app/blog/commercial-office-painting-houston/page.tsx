@@ -6,7 +6,7 @@ const D: GuideArticleData = {
   path: "/blog/commercial-office-painting-houston",
   title: "Commercial Office Painting in Houston Without Disruption",
   description:
-    "How to repaint an occupied Houston office without stopping work: after-hours and phased schedules, low-odor paint, protecting furniture and IT, tenant notices and building-management coordination.",
+    "How to repaint an occupied Houston office without stopping work: after-hours and phased schedules, low-odor paint, protecting furniture and IT, building rules.",
   h1: "Commercial office painting in Houston without disrupting operations",
   eyebrow: "Commercial guide",
   published: "2026-10-10",

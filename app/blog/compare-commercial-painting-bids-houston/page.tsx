@@ -12,7 +12,7 @@ const D: GuideArticleData = {
   path: "/blog/compare-commercial-painting-bids-houston",
   title: "How to Compare Commercial Painting Bids in Houston",
   description:
-    "Why commercial painting bids for the same building can differ by thousands, how to level them with one scope sheet, the red flags to watch for, and the questions to ask before you sign.",
+    "Why commercial painting bids for the same building differ, how to level them with one scope sheet, red flags to watch for, and questions to ask before you sign.",
   h1: "How to compare commercial painting bids in Houston",
   eyebrow: "Commercial guide",
   published: "2026-10-19",

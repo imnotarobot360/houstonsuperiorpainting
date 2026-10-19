@@ -9,7 +9,7 @@ const D: GuideArticleData = {
   path: "/blog/how-to-verify-painting-contractor-insurance-houston",
   title: "How to Verify a Painting Contractor's Insurance in Houston",
   description:
-    "Texas does not license painters, so insurance is the check that matters. How to read a certificate of insurance, confirm it is active, and what to ask a Houston painter.",
+    "Texas doesn't license painters, so insurance is the check that matters. How to read a certificate of insurance, confirm it's active, and what to ask a painter.",
   h1: "How to verify a painting contractor's insurance in Houston",
   eyebrow: "Hiring guide",
   published: "2026-10-10",
