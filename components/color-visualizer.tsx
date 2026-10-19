@@ -46,12 +46,21 @@ export function ColorVisualizer({ onColorChange }: { onColorChange?: (label: str
   const [tolerance, setTolerance] = useState(28)
   const [coverage, setCoverage] = useState(0.85)
   const [split, setSplit] = useState(0)
+  const [colorSearch, setColorSearch] = useState("")
+  const [colorBrand, setColorBrand] = useState<"All" | PaintColor["brand"]>("All")
   const [color, setColor] = useState<{ label: string; hex: string }>({
     label: `${PAINT_COLORS[7].brand} ${PAINT_COLORS[7].name} (${PAINT_COLORS[7].code})`,
     hex: PAINT_COLORS[7].hex,
   })
   const [canUndo, setCanUndo] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const normalizedColorSearch = colorSearch.toLowerCase().replace(/[^a-z0-9]/g, "")
+  const matchingColors = PAINT_COLORS.filter((paintColor) => {
+    if (colorBrand !== "All" && paintColor.brand !== colorBrand) return false
+    if (!normalizedColorSearch) return true
+    return `${paintColor.name}${paintColor.code}${paintColor.brand}`.toLowerCase().replace(/[^a-z0-9]/g, "").includes(normalizedColorSearch)
+  })
+  const visibleColors = matchingColors.slice(0, 80)
 
   useEffect(() => onColorChange?.(color.label), [color.label, onColorChange])
 
@@ -464,8 +473,34 @@ export function ColorVisualizer({ onColorChange }: { onColorChange?: (label: str
         <p className="mb-2 text-sm font-semibold text-foreground">
           Selected: <span className="font-normal">{color.label}</span>
         </p>
+        <div className="mb-3 grid gap-2 sm:grid-cols-[1fr_auto]">
+          <label className="sr-only" htmlFor="room-color-search">Search colors by name or code</label>
+          <input
+            id="room-color-search"
+            type="search"
+            value={colorSearch}
+            onChange={(event) => setColorSearch(event.target.value)}
+            placeholder="Search 1,700+ colors by name or code"
+            className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground"
+          />
+          <label className="sr-only" htmlFor="room-color-brand">Filter by paint brand</label>
+          <select
+            id="room-color-brand"
+            value={colorBrand}
+            onChange={(event) => setColorBrand(event.target.value as typeof colorBrand)}
+            className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground"
+          >
+            <option value="All">All brands</option>
+            <option value="Sherwin-Williams">Sherwin-Williams</option>
+            <option value="Benjamin Moore">Benjamin Moore</option>
+          </select>
+        </div>
+        <p className="mb-2 text-xs text-muted-foreground" aria-live="polite">
+          Showing {visibleColors.length} of {matchingColors.length} matching colors
+          {matchingColors.length > visibleColors.length ? ". Search by name or code to narrow the list." : ""}
+        </p>
         <div className="grid grid-cols-4 gap-2 sm:grid-cols-7">
-          {PAINT_COLORS.map((c: PaintColor) => {
+          {visibleColors.map((c: PaintColor) => {
             const label = `${c.brand} ${c.name} (${c.code})`
             const active = color.label === label
             return (
