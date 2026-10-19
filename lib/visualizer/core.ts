@@ -243,8 +243,9 @@ export function renderPreview(src: Uint8ClampedArray, labels: Uint8Array, width:
 
 /**
  * A color the customer can choose. `provider` is the manufacturer or catalog
- * name exactly as the configured source gives it; `hex` is an on-screen
- * approximation, never official color data.
+ * name exactly as the configured source gives it. `hex` is the value used on
+ * screen: Sherwin-Williams' published digital value for SW colors, an
+ * approximation for others. Screens vary; physical samples decide.
  */
 export type CatalogColor = {
   provider: string
@@ -252,6 +253,11 @@ export type CatalogColor = {
   code: string
   hex: string
   family?: string
+  /** Sherwin-Williams Designer Color Collection fields, when published. */
+  collection?: string
+  lrv?: number
+  /** Fan-deck locator from the ColorSnap list, when published. */
+  locator?: string
 }
 
 /** The interface a future licensed catalog plugs into. */
@@ -263,18 +269,46 @@ export type ColorCatalog = {
   colors: CatalogColor[]
 }
 
-function normalize(s: string) {
-  return s.toLowerCase().replace(/[^a-z0-9]/g, "")
+/** Lowercase, accents removed ("Über" → "uber"), letters and digits only. */
+export function normalize(s: string) {
+  return s
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "")
 }
 
-/** Search by name, code or provider; "sw7008", "SW 7008" and "7008" all match. */
+/**
+ * Search by name, code or provider: "sw7008", "SW 7008", "7008", "alabaster"
+ * and "uber umber" all work. Results are ranked: exact code, code prefix, name
+ * prefix, a word in the name starting with the query, then any match. Order is
+ * otherwise kept, so featured colors stay ahead of the full catalog.
+ */
 export function searchColors(colors: CatalogColor[], query: string): CatalogColor[] {
   const q = normalize(query)
   if (!q) return colors
-  return colors.filter((c) => {
+  const qDigits = q.replace(/^(sw|bm)/, "")
+  const scored: { c: CatalogColor; s: number; i: number }[] = []
+  colors.forEach((c, i) => {
     const code = normalize(c.code)
-    return normalize(c.name).includes(q) || code.includes(q) || normalize(c.provider + c.code).includes(q) || normalize(c.provider).startsWith(q)
+    const codeDigits = code.replace(/^(sw|bm)/, "")
+    const name = normalize(c.name)
+    let s = 0
+    if (code === q || (qDigits && codeDigits === qDigits)) s = 5
+    else if (code.startsWith(q) || (qDigits.length >= 2 && codeDigits.startsWith(qDigits))) s = 4
+    else if (name.startsWith(q)) s = 3
+    else if (c.name.split(/[\s-]+/).some((w) => normalize(w).startsWith(q))) s = 2
+    else if (name.includes(q) || code.includes(q) || normalize(c.provider + c.code).includes(q) || normalize(c.provider).startsWith(q)) s = 1
+    if (s) scored.push({ c, s, i })
   })
+  return scored.sort((a, b) => b.s - a.s || a.i - b.i).map((x) => x.c)
+}
+
+/** Featured colors first, then the rest, with duplicates (same provider + code) removed. */
+export function mergeCatalogs(featured: CatalogColor[], rest: CatalogColor[]): CatalogColor[] {
+  const key = (c: CatalogColor) => `${c.provider}|${normalize(c.code)}`
+  const seen = new Set(featured.map(key))
+  return [...featured, ...rest.filter((c) => !seen.has(key(c)))]
 }
 
 export function colorLabel(c: CatalogColor) {

@@ -2,7 +2,9 @@
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
 import { Brush, Eraser, Wand2, Undo2, RotateCcw, Download, ImagePlus, Sparkles, MinusCircle } from "lucide-react"
-import { PAINT_COLORS, COLOR_DISCLAIMER, type PaintColor } from "@/data/paint-colors"
+import { PAINT_COLORS, COLOR_DISCLAIMER } from "@/data/paint-colors"
+import { ColorPicker } from "@/components/paint-visualizer/color-picker"
+import { colorLabel } from "@/lib/visualizer/core"
 import { trackEvent } from "@/lib/analytics"
 
 /**
@@ -46,6 +48,7 @@ export function ColorVisualizer({ onColorChange }: { onColorChange?: (label: str
   const [tolerance, setTolerance] = useState(28)
   const [coverage, setCoverage] = useState(0.85)
   const [split, setSplit] = useState(0)
+  const [picked, setPicked] = useState<{ provider: string; code: string } | null>({ provider: PAINT_COLORS[7].brand, code: PAINT_COLORS[7].code })
   const [color, setColor] = useState<{ label: string; hex: string }>({
     label: `${PAINT_COLORS[7].brand} ${PAINT_COLORS[7].name} (${PAINT_COLORS[7].code})`,
     hex: PAINT_COLORS[7].hex,
@@ -464,38 +467,30 @@ export function ColorVisualizer({ onColorChange }: { onColorChange?: (label: str
         <p className="mb-2 text-sm font-semibold text-foreground">
           Selected: <span className="font-normal">{color.label}</span>
         </p>
-        <div className="grid grid-cols-4 gap-2 sm:grid-cols-7">
-          {PAINT_COLORS.map((c: PaintColor) => {
-            const label = `${c.brand} ${c.name} (${c.code})`
-            const active = color.label === label
-            return (
-              <button
-                key={c.code}
-                type="button"
-                onClick={() => {
-                  setColor({ label, hex: c.hex })
-                  trackEvent("color_visualizer_color", { color: label })
-                }}
-                aria-pressed={active}
-                title={label}
-                className={`rounded-lg border p-1 text-left ${active ? "border-primary ring-2 ring-primary" : "border-border"}`}
-              >
-                <span className="block h-10 rounded-md border border-black/10" style={{ backgroundColor: c.hex }} aria-hidden="true" />
-                <span className="mt-1 block truncate text-[11px] font-medium text-foreground">{c.name}</span>
-                <span className="block truncate text-[10px] text-muted-foreground">{c.brand === "Sherwin-Williams" ? "SW" : "BM"} {c.code.replace(/^SW /, "")}</span>
-              </button>
-            )
-          })}
-          <label className="flex flex-col items-center justify-center rounded-lg border border-border p-1 text-[11px] text-foreground">
-            <input
-              type="color"
-              value={color.hex}
-              onChange={(e) => setColor({ label: `Custom color ${e.target.value.toUpperCase()}`, hex: e.target.value })}
-              className="h-10 w-full cursor-pointer"
-            />
-            Custom
-          </label>
-        </div>
+        <ColorPicker
+          selected={picked}
+          onPick={(c) => {
+            const label = colorLabel(c)
+            setPicked({ provider: c.provider, code: c.code })
+            setColor({ label, hex: c.hex })
+            trackEvent("color_visualizer_color", { color: label })
+          }}
+          idPrefix="cv"
+          listLabel="Paint colors"
+          gridClassName="grid-cols-4 sm:grid-cols-6 lg:grid-cols-7"
+        />
+        <label className="mt-3 flex items-center gap-3 text-sm text-foreground">
+          <input
+            type="color"
+            value={color.hex}
+            onChange={(e) => {
+              setPicked(null)
+              setColor({ label: `Custom color ${e.target.value.toUpperCase()}`, hex: e.target.value })
+            }}
+            className="h-10 w-14 cursor-pointer rounded border border-border"
+          />
+          Or pick a custom color
+        </label>
         <p className="mt-3 text-xs text-muted-foreground">{COLOR_DISCLAIMER}</p>
       </div>
     </div>
