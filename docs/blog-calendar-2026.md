@@ -57,3 +57,24 @@ needed on the day.
 - **#23 furniture:** what do our crews move, and what does the customer move? Written as common practice; says the written estimate states what is included.
 - **#25 on-site vs off-site:** where are cabinet doors sprayed: in a shop, or at the home? Written as a neutral comparison of both approaches.
 - **#22 high ceilings:** do we use our own scaffolding or lifts, or rent them? Written generally, with no equipment-ownership claim.
+
+## Extension, Nov 10–23 (added 2026-10-19 so daily posting continues)
+
+| Date | Post | URL |
+|---|---|---|
+| Nov 10 | Painting interior doors | /blog/painting-interior-doors-houston |
+| Nov 11 | Painting over dark walls with a light color | /blog/paint-dark-walls-lighter-color |
+| Nov 12 | Interior painting before the holidays | /blog/interior-painting-before-holidays-houston |
+| Nov 13 | Caulking before exterior painting | /blog/caulking-before-exterior-painting-houston |
+| Nov 14 | Soffit and fascia painting | /blog/soffit-fascia-painting-houston |
+| Nov 15 | Front door paint in Houston sun | /blog/front-door-paint-houston-sun |
+| Nov 16 | Garage door painting | /blog/garage-door-painting-houston |
+| Nov 17 | Metal railings, gates and fences | /blog/painting-metal-railings-gates-houston |
+| Nov 18 | Ceiling paint: white vs. color | /blog/ceiling-paint-color-white-vs-color |
+| Nov 19 | Washable kitchen wall paint | /blog/kitchen-wall-paint-washable-houston |
+| Nov 20 | Nursery and kids' room painting | /blog/nursery-kids-room-painting |
+| Nov 21 | How much paint for a room | /blog/how-much-paint-for-a-room |
+| Nov 22 | Window trim and sills | /blog/window-trim-sill-painting-houston |
+| Nov 23 | Shiplap and board and batten | /blog/painting-shiplap-board-and-batten-houston |
+
+All scheduled. To continue past Nov 23, add posts to `BLOG_SCHEDULE` starting Nov 24 (the tests enforce one per day with no gaps).
