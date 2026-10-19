@@ -4,9 +4,8 @@ import { Bullets } from "@/components/aeo/blocks"
 import { BUSINESS } from "@/lib/business"
 
 // Daily calendar post (lib/blog-schedule.ts), publishes 2026-11-04.
-// The site states we remove doors and spray them flat; WHERE we spray is not
-// confirmed by the owner, so the post compares both approaches neutrally and
-// says the estimate states the process.
+// Owner confirmed 2026-10-19: we paint cabinets AT THE HOME (on-site); doors
+// are removed and sprayed flat. The comparison stays balanced and accurate.
 
 const D: GuideArticleData = {
   path: "/blog/cabinet-painting-on-site-vs-off-site",
@@ -24,6 +23,8 @@ const D: GuideArticleData = {
       spray booth: controlled dust and drying, but your kitchen is without doors longer and they travel.{" "}
       <strong>On-site</strong> means a temporary spray area at your home: no transport and often a shorter timeline, but
       more setup and containment. Either can give an excellent finish; the prep and products matter more than the location.
+      At {BUSINESS.name}, we paint cabinets at your home, with the doors and drawer fronts removed and sprayed flat in a
+      contained work area.
     </>
   ),
   sections: [
@@ -87,11 +88,13 @@ const D: GuideArticleData = {
       ),
     },
     {
-      title: "How it shows up on our estimate",
+      title: "How we do it",
       body: (
         <p>
-          Our cabinet estimates list the prep, products, coats, where and how the doors are finished, the expected timeline,
-          and anything quoted separately (such as grain filling or new hardware). See{" "}
+          We paint cabinets on-site, at your home. Doors and drawer fronts are labeled, removed and sprayed flat in a
+          contained work area, and the cabinet boxes are painted in place with the kitchen protected from dust and
+          overspray. Our cabinet estimates list the prep, products, coats, the expected timeline, and anything quoted
+          separately (such as grain filling or new hardware). See{" "}
           <Link href="/cabinet-refinishing-houston-tx">cabinet refinishing in Houston</Link>,{" "}
           <Link href="/blog/cabinet-painting-company-houston-guide">how to choose a cabinet painting company</Link> and{" "}
           <Link href="/blog/fill-oak-grain-before-painting-cabinets">filling oak grain</Link>.{" "}
@@ -101,6 +104,10 @@ const D: GuideArticleData = {
     },
   ],
   faqs: [
+    {
+      q: "Does Houston Superior Painting paint cabinets on-site or off-site?",
+      a: "On-site, at your home. Doors and drawer fronts are removed and sprayed flat in a contained work area, and the cabinet boxes are painted in place.",
+    },
     {
       q: "Is off-site cabinet painting better?",
       a: "Not automatically. A shop gives more control over dust and drying, but on-site spraying with good containment can give an excellent finish. Prep, primer and enamel matter more than location.",

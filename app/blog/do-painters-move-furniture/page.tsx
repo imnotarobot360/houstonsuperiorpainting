@@ -4,33 +4,33 @@ import { Bullets, Steps } from "@/components/aeo/blocks"
 import { BUSINESS } from "@/lib/business"
 
 // Daily calendar post (lib/blog-schedule.ts), publishes 2026-11-01.
-// Our own furniture policy is NOT confirmed by the owner, so the post describes
-// common practice and says the written estimate states what is included.
+// Owner confirmed 2026-10-19: our crews move ALL heavy furniture, except
+// expensive or fragile items, which the customer moves.
 
 const D: GuideArticleData = {
   path: "/blog/do-painters-move-furniture",
   title: "Do Professional Painters Move and Protect Furniture?",
   description:
-    "What painters usually move and cover, what you should handle yourself before painting day, and what your written estimate should say about it.",
+    "Our crews move all heavy furniture and cover it; you handle only expensive or fragile items. What to do before painting day and what the estimate says.",
   h1: "Do professional painters move and protect furniture?",
   eyebrow: "Prep guide",
   published: "2026-11-01",
   updated: "2026-11-01",
   quickAnswer: (
     <>
-      Most professional painters move furniture away from the walls to the middle of the room and cover it, and protect
-      floors, but they usually ask you to clear small and valuable items first: décor, electronics, pictures, books and
-      anything fragile. Very heavy or specialty pieces (pianos, safes, large aquariums, loaded bookcases) are often
-      excluded or need special arrangements. The written estimate should say exactly what the crew will move and protect.
+      Yes. At {BUSINESS.name}, our crews move all the heavy furniture (sofas, beds, dressers, tables, cabinets) away
+      from the walls, cover it, and protect the floors. The one exception is anything expensive or fragile, such as
+      electronics, artwork, antiques, collectibles, heirlooms and breakables: we ask you to move or pack those yourself,
+      so they are handled by the person who knows their value. Your written estimate states what is included.
     </>
   ),
   sections: [
     {
-      title: "What painters usually handle",
+      title: "What our crews handle",
       body: (
         <Bullets
           items={[
-            "Moving standard furniture (sofas, beds, tables, dressers) away from walls, usually to the center of the room.",
+            "Moving all heavy furniture (sofas, beds, dressers, tables, cabinets) away from the walls, usually to the center of the room, and putting it back.",
             "Covering furniture with plastic and drop cloths, and covering floors.",
             "Removing and replacing outlet covers, switch plates and, where agreed, light fixtures or hardware.",
             "Taking down and rehanging window treatments and wall-mounted items if the estimate includes it.",
@@ -53,12 +53,12 @@ const D: GuideArticleData = {
       ),
     },
     {
-      title: "Items painters often won't move",
+      title: "What we ask you to move: expensive or fragile items",
       body: (
         <p>
-          Pianos, gun safes, large aquariums, waterbeds, fully loaded bookcases and antiques are commonly excluded because
-          of weight, value or risk. If something can&apos;t be moved, the crew can usually paint around it or the estimate
-          can include a specialty mover. Ask before painting day, not on it.
+          Electronics, artwork, antiques, collectibles, heirlooms, glass and anything breakable stay with you: please move
+          or pack them before painting day. If a valuable piece is too big to move yourself, such as a piano or a
+          display cabinet, tell us at the walkthrough and we&apos;ll paint around it or plan for a specialty mover.
         </p>
       ),
     },
@@ -78,22 +78,22 @@ const D: GuideArticleData = {
   faqs: [
     {
       q: "Do painters move furniture?",
-      a: "Most move standard furniture away from the walls and cover it, but ask you to clear small, fragile and valuable items first. The written estimate should say exactly what is included.",
+      a: "Ours do: our crews move all heavy furniture away from the walls, cover it and put it back. We ask you to move only expensive or fragile items.",
     },
     {
       q: "Should I move furniture before painters come?",
-      a: "Clear small items, valuables and electronics, and empty heavy pieces like bookcases. Leave larger furniture to the crew if the estimate includes moving it.",
+      a: "Move or pack only expensive or fragile items (electronics, artwork, antiques, breakables) and empty shelves and drawers. Leave the heavy furniture to our crew.",
     },
     {
       q: "Do painters cover floors and furniture?",
       a: "They should. Furniture is covered with plastic or drop cloths and floors are protected throughout the job.",
     },
     {
-      q: "Will painters move a piano or a safe?",
-      a: "Often not, because of weight and risk. The crew can paint around it, or a specialty mover can be arranged; agree on it before the job.",
+      q: "Will you move a piano or other valuable piece?",
+      a: "Valuable and delicate pieces are the exception to what we move. Tell us at the walkthrough: we can paint around it, or you can arrange a specialty mover.",
     },
   ],
-  limitations: <>General guidance on common practice. What is included on your project is the scope in your written estimate.</>,
+  limitations: <>What is included on your project is the scope in your written estimate.</>,
   related: [
     { label: "How to prepare your home for interior painting", href: "/blog/how-to-prepare-home-for-interior-painting" },
     { label: "Staying home during interior painting", href: "/blog/stay-home-during-interior-painting-houston" },

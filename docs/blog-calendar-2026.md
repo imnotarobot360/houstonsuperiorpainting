@@ -52,11 +52,11 @@ needed on the day.
 | 29 | Medical and dental offices | **Scheduled Nov 8** | /blog/medical-dental-office-painting-houston |
 | 30 | HOA and multifamily painting | **Scheduled Nov 9** | /blog/hoa-multifamily-painting-houston |
 
-## Written without confirmed company practice (update if you want them to state ours)
+## Company practices confirmed by the owner (2026-10-19)
 
-- **#23 furniture:** what do our crews move, and what does the customer move? Written as common practice; says the written estimate states what is included.
-- **#25 on-site vs off-site:** where are cabinet doors sprayed: in a shop, or at the home? Written as a neutral comparison of both approaches.
-- **#22 high ceilings:** do we use our own scaffolding or lifts, or rent them? Written generally, with no equipment-ownership claim.
+- **#23 furniture:** our crews move all heavy furniture; the customer moves expensive or fragile items. Post updated.
+- **#25 cabinets:** painted on-site at the home; doors removed and sprayed flat in a contained area. Post updated.
+- **#22 high ceilings:** we own scaffolding. Post updated.
 
 ## Extension, Nov 10–23 (added 2026-10-19 so daily posting continues)
 

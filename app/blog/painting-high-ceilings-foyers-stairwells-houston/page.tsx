@@ -4,8 +4,8 @@ import { Bullets, Steps } from "@/components/aeo/blocks"
 import { BUSINESS, PRICES_2026 as P } from "@/lib/business"
 
 // Daily calendar post (lib/blog-schedule.ts), publishes 2026-11-02.
-// Equipment ownership is not confirmed by the owner: no claim about owning
-// scaffolding or lifts. Price only from PRICES_2026.
+// Owner confirmed 2026-10-19: we own scaffolding (no claim about lifts).
+// Price only from PRICES_2026.
 
 const D: GuideArticleData = {
   path: "/blog/painting-high-ceilings-foyers-stairwells-houston",
@@ -20,8 +20,9 @@ const D: GuideArticleData = {
     <>
       Two-story foyers, stairwells and vaulted ceilings are some of the hardest areas in a home to paint well. They need
       safe access (tall extension ladders, stair-leveling ladders, scaffolding or a lift), careful protection of stairs,
-      railings and chandeliers, and good lighting to catch misses from a distance. That extra setup and time is why high
-      areas cost more per square foot than an ordinary room.
+      railings and chandeliers, and good lighting to catch misses from a distance. {BUSINESS.name} has its own
+      scaffolding for tall foyers and stairwells. That extra setup and time is why high areas cost more per square foot
+      than an ordinary room.
     </>
   ),
   sections: [
@@ -81,6 +82,10 @@ const D: GuideArticleData = {
     {
       q: "Why does painting a two-story foyer cost more?",
       a: "It needs tall ladders, stair-leveling equipment, scaffolding or a lift, more protection and more time to set up and move, so it costs more per square foot than an ordinary room.",
+    },
+    {
+      q: "Do you have scaffolding for tall foyers and stairwells?",
+      a: "Yes. We have our own scaffolding and set it up for tall foyers, stairwells and high ceilings, along with stair-leveling ladders where they fit better.",
     },
     {
       q: "How do painters reach high ceilings over stairs?",
