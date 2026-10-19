@@ -22,6 +22,18 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "paint-before-moving-in-houston",
+    title: "Should You Paint Before Moving Into a Houston Home?",
+    excerpt:
+      "An empty house is the easiest it will ever be to paint. What to paint first, how to time it around closing, flooring and cabinets, and when furniture can go in.",
+    category: "Interior Painting",
+    author: "Juan Serra",
+    publishDate: "October 19, 2026",
+    readTime: "6 min read",
+    image: "/images/projects/richmond-great-room/01-great-room-fireplace.jpg",
+    featured: false,
+  },
+  {
     slug: "paint-over-water-stains-houston",
     title: "Can You Paint Over Water Stains? What Must Be Fixed First",
     excerpt:

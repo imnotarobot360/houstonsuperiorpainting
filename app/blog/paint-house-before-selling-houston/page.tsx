@@ -131,6 +131,7 @@ const D: GuideArticleData = {
     </>
   ),
   related: [
+    { label: "Should you paint before moving in?", href: "/blog/paint-before-moving-in-houston" },
     { label: "Interior painting in Houston", href: "/interior-painting-houston-tx" },
     { label: "Interior painting cost in Houston", href: "/interior-painting-cost-houston" },
     { label: "Exterior painting in Houston", href: "/exterior-painting-houston-tx" },
