@@ -79,15 +79,6 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     keyword: "wood rot exterior painting",
   },
 
-]
-
-/**
- * Written-in-advance queue: posts on the calendar whose pages are not written
- * yet. Nothing on the site reads this list. When a post is written, move its
- * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
- * scheduled post has a page).
- */
-export const PLANNED_POSTS: ScheduledPost[] = [
   {
     slug: "why-paint-touch-ups-dont-match",
     publishOn: "2026-10-25",
@@ -158,6 +149,15 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     image: "/images/drywall-before-1.jpg",
     keyword: "painting after foundation repair",
   },
+]
+
+/**
+ * Written-in-advance queue: posts on the calendar whose pages are not written
+ * yet. Nothing on the site reads this list. When a post is written, move its
+ * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
+ * scheduled post has a page).
+ */
+export const PLANNED_POSTS: ScheduledPost[] = [
   {
     slug: "do-painters-move-furniture",
     publishOn: "2026-11-01",

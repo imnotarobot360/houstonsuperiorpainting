@@ -49,3 +49,14 @@ test("visibility: scheduled posts hidden before their date, live after; other pa
 test("display date", () => {
   assert.equal(displayDate("2026-10-20"), "October 20, 2026")
 })
+
+test("calendar: no post links to a post that publishes later (it would 404 on the day)", () => {
+  const date = new Map(ALL.map((p) => [p.slug, p.publishOn]))
+  for (const p of BLOG_SCHEDULE) {
+    const src = fs.readFileSync(new URL(`../app/blog/${p.slug}/page.tsx`, import.meta.url), "utf8")
+    for (const m of src.matchAll(/href[=:]\s*["{`]+\/blog\/([a-z0-9-]+)/g)) {
+      const target = date.get(m[1])
+      if (target) assert.ok(target <= p.publishOn, `${p.slug} (${p.publishOn}) links to ${m[1]} (${target})`)
+    }
+  }
+})

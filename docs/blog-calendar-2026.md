@@ -1,4 +1,4 @@
-# Daily blog calendar (owner request 2026-10-19)
+﻿# Daily blog calendar (owner request 2026-10-19)
 
 One new post a day at **6:00 AM Houston time**. Posts are written and deployed ahead of time. Each one stays
 hidden until its date (it returns 404 and isn't listed on `/blog`), then appears on its own. No push is
@@ -12,7 +12,7 @@ needed on the day.
 - **Sitemap:** built at deploy time, so a post joins it on the first deploy after its date. `/blog` and the
   IndexNow ping announce it on the day itself.
 - **Daily IndexNow ping:** `/api/cron/indexnow-scheduled` runs from `vercel.json` at 12:30 UTC
-  (7:30 AM CDT / 6:30 AM CST). It needs **`CRON_SECRET`** set in Vercel → Settings → Environment Variables.
+  (7:30 AM CDT / 6:30 AM CST). It needs **`CRON_SECRET`** set in Vercel â†’ Settings â†’ Environment Variables.
   Without it the ping is refused and the posts still publish.
 - **Previewing unpublished posts locally:** `BLOG_PREVIEW=1 npx next start` (never works on production).
 - **Linking rule:** nothing may link to a post before its date. The site check fails on 404 links.
@@ -33,15 +33,15 @@ needed on the day.
 | 10 | Wood rot repair before exterior painting | **Scheduled Oct 24** | /blog/wood-rot-repair-before-painting-houston |
 | 11 | Paint over water stains | Live | /blog/paint-over-water-stains-houston |
 | 12 | Cost to paint ceilings, trim and doors | **Scheduled Oct 23** | /blog/cost-paint-ceilings-trim-doors-houston |
-| 13 | Painting after foundation repair | Planned Oct 31 | /blog/painting-after-foundation-repair-houston |
-| 14 | Orange peel vs knockdown vs smooth | Planned Oct 29 | /blog/orange-peel-vs-knockdown-vs-smooth-walls |
-| 15 | How painters match wall texture | Planned Oct 30 | /blog/how-painters-match-wall-texture |
-| 16 | Latex over oil-based paint | Planned Oct 26 | /blog/latex-paint-over-oil-based-paint |
-| 17 | Why touch-ups don't match | Planned Oct 25 | /blog/why-paint-touch-ups-dont-match |
+| 13 | Painting after foundation repair | **Scheduled Oct 31** | /blog/painting-after-foundation-repair-houston |
+| 14 | Orange peel vs knockdown vs smooth | **Scheduled Oct 29** | /blog/orange-peel-vs-knockdown-vs-smooth-walls |
+| 15 | How painters match wall texture | **Scheduled Oct 30** | /blog/how-painters-match-wall-texture |
+| 16 | Latex over oil-based paint | **Scheduled Oct 26** | /blog/latex-paint-over-oil-based-paint |
+| 17 | Why touch-ups don't match | **Scheduled Oct 25** | /blog/why-paint-touch-ups-dont-match |
 | 18 | Paint before moving in | Live | /blog/paint-before-moving-in-houston |
 | 19 | Rental turnover painting | Planned Nov 6 | /blog/rental-turnover-painting-houston |
-| 20 | Best paint for bathrooms and humid areas | Planned Oct 28 | /blog/best-paint-bathrooms-laundry-rooms-houston |
-| 21 | How long before using a painted room | Planned Oct 27 | /blog/how-long-before-using-freshly-painted-room |
+| 20 | Best paint for bathrooms and humid areas | **Scheduled Oct 28** | /blog/best-paint-bathrooms-laundry-rooms-houston |
+| 21 | How long before using a painted room | **Scheduled Oct 27** | /blog/how-long-before-using-freshly-painted-room |
 | 22 | Tall foyers, stairwells, high ceilings | Planned Nov 2 | /blog/painting-high-ceilings-foyers-stairwells-houston |
 | 23 | Do painters move furniture | Planned Nov 1 | /blog/do-painters-move-furniture |
 | 24 | Fill oak grain before painting cabinets | Planned Nov 3 | /blog/fill-oak-grain-before-painting-cabinets |
