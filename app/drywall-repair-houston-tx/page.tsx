@@ -182,6 +182,7 @@ export default function DrywallRepairHoustonPage() {
       }
       faqs={faqs}
       related={[
+        { label: "Can you paint over water stains?", href: "/blog/paint-over-water-stains-houston" },
         { label: "Interior painting in Houston", href: "/interior-painting-houston-tx" },
         { label: "Cabinet refinishing in Houston", href: "/cabinet-refinishing-houston-tx" },
         { label: "Wallpaper removal in Houston", href: "/wallpaper-removal-houston-tx" },

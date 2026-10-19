@@ -22,6 +22,18 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "paint-over-water-stains-houston",
+    title: "Can You Paint Over Water Stains? What Must Be Fixed First",
+    excerpt:
+      "Fix the leak, let it dry, rule out mold, repair soft drywall, then seal with a stain-blocking primer. The checklist before you paint a water-stained ceiling.",
+    category: "Interior Painting",
+    author: "Juan Serra",
+    publishDate: "October 19, 2026",
+    readTime: "5 min read",
+    image: "/images/drywall-after-1.jpg",
+    featured: false,
+  },
+  {
     slug: "sherwin-williams-color-of-the-year-2027-celery-houston",
     title: "Celery SW 6421: Sherwin-Williams' 2027 Color of the Year in Houston",
     excerpt:
