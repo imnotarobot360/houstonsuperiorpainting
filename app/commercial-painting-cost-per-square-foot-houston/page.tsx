@@ -140,6 +140,7 @@ const D: GuideArticleData = {
   ],
   limitations: <>Pricing is for preliminary planning; a site walk and written proposal set the actual price. Last reviewed October 2026.</>,
   related: [
+    { label: "How to compare commercial painting bids", href: "/blog/compare-commercial-painting-bids-houston" },
     { label: "Commercial painting in Houston", href: "/commercial-painting-houston-tx" },
     { label: "Insurance and warranty", href: "/insurance-and-warranty" },
     { label: "Commercial office painting guide", href: "/blog/commercial-office-painting-houston" },

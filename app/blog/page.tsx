@@ -22,6 +22,18 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "compare-commercial-painting-bids-houston",
+    title: "How to Compare Commercial Painting Bids in Houston",
+    excerpt:
+      "Why bids for the same building differ by thousands, how to level them with one scope sheet, red flags, and the questions to ask before you sign.",
+    category: "Commercial Painting",
+    author: "Juan Serra",
+    publishDate: "October 19, 2026",
+    readTime: "6 min read",
+    image: "/images/commercial-after-1.jpg",
+    featured: false,
+  },
+  {
     slug: "paint-before-moving-in-houston",
     title: "Should You Paint Before Moving Into a Houston Home?",
     excerpt:

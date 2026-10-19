@@ -134,6 +134,7 @@ const D: GuideArticleData = {
     },
   ],
   related: [
+    { label: "How to compare commercial painting bids", href: "/blog/compare-commercial-painting-bids-houston" },
     { label: "Commercial painting in Houston", href: "/commercial-painting-houston-tx" },
     { label: "Insurance and warranty", href: "/insurance-and-warranty" },
     { label: "How to verify a painter's insurance", href: "/blog/how-to-verify-painting-contractor-insurance-houston" },
