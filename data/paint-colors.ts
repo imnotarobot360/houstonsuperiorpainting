@@ -65,15 +65,15 @@ const STARTER_COLORS: PaintColor[] = [
   { brand: "Benjamin Moore", code: "2124-20", name: "Wrought Iron", hex: "#4A4D4E", family: "Dark" },
   { brand: "Benjamin Moore", code: "HC-166", name: "Kendall Charcoal", hex: "#686864", family: "Dark" }
 ]
-const bySherwinCode = new Map(SHERWIN_WILLIAMS.map((color) => [color.code.replace(/\\s/g, ""), color]))
+const bySherwinCode = new Map(SHERWIN_WILLIAMS.map((color) => [color.code.replace(/\s/g, ""), color]))
 const featuredSherwinCodes = new Set(
-  STARTER_COLORS.filter((color) => color.brand === "Sherwin-Williams").map((color) => color.code.replace(/\\s/g, "")),
+  STARTER_COLORS.filter((color) => color.brand === "Sherwin-Williams").map((color) => color.code.replace(/\s/g, "")),
 )
 
 export const PAINT_COLORS: PaintColor[] = [
   ...STARTER_COLORS.map((color) => {
     if (color.brand !== "Sherwin-Williams") return color
-    const manufacturerColor = bySherwinCode.get(color.code.replace(/\\s/g, ""))
+    const manufacturerColor = bySherwinCode.get(color.code.replace(/\s/g, ""))
     return manufacturerColor ? { ...manufacturerColor, family: color.family } : color
   }),
   ...SHERWIN_WILLIAMS.filter((color) => !featuredSherwinCodes.has(color.code)),
