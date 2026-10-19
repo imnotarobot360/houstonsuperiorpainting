@@ -18,7 +18,20 @@ export type PaintColor = {
   source?: string
 }
 
-const SHERWIN_WILLIAMS: PaintColor[] = sherwinWilliamsColors.map((color) => ({
+type SherwinWilliamsDigitalColor = {
+  code: string
+  name: string
+  hex: string
+  rgb: number[]
+  locator?: string | null
+  collection?: string
+  category?: string
+  lrv?: number
+  hue?: number
+  source: string
+}
+
+const SHERWIN_WILLIAMS: PaintColor[] = (sherwinWilliamsColors as unknown as SherwinWilliamsDigitalColor[]).map((color) => ({
   brand: "Sherwin-Williams",
   code: color.code,
   name: color.name,
