@@ -1,3 +1,4 @@
+import { RelatedGuides } from "@/components/related-guides"
 import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -252,6 +253,9 @@ export default function LimewashBrickPaintingPage() {
       <Header />
       <main>
       <ServicePageTemplate {...pageData} />
+        <div className="container mx-auto max-w-4xl px-4">
+          <RelatedGuides path="/limewash-brick-painting-houston-tx" />
+        </div>
       </main>
       <Footer />
     </>

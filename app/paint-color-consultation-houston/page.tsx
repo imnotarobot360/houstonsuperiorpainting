@@ -1,3 +1,4 @@
+import { RelatedGuides } from "@/components/related-guides"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -220,6 +221,9 @@ export default function ColorConsultationPage() {
           Call <a href={`tel:${BUSINESS.phoneTel}`} className="underline">{BUSINESS.phone}</a> or{" "}
           <Link href={ESTIMATE_PATH} className="underline">request an estimate online</Link>.
         </CtaBlock>
+        <div className="container mx-auto max-w-4xl px-4">
+          <RelatedGuides path="/paint-color-consultation-houston" />
+        </div>
       </main>
       <Footer />
     </>

@@ -1,3 +1,4 @@
+import { relatedGuidesFor } from "@/lib/related-guides"
 import { OfficeReviewBadge, OfficeQuotes } from "@/components/office-reviews"
 import { QuickEstimateForm } from "@/components/quick-estimate-form"
 // Shared template for the office city pages (Cypress, Katy, Sugar Land,
@@ -248,6 +249,12 @@ export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
             ]}
           />
         </Section>
+
+        {relatedGuidesFor(`/${slug}`).length > 0 && (
+          <Section title={`Helpful guides for ${city}`}>
+            <LinkGrid links={relatedGuidesFor(`/${slug}`)} />
+          </Section>
+        )}
 
         <TrustChecklist />
 

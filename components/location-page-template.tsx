@@ -1,5 +1,6 @@
 "use client"
 
+import { RelatedGuides } from "@/components/related-guides"
 import { QuickEstimateForm } from "@/components/quick-estimate-form"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -476,6 +477,8 @@ export function LocationPageTemplate({
             </Button>
           </div>
         </section>
+
+        {area && <RelatedGuides path={`/${area.slug}`} />}
 
         {/* Other Locations */}
         <section>

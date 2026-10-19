@@ -1,3 +1,4 @@
+import { RelatedGuides } from "@/components/related-guides"
 import { ReviewsInline } from "@/components/office-reviews";
 import { BUSINESS } from "@/lib/business";
 import { Header } from "@/components/header";
@@ -354,6 +355,9 @@ export default function PressureWashingHoustonPage() {
             </p>
           </div>
         </section>
+        <div className="container mx-auto max-w-4xl px-4">
+          <RelatedGuides path="/pressure-washing-houston-tx" />
+        </div>
       </main>
       <Footer />
     </>

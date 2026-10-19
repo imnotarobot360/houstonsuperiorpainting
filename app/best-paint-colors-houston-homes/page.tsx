@@ -1,3 +1,4 @@
+import { RelatedGuides } from "@/components/related-guides"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -130,6 +131,9 @@ export default function BestPaintColorsHoustonHomes() {
           <Link key={p.href} href={p.href} className="bg-card rounded-lg p-4 border border-border hover:border-secondary transition-colors"><span className="font-semibold text-sm text-foreground">{p.title}</span></Link>
         ))}
       </div></div></section>
+        <div className="container mx-auto max-w-4xl px-4">
+          <RelatedGuides path="/best-paint-colors-houston-homes" />
+        </div>
       </main>
       <Footer />
     </>

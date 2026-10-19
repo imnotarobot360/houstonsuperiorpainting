@@ -1,3 +1,4 @@
+import { RelatedGuides } from "@/components/related-guides"
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 // app/load-bearing-wall-removal-houston-tx/page.tsx
@@ -331,6 +332,9 @@ export default function LoadBearingWallRemovalHoustonPage() {
             </div>
           </div>
         </section>
+        <div className="container mx-auto max-w-4xl px-4">
+          <RelatedGuides path="/load-bearing-wall-removal-houston-tx" />
+        </div>
       </main>
       <Footer />
     </>

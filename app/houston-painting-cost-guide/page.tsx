@@ -1,3 +1,4 @@
+import { RelatedGuides } from "@/components/related-guides"
 import { TrustChecklist } from "@/components/trust-checklist"
 import type { Metadata } from "next"
 import Link from "next/link"
@@ -310,6 +311,9 @@ export default function HoustonPaintingCostGuidePage() {
         </CtaBlock>
 
         <AuthorByline extra="Prices reviewed quarterly." />
+        <div className="container mx-auto max-w-4xl px-4">
+          <RelatedGuides path="/houston-painting-cost-guide" />
+        </div>
       </main>
       <Footer />
     </>

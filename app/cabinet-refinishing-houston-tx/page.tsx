@@ -183,6 +183,9 @@ export default function CabinetRefinishingPage() {
       }
       faqs={faqs}
       related={[
+        { label: "Paint or replace your cabinets?", href: "/paint-or-replace-cabinets" },
+        { label: "2026 cabinet colors: greige, green and black", href: "/blog/cabinet-colors-2026-houston-greige-green-black" },
+        { label: "How to choose a cabinet painting company", href: "/blog/cabinet-painting-company-houston-guide" },
         { label: "Interior painting in Houston", href: "/interior-painting-houston-tx" },
         { label: "Drywall repair in Houston", href: "/drywall-repair-houston-tx" },
         { label: "Exterior house painting in Houston", href: "/exterior-painting-houston-tx" },

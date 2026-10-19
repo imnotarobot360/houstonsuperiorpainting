@@ -188,6 +188,8 @@ export default function InteriorPaintingHoustonTX() {
       }
       faqs={faqs}
       related={[
+        { label: "Residential painters in Houston", href: "/residential-painters-houston" },
+        { label: "Why flat paint in bathrooms is a mistake", href: "/blog/flat-paint-bathrooms-mistake" },
         { label: "Exterior house painting in Houston", href: "/exterior-painting-houston-tx" },
         { label: "Kitchen cabinet refinishing in Houston", href: "/cabinet-refinishing-houston-tx" },
         { label: "Drywall repair in Houston", href: "/drywall-repair-houston-tx" },

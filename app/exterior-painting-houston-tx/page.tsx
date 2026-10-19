@@ -198,6 +198,9 @@ export default function ExteriorPaintingHoustonTX() {
       }
       faqs={faqs}
       related={[
+        { label: "Residential painters in Houston", href: "/residential-painters-houston" },
+        { label: "Fence and deck painting in Houston", href: "/blog/fence-deck-painting-houston-tx" },
+        { label: "Painting HardiePlank siding", href: "/blog/hardieplank-painting-houston" },
         { label: "Interior painting in Houston", href: "/interior-painting-houston-tx" },
         { label: "Limewash and brick painting in Houston", href: "/limewash-brick-painting-houston-tx" },
         { label: "Soft washing in Houston", href: "/soft-washing-houston-tx" },
