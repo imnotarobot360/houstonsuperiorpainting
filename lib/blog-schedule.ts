@@ -149,15 +149,6 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     image: "/images/drywall-before-1.jpg",
     keyword: "painting after foundation repair",
   },
-]
-
-/**
- * Written-in-advance queue: posts on the calendar whose pages are not written
- * yet. Nothing on the site reads this list. When a post is written, move its
- * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
- * scheduled post has a page).
- */
-export const PLANNED_POSTS: ScheduledPost[] = [
   {
     slug: "do-painters-move-furniture",
     publishOn: "2026-11-01",
@@ -248,6 +239,15 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     image: "/images/blog/hoa-paint-rules-houston.png",
     keyword: "HOA painters Houston",
   },
+]
+
+/**
+ * Written-in-advance queue: posts on the calendar whose pages are not written
+ * yet. Nothing on the site reads this list. When a post is written, move its
+ * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
+ * scheduled post has a page).
+ */
+export const PLANNED_POSTS: ScheduledPost[] = [
 ]
 
 /** Today's Houston date (YYYY-MM-DD), rolling over at PUBLISH_HOUR_HOUSTON. */

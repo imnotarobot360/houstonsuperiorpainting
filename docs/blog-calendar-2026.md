@@ -1,4 +1,4 @@
-﻿# Daily blog calendar (owner request 2026-10-19)
+# Daily blog calendar (owner request 2026-10-19)
 
 One new post a day at **6:00 AM Houston time**. Posts are written and deployed ahead of time. Each one stays
 hidden until its date (it returns 404 and isn't listed on `/blog`), then appears on its own. No push is
@@ -6,7 +6,7 @@ needed on the day.
 
 - **Calendar file:** `lib/blog-schedule.ts`.
   - `BLOG_SCHEDULE` holds posts that are written.
-  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet. Nothing on the site reads it.
+  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet (empty now: all 21 are written). Nothing on the site reads it.
   - `pnpm test` fails if a scheduled post has no page, or if a planned post already has one. A planned post
     with a page would publish with no date gate.
 - **Sitemap:** built at deploy time, so a post joins it on the first deploy after its date. `/blog` and the
@@ -39,21 +39,21 @@ needed on the day.
 | 16 | Latex over oil-based paint | **Scheduled Oct 26** | /blog/latex-paint-over-oil-based-paint |
 | 17 | Why touch-ups don't match | **Scheduled Oct 25** | /blog/why-paint-touch-ups-dont-match |
 | 18 | Paint before moving in | Live | /blog/paint-before-moving-in-houston |
-| 19 | Rental turnover painting | Planned Nov 6 | /blog/rental-turnover-painting-houston |
+| 19 | Rental turnover painting | **Scheduled Nov 6** | /blog/rental-turnover-painting-houston |
 | 20 | Best paint for bathrooms and humid areas | **Scheduled Oct 28** | /blog/best-paint-bathrooms-laundry-rooms-houston |
 | 21 | How long before using a painted room | **Scheduled Oct 27** | /blog/how-long-before-using-freshly-painted-room |
-| 22 | Tall foyers, stairwells, high ceilings | Planned Nov 2 | /blog/painting-high-ceilings-foyers-stairwells-houston |
-| 23 | Do painters move furniture | Planned Nov 1 | /blog/do-painters-move-furniture |
-| 24 | Fill oak grain before painting cabinets | Planned Nov 3 | /blog/fill-oak-grain-before-painting-cabinets |
-| 25 | Cabinet painting on-site vs off-site | Planned Nov 4 | /blog/cabinet-painting-on-site-vs-off-site |
-| 26 | Paint inside kitchen cabinets | Planned Nov 5 | /blog/paint-inside-kitchen-cabinets |
+| 22 | Tall foyers, stairwells, high ceilings | **Scheduled Nov 2** | /blog/painting-high-ceilings-foyers-stairwells-houston |
+| 23 | Do painters move furniture | **Scheduled Nov 1** | /blog/do-painters-move-furniture |
+| 24 | Fill oak grain before painting cabinets | **Scheduled Nov 3** | /blog/fill-oak-grain-before-painting-cabinets |
+| 25 | Cabinet painting on-site vs off-site | **Scheduled Nov 4** | /blog/cabinet-painting-on-site-vs-off-site |
+| 26 | Paint inside kitchen cabinets | **Scheduled Nov 5** | /blog/paint-inside-kitchen-cabinets |
 | 27 | Commercial bid checklist | Live (covered) | /blog/compare-commercial-painting-bids-houston and the checklist on /commercial-painting-cost-per-square-foot-houston |
-| 28 | After-hours commercial painting | Planned Nov 7 | /blog/after-hours-commercial-painting-houston |
-| 29 | Medical and dental offices | Planned Nov 8 | /blog/medical-dental-office-painting-houston |
-| 30 | HOA and multifamily painting | Planned Nov 9 | /blog/hoa-multifamily-painting-houston |
+| 28 | After-hours commercial painting | **Scheduled Nov 7** | /blog/after-hours-commercial-painting-houston |
+| 29 | Medical and dental offices | **Scheduled Nov 8** | /blog/medical-dental-office-painting-houston |
+| 30 | HOA and multifamily painting | **Scheduled Nov 9** | /blog/hoa-multifamily-painting-houston |
 
-## Owner checks before the planned posts are written
+## Written without confirmed company practice (update if you want them to state ours)
 
-- **#23 furniture:** what do our crews move, and what does the customer move? (The post won't state a policy we haven't confirmed.)
-- **#25 on-site vs off-site:** where are cabinet doors sprayed: in a shop, or at the home? (The site says doors are removed and sprayed flat, but not where.)
-- **#22 high ceilings:** do we use our own scaffolding or lifts, or rent them? (Optional; the post can stay general.)
+- **#23 furniture:** what do our crews move, and what does the customer move? Written as common practice; says the written estimate states what is included.
+- **#25 on-site vs off-site:** where are cabinet doors sprayed: in a shop, or at the home? Written as a neutral comparison of both approaches.
+- **#22 high ceilings:** do we use our own scaffolding or lifts, or rent them? Written generally, with no equipment-ownership claim.
