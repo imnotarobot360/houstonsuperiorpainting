@@ -1,3 +1,4 @@
+import { RelatedGuides } from "@/components/related-guides"
 import { TrustChecklist } from "@/components/trust-checklist"
 import type { Metadata } from "next"
 import Link from "next/link"
@@ -328,6 +329,9 @@ export default function CommercialPaintingHoustonPage() {
           </Link>
           . Written and itemized, certificate of insurance before the start date, payment terms in writing before you approve.
         </CtaBlock>
+        <div className="container mx-auto max-w-4xl px-4">
+          <RelatedGuides path="/commercial-painting-houston-tx" />
+        </div>
       </main>
       <Footer />
     </>

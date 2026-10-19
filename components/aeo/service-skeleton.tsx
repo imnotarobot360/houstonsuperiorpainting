@@ -2,6 +2,7 @@
 // (interior, exterior, cabinets, drywall). See docs/aeo-seo-plan-2026-09.md.
 // Every page renders the same sections in the same order; only the data changes.
 
+import { relatedGuidesFor } from "@/lib/related-guides"
 import { TrustChecklist } from "@/components/trust-checklist"
 import Link from "next/link"
 import Image from "next/image"
@@ -226,6 +227,12 @@ export function ServiceSkeleton(d: ServiceSkeletonData) {
         <Section id="related-services" title="Related services">
           <LinkGrid links={d.related} />
         </Section>
+
+        {relatedGuidesFor(`/${d.slug}`).filter((g) => !d.related.some((r) => r.href === g.href)).length > 0 && (
+          <Section id="helpful-guides" title="Helpful guides">
+            <LinkGrid links={relatedGuidesFor(`/${d.slug}`).filter((g) => !d.related.some((r) => r.href === g.href))} />
+          </Section>
+        )}
 
         <TrustChecklist />
 

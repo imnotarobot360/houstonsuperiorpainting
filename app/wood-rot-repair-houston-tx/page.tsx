@@ -1,3 +1,4 @@
+import { RelatedGuides } from "@/components/related-guides"
 import { ReviewsInline } from "@/components/office-reviews"
 import { BUSINESS } from "@/lib/business"
 import type { Metadata } from 'next'
@@ -405,6 +406,9 @@ export default function WoodRotRepairHoustonTX() {
               ))}
             </div>
           </section>
+        </div>
+        <div className="container mx-auto max-w-4xl px-4">
+          <RelatedGuides path="/wood-rot-repair-houston-tx" />
         </div>
       </main>
       <RelatedLinks exclude="/wood-rot-repair-houston-tx" />

@@ -6,6 +6,8 @@
 // Rules: link only to canonical URLs (never a redirect source) and never to
 // projects with photosNeedReview (lib/projects.ts).
 
+import { isLivePath } from "@/lib/blog-schedule"
+
 export type GuideLink = { label: string; href: string }
 
 export const RELATED_GUIDES: Record<string, GuideLink[]> = {
@@ -62,6 +64,8 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Brick painting in Memorial", href: "/brick-painting-memorial" },
   ],
   "/best-paint-colors-houston-homes": [
+    { label: "What colors go with Celery?", href: "/blog/colors-that-go-with-celery-sw-6421" },
+    { label: "Sherwin-Williams Rewild 2027", href: "/blog/sherwin-williams-rewild-2027-colors-houston" },
     { label: "Sherwin-Williams 2027 Color of the Year: Celery", href: "/blog/sherwin-williams-color-of-the-year-2027-celery-houston" },
     { label: "2026 cabinet colors: greige, green and black", href: "/blog/cabinet-colors-2026-houston-greige-green-black" },
     { label: "Exterior colors for Katy homes", href: "/blog/exterior-paint-colors-katy-tx" },
@@ -72,6 +76,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Exterior colors for Magnolia homes", href: "/blog/exterior-paint-colors-magnolia-tx" },
   ],
   "/houston-painting-cost-guide": [
+    { label: "Cost to paint ceilings, trim and doors", href: "/blog/cost-paint-ceilings-trim-doors-houston" },
     { label: "DIY vs professional painting cost", href: "/blog/diy-vs-professional-painting-cost-houston" },
     { label: "Load-bearing wall removal cost", href: "/blog/load-bearing-wall-removal-cost-houston" },
     { label: "Limewash cost", href: "/blog/limewash-cost-houston" },
@@ -81,11 +86,64 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Pressure washing before painting", href: "/blog/pressure-washing-before-painting" },
   ],
   "/paint-color-consultation-houston": [
+    { label: "What colors go with Celery?", href: "/blog/colors-that-go-with-celery-sw-6421" },
+    { label: "Sherwin-Williams Rewild 2027", href: "/blog/sherwin-williams-rewild-2027-colors-houston" },
+    { label: "Ceiling paint: white vs. color", href: "/blog/ceiling-paint-color-white-vs-color" },
     { label: "Sherwin-Williams 2027 Color of the Year: Celery", href: "/blog/sherwin-williams-color-of-the-year-2027-celery-houston" },
     { label: "2026 cabinet colors: greige, green and black", href: "/blog/cabinet-colors-2026-houston-greige-green-black" },
   ],
+  // Service and article pages: daily-calendar posts (shown from their publish date)
+  "/interior-painting-houston-tx": [
+    { label: "Why touch-ups don't match", href: "/blog/why-paint-touch-ups-dont-match" },
+    { label: "How long before using a painted room", href: "/blog/how-long-before-using-freshly-painted-room" },
+    { label: "Best paint for bathrooms and humid rooms", href: "/blog/best-paint-bathrooms-laundry-rooms-houston" },
+    { label: "Do painters move furniture?", href: "/blog/do-painters-move-furniture" },
+    { label: "Painting tall foyers and stairwells", href: "/blog/painting-high-ceilings-foyers-stairwells-houston" },
+    { label: "Painting over dark walls", href: "/blog/paint-dark-walls-lighter-color" },
+    { label: "Best paint for kitchen walls", href: "/blog/kitchen-wall-paint-washable-houston" },
+    { label: "How much paint do I need?", href: "/blog/how-much-paint-for-a-room" },
+  ],
+  "/exterior-painting-houston-tx": [
+    { label: "Wood rot repair before exterior painting", href: "/blog/wood-rot-repair-before-painting-houston" },
+    { label: "Caulking before exterior painting", href: "/blog/caulking-before-exterior-painting-houston" },
+    { label: "Soffit and fascia painting", href: "/blog/soffit-fascia-painting-houston" },
+    { label: "Painting a front door in Houston sun", href: "/blog/front-door-paint-houston-sun" },
+    { label: "Garage door painting", href: "/blog/garage-door-painting-houston" },
+    { label: "Painting metal railings and gates", href: "/blog/painting-metal-railings-gates-houston" },
+    { label: "Window trim and sill painting", href: "/blog/window-trim-sill-painting-houston" },
+  ],
+  "/cabinet-refinishing-houston-tx": [
+    { label: "Should you fill oak grain?", href: "/blog/fill-oak-grain-before-painting-cabinets" },
+    { label: "On-site vs. off-site cabinet painting", href: "/blog/cabinet-painting-on-site-vs-off-site" },
+    { label: "Painting inside kitchen cabinets", href: "/blog/paint-inside-kitchen-cabinets" },
+  ],
+  "/drywall-repair-houston-tx": [
+    { label: "Orange peel vs. knockdown vs. smooth walls", href: "/blog/orange-peel-vs-knockdown-vs-smooth-walls" },
+    { label: "How painters match wall texture", href: "/blog/how-painters-match-wall-texture" },
+    { label: "Painting after foundation repair", href: "/blog/painting-after-foundation-repair-houston" },
+  ],
+  "/commercial-painting-houston-tx": [
+    { label: "After-hours commercial painting", href: "/blog/after-hours-commercial-painting-houston" },
+    { label: "Painting medical and dental offices", href: "/blog/medical-dental-office-painting-houston" },
+    { label: "HOA and multifamily painting", href: "/blog/hoa-multifamily-painting-houston" },
+  ],
+  "/wood-rot-repair-houston-tx": [
+    { label: "Wood rot repair before exterior painting", href: "/blog/wood-rot-repair-before-painting-houston" },
+    { label: "Soffit and fascia painting", href: "/blog/soffit-fascia-painting-houston" },
+    { label: "Window trim and sill painting", href: "/blog/window-trim-sill-painting-houston" },
+  ],
+  "/fine-finish-painting-houston": [
+    { label: "Painting interior doors", href: "/blog/painting-interior-doors-houston" },
+    { label: "Latex over oil-based paint", href: "/blog/latex-paint-over-oil-based-paint" },
+  ],
+  "/blog/sherwin-williams-color-of-the-year-2027-celery-houston": [
+    { label: "What colors go with Celery?", href: "/blog/colors-that-go-with-celery-sw-6421" },
+    { label: "Where to use Celery", href: "/blog/where-to-use-celery-sw-6421" },
+    { label: "Sherwin-Williams Rewild 2027", href: "/blog/sherwin-williams-rewild-2027-colors-houston" },
+  ],
 }
 
+/** Links for a page, minus any daily-calendar post that isn't live yet (no 404 links). */
 export function relatedGuidesFor(path: string): GuideLink[] {
-  return RELATED_GUIDES[path] ?? []
+  return (RELATED_GUIDES[path] ?? []).filter((l) => isLivePath(l.href))
 }

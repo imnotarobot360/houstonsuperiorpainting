@@ -8,6 +8,7 @@ import type { ReactNode } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { isLivePath } from "@/lib/blog-schedule"
+import { relatedGuidesFor } from "@/lib/related-guides"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import FAQ from "@/components/faq"
@@ -130,7 +131,7 @@ export function GuideArticle({ d }: { d: GuideArticleData }) {
         )}
 
         <Section title="Related pages">
-          <LinkGrid links={d.related} />
+          <LinkGrid links={[...d.related, ...relatedGuidesFor(d.path).filter((g) => !d.related.some((r) => r.href === g.href))]} />
         </Section>
 
         <TrustChecklist />
