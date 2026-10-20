@@ -1158,3 +1158,171 @@ Full guide: https://houstonsuperiorpainting.com/blog/repainting-builder-grade-pa
 Free written estimates · (346) 594-5960 · Houston Superior Painting
 ```
 
+## December 7, 2026: Low-VOC and Zero-VOC Paint: Pets, Allergies and Sensitive Households
+
+URL: https://houstonsuperiorpainting.com/blog/low-voc-zero-voc-paint-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Low-VOC and Zero-VOC Paint: Pets, Allergies and Sensitive Households
+
+What VOC labels mean, how long paint smell lasts, and planning a repaint around pets, allergies and pregnancy.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+What VOC labels mean, how long paint smell lasts, and planning a repaint around pets, allergies and pregnancy.
+
+Full guide: https://houstonsuperiorpainting.com/blog/low-voc-zero-voc-paint-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 8, 2026: Should Trim Be the Same Color as the Walls?
+
+URL: https://houstonsuperiorpainting.com/blog/should-trim-be-same-color-as-walls
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Should Trim Be the Same Color as the Walls?
+
+Classic white trim, matching trim and full color drenching: when each works, which sheens to use, and how it changes the look of a room.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Classic white trim, matching trim and full color drenching: when each works, which sheens to use, and how it changes the look of a room.
+
+Full guide: https://houstonsuperiorpainting.com/blog/should-trim-be-same-color-as-walls
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 9, 2026: Painting Wood Paneling: Grooves, Primer and Bleed-Through
+
+URL: https://houstonsuperiorpainting.com/blog/painting-wood-paneling-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Painting Wood Paneling: Grooves, Primer and Bleed-Through
+
+How dated wood paneling is cleaned, primed against tannin bleed and painted, and when filling the grooves is worth it.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+How dated wood paneling is cleaned, primed against tannin bleed and painted, and when filling the grooves is worth it.
+
+Full guide: https://houstonsuperiorpainting.com/blog/painting-wood-paneling-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 10, 2026: Why Painted White Cabinets Turn Yellow (and How to Prevent It)
+
+URL: https://houstonsuperiorpainting.com/blog/why-white-painted-cabinets-turn-yellow
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Why Painted White Cabinets Turn Yellow (and How to Prevent It)
+
+Oil-based yellowing, tannin bleed, cooking grease and low light: why white cabinets yellow and which coatings and primers prevent it.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Oil-based yellowing, tannin bleed, cooking grease and low light: why white cabinets yellow and which coatings and primers prevent it.
+
+Full guide: https://houstonsuperiorpainting.com/blog/why-white-painted-cabinets-turn-yellow
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 11, 2026: North- vs. South-Facing Rooms: Choosing Paint Colors in Houston
+
+URL: https://houstonsuperiorpainting.com/blog/north-vs-south-facing-room-paint-colors-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+North- vs. South-Facing Rooms: Choosing Paint Colors in Houston
+
+How the direction a room faces changes paint color in Houston, and which undertones work in cool north light and strong south and west sun.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+How the direction a room faces changes paint color in Houston, and which undertones work in cool north light and strong south and west sun.
+
+Full guide: https://houstonsuperiorpainting.com/blog/north-vs-south-facing-room-paint-colors-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 12, 2026: Choosing Paint Colors for an Open Floor Plan
+
+URL: https://houstonsuperiorpainting.com/blog/open-floor-plan-paint-colors-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Choosing Paint Colors for an Open Floor Plan
+
+Where to stop one color and start another, how many colors to use, and keeping trim and sheen consistent across an open Houston living area.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Where to stop one color and start another, how many colors to use, and keeping trim and sheen consistent across an open Houston living area.
+
+Full guide: https://houstonsuperiorpainting.com/blog/open-floor-plan-paint-colors-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 13, 2026: After a Houston Freeze: Checking Exterior Paint, Caulk and Wood
+
+URL: https://houstonsuperiorpainting.com/blog/freeze-damage-exterior-paint-caulk-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+After a Houston Freeze: Checking Exterior Paint, Caulk and Wood
+
+What a hard freeze does to caulk, wood and exterior paint, what to check after the thaw, and what can wait until spring.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+What a hard freeze does to caulk, wood and exterior paint, what to check after the thaw, and what can wait until spring.
+
+Full guide: https://houstonsuperiorpainting.com/blog/freeze-damage-exterior-paint-caulk-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+

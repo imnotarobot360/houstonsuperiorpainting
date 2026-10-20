@@ -17,7 +17,7 @@ needed on the day.
 - **Previewing unpublished posts locally:** `BLOG_PREVIEW=1 npx next start` (never works on production).
 - **Linking rule:** nothing may link to a post before its date. The site check fails on 404 links.
 
-## Full schedule (48 posts, October 20, 2026 to December 6, 2026)
+## Full schedule (55 posts, October 20, 2026 to December 13, 2026)
 
 Generated from `lib/blog-schedule.ts`. Every post here is written and deployed; each stays hidden until its date. Post dates on the pages follow this schedule automatically.
 
@@ -71,6 +71,13 @@ Generated from `lib/blog-schedule.ts`. Every post here is written and deployed; 
 | 2026-12-04 | Hanging Holiday Decorations Without Damaging Paint | /blog/hang-holiday-decorations-without-damaging-paint |
 | 2026-12-05 | Agreeable Gray vs. Accessible Beige in Houston Homes | /blog/agreeable-gray-vs-accessible-beige-houston |
 | 2026-12-06 | Repainting a New Build: Builder-Grade Paint in Houston Homes | /blog/repainting-builder-grade-paint-new-home-houston |
+| 2026-12-07 | Low-VOC and Zero-VOC Paint: Pets, Allergies and Sensitive Households | /blog/low-voc-zero-voc-paint-houston |
+| 2026-12-08 | Should Trim Be the Same Color as the Walls? | /blog/should-trim-be-same-color-as-walls |
+| 2026-12-09 | Painting Wood Paneling: Grooves, Primer and Bleed-Through | /blog/painting-wood-paneling-houston |
+| 2026-12-10 | Why Painted White Cabinets Turn Yellow (and How to Prevent It) | /blog/why-white-painted-cabinets-turn-yellow |
+| 2026-12-11 | North- vs. South-Facing Rooms: Choosing Paint Colors in Houston | /blog/north-vs-south-facing-room-paint-colors-houston |
+| 2026-12-12 | Choosing Paint Colors for an Open Floor Plan | /blog/open-floor-plan-paint-colors-houston |
+| 2026-12-13 | After a Houston Freeze: Checking Exterior Paint, Caulk and Wood | /blog/freeze-damage-exterior-paint-caulk-houston |
 
 ## Already live before the calendar (from the owner's 30-topic list)
 
@@ -82,19 +89,12 @@ Celery SW 6421, popcorn ceiling cost, paint before selling, primer vs two coats,
 - Cabinets: painted on-site at the home; doors removed and sprayed flat in a contained area.
 - High ceilings: we own scaffolding.
 
-## Planned, not yet written (22 posts, December 7, 2026 to December 28, 2026)
+## Planned, not yet written (15 posts, December 14, 2026 to December 28, 2026)
 
 Planned 2026-10-19. Topics checked against every existing post and page so none repeats one. Posts marked **needs owner answer** depend on whether we do that work or on job details only the owner can confirm.
 
 | Date | Post | Search phrase | |
 |---|---|---|---|
-| 2026-12-07 | Low-VOC and Zero-VOC Paint: Pets, Allergies and Sensitive Households | low VOC paint |  |
-| 2026-12-08 | Should Trim Be the Same Color as the Walls? | trim same color as walls |  |
-| 2026-12-09 | Painting Wood Paneling: Grooves, Primer and Bleed-Through | painting wood paneling |  |
-| 2026-12-10 | Why Painted White Cabinets Turn Yellow (and How to Prevent It) | white cabinets turning yellow |  |
-| 2026-12-11 | North- vs. South-Facing Rooms: Choosing Paint Colors in Houston | north facing room paint colors |  |
-| 2026-12-12 | Choosing Paint Colors for an Open Floor Plan | open floor plan paint colors |  |
-| 2026-12-13 | After a Houston Freeze: Checking Exterior Paint, Caulk and Wood | freeze damage exterior paint |  |
 | 2026-12-14 | Painting Shutters: Wood, Composite and Vinyl | painting shutters | **needs owner answer** |
 | 2026-12-15 | Painting Gutters and Downspouts in Houston | painting gutters | **needs owner answer** |
 | 2026-12-16 | Can You Paint Vinyl Siding in Houston? | painting vinyl siding | **needs owner answer** |

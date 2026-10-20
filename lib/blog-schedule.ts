@@ -508,15 +508,6 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     image: "/images/blog/interior-painting-cost-houston.png",
     keyword: "builder grade paint new home",
   },
-]
-
-/**
- * Written-in-advance queue: posts on the calendar whose pages are not written
- * yet. Nothing on the site reads this list. When a post is written, move its
- * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
- * scheduled post has a page).
- */
-export const PLANNED_POSTS: ScheduledPost[] = [
   {
     slug: "low-voc-zero-voc-paint-houston",
     publishOn: "2026-12-07",
@@ -587,6 +578,15 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     image: "/images/blog/houston-weather-paint-damage.png",
     keyword: "freeze damage exterior paint",
   },
+]
+
+/**
+ * Written-in-advance queue: posts on the calendar whose pages are not written
+ * yet. Nothing on the site reads this list. When a post is written, move its
+ * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
+ * scheduled post has a page).
+ */
+export const PLANNED_POSTS: ScheduledPost[] = [
   {
     slug: "painting-shutters-houston",
     publishOn: "2026-12-14",
