@@ -6,7 +6,7 @@ needed on the day.
 
 - **Calendar file:** `lib/blog-schedule.ts`.
   - `BLOG_SCHEDULE` holds posts that are written.
-  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet (30 posts for Nov 29 to Dec 28, not yet written). Nothing on the site reads it.
+  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet (22 posts not yet written). Nothing on the site reads it.
   - `pnpm test` fails if a scheduled post has no page, or if a planned post already has one. A planned post
     with a page would publish with no date gate.
 - **Sitemap:** built at deploy time, so a post joins it on the first deploy after its date. `/blog` and the
@@ -17,9 +17,9 @@ needed on the day.
 - **Previewing unpublished posts locally:** `BLOG_PREVIEW=1 npx next start` (never works on production).
 - **Linking rule:** nothing may link to a post before its date. The site check fails on 404 links.
 
-## Full schedule (40 posts, October 20, 2026 to November 28, 2026)
+## Full schedule (48 posts, October 20, 2026 to December 6, 2026)
 
-Generated from `lib/blog-schedule.ts` on 2026-10-19 after adding the Benjamin Moore 2027 series (5 posts, Oct 21–27, in the owner's order); later posts moved back 5 days. Post dates on the pages follow this schedule automatically.
+Generated from `lib/blog-schedule.ts`. Every post here is written and deployed; each stays hidden until its date. Post dates on the pages follow this schedule automatically.
 
 | Date | Post | URL |
 |---|---|---|
@@ -63,6 +63,14 @@ Generated from `lib/blog-schedule.ts` on 2026-10-19 after adding the Benjamin Mo
 | 2026-11-26 | How Much Paint Do I Need for a Room? | /blog/how-much-paint-for-a-room |
 | 2026-11-27 | Painting Exterior Window Trim and Sills in Houston | /blog/window-trim-sill-painting-houston |
 | 2026-11-28 | Painting Shiplap and Board and Batten | /blog/painting-shiplap-board-and-batten-houston |
+| 2026-11-29 | Can You Paint a House Exterior in Houston in Winter? | /blog/can-you-paint-exterior-in-winter-houston |
+| 2026-11-30 | Should You Paint Stained Wood Trim? Pros, Cons and Prep | /blog/paint-stained-wood-trim-houston |
+| 2026-12-01 | Painting a Brick Fireplace: Paint, Limewash or Leave It? | /blog/painting-brick-fireplace-houston |
+| 2026-12-02 | Painting Stair Railings, Banisters and Spindles | /blog/painting-stair-railings-banisters-spindles |
+| 2026-12-03 | How to Clean Painted Walls Without Ruining the Finish | /blog/how-to-clean-painted-walls |
+| 2026-12-04 | Hanging Holiday Decorations Without Damaging Paint | /blog/hang-holiday-decorations-without-damaging-paint |
+| 2026-12-05 | Agreeable Gray vs. Accessible Beige in Houston Homes | /blog/agreeable-gray-vs-accessible-beige-houston |
+| 2026-12-06 | Repainting a New Build: Builder-Grade Paint in Houston Homes | /blog/repainting-builder-grade-paint-new-home-houston |
 
 ## Already live before the calendar (from the owner's 30-topic list)
 
@@ -74,20 +82,12 @@ Celery SW 6421, popcorn ceiling cost, paint before selling, primer vs two coats,
 - Cabinets: painted on-site at the home; doors removed and sprayed flat in a contained area.
 - High ceilings: we own scaffolding.
 
-## Planned, not yet written (30 posts, November 29 to December 28, 2026)
+## Planned, not yet written (22 posts, December 7, 2026 to December 28, 2026)
 
-Planned 2026-10-19. Topics checked against every existing post and page so none repeats one. Winter and holiday topics fall in December; year-end planning in the last week. Posts marked **needs owner answer** depend on whether we do that work or on job details only the owner can confirm.
+Planned 2026-10-19. Topics checked against every existing post and page so none repeats one. Posts marked **needs owner answer** depend on whether we do that work or on job details only the owner can confirm.
 
 | Date | Post | Search phrase | |
 |---|---|---|---|
-| 2026-11-29 | Can You Paint a House Exterior in Houston in Winter? | painting exterior in winter Houston |  |
-| 2026-11-30 | Should You Paint Stained Wood Trim? Pros, Cons and Prep | paint stained wood trim |  |
-| 2026-12-01 | Painting a Brick Fireplace: Paint, Limewash or Leave It? | painting brick fireplace |  |
-| 2026-12-02 | Painting Stair Railings, Banisters and Spindles | painting stair railings and spindles |  |
-| 2026-12-03 | How to Clean Painted Walls Without Ruining the Finish | how to clean painted walls |  |
-| 2026-12-04 | Hanging Holiday Decorations Without Damaging Paint | holiday decorations damage paint |  |
-| 2026-12-05 | Agreeable Gray vs. Accessible Beige in Houston Homes | Agreeable Gray vs Accessible Beige |  |
-| 2026-12-06 | Repainting a New Build: Builder-Grade Paint in Houston Homes | builder grade paint new home |  |
 | 2026-12-07 | Low-VOC and Zero-VOC Paint: Pets, Allergies and Sensitive Households | low VOC paint |  |
 | 2026-12-08 | Should Trim Be the Same Color as the Walls? | trim same color as walls |  |
 | 2026-12-09 | Painting Wood Paneling: Grooves, Primer and Bleed-Through | painting wood paneling |  |

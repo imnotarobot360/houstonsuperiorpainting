@@ -62,6 +62,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Limewash cost in Houston", href: "/blog/limewash-cost-houston" },
     { label: "Brick painting in Katy", href: "/brick-painting-katy" },
     { label: "Brick painting in Memorial", href: "/brick-painting-memorial" },
+    { label: "Painting a brick fireplace", href: "/blog/painting-brick-fireplace-houston" },
   ],
   "/best-paint-colors-houston-homes": [
     { label: "Best 2027 paint colors for Houston homes", href: "/blog/best-paint-colors-houston-homes-2027" },
@@ -71,6 +72,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Sherwin-Williams Rewild 2027", href: "/blog/sherwin-williams-rewild-2027-colors-houston" },
     { label: "Sherwin-Williams 2027 Color of the Year: Celery", href: "/blog/sherwin-williams-color-of-the-year-2027-celery-houston" },
     { label: "2026 cabinet colors: greige, green and black", href: "/blog/cabinet-colors-2026-houston-greige-green-black" },
+    { label: "Agreeable Gray vs. Accessible Beige", href: "/blog/agreeable-gray-vs-accessible-beige-houston" },
     { label: "Exterior colors for Katy homes", href: "/blog/exterior-paint-colors-katy-tx" },
     { label: "Exterior colors for Sugar Land homes", href: "/blog/exterior-paint-colors-sugar-land-tx" },
     { label: "Exterior colors for Heights homes", href: "/blog/exterior-paint-colors-houston-heights" },
@@ -97,6 +99,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Ceiling paint: white vs. color", href: "/blog/ceiling-paint-color-white-vs-color" },
     { label: "Sherwin-Williams 2027 Color of the Year: Celery", href: "/blog/sherwin-williams-color-of-the-year-2027-celery-houston" },
     { label: "2026 cabinet colors: greige, green and black", href: "/blog/cabinet-colors-2026-houston-greige-green-black" },
+    { label: "Agreeable Gray vs. Accessible Beige", href: "/blog/agreeable-gray-vs-accessible-beige-houston" },
   ],
   // Service and article pages: daily-calendar posts (shown from their publish date)
   "/interior-painting-houston-tx": [
@@ -108,6 +111,10 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Painting over dark walls", href: "/blog/paint-dark-walls-lighter-color" },
     { label: "Best paint for kitchen walls", href: "/blog/kitchen-wall-paint-washable-houston" },
     { label: "How much paint do I need?", href: "/blog/how-much-paint-for-a-room" },
+    { label: "Should you paint stained wood trim?", href: "/blog/paint-stained-wood-trim-houston" },
+    { label: "Painting stair railings and spindles", href: "/blog/painting-stair-railings-banisters-spindles" },
+    { label: "How to clean painted walls", href: "/blog/how-to-clean-painted-walls" },
+    { label: "Repainting builder-grade paint", href: "/blog/repainting-builder-grade-paint-new-home-houston" },
   ],
   "/exterior-painting-houston-tx": [
     { label: "Wood rot repair before exterior painting", href: "/blog/wood-rot-repair-before-painting-houston" },
@@ -117,6 +124,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Garage door painting", href: "/blog/garage-door-painting-houston" },
     { label: "Painting metal railings and gates", href: "/blog/painting-metal-railings-gates-houston" },
     { label: "Window trim and sill painting", href: "/blog/window-trim-sill-painting-houston" },
+    { label: "Painting an exterior in winter", href: "/blog/can-you-paint-exterior-in-winter-houston" },
   ],
   "/cabinet-refinishing-houston-tx": [
     { label: "Green kitchen cabinets for 2027", href: "/blog/green-kitchen-cabinet-colors-2027-houston" },

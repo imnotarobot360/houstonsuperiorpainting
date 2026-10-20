@@ -966,3 +966,195 @@ Full guide: https://houstonsuperiorpainting.com/blog/painting-shiplap-board-and-
 Free written estimates · (346) 594-5960 · Houston Superior Painting
 ```
 
+## November 29, 2026: Can You Paint a House Exterior in Houston in Winter?
+
+URL: https://houstonsuperiorpainting.com/blog/can-you-paint-exterior-in-winter-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Can You Paint a House Exterior in Houston in Winter?
+
+Minimum temperatures, dew point, cold fronts and the paints made for cool weather: when winter exterior painting works in Houston and when to wait.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Minimum temperatures, dew point, cold fronts and the paints made for cool weather: when winter exterior painting works in Houston and when to wait.
+
+Full guide: https://houstonsuperiorpainting.com/blog/can-you-paint-exterior-in-winter-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## November 30, 2026: Should You Paint Stained Wood Trim? Pros, Cons and Prep
+
+URL: https://houstonsuperiorpainting.com/blog/paint-stained-wood-trim-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Should You Paint Stained Wood Trim? Pros, Cons and Prep
+
+When painting stained or varnished trim makes sense, how it is prepped and primed so paint sticks, and why it is hard to undo.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+When painting stained or varnished trim makes sense, how it is prepped and primed so paint sticks, and why it is hard to undo.
+
+Full guide: https://houstonsuperiorpainting.com/blog/paint-stained-wood-trim-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 1, 2026: Painting a Brick Fireplace: Paint, Limewash or Leave It?
+
+URL: https://houstonsuperiorpainting.com/blog/painting-brick-fireplace-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Painting a Brick Fireplace: Paint, Limewash or Leave It?
+
+Paint, limewash and German smear on an interior brick fireplace: looks, heat-safe products, cleaning soot first and what each costs to undo.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Paint, limewash and German smear on an interior brick fireplace: looks, heat-safe products, cleaning soot first and what each costs to undo.
+
+Full guide: https://houstonsuperiorpainting.com/blog/painting-brick-fireplace-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 2, 2026: Painting Stair Railings, Banisters and Spindles
+
+URL: https://houstonsuperiorpainting.com/blog/painting-stair-railings-banisters-spindles
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Painting Stair Railings, Banisters and Spindles
+
+Two-tone stairs, stained handrail with painted spindles, the right enamel for hand traffic, and why stairs take longer than they look.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Two-tone stairs, stained handrail with painted spindles, the right enamel for hand traffic, and why stairs take longer than they look.
+
+Full guide: https://houstonsuperiorpainting.com/blog/painting-stair-railings-banisters-spindles
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 3, 2026: How to Clean Painted Walls Without Ruining the Finish
+
+URL: https://houstonsuperiorpainting.com/blog/how-to-clean-painted-walls
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+How to Clean Painted Walls Without Ruining the Finish
+
+What each sheen can take, which cleaners are safe, how to remove scuffs and crayon, and when a mark needs paint instead.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+What each sheen can take, which cleaners are safe, how to remove scuffs and crayon, and when a mark needs paint instead.
+
+Full guide: https://houstonsuperiorpainting.com/blog/how-to-clean-painted-walls
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 4, 2026: Hanging Holiday Decorations Without Damaging Paint
+
+URL: https://houstonsuperiorpainting.com/blog/hang-holiday-decorations-without-damaging-paint
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Hanging Holiday Decorations Without Damaging Paint
+
+Adhesive hooks, tape, nails and exterior light clips: what peels fresh paint, how long to wait after painting, and how to remove them cleanly.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Adhesive hooks, tape, nails and exterior light clips: what peels fresh paint, how long to wait after painting, and how to remove them cleanly.
+
+Full guide: https://houstonsuperiorpainting.com/blog/hang-holiday-decorations-without-damaging-paint
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 5, 2026: Agreeable Gray vs. Accessible Beige in Houston Homes
+
+URL: https://houstonsuperiorpainting.com/blog/agreeable-gray-vs-accessible-beige-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Agreeable Gray vs. Accessible Beige in Houston Homes
+
+Two of Sherwin-Williams' most-used neutrals compared: LRV, undertones, how each looks in Houston light, and the trim and floors that suit them.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Two of Sherwin-Williams' most-used neutrals compared: LRV, undertones, how each looks in Houston light, and the trim and floors that suit them.
+
+Full guide: https://houstonsuperiorpainting.com/blog/agreeable-gray-vs-accessible-beige-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 6, 2026: Repainting a New Build: Builder-Grade Paint in Houston Homes
+
+URL: https://houstonsuperiorpainting.com/blog/repainting-builder-grade-paint-new-home-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Repainting a New Build: Builder-Grade Paint in Houston Homes
+
+Why builder flat paint scuffs and won't wash in new Katy, Cypress and Richmond homes, and what a repaint with a washable finish involves.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Why builder flat paint scuffs and won't wash in new Katy, Cypress and Richmond homes, and what a repaint with a washable finish involves.
+
+Full guide: https://houstonsuperiorpainting.com/blog/repainting-builder-grade-paint-new-home-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
