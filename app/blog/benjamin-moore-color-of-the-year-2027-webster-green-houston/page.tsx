@@ -132,7 +132,7 @@ const D: GuideArticleData = {
       body: (
         <Bullets
           items={[
-            <><strong>Walls:</strong> a premium Benjamin Moore interior line such as Regal Select or Aura; matte or eggshell keeps a deep green rich and hides wall texture.</>,
+            <><strong>Walls:</strong> we use Benjamin Moore Regal Select; matte or eggshell keeps a deep green rich and hides wall texture.</>,
             <><strong>Cabinets and built-ins:</strong> {BUSINESS.cabinetFinish.products[0]}, a cabinet-grade enamel, usually in satin.</>,
             <><strong>Trim and doors:</strong> satin or semi-gloss enamel.</>,
             <><strong>Exterior doors and shutters:</strong> a premium exterior product rated for sun; ask about fade resistance for deep colors.</>,
