@@ -64,6 +64,9 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Brick painting in Memorial", href: "/brick-painting-memorial" },
   ],
   "/best-paint-colors-houston-homes": [
+    { label: "Best 2027 paint colors for Houston homes", href: "/blog/best-paint-colors-houston-homes-2027" },
+    { label: "Benjamin Moore Color Trends 2027", href: "/blog/benjamin-moore-color-trends-2027-houston" },
+    { label: "Webster Green HC-130", href: "/blog/benjamin-moore-color-of-the-year-2027-webster-green-houston" },
     { label: "What colors go with Celery?", href: "/blog/colors-that-go-with-celery-sw-6421" },
     { label: "Sherwin-Williams Rewild 2027", href: "/blog/sherwin-williams-rewild-2027-colors-houston" },
     { label: "Sherwin-Williams 2027 Color of the Year: Celery", href: "/blog/sherwin-williams-color-of-the-year-2027-celery-houston" },
@@ -86,6 +89,9 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Pressure washing before painting", href: "/blog/pressure-washing-before-painting" },
   ],
   "/paint-color-consultation-houston": [
+    { label: "Webster Green HC-130: Benjamin Moore 2027", href: "/blog/benjamin-moore-color-of-the-year-2027-webster-green-houston" },
+    { label: "Celery vs. Webster Green", href: "/blog/celery-vs-webster-green-2027-color-of-the-year" },
+    { label: "Best 2027 paint colors for Houston homes", href: "/blog/best-paint-colors-houston-homes-2027" },
     { label: "What colors go with Celery?", href: "/blog/colors-that-go-with-celery-sw-6421" },
     { label: "Sherwin-Williams Rewild 2027", href: "/blog/sherwin-williams-rewild-2027-colors-houston" },
     { label: "Ceiling paint: white vs. color", href: "/blog/ceiling-paint-color-white-vs-color" },
@@ -113,6 +119,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Window trim and sill painting", href: "/blog/window-trim-sill-painting-houston" },
   ],
   "/cabinet-refinishing-houston-tx": [
+    { label: "Green kitchen cabinets for 2027", href: "/blog/green-kitchen-cabinet-colors-2027-houston" },
     { label: "Should you fill oak grain?", href: "/blog/fill-oak-grain-before-painting-cabinets" },
     { label: "On-site vs. off-site cabinet painting", href: "/blog/cabinet-painting-on-site-vs-off-site" },
     { label: "Painting inside kitchen cabinets", href: "/blog/paint-inside-kitchen-cabinets" },
@@ -137,6 +144,8 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Latex over oil-based paint", href: "/blog/latex-paint-over-oil-based-paint" },
   ],
   "/blog/sherwin-williams-color-of-the-year-2027-celery-houston": [
+    { label: "Celery vs. Webster Green", href: "/blog/celery-vs-webster-green-2027-color-of-the-year" },
+    { label: "Webster Green HC-130", href: "/blog/benjamin-moore-color-of-the-year-2027-webster-green-houston" },
     { label: "What colors go with Celery?", href: "/blog/colors-that-go-with-celery-sw-6421" },
     { label: "Where to use Celery", href: "/blog/where-to-use-celery-sw-6421" },
     { label: "Sherwin-Williams Rewild 2027", href: "/blog/sherwin-williams-rewild-2027-colors-houston" },

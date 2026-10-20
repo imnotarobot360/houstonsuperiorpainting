@@ -7,7 +7,7 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { isLivePath } from "@/lib/blog-schedule"
+import { isLivePath, scheduledFor } from "@/lib/blog-schedule"
 import { relatedGuidesFor } from "@/lib/related-guides"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -39,7 +39,18 @@ export type GuideArticleData = {
 const fmt = (iso: string) =>
   new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" })
 
-export function guideMetadata(d: Pick<GuideArticleData, "path" | "title" | "description" | "h1" | "published" | "updated">): Metadata {
+/**
+ * Scheduled posts take their dates from lib/blog-schedule.ts, so moving a post on
+ * the calendar moves its published date too (the file's own dates are a fallback).
+ */
+function withScheduleDates<T extends { path: string; published: string; updated: string }>(d: T): T {
+  const s = scheduledFor(d.path)
+  if (!s) return d
+  return { ...d, published: s.publishOn, updated: d.updated > s.publishOn ? d.updated : s.publishOn }
+}
+
+export function guideMetadata(input: Pick<GuideArticleData, "path" | "title" | "description" | "h1" | "published" | "updated">): Metadata {
+  const d = withScheduleDates(input)
   const url = `${SITE}${d.path}`
   return {
     title: d.title,
@@ -59,7 +70,8 @@ export function guideMetadata(d: Pick<GuideArticleData, "path" | "title" | "desc
   }
 }
 
-export function GuideArticle({ d }: { d: GuideArticleData }) {
+export function GuideArticle({ d: input }: { d: GuideArticleData }) {
+  const d = withScheduleDates(input)
   // Scheduled posts (lib/blog-schedule.ts) stay hidden until their date.
   if (!isLivePath(d.path)) notFound()
   const parent = d.breadcrumbParent ?? { name: "Blog", path: "/blog" }

@@ -17,64 +17,59 @@ needed on the day.
 - **Previewing unpublished posts locally:** `BLOG_PREVIEW=1 npx next start` (never works on production).
 - **Linking rule:** nothing may link to a post before its date. The site check fails on 404 links.
 
-## The owner's 30 topics
+## Full schedule (40 posts, October 20, 2026 to November 28, 2026)
 
-| # | Topic | Status | URL / date |
-|---|---|---|---|
-| 1 | Celery SW 6421 in Houston homes | Live | /blog/sherwin-williams-color-of-the-year-2027-celery-houston |
-| 2 | What colors go with Celery SW 6421 | **Scheduled Oct 20** | /blog/colors-that-go-with-celery-sw-6421 |
-| 3 | Where to use Celery SW 6421 | **Scheduled Oct 22** | /blog/where-to-use-celery-sw-6421 |
-| 4 | Sherwin-Williams Rewild 2027 | **Scheduled Oct 21** | /blog/sherwin-williams-rewild-2027-colors-houston |
-| 5 | Popcorn ceiling removal cost | Live (existing post) | /blog/popcorn-ceiling-removal-houston |
-| 6 | Paint before selling | Live | /blog/paint-house-before-selling-houston |
-| 7 | Primer or two coats | Live | /blog/primer-vs-two-coats-paint-houston |
-| 8 | Stay home during interior painting | Live | /blog/stay-home-during-interior-painting-houston |
-| 9 | Painting an occupied office | Live (existing post) | /blog/commercial-office-painting-houston |
-| 10 | Wood rot repair before exterior painting | **Scheduled Oct 24** | /blog/wood-rot-repair-before-painting-houston |
-| 11 | Paint over water stains | Live | /blog/paint-over-water-stains-houston |
-| 12 | Cost to paint ceilings, trim and doors | **Scheduled Oct 23** | /blog/cost-paint-ceilings-trim-doors-houston |
-| 13 | Painting after foundation repair | **Scheduled Oct 31** | /blog/painting-after-foundation-repair-houston |
-| 14 | Orange peel vs knockdown vs smooth | **Scheduled Oct 29** | /blog/orange-peel-vs-knockdown-vs-smooth-walls |
-| 15 | How painters match wall texture | **Scheduled Oct 30** | /blog/how-painters-match-wall-texture |
-| 16 | Latex over oil-based paint | **Scheduled Oct 26** | /blog/latex-paint-over-oil-based-paint |
-| 17 | Why touch-ups don't match | **Scheduled Oct 25** | /blog/why-paint-touch-ups-dont-match |
-| 18 | Paint before moving in | Live | /blog/paint-before-moving-in-houston |
-| 19 | Rental turnover painting | **Scheduled Nov 6** | /blog/rental-turnover-painting-houston |
-| 20 | Best paint for bathrooms and humid areas | **Scheduled Oct 28** | /blog/best-paint-bathrooms-laundry-rooms-houston |
-| 21 | How long before using a painted room | **Scheduled Oct 27** | /blog/how-long-before-using-freshly-painted-room |
-| 22 | Tall foyers, stairwells, high ceilings | **Scheduled Nov 2** | /blog/painting-high-ceilings-foyers-stairwells-houston |
-| 23 | Do painters move furniture | **Scheduled Nov 1** | /blog/do-painters-move-furniture |
-| 24 | Fill oak grain before painting cabinets | **Scheduled Nov 3** | /blog/fill-oak-grain-before-painting-cabinets |
-| 25 | Cabinet painting on-site vs off-site | **Scheduled Nov 4** | /blog/cabinet-painting-on-site-vs-off-site |
-| 26 | Paint inside kitchen cabinets | **Scheduled Nov 5** | /blog/paint-inside-kitchen-cabinets |
-| 27 | Commercial bid checklist | Live (covered) | /blog/compare-commercial-painting-bids-houston and the checklist on /commercial-painting-cost-per-square-foot-houston |
-| 28 | After-hours commercial painting | **Scheduled Nov 7** | /blog/after-hours-commercial-painting-houston |
-| 29 | Medical and dental offices | **Scheduled Nov 8** | /blog/medical-dental-office-painting-houston |
-| 30 | HOA and multifamily painting | **Scheduled Nov 9** | /blog/hoa-multifamily-painting-houston |
-
-## Company practices confirmed by the owner (2026-10-19)
-
-- **#23 furniture:** our crews move all heavy furniture; the customer moves expensive or fragile items. Post updated.
-- **#25 cabinets:** painted on-site at the home; doors removed and sprayed flat in a contained area. Post updated.
-- **#22 high ceilings:** we own scaffolding. Post updated.
-
-## Extension, Nov 10–23 (added 2026-10-19 so daily posting continues)
+Generated from `lib/blog-schedule.ts` on 2026-10-19 after adding the Benjamin Moore 2027 series (5 posts, Oct 21–27, in the owner's order); later posts moved back 5 days. Post dates on the pages follow this schedule automatically.
 
 | Date | Post | URL |
 |---|---|---|
-| Nov 10 | Painting interior doors | /blog/painting-interior-doors-houston |
-| Nov 11 | Painting over dark walls with a light color | /blog/paint-dark-walls-lighter-color |
-| Nov 12 | Interior painting before the holidays | /blog/interior-painting-before-holidays-houston |
-| Nov 13 | Caulking before exterior painting | /blog/caulking-before-exterior-painting-houston |
-| Nov 14 | Soffit and fascia painting | /blog/soffit-fascia-painting-houston |
-| Nov 15 | Front door paint in Houston sun | /blog/front-door-paint-houston-sun |
-| Nov 16 | Garage door painting | /blog/garage-door-painting-houston |
-| Nov 17 | Metal railings, gates and fences | /blog/painting-metal-railings-gates-houston |
-| Nov 18 | Ceiling paint: white vs. color | /blog/ceiling-paint-color-white-vs-color |
-| Nov 19 | Washable kitchen wall paint | /blog/kitchen-wall-paint-washable-houston |
-| Nov 20 | Nursery and kids' room painting | /blog/nursery-kids-room-painting |
-| Nov 21 | How much paint for a room | /blog/how-much-paint-for-a-room |
-| Nov 22 | Window trim and sills | /blog/window-trim-sill-painting-houston |
-| Nov 23 | Shiplap and board and batten | /blog/painting-shiplap-board-and-batten-houston |
+| 2026-10-20 | What Colors Go With Celery SW 6421? Coordinating-Color Guide | /blog/colors-that-go-with-celery-sw-6421 |
+| 2026-10-21 | Benjamin Moore Color of the Year 2027: Webster Green HC-130 in Houston Homes | /blog/benjamin-moore-color-of-the-year-2027-webster-green-houston |
+| 2026-10-22 | Celery SW 6421 vs. Webster Green HC-130: Comparing the 2027 Colors of the Year | /blog/celery-vs-webster-green-2027-color-of-the-year |
+| 2026-10-23 | Sherwin-Williams Rewild 2027: The Colors and How They Work in Houston Homes | /blog/sherwin-williams-rewild-2027-colors-houston |
+| 2026-10-24 | Best 2027 Paint Colors for Houston Homes | /blog/best-paint-colors-houston-homes-2027 |
+| 2026-10-25 | Benjamin Moore Color Trends 2027: The Best Colors for Houston Homes | /blog/benjamin-moore-color-trends-2027-houston |
+| 2026-10-26 | Where to Use Celery SW 6421: Cabinets, Bedrooms, Bathrooms and Exteriors | /blog/where-to-use-celery-sw-6421 |
+| 2026-10-27 | Are Green Kitchen Cabinets Still in Style for 2027? | /blog/green-kitchen-cabinet-colors-2027-houston |
+| 2026-10-28 | Cost to Paint Ceilings, Trim and Doors in Houston (2026) | /blog/cost-paint-ceilings-trim-doors-houston |
+| 2026-10-29 | Wood Rot Repair Before Exterior Painting: What Houston Homeowners Should Know | /blog/wood-rot-repair-before-painting-houston |
+| 2026-10-30 | Why Paint Touch-Ups Don't Match, and How to Fix Them | /blog/why-paint-touch-ups-dont-match |
+| 2026-10-31 | Can You Apply Latex Paint Over Oil-Based Paint? | /blog/latex-paint-over-oil-based-paint |
+| 2026-11-01 | How Long Before You Can Use a Freshly Painted Room? | /blog/how-long-before-using-freshly-painted-room |
+| 2026-11-02 | Best Paint for Houston Bathrooms, Laundry Rooms and Humid Areas | /blog/best-paint-bathrooms-laundry-rooms-houston |
+| 2026-11-03 | Orange Peel vs. Knockdown vs. Smooth Walls: Houston Wall Textures Explained | /blog/orange-peel-vs-knockdown-vs-smooth-walls |
+| 2026-11-04 | How Painters Match an Existing Wall Texture | /blog/how-painters-match-wall-texture |
+| 2026-11-05 | Painting After Foundation Repair: Cracks, Drywall and Waiting Times | /blog/painting-after-foundation-repair-houston |
+| 2026-11-06 | Do Professional Painters Move and Protect Furniture? | /blog/do-painters-move-furniture |
+| 2026-11-07 | Painting Tall Foyers, Stairwells and High Ceilings in Houston | /blog/painting-high-ceilings-foyers-stairwells-houston |
+| 2026-11-08 | Should You Fill Oak Grain Before Painting Cabinets? | /blog/fill-oak-grain-before-painting-cabinets |
+| 2026-11-09 | Cabinet Painting On-Site vs. Off-Site: What's the Difference? | /blog/cabinet-painting-on-site-vs-off-site |
+| 2026-11-10 | Should You Paint the Inside of Kitchen Cabinets? | /blog/paint-inside-kitchen-cabinets |
+| 2026-11-11 | Rental Turnover Painting in Houston: Timeline and Checklist | /blog/rental-turnover-painting-houston |
+| 2026-11-12 | After-Hours and Weekend Commercial Painting in Houston | /blog/after-hours-commercial-painting-houston |
+| 2026-11-13 | Painting Medical and Dental Offices While They Stay Open | /blog/medical-dental-office-painting-houston |
+| 2026-11-14 | HOA and Multifamily Painting: Planning, Access and Resident Communication | /blog/hoa-multifamily-painting-houston |
+| 2026-11-15 | Painting Interior Doors: Slab vs. Paneled, Sheen and Prep | /blog/painting-interior-doors-houston |
+| 2026-11-16 | How to Paint Over Dark Walls With a Light Color | /blog/paint-dark-walls-lighter-color |
+| 2026-11-17 | Getting Interior Painting Done Before the Holidays | /blog/interior-painting-before-holidays-houston |
+| 2026-11-18 | Caulking Before Exterior Painting: What and Where | /blog/caulking-before-exterior-painting-houston |
+| 2026-11-19 | Soffit and Fascia Painting in Houston | /blog/soffit-fascia-painting-houston |
+| 2026-11-20 | Painting a Front Door That Lasts in Houston Sun | /blog/front-door-paint-houston-sun |
+| 2026-11-21 | Garage Door Painting in Houston | /blog/garage-door-painting-houston |
+| 2026-11-22 | Painting Metal Railings, Gates and Fences in Houston | /blog/painting-metal-railings-gates-houston |
+| 2026-11-23 | Ceiling Paint: Flat White, the Wall Color, or Something Bolder? | /blog/ceiling-paint-color-white-vs-color |
+| 2026-11-24 | Best Paint for Kitchen Walls: Washable and Grease-Resistant | /blog/kitchen-wall-paint-washable-houston |
+| 2026-11-25 | Painting a Nursery or Kids' Room: Timing, Low-VOC, Durability | /blog/nursery-kids-room-painting |
+| 2026-11-26 | How Much Paint Do I Need for a Room? | /blog/how-much-paint-for-a-room |
+| 2026-11-27 | Painting Exterior Window Trim and Sills in Houston | /blog/window-trim-sill-painting-houston |
+| 2026-11-28 | Painting Shiplap and Board and Batten | /blog/painting-shiplap-board-and-batten-houston |
 
-All scheduled. To continue past Nov 23, add posts to `BLOG_SCHEDULE` starting Nov 24 (the tests enforce one per day with no gaps).
+## Already live before the calendar (from the owner's 30-topic list)
+
+Celery SW 6421, popcorn ceiling cost, paint before selling, primer vs two coats, staying home during painting, occupied office, water stains, paint before moving in, commercial bid comparison.
+
+## Company practices confirmed by the owner (2026-10-19)
+
+- Furniture: our crews move all heavy furniture; the customer moves expensive or fragile items.
+- Cabinets: painted on-site at the home; doors removed and sprayed flat in a contained area.
+- High ceilings: we own scaffolding.

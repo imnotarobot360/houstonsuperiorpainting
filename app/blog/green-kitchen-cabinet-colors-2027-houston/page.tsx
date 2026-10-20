@@ -1,0 +1,163 @@
+import Link from "next/link"
+import { GuideArticle, guideMetadata, type GuideArticleData } from "@/components/aeo/guide-article"
+import { Bullets } from "@/components/aeo/blocks"
+import { BUSINESS, PRICES_2026 as P } from "@/lib/business"
+
+// Owner brief 2026-10-19 (BM 2027 series, post 5 of 5). Color facts as in the
+// Celery and Webster Green posts. Photos: our real Richmond sage-green kitchen
+// (lib/projects.ts "richmond-sage-green-kitchen-cabinets", photos confirmed by
+// the owner). The paint color used there is NOT stated anywhere, so captions
+// never claim it is Celery or Webster Green. Prices from PRICES_2026.
+
+const PROJECT = "/projects/richmond-sage-green-kitchen-cabinets"
+const PHOTOS = [
+  { src: "/images/projects/richmond-sage-kitchen/01-sage-kitchen-corner.jpg", alt: "Sage green painted kitchen cabinets in a Richmond, TX home" },
+  { src: "/images/projects/richmond-sage-kitchen/04-sage-island.jpg", alt: "Angled kitchen island with raised-panel doors and drawers painted sage green" },
+]
+
+const D: GuideArticleData = {
+  path: "/blog/green-kitchen-cabinet-colors-2027-houston",
+  title: "Are Green Kitchen Cabinets Still in Style for 2027?",
+  description:
+    "Both 2027 Colors of the Year are greens. Dark vs. light green cabinets, countertops and hardware that work with them, oak grain, and the right cabinet coating.",
+  h1: "Are green kitchen cabinets still in style for 2027?",
+  eyebrow: "Cabinet guide",
+  published: "2026-10-27",
+  updated: "2026-10-27",
+  quickAnswer: (
+    <>
+      Yes. Both major paint brands chose greens for 2027: Benjamin Moore&apos;s deep Webster Green HC-130, which Benjamin
+      Moore suggests for kitchen cabinetry, and Sherwin-Williams&apos; light Celery SW 6421. Green cabinets now come in two
+      directions: deep and classic, or light and fresh. The right one depends on your kitchen&apos;s light, countertops and
+      hardware, and a lasting finish depends on prep and a cabinet-grade coating such as {BUSINESS.cabinetFinish.products[0]}.
+    </>
+  ),
+  sections: [
+    {
+      title: "Webster Green HC-130 and Celery SW 6421",
+      body: (
+        <Bullets
+          items={[
+            <><strong>Webster Green HC-130 (Benjamin Moore):</strong> a deep, confident green (LRV 20.2). Bold on a full kitchen, striking on an island or lower cabinets with lighter uppers. See <Link href="/blog/benjamin-moore-color-of-the-year-2027-webster-green-houston">Webster Green in Houston homes</Link>.</>,
+            <><strong>Celery SW 6421 (Sherwin-Williams):</strong> a light, airy herbal green (LRV about 71) with yellow undertones. Soft and fresh on a full kitchen. See <Link href="/blog/where-to-use-celery-sw-6421">where to use Celery</Link>.</>,
+            <>Compare them in <Link href="/blog/celery-vs-webster-green-2027-color-of-the-year">Celery vs. Webster Green</Link>.</>,
+          ]}
+        />
+      ),
+    },
+    {
+      title: "Dark vs. light green cabinets",
+      body: (
+        <Bullets
+          items={[
+            <><strong>Dark green</strong> hides everyday marks, adds drama and suits traditional and transitional kitchens; it needs good light, and a light countertop and backsplash to keep the room from feeling heavy.</>,
+            <><strong>Light green</strong> keeps a small or dim kitchen bright and pairs easily with white counters; it shows scuffs a little more on lower cabinets.</>,
+            <><strong>Two-tone:</strong> deep green lowers or island with light green or white uppers is a safe way to try a bold color.</>,
+          ]}
+        />
+      ),
+    },
+    {
+      title: "Countertops",
+      body: (
+        <Bullets
+          items={[
+            "White and light quartz: crisp with deep green; clean and calm with light green.",
+            "Natural stone with warm veining (creams, golds, browns) suits deep green especially well.",
+            "Very cool gray or blue-white stone can make a yellow-leaning light green look more yellow; test samples side by side.",
+          ]}
+        />
+      ),
+    },
+    {
+      title: "Hardware",
+      body: (
+        <Bullets
+          items={[
+            <><strong>Brass and gold:</strong> the classic pairing with deep green.</>,
+            <><strong>Black:</strong> crisp and modern, especially on light green.</>,
+            <><strong>Nickel and chrome:</strong> cooler and quieter; works with light greens and gray-leaning stone.</>,
+          ]}
+        />
+      ),
+    },
+    {
+      title: "A real Houston-area green kitchen",
+      body: (
+        <>
+          <div className="not-prose my-4 grid gap-3 sm:grid-cols-2">
+            {PHOTOS.map((p) => (
+              <figure key={p.src}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.src} alt={p.alt} loading="lazy" className="aspect-[4/3] w-full rounded-lg border border-border object-cover" />
+              </figure>
+            ))}
+          </div>
+          <p>
+            A sage green kitchen we painted in Richmond, TX: raised-panel cabinets and an angled island. See the full{" "}
+            <Link href={PROJECT}>Richmond sage green kitchen project</Link>.
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Oak cabinets: fill the grain?",
+      body: (
+        <p>
+          Oak grain shows through paint. A deep green highlights the texture more than a light one; for a smooth modern look,
+          grain filling before primer is the answer, quoted as a separate line on the estimate.
+        </p>
+      ),
+    },
+    {
+      title: "The right cabinet coating",
+      body: (
+        <p>
+          Cabinets take daily handling, so they need a cabinet-grade enamel, not wall paint. We use{" "}
+          {BUSINESS.cabinetFinish.sentence}, and cabinets need about {BUSINESS.cabinetFinish.cureDays} of gentle use while the
+          finish cures. Cabinet painting typically runs {P.cabinetsPerKitchen} per kitchen as a 2026 planning range. See{" "}
+          <Link href="/cabinet-refinishing-houston-tx">cabinet refinishing in Houston</Link>.{" "}
+          {BUSINESS.paymentPolicy.sentence}
+        </p>
+      ),
+    },
+  ],
+  faqs: [
+    {
+      q: "Are green kitchen cabinets still in style for 2027?",
+      a: "Yes. Both 2027 Colors of the Year are greens: Benjamin Moore's deep Webster Green HC-130, which it suggests for cabinetry, and Sherwin-Williams' light Celery SW 6421.",
+    },
+    {
+      q: "Should green cabinets be dark or light?",
+      a: "Dark green suits well-lit, traditional or transitional kitchens and hides marks; light green keeps small or dim kitchens bright. A two-tone kitchen combines both.",
+    },
+    {
+      q: "What hardware goes with green cabinets?",
+      a: "Brass and gold are classic with deep green; black is crisp and modern; nickel and chrome are cooler and quieter.",
+    },
+    {
+      q: "What paint is best for green kitchen cabinets?",
+      a: "A cabinet-grade enamel such as Benjamin Moore Command over a bonding primer, with about 7–10 days of gentle use while it cures.",
+    },
+  ],
+  limitations: (
+    <>
+      Color facts are from Sherwin-Williams&apos; and Benjamin Moore&apos;s published pages, checked October 2026. The project
+      photos show a sage green kitchen we painted, as an example of green cabinets; they are not a sample of either 2027
+      color. Prices are planning ranges. Confirm
+      colors with physical samples.
+    </>
+  ),
+  related: [
+    { label: "Cabinet refinishing in Houston", href: "/cabinet-refinishing-houston-tx" },
+    { label: "Webster Green HC-130", href: "/blog/benjamin-moore-color-of-the-year-2027-webster-green-houston" },
+    { label: "Celery vs. Webster Green", href: "/blog/celery-vs-webster-green-2027-color-of-the-year" },
+    { label: "Richmond sage green kitchen project", href: PROJECT },
+  ],
+  ctaTitle: "Get a written cabinet painting estimate",
+}
+
+export const metadata = guideMetadata(D)
+export default function Page() {
+  return <GuideArticle d={D} />
+}
