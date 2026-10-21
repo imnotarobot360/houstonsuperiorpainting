@@ -45,7 +45,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Benjamin Moore's 2027 Color of the Year is a deep, confident green. How it looks in Houston light, where to use it, and the whites, blues and browns that pair with it.",
     category: "Color Guide",
     readTime: "6 min read",
-    image: "/images/projects/richmond-sage-kitchen/04-sage-island.jpg",
+    image: "/images/blog/art/benjamin-moore-color-of-the-year-2027-webster-green-houston.png",
     keyword: "Benjamin Moore Color of the Year 2027",
   },
   {
@@ -55,7 +55,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Sherwin-Williams' light, airy Celery and Benjamin Moore's deep Webster Green: how they differ, where each works, and how to use them together.",
     category: "Color Guide",
     readTime: "5 min read",
-    image: "/images/blog/celery-sw-6421-swatch.png",
+    image: "/images/blog/art/celery-vs-webster-green-2027-color-of-the-year.png",
     keyword: "Celery vs Webster Green",
   },
   {
@@ -75,7 +75,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "The 2027 colors from Sherwin-Williams and Benjamin Moore that suit Houston homes, organized by light, room and style.",
     category: "Color Guide",
     readTime: "6 min read",
-    image: "/images/blog/paint-colors-houston-homes-2026.png",
+    image: "/images/blog/art/best-paint-colors-houston-homes-2027.png",
     keyword: "best 2027 paint colors Houston",
   },
   {
@@ -85,7 +85,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "All eight Color Trends 2027 colors: undertones, LRV, best rooms, trim colors and how each looks in Houston light.",
     category: "Color Guide",
     readTime: "7 min read",
-    image: "/images/blog/interior-paint-colors-2026.jpg",
+    image: "/images/blog/art/benjamin-moore-color-trends-2027-houston.png",
     keyword: "Benjamin Moore Color Trends 2027",
   },
   {
@@ -105,7 +105,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Both 2027 Colors of the Year are greens. Dark vs. light green cabinets, countertops, hardware, oak grain and the right cabinet coating.",
     category: "Cabinet Refinishing",
     readTime: "5 min read",
-    image: "/images/projects/richmond-sage-kitchen/01-sage-kitchen-corner.jpg",
+    image: "/images/blog/art/green-kitchen-cabinet-colors-2027-houston.png",
     keyword: "green kitchen cabinets 2027",
   },
   {
@@ -115,7 +115,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "2026 planning ranges for painting ceilings, baseboards and trim, and doors in Houston, and what moves the price up or down.",
     category: "Cost Guide",
     readTime: "5 min read",
-    image: "/images/projects/fulshear-interior/06-home-office-wall-molding.jpg",
+    image: "/images/blog/art/cost-paint-ceilings-trim-doors-houston.png",
     keyword: "trim and ceiling painting cost",
   },
   {
@@ -125,7 +125,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Why rotted trim, fascia and siding must be fixed before paint, how to spot it, repair vs replace, and how it shows up on the estimate.",
     category: "Exterior Painting",
     readTime: "5 min read",
-    image: "/images/projects/heights-exterior-siding/02-side-porch.jpg",
+    image: "/images/blog/art/wood-rot-repair-before-painting-houston.png",
     keyword: "wood rot exterior painting",
   },
   {
@@ -135,7 +135,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Flashing, sheen, aging and application are why touch-ups show. When a touch-up can work and when to repaint the whole wall.",
     category: "Interior Painting",
     readTime: "5 min read",
-    image: "/images/projects/fulshear-interior/01-living-room.jpg",
+    image: "/images/blog/art/why-paint-touch-ups-dont-match.png",
     keyword: "paint touch-up does not match",
   },
   {
@@ -155,7 +155,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Dry to touch, recoat, put furniture back, hang pictures, wash the walls: the difference between drying and curing, and Houston humidity.",
     category: "Interior Painting",
     readTime: "5 min read",
-    image: "/images/projects/fulshear-interior/07-bedroom-accent-wall.jpg",
+    image: "/images/blog/art/how-long-before-using-freshly-painted-room.png",
     keyword: "paint drying and curing time",
   },
   {
@@ -215,7 +215,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Access, safety, protection and lighting for two-story foyers, stairwells and vaulted ceilings, and why they cost more per square foot.",
     category: "Interior Painting",
     readTime: "5 min read",
-    image: "/images/projects/richmond-great-room/01-great-room-fireplace.jpg",
+    image: "/images/blog/art/painting-high-ceilings-foyers-stairwells-houston.png",
     keyword: "high-ceiling painters Houston",
   },
   {
@@ -225,7 +225,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Why oak grain shows through paint, what grain filling does, and how to decide between a textured and a smooth finish.",
     category: "Cabinet Refinishing",
     readTime: "5 min read",
-    image: "/images/projects/heights-white-beadboard-kitchen/01-kitchen-and-built-ins.jpg",
+    image: "/images/blog/art/fill-oak-grain-before-painting-cabinets.png",
     keyword: "painted oak cabinets grain",
   },
   {
@@ -235,7 +235,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Spraying doors in a shop vs. at your home: finish quality, time without doors, mess and cost, and what to ask your painter.",
     category: "Cabinet Refinishing",
     readTime: "5 min read",
-    image: "/images/projects/cypress-white-teal-kitchen/02-teal-island-white-uppers.jpg",
+    image: "/images/blog/art/cabinet-painting-on-site-vs-off-site.png",
     keyword: "cabinet painting process",
   },
   {
@@ -245,7 +245,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "When painting cabinet interiors is worth it, why it adds time and cost, and the durability and cure issues to plan for.",
     category: "Cabinet Refinishing",
     readTime: "4 min read",
-    image: "/images/projects/katy-cabinets-built-ins/02-wall-ovens-and-uppers.jpg",
+    image: "/images/blog/art/paint-inside-kitchen-cabinets.png",
     keyword: "painting inside cabinets",
   },
   {
@@ -255,7 +255,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "For landlords and property managers: a standard color and sheen, a turnover checklist, scheduling between tenants and keeping costs predictable.",
     category: "Interior Painting",
     readTime: "5 min read",
-    image: "/images/projects/richmond-interior-arches/01-living-room-fireplace.jpg",
+    image: "/images/blog/art/rental-turnover-painting-houston.png",
     keyword: "rental property painting",
   },
   {
@@ -265,7 +265,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "When night and weekend painting makes sense, what it costs, and how to plan access, odor, security and the morning handoff.",
     category: "Commercial Painting",
     readTime: "5 min read",
-    image: "/images/projects/cypress-commercial-office/02-after-long-hallway.jpg",
+    image: "/images/blog/art/after-hours-commercial-painting-houston.png",
     keyword: "after-hours commercial painters",
   },
   {
@@ -275,7 +275,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Scheduling around patients, low-odor products, cleanable finishes, protecting equipment and coordinating with the practice.",
     category: "Commercial Painting",
     readTime: "5 min read",
-    image: "/images/projects/cypress-commercial-office/03-after-office.jpg",
+    image: "/images/blog/art/medical-dental-office-painting-houston.png",
     keyword: "medical-office painting Houston",
   },
   {
@@ -295,7 +295,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "How interior doors are painted for a smooth, durable finish: slab vs. paneled, removing vs. painting in place, sheen and dry time.",
     category: "Interior Painting",
     readTime: "5 min read",
-    image: "/images/projects/fulshear-interior/05-entry-to-living-dining.jpg",
+    image: "/images/blog/art/painting-interior-doors-houston.png",
     keyword: "painting interior doors",
   },
   {
@@ -305,7 +305,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Why dark-to-light color changes take more coats, when a tinted primer helps, and how to avoid a patchy result.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/projects/fulshear-interior/07-bedroom-accent-wall.jpg",
+    image: "/images/blog/art/paint-dark-walls-lighter-color.png",
     keyword: "paint over dark walls",
   },
   {
@@ -315,7 +315,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Plan backward from the date guests arrive: what to prioritize, how to schedule, and cure times to plan around.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/projects/fulshear-interior/08-living-room-wide.jpg",
+    image: "/images/blog/art/interior-painting-before-holidays-houston.png",
     keyword: "interior painting before holidays",
   },
   {
@@ -325,7 +325,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Which exterior joints to caulk before painting, which to leave open, and why failed caulk causes rot and peeling in Houston.",
     category: "Exterior Painting",
     readTime: "5 min read",
-    image: "/images/projects/heights-exterior-siding/01-front-elevation.jpg",
+    image: "/images/blog/art/caulking-before-exterior-painting-houston.png",
     keyword: "caulking before exterior painting",
   },
   {
@@ -335,7 +335,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Why soffits and fascia fail first on Houston homes, how to check them for rot and mildew, and the prep that makes paint last.",
     category: "Exterior Painting",
     readTime: "4 min read",
-    image: "/images/projects/pearland-exterior-hardie/03-front-corner.jpg",
+    image: "/images/blog/art/soffit-fascia-painting-houston.png",
     keyword: "soffit and fascia painting",
   },
   {
@@ -345,7 +345,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Steel, fiberglass and wood doors, color and fade in direct sun, sheen, and what a front door costs to paint.",
     category: "Exterior Painting",
     readTime: "4 min read",
-    image: "/images/projects/heights-exterior-siding/03-front-door.jpg",
+    image: "/images/blog/art/front-door-paint-houston-sun.png",
     keyword: "front door paint Houston",
   },
   {
@@ -355,7 +355,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "How to paint steel or wood garage doors so they last in Houston sun, and how to keep the panels from sticking.",
     category: "Exterior Painting",
     readTime: "4 min read",
-    image: "/images/projects/pearland-exterior-hardie/02-front-and-garage.jpg",
+    image: "/images/blog/art/garage-door-painting-houston.png",
     keyword: "garage door painting",
   },
   {
@@ -365,7 +365,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Rust removal, metal primer and topcoat so rust doesn't come back in Houston humidity.",
     category: "Exterior Painting",
     readTime: "4 min read",
-    image: "/images/projects/heights-painted-brick-bungalow/02-front-porch.jpg",
+    image: "/images/blog/art/painting-metal-railings-gates-houston.png",
     keyword: "painting metal railings",
   },
   {
@@ -375,7 +375,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "How to choose a ceiling color, and why flat sheen almost always wins on ceilings.",
     category: "Color Guide",
     readTime: "4 min read",
-    image: "/images/projects/richmond-great-room/01-great-room-fireplace.jpg",
+    image: "/images/blog/art/ceiling-paint-color-white-vs-color.png",
     keyword: "ceiling paint color",
   },
   {
@@ -385,7 +385,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Which paint and sheen to use on kitchen walls, and why grease must come off before painting.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/projects/cypress-two-tone-kitchen/01-kitchen-perimeter-and-island.jpg",
+    image: "/images/blog/art/kitchen-wall-paint-washable-houston.png",
     keyword: "kitchen wall paint",
   },
   {
@@ -415,7 +415,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Why sills and window trim fail first in Houston sun and rain, and the caulk, primer and paint that make them last.",
     category: "Exterior Painting",
     readTime: "4 min read",
-    image: "/images/projects/magnolia-exterior-siding/01-front-and-porch.jpg",
+    image: "/images/blog/art/window-trim-sill-painting-houston.png",
     keyword: "window trim painting",
   },
   {
@@ -425,7 +425,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Gaps, caulk, sheen and spraying for shiplap and board-and-batten walls, inside and out.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/projects/fulshear-interior/06-home-office-wall-molding.jpg",
+    image: "/images/blog/art/painting-shiplap-board-and-batten-houston.png",
     keyword: "painting shiplap",
   },
   {
@@ -495,7 +495,7 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     excerpt: "Two of Sherwin-Williams' most-used neutrals compared: LRV, undertones, how each looks in Houston light, and the trim and floors that suit them.",
     category: "Color Guide",
     readTime: "5 min read",
-    image: "/images/blog/interior-paint-colors-2026.jpg",
+    image: "/images/blog/art/agreeable-gray-vs-accessible-beige-houston.png",
     keyword: "Agreeable Gray vs Accessible Beige",
   },
   {

@@ -9,8 +9,9 @@ import { BUSINESS } from "@/lib/business"
 // personality", "quintessential green"; suggested as an accent, living room or
 // study, kitchen cabinetry, front door), and the HC-130 color page (LRV 20.2,
 // Historical Colors, coordinates Glacier White OC-37, Elmira White HC-84, Wild
-// Aster 1240, Cape May Cobblestone 1474). Benjamin Moore publishes no screen
-// hex, so no swatch is shown. Benjamin Moore does not state an undertone for
+// Aster 1240, Cape May Cobblestone 1474). Swatch: Benjamin Moore's own on-screen
+// value for HC-130 (hex 64806C, RGB 100/128/108, on its color page, checked
+// 2026-10-21), drawn by scripts/blog-art/generate.mjs. Benjamin Moore does not state an undertone for
 // Webster Green; the post doesn't invent one.
 
 const PRESS = "https://www.benjaminmoore.com/en-us/press/benjamin-moore-announces-color-of-the-year-2027"
@@ -35,6 +36,24 @@ const D: GuideArticleData = {
     </>
   ),
   sections: [
+    {
+      title: "Webster Green HC-130 on screen",
+      body: (
+        <figure className="not-prose my-4">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/blog/art/benjamin-moore-color-of-the-year-2027-webster-green-houston.png"
+            alt="Webster Green HC-130 swatch, Benjamin Moore Color of the Year 2027"
+            width={1200}
+            height={675}
+            className="w-full rounded-lg border border-border"
+          />
+          <figcaption className="mt-2 text-xs text-muted-foreground">
+            Benjamin Moore&apos;s published on-screen value for Webster Green HC-130 (hex #64806C). Screens vary; a physical sample is the only true color.
+          </figcaption>
+        </figure>
+      ),
+    },
     {
       title: "What Webster Green HC-130 looks like",
       body: (
@@ -177,8 +196,9 @@ const D: GuideArticleData = {
   ],
   limitations: (
     <>
-      Color facts are from Benjamin Moore&apos;s published pages, checked October 2026. Benjamin Moore publishes no screen
-      color value for this shade, so no swatch is shown; colors on screens are approximate. Confirm with a physical sample.
+      Color facts and the on-screen swatch value are from Benjamin Moore&apos;s published pages, checked October 2026.
+      Colors on screens are approximate. Confirm with a physical sample. {BUSINESS.name} is not affiliated with or
+      sponsored by Benjamin Moore.
     </>
   ),
   sources: [

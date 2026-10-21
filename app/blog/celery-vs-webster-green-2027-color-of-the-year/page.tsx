@@ -29,6 +29,24 @@ const D: GuideArticleData = {
   ),
   sections: [
     {
+      title: "Celery and Webster Green on screen",
+      body: (
+        <figure className="not-prose my-4">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/blog/art/celery-vs-webster-green-2027-color-of-the-year.png"
+            alt="Celery SW 6421 and Webster Green HC-130 swatches side by side"
+            width={1200}
+            height={675}
+            className="w-full rounded-lg border border-border"
+          />
+          <figcaption className="mt-2 text-xs text-muted-foreground">
+            Each brand&apos;s published on-screen value: Celery SW 6421 (#E0DDBD) and Webster Green HC-130 (#64806C). Screens vary; compare physical samples.
+          </figcaption>
+        </figure>
+      ),
+    },
+    {
       title: "Side by side",
       body: (
         <div className="not-prose my-4 overflow-x-auto">

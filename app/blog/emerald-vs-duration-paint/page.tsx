@@ -53,7 +53,7 @@ const relatedPosts = [
     title: "Do You Need Primer or Two Coats of Paint? A Houston Painter Explains",
     href: "/blog/primer-vs-two-coats-paint-houston",
     excerpt: "When two coats are enough, when primer is a must, and what \"paint and primer in one\" really means.",
-    image: "/images/projects/richmond-interior-arches/01-living-room-fireplace.jpg",
+    image: "/images/blog/art/primer-vs-two-coats-paint-houston.png",
   },
   {
     title: "Benjamin Moore vs Sherwin-Williams: A Houston Painter's Honest Comparison",

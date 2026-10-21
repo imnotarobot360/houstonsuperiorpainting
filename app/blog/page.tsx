@@ -31,7 +31,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 19, 2026",
     readTime: "6 min read",
-    image: "/images/commercial-after-1.jpg",
+    image: "/images/blog/art/compare-commercial-painting-bids-houston.png",
     featured: false,
   },
   {
@@ -43,7 +43,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 19, 2026",
     readTime: "6 min read",
-    image: "/images/projects/richmond-great-room/01-great-room-fireplace.jpg",
+    image: "/images/blog/art/paint-before-moving-in-houston.png",
     featured: false,
   },
   {
@@ -55,7 +55,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 19, 2026",
     readTime: "5 min read",
-    image: "/images/drywall-after-1.jpg",
+    image: "/images/blog/art/paint-over-water-stains-houston.png",
     featured: false,
   },
   {
@@ -79,7 +79,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 14, 2026",
     readTime: "5 min read",
-    image: "/images/projects/richmond-great-room/01-great-room-fireplace.jpg",
+    image: "/images/blog/art/paint-house-before-selling-houston.png",
     featured: false,
   },
   {
@@ -91,7 +91,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 14, 2026",
     readTime: "5 min read",
-    image: "/images/projects/heights-exterior-siding/01-front-elevation.jpg",
+    image: "/images/blog/art/why-paint-peels-bubbles-houston.png",
     featured: false,
   },
   {
@@ -103,7 +103,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 14, 2026",
     readTime: "7 min read",
-    image: "/images/projects/richmond-interior-arches/01-living-room-fireplace.jpg",
+    image: "/images/blog/art/primer-vs-two-coats-paint-houston.png",
     featured: false,
   },
   {
@@ -115,7 +115,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 14, 2026",
     readTime: "5 min read",
-    image: "/images/projects/richmond-great-room/02-foyer-and-stairs.jpg",
+    image: "/images/blog/art/stay-home-during-interior-painting-houston.png",
     featured: false,
   },
   {
@@ -127,7 +127,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 11, 2026",
     readTime: "5 min read",
-    image: "/images/projects/cypress-two-tone-kitchen/02-kitchen-peninsula-and-island.jpg",
+    image: "/images/blog/art/cabinet-paint-cure-time-houston.png",
     featured: false,
   },
   {
@@ -187,7 +187,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 11, 2026",
     readTime: "6 min read",
-    image: "/images/projects/richmond-interior/01-bedroom-wide.jpg",
+    image: "/images/blog/art/wallpaper-removal-cost-houston.png",
     featured: false,
   },
   {
@@ -247,7 +247,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 10, 2026",
     readTime: "8 min read",
-    image: "/images/projects/cypress-two-tone-kitchen/01-kitchen-perimeter-and-island.jpg",
+    image: "/images/blog/art/cabinet-painting-company-houston-guide.png",
     featured: false,
   },
   {
@@ -283,7 +283,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 10, 2026",
     readTime: "7 min read",
-    image: "/images/projects/cypress-commercial-office/03-after-office.jpg",
+    image: "/images/blog/art/commercial-office-painting-houston.png",
     featured: false,
   },
   {
@@ -307,7 +307,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 7, 2026",
     readTime: "10 min read",
-    image: "/images/projects/west-university-painted-brick/01-front-and-garage.jpg",
+    image: "/images/blog/art/painting-brick-houston.png",
     featured: false,
   },
   {
@@ -367,7 +367,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 7, 2026",
     readTime: "7 min read",
-    image: "/images/projects/pearland-exterior-hardie/01-side-elevation.jpg",
+    image: "/images/blog/art/exterior-paint-colors-pearland-tx.png",
     featured: false,
   },
   {
@@ -379,7 +379,7 @@ const staticBlogPosts = [
     author: "Juan Serra",
     publishDate: "October 7, 2026",
     readTime: "7 min read",
-    image: "/images/projects/magnolia-exterior-siding/01-front-and-porch.jpg",
+    image: "/images/blog/art/exterior-paint-colors-magnolia-tx.png",
     featured: false,
   },
   {

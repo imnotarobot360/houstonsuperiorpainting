@@ -4,16 +4,10 @@ import { Bullets } from "@/components/aeo/blocks"
 import { BUSINESS, PRICES_2026 as P } from "@/lib/business"
 
 // Owner brief 2026-10-19 (BM 2027 series, post 5 of 5). Color facts as in the
-// Celery and Webster Green posts. Photos: our real Richmond sage-green kitchen
-// (lib/projects.ts "richmond-sage-green-kitchen-cabinets", photos confirmed by
-// the owner). The paint color used there is NOT stated anywhere, so captions
-// never claim it is Celery or Webster Green. Prices from PRICES_2026.
-
-const PROJECT = "/projects/richmond-sage-green-kitchen-cabinets"
-const PHOTOS = [
-  { src: "/images/projects/richmond-sage-kitchen/01-sage-kitchen-corner.jpg", alt: "Sage green painted kitchen cabinets in a Richmond, TX home" },
-  { src: "/images/projects/richmond-sage-kitchen/04-sage-island.jpg", alt: "Angled kitchen island with raised-panel doors and drawers painted sage green" },
-]
+// Celery and Webster Green posts. Art: the two colors as swatches, using each
+// brand's published on-screen value (scripts/blog-art/generate.mjs). The
+// Richmond sage kitchen photos were removed 2026-10-21 (owner: the photo color
+// didn't match the 2027 greens). Prices from PRICES_2026.
 
 const D: GuideArticleData = {
   path: "/blog/green-kitchen-cabinet-colors-2027-houston",
@@ -82,22 +76,22 @@ const D: GuideArticleData = {
       ),
     },
     {
-      title: "A real Houston-area green kitchen",
+      title: "The two 2027 greens side by side",
       body: (
-        <>
-          <div className="not-prose my-4 grid gap-3 sm:grid-cols-2">
-            {PHOTOS.map((p) => (
-              <figure key={p.src}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.src} alt={p.alt} loading="lazy" className="aspect-[4/3] w-full rounded-lg border border-border object-cover" />
-              </figure>
-            ))}
-          </div>
-          <p>
-            A sage green kitchen we painted in Richmond, TX: raised-panel cabinets and an angled island. See the full{" "}
-            <Link href={PROJECT}>Richmond sage green kitchen project</Link>.
-          </p>
-        </>
+        <figure className="not-prose my-4">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/blog/art/green-kitchen-cabinet-colors-2027-houston.png"
+            alt="Webster Green HC-130 and Celery SW 6421 swatches side by side"
+            width={1200}
+            height={675}
+            className="w-full rounded-lg border border-border"
+          />
+          <figcaption className="mt-2 text-xs text-muted-foreground">
+            Each brand&apos;s published on-screen value: Webster Green HC-130 (#64806C) and Celery SW 6421 (#E0DDBD). On
+            cabinets, the sheen and your kitchen light change both; test a sample door.
+          </figcaption>
+        </figure>
       ),
     },
     {
@@ -142,17 +136,16 @@ const D: GuideArticleData = {
   ],
   limitations: (
     <>
-      Color facts are from Sherwin-Williams&apos; and Benjamin Moore&apos;s published pages, checked October 2026. The project
-      photos show a sage green kitchen we painted, as an example of green cabinets; they are not a sample of either 2027
-      color. Prices are planning ranges. Confirm
-      colors with physical samples.
+      Color facts and on-screen swatch values are from Sherwin-Williams&apos; and Benjamin Moore&apos;s published pages,
+      checked October 2026; screen colors are approximate. Prices are planning ranges. Confirm colors with physical
+      samples.
     </>
   ),
   related: [
     { label: "Cabinet refinishing in Houston", href: "/cabinet-refinishing-houston-tx" },
     { label: "Webster Green HC-130", href: "/blog/benjamin-moore-color-of-the-year-2027-webster-green-houston" },
     { label: "Celery vs. Webster Green", href: "/blog/celery-vs-webster-green-2027-color-of-the-year" },
-    { label: "Richmond sage green kitchen project", href: PROJECT },
+    { label: "Celery SW 6421: where to use it", href: "/blog/where-to-use-celery-sw-6421" },
   ],
   ctaTitle: "Get a written cabinet painting estimate",
 }

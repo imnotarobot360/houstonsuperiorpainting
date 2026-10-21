@@ -67,7 +67,7 @@ const relatedPosts = [
     title: "Painting Brick in Houston: Paint, Limewash, or Leave It",
     href: "/blog/painting-brick-houston",
     excerpt: "When painting brick makes sense, when limewash is the better finish, and when to leave it alone.",
-    image: "/images/projects/west-university-painted-brick/01-front-and-garage.jpg"
+    image: "/images/blog/art/painting-brick-houston.png"
   }
 ]
 

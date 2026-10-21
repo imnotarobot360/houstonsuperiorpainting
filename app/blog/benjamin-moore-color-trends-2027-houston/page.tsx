@@ -6,8 +6,9 @@ import { BUSINESS } from "@/lib/business"
 // Moore, checked 2026-10-19: the Color Trends 2027 palette and each color's
 // description (press release, Oct 14, 2026) and each color page (LRV, family,
 // collection, coordinating colors). Room, style and Houston-light guidance is
-// ours, derived from the LRV and BM's descriptions. No screen colors shown
-// (Benjamin Moore publishes no hex values).
+// ours, derived from the LRV and BM's descriptions. Palette image uses Benjamin
+// Moore's own on-screen values from each color page (checked 2026-10-21), drawn
+// by scripts/blog-art/generate.mjs.
 
 const PRESS = "https://www.benjaminmoore.com/en-us/press/benjamin-moore-announces-color-of-the-year-2027"
 
@@ -142,6 +143,24 @@ const D: GuideArticleData = {
     </>
   ),
   sections: [
+    {
+      title: "The palette on screen",
+      body: (
+        <figure className="not-prose my-4">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/blog/art/benjamin-moore-color-trends-2027-houston.png"
+            alt="Benjamin Moore Color Trends 2027 palette: eight color swatches"
+            width={1200}
+            height={675}
+            className="w-full rounded-lg border border-border"
+          />
+          <figcaption className="mt-2 text-xs text-muted-foreground">
+            The eight colors using Benjamin Moore&apos;s published on-screen values. Screens vary; confirm with physical samples.
+          </figcaption>
+        </figure>
+      ),
+    },
     ...PALETTE.map((c) => ({
       title: `${c.name} ${c.code}`,
       body: (
@@ -198,8 +217,8 @@ const D: GuideArticleData = {
   limitations: (
     <>
       Color names, descriptions, LRVs and coordinates are from Benjamin Moore&apos;s published pages, checked October 2026;
-      room, style and lighting guidance is ours. Benjamin Moore publishes no screen color values, so no swatches are shown.
-      Confirm with physical samples. {BUSINESS.name} is not affiliated with or sponsored by Benjamin Moore.
+      room, style and lighting guidance is ours. Swatches use Benjamin Moore&apos;s published on-screen values and are
+      approximate. Confirm with physical samples. {BUSINESS.name} is not affiliated with or sponsored by Benjamin Moore.
     </>
   ),
   sources: [{ label: "Benjamin Moore: Color of the Year 2027 and Color Trends 2027", url: PRESS }],
