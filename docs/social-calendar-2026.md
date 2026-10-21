@@ -1326,3 +1326,123 @@ Full guide: https://houstonsuperiorpainting.com/blog/freeze-damage-exterior-pain
 Free written estimates · (346) 594-5960 · Houston Superior Painting
 ```
 
+## December 14, 2026: Painting or Staining Cedar and Wood Siding in Houston
+
+URL: https://houstonsuperiorpainting.com/blog/painting-cedar-wood-siding-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Painting or Staining Cedar and Wood Siding in Houston
+
+Paint vs. solid stain on cedar, tannin-blocking primer, repairing soft boards, and how long each lasts in Houston humidity.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Paint vs. solid stain on cedar, tannin-blocking primer, repairing soft boards, and how long each lasts in Houston humidity.
+
+Full guide: https://houstonsuperiorpainting.com/blog/painting-cedar-wood-siding-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 15, 2026: Trim, Door and Shutter Colors for a Red or Orange Brick House
+
+URL: https://houstonsuperiorpainting.com/blog/trim-door-colors-red-brick-house-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Trim, Door and Shutter Colors for a Red or Orange Brick House
+
+Brick you aren't painting sets the palette: whites, creams, greens and blacks that work with red, orange and multi-tone Houston brick.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Brick you aren't painting sets the palette: whites, creams, greens and blacks that work with red, orange and multi-tone Houston brick.
+
+Full guide: https://houstonsuperiorpainting.com/blog/trim-door-colors-red-brick-house-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 16, 2026: Painting a Restaurant or Retail Store in Houston
+
+URL: https://houstonsuperiorpainting.com/blog/restaurant-retail-painting-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Painting a Restaurant or Retail Store in Houston
+
+Scheduling around open hours, washable and food-area finishes, fast-cure products, and keeping a business open while it is painted.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Scheduling around open hours, washable and food-area finishes, fast-cure products, and keeping a business open while it is painted.
+
+Full guide: https://houstonsuperiorpainting.com/blog/restaurant-retail-painting-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 17, 2026: Paint Your Office During the Holiday Shutdown
+
+URL: https://houstonsuperiorpainting.com/blog/office-painting-holiday-shutdown-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Paint Your Office During the Holiday Shutdown
+
+Why the slow week between Christmas and New Year's is a good time to repaint an office, and what to book now to make it happen.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Why the slow week between Christmas and New Year's is a good time to repaint an office, and what to book now to make it happen.
+
+Full guide: https://houstonsuperiorpainting.com/blog/office-painting-holiday-shutdown-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 18, 2026: How Long Does Leftover Paint Last? Storing It for Touch-Ups
+
+URL: https://houstonsuperiorpainting.com/blog/how-long-does-leftover-paint-last
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+How Long Does Leftover Paint Last? Storing It for Touch-Ups
+
+How long opened latex and oil paint keep, how to store cans in a Houston garage, and labeling paint so touch-ups match.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+How long opened latex and oil paint keep, how to store cans in a Houston garage, and labeling paint so touch-ups match.
+
+Full guide: https://houstonsuperiorpainting.com/blog/how-long-does-leftover-paint-last
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+

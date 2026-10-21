@@ -85,6 +85,8 @@ const ICONS = {
   key: `<circle cx="70" cy="100" r="34"/><path d="M104 100h66M150 100v24M130 100v18"/>`,
   medical: `<rect x="40" y="40" width="120" height="120" rx="14"/><path d="M100 70v60M70 100h60"/>`,
   shield: `<path d="M100 28l60 22v45c0 40-26 66-60 78-34-12-60-38-60-78V50z"/><path d="M76 100l17 17 33-35"/>`,
+  can: `<path d="M45 60h110v100c0 8-6 14-14 14H59c-8 0-14-6-14-14z"/><ellipse cx="100" cy="60" rx="55" ry="12"/><path d="M60 50c0-30 80-30 80 0"/><path d="M70 105h60"/>`,
+  store: `<path d="M30 80l15-45h110l15 45"/><path d="M30 80c0 12 12 20 23 20s23-8 23-20c0 12 12 20 24 20s24-8 24-20c0 12 12 20 23 20s23-8 23-20"/><path d="M45 100v70h110v-70"/><rect x="85" y="125" width="30" height="45"/>`,
   sparkle: `<path d="M100 30l14 46 46 14-46 14-14 46-14-46-46-14 46-14z"/><path d="M155 140l5 15 15 5-15 5-5 15-5-15-15-5 15-5z"/>`,
 }
 
@@ -158,6 +160,12 @@ const SPECS = [
   { slug: "benjamin-moore-color-trends-2027-houston", kind: "palette", heading: "Benjamin Moore Color Trends 2027", colors: Object.keys(BM).map(bm) },
   { slug: "best-paint-colors-houston-homes-2027", kind: "palette", heading: "2027 colors for Houston homes", colors: [sw("Celery"), bm("Webster Green"), bm("White Down"), bm("Nelson Blue"), sw("Quietude"), bm("Shakespeare Tan"), sw("Cordovan"), bm("Townsend Harbor Brown")] },
   { slug: "agreeable-gray-vs-accessible-beige-houston", kind: "color", heading: "Two popular Sherwin-Williams neutrals", colors: [sw("Agreeable Gray"), sw("Accessible Beige")] },
+  // Dec 14–23 calendar posts.
+  { slug: "trim-door-colors-red-brick-house-houston", kind: "palette", heading: "Trim and door colors for red brick", colors: [sw("Alabaster"), sw("Creamy"), sw("Shoji White"), sw("Pure White"), sw("Roycroft Bottle Green"), sw("Naval"), sw("Rookwood Red"), sw("Urbane Bronze"), sw("Tricorn Black")] },
+  T("painting-cedar-wood-siding-houston", "Exterior Painting", "plank", "Painting or Staining Cedar and Wood Siding"),
+  T("restaurant-retail-painting-houston", "Commercial Painting", "store", "Painting a Restaurant or Retail Store"),
+  T("office-painting-holiday-shutdown-houston", "Commercial Painting", "calendar", "Paint Your Office During the Holiday Shutdown"),
+  T("how-long-does-leftover-paint-last", "Paint Care", "can", "How Long Does Leftover Paint Last?"),
   // Topic posts that used past-job photos.
   T("cost-paint-ceilings-trim-doors-houston", "Cost Guide", "dollar", "Cost to Paint Ceilings, Trim and Doors"),
   T("wood-rot-repair-before-painting-houston", "Exterior Painting", "plank", "Wood Rot Repair Before Exterior Painting"),

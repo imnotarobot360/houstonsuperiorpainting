@@ -103,6 +103,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "North- vs. south-facing room colors", href: "/blog/north-vs-south-facing-room-paint-colors-houston" },
     { label: "Open floor plan colors", href: "/blog/open-floor-plan-paint-colors-houston" },
     { label: "Should trim match the walls?", href: "/blog/should-trim-be-same-color-as-walls" },
+    { label: "Trim and door colors for red brick", href: "/blog/trim-door-colors-red-brick-house-houston" },
   ],
   // Service and article pages: daily-calendar posts (shown from their publish date)
   "/interior-painting-houston-tx": [
@@ -120,6 +121,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Repainting builder-grade paint", href: "/blog/repainting-builder-grade-paint-new-home-houston" },
     { label: "Low-VOC paint for pets and allergies", href: "/blog/low-voc-zero-voc-paint-houston" },
     { label: "Painting wood paneling", href: "/blog/painting-wood-paneling-houston" },
+    { label: "How long leftover paint lasts", href: "/blog/how-long-does-leftover-paint-last" },
   ],
   "/exterior-painting-houston-tx": [
     { label: "Wood rot repair before exterior painting", href: "/blog/wood-rot-repair-before-painting-houston" },
@@ -131,6 +133,8 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Window trim and sill painting", href: "/blog/window-trim-sill-painting-houston" },
     { label: "Painting an exterior in winter", href: "/blog/can-you-paint-exterior-in-winter-houston" },
     { label: "After a freeze: paint, caulk and wood", href: "/blog/freeze-damage-exterior-paint-caulk-houston" },
+    { label: "Painting or staining cedar siding", href: "/blog/painting-cedar-wood-siding-houston" },
+    { label: "Trim and door colors for red brick", href: "/blog/trim-door-colors-red-brick-house-houston" },
   ],
   "/cabinet-refinishing-houston-tx": [
     { label: "Green kitchen cabinets for 2027", href: "/blog/green-kitchen-cabinet-colors-2027-houston" },
@@ -145,6 +149,8 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Painting after foundation repair", href: "/blog/painting-after-foundation-repair-houston" },
   ],
   "/commercial-painting-houston-tx": [
+    { label: "Painting a restaurant or retail store", href: "/blog/restaurant-retail-painting-houston" },
+    { label: "Office painting over the holiday shutdown", href: "/blog/office-painting-holiday-shutdown-houston" },
     { label: "After-hours commercial painting", href: "/blog/after-hours-commercial-painting-houston" },
     { label: "Painting medical and dental offices", href: "/blog/medical-dental-office-painting-houston" },
     { label: "HOA and multifamily painting", href: "/blog/hoa-multifamily-painting-houston" },
