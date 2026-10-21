@@ -13,11 +13,10 @@ import {
   FileText,
   ArrowRight,
   Plus,
-  CalendarDays,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Footer } from "@/components/footer"
-import { EstimateServicePicker } from "@/components/estimate-service-picker"
+import { EstimateBookingFlow } from "@/components/estimate-booking-flow"
 import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business"
 import { PROJECTS } from "@/lib/projects"
 
@@ -174,7 +173,7 @@ const FAQS = [
     // sequence now: you book the time, we show up, the estimate follows.
     question: "How long does it take to get an estimate?",
     answer:
-      "You choose your own walkthrough time on this page — pick a slot that suits you and it is confirmed straight away, with no waiting for a call back. The walkthrough itself takes about 45 minutes, and your written, itemized estimate follows that visit.",
+      "You choose your own walkthrough time on this page: pick the service, enter your ZIP and choose an open time, and the visit is booked as soon as you confirm it, with no waiting for a call back. The walkthrough itself takes about 45 minutes, and your written, itemized estimate follows that visit.",
   },
   {
     question: "Do I need to be home for the estimate?",
@@ -308,17 +307,11 @@ export default function PaintingEstimatePage() {
                 Know exactly what&apos;s included before the project starts — preparation,
                 coatings, scope, timeline and warranty. In writing, itemized, with no obligation.
               </p>
-              {/* Direct scheduler link for visitors who just want a time slot
-                  without going through the quote questions. */}
-              <a
-                href={BUSINESS.scheduler.embedUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex w-fit items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
-              >
-                <CalendarDays className="h-4 w-4" aria-hidden="true" />
-                Book an Appointment
-              </a>
+              {/* The external InsightPaint scheduler link was removed (owner
+                  review 2026-10-21): it listed epoxy and remodeling, asked for
+                  the full address first, and promised confirmation "by text and
+                  email" while this page says the visit is booked on confirm.
+                  The form beside this copy now shows open times at step 3. */}
 
               {/* Rendered once here for desktop and again after the form for
                   mobile — see HeroSupportingDetail. */}
@@ -342,7 +335,7 @@ export default function PaintingEstimatePage() {
                 restructure than the benefit justifies. The header keeps a Call
                 button visible instead. */}
             <div id="estimate-form" className="order-2 min-w-0 lg:order-none lg:pl-2">
-              <EstimateServicePicker />
+              <EstimateBookingFlow />
             </div>
 
             {/* Mobile-only repeat of the supporting detail, below the form. */}
@@ -655,8 +648,8 @@ export default function PaintingEstimatePage() {
                 questions plus photos and contact details, and it ends in the
                 visitor booking their own slot, not in us calling them. */}
             <p className="mt-4 max-w-xl leading-relaxed text-primary-foreground/75 text-pretty">
-              Answer a few quick questions, then pick the walkthrough time that suits you. Confirmed
-              on the spot — no waiting for a call back.
+              Choose the service, enter your ZIP and pick an open time. Your visit is booked as soon as
+              you confirm it, with no waiting for a call back.
             </p>
             <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
               <Button
@@ -678,17 +671,6 @@ export default function PaintingEstimatePage() {
                 <a href={PHONE_HREF}>
                   <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                   {BUSINESS.phone}
-                </a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-primary-foreground/25 bg-transparent text-base font-semibold text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-              >
-                <a href={BUSINESS.scheduler.embedUrl} target="_blank" rel="noopener noreferrer">
-                  <CalendarDays className="mr-2 h-4 w-4" aria-hidden="true" />
-                  Book an Appointment
                 </a>
               </Button>
             </div>

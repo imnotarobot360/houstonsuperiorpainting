@@ -28,11 +28,33 @@ interface BookingCalendarProps {
   /** Called when availability can't be loaded, so the parent can show the iframe. */
   onUnavailable: () => void
   onBooked: (startIso: string) => void
+  /**
+   * Pick-only mode (the /painting-estimate-houston flow): show times before any
+   * contact details exist. The calendar then books nothing itself — no address
+   * field, no confirm — and hands the chosen slot up so the parent can collect
+   * contact details and the address, save the lead and book in one go.
+   */
+  onPick?: (slot: { start: string; date: string; time: string; label: string }) => void
+  /** Pick-only mode: no openings, or the visitor wants a time not listed. */
+  onNoTimes?: () => void
+  /** Pick-only mode: message to show above the grid (e.g. a slot just taken). */
+  notice?: string | null
 }
 
 type LoadState = "loading" | "ready" | "empty"
 
-export function BookingCalendar({ service, publicToken, zip, email, onUnavailable, onBooked }: BookingCalendarProps) {
+export function BookingCalendar({
+  service,
+  publicToken,
+  zip,
+  email,
+  onUnavailable,
+  onBooked,
+  onPick,
+  onNoTimes,
+  notice,
+}: BookingCalendarProps) {
+  const pickOnly = Boolean(onPick)
   const [state, setState] = useState<LoadState>("loading")
   const [days, setDays] = useState<ErpDay[]>([])
   const [timezone, setTimezone] = useState("America/Chicago")
@@ -259,9 +281,19 @@ export function BookingCalendar({ service, publicToken, zip, email, onUnavailabl
       <div className="rounded-xl border border-border p-6">
         <p className="font-semibold text-foreground">The calendar is full for the next few weeks</p>
         <p className="mt-1 text-sm leading-relaxed text-muted-foreground text-pretty">
-          Your request is already with us, so nothing is lost — we&apos;ll call to find a time. Want it sooner? Give us a
-          ring.
+          {pickOnly
+            ? "Leave your details and we’ll call you to find a time, or give us a ring."
+            : "Your request is already with us, so nothing is lost — we’ll call to find a time. Want it sooner? Give us a ring."}
         </p>
+        {pickOnly && onNoTimes && (
+          <button
+            type="button"
+            onClick={onNoTimes}
+            className="mt-4 mr-2 inline-flex items-center gap-2 rounded-xl border border-border px-4 py-2.5 text-sm font-semibold text-foreground hover:bg-muted"
+          >
+            Leave my details
+          </button>
+        )}
         <a
           href={PHONE_HREF}
           className="mt-4 inline-flex items-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90"
@@ -276,6 +308,11 @@ export function BookingCalendar({ service, publicToken, zip, email, onUnavailabl
   // ── Picker ───────────────────────────────────────────────────────────────
   return (
     <div className="rounded-xl border border-border p-5 sm:p-6">
+      {notice && (
+        <p role="status" className="mb-4 text-sm text-destructive">
+          {notice}
+        </p>
+      )}
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h3 className="font-semibold text-foreground">Pick a day</h3>
         <p className="text-xs text-muted-foreground">All times {shortZone(timezone)} · 30-minute visit</p>
@@ -374,7 +411,7 @@ export function BookingCalendar({ service, publicToken, zip, email, onUnavailabl
 
       {/* Revealed only once a time is chosen, so the picker stays a two-tap
           interaction and the address never reads as another form to fill in. */}
-      {selected && (
+      {selected && !pickOnly && (
         <div className="mt-5 flex flex-col gap-1.5">
           <label htmlFor="booking-address" className="text-sm font-medium text-foreground">
             Where should we meet you?
@@ -400,6 +437,29 @@ export function BookingCalendar({ service, publicToken, zip, email, onUnavailabl
         </p>
       )}
 
+      {pickOnly ? (
+        <>
+          <button
+            type="button"
+            onClick={() =>
+              selected && onPick?.({ ...selected, label: formatSlotLabel(selected.date, selected.time) })
+            }
+            disabled={!selected}
+            className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            {selected ? `Continue with ${formatSlotLabel(selected.date, selected.time)}` : "Select a time"}
+          </button>
+          {onNoTimes && (
+            <button
+              type="button"
+              onClick={onNoTimes}
+              className="mt-3 w-full text-center text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground"
+            >
+              None of these times work
+            </button>
+          )}
+        </>
+      ) : (
       <button
         type="button"
         onClick={confirm}
@@ -409,6 +469,7 @@ export function BookingCalendar({ service, publicToken, zip, email, onUnavailabl
         {booking && <Loader2 className="size-4 animate-spin" aria-hidden="true" />}
         {selected ? `Confirm ${formatSlotLabel(selected.date, selected.time)}` : "Select a time"}
       </button>
+      )}
 
       <p className="mt-3 text-center text-xs text-muted-foreground text-pretty">
         Free, no obligation. Reschedule any time by phone.

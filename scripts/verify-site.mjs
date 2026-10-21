@@ -158,8 +158,11 @@ if (contact.status !== 200 || !/<form|book\/houston-superior|widget\.js/i.test(c
 const BOOKING_URL = "https://app.insightpaint.com/book/houston-superior"
 const booking = await fetch(BOOKING_URL, { redirect: "follow" })
 if (booking.status !== 200) fail(`booking URL returned ${booking.status}`)
-for (const [name, html] of [["homepage", pages.get("/")?.text || ""], ["estimate page", est.text]])
-  if (!html.includes(`href="${BOOKING_URL}"`)) fail(`${name} has no "Book an Appointment" link to ${BOOKING_URL}`)
+if (!(pages.get("/")?.text || "").includes(`href="${BOOKING_URL}"`)) fail(`homepage has no "Book an Appointment" link to ${BOOKING_URL}`)
+// Owner review 2026-10-21: the estimate page books painting only, in its own
+// service → ZIP → time → contact flow. The general scheduler (which also lists
+// epoxy and remodeling, and asks for the address first) must not be linked there.
+if (est.text.includes(`href="${BOOKING_URL}"`)) fail("estimate page links the general scheduler; it should use its own painting-only booking flow")
 if (/houstonsuperiorgroups\.com\/book\/houston-superior"/.test(contact.text)) fail("contact page still embeds the old booking domain")
 console.log(`tel link ${tel}; estimate ${est.status}; contact ${contact.status}; booking ${booking.status}`)
 
