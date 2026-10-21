@@ -81,6 +81,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Exterior colors for Magnolia homes", href: "/blog/exterior-paint-colors-magnolia-tx" },
   ],
   "/houston-painting-cost-guide": [
+    { label: "Planning a 2027 painting project", href: "/blog/plan-2027-painting-project-houston" },
     { label: "Cost to paint ceilings, trim and doors", href: "/blog/cost-paint-ceilings-trim-doors-houston" },
     { label: "DIY vs professional painting cost", href: "/blog/diy-vs-professional-painting-cost-houston" },
     { label: "Load-bearing wall removal cost", href: "/blog/load-bearing-wall-removal-cost-houston" },
@@ -104,6 +105,8 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Open floor plan colors", href: "/blog/open-floor-plan-paint-colors-houston" },
     { label: "Should trim match the walls?", href: "/blog/should-trim-be-same-color-as-walls" },
     { label: "Trim and door colors for red brick", href: "/blog/trim-door-colors-red-brick-house-houston" },
+    { label: "Dining room colors", href: "/blog/dining-room-paint-colors-houston" },
+    { label: "Calm bedroom colors", href: "/blog/bedroom-paint-colors-for-sleep-houston" },
   ],
   // Service and article pages: daily-calendar posts (shown from their publish date)
   "/interior-painting-houston-tx": [
@@ -122,6 +125,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Low-VOC paint for pets and allergies", href: "/blog/low-voc-zero-voc-paint-houston" },
     { label: "Painting wood paneling", href: "/blog/painting-wood-paneling-houston" },
     { label: "How long leftover paint lasts", href: "/blog/how-long-does-leftover-paint-last" },
+    { label: "Painting garage walls", href: "/blog/painting-garage-walls-houston" },
   ],
   "/exterior-painting-houston-tx": [
     { label: "Wood rot repair before exterior painting", href: "/blog/wood-rot-repair-before-painting-houston" },
@@ -135,10 +139,16 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "After a freeze: paint, caulk and wood", href: "/blog/freeze-damage-exterior-paint-caulk-houston" },
     { label: "Painting or staining cedar siding", href: "/blog/painting-cedar-wood-siding-houston" },
     { label: "Trim and door colors for red brick", href: "/blog/trim-door-colors-red-brick-house-houston" },
+    { label: "Exterior color mistakes to avoid", href: "/blog/exterior-paint-color-mistakes-houston" },
+    { label: "Painting shutters", href: "/blog/painting-shutters-houston" },
+    { label: "Painting gutters and downspouts", href: "/blog/painting-gutters-downspouts-houston" },
+    { label: "Can you paint vinyl siding?", href: "/blog/painting-vinyl-siding-houston" },
+    { label: "Painting a two-story exterior", href: "/blog/painting-two-story-house-exterior-houston" },
   ],
   "/cabinet-refinishing-houston-tx": [
     { label: "Green kitchen cabinets for 2027", href: "/blog/green-kitchen-cabinet-colors-2027-houston" },
     { label: "Why white cabinets turn yellow", href: "/blog/why-white-painted-cabinets-turn-yellow" },
+    { label: "Painting laminate and thermofoil cabinets", href: "/blog/paint-laminate-thermofoil-cabinets" },
     { label: "Should you fill oak grain?", href: "/blog/fill-oak-grain-before-painting-cabinets" },
     { label: "On-site vs. off-site cabinet painting", href: "/blog/cabinet-painting-on-site-vs-off-site" },
     { label: "Painting inside kitchen cabinets", href: "/blog/paint-inside-kitchen-cabinets" },

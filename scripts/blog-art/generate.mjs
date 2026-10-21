@@ -87,6 +87,9 @@ const ICONS = {
   shield: `<path d="M100 28l60 22v45c0 40-26 66-60 78-34-12-60-38-60-78V50z"/><path d="M76 100l17 17 33-35"/>`,
   can: `<path d="M45 60h110v100c0 8-6 14-14 14H59c-8 0-14-6-14-14z"/><ellipse cx="100" cy="60" rx="55" ry="12"/><path d="M60 50c0-30 80-30 80 0"/><path d="M70 105h60"/>`,
   store: `<path d="M30 80l15-45h110l15 45"/><path d="M30 80c0 12 12 20 23 20s23-8 23-20c0 12 12 20 24 20s24-8 24-20c0 12 12 20 23 20s23-8 23-20"/><path d="M45 100v70h110v-70"/><rect x="85" y="125" width="30" height="45"/>`,
+  shutter: `<rect x="30" y="30" width="55" height="140" rx="4"/><rect x="115" y="30" width="55" height="140" rx="4"/><path d="M40 55h35M40 75h35M40 95h35M40 115h35M40 135h35M40 155h35M125 55h35M125 75h35M125 95h35M125 115h35M125 135h35M125 155h35"/>`,
+  gutter: `<path d="M25 70l75-40 75 40"/><path d="M20 78h160v14H20z"/><path d="M160 92v78h-16"/><rect x="45" y="100" width="95" height="70"/>`,
+  twostory: `<path d="M35 70l65-40 65 40"/><rect x="50" y="62" width="100" height="113"/><path d="M50 118h100"/><rect x="68" y="80" width="22" height="22"/><rect x="110" y="80" width="22" height="22"/><rect x="88" y="135" width="24" height="40"/><path d="M175 175l-12-110M190 175l-12-110M165 150h20M162 120h20M159 90h20"/>`,
   sparkle: `<path d="M100 30l14 46 46 14-46 14-14 46-14-46-46-14 46-14z"/><path d="M155 140l5 15 15 5-15 5-5 15-5-15-15-5 15-5z"/>`,
 }
 
@@ -166,6 +169,16 @@ const SPECS = [
   T("restaurant-retail-painting-houston", "Commercial Painting", "store", "Painting a Restaurant or Retail Store"),
   T("office-painting-holiday-shutdown-houston", "Commercial Painting", "calendar", "Paint Your Office During the Holiday Shutdown"),
   T("how-long-does-leftover-paint-last", "Paint Care", "can", "How Long Does Leftover Paint Last?"),
+  { slug: "dining-room-paint-colors-houston", kind: "palette", heading: "Dining room colors to sample", colors: [bm("Webster Green"), sw("Pewter Green"), bm("Antique Copper"), bm("Townsend Harbor Brown"), sw("Rookwood Red"), sw("Naval"), sw("Accessible Beige"), sw("Agreeable Gray")] },
+  { slug: "bedroom-paint-colors-for-sleep-houston", kind: "palette", heading: "Calm bedroom colors to sample", colors: [sw("Sea Salt"), sw("Rainwashed"), bm("Nelson Blue"), sw("Evergreen Fog"), bm("White Down"), sw("Agreeable Gray"), sw("Accessible Beige"), bm("Wild Aster")] },
+  T("painting-garage-walls-houston", "Interior Painting", "garage", "Painting Garage Walls and Ceilings"),
+  T("plan-2027-painting-project-houston", "Planning", "calendar", "Planning a 2027 Painting Project"),
+  T("exterior-paint-color-mistakes-houston", "Color Guide", "swatch", "Exterior Paint Color Mistakes to Avoid"),
+  T("painting-shutters-houston", "Exterior Painting", "shutter", "Painting Shutters: Wood, Composite and Vinyl"),
+  T("painting-gutters-downspouts-houston", "Exterior Painting", "gutter", "Painting Gutters and Downspouts"),
+  T("painting-vinyl-siding-houston", "Exterior Painting", "plank", "Can You Paint Vinyl Siding?"),
+  T("painting-two-story-house-exterior-houston", "Exterior Painting", "twostory", "Painting a Two-Story House Exterior"),
+  T("paint-laminate-thermofoil-cabinets", "Cabinet Refinishing", "cabinet", "Can You Paint Laminate or Thermofoil Cabinets?"),
   // Topic posts that used past-job photos.
   T("cost-paint-ceilings-trim-doors-houston", "Cost Guide", "dollar", "Cost to Paint Ceilings, Trim and Doors"),
   T("wood-rot-repair-before-painting-houston", "Exterior Painting", "plank", "Wood Rot Repair Before Exterior Painting"),

@@ -8,13 +8,9 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..")
 const { BLOG_SCHEDULE, PLANNED_POSTS, displayDate } = await import(pathToFileURL(path.join(ROOT, "lib/blog-schedule.ts")).href)
 
 // Planned topics that depend on an owner answer (whether we do that work).
-const NEEDS_OWNER = new Set([
-  "painting-shutters-houston",
-  "painting-gutters-downspouts-houston",
-  "painting-vinyl-siding-houston",
-  "painting-two-story-house-exterior-houston",
-  "paint-laminate-thermofoil-cabinets",
-])
+// The five open ones (shutters, gutters, vinyl siding, two-story, laminate
+// cabinets) were answered 2026-10-21; see "Company practices" in the doc.
+const NEEDS_OWNER = new Set([])
 
 const d = path.join(ROOT, "docs/blog-calendar-2026.md")
 let md = fs.readFileSync(d, "utf8")

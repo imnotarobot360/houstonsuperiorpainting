@@ -6,7 +6,7 @@ needed on the day.
 
 - **Calendar file:** `lib/blog-schedule.ts`.
   - `BLOG_SCHEDULE` holds posts that are written.
-  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet (10 posts not yet written). Nothing on the site reads it.
+  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet (empty now: every post is written). Nothing on the site reads it.
   - `pnpm test` fails if a scheduled post has no page, or if a planned post already has one. A planned post
     with a page would publish with no date gate.
 - **Sitemap:** built at deploy time, so a post joins it on the first deploy after its date. `/blog` and the
@@ -17,7 +17,7 @@ needed on the day.
 - **Previewing unpublished posts locally:** `BLOG_PREVIEW=1 npx next start` (never works on production).
 - **Linking rule:** nothing may link to a post before its date. The site check fails on 404 links.
 
-## Full schedule (60 posts, October 20, 2026 to December 18, 2026)
+## Full schedule (70 posts, October 20, 2026 to December 28, 2026)
 
 Generated from `lib/blog-schedule.ts`. Every post here is written and deployed; each stays hidden until its date. Post dates on the pages follow this schedule automatically.
 
@@ -83,6 +83,16 @@ Generated from `lib/blog-schedule.ts`. Every post here is written and deployed; 
 | 2026-12-16 | Painting a Restaurant or Retail Store in Houston | /blog/restaurant-retail-painting-houston |
 | 2026-12-17 | Paint Your Office During the Holiday Shutdown | /blog/office-painting-holiday-shutdown-houston |
 | 2026-12-18 | How Long Does Leftover Paint Last? Storing It for Touch-Ups | /blog/how-long-does-leftover-paint-last |
+| 2026-12-19 | Painting Garage Walls and Ceilings in Houston | /blog/painting-garage-walls-houston |
+| 2026-12-20 | Dining Room Paint Colors for Houston Homes | /blog/dining-room-paint-colors-houston |
+| 2026-12-21 | Calm Bedroom Paint Colors for Houston Homes | /blog/bedroom-paint-colors-for-sleep-houston |
+| 2026-12-22 | Planning a 2027 Painting Project in Houston: Budget, Timing and Booking | /blog/plan-2027-painting-project-houston |
+| 2026-12-23 | Exterior Paint Color Mistakes Houston Homeowners Regret | /blog/exterior-paint-color-mistakes-houston |
+| 2026-12-24 | Painting Shutters: Wood, Composite and Vinyl | /blog/painting-shutters-houston |
+| 2026-12-25 | Painting Gutters and Downspouts in Houston | /blog/painting-gutters-downspouts-houston |
+| 2026-12-26 | Can You Paint Vinyl Siding in Houston? | /blog/painting-vinyl-siding-houston |
+| 2026-12-27 | Painting a Two-Story House Exterior in Houston | /blog/painting-two-story-house-exterior-houston |
+| 2026-12-28 | Can You Paint Laminate or Thermofoil Cabinets? | /blog/paint-laminate-thermofoil-cabinets |
 
 ## Already live before the calendar (from the owner's 30-topic list)
 
@@ -93,20 +103,12 @@ Celery SW 6421, popcorn ceiling cost, paint before selling, primer vs two coats,
 - Furniture: our crews move all heavy furniture; the customer moves expensive or fragile items.
 - Cabinets: painted on-site at the home; doors removed and sprayed flat in a contained area.
 - High ceilings: we own scaffolding.
+- Shutters (2026-10-21): we paint all types (wood, composite and vinyl).
+- Gutters and downspouts (2026-10-21): yes, we paint them.
+- Vinyl siding (2026-10-21): yes, only in vinyl-safe colors and when conditions are right.
+- Two-story exteriors (2026-10-21): we use ladders, not lifts.
+- Laminate and thermofoil cabinets (2026-10-21): yes, we paint them.
 
-## Planned, not yet written (10 posts, December 19, 2026 to December 28, 2026)
+## Planned, not yet written
 
-Topics checked against every existing post and page so none repeats one. Posts marked **needs owner answer** depend on whether we do that work.
-
-| Date | Post | Search phrase | |
-|---|---|---|---|
-| 2026-12-19 | Painting Garage Walls and Ceilings in Houston | painting garage walls |  |
-| 2026-12-20 | Dining Room Paint Colors for Houston Homes | dining room paint colors |  |
-| 2026-12-21 | Calm Bedroom Paint Colors for Better Sleep | calm bedroom paint colors |  |
-| 2026-12-22 | Planning a 2027 Painting Project in Houston: Budget, Timing and Booking | planning painting project 2027 |  |
-| 2026-12-23 | Exterior Paint Color Mistakes Houston Homeowners Regret | exterior paint color mistakes |  |
-| 2026-12-24 | Painting Shutters: Wood, Composite and Vinyl | painting shutters | **needs owner answer** |
-| 2026-12-25 | Painting Gutters and Downspouts in Houston | painting gutters | **needs owner answer** |
-| 2026-12-26 | Can You Paint Vinyl Siding in Houston? | painting vinyl siding | **needs owner answer** |
-| 2026-12-27 | Painting a Two-Story House Exterior: Ladders, Lifts and Cost | painting two story house | **needs owner answer** |
-| 2026-12-28 | Can You Paint Laminate or Thermofoil Cabinets? | paint laminate cabinets | **needs owner answer** |
+None: every post on the calendar is written.

@@ -628,15 +628,6 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     image: "/images/blog/art/how-long-does-leftover-paint-last.png",
     keyword: "how long does leftover paint last",
   },
-]
-
-/**
- * Written-in-advance queue: posts on the calendar whose pages are not written
- * yet. Nothing on the site reads this list. When a post is written, move its
- * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
- * scheduled post has a page).
- */
-export const PLANNED_POSTS: ScheduledPost[] = [
   {
     slug: "painting-garage-walls-houston",
     publishOn: "2026-12-19",
@@ -644,7 +635,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Raw vs. builder-painted garage drywall, humidity and heat, washable finishes, and pairing painted walls with an epoxy floor.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/blog/garage-epoxy-coating-houston.png",
+    image: "/images/blog/art/painting-garage-walls-houston.png",
     keyword: "painting garage walls",
   },
   {
@@ -654,17 +645,17 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Warm, deep and classic dining room colors, how they look by candle and chandelier light, and using a ceiling or wainscot color.",
     category: "Color Guide",
     readTime: "5 min read",
-    image: "/images/blog/best-interior-colors-houston.png",
+    image: "/images/blog/art/dining-room-paint-colors-houston.png",
     keyword: "dining room paint colors",
   },
   {
     slug: "bedroom-paint-colors-for-sleep-houston",
     publishOn: "2026-12-21",
-    title: "Calm Bedroom Paint Colors for Better Sleep",
-    excerpt: "Soft blues, greens and warm neutrals for bedrooms, matte vs. eggshell, and how Houston's morning and afternoon sun changes them.",
+    title: "Calm Bedroom Paint Colors for Houston Homes",
+    excerpt: "Soft blues, greens, warm neutrals and blush tones for a calm bedroom, which sheen to use, and how Houston light changes them.",
     category: "Color Guide",
     readTime: "5 min read",
-    image: "/images/blog/interior-paint-colors-2026.jpg",
+    image: "/images/blog/art/bedroom-paint-colors-for-sleep-houston.png",
     keyword: "calm bedroom paint colors",
   },
   {
@@ -674,7 +665,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "How to budget a 2027 interior or exterior repaint, which months book up first, and what to have ready for an accurate estimate.",
     category: "Planning",
     readTime: "5 min read",
-    image: "/images/blog/house-painting-cost-houston.jpg",
+    image: "/images/blog/art/plan-2027-painting-project-houston.png",
     keyword: "planning painting project 2027",
   },
   {
@@ -684,7 +675,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Choosing from a tiny chip, ignoring roof and brick, too-dark colors in Texas sun, and HOA surprises: the mistakes and how to avoid them.",
     category: "Color Guide",
     readTime: "5 min read",
-    image: "/images/blog/hoa-paint-rules-houston.png",
+    image: "/images/blog/art/exterior-paint-color-mistakes-houston.png",
     keyword: "exterior paint color mistakes",
   },
   {
@@ -694,7 +685,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "How each shutter material is prepped and painted, removing vs. painting in place, and shutter colors that hold up in Houston sun.",
     category: "Exterior Painting",
     readTime: "4 min read",
-    image: "/images/blog/exterior-house-painting-guide.jpg",
+    image: "/images/blog/art/painting-shutters-houston.png",
     keyword: "painting shutters",
   },
   {
@@ -704,7 +695,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Painting aluminum gutters to match trim or body: cleaning, bonding primer, and why gutters fail first on a Houston exterior.",
     category: "Exterior Painting",
     readTime: "4 min read",
-    image: "/images/blog/exterior-paint-durability-houston.jpg",
+    image: "/images/blog/art/painting-gutters-downspouts-houston.png",
     keyword: "painting gutters",
   },
   {
@@ -714,17 +705,17 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Vinyl-safe colors, why dark colors warp vinyl in Texas heat, prep and products, and when replacing is the better answer.",
     category: "Exterior Painting",
     readTime: "5 min read",
-    image: "/images/blog/exterior-paint-houston-humidity.jpg",
+    image: "/images/blog/art/painting-vinyl-siding-houston.png",
     keyword: "painting vinyl siding",
   },
   {
     slug: "painting-two-story-house-exterior-houston",
     publishOn: "2026-12-27",
-    title: "Painting a Two-Story House Exterior: Ladders, Lifts and Cost",
-    excerpt: "What changes on a two-story exterior: access, high gables and dormers, safety, timeline and how height shows up in the estimate.",
+    title: "Painting a Two-Story House Exterior in Houston",
+    excerpt: "What changes on a two-story exterior: ladder access, high gables and dormers, the timeline, and how height shows up in the price.",
     category: "Exterior Painting",
     readTime: "5 min read",
-    image: "/images/blog/exterior-painting-cost-houston-tx-2026.png",
+    image: "/images/blog/art/painting-two-story-house-exterior-houston.png",
     keyword: "painting two story house",
   },
   {
@@ -734,9 +725,18 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "What sticks to laminate and thermofoil, why peeling thermofoil can't be painted over, and when refacing or replacing is the honest answer.",
     category: "Cabinet Refinishing",
     readTime: "5 min read",
-    image: "/images/blog/diy-cabinet-painting-fails.png",
+    image: "/images/blog/art/paint-laminate-thermofoil-cabinets.png",
     keyword: "paint laminate cabinets",
   },
+]
+
+/**
+ * Written-in-advance queue: posts on the calendar whose pages are not written
+ * yet. Nothing on the site reads this list. When a post is written, move its
+ * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
+ * scheduled post has a page).
+ */
+export const PLANNED_POSTS: ScheduledPost[] = [
 ]
 
 /** Today's Houston date (YYYY-MM-DD), rolling over at PUBLISH_HOUR_HOUSTON. */
