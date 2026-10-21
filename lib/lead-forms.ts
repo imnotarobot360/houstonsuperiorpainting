@@ -135,19 +135,30 @@ export const ES_LABELS: Record<string, string> = {
 
 /**
  * Budget offer settings (owner request 2026-10-15). Keep spotsAvailable TRUE:
- * update it (or set it to 0 to hide the line) whenever the real number changes.
+ * update it and `checked` (YYYY-MM-DD) whenever the real number changes, or set
+ * it to 0 to hide the line. The page also hides the line on its own once
+ * `checked` is older than maxAgeDays, so a forgotten number never goes stale
+ * in front of customers (2026-10-20 review).
  */
 export const BUDGET_OFFER = {
   spotsAvailable: 2,
   checked: "2026-10-15",
+  maxAgeDays: 14,
 }
 
-export const PAINT_WHAT = ["Interior", "Exterior", "Interior and exterior", "Something else"] as const
+/** True when the "project spots" line may show: a positive number confirmed recently. */
+export function budgetSpotsCurrent(now: Date = new Date()): boolean {
+  if (BUDGET_OFFER.spotsAvailable <= 0) return false
+  const age = (now.getTime() - new Date(`${BUDGET_OFFER.checked}T12:00:00Z`).getTime()) / 86400000
+  return age >= 0 && age <= BUDGET_OFFER.maxAgeDays
+}
+
+export const PAINT_WHAT = ["Interior", "Exterior", "Interior and exterior", "Kitchen cabinets", "Something else"] as const
 
 export const BUDGET_RANGES = [
   "Under $2,000",
   "$2,000–$5,000",
   "$5,000–$10,000",
   "$10,000+",
-  "Not sure yet",
+  "I’m still deciding",
 ] as const

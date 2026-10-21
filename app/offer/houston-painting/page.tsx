@@ -6,23 +6,28 @@ import { LandingViewTracker } from "@/components/landing-view-tracker"
 import { BudgetFunnelForm } from "@/components/budget-funnel-form"
 import { ReviewsInline } from "@/components/office-reviews"
 import { BUSINESS } from "@/lib/business"
-import { BUDGET_OFFER } from "@/lib/lead-forms"
+import { BUDGET_OFFER, budgetSpotsCurrent } from "@/lib/lead-forms"
 
 // Budget offer landing page for paid social ads (owner request 2026-10-15).
 // noindex + excluded from the sitemap (EXCLUDED_TREES 'offer'), and listed as an
 // interruption-free route so the chat bubble/exit modal stay out of the way.
 // The "project spots" line reads BUDGET_OFFER.spotsAvailable; keep it true, and
-// set it to 0 to hide the line. No prices or discounts are promised here.
+// set it to 0 to hide the line; it also hides itself once BUDGET_OFFER.checked is
+// older than maxAgeDays (re-checked hourly via revalidate). No prices or
+// discounts are promised here. Response time ("one business day") matches
+// /contact and /estimate-confirmed.
+
+export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: "House Painting That Fits Your Budget | Houston Superior Painting",
   description:
-    "Houston interior and exterior painting planned around your budget. Tell us what needs painting, where, and your budget for a free written estimate.",
+    "Houston interior, exterior and cabinet painting planned around your budget. Tell us what needs painting, where, and your budget for a free written estimate.",
   robots: { index: false, follow: false, nocache: true },
 }
 
 export default function BudgetOfferPage() {
-  const spots = BUDGET_OFFER.spotsAvailable
+  const spots = budgetSpotsCurrent() ? BUDGET_OFFER.spotsAvailable : 0
   return (
     <>
       <LandingViewTracker service="budget" />
@@ -50,12 +55,13 @@ export default function BudgetOfferPage() {
 
           <div className="lg:col-start-1 lg:row-start-2">
             <p className="text-lg leading-relaxed text-foreground/85">
-              Tell us what you need painted, where you&apos;re located, and your budget. If the project is a good fit,
-              we&apos;ll work with you on a plan.
+              Tell us what you need painted, where you&apos;re located, and your budget. We&apos;ll contact you within
+              one business day to talk through the scope and your options, and arrange a free walkthrough if it&apos;s a
+              fit. The budget range starts the conversation; it doesn&apos;t rule anyone out.
             </p>
             <ul className="mt-6 space-y-2 text-foreground/90">
               {[
-                "Interior and exterior painting in Houston and surrounding areas",
+                "Interior, exterior and kitchen cabinet painting in Houston and surrounding areas",
                 "Free written estimate with the scope, price, deposit and payment schedule before you approve",
                 `${BUSINESS.trust.warrantyYears}-year written workmanship warranty`,
                 `${BUSINESS.trust.liabilityCoverage} general liability + workers' comp`,
@@ -78,8 +84,8 @@ export default function BudgetOfferPage() {
             <ol className="mt-6 grid gap-4 sm:grid-cols-3">
               {[
                 { t: "Tell us about the project", d: "What needs painting, the ZIP code and your budget range. It takes about a minute." },
-                { t: "We review it", d: "We look at what you need against your budget and contact you to talk it through." },
-                { t: "Get a written plan", d: "If it's a good fit, you get a free written estimate with the scope, products and price." },
+                { t: "We call you", d: "Within one business day, we review your project and budget and contact you to discuss the scope and your options." },
+                { t: "Walkthrough and written plan", d: "If it's a fit, we arrange a free walkthrough and give you a written estimate with the scope, products and price." },
               ].map((s, i) => (
                 <li key={s.t} className="rounded-xl border border-border bg-background p-5">
                   <span className="font-display text-2xl text-gold-deep">{i + 1}</span>

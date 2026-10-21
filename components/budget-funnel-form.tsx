@@ -132,8 +132,8 @@ export function BudgetFunnelForm() {
           Thanks{name ? `, ${name.trim().split(" ")[0]}` : ""}. We got your request.
         </p>
         <p className="mt-2 text-muted-foreground">
-          We&apos;ll review what you need and your budget, and a member of our team will contact you. If it&apos;s a good
-          fit, we&apos;ll work with you on a plan.
+          Here&apos;s what happens next: we&apos;ll review your project and budget, contact you within one business day
+          to discuss the scope, and arrange a free walkthrough if it&apos;s a fit.
         </p>
         {token !== "hidden" && (
           <div className="mt-5">
@@ -245,7 +245,10 @@ export function BudgetFunnelForm() {
       {step === 2 && (
         <fieldset>
           <legend className="mb-1 font-display text-2xl text-foreground">What&apos;s your budget?</legend>
-          <p className="mb-4 text-sm text-muted-foreground">A rough range helps us plan the right scope for you.</p>
+          <p className="mb-4 text-sm text-muted-foreground">
+            A rough range helps us suggest the right scope and options. There&apos;s no wrong answer, and it doesn&apos;t
+            rule you out.
+          </p>
           <div className="grid gap-2">
             {BUDGET_RANGES.map((v) => (
               <button
