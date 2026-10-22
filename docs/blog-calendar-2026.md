@@ -6,7 +6,7 @@ needed on the day.
 
 - **Calendar file:** `lib/blog-schedule.ts`.
   - `BLOG_SCHEDULE` holds posts that are written.
-  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet (empty now: every post is written). Nothing on the site reads it.
+  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet (25 posts not yet written). Nothing on the site reads it.
   - `pnpm test` fails if a scheduled post has no page, or if a planned post already has one. A planned post
     with a page would publish with no date gate.
 - **Sitemap:** built at deploy time, so a post joins it on the first deploy after its date. `/blog` and the
@@ -17,7 +17,7 @@ needed on the day.
 - **Previewing unpublished posts locally:** `BLOG_PREVIEW=1 npx next start` (never works on production).
 - **Linking rule:** nothing may link to a post before its date. The site check fails on 404 links.
 
-## Full schedule (70 posts, October 20, 2026 to December 28, 2026)
+## Full schedule (76 posts, October 20, 2026 to January 3, 2027)
 
 Generated from `lib/blog-schedule.ts`. Every post here is written and deployed; each stays hidden until its date. Post dates on the pages follow this schedule automatically.
 
@@ -93,6 +93,12 @@ Generated from `lib/blog-schedule.ts`. Every post here is written and deployed; 
 | 2026-12-26 | Can You Paint Vinyl Siding in Houston? | /blog/painting-vinyl-siding-houston |
 | 2026-12-27 | Painting a Two-Story House Exterior in Houston | /blog/painting-two-story-house-exterior-houston |
 | 2026-12-28 | Can You Paint Laminate or Thermofoil Cabinets? | /blog/paint-laminate-thermofoil-cabinets |
+| 2026-12-29 | Why Winter Is a Good Time for Interior Painting in Houston | /blog/why-winter-good-time-interior-painting-houston |
+| 2026-12-30 | Repose Gray vs. Agreeable Gray in Houston Homes | /blog/repose-gray-vs-agreeable-gray-houston |
+| 2026-12-31 | Paint Colors and Finishes for a Home Office | /blog/painting-home-office-houston |
+| 2027-01-01 | Painting Built-Ins and Bookshelves | /blog/painting-built-ins-bookshelves-houston |
+| 2027-01-02 | Haint Blue Porch Ceilings in Houston | /blog/haint-blue-porch-ceiling-houston |
+| 2027-01-03 | Painting a Bathroom Vanity | /blog/painting-bathroom-vanity-houston |
 
 ## Already live before the calendar (from the owner's 30-topic list)
 
@@ -109,6 +115,34 @@ Celery SW 6421, popcorn ceiling cost, paint before selling, primer vs two coats,
 - Two-story exteriors (2026-10-21): we use ladders, not lifts.
 - Laminate and thermofoil cabinets (2026-10-21): yes, we paint them.
 
-## Planned, not yet written
+## Planned, not yet written (25 posts, January 4, 2027 to January 28, 2027)
 
-None: every post on the calendar is written.
+Topics checked against every existing post and page so none repeats one. Posts marked **needs owner answer** depend on whether we do that work.
+
+| Date | Post | Search phrase | |
+|---|---|---|---|
+| 2027-01-04 | Urbane Bronze SW 7048 in Houston Homes | Urbane Bronze |  |
+| 2027-01-05 | Exterior Paint Sheen: Flat, Satin or Semi-Gloss? | exterior paint sheen |  |
+| 2027-01-06 | Painting a Concrete Porch and Steps | painting concrete porch |  |
+| 2027-01-07 | Paint Colors That Make a Small Room Feel Bigger | paint colors for small rooms |  |
+| 2027-01-08 | Black Interior Trim and Doors: Is It Right for Your Home? | black interior doors |  |
+| 2027-01-09 | Warehouse and Industrial Painting in Houston | warehouse painting Houston |  |
+| 2027-01-10 | Painting or Staining a Pergola or Patio Cover | painting pergola |  |
+| 2027-01-11 | Revere Pewter vs. Edgecomb Gray in Houston Homes | Revere Pewter vs Edgecomb Gray |  |
+| 2027-01-12 | Painting a Media Room or Game Room | media room paint colors |  |
+| 2027-01-13 | Spring Exterior Painting Checklist for Houston Homes | spring exterior painting |  |
+| 2027-01-14 | Tricorn Black SW 6258 in Houston Homes | Tricorn Black |  |
+| 2027-01-15 | Painting Porch Columns and Posts | painting porch columns |  |
+| 2027-01-16 | Homeowner Checklist Before Exterior Painting Starts | prepare for exterior painting |  |
+| 2027-01-17 | Naval SW 6244 in Houston Homes | Naval SW 6244 |  |
+| 2027-01-18 | Painting Wood Ceiling Beams: Paint, Stain or Leave Them? | painting ceiling beams |  |
+| 2027-01-19 | Sea Salt SW 6204 in Houston Homes | Sea Salt SW 6204 |  |
+| 2027-01-20 | Painting Hallways and High-Traffic Areas | painting hallways |  |
+| 2027-01-21 | Should You Paint the Inside of Closets? | painting closets |  |
+| 2027-01-22 | Two-Tone Walls and Painted Wainscoting | two tone walls |  |
+| 2027-01-23 | How to Test Paint Samples the Right Way | how to test paint samples |  |
+| 2027-01-24 | Evergreen Fog SW 9130 in Houston Homes | Evergreen Fog |  |
+| 2027-01-25 | Painting Just the Exterior Trim: A Budget Refresh | exterior trim painting |  |
+| 2027-01-26 | Painting a Sunroom in Houston | sunroom paint colors |  |
+| 2027-01-27 | Painting Arches, Niches and Curved Walls | painting arches |  |
+| 2027-01-28 | Painting Heavily Textured Interior Walls | painting textured walls |  |

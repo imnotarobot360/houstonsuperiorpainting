@@ -1686,3 +1686,147 @@ Full guide: https://houstonsuperiorpainting.com/blog/paint-laminate-thermofoil-c
 Free written estimates · (346) 594-5960 · Houston Superior Painting
 ```
 
+## December 29, 2026: Why Winter Is a Good Time for Interior Painting in Houston
+
+URL: https://houstonsuperiorpainting.com/blog/why-winter-good-time-interior-painting-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Why Winter Is a Good Time for Interior Painting in Houston
+
+Mild weather, windows that can stay open, and a quieter season: why December through February suits interior repaints.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Mild weather, windows that can stay open, and a quieter season: why December through February suits interior repaints.
+
+Full guide: https://houstonsuperiorpainting.com/blog/why-winter-good-time-interior-painting-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 30, 2026: Repose Gray vs. Agreeable Gray in Houston Homes
+
+URL: https://houstonsuperiorpainting.com/blog/repose-gray-vs-agreeable-gray-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Repose Gray vs. Agreeable Gray in Houston Homes
+
+Two of Sherwin-Williams' most popular grays compared: undertones, lightness and which suits Houston light and finishes.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Two of Sherwin-Williams' most popular grays compared: undertones, lightness and which suits Houston light and finishes.
+
+Full guide: https://houstonsuperiorpainting.com/blog/repose-gray-vs-agreeable-gray-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## December 31, 2026: Paint Colors and Finishes for a Home Office
+
+URL: https://houstonsuperiorpainting.com/blog/painting-home-office-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Paint Colors and Finishes for a Home Office
+
+Colors that work on video calls, sheens that hold up to a desk chair, and planning a home office repaint around work.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Colors that work on video calls, sheens that hold up to a desk chair, and planning a home office repaint around work.
+
+Full guide: https://houstonsuperiorpainting.com/blog/painting-home-office-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## January 1, 2027: Painting Built-Ins and Bookshelves
+
+URL: https://houstonsuperiorpainting.com/blog/painting-built-ins-bookshelves-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Painting Built-Ins and Bookshelves
+
+Prep, primer and enamel for built-in cabinets and shelves, sticky shelves to avoid, and colors that make built-ins stand out.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Prep, primer and enamel for built-in cabinets and shelves, sticky shelves to avoid, and colors that make built-ins stand out.
+
+Full guide: https://houstonsuperiorpainting.com/blog/painting-built-ins-bookshelves-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## January 2, 2027: Haint Blue Porch Ceilings in Houston
+
+URL: https://houstonsuperiorpainting.com/blog/haint-blue-porch-ceiling-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Haint Blue Porch Ceilings in Houston
+
+Where the Southern tradition comes from, the pale blues people use, and the right exterior product for a Houston porch ceiling.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Where the Southern tradition comes from, the pale blues people use, and the right exterior product for a Houston porch ceiling.
+
+Full guide: https://houstonsuperiorpainting.com/blog/haint-blue-porch-ceiling-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## January 3, 2027: Painting a Bathroom Vanity
+
+URL: https://houstonsuperiorpainting.com/blog/painting-bathroom-vanity-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Painting a Bathroom Vanity
+
+Refreshing a bath vanity with a cabinet-grade finish: prep for humidity, colors, hardware and how long before you use it.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Refreshing a bath vanity with a cabinet-grade finish: prep for humidity, colors, hardware and how long before you use it.
+
+Full guide: https://houstonsuperiorpainting.com/blog/painting-bathroom-vanity-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+

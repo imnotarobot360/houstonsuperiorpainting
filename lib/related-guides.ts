@@ -73,6 +73,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Sherwin-Williams 2027 Color of the Year: Celery", href: "/blog/sherwin-williams-color-of-the-year-2027-celery-houston" },
     { label: "2026 cabinet colors: greige, green and black", href: "/blog/cabinet-colors-2026-houston-greige-green-black" },
     { label: "Agreeable Gray vs. Accessible Beige", href: "/blog/agreeable-gray-vs-accessible-beige-houston" },
+    { label: "Repose Gray vs. Agreeable Gray", href: "/blog/repose-gray-vs-agreeable-gray-houston" },
     { label: "Exterior colors for Katy homes", href: "/blog/exterior-paint-colors-katy-tx" },
     { label: "Exterior colors for Sugar Land homes", href: "/blog/exterior-paint-colors-sugar-land-tx" },
     { label: "Exterior colors for Heights homes", href: "/blog/exterior-paint-colors-houston-heights" },
@@ -107,6 +108,8 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Trim and door colors for red brick", href: "/blog/trim-door-colors-red-brick-house-houston" },
     { label: "Dining room colors", href: "/blog/dining-room-paint-colors-houston" },
     { label: "Calm bedroom colors", href: "/blog/bedroom-paint-colors-for-sleep-houston" },
+    { label: "Repose Gray vs. Agreeable Gray", href: "/blog/repose-gray-vs-agreeable-gray-houston" },
+    { label: "Haint blue porch ceilings", href: "/blog/haint-blue-porch-ceiling-houston" },
   ],
   // Service and article pages: daily-calendar posts (shown from their publish date)
   "/interior-painting-houston-tx": [
@@ -126,6 +129,9 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Painting wood paneling", href: "/blog/painting-wood-paneling-houston" },
     { label: "How long leftover paint lasts", href: "/blog/how-long-does-leftover-paint-last" },
     { label: "Painting garage walls", href: "/blog/painting-garage-walls-houston" },
+    { label: "Winter interior painting", href: "/blog/why-winter-good-time-interior-painting-houston" },
+    { label: "Home office colors and finishes", href: "/blog/painting-home-office-houston" },
+    { label: "Painting built-ins and bookshelves", href: "/blog/painting-built-ins-bookshelves-houston" },
   ],
   "/exterior-painting-houston-tx": [
     { label: "Wood rot repair before exterior painting", href: "/blog/wood-rot-repair-before-painting-houston" },
@@ -149,6 +155,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Green kitchen cabinets for 2027", href: "/blog/green-kitchen-cabinet-colors-2027-houston" },
     { label: "Why white cabinets turn yellow", href: "/blog/why-white-painted-cabinets-turn-yellow" },
     { label: "Painting laminate and thermofoil cabinets", href: "/blog/paint-laminate-thermofoil-cabinets" },
+    { label: "Painting a bathroom vanity", href: "/blog/painting-bathroom-vanity-houston" },
     { label: "Should you fill oak grain?", href: "/blog/fill-oak-grain-before-painting-cabinets" },
     { label: "On-site vs. off-site cabinet painting", href: "/blog/cabinet-painting-on-site-vs-off-site" },
     { label: "Painting inside kitchen cabinets", href: "/blog/paint-inside-kitchen-cabinets" },

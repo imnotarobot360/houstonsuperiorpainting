@@ -90,6 +90,7 @@ const ICONS = {
   shutter: `<rect x="30" y="30" width="55" height="140" rx="4"/><rect x="115" y="30" width="55" height="140" rx="4"/><path d="M40 55h35M40 75h35M40 95h35M40 115h35M40 135h35M40 155h35M125 55h35M125 75h35M125 95h35M125 115h35M125 135h35M125 155h35"/>`,
   gutter: `<path d="M25 70l75-40 75 40"/><path d="M20 78h160v14H20z"/><path d="M160 92v78h-16"/><rect x="45" y="100" width="95" height="70"/>`,
   twostory: `<path d="M35 70l65-40 65 40"/><rect x="50" y="62" width="100" height="113"/><path d="M50 118h100"/><rect x="68" y="80" width="22" height="22"/><rect x="110" y="80" width="22" height="22"/><rect x="88" y="135" width="24" height="40"/><path d="M175 175l-12-110M190 175l-12-110M165 150h20M162 120h20M159 90h20"/>`,
+  laptop: `<rect x="45" y="50" width="110" height="75" rx="6"/><path d="M25 150h150l-12-25H37z"/><path d="M85 140h30"/>`,
   sparkle: `<path d="M100 30l14 46 46 14-46 14-14 46-14-46-46-14 46-14z"/><path d="M155 140l5 15 15 5-15 5-5 15-5-15-15-5 15-5z"/>`,
 }
 
@@ -179,6 +180,13 @@ const SPECS = [
   T("painting-vinyl-siding-houston", "Exterior Painting", "plank", "Can You Paint Vinyl Siding?"),
   T("painting-two-story-house-exterior-houston", "Exterior Painting", "twostory", "Painting a Two-Story House Exterior"),
   T("paint-laminate-thermofoil-cabinets", "Cabinet Refinishing", "cabinet", "Can You Paint Laminate or Thermofoil Cabinets?"),
+  // January 2027 calendar posts.
+  { slug: "repose-gray-vs-agreeable-gray-houston", kind: "color", heading: "Two popular Sherwin-Williams grays", colors: [sw("Repose Gray"), sw("Agreeable Gray")] },
+  { slug: "haint-blue-porch-ceiling-houston", kind: "palette", heading: "Porch ceiling blues to sample", colors: [sw("Upward"), sw("Sleepy Blue"), sw("Tradewind"), sw("Rainwashed"), sw("Watery")] },
+  T("why-winter-good-time-interior-painting-houston", "Interior Painting", "roller", "Why Winter Is a Good Time for Interior Painting"),
+  T("painting-home-office-houston", "Interior Painting", "laptop", "Paint Colors and Finishes for a Home Office"),
+  T("painting-built-ins-bookshelves-houston", "Interior Painting", "cabinet", "Painting Built-Ins and Bookshelves"),
+  T("painting-bathroom-vanity-houston", "Cabinet Refinishing", "drop", "Painting a Bathroom Vanity"),
   // Topic posts that used past-job photos.
   T("cost-paint-ceilings-trim-doors-houston", "Cost Guide", "dollar", "Cost to Paint Ceilings, Trim and Doors"),
   T("wood-rot-repair-before-painting-houston", "Exterior Painting", "plank", "Wood Rot Repair Before Exterior Painting"),
