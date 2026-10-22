@@ -230,7 +230,7 @@ export function ServiceSkeleton(d: ServiceSkeletonData) {
 
         {relatedGuidesFor(`/${d.slug}`).filter((g) => !d.related.some((r) => r.href === g.href)).length > 0 && (
           <Section id="helpful-guides" title="Helpful guides">
-            <LinkGrid links={relatedGuidesFor(`/${d.slug}`).filter((g) => !d.related.some((r) => r.href === g.href))} />
+            <LinkGrid visible={9} links={relatedGuidesFor(`/${d.slug}`).filter((g) => !d.related.some((r) => r.href === g.href))} />
           </Section>
         )}
 

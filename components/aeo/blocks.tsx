@@ -128,18 +128,32 @@ export function PriceTable({ head, rows, note }: { head: string[]; rows: ReactNo
   )
 }
 
-export function LinkGrid({ links }: { links: { label: string; href: string }[] }) {
+/**
+ * Grid of link cards. With `visible`, links past that count fold into a native
+ * <details> ("More guides"): long, growing lists such as the daily calendar's
+ * helpful guides stay short on screen, and every link stays in the HTML.
+ */
+export function LinkGrid({ links, visible }: { links: { label: string; href: string }[]; visible?: number }) {
+  const card = (l: { label: string; href: string }) => (
+    <Link
+      key={l.href}
+      href={l.href}
+      className="block bg-card border border-border rounded-lg px-4 py-3 font-medium text-foreground hover:border-primary hover:text-primary transition-colors"
+    >
+      {l.label}
+    </Link>
+  )
+  const shown = visible ? links.slice(0, visible) : links
+  const more = visible ? links.slice(visible) : []
   return (
-    <div className="not-prose grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-      {links.map((l) => (
-        <Link
-          key={l.href}
-          href={l.href}
-          className="block bg-card border border-border rounded-lg px-4 py-3 font-medium text-foreground hover:border-primary hover:text-primary transition-colors"
-        >
-          {l.label}
-        </Link>
-      ))}
+    <div className="not-prose">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">{shown.map(card)}</div>
+      {more.length > 0 && (
+        <details className="mt-3">
+          <summary className="cursor-pointer text-sm font-semibold text-foreground">More guides ({more.length})</summary>
+          <div className="mt-3 grid sm:grid-cols-2 md:grid-cols-3 gap-3">{more.map(card)}</div>
+        </details>
+      )}
     </div>
   )
 }

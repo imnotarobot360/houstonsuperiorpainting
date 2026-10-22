@@ -143,7 +143,7 @@ export function GuideArticle({ d: input }: { d: GuideArticleData }) {
         )}
 
         <Section title="Related pages">
-          <LinkGrid links={[...d.related, ...relatedGuidesFor(d.path).filter((g) => !d.related.some((r) => r.href === g.href))]} />
+          <LinkGrid visible={9} links={[...d.related, ...relatedGuidesFor(d.path).filter((g) => !d.related.some((r) => r.href === g.href))]} />
         </Section>
 
         <TrustChecklist />

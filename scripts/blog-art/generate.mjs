@@ -35,6 +35,9 @@ const BM = {
   "Wild Aster": { code: "1240", hex: "#E8D9D4" },
   Durango: { code: "2137-30", hex: "#645D4E" },
   "Townsend Harbor Brown": { code: "HC-64", hex: "#634543" },
+  // Not in the 2027 palette; values from each color page, checked 2026-10-22.
+  "Revere Pewter": { code: "HC-172", hex: "#CBC6B8" },
+  "Edgecomb Gray": { code: "HC-173", hex: "#D9D3C4" },
 }
 const sw = (n) => ({ name: n, ...SW[n], brand: "Sherwin-Williams" })
 const bm = (n) => ({ name: n, ...BM[n], brand: "Benjamin Moore" })
@@ -92,6 +95,9 @@ const ICONS = {
   twostory: `<path d="M35 70l65-40 65 40"/><rect x="50" y="62" width="100" height="113"/><path d="M50 118h100"/><rect x="68" y="80" width="22" height="22"/><rect x="110" y="80" width="22" height="22"/><rect x="88" y="135" width="24" height="40"/><path d="M175 175l-12-110M190 175l-12-110M165 150h20M162 120h20M159 90h20"/>`,
   laptop: `<rect x="45" y="50" width="110" height="75" rx="6"/><path d="M25 150h150l-12-25H37z"/><path d="M85 140h30"/>`,
   pergola: `<path d="M25 60h150M25 80h150"/><path d="M45 50v20M75 50v20M105 50v20M135 50v20M160 50v20"/><path d="M50 80v95M150 80v95"/><path d="M35 175h40M125 175h40"/>`,
+  tv: `<rect x="30" y="40" width="140" height="95" rx="8"/><path d="M80 160h40M100 135v25"/>`,
+  column: `<path d="M60 35h80M65 45h70"/><path d="M75 45v115M100 45v115M125 45v115"/><path d="M60 160h80M50 172h100"/>`,
+  arch: `<path d="M45 175V95a55 55 0 0 1 110 0v80"/><path d="M65 175V98a35 35 0 0 1 70 0v77"/><path d="M30 175h140"/>`,
   sparkle: `<path d="M100 30l14 46 46 14-46 14-14 46-14-46-46-14 46-14z"/><path d="M155 140l5 15 15 5-15 5-5 15-5-15-15-5 15-5z"/>`,
 }
 
@@ -162,7 +168,7 @@ const SPECS = [
   { slug: "benjamin-moore-color-of-the-year-2027-webster-green-houston", kind: "color", heading: "Benjamin Moore Color of the Year 2027", colors: [bm("Webster Green")] },
   { slug: "celery-vs-webster-green-2027-color-of-the-year", kind: "color", heading: "The 2027 Colors of the Year", colors: [sw("Celery"), bm("Webster Green")] },
   { slug: "green-kitchen-cabinet-colors-2027-houston", kind: "color", heading: "Green cabinets for 2027: deep or light", colors: [bm("Webster Green"), sw("Celery")] },
-  { slug: "benjamin-moore-color-trends-2027-houston", kind: "palette", heading: "Benjamin Moore Color Trends 2027", colors: Object.keys(BM).map(bm) },
+  { slug: "benjamin-moore-color-trends-2027-houston", kind: "palette", heading: "Benjamin Moore Color Trends 2027", colors: ["Webster Green", "White Down", "Nelson Blue", "Shakespeare Tan", "Antique Copper", "Wild Aster", "Durango", "Townsend Harbor Brown"].map(bm) },
   { slug: "best-paint-colors-houston-homes-2027", kind: "palette", heading: "2027 colors for Houston homes", colors: [sw("Celery"), bm("Webster Green"), bm("White Down"), bm("Nelson Blue"), sw("Quietude"), bm("Shakespeare Tan"), sw("Cordovan"), bm("Townsend Harbor Brown")] },
   { slug: "agreeable-gray-vs-accessible-beige-houston", kind: "color", heading: "Two popular Sherwin-Williams neutrals", colors: [sw("Agreeable Gray"), sw("Accessible Beige")] },
   // Dec 14–23 calendar posts.
@@ -195,6 +201,24 @@ const SPECS = [
   T("black-interior-trim-doors-houston", "Interior Painting", "door", "Black Interior Doors and Trim"),
   T("warehouse-industrial-painting-houston", "Commercial Painting", "building", "Warehouse and Industrial Painting"),
   T("painting-pergola-patio-cover-houston", "Exterior Painting", "pergola", "Painting or Staining a Pergola or Patio Cover"),
+  { slug: "revere-pewter-vs-edgecomb-gray-houston", kind: "color", heading: "Two popular Benjamin Moore greiges", colors: [bm("Revere Pewter"), bm("Edgecomb Gray")] },
+  { slug: "tricorn-black-sw-6258-houston", kind: "color", heading: "Sherwin-Williams Tricorn Black", colors: [sw("Tricorn Black")] },
+  { slug: "naval-sw-6244-houston", kind: "color", heading: "Sherwin-Williams Naval", colors: [sw("Naval")] },
+  { slug: "sea-salt-sw-6204-houston", kind: "color", heading: "Sherwin-Williams Sea Salt", colors: [sw("Sea Salt")] },
+  T("painting-media-game-room-houston", "Interior Painting", "tv", "Painting a Media Room or Game Room"),
+  T("spring-exterior-painting-checklist-houston", "Exterior Painting", "check", "Spring Exterior Painting Checklist"),
+  T("painting-porch-columns-posts-houston", "Exterior Painting", "column", "Painting Porch Columns and Posts"),
+  T("homeowner-checklist-before-exterior-painting", "Exterior Painting", "check", "Homeowner Checklist Before Exterior Painting"),
+  T("painting-wood-ceiling-beams-houston", "Interior Painting", "ceiling", "Painting Wood Ceiling Beams"),
+  { slug: "evergreen-fog-sw-9130-houston", kind: "color", heading: "Sherwin-Williams Evergreen Fog", colors: [sw("Evergreen Fog")] },
+  T("painting-hallways-high-traffic-houston", "Interior Painting", "stairs", "Painting Hallways and High-Traffic Areas"),
+  T("should-you-paint-closets", "Interior Painting", "door", "Should You Paint the Inside of Closets?"),
+  T("two-tone-walls-wainscoting-houston", "Color Guide", "swatch", "Two-Tone Walls and Painted Wainscoting"),
+  T("how-to-test-paint-samples", "Color Guide", "swatch", "How to Test Paint Samples the Right Way"),
+  T("painting-exterior-trim-only-houston", "Exterior Painting", "window", "Painting Just the Exterior Trim"),
+  T("painting-sunroom-houston", "Interior Painting", "sun", "Painting a Sunroom in Houston"),
+  T("painting-arches-niches-houston", "Interior Painting", "arch", "Painting Arches, Niches and Curved Walls"),
+  T("painting-stucco-texture-interior-walls", "Interior Painting", "roller", "Painting Heavily Textured Interior Walls"),
   // Topic posts that used past-job photos.
   T("cost-paint-ceilings-trim-doors-houston", "Cost Guide", "dollar", "Cost to Paint Ceilings, Trim and Doors"),
   T("wood-rot-repair-before-painting-houston", "Exterior Painting", "plank", "Wood Rot Repair Before Exterior Painting"),

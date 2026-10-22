@@ -858,15 +858,6 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     image: "/images/blog/art/painting-pergola-patio-cover-houston.png",
     keyword: "painting pergola",
   },
-]
-
-/**
- * Written-in-advance queue: posts on the calendar whose pages are not written
- * yet. Nothing on the site reads this list. When a post is written, move its
- * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
- * scheduled post has a page).
- */
-export const PLANNED_POSTS: ScheduledPost[] = [
   {
     slug: "revere-pewter-vs-edgecomb-gray-houston",
     publishOn: "2027-01-11",
@@ -874,7 +865,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Two popular Benjamin Moore greiges compared: lightness, undertones and how each looks in Houston light.",
     category: "Color Guide",
     readTime: "5 min read",
-    image: "/images/blog/interior-paint-colors-2026.jpg",
+    image: "/images/blog/art/revere-pewter-vs-edgecomb-gray-houston.png",
     keyword: "Revere Pewter vs Edgecomb Gray",
   },
   {
@@ -884,7 +875,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Dark, low-glare colors for screens, durable finishes for busy rooms, and ceilings that make a media room feel finished.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/blog/interior-painting-cost-houston.png",
+    image: "/images/blog/art/painting-media-game-room-houston.png",
     keyword: "media room paint colors",
   },
   {
@@ -894,7 +885,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "What to check and book in winter so a spring exterior repaint goes smoothly: repairs, colors, HOA and scheduling.",
     category: "Exterior Painting",
     readTime: "5 min read",
-    image: "/images/blog/spring-rain-damage-houston.png",
+    image: "/images/blog/art/spring-exterior-painting-checklist-houston.png",
     keyword: "spring exterior painting",
   },
   {
@@ -904,7 +895,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Sherwin-Williams' true black: front doors, shutters, trim and accent walls, plus how black handles Houston heat.",
     category: "Color Guide",
     readTime: "4 min read",
-    image: "/images/blog/paint-color-trends-2026.png",
+    image: "/images/blog/art/tricorn-black-sw-6258-houston.png",
     keyword: "Tricorn Black",
   },
   {
@@ -914,7 +905,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Wood, fiberglass and wrapped columns: rot at the base, caulk, primer and paint that hold up on a Houston porch.",
     category: "Exterior Painting",
     readTime: "4 min read",
-    image: "/images/blog/exterior-house-painting-guide.jpg",
+    image: "/images/blog/art/painting-porch-columns-posts-houston.png",
     keyword: "painting porch columns",
   },
   {
@@ -924,7 +915,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "What to move, trim, unlock and tell your neighbors before an exterior crew arrives, so the job starts on time.",
     category: "Exterior Painting",
     readTime: "4 min read",
-    image: "/images/blog/paint-preparation-houston.jpg",
+    image: "/images/blog/art/homeowner-checklist-before-exterior-painting.png",
     keyword: "prepare for exterior painting",
   },
   {
@@ -934,7 +925,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Sherwin-Williams' classic navy on cabinets, doors, accent walls and exteriors, and the whites and metals that suit it.",
     category: "Color Guide",
     readTime: "5 min read",
-    image: "/images/blog/navy-kitchen-island-houston.png",
+    image: "/images/blog/art/naval-sw-6244-houston.png",
     keyword: "Naval SW 6244",
   },
   {
@@ -944,7 +935,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Painting or refinishing ceiling beams, the access and prep involved, and colors that update a dated beamed ceiling.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/blog/interior-painting-houston-guide.jpg",
+    image: "/images/blog/art/painting-wood-ceiling-beams-houston.png",
     keyword: "painting ceiling beams",
   },
   {
@@ -954,7 +945,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Sherwin-Williams' soft green-blue-gray: bedrooms, baths and kitchens, how it shifts in Houston light, and what pairs with it.",
     category: "Color Guide",
     readTime: "4 min read",
-    image: "/images/blog/paint-colors-houston-homes-2026.png",
+    image: "/images/blog/art/sea-salt-sw-6204-houston.png",
     keyword: "Sea Salt SW 6204",
   },
   {
@@ -964,7 +955,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Scuff-resistant finishes, colors that hide marks, and how to keep halls, entries and stairwells looking fresh longer.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/blog/how-long-interior-painting-houston.jpg",
+    image: "/images/blog/art/painting-hallways-high-traffic-houston.png",
     keyword: "painting hallways",
   },
   {
@@ -974,7 +965,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "When closets are worth painting, what color and sheen to use, and how to fit them into a whole-house repaint.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/blog/prepare-home-interior-painting-houston.png",
+    image: "/images/blog/art/should-you-paint-closets.png",
     keyword: "painting closets",
   },
   {
@@ -984,7 +975,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Chair-rail and wainscot color combinations, which color goes on top, and sheens for the lower, harder-working half.",
     category: "Color Guide",
     readTime: "4 min read",
-    image: "/images/blog/best-interior-colors-houston.png",
+    image: "/images/blog/art/two-tone-walls-wainscoting-houston.png",
     keyword: "two tone walls",
   },
   {
@@ -994,7 +985,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Sample boards vs. painting on the wall, how big, where, and when to look: a step-by-step way to choose with confidence.",
     category: "Color Guide",
     readTime: "4 min read",
-    image: "/images/blog/paint-finishes-guide.jpg",
+    image: "/images/blog/art/how-to-test-paint-samples.png",
     keyword: "how to test paint samples",
   },
   {
@@ -1004,7 +995,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Sherwin-Williams' muted green-gray on walls, cabinets and exteriors, and how it compares with the 2027 greens.",
     category: "Color Guide",
     readTime: "4 min read",
-    image: "/images/blog/paint-color-trends-2026.jpg",
+    image: "/images/blog/art/evergreen-fog-sw-9130-houston.png",
     keyword: "Evergreen Fog",
   },
   {
@@ -1014,7 +1005,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "When a trim-only repaint makes sense, what it includes, and how it buys time before a full exterior.",
     category: "Exterior Painting",
     readTime: "4 min read",
-    image: "/images/blog/exterior-painting-cost-houston-tx-2026.png",
+    image: "/images/blog/art/painting-exterior-trim-only-houston.png",
     keyword: "exterior trim painting",
   },
   {
@@ -1024,7 +1015,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Colors that survive strong sun, fade-resistant products, and handling heat and glare in a Houston sunroom.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/blog/best-interior-colors-houston.png",
+    image: "/images/blog/art/painting-sunroom-houston.png",
     keyword: "sunroom paint colors",
   },
   {
@@ -1034,7 +1025,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Cutting crisp lines on curves, accent ideas for arches and niches, and making architectural details stand out.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/blog/interior-painting-houston-guide.jpg",
+    image: "/images/blog/art/painting-arches-niches-houston.png",
     keyword: "painting arches",
   },
   {
@@ -1044,9 +1035,18 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Why textured walls take more paint and time, rollers that reach into texture, and when to skim smooth instead.",
     category: "Interior Painting",
     readTime: "4 min read",
-    image: "/images/blog/drywall-repair-guide.jpg",
+    image: "/images/blog/art/painting-stucco-texture-interior-walls.png",
     keyword: "painting textured walls",
   },
+]
+
+/**
+ * Written-in-advance queue: posts on the calendar whose pages are not written
+ * yet. Nothing on the site reads this list. When a post is written, move its
+ * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
+ * scheduled post has a page).
+ */
+export const PLANNED_POSTS: ScheduledPost[] = [
 ]
 
 /** Today's Houston date (YYYY-MM-DD), rolling over at PUBLISH_HOUR_HOUSTON. */

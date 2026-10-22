@@ -252,7 +252,7 @@ export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
 
         {relatedGuidesFor(`/${slug}`).length > 0 && (
           <Section title={`Helpful guides for ${city}`}>
-            <LinkGrid links={relatedGuidesFor(`/${slug}`)} />
+            <LinkGrid visible={9} links={relatedGuidesFor(`/${slug}`)} />
           </Section>
         )}
 

@@ -6,7 +6,7 @@ needed on the day.
 
 - **Calendar file:** `lib/blog-schedule.ts`.
   - `BLOG_SCHEDULE` holds posts that are written.
-  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet (18 posts not yet written). Nothing on the site reads it.
+  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet (empty now: every post is written). Nothing on the site reads it.
   - `pnpm test` fails if a scheduled post has no page, or if a planned post already has one. A planned post
     with a page would publish with no date gate.
 - **Sitemap:** built at deploy time, so a post joins it on the first deploy after its date. `/blog` and the
@@ -17,7 +17,7 @@ needed on the day.
 - **Previewing unpublished posts locally:** `BLOG_PREVIEW=1 npx next start` (never works on production).
 - **Linking rule:** nothing may link to a post before its date. The site check fails on 404 links.
 
-## Full schedule (83 posts, October 20, 2026 to January 10, 2027)
+## Full schedule (101 posts, October 20, 2026 to January 28, 2027)
 
 Generated from `lib/blog-schedule.ts`. Every post here is written and deployed; each stays hidden until its date. Post dates on the pages follow this schedule automatically.
 
@@ -106,6 +106,24 @@ Generated from `lib/blog-schedule.ts`. Every post here is written and deployed; 
 | 2027-01-08 | Black Interior Doors and Trim: Is It Right for Your Home? | /blog/black-interior-trim-doors-houston |
 | 2027-01-09 | Warehouse and Industrial Painting in Houston | /blog/warehouse-industrial-painting-houston |
 | 2027-01-10 | Painting or Staining a Pergola or Patio Cover | /blog/painting-pergola-patio-cover-houston |
+| 2027-01-11 | Revere Pewter vs. Edgecomb Gray in Houston Homes | /blog/revere-pewter-vs-edgecomb-gray-houston |
+| 2027-01-12 | Painting a Media Room or Game Room | /blog/painting-media-game-room-houston |
+| 2027-01-13 | Spring Exterior Painting Checklist for Houston Homes | /blog/spring-exterior-painting-checklist-houston |
+| 2027-01-14 | Tricorn Black SW 6258 in Houston Homes | /blog/tricorn-black-sw-6258-houston |
+| 2027-01-15 | Painting Porch Columns and Posts | /blog/painting-porch-columns-posts-houston |
+| 2027-01-16 | Homeowner Checklist Before Exterior Painting Starts | /blog/homeowner-checklist-before-exterior-painting |
+| 2027-01-17 | Naval SW 6244 in Houston Homes | /blog/naval-sw-6244-houston |
+| 2027-01-18 | Painting Wood Ceiling Beams: Paint, Stain or Leave Them? | /blog/painting-wood-ceiling-beams-houston |
+| 2027-01-19 | Sea Salt SW 6204 in Houston Homes | /blog/sea-salt-sw-6204-houston |
+| 2027-01-20 | Painting Hallways and High-Traffic Areas | /blog/painting-hallways-high-traffic-houston |
+| 2027-01-21 | Should You Paint the Inside of Closets? | /blog/should-you-paint-closets |
+| 2027-01-22 | Two-Tone Walls and Painted Wainscoting | /blog/two-tone-walls-wainscoting-houston |
+| 2027-01-23 | How to Test Paint Samples the Right Way | /blog/how-to-test-paint-samples |
+| 2027-01-24 | Evergreen Fog SW 9130 in Houston Homes | /blog/evergreen-fog-sw-9130-houston |
+| 2027-01-25 | Painting Just the Exterior Trim: A Budget Refresh | /blog/painting-exterior-trim-only-houston |
+| 2027-01-26 | Painting a Sunroom in Houston | /blog/painting-sunroom-houston |
+| 2027-01-27 | Painting Arches, Niches and Curved Walls | /blog/painting-arches-niches-houston |
+| 2027-01-28 | Painting Heavily Textured Interior Walls | /blog/painting-stucco-texture-interior-walls |
 
 ## Already live before the calendar (from the owner's 30-topic list)
 
@@ -122,27 +140,6 @@ Celery SW 6421, popcorn ceiling cost, paint before selling, primer vs two coats,
 - Two-story exteriors (2026-10-21): we use ladders, not lifts.
 - Laminate and thermofoil cabinets (2026-10-21): yes, we paint them.
 
-## Planned, not yet written (18 posts, January 11, 2027 to January 28, 2027)
+## Planned, not yet written
 
-Topics checked against every existing post and page so none repeats one. Posts marked **needs owner answer** depend on whether we do that work.
-
-| Date | Post | Search phrase | |
-|---|---|---|---|
-| 2027-01-11 | Revere Pewter vs. Edgecomb Gray in Houston Homes | Revere Pewter vs Edgecomb Gray |  |
-| 2027-01-12 | Painting a Media Room or Game Room | media room paint colors |  |
-| 2027-01-13 | Spring Exterior Painting Checklist for Houston Homes | spring exterior painting |  |
-| 2027-01-14 | Tricorn Black SW 6258 in Houston Homes | Tricorn Black |  |
-| 2027-01-15 | Painting Porch Columns and Posts | painting porch columns |  |
-| 2027-01-16 | Homeowner Checklist Before Exterior Painting Starts | prepare for exterior painting |  |
-| 2027-01-17 | Naval SW 6244 in Houston Homes | Naval SW 6244 |  |
-| 2027-01-18 | Painting Wood Ceiling Beams: Paint, Stain or Leave Them? | painting ceiling beams |  |
-| 2027-01-19 | Sea Salt SW 6204 in Houston Homes | Sea Salt SW 6204 |  |
-| 2027-01-20 | Painting Hallways and High-Traffic Areas | painting hallways |  |
-| 2027-01-21 | Should You Paint the Inside of Closets? | painting closets |  |
-| 2027-01-22 | Two-Tone Walls and Painted Wainscoting | two tone walls |  |
-| 2027-01-23 | How to Test Paint Samples the Right Way | how to test paint samples |  |
-| 2027-01-24 | Evergreen Fog SW 9130 in Houston Homes | Evergreen Fog |  |
-| 2027-01-25 | Painting Just the Exterior Trim: A Budget Refresh | exterior trim painting |  |
-| 2027-01-26 | Painting a Sunroom in Houston | sunroom paint colors |  |
-| 2027-01-27 | Painting Arches, Niches and Curved Walls | painting arches |  |
-| 2027-01-28 | Painting Heavily Textured Interior Walls | painting textured walls |  |
+None: every post on the calendar is written.
