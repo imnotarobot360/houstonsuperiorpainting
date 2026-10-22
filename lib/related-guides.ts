@@ -110,6 +110,8 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Calm bedroom colors", href: "/blog/bedroom-paint-colors-for-sleep-houston" },
     { label: "Repose Gray vs. Agreeable Gray", href: "/blog/repose-gray-vs-agreeable-gray-houston" },
     { label: "Haint blue porch ceilings", href: "/blog/haint-blue-porch-ceiling-houston" },
+    { label: "Urbane Bronze SW 7048", href: "/blog/urbane-bronze-sw-7048-houston" },
+    { label: "Colors for small rooms", href: "/blog/paint-colors-small-rooms-houston" },
   ],
   // Service and article pages: daily-calendar posts (shown from their publish date)
   "/interior-painting-houston-tx": [
@@ -132,6 +134,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Winter interior painting", href: "/blog/why-winter-good-time-interior-painting-houston" },
     { label: "Home office colors and finishes", href: "/blog/painting-home-office-houston" },
     { label: "Painting built-ins and bookshelves", href: "/blog/painting-built-ins-bookshelves-houston" },
+    { label: "Black interior doors and trim", href: "/blog/black-interior-trim-doors-houston" },
   ],
   "/exterior-painting-houston-tx": [
     { label: "Wood rot repair before exterior painting", href: "/blog/wood-rot-repair-before-painting-houston" },
@@ -150,6 +153,9 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Painting gutters and downspouts", href: "/blog/painting-gutters-downspouts-houston" },
     { label: "Can you paint vinyl siding?", href: "/blog/painting-vinyl-siding-houston" },
     { label: "Painting a two-story exterior", href: "/blog/painting-two-story-house-exterior-houston" },
+    { label: "Exterior paint sheen", href: "/blog/exterior-paint-sheen-houston" },
+    { label: "Painting a concrete porch", href: "/blog/painting-concrete-porch-steps-houston" },
+    { label: "Painting a pergola or patio cover", href: "/blog/painting-pergola-patio-cover-houston" },
   ],
   "/cabinet-refinishing-houston-tx": [
     { label: "Green kitchen cabinets for 2027", href: "/blog/green-kitchen-cabinet-colors-2027-houston" },
@@ -166,6 +172,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Painting after foundation repair", href: "/blog/painting-after-foundation-repair-houston" },
   ],
   "/commercial-painting-houston-tx": [
+    { label: "Warehouse and industrial painting", href: "/blog/warehouse-industrial-painting-houston" },
     { label: "Painting a restaurant or retail store", href: "/blog/restaurant-retail-painting-houston" },
     { label: "Office painting over the holiday shutdown", href: "/blog/office-painting-holiday-shutdown-houston" },
     { label: "After-hours commercial painting", href: "/blog/after-hours-commercial-painting-houston" },

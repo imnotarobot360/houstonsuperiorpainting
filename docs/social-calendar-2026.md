@@ -1830,3 +1830,171 @@ Full guide: https://houstonsuperiorpainting.com/blog/painting-bathroom-vanity-ho
 Free written estimates · (346) 594-5960 · Houston Superior Painting
 ```
 
+## January 4, 2027: Urbane Bronze SW 7048 in Houston Homes
+
+URL: https://houstonsuperiorpainting.com/blog/urbane-bronze-sw-7048-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Urbane Bronze SW 7048 in Houston Homes
+
+Sherwin-Williams' deep bronze: where it works inside and out, what pairs with it, and how it looks in Houston sun.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Sherwin-Williams' deep bronze: where it works inside and out, what pairs with it, and how it looks in Houston sun.
+
+Full guide: https://houstonsuperiorpainting.com/blog/urbane-bronze-sw-7048-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## January 5, 2027: Exterior Paint Sheen: Flat, Satin or Semi-Gloss?
+
+URL: https://houstonsuperiorpainting.com/blog/exterior-paint-sheen-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Exterior Paint Sheen: Flat, Satin or Semi-Gloss?
+
+Which sheen goes on siding, trim, doors and stucco, and how sheen affects how a Houston exterior wears and cleans.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Which sheen goes on siding, trim, doors and stucco, and how sheen affects how a Houston exterior wears and cleans.
+
+Full guide: https://houstonsuperiorpainting.com/blog/exterior-paint-sheen-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## January 6, 2027: Painting a Concrete Porch and Steps
+
+URL: https://houstonsuperiorpainting.com/blog/painting-concrete-porch-steps-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Painting a Concrete Porch and Steps
+
+Porch and floor paints vs. coatings, prep for Houston humidity, slip resistance, and when an epoxy floor is the better choice.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Porch and floor paints vs. coatings, prep for Houston humidity, slip resistance, and when an epoxy floor is the better choice.
+
+Full guide: https://houstonsuperiorpainting.com/blog/painting-concrete-porch-steps-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## January 7, 2027: Paint Colors That Make a Small Room Feel Bigger
+
+URL: https://houstonsuperiorpainting.com/blog/paint-colors-small-rooms-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Paint Colors That Make a Small Room Feel Bigger
+
+Light colors, low contrast, ceilings and trim: what actually makes a small Houston room feel larger, and when dark works too.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Light colors, low contrast, ceilings and trim: what actually makes a small Houston room feel larger, and when dark works too.
+
+Full guide: https://houstonsuperiorpainting.com/blog/paint-colors-small-rooms-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## January 8, 2027: Black Interior Doors and Trim: Is It Right for Your Home?
+
+URL: https://houstonsuperiorpainting.com/blog/black-interior-trim-doors-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Black Interior Doors and Trim: Is It Right for Your Home?
+
+Where black or charcoal interior doors and trim work, the sheen and prep they need, and how they look with Houston floors.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Where black or charcoal interior doors and trim work, the sheen and prep they need, and how they look with Houston floors.
+
+Full guide: https://houstonsuperiorpainting.com/blog/black-interior-trim-doors-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## January 9, 2027: Warehouse and Industrial Painting in Houston
+
+URL: https://houstonsuperiorpainting.com/blog/warehouse-industrial-painting-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Warehouse and Industrial Painting in Houston
+
+Painting warehouses and light-industrial spaces around operations: walls, doors, columns and safety colors, and how it's priced.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Painting warehouses and light-industrial spaces around operations: walls, doors, columns and safety colors, and how it's priced.
+
+Full guide: https://houstonsuperiorpainting.com/blog/warehouse-industrial-painting-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+
+## January 10, 2027: Painting or Staining a Pergola or Patio Cover
+
+URL: https://houstonsuperiorpainting.com/blog/painting-pergola-patio-cover-houston
+
+**Google Business Profile** (button: Learn more → URL)
+
+```
+Painting or Staining a Pergola or Patio Cover
+
+Paint vs. stain on outdoor wood structures, repairing weathered boards, and finishes that last in Houston sun and rain.
+
+Read the guide, then request a free written estimate: (346) 594-5960.
+```
+
+**Facebook / Instagram**
+
+```
+Paint vs. stain on outdoor wood structures, repairing weathered boards, and finishes that last in Houston sun and rain.
+
+Full guide: https://houstonsuperiorpainting.com/blog/painting-pergola-patio-cover-houston
+
+Free written estimates · (346) 594-5960 · Houston Superior Painting
+```
+

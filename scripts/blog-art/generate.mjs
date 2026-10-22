@@ -91,6 +91,7 @@ const ICONS = {
   gutter: `<path d="M25 70l75-40 75 40"/><path d="M20 78h160v14H20z"/><path d="M160 92v78h-16"/><rect x="45" y="100" width="95" height="70"/>`,
   twostory: `<path d="M35 70l65-40 65 40"/><rect x="50" y="62" width="100" height="113"/><path d="M50 118h100"/><rect x="68" y="80" width="22" height="22"/><rect x="110" y="80" width="22" height="22"/><rect x="88" y="135" width="24" height="40"/><path d="M175 175l-12-110M190 175l-12-110M165 150h20M162 120h20M159 90h20"/>`,
   laptop: `<rect x="45" y="50" width="110" height="75" rx="6"/><path d="M25 150h150l-12-25H37z"/><path d="M85 140h30"/>`,
+  pergola: `<path d="M25 60h150M25 80h150"/><path d="M45 50v20M75 50v20M105 50v20M135 50v20M160 50v20"/><path d="M50 80v95M150 80v95"/><path d="M35 175h40M125 175h40"/>`,
   sparkle: `<path d="M100 30l14 46 46 14-46 14-14 46-14-46-46-14 46-14z"/><path d="M155 140l5 15 15 5-15 5-5 15-5-15-15-5 15-5z"/>`,
 }
 
@@ -187,6 +188,13 @@ const SPECS = [
   T("painting-home-office-houston", "Interior Painting", "laptop", "Paint Colors and Finishes for a Home Office"),
   T("painting-built-ins-bookshelves-houston", "Interior Painting", "cabinet", "Painting Built-Ins and Bookshelves"),
   T("painting-bathroom-vanity-houston", "Cabinet Refinishing", "drop", "Painting a Bathroom Vanity"),
+  { slug: "urbane-bronze-sw-7048-houston", kind: "color", heading: "Sherwin-Williams Urbane Bronze", colors: [sw("Urbane Bronze")] },
+  T("exterior-paint-sheen-houston", "Exterior Painting", "sun", "Exterior Paint Sheen: Flat, Satin or Semi-Gloss?"),
+  T("painting-concrete-porch-steps-houston", "Exterior Painting", "stairs", "Painting a Concrete Porch and Steps"),
+  T("paint-colors-small-rooms-houston", "Color Guide", "swatch", "Paint Colors That Make a Small Room Feel Bigger"),
+  T("black-interior-trim-doors-houston", "Interior Painting", "door", "Black Interior Doors and Trim"),
+  T("warehouse-industrial-painting-houston", "Commercial Painting", "building", "Warehouse and Industrial Painting"),
+  T("painting-pergola-patio-cover-houston", "Exterior Painting", "pergola", "Painting or Staining a Pergola or Patio Cover"),
   // Topic posts that used past-job photos.
   T("cost-paint-ceilings-trim-doors-houston", "Cost Guide", "dollar", "Cost to Paint Ceilings, Trim and Doors"),
   T("wood-rot-repair-before-painting-houston", "Exterior Painting", "plank", "Wood Rot Repair Before Exterior Painting"),

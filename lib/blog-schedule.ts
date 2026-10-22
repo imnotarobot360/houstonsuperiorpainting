@@ -788,15 +788,6 @@ export const BLOG_SCHEDULE: ScheduledPost[] = [
     image: "/images/blog/art/painting-bathroom-vanity-houston.png",
     keyword: "painting bathroom vanity",
   },
-]
-
-/**
- * Written-in-advance queue: posts on the calendar whose pages are not written
- * yet. Nothing on the site reads this list. When a post is written, move its
- * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
- * scheduled post has a page).
- */
-export const PLANNED_POSTS: ScheduledPost[] = [
   {
     slug: "urbane-bronze-sw-7048-houston",
     publishOn: "2027-01-04",
@@ -804,7 +795,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Sherwin-Williams' deep bronze: where it works inside and out, what pairs with it, and how it looks in Houston sun.",
     category: "Color Guide",
     readTime: "5 min read",
-    image: "/images/blog/paint-color-trends-2026.png",
+    image: "/images/blog/art/urbane-bronze-sw-7048-houston.png",
     keyword: "Urbane Bronze",
   },
   {
@@ -814,7 +805,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Which sheen goes on siding, trim, doors and stucco, and how sheen affects how a Houston exterior wears and cleans.",
     category: "Exterior Painting",
     readTime: "4 min read",
-    image: "/images/blog/exterior-paint-durability-houston.jpg",
+    image: "/images/blog/art/exterior-paint-sheen-houston.png",
     keyword: "exterior paint sheen",
   },
   {
@@ -824,7 +815,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Porch and floor paints vs. coatings, prep for Houston humidity, slip resistance, and when an epoxy floor is the better choice.",
     category: "Exterior Painting",
     readTime: "5 min read",
-    image: "/images/blog/pressure-washing-houston.jpg",
+    image: "/images/blog/art/painting-concrete-porch-steps-houston.png",
     keyword: "painting concrete porch",
   },
   {
@@ -834,17 +825,17 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Light colors, low contrast, ceilings and trim: what actually makes a small Houston room feel larger, and when dark works too.",
     category: "Color Guide",
     readTime: "5 min read",
-    image: "/images/blog/best-interior-colors-houston.png",
+    image: "/images/blog/art/paint-colors-small-rooms-houston.png",
     keyword: "paint colors for small rooms",
   },
   {
     slug: "black-interior-trim-doors-houston",
     publishOn: "2027-01-08",
-    title: "Black Interior Trim and Doors: Is It Right for Your Home?",
+    title: "Black Interior Doors and Trim: Is It Right for Your Home?",
     excerpt: "Where black or charcoal interior doors and trim work, the sheen and prep they need, and how they look with Houston floors.",
     category: "Interior Painting",
     readTime: "5 min read",
-    image: "/images/blog/paint-color-trends-2026.jpg",
+    image: "/images/blog/art/black-interior-trim-doors-houston.png",
     keyword: "black interior doors",
   },
   {
@@ -854,7 +845,7 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Painting warehouses and light-industrial spaces around operations: walls, doors, columns and safety colors, and how it's priced.",
     category: "Commercial Painting",
     readTime: "5 min read",
-    image: "/images/blog/painters-near-me-houston.jpg",
+    image: "/images/blog/art/warehouse-industrial-painting-houston.png",
     keyword: "warehouse painting Houston",
   },
   {
@@ -864,9 +855,18 @@ export const PLANNED_POSTS: ScheduledPost[] = [
     excerpt: "Paint vs. stain on outdoor wood structures, repairing weathered boards, and finishes that last in Houston sun and rain.",
     category: "Exterior Painting",
     readTime: "5 min read",
-    image: "/images/blog/fence-deck-painting-houston.png",
+    image: "/images/blog/art/painting-pergola-patio-cover-houston.png",
     keyword: "painting pergola",
   },
+]
+
+/**
+ * Written-in-advance queue: posts on the calendar whose pages are not written
+ * yet. Nothing on the site reads this list. When a post is written, move its
+ * entry into BLOG_SCHEDULE (tests/blog-schedule.test.mjs checks every
+ * scheduled post has a page).
+ */
+export const PLANNED_POSTS: ScheduledPost[] = [
   {
     slug: "revere-pewter-vs-edgecomb-gray-houston",
     publishOn: "2027-01-11",

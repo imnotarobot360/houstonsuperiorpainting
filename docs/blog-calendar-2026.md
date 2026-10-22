@@ -6,7 +6,7 @@ needed on the day.
 
 - **Calendar file:** `lib/blog-schedule.ts`.
   - `BLOG_SCHEDULE` holds posts that are written.
-  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet (25 posts not yet written). Nothing on the site reads it.
+  - `PLANNED_POSTS` holds posts on the calendar that aren't written yet (18 posts not yet written). Nothing on the site reads it.
   - `pnpm test` fails if a scheduled post has no page, or if a planned post already has one. A planned post
     with a page would publish with no date gate.
 - **Sitemap:** built at deploy time, so a post joins it on the first deploy after its date. `/blog` and the
@@ -17,7 +17,7 @@ needed on the day.
 - **Previewing unpublished posts locally:** `BLOG_PREVIEW=1 npx next start` (never works on production).
 - **Linking rule:** nothing may link to a post before its date. The site check fails on 404 links.
 
-## Full schedule (76 posts, October 20, 2026 to January 3, 2027)
+## Full schedule (83 posts, October 20, 2026 to January 10, 2027)
 
 Generated from `lib/blog-schedule.ts`. Every post here is written and deployed; each stays hidden until its date. Post dates on the pages follow this schedule automatically.
 
@@ -99,6 +99,13 @@ Generated from `lib/blog-schedule.ts`. Every post here is written and deployed; 
 | 2027-01-01 | Painting Built-Ins and Bookshelves | /blog/painting-built-ins-bookshelves-houston |
 | 2027-01-02 | Haint Blue Porch Ceilings in Houston | /blog/haint-blue-porch-ceiling-houston |
 | 2027-01-03 | Painting a Bathroom Vanity | /blog/painting-bathroom-vanity-houston |
+| 2027-01-04 | Urbane Bronze SW 7048 in Houston Homes | /blog/urbane-bronze-sw-7048-houston |
+| 2027-01-05 | Exterior Paint Sheen: Flat, Satin or Semi-Gloss? | /blog/exterior-paint-sheen-houston |
+| 2027-01-06 | Painting a Concrete Porch and Steps | /blog/painting-concrete-porch-steps-houston |
+| 2027-01-07 | Paint Colors That Make a Small Room Feel Bigger | /blog/paint-colors-small-rooms-houston |
+| 2027-01-08 | Black Interior Doors and Trim: Is It Right for Your Home? | /blog/black-interior-trim-doors-houston |
+| 2027-01-09 | Warehouse and Industrial Painting in Houston | /blog/warehouse-industrial-painting-houston |
+| 2027-01-10 | Painting or Staining a Pergola or Patio Cover | /blog/painting-pergola-patio-cover-houston |
 
 ## Already live before the calendar (from the owner's 30-topic list)
 
@@ -115,19 +122,12 @@ Celery SW 6421, popcorn ceiling cost, paint before selling, primer vs two coats,
 - Two-story exteriors (2026-10-21): we use ladders, not lifts.
 - Laminate and thermofoil cabinets (2026-10-21): yes, we paint them.
 
-## Planned, not yet written (25 posts, January 4, 2027 to January 28, 2027)
+## Planned, not yet written (18 posts, January 11, 2027 to January 28, 2027)
 
 Topics checked against every existing post and page so none repeats one. Posts marked **needs owner answer** depend on whether we do that work.
 
 | Date | Post | Search phrase | |
 |---|---|---|---|
-| 2027-01-04 | Urbane Bronze SW 7048 in Houston Homes | Urbane Bronze |  |
-| 2027-01-05 | Exterior Paint Sheen: Flat, Satin or Semi-Gloss? | exterior paint sheen |  |
-| 2027-01-06 | Painting a Concrete Porch and Steps | painting concrete porch |  |
-| 2027-01-07 | Paint Colors That Make a Small Room Feel Bigger | paint colors for small rooms |  |
-| 2027-01-08 | Black Interior Trim and Doors: Is It Right for Your Home? | black interior doors |  |
-| 2027-01-09 | Warehouse and Industrial Painting in Houston | warehouse painting Houston |  |
-| 2027-01-10 | Painting or Staining a Pergola or Patio Cover | painting pergola |  |
 | 2027-01-11 | Revere Pewter vs. Edgecomb Gray in Houston Homes | Revere Pewter vs Edgecomb Gray |  |
 | 2027-01-12 | Painting a Media Room or Game Room | media room paint colors |  |
 | 2027-01-13 | Spring Exterior Painting Checklist for Houston Homes | spring exterior painting |  |
