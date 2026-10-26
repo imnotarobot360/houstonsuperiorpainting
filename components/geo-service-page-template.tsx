@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { ORG_ID, generateBreadcrumbSchema } from "@/components/structured-data"
 import { BUSINESS, PHONE_HREF, PRICES_2026, SERVICE_AREAS, SMS_HREF } from "@/lib/business"
+import { areaNotesFor } from "@/data/area-notes"
 import { LOCAL_PROOF_PROJECTS } from "@/lib/projects"
 import { Phone, MessageSquare, CheckCircle, Shield, Clock, FileText } from "lucide-react"
 
@@ -85,7 +86,7 @@ const ZONE_PROJECT_PLACES: Record<string, string[]> = {
   fulshear: ["Fulshear"],
   "cypress-bridgeland": ["Cypress"],
   // Richmond borders Sugar Land; the card is labelled Richmond, never Sugar Land.
-  "sugar-land": ["Richmond"],
+  "sugar-land": ["Sienna", "Richmond"],
   // Magnolia borders The Woodlands; the card is labelled Magnolia.
   "the-woodlands": ["Magnolia"],
   // Real Katy job first (2026-10-11); Fulshear (borders Katy) as a labelled nearby fallback.
@@ -156,7 +157,7 @@ export function GeoServicePageTemplate({
   serviceOverview,
   whyChooseUs,
   priceDetails,
-  faqs,
+  faqs: pageFaqs,
   testimonials = [],
   relatedPages,
   warrantyYears,
@@ -168,6 +169,12 @@ export function GeoServicePageTemplate({
   const pricing = PRICING[serviceSlug]
   const priceMinMax = pricing ? parseRange(pricing.range) : undefined
   const shownTestimonials = testimonials.filter((t) => t.verified)
+  // Area-specific notes and FAQs (data/area-notes.ts); local questions go first.
+  const notes = areaNotesFor(zoneSlug, serviceSlug)
+  // Warranty and payment questions repeat word for word on every area page and
+  // are already answered in the Quick Answer and "What You Can Count On".
+  const REPEATED = /^(when do i pay|what warranty|what does the warranty cover)/i
+  const faqs = [...(notes?.faqs ?? []), ...pageFaqs.filter((f) => !REPEATED.test(f.question))]
 
   const projectPlaces = ZONE_PROJECT_PLACES[zoneSlug] ?? []
   const projects = LOCAL_PROOF_PROJECTS.filter((p) =>
@@ -345,6 +352,31 @@ export function GeoServicePageTemplate({
             </div>
           </div>
         </section>
+
+        {/* Area-specific planning notes (data/area-notes.ts) */}
+        {notes && (
+          <section className="py-16 border-t">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Planning {service} in {place}</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">{notes.homes}</p>
+                {notes.points.length > 0 && (
+                  <ul className="space-y-3 mb-6">
+                    {notes.points.map((point) => (
+                      <li key={point} className="flex gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-1" aria-hidden="true" />
+                        <span className="text-muted-foreground">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Approvals:</strong> {notes.approvals}
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Why Choose Us */}
         <section className="py-16 bg-muted/30">

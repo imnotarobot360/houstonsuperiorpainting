@@ -97,6 +97,11 @@ export const RULES = [
     why: "Ratings only per Google profile, with link and check date (data/review-profiles.ts)",
     re: /value: "4\.9"|>\s*4\.9\s*<|\b4\.9[- ](?:star|rating|average|out of)|4\.9\/5|rated 4\.9/i,
   },
+  {
+    id: "lead-claim",
+    why: "Lead-safe / EPA RRP certification is not confirmed (CLAUDE.md); neutral consumer guidance only",
+    re: /\bwe (?:test for lead|use lead-safe|follow (?:lead-safe|epa|rrp))|lead-safe certification was|\b(?:we are|we're|we’re) (?:epa|rrp|lead-safe)[- ]certified/i,
+  },
   { id: "aggregate-rating", why: "No AggregateRating/Review schema for self-selected reviews", re: /aggregateRating|"@type":\s*"Review"/ },
   {
     id: "office-claim",

@@ -115,14 +115,14 @@ export const LOCATIONS: OfficeLocation[] = [
     intro:
       "In Houston we serve the inner loop: West University, Bellaire, Southside Place, River Oaks, Montrose, the Heights and Memorial.",
     body: [
-      "Inner-loop houses are a different job than the suburbs. We see 1920s–1950s bungalows and brick ranches with old oil-based trim under newer latex, wood siding that has been painted ten times, and lead-era paint that has to be handled carefully. We test before we sand on any home built before 1978.",
+      "Inner-loop houses are a different job than the suburbs. We see 1920s–1950s bungalows and brick ranches with old oil-based trim under newer latex, wood siding that has been painted ten times, and lead-era paint that has to be handled carefully. In a home built before 1978, old paint may contain lead, so ask about it before any sanding.",
       "The other big difference is shade and humidity. Big live oaks keep siding cool and damp, so mildew grows under the paint film if it isn't killed first. Every exterior out of this office gets a mildewcide wash, a full dry-out, and a bonding primer anywhere latex is going over old oil.",
       "Inside, a lot of our Houston work is plaster and old drywall repair, crown and trim, and limewash on brick — especially fireplaces and front elevations in West U and Bellaire.",
     ],
     fieldNotes: [
       {
         title: "Pre-1978 homes",
-        text: "We test for lead and use lead-safe work practices before disturbing old paint. That's EPA RRP rules, and we follow them.",
+        text: "Homes built before 1978 may contain lead paint. Federal rules require that it be disturbed only by an EPA-certified renovation firm, so ask about it before scraping or sanding.",
       },
       {
         title: "Oil under latex",

@@ -44,7 +44,7 @@ const faqs = [
   {
     question: "How much does it cost to paint one room in Houston?",
     answer:
-      `About ${PRICES_2026.singleRoom} for a 12×14 bedroom, including ceiling and trim. High ceilings and dark-to-light color changes add to that.`,
+      `About ${PRICES_2026.singleRoom} for the walls of a 12×14 bedroom; ceiling and trim are priced on top. High ceilings and dark-to-light color changes add to that.`,
   },
   {
     question: "Why does prep matter so much in Houston?",

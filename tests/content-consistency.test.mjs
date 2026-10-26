@@ -36,6 +36,8 @@ test("content audit: rules catch the claims the brief prohibits", () => {
   assert.ok(caught("office-claim", "Google Reviews by Office"))
   assert.ok(caught("customer-count", "500+ happy customers"))
   assert.ok(caught("net-domain", "houstonsuperiorpainting.net"))
+  assert.ok(caught("lead-claim", "We test for lead and use lead-safe work practices"))
+  assert.ok(!caught("lead-claim", "ask any painter for their certification"))
   assert.ok(!caught("bonded", "a bonding primer"))
   assert.ok(!caught("customer-count", "4,500+ sq ft"))
   assert.ok(!caught("state-license", "Texas does not issue a state painting-contractor license"))

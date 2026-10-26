@@ -76,7 +76,7 @@ export default function ExteriorPaintingHeightsPage() {
       ]}
       testimonials={[
         {
-          quote: "They understood our 1920s bungalow and delivered a finish that honors its history. The lead-safe certification was essential.",
+          quote: "They understood our 1920s bungalow and delivered a finish that honors its history.",
           name: "Amanda S.",
           location: "Woodland Heights"
         },
