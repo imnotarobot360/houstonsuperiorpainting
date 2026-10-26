@@ -65,13 +65,13 @@ export function InteriorProof() {
       <section className="border-t border-border bg-card/40">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
           <div className="mx-auto mb-10 flex max-w-2xl flex-col gap-3 text-center">
-            {/* Photo set is flagged photosNeedReview in lib/projects.ts (docs/project-evidence-audit.md): no "real project" label or job figures until confirmed. */}
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Interior repaint</span>
+            {/* Memorial case study in lib/projects.ts; photos and figures confirmed by Juan 2026-10-25. */}
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Real Houston project</span>
             <h2 className="font-serif text-3xl leading-tight text-foreground text-balance sm:text-4xl">
               A dated Memorial home, brought back to life
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground text-pretty">
-              A whole-home repaint with thorough wall prep and a warm, cohesive palette.
+              A 4,200 sq ft whole-home repaint: 14 rooms, thorough wall prep, and a warm, cohesive palette in 9 days.
             </p>
           </div>
 

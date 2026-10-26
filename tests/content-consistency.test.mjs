@@ -33,7 +33,7 @@ test("content audit: rules catch the claims the brief prohibits", () => {
   assert.ok(caught("payment-promise", "No money upfront"))
   assert.ok(caught("warranty-term", "transferable to a new owner"))
   assert.ok(caught("warranty-term", "5-year guarantee"))
-  assert.ok(caught("office-claim", "Visit our Katy office"))
+  assert.ok(caught("office-claim", "Google Reviews by Office"))
   assert.ok(caught("customer-count", "500+ happy customers"))
   assert.ok(caught("net-domain", "houstonsuperiorpainting.net"))
   assert.ok(!caught("bonded", "a bonding primer"))

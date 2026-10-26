@@ -26,6 +26,29 @@ const EXT = /\.(tsx?|mjs|js|json|md|txt)$/
 
 const PHONE = "(346) 594-5960"
 
+/**
+ * Office wording is allowed only for locations marked "staffed_office" in
+ * lib/business.ts (Juan confirmed all five on 2026-10-25). Read from the source
+ * text so a location switched back to unverified is caught again.
+ */
+function officeClaimRule() {
+  const src = fs.readFileSync(path.join(ROOT, "lib/business.ts"), "utf8")
+  const locs = [...src.matchAll(/locationType: "(\w+)"[\s\S]*?city: "([^"]+)"/g)].map((m) => ({ type: m[1], city: m[2] }))
+  if (locs.length !== 5) throw new Error(`office-claim: expected 5 locations in lib/business.ts, found ${locs.length}`)
+  const unverified = locs.filter((l) => l.type !== "staffed_office").map((l) => l.city)
+  const parts = [/reviews by office\b/.source]
+  if (unverified.length) {
+    const c = unverified.join("|")
+    parts.push(
+      String.raw`\b(?:our|the|visit (?:our|the)|an?) (?:${c})(?: TX)? office\b`,
+      String.raw`with an office in (?:${c})`,
+      String.raw`served from our (?:${c}) office`,
+      String.raw`\b(?:five|5) (?:local |painting )?offices\b`,
+    )
+  }
+  return new RegExp(parts.join("|"), "i")
+}
+
 /** Each rule: id, what it means, a regex tested per line, optional `unless` regex for the same line. */
 export const RULES = [
   { id: "owner-name", why: "Owner is Juan Serra; never JJ / JJ Semo", re: /\bJJ\b|JJ\s*Semo/ },
@@ -75,7 +98,11 @@ export const RULES = [
     re: /value: "4\.9"|>\s*4\.9\s*<|\b4\.9[- ](?:star|rating|average|out of)|4\.9\/5|rated 4\.9/i,
   },
   { id: "aggregate-rating", why: "No AggregateRating/Review schema for self-selected reviews", re: /aggregateRating|"@type":\s*"Review"/ },
-  { id: "office-claim", why: "Only verified staffed offices may be called offices", re: /\b(?:our|the|visit (?:our|the)) (?:Katy|Sugar Land|Magnolia|Houston|Bissonnet|Cypress)(?: TX)? office\b|\b(?:five|5) (?:local |painting )?offices\b|reviews by office\b|nearest office|painters office\b|with an office in|each office(?:&apos;|'|’)?s? (?:has|google)|served from our \w+ office|visit our \$\{city\} office/i },
+  {
+    id: "office-claim",
+    why: "Only staffed offices (locationType \"staffed_office\" in lib/business.ts) may be called offices",
+    re: officeClaimRule(),
+  },
 ]
 
 function walk(p, out) {

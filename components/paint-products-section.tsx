@@ -76,7 +76,7 @@ export function PaintProductsSection() {
             Why We Use Sherwin-Williams &amp; Benjamin Moore
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            We exclusively use the industry's best paints — not because they're expensive, but because they deliver better results that last longer. Here's what we use and why.
+            We exclusively use the industry&apos;s best paints — not because they&apos;re expensive, but because they deliver better results that last longer. Here&apos;s what we use and why.
           </p>
         </div>
 

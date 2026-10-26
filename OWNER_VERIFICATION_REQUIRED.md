@@ -36,9 +36,13 @@ Last reviewed: 2026-10-25 (owner brief "site trust / SEO consistency"; earlier r
 
 ## Needs your answer
 
-### 1. Physical office locations — REOPENED by the owner brief 2026-10-25
+### 1. Physical office locations — CONFIRMED by Juan 2026-10-25
+Juan confirmed all five (Cypress HQ, Houston, Katy, Sugar Land, Magnolia) are staffed offices customers can visit;
+all five are `locationType: "staffed_office"`, so addresses, "office" wording and LocalBusiness schema are back.
+
+Earlier note (superseded):
 Which locations are staffed offices that customers can visit? Katy's address is "3230 FM 1463 APT 3201" (an
-apartment unit). For each confirmed office set `locationType: "verified_staffed_office"` in `lib/business.ts`;
+apartment unit). For each confirmed office set `locationType: "staffed_office"` in `lib/business.ts`;
 its address, the word "office" and LocalBusiness schema return automatically. Until then every location page says
 "Serving {city} and surrounding communities" and only the Cypress HQ address is printed.
 (Earlier: Juan confirmed all five as legitimate on 2026-10-08.) Houston suite CONFIRMED #443 by Juan 2026-10-09 (matches the Google Business Profile: 2617 Bissonnet St #443, Houston, TX 77005). Remaining housekeeping only:
@@ -55,7 +59,9 @@ Page rewritten from Juan's brief; the unverified badge, "background-checked crew
 Facebook and Instagram URLs resolve — confirm they are ours. Yelp was removed (unverified). Google Maps link points
 to one profile (which office?). Provide each Google Business Profile share link for `BUSINESS.locations[].mapsUrl`.
 
-### 9. Case-study photos
+### 9. Case-study photos — CONFIRMED by Juan 2026-10-25
+Juan confirmed the six narrative case studies (photos, figures, write-ups) are real jobs; recorded in `evidence` in
+`lib/projects.ts` and `photosNeedReview` removed. Earlier note (superseded):
 Bellaire stucco, Heights wallpaper and Cypress wood-rot case studies use images that look AI-generated
 (flagged `photosNeedReview`; not used as local proof). Real job photos, or unpublish? River Oaks photo shows the
 house number — crop/blur approval.

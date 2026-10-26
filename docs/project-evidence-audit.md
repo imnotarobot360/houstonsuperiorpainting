@@ -72,3 +72,10 @@ repairs, which `/warranty` says is covered only if the signed document says so. 
 
 These make no claim beyond area, service and photos. Still worth adding: `evidence.photosConfirmed` (who/when), a completion month,
 and confirmation that no house number, plate or person is visible (the River Oaks photo was flagged earlier for a visible house number).
+
+## Resolution (2026-10-25)
+
+Juan confirmed the six narrative case studies are real jobs with real photos and figures ("They're real, keep as is").
+Recorded as `evidence` (photos, stats, narrative; by Juan Serra, 2026-10-25) on each entry in `lib/projects.ts`;
+`photosNeedReview` was removed, so they now count as local proof on city pages. The interior landing page's
+"Real Houston project" label and Memorial figures were restored.

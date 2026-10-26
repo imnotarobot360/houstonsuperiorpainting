@@ -10,6 +10,7 @@ v0 also opens PRs against this repo, so run `git pull` before starting work.
 - `pnpm dev`: local site at http://localhost:3000
 - `npx tsc --noEmit -p .`: type check (the build ignores TS errors, so run this yourself)
 - `pnpm test`: unit tests, including the content-consistency audit (`scripts/audit-content-consistency.mjs`, also `pnpm audit:content`; CI: `.github/workflows/content-consistency.yml`). Exceptions only in `scripts/content-audit-allowlist.json`, each with a reason.
+- `pnpm lint`: ESLint (`eslint.config.mjs`, Next.js core-web-vitals + TypeScript); must have 0 errors
 - `pnpm build`: must pass before pushing
 - Deploy: `git push origin main`
 
@@ -38,7 +39,7 @@ v0 also opens PRs against this repo, so run `git pull` before starting work.
 - Houston Superior Epoxy is a separate sister brand: only `BUSINESS.sisterBrand.sentence` and a link. Never its warranty, prices, phone or services on this site.
 - Prices: "Houston Superior Painting budgeting guidance" with the review date; interior per sq ft is per sq ft of FLOOR area; exterior has no per-square-foot rate (project-specific).
 - No customer/project counts ("500+"), no aggregate review counts or ratings. Reviews link to each Google profile (`components/office-reviews.tsx`, `SHOW_RATING_NUMBERS = false` until figures can be checked programmatically).
-- Locations: every location has `locationType: "owner_verification_required"`. Only `isVerifiedOffice()` locations may be called an office, print a street address (except HQ) or get LocalBusiness schema; others use `servingLine()` ("Serving Katy and surrounding communities"). No aggregateRating / review-star schema anywhere.
+- Locations: only `isVerifiedOffice()` locations may be called an office, print a street address (except HQ) or get LocalBusiness schema; others use `servingLine()` ("Serving Katy and surrounding communities"). No aggregateRating / review-star schema anywhere.
 - Don't use `/locations/*` URLs. They 301 to `/painters-{city}-tx`. Keep the existing URLs.
 - No "#1" or "best painters in Houston" in our own voice. No invented projects, reviews or stats. Real projects live in `lib/projects.ts`.
 - Internal links go to canonical URLs, never to a redirect source. Use the estimate CTA `/painting-estimate-houston`, not `/contact`.
@@ -50,7 +51,7 @@ v0 also opens PRs against this repo, so run `git pull` before starting work.
 - Pending owner decisions from the Oct 2026 local SEO audit (office eligibility, consolidation 301s, trust stats): `docs/local-seo-audit-2026-10.md`.
 
 ## Open items (Juan)
-- Location verification: confirm which of the 5 locations are staffed offices (Katy's address is "APT 3201") and set `locationType: "verified_staffed_office"` for those only. See `OWNER_VERIFICATION_REQUIRED.md`.
+- Locations: Juan confirmed all 5 as staffed offices (2026-10-25), `locationType: "staffed_office"`. If one closes, switch it to "service_area" and the site, schema and audit follow.
 - Google Business Profiles: confirm Magnolia's hours, add each listing's share link to `BUSINESS.locations[].mapsUrl`, and point each listing's website field to its `/painters-{city}-tx` page.
 - Add real Katy, Sugar Land and Magnolia projects to `lib/projects.ts`. The office pages show them automatically.
 - Testimonials on the 18 non-office city pages and on project pages are hidden until they can be matched to real Google reviews.

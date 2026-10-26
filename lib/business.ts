@@ -85,7 +85,7 @@ export const BUSINESS = {
   // ─── Locations with a Google Business Profile ──────────
   // Each of these five has its own Google Business Profile and city page.
   // LocalBusiness schema is emitted only for locationType "staffed_office"
-  // (none yet; owner brief 2026-10-25). Address strings must match the GBP
+  // (all five: Juan confirmed staffed offices 2026-10-25). Address strings must match the GBP
   // character for character.
   locations: [
     {
@@ -95,8 +95,8 @@ export const BUSINESS = {
       // GBP "Share" link, supplied by the owner 2026-10-10.
       mapsUrl: "https://maps.app.goo.gl/fdVmNamNHyNZ3gBD8" as string | null,
       label: "Houston",
-      /** Owner brief 2026-10-25: see LocationType. */
-      locationType: "owner_verification_required" as LocationType,
+      /** Juan confirmed a staffed office customers can visit, 2026-10-25. */
+      locationType: "staffed_office" as LocationType,
       street: "2617 Bissonnet St #443",
       city: "Houston",
       state: "TX",
@@ -113,8 +113,8 @@ export const BUSINESS = {
       // GBP "Share" link, supplied by the owner 2026-10-10.
       mapsUrl: "https://maps.app.goo.gl/zcUY9dT1KYdoPmiy6" as string | null,
       label: "Katy",
-      /** Owner brief 2026-10-25: see LocationType. */
-      locationType: "owner_verification_required" as LocationType,
+      /** Juan confirmed a staffed office customers can visit, 2026-10-25. */
+      locationType: "staffed_office" as LocationType,
       street: "3230 FM 1463 APT 3201",
       city: "Katy",
       state: "TX",
@@ -131,8 +131,8 @@ export const BUSINESS = {
       // GBP "Share" link, supplied by the owner 2026-10-10.
       mapsUrl: "https://maps.app.goo.gl/G2cRQy8Cth7UM6d6A" as string | null,
       label: "Cypress (headquarters)",
-      /** Owner brief 2026-10-25: see LocationType. */
-      locationType: "owner_verification_required" as LocationType,
+      /** Juan confirmed a staffed office customers can visit, 2026-10-25. */
+      locationType: "staffed_office" as LocationType,
       street: "14150 Huffmeister Rd, Suite 410",
       city: "Cypress",
       state: "TX",
@@ -151,8 +151,8 @@ export const BUSINESS = {
       // GBP "Share" link, supplied by the owner 2026-10-10.
       mapsUrl: "https://maps.app.goo.gl/kda3QDeyq89B4u9R9" as string | null,
       label: "Sugar Land",
-      /** Owner brief 2026-10-25: see LocationType. */
-      locationType: "owner_verification_required" as LocationType,
+      /** Juan confirmed a staffed office customers can visit, 2026-10-25. */
+      locationType: "staffed_office" as LocationType,
       street: "18722 University Blvd, Suite 254, 2nd Floor",
       city: "Sugar Land",
       state: "TX",
@@ -170,8 +170,8 @@ export const BUSINESS = {
       // GBP "Share" link, supplied by the owner 2026-10-10.
       mapsUrl: "https://maps.app.goo.gl/WXxysgBJ6CWMrjg18" as string | null,
       label: "Magnolia",
-      /** Owner brief 2026-10-25: see LocationType. */
-      locationType: "owner_verification_required" as LocationType,
+      /** Juan confirmed a staffed office customers can visit, 2026-10-25. */
+      locationType: "staffed_office" as LocationType,
       street: "14512 Cottontop Mtn",
       city: "Magnolia",
       state: "TX",

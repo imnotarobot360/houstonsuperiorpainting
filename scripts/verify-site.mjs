@@ -7,16 +7,17 @@
 // Exits non-zero when any check fails. Read-only: it only sends GET requests.
 const BASE = (process.argv[2] || "https://houstonsuperiorpainting.com").replace(/\/$/, "")
 const PROD = "https://houstonsuperiorpainting.com"
-// Owner brief 2026-10-25 (phase 7): every location is "owner_verification_required"
-// in lib/business.ts. Only the Cypress HQ address is printed; the others are
-// service areas (no street address, no "office", no LocalBusiness schema) until
-// verified. Keep `verified` in step with isVerifiedOffice() in lib/business.ts.
+// Owner brief 2026-10-25 (phase 7): only locations with locationType
+// "staffed_office" in lib/business.ts print a street address, are called an
+// office and get LocalBusiness schema; others are service areas. Juan confirmed
+// all five as staffed offices on 2026-10-25. Keep `verified` in step with
+// isVerifiedOffice() in lib/business.ts.
 const OFFICES = [
-  { city: "Cypress", street: "14150 Huffmeister", page: "/painters-cypress-tx", hq: true, verified: false },
-  { city: "Houston", street: "2617 Bissonnet", page: "/painters-houston-tx", verified: false },
-  { city: "Katy", street: "3230 FM 1463", page: "/painters-katy-tx", verified: false },
-  { city: "Sugar Land", street: "18722 University Blvd", page: "/painters-sugar-land-tx", verified: false },
-  { city: "Magnolia", street: "14512 Cottontop", page: "/painters-magnolia-tx", verified: false },
+  { city: "Cypress", street: "14150 Huffmeister", page: "/painters-cypress-tx", hq: true, verified: true },
+  { city: "Houston", street: "2617 Bissonnet", page: "/painters-houston-tx", verified: true },
+  { city: "Katy", street: "3230 FM 1463", page: "/painters-katy-tx", verified: true },
+  { city: "Sugar Land", street: "18722 University Blvd", page: "/painters-sugar-land-tx", verified: true },
+  { city: "Magnolia", street: "14512 Cottontop", page: "/painters-magnolia-tx", verified: true },
 ]
 const failures = []
 const fail = (msg) => failures.push(msg)
@@ -201,10 +202,8 @@ const trustAllowed = /workers.{0,2}compensation covers a|workers.{0,2}compensati
 const trustGlobal = new RegExp(trustBad.source, "gi")
 for (const [p, t] of allVisible) {
   if (p.startsWith("/blog/how-to-verify-painting-contractor-insurance-houston")) continue
-  // Terms wording kept by Juan's decision (2026-10-14); see content-audit-allowlist.json.
-  const tt = p === "/terms-and-conditions" ? t.replace(/(?:100% )?satisfaction guarantee/gi, "") : t
-  for (const m of tt.matchAll(trustGlobal)) {
-    const around = tt.slice(Math.max(0, m.index - 80), m.index + 80)
+  for (const m of t.matchAll(trustGlobal)) {
+    const around = t.slice(Math.max(0, m.index - 80), m.index + 80)
     if (!trustAllowed.test(around)) fail(`${p}: undocumented claim "${m[0]}"`)
   }
 }

@@ -39,23 +39,5 @@
     "file": "app/blog/painting-contractor-sugar-land-insurance-warranty/page.tsx",
     "contains": "which Texas does not require most private employers to carry",
     "reason": "Neutral consumer fact (Texas does not require most private employers to carry workers' compensation), sourced to TDI. No claim about our coverage."
-  },
-  {
-    "rule": "office-claim",
-    "file": "app/local-painter-vs-national-franchise-houston/page.tsx",
-    "contains": "Where the nearest office is",
-    "reason": "Consumer checklist question to ask any contractor; it does not say Houston Superior Painting has an office in a given city."
-  },
-  {
-    "rule": "warranty-term",
-    "file": "app/terms-and-conditions/page.tsx",
-    "contains": "100% satisfaction guarantee",
-    "reason": "Legal page wording Juan explicitly chose to keep on 2026-10-14 (his call). Flagged in the 2026-10-25 report: it promises fixes at no cost, which is broader than the warranty summary. Change only on Juan's instruction."
-  },
-  {
-    "rule": "warranty-term",
-    "file": "app/terms-and-conditions/page.tsx",
-    "contains": "<h2>Satisfaction Guarantee</h2>",
-    "reason": "Heading of the same Terms section Juan chose to keep on 2026-10-14 (see the entry above)."
   }
 ]

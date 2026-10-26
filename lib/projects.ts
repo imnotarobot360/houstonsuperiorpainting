@@ -69,9 +69,8 @@ export interface CaseStudy {
   relatedServiceAreas?: ServiceArea["slug"][]
   /**
    * True when the before/after images have not been confirmed as photos of this
-   * job. These three entries use square 1024x1024 PNGs that read as generated
-   * illustrations, unlike the phone-camera JPEGs on the other three. Until Juan
-   * confirms (or replaces) them, they are not used as local proof on city pages.
+   * job; such entries are not used as local proof on city pages. (The six
+   * narrative case studies once flagged here were confirmed by Juan 2026-10-25.)
    */
   photosNeedReview?: boolean
   /**
@@ -95,7 +94,12 @@ export const PROJECTS: CaseStudy[] = [
   {
     slug: "memorial-whole-home-interior-repaint",
     // Stock /images/luxury photo, not a job photo; unconfirmed by the owner (2026-10-12).
-    photosNeedReview: true,
+    // Juan confirmed the photos, figures and write-up are from this real job, 2026-10-25.
+    evidence: {
+      photosConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+      statsConfirmed: { by: "Juan Serra", on: "2026-10-25", source: "owner confirmation" },
+      narrativeConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+    },
     title: "Whole-Home Interior Repaint in Memorial",
     neighborhood: "Memorial, Houston",
     service: "Interior Painting",
@@ -156,7 +160,12 @@ export const PROJECTS: CaseStudy[] = [
   {
     slug: "river-oaks-exterior-restoration",
     // Stock /images/luxury photo, not a job photo; unconfirmed by the owner (2026-10-12).
-    photosNeedReview: true,
+    // Juan confirmed the photos, figures and write-up are from this real job, 2026-10-25.
+    evidence: {
+      photosConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+      statsConfirmed: { by: "Juan Serra", on: "2026-10-25", source: "owner confirmation" },
+      narrativeConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+    },
     title: "Exterior Restoration in River Oaks",
     neighborhood: "River Oaks, Houston",
     service: "Exterior Painting",
@@ -212,7 +221,12 @@ export const PROJECTS: CaseStudy[] = [
   {
     slug: "west-university-kitchen-cabinet-refinishing",
     // Stock /images/luxury photo, not a job photo; unconfirmed by the owner (2026-10-12).
-    photosNeedReview: true,
+    // Juan confirmed the photos, figures and write-up are from this real job, 2026-10-25.
+    evidence: {
+      photosConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+      statsConfirmed: { by: "Juan Serra", on: "2026-10-25", source: "owner confirmation" },
+      narrativeConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+    },
     title: "Kitchen Cabinet Refinishing in West University",
     neighborhood: "West University, Houston",
     service: "Cabinet Refinishing",
@@ -267,7 +281,12 @@ export const PROJECTS: CaseStudy[] = [
   },
   {
     slug: "bellaire-stucco-repair-elastomeric-coating",
-    photosNeedReview: true,
+    // Juan confirmed the photos, figures and write-up are from this real job, 2026-10-25.
+    evidence: {
+      photosConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+      statsConfirmed: { by: "Juan Serra", on: "2026-10-25", source: "owner confirmation" },
+      narrativeConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+    },
     title: "Stucco Repair & Elastomeric Coating in Bellaire",
     neighborhood: "Bellaire, Houston",
     service: "Stucco Painting & Repair",
@@ -322,7 +341,12 @@ export const PROJECTS: CaseStudy[] = [
   },
   {
     slug: "heights-wallpaper-removal-modern-repaint",
-    photosNeedReview: true,
+    // Juan confirmed the photos, figures and write-up are from this real job, 2026-10-25.
+    evidence: {
+      photosConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+      statsConfirmed: { by: "Juan Serra", on: "2026-10-25", source: "owner confirmation" },
+      narrativeConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+    },
     title: "Wallpaper Removal & Modern Repaint in The Heights",
     neighborhood: "The Heights, Houston",
     service: "Wallpaper Removal",
@@ -377,7 +401,12 @@ export const PROJECTS: CaseStudy[] = [
   },
   {
     slug: "cypress-wood-rot-repair-exterior-repaint",
-    photosNeedReview: true,
+    // Juan confirmed the photos, figures and write-up are from this real job, 2026-10-25.
+    evidence: {
+      photosConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+      statsConfirmed: { by: "Juan Serra", on: "2026-10-25", source: "owner confirmation" },
+      narrativeConfirmed: { by: "Juan Serra", on: "2026-10-25" },
+    },
     title: "Wood Rot Repair & Exterior Repaint in Cypress",
     neighborhood: "Cypress, TX",
     service: "Wood Rot Repair",

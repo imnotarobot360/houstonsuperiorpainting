@@ -103,7 +103,7 @@ const D: GuideArticleData = {
       a: "Only by stripping the paint, which is slow and rarely leaves a perfect wood surface. Treat painting stained trim as permanent.",
     },
   ],
-  limitations: <>General guidance; each house's trim, finish and wood species decide the right prep and primer.</>,
+  limitations: <>General guidance; each house&apos;s trim, finish and wood species decide the right prep and primer.</>,
   related: [
     { label: "Latex paint over oil-based paint", href: "/blog/latex-paint-over-oil-based-paint" },
     { label: "Paint sheens explained", href: "/blog/paint-finishes-matte-eggshell-satin-semi-gloss" },

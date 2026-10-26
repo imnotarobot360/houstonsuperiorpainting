@@ -95,9 +95,10 @@ export default function TermsAndConditionsPage() {
               <li>Warranties do not cover damage from accidents, abuse, settling, structural movement, or acts of nature.</li>
             </ul>
 
-            <h2>Satisfaction Guarantee</h2>
+            <h2>Project Completion and Warranty</h2>
             <p>
-              We stand behind our work with a 100% satisfaction guarantee. If you are not completely satisfied with any aspect of our work, we will address your concerns at no additional cost. Please notify us within 7 days of project completion of any issues.
+              We walk through the finished project with you. Please tell us about any concern within 7 days of project
+              completion so we can review it with you. {BUSINESS.warranty.summary}
             </p>
 
             <h2>Cancellation Policy</h2>
