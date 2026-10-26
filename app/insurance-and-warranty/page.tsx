@@ -67,11 +67,7 @@ export default function InsuranceAndWarrantyPage() {
         <PageHero h1="Insurance and warranty" eyebrow={BUSINESS.name} />
 
         <QuickAnswer>
-          Houston Superior Painting maintains insurance coverage for its painting operations, including{" "}
-          {T.liabilityCoverage} general liability and workers&apos; comp. A current certificate of insurance is available upon request
-          and is provided after a project is approved, according to the project requirements.
-          Qualifying painting projects are backed by a {T.warrantyYears}-Year Written Workmanship Warranty, with complete
-          terms in your approved estimate and project documents.
+          {BUSINESS.insurance.sentence} {BUSINESS.insurance.licenseNote} {BUSINESS.warranty.summary}
         </QuickAnswer>
 
         <Section id="request-proof-of-insurance" title="Request proof of insurance">
@@ -130,7 +126,7 @@ export default function InsuranceAndWarrantyPage() {
               </>,
               <>
                 <strong>Making a claim:</strong> call <a href={PHONE_HREF}>{BUSINESS.phone}</a> with photos of the issue;
-                we inspect it and repair covered issues at no charge.
+                we inspect it, and covered issues are handled as your signed warranty terms state.
               </>,
             ]}
           />

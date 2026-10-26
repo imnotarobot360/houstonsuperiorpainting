@@ -1,0 +1,61 @@
+[
+  {
+    "rule": "workers-comp",
+    "file": "app/blog/how-to-verify-painting-contractor-insurance-houston/page.tsx",
+    "reason": "Consumer education on how to verify ANY contractor's insurance, citing the Texas Department of Insurance. It makes no claim about Houston Superior Painting's coverage."
+  },
+  {
+    "rule": "workers-comp",
+    "file": "app/blog/painting-contractor-sugar-land-insurance-warranty/page.tsx",
+    "contains": "Texas Department of Insurance: Workers' compensation for employers",
+    "reason": "Source citation (TDI page title), not a coverage claim."
+  },
+  {
+    "rule": "superlative",
+    "file": "*",
+    "contains": "quote: \"",
+    "reason": "City/service-page testimonial data. components/geo-service-page-template.tsx renders only entries with verified: true, and none are verified, so these quotes never render. Customer voice, not company copy."
+  },
+  {
+    "rule": "superlative",
+    "file": "components/interior/interior-proof.tsx",
+    "contains": "executed flawlessly",
+    "reason": "Customer's own words in an owner-confirmed testimonial (2026-10-01), labeled as a testimonial. Not company copy."
+  },
+  {
+    "rule": "superlative",
+    "file": "data/reviews.ts",
+    "contains": "Flawless, durable",
+    "reason": "Review record with publish: false and verification: unverified; it never renders. Kept so the owner can verify or delete it."
+  },
+  {
+    "rule": "workers-comp",
+    "file": "app/houston-painting-contractor-guide/page.tsx",
+    "contains": "Workers&apos; compensation covers a",
+    "reason": "Explains what workers' compensation is in the consumer guide's insurance section. It makes no claim about Houston Superior Painting's coverage."
+  },
+  {
+    "rule": "workers-comp",
+    "file": "app/blog/painting-contractor-sugar-land-insurance-warranty/page.tsx",
+    "contains": "which Texas does not require most private employers to carry",
+    "reason": "Neutral consumer fact (Texas does not require most private employers to carry workers' compensation), sourced to TDI. No claim about our coverage."
+  },
+  {
+    "rule": "office-claim",
+    "file": "app/local-painter-vs-national-franchise-houston/page.tsx",
+    "contains": "Where the nearest office is",
+    "reason": "Consumer checklist question to ask any contractor; it does not say Houston Superior Painting has an office in a given city."
+  },
+  {
+    "rule": "warranty-term",
+    "file": "app/terms-and-conditions/page.tsx",
+    "contains": "100% satisfaction guarantee",
+    "reason": "Legal page wording Juan explicitly chose to keep on 2026-10-14 (his call). Flagged in the 2026-10-25 report: it promises fixes at no cost, which is broader than the warranty summary. Change only on Juan's instruction."
+  },
+  {
+    "rule": "warranty-term",
+    "file": "app/terms-and-conditions/page.tsx",
+    "contains": "<h2>Satisfaction Guarantee</h2>",
+    "reason": "Heading of the same Terms section Juan chose to keep on 2026-10-14 (see the entry above)."
+  }
+]

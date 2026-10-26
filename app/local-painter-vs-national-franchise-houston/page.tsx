@@ -33,13 +33,12 @@ const DATE_MODIFIED = "2026-10-14"
 const DATE_LABEL = "Oct 8, 2026"
 
 const T = BUSINESS.trust
-const INSURANCE = `${T.liabilityCoverage} general liability + workers' comp`
 const OFFICE_COUNT = BUSINESS.locations.length
 
 const COMPARE: { factor: string; ask: string }[] = [
   { factor: "Written warranty", ask: "How many years, what it covers (peeling, blistering, adhesion), what it excludes, and how a claim is made. Get it in the contract, not in a brochure." },
   { factor: "Preparation standards", ask: "Which prep steps are listed for your surfaces: cleaning, scraping, repairs, sanding, caulking, primer. Prep that is not written down is the first thing cut on a tight bid." },
-  { factor: "Insurance and bonding", ask: "A certificate of insurance showing general liability and workers' comp, confirmed with the insurer, and whether the company is bonded." },
+  { factor: "Insurance and bonding", ask: "A current certificate of insurance, confirmed with the insurer named on it." },
   { factor: "Project supervision", ask: "Who runs the job day to day, how often a supervisor or owner checks the work, and who signs off at the end." },
   { factor: "Crew accountability", ask: "Whether the crew are the company's own people or subcontractors, and who is responsible if something goes wrong." },
   { factor: "Materials and products", ask: "The exact product line, sheen and number of coats for each surface, written in the estimate." },
@@ -68,7 +67,7 @@ const FAQS = [
   },
   {
     q: "How do I verify a painter's insurance?",
-    a: "Ask for a certificate of insurance listing general liability and workers' comp, then call the insurer on the certificate to confirm the policy is active. Texas does not license house painters, so insurance is the check that matters.",
+    a: "Ask for a current certificate of insurance, then call the insurer on the certificate to confirm the policy is active. Texas does not license house painters, so insurance is the check that matters.",
   },
   {
     q: "What warranty does Houston Superior Painting offer?",
@@ -194,20 +193,21 @@ export default function LocalPainterVsNationalFranchisePage() {
                 , our internal workmanship process (not an industry certification).
               </>,
               <>
-                <strong>Insurance and bonding:</strong> bonded and insured with {INSURANCE}. {BUSINESS.insuranceProof.en} (
+                <strong>Insurance:</strong> {BUSINESS.insurance.sentence} (
                 <Link href="/insurance-and-warranty#request-proof-of-insurance">request it here</Link>).
               </>,
               <>
-                <strong>Local presence:</strong> {OFFICE_COUNT} locations across Greater Houston, headquartered in Cypress
-                since {BUSINESS.founded} (<Link href="/painting-estimate-houston">see all locations</Link>).
+                <strong>Local presence:</strong> serving Greater Houston, headquartered in Cypress since {BUSINESS.founded} (
+                <Link href="/service-areas">see service areas</Link>).
               </>,
               <>
-                <strong>Track record:</strong> {T.projectsCompleted}+ completed projects. Google reviews by office:{" "}
-                {reviewSummaryText()} (<Link href="/reviews">see each office</Link>).
+                <strong>Track record:</strong> documented projects in our{" "}
+                <Link href="/projects">project gallery</Link>, and{" "}
+                <Link href="/reviews">verified customer reviews on Google</Link> for each Google Business Profile.
               </>,
               <>
                 <strong>Products:</strong> {BUSINESS.paintPartners.join(", ")} products, named in your estimate; on cabinets
-                and trim, {BUSINESS.cabinetFinish.sentence}. Authorized Preferred Application Partner.
+                and trim, {BUSINESS.cabinetFinish.sentence}.
               </>,
               <>
                 <strong>Payment:</strong> {BUSINESS.paymentPolicy.sentence}

@@ -77,8 +77,6 @@ export const REVIEW_PROFILES: ReviewProfile[] = [
 ]
 
 /** A profile can be linked from the site only when its URL is known. */
-/** Combined total shown on the site as BUSINESS.trust.reviewCount ("170+"). Owner: the old 200+ was the combined
- * count before Google removed reviews (2026-10-10). */
-export const COMBINED_REVIEW_COUNT = REVIEW_PROFILES.reduce((n, p) => n + (p.reviewCount ?? 0), 0)
+// No combined/aggregate review count is exported or shown (owner brief 2026-10-25).
 
 export const LINKABLE_REVIEW_PROFILES = REVIEW_PROFILES.filter((p) => p.url !== null)

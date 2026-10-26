@@ -180,8 +180,7 @@ const D: GuideArticleData = {
             the planned coats, so you know what you are paying for. {BUSINESS.paymentPolicy.sentence}
           </p>
           <p>
-            Every project comes with a free written estimate, our 5-year written workmanship warranty and $2M general
-            liability coverage plus workers&apos; comp. Related services:{" "}
+            Every project comes with a free written estimate, our 5-year written workmanship warranty on qualifying painting projects, and proof of insurance upon request. Related services:{" "}
             <Link href="/interior-painting-houston-tx">interior painting</Link>,{" "}
             <Link href="/exterior-painting-houston-tx">exterior painting</Link>,{" "}
             <Link href="/cabinet-refinishing-houston-tx">cabinet painting</Link>,{" "}
@@ -240,7 +239,7 @@ const D: GuideArticleData = {
     { label: "Emerald vs Duration paint", href: "/blog/emerald-vs-duration-paint" },
     { label: "Interior project in Richmond", href: "/projects/richmond-interior-arches-repaint" },
   ],
-  ctaTitle: "Get My Free Estimate",
+  ctaTitle: "Request My Free Estimate",
 }
 
 export const metadata = guideMetadata(D)

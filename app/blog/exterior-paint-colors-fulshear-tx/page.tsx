@@ -120,7 +120,8 @@ export default function ExteriorPaintColorsFulshearTxPage() {
         Fall is the right window — October and November — before the next hard summer on a fresh film. (More on{" "}
         <Link href="/blog/best-time-to-paint-house-houston">the best time to paint in Houston</Link>.) Pricing matches
         our <Link href="/exterior-house-painting-houston-cost-guide">Hardie exterior table</Link>:{" "}
-        <strong>{PRICES_2026.exteriorPerSqFt} per sq ft</strong> of floor area.
+        prices are project-specific; most whole-house exteriors budget{" "}
+        <strong>{PRICES_2026.exteriorPerHome}</strong>.
       </p>
 
       <hr />

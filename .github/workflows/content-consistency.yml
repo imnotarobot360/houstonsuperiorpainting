@@ -1,0 +1,30 @@
+# Content-consistency guard (owner brief 2026-10-25). Blocks a pull request or
+# push that reintroduces an undocumented claim (insurance limits, bonding,
+# workers' comp, other phone numbers, .net domain, payment promises, warranty
+# terms, hard-coded ratings, office claims). Exceptions:
+# scripts/content-audit-allowlist.json, each with a reason.
+name: content-consistency
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: node scripts/audit-content-consistency.mjs --report content-audit-report.md
+      - run: pnpm test
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-audit-report
+          path: content-audit-report.md

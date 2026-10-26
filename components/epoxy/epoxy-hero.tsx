@@ -4,7 +4,7 @@ import { EPOXY, PHONE_HREF } from "@/lib/epoxy"
 
 const TRUST = [
   "Diamond-Ground Prep",
-  "$2M General Liability + Workers' Comp",
+  "Insured · Proof on Request",
 ]
 
 export function EpoxyHero() {

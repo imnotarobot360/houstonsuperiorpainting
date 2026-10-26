@@ -14,6 +14,7 @@ import {
   CORE_SERVICES,
   PHONE_HREF,
   officeAddressLine,
+  publicAddressLine,
 } from "@/lib/business"
 import { nearestOfficeFor } from "@/lib/nearest-office"
 import Image from "next/image"
@@ -243,21 +244,24 @@ export function LocationPageTemplate({
           </p>
         </section>
 
-        {/* Nearest office + core services. Visible text only: these pages have
-            no office of their own, so the address must NOT go into schema. */}
+        {/* Nearest location + core services. Visible text only: these pages have
+            no location of their own, so nothing here goes into schema. A street
+            address is printed only for the HQ or a verified office (owner brief
+            2026-10-25, phase 7). */}
         <section className="mb-12 bg-card rounded-xl p-8 border border-border">
           {nearestOffice && (
             <div className="mb-8">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 flex items-center gap-3">
                 <Building2 className="h-6 w-6 text-accent flex-shrink-0" />
-                Your Nearest Office
+                Nearby Service Area
               </h2>
               <p className="text-foreground leading-relaxed">
-                The closest listed {BUSINESS.name} office to {city} is our{" "}
+                {city} is next to our{" "}
                 <Link href={`/${nearestOffice.pageSlug}`} className="text-primary font-medium hover:underline">
-                  {nearestOffice.city} painters office
-                </Link>{" "}
-                at {officeAddressLine(nearestOffice)}. To schedule an estimate, call{" "}
+                  {nearestOffice.city} service area
+                </Link>
+                {publicAddressLine(nearestOffice) ? <> (headquarters: {officeAddressLine(nearestOffice)})</> : null}.
+                Estimates are done at your home. To schedule one, call{" "}
                 <a href={PHONE_HREF} className="text-primary font-medium hover:underline">{BUSINESS.phone}</a>.
               </p>
             </div>

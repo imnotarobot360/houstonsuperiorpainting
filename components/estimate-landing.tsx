@@ -81,7 +81,7 @@ export function EstimateLanding({ config }: { config: FunnelConfig }) {
                   {/* Never "licensed" — Texas issues no residential painting
                       licence, so insured/bonded are the honest credentials.
                       See the note in lib/business.ts. */}
-                  Insured and bonded · {BUSINESS.trust.liabilityCoverage} liability
+                  Insured · proof of insurance on request
                 </span>
                 <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                   <BadgeCheck className="size-4 text-accent" aria-hidden="true" />

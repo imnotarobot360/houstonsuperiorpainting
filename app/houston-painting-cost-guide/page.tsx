@@ -29,7 +29,7 @@ const P = PRICES_2026
 const PAGE_PATH = "/houston-painting-cost-guide"
 const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
 const TITLE = "House Painting Cost in Houston, TX | 2026 Price Guide"
-const DESCRIPTION = `2026 Houston painting prices: interiors ${P.interiorPerSqFt}/sq ft, exteriors ${P.exteriorPerHome}, cabinets ${P.cabinetsPerKitchen}. Free itemized estimates.`
+const DESCRIPTION = `2026 Houston painting prices: interiors ${P.interiorPerSqFt} per sq ft of floor area, exteriors ${P.exteriorPerHome}, cabinets ${P.cabinetsPerKitchen}. Free itemized estimates.`
 const H1 = "House painting cost in Houston, TX (2026)"
 
 export const metadata: Metadata = {
@@ -62,7 +62,7 @@ const FAQS: { q: string; text: string; a?: ReactNode }[] = [
   },
   {
     q: "Do Houston painters charge by the square foot?",
-    text: `Most price by the job, using square footage and condition. As a rule of thumb, interiors run ${P.interiorPerSqFt} and exteriors ${P.exteriorPerSqFt} per square foot of floor area. The written estimate is the number that counts.`,
+    text: `Most price by the job, using square footage and condition. As a rule of thumb, interiors run ${P.interiorPerSqFt} per square foot of floor area; exteriors are priced per project. The written estimate is the number that counts.`,
   },
   {
     q: "How much does it cost to paint one room?",
@@ -94,7 +94,7 @@ const FAQS: { q: string; text: string; a?: ReactNode }[] = [
   },
   {
     q: "Is a very low quote a red flag?",
-    text: `Often. A price well below ${P.exteriorPerSqFt} per sq ft on an exterior usually means one coat, no primer, skipped prep or no insurance. Compare what each estimate lists, not just the total.`,
+    text: `Often. An exterior price far below comparable written estimates usually means one coat, no primer, skipped prep or no insurance. Compare what each estimate lists, not just the total.`,
   },
   {
     q: "Do you offer financing?",
@@ -168,7 +168,7 @@ export default function HoustonPaintingCostGuidePage() {
             ]}
             note={
               <>
-                {P.exteriorPerSqFt} per sq ft of floor area; most homes {P.exteriorPerHome}. More detail:{" "}
+                Exterior prices are project-specific; most homes budget {P.exteriorPerHome}. More detail:{" "}
                 <Link href="/exterior-house-painting-houston-cost-guide">exterior painting cost guide</Link>.
               </>
             }

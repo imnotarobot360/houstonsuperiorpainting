@@ -38,19 +38,19 @@ export default function PaintersCincoRanchTX() {
           state="TX"
           heroHeadline="House Painters in Cinco Ranch, Katy"
           heroDescription="Interior, exterior and cabinet painting for homes across the Cinco Ranch master-planned community, with thorough prep, Sherwin-Williams and Benjamin Moore products, and a 5-year written workmanship warranty."
-          quickAnswer={`Houston Superior Painting paints homes in Cinco Ranch, Katy TX. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Cinco Ranch is HOA-governed, so check exterior color approval with your section's association before work starts; we can help prepare the color details. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          quickAnswer={`Houston Superior Painting paints homes in Cinco Ranch, Katy TX. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Cinco Ranch is HOA-governed, so check exterior color approval with your section's association before work starts; we can help prepare the color details. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
           aboutCity={`Cinco Ranch is a large master-planned community in the Katy area, governed by deed restrictions and homeowners associations. Most homes are brick-and-siding builds, and the community has grown in phases, so homes range from original sections now due for repainting to much newer construction.
 
 For exterior work, the first step is usually the HOA. Exterior color changes in Cinco Ranch generally need association approval, so we recommend submitting your colors before the job is scheduled. We can provide the product names and color codes your association asks for.
 
 Houston's humidity and summer heat are hard on exterior paint, especially on south- and west-facing siding and trim. A good exterior repaint here starts with washing, caulk and wood repair, and priming bare spots before the finish coats. Inside, common projects include updating builder-grade paint, whole-home repaints, trim and cabinets.
 
-Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Katy. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`}
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress and serves Katy and surrounding communities. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Help preparing exterior color details for your HOA submittal",
             "Thorough exterior prep: washing, caulk, wood repair and spot priming",
             "Sherwin-Williams and Benjamin Moore products",
-            "Insured: $2M general liability plus workers' comp",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty",
             "Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve"
           ]}
@@ -113,7 +113,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress, w
           faqs={[
             {
               question: "How much does house painting cost in Cinco Ranch?",
-              answer: `Interior painting in Cinco Ranch typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
+              answer: `Interior painting in Cinco Ranch typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
             },
             {
               question: "Do you work with Cinco Ranch HOA requirements?",

@@ -2,12 +2,26 @@ import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
 import { PRICES_2026 } from "@/lib/business"
 
-export const metadata: Metadata = {
+const PAGE_META = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/interior-painting-bellaire-west-university',
   },
   title: "Interior Painting Bellaire & West University TX",
   description: "Interior painting in Bellaire and West University Place, TX: careful prep, Sherwin-Williams and Benjamin Moore paints, 5-year written warranty. Free estimate.",
+}
+
+// Own Open Graph block so link previews and og:url match this page, not the
+// homepage defaults in app/layout.tsx (owner brief 2026-10-25, phase 11).
+export const metadata: Metadata = {
+  ...PAGE_META,
+  openGraph: {
+    title: PAGE_META.title,
+    description: PAGE_META.description,
+    url: PAGE_META.alternates.canonical,
+    siteName: "Houston Superior Painting",
+    type: "website",
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+  },
 }
 
 export default function InteriorPaintingBellaireWestUPage() {
@@ -27,9 +41,9 @@ export default function InteriorPaintingBellaireWestUPage() {
         "Patching and spot-priming of the settling cracks and worn trim common in older ranch homes.",
         "A free, written, itemized estimate after an on-site walkthrough.",
         "Sherwin-Williams and Benjamin Moore paints, including low-VOC options.",
-        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
+        "Insured, with a five-year written workmanship warranty on qualifying painting projects.",
       ]}
-      priceDetails={`Most interior work falls around ${PRICES_2026.interiorPerSqFt} per square foot. Larger homes, tall ceilings, detailed trim and drywall repair raise the total; the free written estimate gives you the exact number.`}
+      priceDetails={`Most interior work falls around ${PRICES_2026.interiorPerSqFt} per square foot of floor area. Larger homes, tall ceilings, detailed trim and drywall repair raise the total; the free written estimate gives you the exact number.`}
       faqs={[
         {
           question: "How much does interior painting cost in Bellaire and West University Place?",

@@ -74,6 +74,19 @@ export interface CaseStudy {
    * confirms (or replaces) them, they are not used as local proof on city pages.
    */
   photosNeedReview?: boolean
+  /**
+   * Evidence for the facts on this page (owner brief 2026-10-25, phase 10;
+   * docs/project-evidence-audit.md). Set each field only from a record: a job
+   * file, invoice, ERP entry or the owner's written confirmation.
+   */
+  evidence?: {
+    /** Who confirmed the photos are of this job, and when (YYYY-MM-DD). */
+    photosConfirmed?: { by: string; on: string }
+    /** Who confirmed the stats (size, rooms, days, doors), and from what record. */
+    statsConfirmed?: { by: string; on: string; source: string }
+    /** Who confirmed the challenge/approach/products/results write-up. */
+    narrativeConfirmed?: { by: string; on: string }
+  }
   metaTitle: string
   metaDescription: string
 }
@@ -88,7 +101,7 @@ export const PROJECTS: CaseStudy[] = [
     service: "Interior Painting",
     serviceSlug: "interior-painting-houston-tx",
     summary:
-      "A dated 4,200 sq ft Memorial home transformed with a warm, cohesive whole-home palette, flawless trim, and museum-grade wall prep.",
+      "A dated 4,200 sq ft Memorial home transformed with a warm, cohesive whole-home palette, crisp trim, and careful wall prep.",
     heroImage: "/images/luxury/project-interior.png",
     beforeImage: "/images/interior-before-1.jpg",
     afterImage: "/images/interior-after-1.jpg",
@@ -138,7 +151,7 @@ export const PROJECTS: CaseStudy[] = [
     },
     metaTitle: "Memorial Whole-Home Interior Repaint | Houston Superior Painting",
     metaDescription:
-      "See how we repainted a 4,200 sq ft Memorial home with a cohesive whole-home palette, museum-grade prep, and flawless trim. Before & after case study.",
+      "See how we repainted a 4,200 sq ft Memorial home with a cohesive whole-home palette, careful prep, and crisp trim. Before & after case study.",
   },
   {
     slug: "river-oaks-exterior-restoration",
@@ -177,7 +190,7 @@ export const PROJECTS: CaseStudy[] = [
       {
         title: "Prime & protect",
         detail:
-          "Chalking areas were sealed with a bonding primer to guarantee adhesion in Houston's heat before topcoats went on.",
+          "Chalking areas were sealed with a bonding primer to improve adhesion in Houston's heat before topcoats went on.",
       },
       {
         title: "Two-coat weather finish",
@@ -192,11 +205,6 @@ export const PROJECTS: CaseStudy[] = [
     ],
     results:
       "The home regained its presence on the street with a clean, even finish and crisp trim lines. More importantly, the failed caulk and rot were corrected, protecting the substrate through Houston's next several storm seasons.",
-    testimonial: {
-      quote:
-        "Meticulous, communicative, and respectful of our home throughout. The finish on our River Oaks exterior still looks immaculate.",
-      name: "Robert H., River Oaks",
-    },
     metaTitle: "River Oaks Exterior Paint Restoration | Houston Superior Painting",
     metaDescription:
       "A River Oaks exterior restoration with rot repair, re-caulking, and a premium weather-resistant finish for Houston humidity. Before & after case study.",
@@ -253,11 +261,6 @@ export const PROJECTS: CaseStudy[] = [
     ],
     results:
       "The kitchen now looks fully renovated. The sprayed enamel finish is smooth and hard-wearing, the dated orange tone is gone, and the homeowners kept their quality cabinet boxes — saving tens of thousands versus replacement.",
-    testimonial: {
-      quote:
-        "The cabinet refinishing transformed our kitchen into something out of a design magazine. Flawless, durable, and beautifully done.",
-      name: "Daniel & Priya M., West University",
-    },
     metaTitle: "West U Kitchen Cabinet Refinishing | Houston Superior Painting",
     metaDescription:
       "See a West University kitchen transformed with sprayed, factory-smooth cabinet refinishing — no brush marks, no grain. Before & after case study.",
@@ -353,7 +356,7 @@ export const PROJECTS: CaseStudy[] = [
       {
         title: "Skim coat & sand",
         detail:
-          "Walls were skim-coated to erase texture and seam lines, then sanded smooth and primed for a flawless base.",
+          "Walls were skim-coated to erase texture and seam lines, then sanded smooth and primed for a smooth base.",
       },
       {
         title: "Modern repaint",

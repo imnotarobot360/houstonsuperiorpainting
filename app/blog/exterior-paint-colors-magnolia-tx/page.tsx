@@ -141,7 +141,7 @@ export default function ExteriorPaintColorsMagnoliaTxPage() {
 
       <h2>Cost</h2>
       <p>
-        <strong>{PRICES_2026.exteriorPerSqFt} per sq ft</strong> on Hardie, more where wood repair is real. A one-story
+        Exterior prices are project-specific: stories, access and wood repair move them. A one-story
         ranch around 2,500 sq ft often lands <strong>{PRICES_2026.exterior2500OneStory}</strong>. A two-story around
         3,000 sq ft with a porch: <strong>{PRICES_2026.exterior3000TwoStory}</strong>. See the{" "}
         <Link href="/exterior-house-painting-houston-cost-guide">exterior painting cost guide</Link> for other sizes.

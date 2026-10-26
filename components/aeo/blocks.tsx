@@ -11,6 +11,8 @@ import {
   CORE_SERVICES,
   PRICING_DISCLAIMER,
   officeAddressLine,
+  publicAddressLine,
+  servingLine,
   officeMapsUrl,
   type Office,
 } from "@/lib/business"
@@ -228,7 +230,10 @@ export function AuthorByline({ updated = UPDATED_LABEL, extra }: { updated?: str
 /** NAP block + map for one office. Hours come from BUSINESS.hours, which match every GBP. */
 export function OfficeNap({ office }: { office: Office }) {
   const mapsUrl = officeMapsUrl(office)
-  const embed = `https://www.google.com/maps?q=${encodeURIComponent(`${BUSINESS.name}, ${officeAddressLine(office)}`)}&output=embed`
+  // Street address and an address-level map only for the HQ or a verified office
+  // (owner brief 2026-10-25, phase 7); otherwise the city and "Serving …".
+  const address = publicAddressLine(office)
+  const embed = `https://www.google.com/maps?q=${encodeURIComponent(address ? `${BUSINESS.name}, ${officeAddressLine(office)}` : `${office.city}, ${office.state}`)}&output=embed`
   return (
     <div className="not-prose grid md:grid-cols-2 gap-6">
       <div className="bg-card border border-border rounded-xl p-6 space-y-4">
@@ -238,9 +243,15 @@ export function OfficeNap({ office }: { office: Office }) {
         <p className="flex items-start gap-2 text-foreground/90">
           <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" />
           <span>
-            {office.street}
-            <br />
-            {office.city}, {office.state} {office.zip}
+            {address ? (
+              <>
+                {office.street}
+                <br />
+                {office.city}, {office.state} {office.zip}
+              </>
+            ) : (
+              servingLine(office)
+            )}
           </span>
         </p>
         <p className="flex items-center gap-2">

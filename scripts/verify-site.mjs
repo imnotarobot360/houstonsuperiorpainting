@@ -7,12 +7,16 @@
 // Exits non-zero when any check fails. Read-only: it only sends GET requests.
 const BASE = (process.argv[2] || "https://houstonsuperiorpainting.com").replace(/\/$/, "")
 const PROD = "https://houstonsuperiorpainting.com"
+// Owner brief 2026-10-25 (phase 7): every location is "owner_verification_required"
+// in lib/business.ts. Only the Cypress HQ address is printed; the others are
+// service areas (no street address, no "office", no LocalBusiness schema) until
+// verified. Keep `verified` in step with isVerifiedOffice() in lib/business.ts.
 const OFFICES = [
-  { city: "Cypress", street: "14150 Huffmeister", page: "/painters-cypress-tx" },
-  { city: "Houston", street: "2617 Bissonnet", page: "/painters-houston-tx" },
-  { city: "Katy", street: "3230 FM 1463", page: "/painters-katy-tx" },
-  { city: "Sugar Land", street: "18722 University Blvd", page: "/painters-sugar-land-tx" },
-  { city: "Magnolia", street: "14512 Cottontop", page: "/painters-magnolia-tx" },
+  { city: "Cypress", street: "14150 Huffmeister", page: "/painters-cypress-tx", hq: true, verified: false },
+  { city: "Houston", street: "2617 Bissonnet", page: "/painters-houston-tx", verified: false },
+  { city: "Katy", street: "3230 FM 1463", page: "/painters-katy-tx", verified: false },
+  { city: "Sugar Land", street: "18722 University Blvd", page: "/painters-sugar-land-tx", verified: false },
+  { city: "Magnolia", street: "14512 Cottontop", page: "/painters-magnolia-tx", verified: false },
 ]
 const failures = []
 const fail = (msg) => failures.push(msg)
@@ -92,27 +96,36 @@ for (const href of internalLinks) {
 }
 console.log(`internal links: ${internalLinks.size} distinct (${checked} outside the sitemap checked)`)
 
-// 4. Five offices
+// 4. Locations (owner brief 2026-10-25, phase 7)
 const home = visible(pages.get("/")?.text || "")
 const contact = await get("/contact")
 const contactText = visible(contact.text)
 const llms = await get("/llms.txt")
+const allVisible = [...pages].map(([p, r]) => [p, visible(r.text)])
 for (const o of OFFICES) {
-  if (!contactText.includes(o.street)) fail(`contact page missing ${o.city} address`)
-  if (!llms.text.includes(o.street)) fail(`llms.txt missing ${o.city} address`)
   if (!pages.has(o.page)) fail(`${o.page} not in sitemap`)
   const p = pages.get(o.page)
-  if (p && !visible(p.text).includes(o.street)) fail(`${o.page} missing its address`)
   const lb = p ? flat(jsonld(p.text)).filter((n) => /LocalBusiness|HousePainter/.test([].concat(n["@type"]).join(","))) : []
-  if (lb.length !== 1) fail(`${o.page} has ${lb.length} LocalBusiness nodes`)
-  else if (!JSON.stringify(lb[0].address || "").includes(o.street)) fail(`${o.page} LocalBusiness address mismatch`)
+  const printable = o.hq || o.verified
+  if (printable) {
+    if (!contactText.includes(o.street)) fail(`contact page missing ${o.city} address`)
+    if (!llms.text.includes(o.street)) fail(`llms.txt missing ${o.city} address`)
+    if (p && !visible(p.text).includes(o.street)) fail(`${o.page} missing its address`)
+  } else {
+    for (const [path, t] of allVisible) if (t.includes(o.street)) fail(`${path} prints the unverified ${o.city} street address`)
+    if (llms.text.includes(o.street)) fail(`llms.txt prints the unverified ${o.city} street address`)
+  }
+  if (o.verified && lb.length !== 1) fail(`${o.page} has ${lb.length} LocalBusiness nodes`)
+  if (!o.verified && lb.length) fail(`${o.page} has LocalBusiness schema but is not a verified office`)
   if (!home.includes(o.city)) fail(`homepage does not mention ${o.city}`)
 }
-if (!/five offices|5 offices|Five Greater Houston Offices/i.test(home + contactText)) fail("homepage/contact do not state five offices")
+for (const [path, t] of allVisible) if (/(five|5) (local )?offices/i.test(t)) fail(`${path} claims five offices`)
 const footerText = visible((pages.get("/")?.text || "").split("<footer")[1] || "")
 for (const o of OFFICES) if (!footerText.includes(o.city)) fail(`footer missing ${o.city}`)
 const org = flat(jsonld(pages.get("/")?.text || "")).find((n) => n["@type"] === "Organization")
-if (!org || (org.subOrganization || []).filter((s) => /#location$/.test(s["@id"] || "")).length !== 5) fail("Organization schema does not reference 5 locations")
+const orgLocations = (org?.subOrganization || []).filter((x) => /#location$/.test(x["@id"] || "")).length
+if (!org) fail("homepage has no Organization schema")
+else if (orgLocations !== OFFICES.filter((o) => o.verified).length) fail(`Organization schema lists ${orgLocations} locations; only verified offices may be listed`)
 const lbPages = [...pages].filter(([, r]) => flat(jsonld(r.text)).some((n) => /LocalBusiness|HousePainter/.test([].concat(n["@type"]).join(",")))).map(([p]) => p)
 console.log(`LocalBusiness pages: ${lbPages.join(" ")}`)
 
@@ -145,7 +158,7 @@ for (const [p, r] of pages) {
     if (m && !/certapro/i.test(j.slice(Math.max(0, m.index - 40), m.index))) fail(`${p}: conflicting warranty in JSON-LD`)
   }
 }
-if (!/5-year (written )?workmanship warranty/i.test(llms.text)) fail("llms.txt missing 5-year warranty")
+if (!/(5|five)-year (written )?workmanship warranty/i.test(llms.text)) fail("llms.txt missing 5-year warranty")
 console.log(`pages with 5-year warranty in metadata: ${metaWarranty}`)
 
 // 6. Conversion paths
@@ -180,7 +193,22 @@ for (const name of ["Robert H.", "Priya M."]) if (homeHtml.includes(name)) fail(
 const warrantyText = visible(pages.get("/warranty")?.text || "")
 if (/15 years on delamination|Garage Floor Epoxy:/i.test(warrantyText)) fail("/warranty still lists the epoxy 15-year warranty")
 if (!pages.has("/insurance-and-warranty")) fail("/insurance-and-warranty not in sitemap")
-if (!/not a final quote/.test(visible(pages.get("/houston-painting-cost-guide")?.text || ""))) fail("cost guide missing the pricing disclaimer")
+if (!/budgeting guidance, last reviewed/.test(visible(pages.get("/houston-painting-cost-guide")?.text || ""))) fail("cost guide missing the pricing disclaimer")
+// Insurance, bonding and counts the owner brief (2026-10-25) does not allow.
+const trustBad = /\$2\s?M\b|\$2 million|workers['’]?\s?comp|bonded (and|&) insured|insured (and|&) bonded|(?<![\d,$])500\+|houstonsuperiorpainting\.net|\btransferable\b|lifetime warranty|satisfaction guarantee|\b4\.9\b(?! ?(?:%|sq|ft|in|gal|hours?))/i
+// Consumer-education sentences allowed by scripts/content-audit-allowlist.json.
+const trustAllowed = /workers.{0,2}compensation covers a|workers.{0,2}compensation for employers|which texas does not require most private employers/i
+const trustGlobal = new RegExp(trustBad.source, "gi")
+for (const [p, t] of allVisible) {
+  if (p.startsWith("/blog/how-to-verify-painting-contractor-insurance-houston")) continue
+  // Terms wording kept by Juan's decision (2026-10-14); see content-audit-allowlist.json.
+  const tt = p === "/terms-and-conditions" ? t.replace(/(?:100% )?satisfaction guarantee/gi, "") : t
+  for (const m of tt.matchAll(trustGlobal)) {
+    const around = tt.slice(Math.max(0, m.index - 80), m.index + 80)
+    if (!trustAllowed.test(around)) fail(`${p}: undocumented claim "${m[0]}"`)
+  }
+}
+if (llms.text && trustBad.test(llms.text)) fail(`llms.txt: undocumented claim "${llms.text.match(trustBad)[0]}"`)
 for (const [p, r] of pages) if (/coi\.pdf|certificate-of-insurance\.pdf/i.test(r.text)) fail(`${p} links a public certificate of insurance`)
 // 200+ was the combined review count before Google removed reviews (owner, 2026-10-10).
 for (const [p, r] of pages) if (/200\+ (google )?reviews|200\+ houston homeowners|200\+ five-star|\(200\+ reviews\)/i.test(visible(r.text))) fail(`${p} still shows the old 200+ review count`)

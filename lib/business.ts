@@ -4,6 +4,21 @@
 // Every Footer, Header, schema, and CTA should consume from here.
 // NEVER hardcode phone, email, address, or hours anywhere else.
 
+/**
+ * What a published address is (owner brief 2026-10-25, phase 7). Only a
+ * "staffed_office" may be called an office in copy or get its own LocalBusiness
+ * schema; that needs the owner to confirm it is staffed during stated hours,
+ * signed where required, eligible for its own Google Business Profile and open
+ * to customer visits if the site says so. Until then a location is described as
+ * a service area ("Serving Katy and surrounding communities").
+ */
+export type LocationType = "staffed_office" | "service_area" | "mailing_address" | "owner_verification_required"
+
+/** True only for owner-verified staffed offices. */
+export function isVerifiedOffice(l: { locationType: LocationType }): boolean {
+  return l.locationType === "staffed_office"
+}
+
 export const BUSINESS = {
   // ─── Brand ─────────────────────────────────────────────
   name: "Houston Superior Painting",
@@ -67,10 +82,10 @@ export const BUSINESS = {
     longitude: -95.6444,
   },
 
-  // ─── All Office Locations (for multi-location schema) ──
-  // Each of these five has its own Google Business Profile. Only these five
-  // city pages emit LocalBusiness schema (see officeLocalBusinessSchema in
-  // components/structured-data.tsx). Address strings must match the GBP
+  // ─── Locations with a Google Business Profile ──────────
+  // Each of these five has its own Google Business Profile and city page.
+  // LocalBusiness schema is emitted only for locationType "staffed_office"
+  // (none yet; owner brief 2026-10-25). Address strings must match the GBP
   // character for character.
   locations: [
     {
@@ -79,7 +94,9 @@ export const BUSINESS = {
       pageSlug: "painters-houston-tx",
       // GBP "Share" link, supplied by the owner 2026-10-10.
       mapsUrl: "https://maps.app.goo.gl/fdVmNamNHyNZ3gBD8" as string | null,
-      label: "Houston Office",
+      label: "Houston",
+      /** Owner brief 2026-10-25: see LocationType. */
+      locationType: "owner_verification_required" as LocationType,
       street: "2617 Bissonnet St #443",
       city: "Houston",
       state: "TX",
@@ -95,7 +112,9 @@ export const BUSINESS = {
       pageSlug: "painters-katy-tx",
       // GBP "Share" link, supplied by the owner 2026-10-10.
       mapsUrl: "https://maps.app.goo.gl/zcUY9dT1KYdoPmiy6" as string | null,
-      label: "Katy Office",
+      label: "Katy",
+      /** Owner brief 2026-10-25: see LocationType. */
+      locationType: "owner_verification_required" as LocationType,
       street: "3230 FM 1463 APT 3201",
       city: "Katy",
       state: "TX",
@@ -111,7 +130,9 @@ export const BUSINESS = {
       pageSlug: "painters-cypress-tx",
       // GBP "Share" link, supplied by the owner 2026-10-10.
       mapsUrl: "https://maps.app.goo.gl/G2cRQy8Cth7UM6d6A" as string | null,
-      label: "Cypress Office (Headquarters)",
+      label: "Cypress (headquarters)",
+      /** Owner brief 2026-10-25: see LocationType. */
+      locationType: "owner_verification_required" as LocationType,
       street: "14150 Huffmeister Rd, Suite 410",
       city: "Cypress",
       state: "TX",
@@ -129,7 +150,9 @@ export const BUSINESS = {
       pageSlug: "painters-sugar-land-tx",
       // GBP "Share" link, supplied by the owner 2026-10-10.
       mapsUrl: "https://maps.app.goo.gl/kda3QDeyq89B4u9R9" as string | null,
-      label: "Sugar Land Office",
+      label: "Sugar Land",
+      /** Owner brief 2026-10-25: see LocationType. */
+      locationType: "owner_verification_required" as LocationType,
       street: "18722 University Blvd, Suite 254, 2nd Floor",
       city: "Sugar Land",
       state: "TX",
@@ -146,7 +169,9 @@ export const BUSINESS = {
       pageSlug: "painters-magnolia-tx",
       // GBP "Share" link, supplied by the owner 2026-10-10.
       mapsUrl: "https://maps.app.goo.gl/WXxysgBJ6CWMrjg18" as string | null,
-      label: "Magnolia Office",
+      label: "Magnolia",
+      /** Owner brief 2026-10-25: see LocationType. */
+      locationType: "owner_verification_required" as LocationType,
       street: "14512 Cottontop Mtn",
       city: "Magnolia",
       state: "TX",
@@ -202,33 +227,66 @@ export const BUSINESS = {
 
   // ─── Trust signals ─────────────────────────────────────
   trust: {
-    // Google ratings are per office, never combined: see data/review-profiles.ts
+    // Google ratings are per profile, never combined: see data/review-profiles.ts
     // and components/office-reviews.tsx (owner, 2026-10-10).
-    projectsCompleted: 500,
     warrantyYears: 5,
-    yearsInBusiness: 6,   // Founded 2019; calc programatically if preferred
-    crewExperienceYears: 15,   // "Combined crew experience"
-    // Texas does not issue a state occupational license for residential
-    // painting contractors, so the site must never claim to be "licensed."
-    // Insurance and bonding are the verifiable credentials — advertise those.
+    yearsInBusiness: new Date().getFullYear() - 2019,
+    // Texas does not issue a state occupational license for painting
+    // contractors, so the site must never claim to be "licensed."
+    // Owner brief 2026-10-25: policy limits, workers' compensation, bonding and
+    // customer/project counts are NOT published until a current document
+    // (insurance policy, bond, job records) is stored or referenced in the repo.
+    // The old fields (liabilityCoverage "$2M", bonded, projectsCompleted 500,
+    // crewExperienceYears 15) were removed so nothing can render them.
     insured: true,
-    bonded: true,
-    liabilityCoverage: "$2M",
     // Checked 2026-10-07 on bbb.org: the profile (file opened 2026-10-05) says
     // "NOT BBB Accredited" and "Not Rated". Do not claim accreditation.
     bbbAccredited: false,
   },
 
-  // Payment policy confirmed by Juan (2026-09). Never state a deposit
-  // percentage — none has been set. Never claim "no deposit" or "pay only
-  // after completion": a down payment is collected once the estimate is approved.
-  // Owner, 2026-10-11: never say "no upfront payment", "no deposit" or "nothing due until
-  // approved". Do not publish a specific payment schedule unless approved for that page.
+  // Payment wording (owner brief 2026-10-25). The company uses a deposit and a
+  // payment schedule, so never say "no upfront payment", "no money upfront",
+  // "nothing due until complete/approved", "pay when satisfied". Never publish
+  // percentages or a fixed schedule unless an owner-approved file authorizes it.
   paymentPolicy: {
     short: "Clear Written Payment Terms",
-    badgeSubtitle: "Written scope, price, deposit and payment schedule provided before project approval.",
+    /** For small components. */
+    shortLine: "Free written estimates with clear scope and payment terms.",
+    badgeSubtitle: "Your approved estimate states the scope, deposit requirements and payment schedule before work begins.",
     sentence:
-      "Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project.",
+      "Free written estimates are available. Before work begins, your approved estimate states the scope, deposit requirements and payment schedule.",
+  },
+
+  // Insurance wording (owner brief 2026-10-25). Do not publish limits, workers'
+  // compensation, bonding or specialty coverage without current documents.
+  insurance: {
+    sentence:
+      "Houston Superior Painting maintains business insurance. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance before work begins.",
+    short: "Current proof of insurance available upon request.",
+    licenseNote:
+      "Texas does not issue a state painting-contractor license. Customers may request current proof of business insurance.",
+  },
+
+  // Warranty wording (owner brief 2026-10-25). Do not describe the warranty as
+  // transferable, lifetime, covering materials, manufacturer defects, fading,
+  // moisture or substrate failure, or wood repairs unless the signed warranty
+  // document confirms it.
+  warranty: {
+    years: 5,
+    summary:
+      "Qualifying painting projects include a five-year written workmanship warranty, subject to the coverage, exclusions and conditions in the signed estimate or warranty document.",
+    short: "Five-year written workmanship warranty on qualifying painting projects.",
+    controlsNote:
+      "The signed warranty provided with the customer's project documents controls if there is any difference between this website summary and the project-specific terms.",
+  },
+
+  // Houston Superior Epoxy is a separate sister brand (owner brief 2026-10-25).
+  // Its services, warranty, prices and phone never appear on this site.
+  sisterBrand: {
+    name: "Houston Superior Epoxy",
+    url: "https://houstonsuperiorepoxy.com",
+    sentence:
+      "Garage-floor coating services and warranty terms are provided separately by our sister company, Houston Superior Epoxy.",
   },
 
   // ─── Brands / partners ─────────────────────────────────
@@ -260,14 +318,14 @@ export const BUSINESS = {
     community: [] as string[],
   },
 
-  // Warranty wording approved in the brief (2026-10-14).
+  // Warranty sentence (owner brief 2026-10-25); same text as warranty.summary.
   warrantyTermsSentence:
-    "Houston Superior Painting provides a 5-year written workmanship warranty, subject to the written terms, exclusions and project scope contained in the customer's estimate.",
+    "Qualifying painting projects include a five-year written workmanship warranty, subject to the coverage, exclusions and conditions in the signed estimate or warranty document.",
 
-  // Owner-approved insurance wording (brief 2026-10-14), English and Spanish.
+  // Insurance wording (owner brief 2026-10-25), English and Spanish.
   insuranceProof: {
-    en: "A current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.",
-    es: "Hay un certificado de seguro vigente disponible cuando el cliente lo solicite, y se entrega después de aprobar el proyecto, según los requisitos del proyecto.",
+    en: "Current proof of insurance is available upon request. When required, approved customers may receive a certificate of insurance before work begins.",
+    es: "Hay comprobante vigente de seguro disponible cuando lo solicite. Cuando el proyecto lo requiera, los clientes aprobados pueden recibir un certificado de seguro antes de comenzar el trabajo.",
   },
 
   // Specialty finishes Juan confirmed we offer (2026-10-07), beyond the
@@ -422,83 +480,20 @@ export const CORE_SERVICES = [
   { name: "Soft Washing", slug: "soft-washing-houston-tx" },
 ] as const
 
-/** One set of 2026 Houston price ranges. Every page reads from here so no two pages disagree. Review quarterly. */
-/** Shown under every price table (owner brief, 2026-10-10). */
-export const PRICING_DISCLAIMER =
-  "Pricing is provided for general planning only and is not a final quote. Final pricing depends on paintable surface area, preparation, repairs, ceiling height, trim, doors, number of colors, paint products, access and project conditions. Houston Superior Painting provides a written estimate for the final scope and price."
+// Pricing lives in lib/pricing.ts (the one pricing source); re-exported here so
+// existing imports keep working.
+export { PRICES_2026, PRICING_DISCLAIMER, PRICING_META, PRICE_UNITS, RATES, interiorBudgetFor } from "./pricing"
 
-export const PRICES_2026 = {
-  interiorPerSqFt: "$2.50–$4.50",
-  exteriorPerSqFt: "$1.50–$4",
-  singleRoom: "$300–$800",
-  fullInterior2500: "$6,250–$11,250",
-  exterior2500TwoStory: "$5,500–$9,000",
-  cabinetsPerKitchen: "$3,000–$6,500",
-  cabinetsAverage: "$3,500–$5,500",
-  trimWholeHome: "$1,200–$3,000",
-  exteriorPerHome: "$3,500–$12,000",
-  // 2,000 sq ft home (cost guide's exterior table row; interior sits between its 1,500 and 2,500 rows)
-  exterior2000OneStory: "$3,500–$5,500",
-  exterior2000TwoStory: "$4,500–$7,500",
-  exterior2000: "$3,500–$7,500",
-  fullInterior2000: "$5,000–$9,000",
-  wholeHome2000: "$8,500–$16,500",
-  // Remaining cost guide table rows. The instant-estimate calculator (lib/estimate-pricing.ts) is built from these.
-  fullInterior1500: "$3,750–$6,750",
-  fullInterior4000: "$10,000–$18,000",
-  exterior1500OneStory: "$2,500–$4,500",
-  exterior1500TwoStory: "$3,500–$6,000",
-  exterior2500OneStory: "$4,000–$7,000",
-  exterior3000OneStory: "$5,000–$8,000",
-  exterior3000TwoStory: "$6,500–$10,500",
-  exterior4000OneStory: "$6,500–$10,000",
-  exterior4000TwoStory: "$8,500–$14,000",
-  cabinetsGalley: "$2,200–$3,500",
-  cabinetsLarge: "$6,000–$9,000+",
-  cabinetsPerDoor: "$100–$175",
-  accentWall: "$150–$400",
-  ceilingsWholeHome: "$1,500–$3,500",
-  // ─── Added 2026-10-07 from Juan's blog drafts (new categories only; where a
-  // draft overlapped an existing row above, the existing row was kept). ───
-  // Exterior add-on: failed butt joints on most elevations.
-  caulkHeavyAdd: "$400–$1,200",
-  // Brick. Limewash is priced per sq ft of brick face, not living area.
-  limewashPerSqFt: "$4–$8",
-  limewashHome2500: "$6,000–$10,000",
-  paintedBrickPerSqFt: "$2–$3.50",
-  paintedBrickRanch: "$4,500–$9,000",
-  // Older Heights-style bungalow exterior: prep (scrape, glaze, sill repair) drives it.
-  bungalowExterior: "$4,500–$9,000",
-  // Popcorn ceilings.
-  popcornRemovalPerSqFt: "$1.50–$3.50",
-  popcornPaintPerSqFt: "$1–$2",
-  // Owner 2026-10-14: a room including removal, ordinary patching, prep, primer
-  // and the new painted finish. Above the per-sq-ft math because it includes
-  // minimums, repairs and setup for a single room.
-  popcornSingleRoom: "$650–$1,400",
-  popcornHome1500: "$3,500–$7,500",
-  // Townhomes and patio homes.
-  frontDoorOnly: "$250–$450",
-  townhomeDoorAndTrim: "$400–$1,200",
-  townhomeExterior2Story: "$3,500–$7,500",
-  townhomeExterior3StoryRear: "$6,500–$11,000",
-  townhomeInterior: "$2,800–$5,500",
-  // Commercial repaints, per sq ft of wall.
-  commercialPerSqFt: "$1.50–$4",
-  commercialOffice: "$1.50–$3",
-  commercialRetail: "$2–$4",
-  commercialWarehouse: "$0.75–$2",
-  commercialDoorEach: "$75–$150",
-  commercialAfterHoursPremium: "15–30%",
-  // ─── Confirmed by Juan 2026-10-11 (were on service pages, unconfirmed until then). ───
-  pressureWashing: "$150–$1,200",
-  pressureWashingHouse: "$300–$700",
-  softWashOneStory: "$350–$650",
-  softWashTwoStory: "$550–$1,000",
-  wallRemoval: "$4,000–$30,000+",
-  drywallRepair: "$200–$2,500",
-  wallpaperRemovalPerSqFt: "$3–$8",
-  stuccoPainting: "$2,500–$8,000",
-  venetianPlasterPerSqFt: "$8–$20",
-  woodRotRepair: "$300–$2,500",
-} as const
+/**
+ * Street address to print for a location, or null. Owner brief 2026-10-25
+ * (phase 7): only an owner-verified staffed office, or the headquarters business
+ * address, is printed; every other location is described as a service area.
+ */
+export function publicAddressLine(o: Office): string | null {
+  return isVerifiedOffice(o) || ("isHeadquarters" in o && o.isHeadquarters) ? officeAddressLine(o) : null
+}
+
+/** "Serving Katy and surrounding communities" — the wording for unverified locations. */
+export function servingLine(o: Office): string {
+  return `Serving ${o.city} and surrounding communities`
+}

@@ -11,7 +11,7 @@ import { PRICES_2026 } from "@/lib/business"
 
 const TITLE = "House Painters in Richmond TX | Houston Superior Painting"
 const DESCRIPTION =
-  "Interior, exterior & cabinet painting in Richmond, TX. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960."
+  "Interior, exterior & cabinet painting in Richmond, TX. insured, 5-year workmanship warranty. Free estimates: (346) 594-5960."
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -55,7 +55,7 @@ export default function PaintersRichmondTX() {
           state="TX"
           heroHeadline="House Painters in Richmond, TX"
           heroDescription="Interior, exterior, and cabinet painting for Richmond homes, from historic downtown to newer communities like Harvest Green and Long Meadow Farms. Insured, with a 5-year workmanship warranty."
-          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Richmond, TX, including Pecan Grove, Long Meadow Farms, Harvest Green, and historic downtown. We are headquartered in Cypress, and our crews work across Greater Houston and Fort Bend County. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We carry $2M general liability + workers' comp and give a 5-year workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
+          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Richmond, TX, including Pecan Grove, Long Meadow Farms, Harvest Green, and historic downtown. We are headquartered in Cypress, and our crews work across Greater Houston and Fort Bend County. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We are insured, with proof available upon request, and qualifying painting projects carry a 5-year written workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
           aboutCity={`Richmond is the Fort Bend County seat, and its housing ranges from older homes near the historic downtown to newer master-planned communities such as Harvest Green, Long Meadow Farms, and Veranda. The two need different work: older homes usually have more wood siding and trim to check for rot before paint, while newer homes are often ready to replace flat builder-grade interior paint with a washable finish.
 
 Richmond sits along the Brazos River and has the same Gulf Coast climate as the rest of Greater Houston: heat, humidity, and heavy rain. Exterior paint holds up when it goes on clean, dry, primed surfaces, so every exterior estimate lists the washing, scraping, caulking, and priming we will do.
@@ -63,7 +63,7 @@ Richmond sits along the Brazos River and has the same Gulf Coast climate as the 
 Many Richmond communities have HOAs that review exterior colors. We can pull your community's approved color list and help with the approval paperwork before work starts. Homes built before 1978 may contain lead paint, which federal rules require be disturbed only by an EPA-certified renovation firm, so ask any painter about that before work on an older home begins.`}
           whyChooseUs={[
             "Free on-site estimate with the scope, price, deposit and payment schedule in writing before you approve",
-            "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty",
             "Sherwin-Williams and Benjamin Moore paints",
             "Help with HOA color lists and approval paperwork",
@@ -127,7 +127,7 @@ Many Richmond communities have HOAs that review exterior colors. We can pull you
           faqs={[
             {
               question: "How much does it cost to paint a house in Richmond?",
-              answer: `In 2026 interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exteriors run ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
+              answer: `In 2026 interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exteriors run ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
             },
             {
               question: "Do you serve all of Richmond?",
@@ -147,7 +147,7 @@ Many Richmond communities have HOAs that review exterior colors. We can pull you
             },
             {
               question: "Are you insured?",
-              answer: "Yes. We carry $2M general liability + workers' comp and can send a certificate of insurance to you or your HOA. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license."
+              answer: "Yes. We maintain business insurance, and current proof of insurance is available upon request. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license."
             }
           ]}
         />

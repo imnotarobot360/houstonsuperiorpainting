@@ -35,7 +35,7 @@ export default function BrickPaintingKatyPage() {
         "Founded in 2019 by owner Juan Serra and headquartered in Cypress, TX.",
         "Cleaning and efflorescence treatment before any primer goes on.",
         "Breathable masonry primer and paint, so trapped moisture doesn't blister the finish.",
-        `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
+        `Insured: current proof of insurance available upon request.`,
         "5-year written workmanship warranty.",
         "Free estimate. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."
       ]}

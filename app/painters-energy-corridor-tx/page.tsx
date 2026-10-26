@@ -38,7 +38,7 @@ export default function PaintersEnergyCorridorTX() {
           state="TX"
           heroHeadline="House Painters for the Energy Corridor"
           heroDescription="Interior, exterior and cabinet painting for homes, townhomes and condos in Houston's Energy Corridor, from Briar Forest and Nottingham Forest to the neighborhoods near Addicks."
-          quickAnswer={`Houston Superior Painting paints homes in the Energy Corridor area of west Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Homes that have had water damage need the drywall repaired and sealed before painting. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          quickAnswer={`Houston Superior Painting paints homes in the Energy Corridor area of west Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Homes that have had water damage need the drywall repaired and sealed before painting. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
           aboutCity={`The Energy Corridor runs along I-10 in west Houston, near the Addicks and Barker reservoirs. Alongside its office towers are established single-family neighborhoods such as Briar Forest, Nottingham Forest and Thornwood, plus newer townhomes and condos.
 
 Many single-family homes here date from the 1970s through the 1990s, so exterior repaints usually involve replacing failed caulk, repairing rotted trim and siding, and priming bare wood. Inside, common jobs are updating dated colors, repainting trim and refinishing kitchen cabinets.
@@ -50,7 +50,7 @@ For townhomes and condos, exterior work is often controlled by the HOA or proper
             "Drywall repair and stain-blocking primer before painting water-damaged walls",
             "Exterior prep for older homes: caulk, wood repair and priming",
             "Sherwin-Williams and Benjamin Moore products",
-            "Insured: $2M general liability plus workers' comp",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty",
             "Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve"
           ]}
@@ -113,7 +113,7 @@ For townhomes and condos, exterior work is often controlled by the HOA or proper
           faqs={[
             {
               question: "How much does house painting cost in the Energy Corridor?",
-              answer: `Interior painting in the Energy Corridor typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
+              answer: `Interior painting in the Energy Corridor typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
             },
             {
               question: "Do you paint condos and townhomes in the Energy Corridor?",

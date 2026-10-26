@@ -7,7 +7,7 @@ import { PRICES_2026 } from "@/lib/business"
 
 const TITLE = "The Woodlands TX House Painters | Houston Superior Painting"
 const DESCRIPTION =
-  "Interior, exterior & cabinet painting in The Woodlands, TX. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960."
+  "Interior, exterior & cabinet painting in The Woodlands, TX. insured, 5-year workmanship warranty. Free estimates: (346) 594-5960."
 const OG_IMAGE = "https://houstonsuperiorpainting.com/images/og/og-painters-woodlands.jpg"
 
 export const metadata: Metadata = {
@@ -57,7 +57,7 @@ export default function PaintersTheWoodlandsTX() {
           state="TX"
           heroHeadline="House Painters in The Woodlands, TX"
           heroDescription="Interior, exterior, and cabinet painting for homes in every village of The Woodlands, with prep planned for shade, moisture, and design review. Insured, with a 5-year workmanship warranty."
-          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in The Woodlands, TX, including Panther Creek, Alden Bridge, Sterling Ridge, Cochran's Crossing, and Creekside Park. We are headquartered in Cypress, and our crews work across North Houston and Greater Houston. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We carry $2M general liability + workers' comp and give a 5-year workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
+          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in The Woodlands, TX, including Panther Creek, Alden Bridge, Sterling Ridge, Cochran's Crossing, and Creekside Park. We are headquartered in Cypress, and our crews work across North Houston and Greater Houston. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We are insured, with proof available upon request, and qualifying painting projects carry a 5-year written workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
           aboutCity={`The Woodlands is a master-planned community built inside a pine forest, and the tree canopy shapes how a house should be painted. Shaded walls stay damp after rain and grow mildew, pine pollen and sap leave a film on siding and trim, and paint does not bond to either. On an exterior we wash with a mildewcide, let the surfaces dry fully, repair soft wood, and prime bare spots before the finish coats.
 
 Exterior color changes in The Woodlands generally need approval from the community's residential design review process before work starts, and Creekside Park has its own covenants. We can help you choose colors and prepare the paperwork for approval, so plan for that time when you schedule an exterior.
@@ -65,7 +65,7 @@ Exterior color changes in The Woodlands generally need approval from the communi
 Inside, many Woodlands homes have tall ceilings, two-story entries, and detailed trim. Those add ladder and scaffold time, which your written estimate lists room by room.`}
           whyChooseUs={[
             "Free on-site estimate with the scope, price, deposit and payment schedule in writing before you approve",
-            "Insured: $2M general liability + workers' comp, with certificates available on request",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty",
             "Sherwin-Williams and Benjamin Moore paints",
             "Mildew washing and drying time built into exterior prep for shaded lots",
@@ -138,7 +138,7 @@ Inside, many Woodlands homes have tall ceilings, two-story entries, and detailed
             },
             {
               question: "How much does it cost to paint a house in The Woodlands?",
-              answer: `In 2026 interior painting typically runs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exteriors run ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Tall ceilings and detailed trim add time, and your free written estimate gives the exact price.`
+              answer: `In 2026 interior painting typically runs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exteriors run ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Tall ceilings and detailed trim add time, and your free written estimate gives the exact price.`
             },
             {
               question: "How far in advance should I schedule?",
@@ -146,7 +146,7 @@ Inside, many Woodlands homes have tall ceilings, two-story entries, and detailed
             },
             {
               question: "Are you insured?",
-              answer: "Yes. We carry $2M general liability + workers' comp and can send a certificate of insurance to you or your association. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license."
+              answer: "Yes. We maintain business insurance, and current proof of insurance is available upon request. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license."
             }
           ]}
         />

@@ -184,8 +184,8 @@ export function GeoServicePageTemplate({
   const quickAnswer =
     `${BUSINESS.name} provides ${service.toLowerCase()} in ${place}, TX, from our Greater Houston crews. ` +
     (pricing ? `Published pricing: ${pricing.range} (${pricing.basis.split(".")[0].toLowerCase()}). ` : "") +
-    `Estimates are free. ${"Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."} ` +
-    `Work is insured (${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp) and backed by a ${warrantyYears}-year workmanship warranty. ` +
+    `${BUSINESS.paymentPolicy.sentence} ` +
+    `${BUSINESS.insurance.short} ${BUSINESS.warranty.summary} ` +
     `Request an estimate online or call ${BUSINESS.phone}.`
 
   const faqSchema = {
@@ -239,7 +239,7 @@ export function GeoServicePageTemplate({
 
   // Each line is a fact stored in lib/business.ts.
   const trustSignals = [
-    `Insured: ${BUSINESS.trust.liabilityCoverage} general liability + workers' comp`,
+    `Insured: current proof of insurance available upon request`,
     `${warrantyYears}-year written ${warrantyType.toLowerCase()} warranty`,
     `${BUSINESS.paymentPolicy.short}: ${BUSINESS.paymentPolicy.badgeSubtitle.toLowerCase()}`,
     `${BUSINESS.paintPartners.join(" & ")} products`,
@@ -299,7 +299,7 @@ export function GeoServicePageTemplate({
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold" asChild>
-                  <Link href={ESTIMATE_HREF}>Get My Free Estimate</Link>
+                  <Link href={ESTIMATE_HREF}>Request My Free Estimate</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="border-primary-foreground !bg-transparent !text-primary-foreground hover:!bg-primary-foreground hover:!text-primary" asChild>
                   <a href={PHONE_HREF} className="flex items-center gap-2">
@@ -451,7 +451,7 @@ export function GeoServicePageTemplate({
                   <p className="text-muted-foreground leading-relaxed mb-6">{priceDetails}</p>
                   <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
                     <Button asChild>
-                      <Link href={ESTIMATE_HREF}>Get Your Free Estimate</Link>
+                      <Link href={ESTIMATE_HREF}>Request My Free Estimate</Link>
                     </Button>
                     <Link
                       href={pricing?.guide.href ?? "/houston-painting-cost-guide"}
@@ -510,7 +510,7 @@ export function GeoServicePageTemplate({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="outline" className="bg-background text-foreground hover:bg-background/90" asChild>
-                <Link href={ESTIMATE_HREF}>Get My Free Estimate</Link>
+                <Link href={ESTIMATE_HREF}>Request My Free Estimate</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-secondary-foreground !bg-transparent !text-secondary-foreground hover:!bg-secondary-foreground hover:!text-secondary" asChild>
                 <a href={PHONE_HREF} className="flex items-center gap-2">

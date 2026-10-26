@@ -124,7 +124,7 @@ export default function ExteriorPaintColorsPearlandTxPage() {
 
       <h2>Cost</h2>
       <p>
-        <strong>{PRICES_2026.exteriorPerSqFt} per sq ft</strong> on Hardie. A one-story around 2,000 sq ft runs about{" "}
+        Exterior prices are project-specific. As a budgeting example, a one-story around 2,000 sq ft runs about{" "}
         <strong>{PRICES_2026.exterior2000OneStory}</strong>. Two-story <strong>{PRICES_2026.exterior2500TwoStory}</strong>.
         HOA delay is the thing that moves the start date, not the price. See the full{" "}
         <Link href="/exterior-house-painting-houston-cost-guide">exterior painting cost guide</Link> for other sizes.

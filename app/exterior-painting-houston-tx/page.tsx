@@ -8,7 +8,7 @@ const SLUG = "exterior-painting-houston-tx"
 const URL = serviceUrl(SLUG)
 const TITLE = "Exterior Painting Houston TX | 2026 Prices & Process"
 const DESCRIPTION =
-  `Exterior house painting in Houston costs ${PRICES_2026.exteriorPerSqFt}/sq ft in 2026; a 2,500 sq ft two-story runs ${PRICES_2026.exterior2500TwoStory}. 5-year warranty. Call (346) 594-5960.`
+  `Exterior house painting in Houston, priced per project; a 2,500 sq ft two-story budgets ${PRICES_2026.exterior2500TwoStory}. 5-year warranty. Call (346) 594-5960.`
 const OG_IMAGE = "https://houstonsuperiorpainting.com/images/og/og-exterior-painting.jpg"
 
 export const metadata: Metadata = {
@@ -43,7 +43,7 @@ const serviceSchema = generateServiceSchema({
 const faqs = [
   {
     q: "How much does exterior painting cost in Houston in 2026?",
-    a: `Exterior painting in Houston runs ${PRICES_2026.exteriorPerSqFt} per square foot of floor area in 2026. A 2,500 sq ft two-story home costs ${PRICES_2026.exterior2500TwoStory}. Wood rot repair and stucco crack repair are priced separately.`,
+    a: `Exterior painting in Houston is priced per project, because elevations, stories, access, siding and repairs change the scope. As a budgeting example, a 2,500 sq ft two-story home runs ${PRICES_2026.exterior2500TwoStory}. Wood rot repair and stucco crack repair are priced separately.`,
   },
   {
     q: "How long does exterior painting take for a 2,500 sq ft home?",
@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: "Are you insured in Texas?",
-    a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and a current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.",
+    a: "Texas does not license painters. We maintain business insurance. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance before work begins.",
   },
   {
     q: "What does the 5-year warranty cover?",
@@ -103,7 +103,7 @@ export default function ExteriorPaintingHoustonTX() {
       h1="Exterior Painting in Houston, TX"
       quickAnswer={
         <>
-          Exterior house painting in Houston costs {PRICES_2026.exteriorPerSqFt} per square foot in 2026; a 2,500 sq ft
+          Exterior house painting in Houston is priced per project; as a budgeting example, a 2,500 sq ft
           two-story home runs {PRICES_2026.exterior2500TwoStory}. {BUSINESS.name} pressure washes, scrapes, caulks,
           primes, and applies two coats of Sherwin-Williams Duration or Emerald, with a{" "}
           {BUSINESS.trust.warrantyYears}-year workmanship warranty. Free estimates: {BUSINESS.phone}.

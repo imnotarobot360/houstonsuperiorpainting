@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { OfficeCityPage, officeCityMetadata, COST_GUIDE_PATH, type OfficeCityPageData } from "@/components/aeo/office-city-page"
-import { BUSINESS, PHONE_HREF, PRICES_2026, officeAddressLine, officeForPage } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business"
 
 export const metadata = officeCityMetadata({
   city: "Sugar Land",
@@ -12,7 +12,6 @@ export const metadata = officeCityMetadata({
 })
 
 const T = BUSINESS.trust
-const OFFICE = officeAddressLine(officeForPage("painters-sugar-land-tx")!)
 
 // TODO(juan): add real Sugar Land jobs with photos to lib/projects.ts (neighborhood like "First Colony, Sugar Land");
 // the "Recent Sugar Land projects" section renders automatically when they exist.
@@ -21,11 +20,10 @@ const DATA: OfficeCityPageData = {
   slug: "painters-sugar-land-tx",
   quickAnswer: (
     <>
-      For Sugar Land homeowners, our office is at {OFFICE}. We repaint interiors and exteriors and refinish cabinets in
+      Houston Superior Painting serves Sugar Land and surrounding communities. We repaint interiors and exteriors and refinish cabinets in
       First Colony, Riverstone, Telfair and New Territory, from older homes that need trim repair to newer builds on their
-      first repaint. Houston Superior Painting has worked in Fort Bend County since {BUSINESS.founded}, carries{" "}
-      {T.liabilityCoverage} in liability coverage, and backs the work with a {T.warrantyYears}-year warranty. The estimate
-      is free and lists the price, deposit and payment schedule before you approve it. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
+      first repaint. Houston Superior Painting has worked in Fort Bend County since {BUSINESS.founded}. {BUSINESS.insurance.short}{" "}
+      {BUSINESS.warranty.summary} {BUSINESS.paymentPolicy.sentence} Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
     </>
   ),
   neighborhoods: [
@@ -64,8 +62,8 @@ const DATA: OfficeCityPageData = {
   ),
   faqs: [
     {
-      q: "Where is your Sugar Land office?",
-      a: `It is at ${OFFICE}. Call ${BUSINESS.phone} to book a free estimate at your home.`,
+      q: "Do you serve Sugar Land?",
+      a: `Yes. Houston Superior Painting serves Sugar Land and surrounding communities from its Cypress headquarters. Estimates are done at your home. Call ${BUSINESS.phone} to book a free estimate.`,
     },
     {
       q: "Do you repair rotted trim on older First Colony homes?",

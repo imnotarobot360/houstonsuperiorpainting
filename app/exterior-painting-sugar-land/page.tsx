@@ -2,11 +2,25 @@ import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
 import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
-export const metadata: Metadata = {
+const PAGE_META = {
   title: "Exterior Painting Sugar Land, TX | Free Estimate",
   description: "Exterior house painting in Sugar Land, TX: washing, caulking, wood rot repair and priming. Insured, 5-year written warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/exterior-painting-sugar-land",
+  },
+}
+
+// Own Open Graph block so link previews and og:url match this page, not the
+// homepage defaults in app/layout.tsx (owner brief 2026-10-25, phase 11).
+export const metadata: Metadata = {
+  ...PAGE_META,
+  openGraph: {
+    title: PAGE_META.title,
+    description: PAGE_META.description,
+    url: PAGE_META.alternates.canonical,
+    siteName: "Houston Superior Painting",
+    type: "website",
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
   },
 }
 
@@ -27,11 +41,11 @@ export default function ExteriorPaintingSugarLandPage() {
         "Founded in 2019 by owner Juan Serra and headquartered in Cypress, TX.",
         "Wood rot repair and caulking are written into the estimate alongside the paint work.",
         "Plants, walkways and windows protected; work areas cleaned each day.",
-        `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
+        `Insured: current proof of insurance available upon request.`,
         "5-year written workmanship warranty.",
         "Free estimate. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."
       ]}
-      priceDetails={`Another way to think about it: roughly ${PRICES_2026.exteriorPerSqFt} per square foot of floor area. Number of stories, siding type, the amount of wood rot to repair and how much trim there is all move the price, and your free written estimate itemizes it.`}
+      priceDetails={`Exterior prices are project-specific. Number of stories, siding type, the amount of wood rot to repair and how much trim there is all move the price, and your free written estimate itemizes it.`}
       faqs={[
         {
           question: "How much does exterior painting cost in Sugar Land?",

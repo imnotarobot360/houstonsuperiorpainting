@@ -272,7 +272,7 @@ export function BlogPostTemplate({
                 </p>
                 <p className="text-sm text-muted-foreground">Owner, Houston Superior Painting</p>
                 <p className="text-sm text-foreground/70 mt-2">
-                  Juan Serra founded Houston Superior Painting in 2019 and runs it from the company&apos;s Cypress headquarters, with five offices serving Greater Houston. He reviews the prep scope on every estimate.
+                  Juan Serra founded Houston Superior Painting in 2019 and runs it from the company&apos;s Cypress headquarters, serving Greater Houston.
                 </p>
               </div>
             </div>
@@ -290,7 +290,7 @@ export function BlogPostTemplate({
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
                 asChild
               >
-                <Link href="/painting-estimate-houston">Get Free Estimate</Link>
+                <Link href="/painting-estimate-houston">Request My Free Estimate</Link>
               </Button>
               <Button 
                 size="lg"

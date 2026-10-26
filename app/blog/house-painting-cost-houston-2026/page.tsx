@@ -6,7 +6,7 @@ import { BUSINESS, PRICES_2026, PRICING_DISCLAIMER } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "House Painting Cost in Houston | 2026 Price Guide",
-  description: `Complete 2026 guide to house painting costs in Houston, TX. Interior painting: ${PRICES_2026.interiorPerSqFt}/sq ft. Exterior painting: ${PRICES_2026.exteriorPerHome}.`,
+  description: `Complete 2026 guide to house painting costs in Houston, TX. Interior painting: ${PRICES_2026.interiorPerSqFt} per sq ft of floor area. Exterior painting: ${PRICES_2026.exteriorPerHome}.`,
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/houston-painting-cost-guide',
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How much does it cost to paint the interior of a house in Houston?",
-    answer: `Interior painting in Houston costs ${PRICES_2026.interiorPerSqFt} per square foot, or roughly ${PRICES_2026.fullInterior2000} for a typical 2,000 sq ft home. This includes walls, ceilings, trim, and premium paint; your estimate names the primer and the number of coats needed for even coverage. Factors like ceiling height, trim complexity, and color changes affect final pricing.`
+    answer: `Interior painting in Houston costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, or roughly ${PRICES_2026.fullInterior2000} for a typical 2,000 sq ft home. This includes walls, ceilings, trim, and premium paint; your estimate names the primer and the number of coats needed for even coverage. Factors like ceiling height, trim complexity, and color changes affect final pricing.`
   },
   {
     question: "How much does exterior house painting cost in Houston?",
@@ -92,7 +92,7 @@ export default function HousePaintingCostHoustonPage() {
       <div className="quick-answer bg-secondary/10 border-l-4 border-secondary p-6 rounded-r-lg mb-8" data-speakable="true">
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
-          In Houston, interior painting costs <strong>{PRICES_2026.interiorPerSqFt} per square foot</strong> ({PRICES_2026.fullInterior2000} for a typical 2,000 sq ft home). 
+          In Houston, interior painting costs <strong>{PRICES_2026.interiorPerSqFt} per square foot of floor area</strong> ({PRICES_2026.fullInterior2000} for a typical 2,000 sq ft home). 
           Exterior painting ranges from <strong>{PRICES_2026.exteriorPerHome}</strong> depending on home size and siding type. 
           Cabinet refinishing costs <strong>{PRICES_2026.cabinetsPerKitchen}</strong>. Get a free, detailed estimate from Houston Superior Painting at (346) 594-5960.
         </p>
@@ -107,7 +107,7 @@ export default function HousePaintingCostHoustonPage() {
       <h2>Interior Painting Costs in Houston (2026)</h2>
 
       <p>
-        Interior painting in Houston typically costs <strong>{PRICES_2026.interiorPerSqFt} per square foot</strong> of floor area. 
+        Interior painting in Houston typically costs <strong>{PRICES_2026.interiorPerSqFt} per square foot of floor area</strong> of floor area. 
         For most Houston homes, this translates to the following price ranges:
       </p>
 
@@ -390,7 +390,7 @@ export default function HousePaintingCostHoustonPage() {
         <li><strong>Premium materials:</strong> Sherwin-Williams and Benjamin Moore products</li>
         <li><strong>5-year written workmanship warranty:</strong> Transferable if you sell your home</li>
         <li><strong>Clean, professional crews:</strong> We respect your home and property</li>
-        <li><strong>Google reviews by office:</strong> {reviewSummaryText()}</li>
+        <li><strong>Google reviews:</strong> {reviewSummaryText()}</li>
       </ul>
 
       <p>

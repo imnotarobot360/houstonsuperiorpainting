@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const relatedPosts = [
   {
-    title: "How to Choose the Best Painters in Houston",
+    title: "How to Choose a Painting Contractor in Houston",
     href: "/houston-painting-contractor-guide",
     excerpt: "Expert tips on finding professional painters.",
     image: "/images/blog/choose-best-painters-houston.jpg"

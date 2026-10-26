@@ -62,10 +62,10 @@ export const LOCATIONS: OfficeLocation[] = [
       alt: "Finished exterior repaint by Houston Superior Painting",
     },
     metaDescription:
-      "Houston Superior Painting's Cypress office on Huffmeister Rd. Interior, exterior and cabinet painting for Cypress, Tomball and Champions Forest. Call (346) 594-5960.",
+      "Houston Superior Painting in Cypress. Interior, exterior and cabinet painting for Cypress, Tomball and Champions Forest. Call (346) 594-5960.",
     headline: "Painters in Cypress, working out of Huffmeister Road",
     intro:
-      "Our Cypress office is where the company started in 2019. Crews from here cover Cypress, Towne Lake, Bridgeland, Fairfield, Tomball and the Champions Forest side of 1960.",
+      "Cypress is where the company started in 2019. We serve Cypress, Towne Lake, Bridgeland, Fairfield, Tomball and the Champions Forest side of 1960.",
     body: [
       "Most Cypress homes we paint were built between the late '90s and now, which means a lot of fiber-cement siding, painted brick accents and builder-grade trim that was primed once at the factory and never again. On those houses the paint usually isn't the problem — the caulk is. Builder caulk shrinks after a few Houston summers, water gets behind the trim, and the next coat of paint peels along every joint.",
       "So before a brush comes out, we pressure wash, let the siding dry out overnight (longer after a rain), cut out failed caulk rather than caulking over it, and spot-prime every bare edge. That prep takes most of the first two days on a typical two-story Cypress exterior. It is also the reason the coat holds.",
@@ -110,10 +110,10 @@ export const LOCATIONS: OfficeLocation[] = [
       alt: "Finished interior repaint by Houston Superior Painting",
     },
     metaDescription:
-      "Houston Superior Painting's inner-loop office on Bissonnet St. Interior, exterior, limewash and trim painting for West U, Bellaire, River Oaks and the Heights. (346) 594-5960.",
+      "Houston Superior Painting for Houston's inner loop. Interior, exterior, limewash and trim painting for West U, Bellaire, River Oaks and the Heights. (346) 594-5960.",
     headline: "Inner-loop painters, based on Bissonnet near Rice Village",
     intro:
-      "Our Houston office on Bissonnet serves the inner loop: West University, Bellaire, Southside Place, River Oaks, Montrose, the Heights and Memorial.",
+      "In Houston we serve the inner loop: West University, Bellaire, Southside Place, River Oaks, Montrose, the Heights and Memorial.",
     body: [
       "Inner-loop houses are a different job than the suburbs. We see 1920s–1950s bungalows and brick ranches with old oil-based trim under newer latex, wood siding that has been painted ten times, and lead-era paint that has to be handled carefully. We test before we sand on any home built before 1978.",
       "The other big difference is shade and humidity. Big live oaks keep siding cool and damp, so mildew grows under the paint film if it isn't killed first. Every exterior out of this office gets a mildewcide wash, a full dry-out, and a bonding primer anywhere latex is going over old oil.",
@@ -158,10 +158,10 @@ export const LOCATIONS: OfficeLocation[] = [
       alt: "Refinished kitchen cabinets by Houston Superior Painting",
     },
     metaDescription:
-      "Houston Superior Painting's Katy office on FM 1463. Exterior, interior and cabinet painting for Katy, Cinco Ranch, Fulshear, Richmond and the Energy Corridor. (346) 594-5960.",
+      "Houston Superior Painting in Katy. Exterior, interior and cabinet painting for Katy, Cinco Ranch, Fulshear, Richmond and the Energy Corridor. (346) 594-5960.",
     headline: "Katy painters on FM 1463, serving west Fort Bend",
     intro:
-      "Our Katy office sits on FM 1463 and covers Cinco Ranch, Cross Creek Ranch, Firethorne, Elyson, Fulshear, Richmond, Rosenberg and the Energy Corridor.",
+      "In the Katy area we serve Cinco Ranch, Cross Creek Ranch, Firethorne, Elyson, Fulshear, Richmond, Rosenberg and the Energy Corridor.",
     body: [
       "West of Houston the houses are newer and bigger, and the sun is the main enemy. Katy's open master-planned streets don't have the tree cover of the inner loop, so west- and south-facing walls take full afternoon sun all summer. Dark colors fade and cheap paint chalks within a few years.",
       "Out of this office we lean on high-solids exterior acrylics, we steer darker colors toward lines rated for heat, and we schedule south and west elevations for the cooler part of the day so the paint doesn't flash-dry and lap.",
@@ -207,10 +207,10 @@ export const LOCATIONS: OfficeLocation[] = [
       alt: "Repaired and repainted stucco by Houston Superior Painting",
     },
     metaDescription:
-      "Houston Superior Painting's Sugar Land office on University Blvd. Painting, stucco and drywall repair for Sugar Land, Missouri City, Sienna, Riverstone and Pearland. (346) 594-5960.",
+      "Houston Superior Painting in Sugar Land. Painting, stucco and drywall repair for Sugar Land, Missouri City, Sienna, Riverstone and Pearland. (346) 594-5960.",
     headline: "Sugar Land painters on University Boulevard",
     intro:
-      "Our Sugar Land office on University Blvd covers First Colony, Telfair, Riverstone, Sienna, Missouri City, Stafford and Pearland.",
+      "In the Sugar Land area we serve First Colony, Telfair, Riverstone, Sienna, Missouri City, Stafford and Pearland.",
     body: [
       "Fort Bend soil is heavy clay that swells when it rains and shrinks in August. Houses move, and the paint shows it: cracked stucco, split corner beads, and gaps opening between brick and trim. A fresh coat over those cracks looks good for one season.",
       "Out of this office we spend real time on repair before paint — routing and patching stucco cracks, re-setting loose trim, replacing failed sealant at brick-to-siding joints — then we use elastomeric or flexible coatings where the substrate is going to keep moving.",
@@ -254,10 +254,10 @@ export const LOCATIONS: OfficeLocation[] = [
       alt: "Wood rot repaired and repainted by Houston Superior Painting",
     },
     metaDescription:
-      "Houston Superior Painting's Magnolia office. Exterior painting, wood rot repair and staining for Magnolia, The Woodlands, Pinehurst and Montgomery County. (346) 594-5960.",
+      "Houston Superior Painting in Magnolia. Exterior painting, wood rot repair and staining for Magnolia, The Woodlands, Pinehurst and Montgomery County. (346) 594-5960.",
     headline: "Magnolia painters for Montgomery County homes",
     intro:
-      "Our Magnolia office covers FM 1488 and FM 1774, Montgomery County acreage, The Woodlands, Pinehurst, Montgomery and Stagecoach.",
+      "In the Magnolia area we serve FM 1488 and FM 1774, Montgomery County acreage, The Woodlands, Pinehurst, Montgomery and Stagecoach.",
     body: [
       "North of the Woodlands the lots get bigger and the pines get closer to the house. That means wood siding, wood trim and cedar fences that stay shaded and wet, pine needles packed in gutters, and rot at the bottom of every door jamb and fascia board that sits in splash-back.",
       "Most Magnolia exteriors we quote start with carpentry. We probe every piece of trim, replace rotten wood with primed or composite stock, and back-prime new boards on all six sides before they go up. Then we wash, dry out, prime and paint.",

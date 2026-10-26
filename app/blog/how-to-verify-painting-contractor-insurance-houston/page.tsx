@@ -113,9 +113,7 @@ const D: GuideArticleData = {
       title: "How Houston Superior Painting handles it",
       body: (
         <p>
-          Houston Superior Painting maintains insurance coverage for its painting operations, including{" "}
-          {T.liabilityCoverage} general liability and workers&apos; comp. Proof of insurance is available upon request, and
-          customers who approve a project receive a copy of our current insurance documentation before work begins. We do
+          {BUSINESS.insurance.sentence} We do
           not post the certificate publicly because it can contain confidential policy details. See{" "}
           <Link href="/insurance-and-warranty#request-proof-of-insurance">how to request proof of insurance</Link>.
         </p>

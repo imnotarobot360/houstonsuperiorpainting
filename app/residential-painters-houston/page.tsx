@@ -8,7 +8,7 @@ import { Phone, MessageSquare, CheckCircle2, ChevronRight, MapPin } from "lucide
 import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF, SERVICE_AREAS, serviceHref } from "@/lib/business"
 
 const PRICE_BY_SLUG: Record<string, string> = {
-  "interior-painting-houston-tx": `${PRICES_2026.interiorPerSqFt}/sq ft`,
+  "interior-painting-houston-tx": `${PRICES_2026.interiorPerSqFt} per sq ft of floor area`,
   "exterior-painting-houston-tx": PRICES_2026.exteriorPerHome,
   "cabinet-refinishing-houston-tx": PRICES_2026.cabinetsPerKitchen,
 }
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: "What does a residential painter do?", a: "Residential painters handle painting and surface preparation for homes: interior walls, ceilings and trim, exterior siding, trim, fascia and soffits, cabinet refinishing, drywall repair, pressure washing, and specialty finishes like limewash. Houston Superior Painting does all of these for homes across Greater Houston." },
-  { q: "How much do residential painters charge in Houston?", a: `Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft. Exterior painting typically ranges ${PRICES_2026.exteriorPerHome}. Cabinet refinishing typically runs ${PRICES_2026.cabinetsPerKitchen} per kitchen. Prices depend on surface condition, access and product choice. Estimates are free and itemized.` },
-  { q: "How do I choose the right residential painter in Houston?", a: "Ask for a certificate of insurance (general liability and workers' comp), a detailed written estimate that lists prep, products and every surface, and a written warranty. Read recent reviews and ask to see photos of finished work similar to yours. Texas does not license residential painters, so insurance is the credential to check." },
+  { q: "How much do residential painters charge in Houston?", a: `Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area. Exterior painting typically ranges ${PRICES_2026.exteriorPerHome}. Cabinet refinishing typically runs ${PRICES_2026.cabinetsPerKitchen} per kitchen. Prices depend on surface condition, access and product choice. Estimates are free and itemized.` },
+  { q: "How do I choose the right residential painter in Houston?", a: "Ask for a current certificate of insurance, a detailed written estimate that lists prep, products and every surface, and a written warranty. Read recent reviews and ask to see photos of finished work similar to yours. Texas does not license residential painters, so insurance is the credential to check." },
   { q: "What is the difference between residential and commercial painting?", a: "Residential painting focuses on homes and uses products suited to living spaces (low-VOC, washable). Commercial painting covers offices, retail and other business spaces, with coatings and scheduling suited to businesses. We offer both." },
   { q: "Do residential painters do drywall repair?", a: "Many residential painters handle minor to moderate drywall repair as part of painting preparation: filling nail holes, patching cracks and small holes, and texture matching. Larger drywall work may call for a dedicated drywall specialist." },
   { q: "How long does a residential painting project take?", a: "Typical ranges: a full interior 2-5 days, an exterior 3-7 days, kitchen cabinets 5-7 days, a single room about a day. Your written estimate gives the expected schedule for your home." },
@@ -63,7 +63,7 @@ export default function ResidentialPaintersHouston() {
       <section data-speakable="true" className="quick-answer bg-secondary/10 border-l-4 border-secondary py-6">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
-          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting provides residential painting across Greater Houston. Interior painting: {PRICES_2026.interiorPerSqFt}/sq ft. Exterior: {PRICES_2026.exteriorPerHome}. Cabinets: {PRICES_2026.cabinetsPerKitchen} per kitchen. We serve Houston, Katy, Cypress, Sugar Land, The Woodlands and surrounding areas. Insured ({BUSINESS.trust.liabilityCoverage} general liability plus workers&apos; comp), 5-year written workmanship warranty, clear written payment terms before you approve. Call {BUSINESS.phone}.</p>
+          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting provides residential painting across Greater Houston. Interior painting: about {PRICES_2026.interiorPerSqFt} per sq ft of floor area. Exterior: project-specific; most whole-house exteriors budget {PRICES_2026.exteriorPerHome}. Cabinets: {PRICES_2026.cabinetsPerKitchen} per kitchen. We serve Houston, Katy, Cypress, Sugar Land, The Woodlands and surrounding areas. Insured, with proof available upon request; 5-year written workmanship warranty on qualifying painting projects; {BUSINESS.paymentPolicy.shortLine} Call {BUSINESS.phone}.</p>
         </div>
       </section>
 

@@ -29,7 +29,7 @@ import {
   breadcrumbNode,
   SITE,
 } from "@/components/aeo/blocks"
-import { BUSINESS, CORE_SERVICES, PRICES_2026, SERVICE_AREAS, officeForPage, type Office } from "@/lib/business"
+import { BUSINESS, CORE_SERVICES, PRICES_2026, SERVICE_AREAS, officeForPage, publicAddressLine, type Office } from "@/lib/business"
 import { LOCAL_PROOF_PROJECTS, type CaseStudy } from "@/lib/projects"
 
 export const COST_GUIDE_PATH = "/houston-painting-cost-guide"
@@ -236,7 +236,7 @@ export function OfficeCityPage({ data }: { data: OfficeCityPageData }) {
 
         <FAQ items={data.faqs} title="Frequently asked questions" />
 
-        <Section title={`Visit our ${city} office`}>
+        <Section title={publicAddressLine(office) ? `Visit our ${city} headquarters` : `Contact us in ${city}`}>
           <OfficeNap office={office} />
           {data.officeNote && <p className="mt-6 text-base text-muted-foreground">{data.officeNote}</p>}
         </Section>

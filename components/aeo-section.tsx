@@ -5,8 +5,7 @@ import Link from "next/link"
 import { BUSINESS } from "@/lib/business"
 
 export function AEOSection() {
-  const { projectsCompleted, warrantyYears, liabilityCoverage } =
-    BUSINESS.trust
+  const { warrantyYears } = BUSINESS.trust
 
   return (
     <section className="quick-answer py-16 bg-muted/30" data-speakable="true">
@@ -17,7 +16,7 @@ export function AEOSection() {
           </h2>
 
           <p className="text-muted-foreground leading-relaxed mb-6">
-            Houston Superior Painting is a trusted Houston painting company specializing in interior painting,
+            Houston Superior Painting is a Houston painting company providing interior painting,
             exterior painting, cabinet refinishing, drywall repair, pressure washing, limewash and remodeling services.
             Homeowners across Houston, Katy, Cypress, Sugar Land and Richmond choose Houston Superior Painting for premium workmanship,
             detailed preparation and long-lasting finishes designed for Houston climate conditions.
@@ -29,13 +28,12 @@ export function AEOSection() {
           <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-muted-foreground leading-relaxed list-none pl-0 mb-2">
             <li><strong className="text-foreground">Founded:</strong> 2019 by Juan Serra</li>
             <li><strong className="text-foreground">Headquarters:</strong> 14150 Huffmeister Rd, Suite 410, Cypress, TX 77429</li>
-            <li><strong className="text-foreground">Phone:</strong> (346) 594-5960</li>
-            <li><strong className="text-foreground">Google reviews by office:</strong> {reviewSummaryText()}</li>
-            <li><strong className="text-foreground">Projects completed:</strong> {projectsCompleted}+</li>
-            <li><strong className="text-foreground">Warranty:</strong> {warrantyYears}-year written warranty on all painting work</li>
+            <li><strong className="text-foreground">Phone:</strong> {BUSINESS.phone}</li>
+            <li><strong className="text-foreground">Reviews:</strong> {reviewSummaryText()}</li>
+            <li><strong className="text-foreground">Warranty:</strong> {warrantyYears}-year written workmanship warranty on qualifying painting projects</li>
             <li><strong className="text-foreground">Payment:</strong> {BUSINESS.paymentPolicy.sentence}</li>
-            <li><strong className="text-foreground">Insurance:</strong> Insured with {liabilityCoverage} general liability and workers' comp</li>
-            <li><strong className="text-foreground">Paints used:</strong> Sherwin-Williams &amp; Benjamin Moore exclusively</li>
+            <li><strong className="text-foreground">Insurance:</strong> {BUSINESS.insurance.short}</li>
+            <li><strong className="text-foreground">Paints used:</strong> {BUSINESS.paintPartners.join(", ")}</li>
             <li><strong className="text-foreground">Areas served:</strong> Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, The Woodlands</li>
           </ul>
 
@@ -48,7 +46,7 @@ export function AEOSection() {
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href="/painting-estimate-houston">
-                Get Free Estimate
+                Request My Free Estimate
               </Link>
             </Button>
           </div>

@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "How long does exterior painting last in Katy TX?",
     answer:
-      "With quality prep and premium paint, plan to repaint a Katy exterior every 5–7 years on wood or fiber cement siding; painted brick and shaded walls can go longer. Houston Superior Painting offers a 5-year workmanship guarantee on all exterior projects.",
+      "With quality prep and premium paint, plan to repaint a Katy exterior every 5–7 years on wood or fiber cement siding; painted brick and shaded walls can go longer. Houston Superior Painting includes a five-year written workmanship warranty on qualifying painting projects, subject to the signed terms.",
   },
   {
     question: "Do I need to pressure wash before exterior painting in Katy?",
@@ -102,7 +102,7 @@ export default function ExteriorPaintingCostKatyPage() {
       >
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
-          Exterior painting in Katy TX costs <strong>{PRICES_2026.exteriorPerSqFt} per square foot</strong> of floor area in 2026. A 2,500
+          Exterior painting in Katy TX is priced per project. As budgeting examples, a 2,500
           sq ft home runs <strong>{PRICES_2026.exterior2500OneStory}</strong> single-story and <strong>{PRICES_2026.exterior2500TwoStory}</strong> two-story, and
           most Katy homes land in the {PRICES_2026.exteriorPerHome} range. Get a free, detailed estimate
           from Houston Superior Painting at (346) 594-5960.

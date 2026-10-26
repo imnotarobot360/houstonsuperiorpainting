@@ -158,7 +158,7 @@ export default function ExteriorPaintColorsSugarLandTxPage() {
       <p>
         Hardie repaints in Sugar Land follow our{" "}
         <Link href="/exterior-house-painting-houston-cost-guide">exterior cost table</Link>:{" "}
-        <strong>{PRICES_2026.exteriorPerSqFt} per sq ft</strong> of floor area, and about{" "}
+        prices are project-specific, with a budget of about{" "}
         <strong>{PRICES_2026.exterior2500TwoStory}</strong> for a typical 2,500 sq ft two-story. Failed caulk at the
         butt joints is the add, not the color.
       </p>

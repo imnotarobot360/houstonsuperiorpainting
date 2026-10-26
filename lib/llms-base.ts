@@ -1,22 +1,28 @@
 // Static part of /llms.txt (moved from public/llms.txt on 2026-10-19 so the
 // route in app/llms.txt/route.ts can append blog posts as they go live).
-// Edit the text here; keep facts in step with lib/business.ts.
+// Facts (insurance, warranty, payment, prices, locations) come from
+// lib/business.ts and lib/pricing.ts so this file cannot drift from the site.
+import { BUSINESS, PRICES_2026, publicAddressLine, servingLine } from "./business"
+
+const locationLines = BUSINESS.locations
+  .map((o) => {
+    const addr = publicAddressLine(o)
+    return `- ${o.label}: ${addr ?? servingLine(o)} — https://houstonsuperiorpainting.com/${o.pageSlug}`
+  })
+  .join("\n")
+
 export const LLMS_BASE = `# Houston Superior Painting
 
-> Residential and commercial painting contractor founded in 2019 by Juan Serra, headquartered in Cypress, TX, serving Greater Houston from five offices. Interior and exterior painting, cabinet refinishing, drywall repair, limewash and brick finishing, soft washing, wood rot repair and residential remodeling. Insured with $2M general liability plus workers' comp; proof of insurance available upon request and provided with approved project documents. Qualifying painting projects carry a 5-Year Written Workmanship Warranty, transferable to a new owner if the home is sold during the coverage period; complete terms are in the approved estimate and project documents. Free written estimates; the complete scope, price, deposit and payment schedule are in writing before you approve the project. Texas does not issue a statewide painting-contractor license.
+> Residential and commercial painting contractor founded in 2019 by Juan Serra, headquartered in Cypress, TX, serving Greater Houston. Interior and exterior painting, cabinet refinishing, drywall repair, limewash and brick finishing, soft washing, wood rot repair and residential remodeling. ${BUSINESS.insurance.sentence} ${BUSINESS.warranty.summary} ${BUSINESS.paymentPolicy.sentence} ${BUSINESS.insurance.licenseNote} ${BUSINESS.sisterBrand.sentence}
 
 Official website: https://houstonsuperiorpainting.com (the only official site; houstonsuperiorpaintingmagnoliatx.com is not ours)
 Phone: (346) 594-5960
 Email: info@houstonsuperiorpainting.com
 Book an estimate: https://app.insightpaint.com/book/houston-superior
 
-## Offices
+## Locations
 
-- Cypress (headquarters): 14150 Huffmeister Rd, Suite 410, Cypress, TX 77429 — https://houstonsuperiorpainting.com/painters-cypress-tx
-- Houston: 2617 Bissonnet St #443, Houston, TX 77005 — https://houstonsuperiorpainting.com/painters-houston-tx
-- Katy: 3230 FM 1463 APT 3201, Katy, TX 77494 — https://houstonsuperiorpainting.com/painters-katy-tx
-- Sugar Land: 18722 University Blvd, Suite 254, 2nd Floor, Sugar Land, TX 77479 — https://houstonsuperiorpainting.com/painters-sugar-land-tx
-- Magnolia: 14512 Cottontop Mtn, Magnolia, TX 77354 — https://houstonsuperiorpainting.com/painters-magnolia-tx
+${locationLines}
 
 ## Start here
 
@@ -24,15 +30,15 @@ Book an estimate: https://app.insightpaint.com/book/houston-superior
 - [About Juan Serra and the company](https://houstonsuperiorpainting.com/about)
 - [Warranty](https://houstonsuperiorpainting.com/warranty)
 - [Insurance and warranty: how to request proof of insurance](https://houstonsuperiorpainting.com/insurance-and-warranty)
-- [Google reviews by office](https://houstonsuperiorpainting.com/reviews): each office has its own Google Business Profile, rating and review count
+- [Google reviews](https://houstonsuperiorpainting.com/reviews): links to each location's Google Business Profile
 - [Free written estimate](https://houstonsuperiorpainting.com/painting-estimate-houston)
 - [Contact](https://houstonsuperiorpainting.com/contact)
 
 ## Services
 
-- [Interior Painting](https://houstonsuperiorpainting.com/interior-painting-houston-tx): $2.50–$4.50/sq ft, 2026
-- [Exterior Painting](https://houstonsuperiorpainting.com/exterior-painting-houston-tx): $1.50–$4/sq ft, 2026
-- [Cabinet Refinishing](https://houstonsuperiorpainting.com/cabinet-refinishing-houston-tx): $3,000–$6,500 per kitchen, 2026
+- [Interior Painting](https://houstonsuperiorpainting.com/interior-painting-houston-tx): ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (Houston Superior Painting budgeting guidance)
+- [Exterior Painting](https://houstonsuperiorpainting.com/exterior-painting-houston-tx): priced per project after an on-site estimate
+- [Cabinet Refinishing](https://houstonsuperiorpainting.com/cabinet-refinishing-houston-tx): ${PRICES_2026.cabinetsPerKitchen} per typical kitchen; larger projects ${PRICES_2026.cabinetsLarge}
 - [Drywall Repair](https://houstonsuperiorpainting.com/drywall-repair-houston-tx)
 - [Limewash & Brick Painting](https://houstonsuperiorpainting.com/limewash-brick-painting-houston-tx)
 - [Soft Washing](https://houstonsuperiorpainting.com/soft-washing-houston-tx)

@@ -2,12 +2,26 @@ import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
 import { PRICES_2026 } from "@/lib/business"
 
-export const metadata: Metadata = {
+const PAGE_META = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/exterior-painting-the-heights',
   },
   title: "Exterior Painting The Heights, Houston TX",
   description: "Exterior painting for Heights bungalows and newer homes: scraping, wood repair, priming and a 5-year written warranty. Free written estimate.",
+}
+
+// Own Open Graph block so link previews and og:url match this page, not the
+// homepage defaults in app/layout.tsx (owner brief 2026-10-25, phase 11).
+export const metadata: Metadata = {
+  ...PAGE_META,
+  openGraph: {
+    title: PAGE_META.title,
+    description: PAGE_META.description,
+    url: PAGE_META.alternates.canonical,
+    siteName: "Houston Superior Painting",
+    type: "website",
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+  },
 }
 
 export default function ExteriorPaintingHeightsPage() {
@@ -27,9 +41,9 @@ export default function ExteriorPaintingHeightsPage() {
         "Scraping, wood repair and priming for the wood siding and trim on older Heights homes.",
         "Rotted siding, trim and fascia are found at the estimate and listed in the written scope before work starts.",
         "Sherwin-Williams and Benjamin Moore exterior paints, chosen for the surface.",
-        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
+        "Insured, with a five-year written workmanship warranty on qualifying painting projects.",
       ]}
-      priceDetails={`Exterior work typically falls around ${PRICES_2026.exteriorPerSqFt} per square foot. Height, siding type, the amount of wood repair and how much of the house is unpainted brick all change the total; the free written estimate gives you the exact number.`}
+      priceDetails={`Exterior work is priced per project. Height, siding type, the amount of wood repair and how much of the house is unpainted brick all change the total; the free written estimate gives you the exact number.`}
       faqs={[
         {
           question: "How much does exterior painting cost in The Heights?",

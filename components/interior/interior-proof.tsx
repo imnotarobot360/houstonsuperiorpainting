@@ -11,8 +11,9 @@ import { BUSINESS } from "@/lib/business"
  * components/testimonials.tsx — so nothing is invented for the ad page.
  */
 
-// Real interior reviews already published on the site. Trimmed to interior work
-// only; no new testimonials were written for this page.
+// Interior reviews confirmed real by the owner (2026-10-01; CLAUDE.md). No Google
+// source URL is on file, so they are labeled as testimonials published with
+// permission, not as Google reviews, and show no star rating (brief 2026-10-25).
 const REVIEWS = [
   {
     name: "Sarah Mitchell",
@@ -64,13 +65,13 @@ export function InteriorProof() {
       <section className="border-t border-border bg-card/40">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
           <div className="mx-auto mb-10 flex max-w-2xl flex-col gap-3 text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Real Houston project</span>
+            {/* Photo set is flagged photosNeedReview in lib/projects.ts (docs/project-evidence-audit.md): no "real project" label or job figures until confirmed. */}
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Interior repaint</span>
             <h2 className="font-serif text-3xl leading-tight text-foreground text-balance sm:text-4xl">
               A dated Memorial home, brought back to life
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground text-pretty">
-              A 4,200 sq ft whole-home repaint: 14 rooms, museum-grade wall prep, and a warm, cohesive palette in 9
-              days.
+              A whole-home repaint with thorough wall prep and a warm, cohesive palette.
             </p>
           </div>
 
@@ -111,7 +112,9 @@ export function InteriorProof() {
               &ldquo;From the consultation to the final walkthrough, the experience felt genuinely white-glove. The prep
               work on our Memorial home was extraordinary.&rdquo;
             </blockquote>
-            <figcaption className="text-sm text-muted-foreground">Catherine R., Memorial</figcaption>
+            <figcaption className="text-sm text-muted-foreground">
+              Catherine R., Memorial · Customer testimonial, published with permission.
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -163,11 +166,6 @@ export function InteriorProof() {
           <div className="grid gap-6 md:grid-cols-3">
             {REVIEWS.map((review) => (
               <figure key={review.name} className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6">
-                <div className="flex" aria-hidden="true">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-4 fill-accent text-accent" />
-                  ))}
-                </div>
                 <blockquote className="flex-1 text-base leading-relaxed text-foreground text-pretty">
                   &ldquo;{review.text}&rdquo;
                 </blockquote>
@@ -175,6 +173,7 @@ export function InteriorProof() {
                   <p className="font-semibold text-foreground">{review.name}</p>
                   <p className="text-sm text-muted-foreground">{review.location}</p>
                   <p className="mt-1 text-sm text-primary">{review.project}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">Customer testimonial, published with permission.</p>
                 </figcaption>
               </figure>
             ))}
@@ -193,7 +192,7 @@ export function InteriorProof() {
               <ul className="flex flex-wrap gap-x-6 gap-y-2">
                 <li className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                   <ShieldCheck className="size-4 text-accent" aria-hidden="true" />
-                  Insured & bonded · {BUSINESS.trust.liabilityCoverage} liability
+                  Insured · proof of insurance on request
                 </li>
                 <li className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                   <BadgeCheck className="size-4 text-accent" aria-hidden="true" />

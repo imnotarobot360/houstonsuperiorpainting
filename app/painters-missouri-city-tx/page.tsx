@@ -26,7 +26,7 @@ const missouriCityData = {
   heroHeadline: "House Painters in Missouri City, TX",
   heroDescription: "Interior, exterior and cabinet painting for Missouri City homes, from established neighborhoods like Quail Valley to newer master-planned communities.",
 
-  quickAnswer: `Houston Superior Painting paints homes in Missouri City, TX. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Many Missouri City neighborhoods are HOA-governed, so check exterior color approval before work starts. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`,
+  quickAnswer: `Houston Superior Painting paints homes in Missouri City, TX. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Many Missouri City neighborhoods are HOA-governed, so check exterior color approval before work starts. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`,
 
   aboutCity: `Missouri City is a Fort Bend County city southwest of Houston. Its housing ranges from established neighborhoods such as Quail Valley, with many homes from the 1970s and 1980s, to newer master-planned communities such as Sienna. Most homes are brick with painted siding, trim and soffits.
 
@@ -34,7 +34,7 @@ The work differs by age. Older homes often need failed caulk replaced, rotted tr
 
 Many Missouri City neighborhoods have HOAs that require approval before an exterior color change. Get approval before the job is scheduled; we can provide the product names and color codes your association asks for.
 
-Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`,
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress and serves Sugar Land and surrounding communities. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`,
 
   neighborhoods: [
     "Sienna",
@@ -95,7 +95,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress, w
   ],
 
   whyChooseUs: [
-    "$2M general liability insurance plus workers' compensation",
+    "Insured, with current proof of insurance available upon request",
     "Sherwin-Williams and Benjamin Moore paints",
     "5-year written workmanship warranty",
     "Written estimates with the full scope spelled out",
@@ -110,7 +110,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress, w
     },
     {
       question: "How much does house painting cost in Missouri City?",
-      answer: `Interior painting in Missouri City typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
+      answer: `Interior painting in Missouri City typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
     },
     {
       question: "How long will my exterior paint last in Missouri City?",

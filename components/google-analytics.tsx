@@ -29,7 +29,17 @@ export function GoogleAnalytics() {
    * nothing and keeps our own numbers complete.
    */
   useEffect(() => {
+    // Conversion event names from the owner brief (2026-10-25, phase 12), added
+    // alongside the existing ones so GA4 history and Ads conversions keep working.
+    let chatStarted = false
     function handleClick(e: MouseEvent) {
+      // The LeadConnector chat lives in a shadow root; clicks inside it reach
+      // the document retargeted to its <chat-widget> host. First click = chat_start.
+      if (!chatStarted && (e.target as HTMLElement | null)?.closest?.("chat-widget")) {
+        chatStarted = true
+        trackEvent("chat_start", { event_category: "contact" })
+        return
+      }
       const target = (e.target as HTMLElement | null)?.closest("a, button")
       if (!target) return
 
@@ -63,17 +73,36 @@ export function GoogleAnalytics() {
         trackPhoneClick(location, service)
       } else if (href.startsWith("sms:")) {
         trackTextClick(location)
+        if (/photo/i.test(label)) trackEvent("send_photos_click", { event_category: "contact", event_label: location })
       } else if (href.startsWith("mailto:")) {
         trackEmailClick(location)
       } else if (ESTIMATE_PATTERNS.test(label) || ESTIMATE_HREFS.some((h) => href.includes(h))) {
         trackEstimateClick(location)
         // Booking-page clicks also get their own event (owner brief 2026-10-14).
-        if (href.includes("insightpaint.com/book/")) trackEvent("appointment_click", { event_label: location })
+        if (href.includes("insightpaint.com/book/")) {
+          trackEvent("appointment_click", { event_label: location })
+          trackEvent("booking_click", { event_category: "lead", event_label: location })
+        }
+        if (/photo/i.test(label)) trackEvent("send_photos_click", { event_category: "contact", event_label: location })
       }
     }
+    // A submit attempt on any lead form; estimate_form_success fires from
+    // trackFormSubmit only after the lead is saved.
+    function handleSubmit(e: SubmitEvent) {
+      const form = e.target as HTMLFormElement | null
+      if (!form || form.closest("chat-widget")) return
+      trackEvent("estimate_form_submit", {
+        event_category: "lead",
+        event_label: form.getAttribute("aria-label") || form.getAttribute("name") || form.id || location.pathname,
+      })
+    }
+    document.addEventListener("submit", handleSubmit, { capture: true })
 
     document.addEventListener("click", handleClick, { capture: true })
-    return () => document.removeEventListener("click", handleClick, { capture: true })
+    return () => {
+      document.removeEventListener("click", handleClick, { capture: true })
+      document.removeEventListener("submit", handleSubmit, { capture: true })
+    }
   }, [])
 
   if (!GA_ID) return null

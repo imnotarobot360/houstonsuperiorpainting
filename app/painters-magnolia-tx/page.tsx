@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { OfficeCityPage, officeCityMetadata, COST_GUIDE_PATH, type OfficeCityPageData } from "@/components/aeo/office-city-page"
-import { BUSINESS, PHONE_HREF, officeAddressLine, officeForPage } from "@/lib/business"
+import { BUSINESS, PHONE_HREF } from "@/lib/business"
 
 export const metadata = officeCityMetadata({
   city: "Magnolia",
@@ -12,17 +12,15 @@ export const metadata = officeCityMetadata({
 })
 
 const T = BUSINESS.trust
-const OFFICE = officeAddressLine(officeForPage("painters-magnolia-tx")!)
 
 const DATA: OfficeCityPageData = {
   city: "Magnolia",
   slug: "painters-magnolia-tx",
   quickAnswer: (
     <>
-      Houston Superior Painting serves west Montgomery County from our Magnolia office at {OFFICE}. We paint houses in
-      Magnolia, Stagecoach, Pinehurst and along the Tomball line, including homes on wooded and acreage lots. Since{" "}
-      {BUSINESS.founded} we have kept the same terms: a free written estimate with the price, deposit and payment schedule in writing before you approve,{" "}
-      {T.liabilityCoverage} in liability insurance, and a {T.warrantyYears}-year workmanship warranty. Call{" "}
+      Houston Superior Painting serves Magnolia and surrounding communities in west Montgomery County. We paint houses in
+      Magnolia, Stagecoach, Pinehurst and along the Tomball line, including homes on wooded and acreage lots. {BUSINESS.paymentPolicy.sentence}{" "}
+      {BUSINESS.insurance.short} {BUSINESS.warranty.summary} Call{" "}
       <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
     </>
   ),
@@ -67,8 +65,8 @@ const DATA: OfficeCityPageData = {
   ),
   faqs: [
     {
-      q: "Do you have an office in Magnolia?",
-      a: `Yes. Our Magnolia office is at ${OFFICE}. Call ${BUSINESS.phone} for a free estimate.`,
+      q: "Do you serve Magnolia?",
+      a: `Yes. We serve Magnolia and surrounding communities, and estimates happen at your home. Call ${BUSINESS.phone} for a free estimate.`,
     },
     {
       q: "Do you paint detached garages and fences on acreage properties?",
@@ -80,7 +78,7 @@ const DATA: OfficeCityPageData = {
     },
     {
       q: "Do you work in Stagecoach and Pinehurst?",
-      a: "Yes. Our Magnolia office covers Stagecoach, Pinehurst and the Tomball area, along with the rest of west Montgomery County.",
+      a: "Yes. We serve Stagecoach, Pinehurst and the Tomball area, along with the rest of west Montgomery County.",
     },
   ],
   cta: {

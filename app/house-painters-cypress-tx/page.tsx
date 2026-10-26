@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { q: "How much do house painters in Cypress TX charge?", a: `Interior painting in Cypress costs ${PRICES_2026.interiorPerSqFt} per sq ft. Exterior painting for a typical Cypress home ranges ${PRICES_2026.exteriorPerHome} depending on size, stories, and siding type. Cabinet painting runs ${PRICES_2026.cabinetsPerKitchen} for a full kitchen. Free detailed estimates provided.` },
+  { q: "How much do house painters in Cypress TX charge?", a: `Interior painting in Cypress costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area. Exterior painting for a typical Cypress home ranges ${PRICES_2026.exteriorPerHome} depending on size, stories, and siding type. Cabinet painting runs ${PRICES_2026.cabinetsPerKitchen} for a full kitchen. Free detailed estimates provided.` },
   { q: "What Cypress neighborhoods do you serve?", a: "We serve all of Cypress including Bridgeland, Towne Lake, Cypress Creek Lakes, Fairfield, Lakewood Forest, Cypress Falls, Cypress Springs, Longwood, and all communities along 290 and the Grand Parkway. If you are in the Cypress-Tomball area, we can help." },
   { q: "How do you handle Cypress summers for exterior painting?", a: "We start exterior work early in the morning to take advantage of cooler temperatures. We stop when surface temperatures exceed manufacturer guidelines. We follow the paint manufacturer's temperature guidelines." },
   { q: "Are you a local Cypress painting company?", a: "Yes. Houston Superior Painting is headquartered in Cypress, TX. Owner Juan Serra runs the company from our Cypress headquarters and reviews the prep scope on every estimate. We are not a franchise or lead-generation company. We are your neighbors." },
@@ -57,7 +57,7 @@ export default function HousePaintersCypressTX() {
       <section data-speakable="true" className="quick-answer bg-secondary/10 border-l-4 border-secondary py-6">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
-          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting is headquartered in Cypress, TX and serves Bridgeland, Towne Lake, Cypress Creek Lakes, Fairfield, and all Cypress neighborhoods. We offer interior painting ({PRICES_2026.interiorPerSqFt}/sq ft), exterior painting ({PRICES_2026.exteriorPerHome}), cabinet refinishing ({PRICES_2026.cabinetsPerKitchen}), drywall repair, pressure washing, and more. 5-year written workmanship warranty. Call (346) 594-5960.</p>
+          <p className="text-foreground/80 leading-relaxed text-lg">Houston Superior Painting is headquartered in Cypress, TX and serves Bridgeland, Towne Lake, Cypress Creek Lakes, Fairfield, and all Cypress neighborhoods. We offer interior painting ({PRICES_2026.interiorPerSqFt} per sq ft of floor area), exterior painting ({PRICES_2026.exteriorPerHome}), cabinet refinishing ({PRICES_2026.cabinetsPerKitchen}), drywall repair, pressure washing, and more. 5-year written workmanship warranty. Call (346) 594-5960.</p>
         </div>
       </section>
 
@@ -91,7 +91,7 @@ export default function HousePaintersCypressTX() {
             <table className="w-full border-collapse">
               <thead><tr className="bg-primary text-primary-foreground"><th className="text-left p-3 font-semibold">Service</th><th className="text-left p-3 font-semibold">Price Range</th></tr></thead>
               <tbody>
-                {[["Interior Painting", `${PRICES_2026.interiorPerSqFt}/sq ft`], ["Exterior Painting", PRICES_2026.exteriorPerHome], ["Cabinet Refinishing", PRICES_2026.cabinetsPerKitchen], ["Drywall Repair", PRICES_2026.drywallRepair], ["Pressure Washing", PRICES_2026.pressureWashing], ["Garage Epoxy", "$4.50/sq ft ($1,000 minimum)"]].map(([s, p]) => (
+                {[["Interior Painting", `${PRICES_2026.interiorPerSqFt} per sq ft of floor area`], ["Exterior Painting", PRICES_2026.exteriorPerHome], ["Cabinet Refinishing", PRICES_2026.cabinetsPerKitchen], ["Drywall Repair", PRICES_2026.drywallRepair], ["Pressure Washing", PRICES_2026.pressureWashing], ["Garage Epoxy", "$4.50/sq ft ($1,000 minimum)"]].map(([s, p]) => (
                   <tr key={s} className="border-b border-border hover:bg-muted/50"><td className="p-3 font-medium">{s}</td><td className="p-3 text-muted-foreground">{p}</td></tr>
                 ))}
               </tbody>

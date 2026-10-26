@@ -1,7 +1,7 @@
 // Comprehensive structured data for Houston Superior Painting
 // Sitewide: Organization + WebSite + Person. LocalBusiness only on the 5 office city pages.
 
-import { BUSINESS, EPOXY_URL, SERVICE_AREAS, officeForPage, officeMapsUrl, type Office } from "@/lib/business"
+import { BUSINESS, SERVICE_AREAS, isVerifiedOffice, officeForPage, officeMapsUrl, type Office } from "@/lib/business"
 
 // Places in SERVICE_AREAS that are neighborhoods / master-planned communities
 // rather than incorporated or census-designated places. Typing River Oaks or
@@ -88,7 +88,7 @@ export const siteGraphSchema = {
       logo: BUSINESS.logo,
       image: BUSINESS.ogImage,
       description:
-        "Residential and commercial painting contractor founded in 2019 by Juan Serra, headquartered in Cypress, TX, serving Greater Houston from five offices. Interior painting, exterior painting, cabinet refinishing, drywall repair, limewash and stucco finishes, soft washing. $2M liability insurance, 5-year workmanship warranty.",
+        `Residential and commercial painting contractor founded in ${BUSINESS.founded} by ${BUSINESS.founder.name}, headquartered in Cypress, TX, serving Greater Houston. Interior painting, exterior painting, cabinet painting and refinishing, commercial painting, drywall repair and texture, pressure and soft washing, limewash. ${BUSINESS.warranty.short}`,
       telephone: BUSINESS.phoneE164,
       email: BUSINESS.email,
       foundingDate: String(BUSINESS.founded),
@@ -104,22 +104,16 @@ export const siteGraphSchema = {
         areaServed: "US-TX",
         availableLanguage: ["English", "Spanish"],
       },
-      // The five offices, each a LocalBusiness defined on its own city page,
-      // plus the epoxy division. Houston Superior Epoxy is a separate brand with
-      // its own site, phone, profiles and reviews, and its schema names this
-      // Organization as parentOrganization. It is referenced by @id, name and
-      // URL only, so none of its reviews, warranty or services merge in here.
-      subOrganization: [
-        ...BUSINESS.locations.map((l) => ({
-          "@id": `${BUSINESS.url}/${l.pageSlug}#location`,
-        })),
-        {
-          "@type": "Organization",
-          "@id": `${EPOXY_URL}/#organization`,
-          name: "Houston Superior Epoxy",
-          url: EPOXY_URL,
-        },
-      ],
+      // Only owner-verified staffed offices get their own LocalBusiness node
+      // (owner brief 2026-10-25). Houston Superior Epoxy is a separate sister
+      // brand and is not listed as a sub-organization.
+      ...(BUSINESS.locations.some(isVerifiedOffice)
+        ? {
+            subOrganization: BUSINESS.locations.filter(isVerifiedOffice).map((l) => ({
+              "@id": `${BUSINESS.url}/${l.pageSlug}#location`,
+            })),
+          }
+        : {}),
       sameAs: SAME_AS,
     },
     {
@@ -211,8 +205,9 @@ export function generateServiceSchema(options: {
   slug: string;
   description: string;
   serviceType: string;
-  minPrice: number;
-  maxPrice: number;
+  /** Unused since 2026-10-25 (no prices in schema); kept so callers compile. */
+  minPrice?: number;
+  maxPrice?: number;
   subServices?: string[];
 }) {
   return {
@@ -230,17 +225,8 @@ export function generateServiceSchema(options: {
       { "@type": "City", "name": "Sugar Land" },
       { "@type": "City", "name": "Pearland" }
     ],
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "minPrice": options.minPrice,
-        "maxPrice": options.maxPrice,
-        "priceCurrency": "USD"
-      },
-      "availability": "https://schema.org/InStock"
-    },
+    // No price range in schema (brief 2026-10-25): budgeting ranges live in
+    // lib/pricing.ts and are shown as visible guidance, not as Offer prices.
     ...(options.subServices && {
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -399,7 +385,8 @@ export function generateLocationBusinessSchema(options: {
   areas?: readonly string[]
 }) {
   const office = officeForPage(options.slug)
-  if (office) return officeLocalBusinessSchema(office)
+  // LocalBusiness only for an owner-verified staffed office (brief 2026-10-25, phase 7).
+  if (office && isVerifiedOffice(office)) return officeLocalBusinessSchema(office)
 
   const servedNames = options.areas && options.areas.length > 0 ? options.areas : [options.city]
   const areaServed = servedNames.map((name) => ({

@@ -145,7 +145,7 @@ export default function LoadBearingWallRemovalHoustonPage() {
                 <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-zinc-700">
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Licensed Structural Engineer</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> City of Houston Permits</li>
-                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> $2M Insured</li>
+                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Insured</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Single Point of Contact</li>
                 </ul>
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">

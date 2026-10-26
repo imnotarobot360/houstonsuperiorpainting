@@ -113,7 +113,7 @@ export function InteriorLanding() {
               <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-6">
                 <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                   <ShieldCheck className="size-4 text-accent" aria-hidden="true" />
-                  Insured and bonded · {BUSINESS.trust.liabilityCoverage} liability
+                  Insured · proof of insurance on request
                 </span>
                 <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                   <BadgeCheck className="size-4 text-accent" aria-hidden="true" />

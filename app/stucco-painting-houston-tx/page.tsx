@@ -16,13 +16,13 @@ const STUCCO_PROJECTS = LOCAL_PROOF_PROJECTS.filter((p) => p.serviceSlug === "st
 
 export const metadata: Metadata = {
   title: 'Stucco Painting & Repair Houston TX | Houston Superior Painting',
-  description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings that flex with heat and humidity. 5-year guarantee. Free estimates.',
+  description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings that flex with heat and humidity. 5-year workmanship warranty on qualifying work. Free estimates.',
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/stucco-painting-houston-tx',
   },
   openGraph: {
     title: 'Stucco Painting & Repair Houston TX | Houston Superior Painting',
-    description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings that flex with Houston heat and humidity. 5-year guarantee.',
+    description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings that flex with Houston heat and humidity. 5-year workmanship warranty on qualifying work.',
     url: 'https://houstonsuperiorpainting.com/stucco-painting-houston-tx',
     siteName: 'Houston Superior Painting',
     type: 'website',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Stucco Painting & Repair Houston TX | Houston Superior Painting',
-    description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings, crack repair, 5-year guarantee.',
+    description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings, crack repair, 5-year workmanship warranty on qualifying work.',
     images: ['https://houstonsuperiorpainting.com/images/og/og-stucco-painting.png'],
   },
 }
@@ -163,7 +163,7 @@ const benefits = [
   "Crack repair that addresses the root cause so it doesn't reopen next season",
   "Waterproofing that protects against Houston's heavy storms and wind-driven rain",
   "Same in-house crew start to finish — no rotating subcontractors",
-  "5-year written quality guarantee on every stucco project",
+  "5-year written workmanship warranty on qualifying painting work",
 ]
 
 const relatedServices = [
@@ -193,11 +193,11 @@ export default function StuccoPaintingHoustonTX() {
               Stucco Painting &amp; Crack Repair in Houston, TX
             </h1>
             <p className="font-cormorant text-xl md:text-2xl text-soft-white/80 leading-relaxed max-w-3xl mx-auto">
-              Flexible elastomeric coatings and lasting crack repair built for Houston&apos;s heat, humidity, and storms. Free estimates. 5-year quality guarantee.
+              Flexible elastomeric coatings and lasting crack repair built for Houston&apos;s heat, humidity, and storms. Free estimates. 5-year workmanship warranty on qualifying work.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/painting-estimate-houston">Get My Free Estimate</Link>
+                <Link href="/painting-estimate-houston">Request My Free Estimate</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-primary-foreground !bg-transparent !text-primary-foreground hover:!bg-primary-foreground hover:!text-primary" asChild>
                 <a href="tel:+13465945960" aria-label="Call Houston Superior Painting at 346-594-5960" className="flex items-center gap-2">
@@ -215,7 +215,7 @@ export default function StuccoPaintingHoustonTX() {
             <div className="flex flex-wrap justify-center gap-6 lg:gap-10 text-center text-sm lg:text-base">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-accent" />
-                <span className="font-medium">500+ Houston Homes Painted</span>
+                <span className="font-medium">Serving Houston Since 2019</span>
               </div>
               <div className="flex items-center gap-2">
                 <ReviewsInline className="font-medium" />
@@ -226,7 +226,7 @@ export default function StuccoPaintingHoustonTX() {
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-accent" />
-                <span className="font-medium">$2M Liability + Workers' Comp</span>
+                <span className="font-medium">Insured · Proof on Request</span>
               </div>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function StuccoPaintingHoustonTX() {
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              Houston Superior Painting provides expert stucco painting and crack repair across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects cost $2,500–$8,000, take 3–5 days for a typical single-story home, and use flexible elastomeric coatings that bridge cracks and waterproof the surface against Houston&apos;s climate. Every job is backed by our written 5-year quality guarantee. Free estimates at (346) 594-5960.
+              Houston Superior Painting provides expert stucco painting and crack repair across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects cost $2,500–$8,000, take 3–5 days for a typical single-story home, and use flexible elastomeric coatings that bridge cracks and waterproof the surface against Houston&apos;s climate. Every job is backed by our 5-year written workmanship warranty on qualifying painting work. Free estimates at (346) 594-5960.
             </p>
           </div>
         </section>
@@ -249,7 +249,7 @@ export default function StuccoPaintingHoustonTX() {
               Real Houston Stucco Transformation
             </h2>
             <p className="text-foreground/80 leading-relaxed mb-8 max-w-2xl">
-              This Houston exterior went from cracked, chalky, faded stucco to a flawless, waterproofed elastomeric finish in a warm modern tone — drag the slider to compare.
+              This Houston exterior went from cracked, chalky, faded stucco to a sealed elastomeric finish in a warm modern tone — drag the slider to compare.
             </p>
             <BeforeAfter
               beforeSrc="/images/stucco-before-1.png"

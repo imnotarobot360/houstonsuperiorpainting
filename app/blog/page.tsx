@@ -965,7 +965,7 @@ export default function BlogPage() {
               href="/painting-estimate-houston"
               className="inline-flex items-center justify-center px-8 py-3 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold rounded-lg transition-colors"
             >
-              Get Your Free Estimate
+              Request My Free Estimate
             </Link>
           </div>
         </section>

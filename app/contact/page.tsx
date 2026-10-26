@@ -7,7 +7,7 @@ import { Phone, Mail, MapPin, Clock, CheckCircle, Navigation, ArrowRight } from 
 import { InsightPaintWidget } from "@/components/insightpaint-widget"
 import { QuoteForm } from "@/components/quote-form"
 import Link from "next/link"
-import { BUSINESS, OFFICE_PAGES, PHONE_HREF, MAIL_HREF, officeForPage, officeMapsUrl } from "@/lib/business"
+import { BUSINESS, OFFICE_PAGES, PHONE_HREF, MAIL_HREF, officeForPage, officeMapsUrl, publicAddressLine, servingLine } from "@/lib/business"
 
 const ESTIMATE_PATH = "/painting-estimate-houston"
 
@@ -209,9 +209,15 @@ export default function ContactPage() {
                           <h3 className="font-semibold text-lg text-foreground">{office.label}</h3>
                         </div>
                         <p className="text-muted-foreground text-sm mb-2">
-                          {office.street}
-                          <br />
-                          {office.city}, {office.state} {office.zip}
+                          {publicAddressLine(office) ? (
+                            <>
+                              {office.street}
+                              <br />
+                              {office.city}, {office.state} {office.zip}
+                            </>
+                          ) : (
+                            servingLine(office)
+                          )}
                         </p>
                         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
                           <a href={PHONE_HREF} className="text-primary hover:text-primary/80 transition-colors font-medium">

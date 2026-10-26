@@ -7,7 +7,7 @@ import { CheckCircle, Phone } from 'lucide-react'
 import { InsightPaintWidget } from '@/components/insightpaint-widget'
 import { PRICES_2026 } from '@/lib/business'
 
-const COST_ANSWER = `In Houston, interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot and exterior painting ${PRICES_2026.exteriorPerSqFt} per square foot (${PRICES_2026.exteriorPerHome} for a typical home), depending on size, condition, and preparation needed.`
+const COST_ANSWER = `In Houston, interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area and exterior painting ${PRICES_2026.exteriorPerHome} per square foot (${PRICES_2026.exteriorPerHome} for a typical home), depending on size, condition, and preparation needed.`
 const LIFESPAN_ANSWER = "It depends on the surface, sun exposure, the coating, and above all the preparation. Heat and humidity are hard on paint, and proper preparation extends its lifespan."
 const DURATION_ANSWER = "It depends on the size of the home and the preparation needed. Your written estimate lists the schedule."
 

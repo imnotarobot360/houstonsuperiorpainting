@@ -100,7 +100,7 @@ const FAQS_ES = [
   },
   {
     q: "¿Tienen seguro?",
-    a: `Sí. Tenemos ${BUSINESS.trust.liabilityCoverage} en seguro de responsabilidad general y compensación para trabajadores. ${BUSINESS.insuranceProof.es}`,
+    a: `Sí. Houston Superior Painting mantiene seguro comercial. ${BUSINESS.insuranceProof.es}`,
   },
   {
     q: "¿Qué garantía ofrecen?",
@@ -175,9 +175,9 @@ export default function SpanishPage() {
               </h1>
               <p className="quick-answer mt-6 text-lg text-soft-white/90 leading-relaxed">
                 {BUSINESS.name} pinta casas y negocios en el área de Houston desde {BUSINESS.founded}, con oficina
-                principal en Cypress. Le entregamos un estimado por escrito gratis, trabajamos con seguro de{" "}
-                {BUSINESS.trust.liabilityCoverage} y compensación para trabajadores, y ofrecemos una garantía escrita
-                de cinco años sobre la mano de obra.
+                principal en Cypress. Le entregamos un estimado por escrito gratis, trabajamos con seguro (comprobante disponible cuando lo
+                solicite) y los proyectos de pintura que califican tienen una garantía escrita de cinco años sobre la mano
+                de obra, según los términos del estimado o documento de garantía firmado.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a

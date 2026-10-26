@@ -169,7 +169,7 @@ export default function PressureWashingHoustonPage() {
                 <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-zinc-700">
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Soft Wash for Roofs</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Plant-Safe Detergents</li>
-                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> $2M Liability + Workers' Comp</li>
+                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Insured · Proof on Request</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> No Minimum Charge</li>
                 </ul>
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -207,7 +207,7 @@ export default function PressureWashingHoustonPage() {
                 { title: "Plant-Safe Process", body: "Pre-wet landscape, cover delicate plants, biodegradable detergents at safe concentrations, post-wash rinse. Zero plant damage claims." },
                 { title: "Pre-Paint Specialists", body: "We prep more surfaces for painting than for cleaning. We know exactly how to wash a wall so paint bonds for 8–10 years." },
                 { title: "Same-Day Service Available", body: "Small jobs (driveway, deck) often available same-day or next-day during peak season." },
-                { title: "Insured", body: "Workers comp + liability insurance. Certificate of insurance provided on request before we start any job." },
+                { title: "Insured", body: "Current proof of insurance is available upon request. When required, approved customers may receive a certificate of insurance before work begins." },
               ].map((item) => (
                 <div key={item.title} className="bg-white border border-zinc-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
                   <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
@@ -339,7 +339,7 @@ export default function PressureWashingHoustonPage() {
                 { href: "/exterior-painting-houston-tx", title: "Exterior Painting", desc: "Built for Houston climate" },
                 { href: "/limewash-brick-painting-houston-tx", title: "Limewash & Brick", desc: "European-style finishes" },
                 { href: "/interior-painting-houston-tx", title: "Interior Painting", desc: "Walls, ceilings, trim" },
-                { href: "/drywall-repair-houston-tx", title: "Drywall Repair", desc: "Texture-match guarantee" },
+                { href: "/drywall-repair-houston-tx", title: "Drywall Repair", desc: "Texture matching" },
               ].map((s) => (
                 <Link key={s.href} href={s.href} className="block bg-zinc-50 border border-zinc-200 rounded-xl p-5 hover:border-emerald-600 hover:shadow-sm transition">
                   <h3 className="font-semibold mb-1">{s.title}</h3>

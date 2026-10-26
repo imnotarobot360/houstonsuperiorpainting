@@ -101,9 +101,7 @@ const D: GuideArticleData = {
       title: "Insurance documentation",
       body: (
         <p>
-          Houston Superior Painting carries {T.liabilityCoverage} in general liability coverage and workers&apos;
-          compensation insurance. A current certificate of insurance is available on request and is provided after the
-          customer approves the project. If a property requires additional-insured wording or a certificate holder, that
+          {BUSINESS.insurance.sentence} If a property requires additional-insured wording or a certificate holder, that
           requirement should be discussed before scheduling and confirmed by the insurer. See{" "}
           <Link href="/insurance-and-warranty">insurance and warranty</Link>.
         </p>

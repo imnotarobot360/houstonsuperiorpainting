@@ -223,7 +223,7 @@ export default function FlatPaintBathroomsMistakePage() {
               <Button asChild size="lg" variant="secondary">
                 <Link href="/painting-estimate-houston">
                   <Calendar className="mr-2 h-5 w-5" />
-                  Get Free Estimate
+                  Request My Free Estimate
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">

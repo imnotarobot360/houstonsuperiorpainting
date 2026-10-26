@@ -292,7 +292,7 @@ export default function GarageEpoxyHoustonPage() {
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
                   <Link href="/painting-estimate-houston" className="inline-flex items-center justify-center px-6 py-4 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg text-base shadow-md transition">
-                    Get My Free Estimate →
+                    Request My Free Estimate →
                   </Link>
                   <a href="tel:+13465945960" aria-label="Call Houston Superior Painting at 346-594-5960" className="inline-flex items-center justify-center px-6 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-lg text-base transition">
                     📞 (346) 594-5960

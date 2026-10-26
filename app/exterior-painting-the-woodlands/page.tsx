@@ -38,7 +38,7 @@ export default function ExteriorPaintingTheWoodlandsPage() {
         "Sherwin-Williams and Benjamin Moore exterior paints.",
         "A written estimate that lists surfaces, repairs, prep and products.",
       ]}
-      priceDetails={`Our published range for a typical whole-house exterior is ${PRICES_2026.exteriorPerHome}. A 2,500 sq ft two-story typically runs ${PRICES_2026.exterior2500TwoStory}, or about ${PRICES_2026.exteriorPerSqFt} per square foot of floor area. Siding type, number of stories, wood repair and trim detail move the price within that range. The written estimate is free.`}
+      priceDetails={`Our published range for a typical whole-house exterior is ${PRICES_2026.exteriorPerHome}. A 2,500 sq ft two-story typically runs ${PRICES_2026.exterior2500TwoStory}. Siding type, number of stories, wood repair and trim detail move the price within that range. The written estimate is free.`}
       faqs={[
         {
           question: "How much does exterior painting cost in The Woodlands?",

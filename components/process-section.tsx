@@ -37,7 +37,7 @@ export function ProcessSection() {
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">
             How It Works: 4 Steps to a{" "}
-            <span className="text-primary">Flawless Finish</span>
+            <span className="text-primary">Smooth, Even Finish</span>
           </h2>
         </div>
 

@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: "How much does interior painting cost in Houston?",
-    a: `Interior painting in Houston typically runs ${PRICES_2026.interiorPerSqFt} per square foot depending on scope, ceiling height, and surface condition. See our interior painting cost guide for a full breakdown, or use the calculator on this page for an instant ballpark range.`,
+    a: `Interior painting in Houston typically runs ${PRICES_2026.interiorPerSqFt} per square foot of floor area depending on scope, ceiling height, and surface condition. See our interior painting cost guide for a full breakdown, or use the calculator on this page for an instant ballpark range.`,
   },
 ]
 
@@ -130,7 +130,7 @@ export default function InteriorPaintingProcessPage() {
                 href="/painting-estimate-houston"
                 className="inline-flex items-center justify-center gap-2 rounded-md border border-primary-foreground/30 px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
               >
-                Get My Free Estimate
+                Request My Free Estimate
               </Link>
             </div>
           </div>

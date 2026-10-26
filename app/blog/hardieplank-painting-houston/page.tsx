@@ -113,9 +113,9 @@ export default function HardiePlankPaintingHoustonPage() {
         HardiePlank in Houston should be painted with a 100% acrylic exterior paint — Sherwin-Williams Duration or
         Benjamin Moore Aura Exterior — after a <Link href="/soft-washing-houston-tx">soft wash</Link>, failed-caulk
         replacement, and primer only on bare or cut fiber cement. Do not use oil, alkyd, or stain. James Hardie says
-        primed board must be top-coated within 180 days of install, and field-cut edges must be sealed. A typical Houston
-        Hardie home runs about <strong>{PRICES_2026.exteriorPerSqFt} per sq ft of living area</strong> in 2026, or about{" "}
-        <strong>{PRICES_2026.exterior2500TwoStory}</strong> for a two-story 2,500 sq ft house. Call{" "}
+        primed board must be top-coated within 180 days of install, and field-cut edges must be sealed. Exterior prices are
+        project-specific; as a budgeting example, a two-story 2,500 sq ft Hardie house runs about{" "}
+        <strong>{PRICES_2026.exterior2500TwoStory}</strong>. Call{" "}
         <a href={PHONE_HREF}>{BUSINESS.phone}</a> for a fixed quote.
       </p>
 
@@ -269,9 +269,9 @@ export default function HardiePlankPaintingHoustonPage() {
         </thead>
         <tbody>
           <tr>
-            <td className={td}>Hardie exterior, per sq ft of living area</td>
+            <td className={td}>Most whole-house exteriors</td>
             <td className={td}>
-              <strong>{PRICES_2026.exteriorPerSqFt}</strong>
+              <strong>{PRICES_2026.exteriorPerHome}</strong>
             </td>
           </tr>
           <tr>
