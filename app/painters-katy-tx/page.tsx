@@ -1,18 +1,17 @@
 import Link from "next/link"
 import { OfficeCityPage, officeCityMetadata, COST_GUIDE_PATH, type OfficeCityPageData } from "@/components/aeo/office-city-page"
-import { BUSINESS, PHONE_HREF, PRICES_2026, officeAddressLine, officeForPage } from "@/lib/business"
+import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business"
 
 export const metadata = officeCityMetadata({
   city: "Katy",
   slug: "painters-katy-tx",
   title: "House Painters in Katy, TX | Cinco Ranch & Firethorne",
   description:
-    "House painters in Katy, TX for Cinco Ranch, Firethorne, Cross Creek Ranch & Seven Meadows. $2M insured, 5-year warranty. (346) 594-5960",
+    "House painters in Katy, TX for Cinco Ranch, Firethorne, Cross Creek Ranch & Seven Meadows. insured, 5-year workmanship warranty. (346) 594-5960",
   ogImage: "https://houstonsuperiorpainting.com/images/og/og-painters-katy.jpg",
 })
 
 const T = BUSINESS.trust
-const OFFICE = officeAddressLine(officeForPage("painters-katy-tx")!)
 
 // TODO(juan): add real Katy jobs with photos to lib/projects.ts (neighborhood like "Cinco Ranch, Katy");
 // the "Recent Katy projects" section renders automatically when they exist.
@@ -21,11 +20,10 @@ const DATA: OfficeCityPageData = {
   slug: "painters-katy-tx",
   quickAnswer: (
     <>
-      Houston Superior Painting paints homes across Katy&apos;s master-planned communities from our office at {OFFICE}.
+      Houston Superior Painting serves Katy and surrounding communities, including the master-planned neighborhoods west of Houston.
       Since {BUSINESS.founded} our crews have handled interiors, exteriors and kitchen cabinets on the brick and Hardie
-      homes typical of Cinco Ranch, Firethorne, Cross Creek Ranch and Seven Meadows. We are insured for{" "}
-      {T.liabilityCoverage}, the estimate is free and puts the scope, price, deposit and payment schedule in writing before you approve, and the work carries a{" "}
-      {T.warrantyYears}-year workmanship warranty. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
+      homes typical of Cinco Ranch, Firethorne, Cross Creek Ranch and Seven Meadows. {BUSINESS.insurance.short} {BUSINESS.paymentPolicy.sentence}{" "}
+      {BUSINESS.warranty.summary} Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
     </>
   ),
   neighborhoods: [
@@ -64,8 +62,8 @@ const DATA: OfficeCityPageData = {
   ),
   faqs: [
     {
-      q: "Is there a Katy office?",
-      a: `Yes. Our Katy office is at ${OFFICE}. Call ${BUSINESS.phone} to set up a free estimate.`,
+      q: "Do you serve Katy?",
+      a: `Yes. We serve Katy and surrounding communities, and estimates happen at your home. Call ${BUSINESS.phone} to set up a free estimate.`,
     },
     {
       q: "Do you handle HOA color approval in Cinco Ranch and Cross Creek Ranch?",

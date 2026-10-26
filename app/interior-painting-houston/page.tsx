@@ -86,7 +86,7 @@ Ceiling painting requires specialized techniques to prevent drips and ensure eve
   faqs: [
     {
       question: "How much does interior painting cost in Houston?",
-      answer: `Interior painting in Houston typically costs ${PRICES_2026.interiorPerSqFt} per square foot, depending on wall condition, ceiling height, and prep work required. A single room typically runs ${PRICES_2026.singleRoom}. We provide free detailed estimates for accurate pricing. ${BUSINESS.paymentPolicy.sentence}`
+      answer: `Interior painting in Houston typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, depending on wall condition, ceiling height, and prep work required. A single room typically runs ${PRICES_2026.singleRoom}. We provide free detailed estimates for accurate pricing. ${BUSINESS.paymentPolicy.sentence}`
     },
     {
       question: "How long does it take to paint the interior of a house?",

@@ -152,7 +152,7 @@ export default function PaintersNearMeKatyTxPage() {
           <strong>{PRICES_2026.exteriorPerHome}</strong> for an exterior, depending on size and prep. Because Texas requires no painting
           license, vetting matters: verify insurance by calling the carrier, confirm the crew are direct employees (not
           subcontractors), and get a line-item written estimate with a warranty. Houston Superior Painting has served Katy
-          since 2019 with free estimates, clear written payment terms, and a 5-year workmanship guarantee — call or text (346) 594-5960.
+          since 2019 with free estimates, clear written payment terms, and a 5-year written workmanship warranty — call or text (346) 594-5960.
         </p>
       </div>
 
@@ -200,7 +200,7 @@ export default function PaintersNearMeKatyTxPage() {
             </tr>
             <tr className="border-b border-border">
               <td className="py-3 pr-4">Per square foot (floor area)</td>
-              <td className="py-3">{PRICES_2026.interiorPerSqFt}</td>
+              <td className="py-3">{PRICES_2026.interiorPerSqFt} per sq ft of floor area</td>
             </tr>
           </tbody>
         </table>
@@ -292,19 +292,16 @@ export default function PaintersNearMeKatyTxPage() {
       <h2>5 Questions That Reveal Whether a Katy TX Painter Is Legitimate</h2>
 
       <h3>Question 1: &quot;Can I see your Certificate of Insurance?&quot;</h3>
-      <p>Every legitimate Katy painting contractor should have:</p>
-      <ul>
-        <li>General Liability Insurance (minimum $1M per occurrence)</li>
-        <li>Workers&apos; Compensation Insurance</li>
-      </ul>
+      <p>
+        Ask for a current certificate of insurance and read which coverages and dates it lists.
+      </p>
       <p>
         Ask them to email the COI. Then call the insurance carrier directly to verify it&apos;s active — not expired, not
         canceled. This takes 5 minutes and is the single most important vetting step.
       </p>
       <p>
         <strong>Why it matters:</strong> If an uninsured painter spills 5 gallons on your new wood floors or falls off a
-        ladder in your yard, you&apos;re paying for it. For reference, Houston Superior Painting carries $2M general
-        liability plus workers&apos; comp.
+        ladder in your yard, you&apos;re paying for it. For reference, Houston Superior Painting maintains business insurance, and current proof of insurance is available upon request.
       </p>
 
       <h3>Question 2: &quot;Who will physically be on my property, and are they your employees?&quot;</h3>
@@ -543,7 +540,7 @@ export default function PaintersNearMeKatyTxPage() {
         </li>
       </ul>
       <p>
-        Free estimates. Clear written payment terms. 5-year workmanship guarantee. Explore our{" "}
+        Free estimates. Clear written payment terms. 5-year written workmanship warranty. Explore our{" "}
         <Link href="/interior-painting-houston-tx">interior painting</Link> and{" "}
         <Link href="/exterior-painting-houston-tx">exterior painting</Link> services, or compare prices in our{" "}
         <Link href="/blog/exterior-painting-cost-katy-tx">Katy exterior painting cost guide</Link>.

@@ -201,7 +201,8 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
       <h2>Exterior Painting: What Drives the Price</h2>
       <p>
         Professional <Link href="/exterior-painting-houston-tx">exterior painting</Link> in the Houston area typically
-        runs <strong>about {PRICES_2026.exteriorPerSqFt} per square foot of floor area</strong>. Here&apos;s what moves you
+        is priced per project. As a budgeting example, a 2,000 sq ft home runs about{" "}
+        <strong>{PRICES_2026.exterior2000}</strong>, depending on stories and condition. Here&apos;s what moves you
         within that range:
       </p>
       <p>
@@ -357,13 +358,10 @@ export default function CostToPaint2000SqFtHouseHoustonPage() {
           <strong>5-year workmanship warranty</strong>
         </li>
         <li>
-          <strong>$2M liability coverage</strong>
+          <strong>Insured</strong>, with current proof of insurance available upon request
         </li>
         <li>
-          <strong>500+ projects completed</strong> across Greater Houston since 2019
-        </li>
-        <li>
-          <strong>Google reviews by office:</strong> {reviewSummaryText()}
+          <strong>Reviews:</strong> {reviewSummaryText()}
         </li>
       </ul>
       <p>

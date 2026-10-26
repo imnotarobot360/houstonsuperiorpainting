@@ -126,7 +126,7 @@ export function Hero() {
               ) : (
                 <>
                   <div className="mb-5">
-                    <h2 className="font-serif text-2xl font-bold text-foreground">Get Your Free Estimate</h2>
+                    <h2 className="font-serif text-2xl font-bold text-foreground">Request My Free Estimate</h2>
                     <p className="text-muted-foreground text-sm mt-1">
                       Free estimate with clear written payment terms. Most quotes back within 24 hours.
                     </p>
@@ -186,7 +186,7 @@ export function Hero() {
                           Sending...
                         </>
                       ) : (
-                        "Get My Free Estimate"
+                        "Request My Free Estimate"
                       )}
                     </Button>
 

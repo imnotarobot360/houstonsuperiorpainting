@@ -79,7 +79,7 @@ export default function HowOftenPaintHouseHouston() {
             </table>
           </div>
 
-          <p className="text-foreground/80 leading-relaxed mb-10">When the calendar says it is time, our <Link href="/exterior-painting-houston-tx" className="text-primary underline">exterior painting in Houston</Link> includes the pressure wash, caulk, and primer that make the next cycle last. To budget ahead, the <Link href="/houston-painting-cost-guide" className="text-primary underline">Houston painting cost guide</Link> has 2026 prices by home size, and crews work out of our offices serving <Link href="/painters-houston-tx" className="text-primary underline">painters in Houston TX</Link> and <Link href="/painters-cypress-tx" className="text-primary underline">Cypress TX</Link>.</p>
+          <p className="text-foreground/80 leading-relaxed mb-10">When the calendar says it is time, our <Link href="/exterior-painting-houston-tx" className="text-primary underline">exterior painting in Houston</Link> includes the pressure wash, caulk, and primer that make the next cycle last. To budget ahead, the <Link href="/houston-painting-cost-guide" className="text-primary underline">Houston painting cost guide</Link> has 2026 prices by home size, and crews work out of our Cypress headquarters serving <Link href="/painters-houston-tx" className="text-primary underline">painters in Houston TX</Link> and <Link href="/painters-cypress-tx" className="text-primary underline">Cypress TX</Link>.</p>
 
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">How Paint Grade and Wall Direction Change the Timeline</h2>
           <p className="text-foreground/80 leading-relaxed mb-6">The schedule above is an average for the whole house. In practice, the grade of paint already on your walls and which way each wall faces decide when you actually need to repaint.</p>
@@ -160,7 +160,7 @@ export default function HowOftenPaintHouseHouston() {
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary-foreground mb-4">Not Sure If Your Home Needs Repainting?</h2>
           <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">Schedule a free inspection and we will assess your paint condition, provide honest recommendations, and give you a detailed estimate if work is needed.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/painting-estimate-houston" className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors">Get a Free Estimate</Link>
+            <Link href="/painting-estimate-houston" className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors">Request My Free Estimate</Link>
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors"><Phone className="h-5 w-5" /> Call {BUSINESS.phone}</a>
             <a href={SMS_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors"><MessageSquare className="h-5 w-5" /> Text Us</a>
           </div>

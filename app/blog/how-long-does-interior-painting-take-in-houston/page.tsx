@@ -67,7 +67,7 @@ const relatedPosts = [
     image: "/images/blog/house-painting-cost-houston.jpg",
   },
   {
-    title: "How to Choose the Best Painters in Houston",
+    title: "How to Choose a Painting Contractor in Houston",
     href: "/houston-painting-contractor-guide",
     excerpt: "What to look for when hiring a painting contractor in Houston.",
     image: "/images/blog/best-time-paint-houston.jpg",

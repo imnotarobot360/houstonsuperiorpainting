@@ -150,7 +150,7 @@ const D: GuideArticleData = {
           <p>
             We walk the space, measure it, and give a written proposal that lists the areas, prep, products, coats or
             coverage standard, work hours, protection and exclusions, so it can be compared line by line.{" "}
-            {BUSINESS.paymentPolicy.sentence} We carry $2M general liability plus workers&apos; comp.{" "}
+            {BUSINESS.paymentPolicy.sentence} We maintain business insurance, and current proof of insurance is available upon request.{" "}
             {BUSINESS.insuranceProof.en}
           </p>
           <p>

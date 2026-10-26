@@ -2,12 +2,26 @@ import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
 import { PRICES_2026 } from "@/lib/business"
 
-export const metadata: Metadata = {
+const PAGE_META = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/cabinet-refinishing-the-heights',
   },
   title: "Cabinet Refinishing The Heights, Houston TX",
   description: "Kitchen cabinet refinishing in the Houston Heights, for older and newer kitchens. Bonding primer, 5-year written warranty, free written estimate.",
+}
+
+// Own Open Graph block so link previews and og:url match this page, not the
+// homepage defaults in app/layout.tsx (owner brief 2026-10-25, phase 11).
+export const metadata: Metadata = {
+  ...PAGE_META,
+  openGraph: {
+    title: PAGE_META.title,
+    description: PAGE_META.description,
+    url: PAGE_META.alternates.canonical,
+    siteName: "Houston Superior Painting",
+    type: "website",
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+  },
 }
 
 export default function CabinetRefinishingHeightsPage() {
@@ -27,7 +41,7 @@ export default function CabinetRefinishingHeightsPage() {
         "Prep suited to both older wood cabinets and newer factory-finished ones.",
         "Degreasing, sanding and bonding primer on every surface before the finish coats.",
         "Sherwin-Williams and Benjamin Moore cabinet and trim products.",
-        "Insured with $2M general liability plus workers' comp, and a 5-year written workmanship warranty.",
+        "Insured, with a five-year written workmanship warranty on qualifying painting projects.",
       ]}
       priceDetails="Price depends mainly on the number of doors and drawers, the current finish (stained wood, previously painted, or laminate), how big a color change you want, and any repairs. The free written estimate gives you the exact number."
       faqs={[

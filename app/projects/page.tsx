@@ -142,12 +142,12 @@ export default function ProjectsPage() {
               </a>
             </span>
             <span className="font-manrope text-sm text-foreground">
-              {BUSINESS.trust.projectsCompleted}+ projects completed
+              Documented Houston-area projects
             </span>
             <span className="font-manrope text-sm text-foreground">
               {BUSINESS.trust.warrantyYears}-year workmanship warranty
             </span>
-            <span className="font-manrope text-sm text-foreground">$2M liability + workers' comp</span>
+            <span className="font-manrope text-sm text-foreground">Insured · proof on request</span>
           </div>
         </section>
 

@@ -89,7 +89,7 @@ We also paint shutters, garage doors, gutters, downspouts, and any other exterio
   faqs: [
     {
       question: "How much does exterior painting cost in Houston?",
-      answer: `Exterior painting in Houston typically costs ${PRICES_2026.exteriorPerSqFt} per square foot, or ${PRICES_2026.exteriorPerHome} for a typical home, depending on home size, siding condition, and prep work required. Two-story homes and homes needing repairs will be on the higher end. We provide free detailed estimates. ${BUSINESS.paymentPolicy.sentence}`
+      answer: `Exterior painting in Houston typically costs ${PRICES_2026.exteriorPerHome} per square foot, or ${PRICES_2026.exteriorPerHome} for a typical home, depending on home size, siding condition, and prep work required. Two-story homes and homes needing repairs will be on the higher end. We provide free detailed estimates. ${BUSINESS.paymentPolicy.sentence}`
     },
     {
       question: "How long does exterior paint last in Houston?",

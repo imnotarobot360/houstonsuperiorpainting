@@ -21,7 +21,7 @@ import {
   OFFICE_PAGES,
   PHONE_HREF,
   SERVICE_AREAS,
-  officeAddressLine,
+  officeAddressLine, publicAddressLine, servingLine,
   officeForPage,
   officeMapsUrl,
 } from "@/lib/business"
@@ -110,14 +110,14 @@ export default function ServiceAreasPage() {
           </div>
         </section>
 
-        {/* Offices first: the five locations with a Google Business Profile. */}
+        {/* The five areas with a Google Business Profile. Not called offices: none is owner-verified as staffed (brief 2026-10-25). */}
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Our Five Offices
+              Areas With a Google Business Profile
             </h2>
             <p className="text-muted-foreground mb-8">
-              Every estimate is scheduled from the office closest to you. Call{" "}
+              Estimates happen at your home or business anywhere in Greater Houston. Call{" "}
               <a href={PHONE_HREF} className="text-primary font-medium hover:underline">
                 {BUSINESS.phone}
               </a>{" "}
@@ -142,7 +142,7 @@ export default function ServiceAreasPage() {
                       rel="noopener noreferrer"
                       className="hover:underline"
                     >
-                      {officeAddressLine(office)}
+                      {publicAddressLine(office) ? `Headquarters: ${publicAddressLine(office)}` : `${servingLine(office)} (Google Business Profile)`}
                     </a>
                   </p>
                   <p className="mt-2 flex items-center gap-2 text-foreground">
@@ -157,7 +157,7 @@ export default function ServiceAreasPage() {
           </div>
         </section>
 
-        {/* Then every other community, grouped by the office that serves it. */}
+        {/* Then every other community, grouped by the nearest area above. */}
         <section className="py-16 md:py-20 bg-card border-t border-border">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
@@ -167,9 +167,9 @@ export default function ServiceAreasPage() {
               {AREAS_BY_OFFICE.filter((g) => g.areas.length > 0).map(({ page, office, areas }) => (
                 <div key={page.slug}>
                   <h3 className="font-display text-lg font-bold text-foreground mb-3">
-                    Served from our{" "}
+                    Near our{" "}
                     <Link href={`/${page.slug}`} className="text-primary hover:underline">
-                      {office.city} office
+                      {office.city} service area
                     </Link>
                   </h3>
                   <ul className="space-y-2">

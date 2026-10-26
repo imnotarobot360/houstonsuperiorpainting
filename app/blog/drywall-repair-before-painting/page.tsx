@@ -4,7 +4,7 @@ import { BlogPostTemplate } from "@/components/blog-post-template"
 
 export const metadata: Metadata = {
   title: "Drywall Repair Before Painting: Why It Matters",
-  description: "Learn why drywall repair is essential before painting. Professional tips for fixing cracks, holes, and texture matching for a flawless paint finish.",
+  description: "Learn why drywall repair is essential before painting. Professional tips for fixing cracks, holes, and texture matching for a smooth paint finish.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/drywall-repair-before-painting',
   },

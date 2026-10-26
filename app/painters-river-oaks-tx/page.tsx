@@ -39,7 +39,7 @@ export default function PaintersRiverOaksTX() {
           state="TX"
           heroHeadline="House Painters for River Oaks, Houston"
           heroDescription="Interior, exterior and cabinet painting for River Oaks homes, from early-20th-century houses with original millwork to new custom builds."
-          quickAnswer={`Houston Superior Painting paints homes in River Oaks, Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior4000} for homes around 4,000 sq ft) and a two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}; larger homes with extensive millwork are quoted after a walkthrough. Specialty finishes such as Venetian plaster are priced after an on-site look. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          quickAnswer={`Houston Superior Painting paints homes in River Oaks, Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (${PRICES_2026.fullInterior4000} for homes around 4,000 sq ft) and a two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}; larger homes with extensive millwork are quoted after a walkthrough. Specialty finishes such as Venetian plaster are priced after an on-site look. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
           aboutCity={`River Oaks is an established inner-loop neighborhood between Buffalo Bayou and Westheimer, developed from the 1920s onward. Its homes range from period houses with original millwork and plaster to large new custom builds.
 
 Older homes here usually need careful prep: repairing cracked plaster and settling cracks inside, and on the exterior replacing failed caulk, repairing rotted wood and priming bare spots before the finish coats. Houston's humidity and summer heat are hard on exterior paint, so that prep matters more than the color. Homes built before 1978 may contain lead paint, which federal rules require be disturbed only by an EPA-certified renovation firm, so ask any painter for their certification.
@@ -53,7 +53,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
             "Specialty finishes: Venetian plaster, Roman Clay and faux finishes",
             "Can work from designer or architect color and sheen specifications",
             "Sherwin-Williams and Benjamin Moore products",
-            "Insured: $2M general liability plus workers' comp",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty"
           ]}
           services={[
@@ -115,7 +115,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
           faqs={[
             {
               question: "How much does it cost to paint a home in River Oaks?",
-              answer: `River Oaks homes vary widely in size and detail. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot; homes around 4,000 sq ft generally run ${PRICES_2026.fullInterior4000} inside. A two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}, and larger homes with extensive millwork are quoted after a walkthrough. We provide free written estimates.`
+              answer: `River Oaks homes vary widely in size and detail. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area; homes around 4,000 sq ft generally run ${PRICES_2026.fullInterior4000} inside. A two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}, and larger homes with extensive millwork are quoted after a walkthrough. We provide free written estimates.`
             },
             {
               question: "Do you paint older River Oaks homes?",

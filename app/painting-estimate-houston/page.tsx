@@ -227,7 +227,7 @@ function HeroSupportingDetail() {
         </li>
         <li className="inline-flex items-center gap-2 text-sm font-medium text-foreground">
           <ShieldCheck className="h-4 w-4 text-secondary" aria-hidden="true" />
-          Insured &amp; bonded · {BUSINESS.trust.liabilityCoverage} liability
+          Insured · proof of insurance on request
         </li>
         <li className="inline-flex items-center gap-2 text-sm font-medium text-foreground">
           <BadgeCheck className="h-4 w-4 text-secondary" aria-hidden="true" />

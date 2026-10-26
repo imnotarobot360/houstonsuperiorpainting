@@ -67,7 +67,7 @@ export default function PaintersMemorialTX() {
           state="TX"
           heroHeadline="House Painters in Memorial, Houston"
           heroDescription="Interior, exterior and cabinet painting for Memorial-area homes along the Memorial Drive corridor, from established ranch homes to large custom builds with tall ceilings and detailed trim."
-          quickAnswer={`Houston Superior Painting paints homes throughout the Memorial area of west Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior4000} for homes around 4,000 sq ft) and a two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}. Larger homes with extensive millwork are quoted after a walkthrough. Sherwin-Williams and Benjamin Moore products, insured crews, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          quickAnswer={`Houston Superior Painting paints homes throughout the Memorial area of west Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (${PRICES_2026.fullInterior4000} for homes around 4,000 sq ft) and a two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}. Larger homes with extensive millwork are quoted after a walkthrough. Sherwin-Williams and Benjamin Moore products, insured crews, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
           aboutCity={`Memorial is a wooded area of west Houston along Memorial Drive and Buffalo Bayou, with established neighborhoods such as Memorial Bend, Frostwood and Memorial Thicket, and the separate Memorial Villages cities just to the north. Many original ranch homes have been joined or replaced by large custom builds.
 
 Larger Memorial homes bring their own painting challenges: tall foyer and stairwell walls that need scaffolding or extension equipment, a lot of trim, crown and built-in millwork that has to be cut in by hand, and mature landscaping that has to be protected around the exterior. Shade from the tree canopy also keeps exterior surfaces damp longer, so washing, caulk and wood repair come before any finish coat.
@@ -80,7 +80,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
             "Can work from designer or architect color and sheen specifications",
             "Landscape and floor protection, with cleanup when the work is done",
             "Sherwin-Williams and Benjamin Moore products",
-            "Insured: $2M general liability plus workers' comp",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty"
           ]}
           services={[
@@ -142,7 +142,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
           faqs={[
             {
               question: "How much does it cost to paint a house in Memorial?",
-              answer: `Interior painting in Memorial typically costs ${PRICES_2026.interiorPerSqFt} per square foot; homes around 4,000 sq ft generally run ${PRICES_2026.fullInterior4000} inside. A two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}, and larger homes with extensive millwork are quoted after a walkthrough. We provide free written estimates.`
+              answer: `Interior painting in Memorial typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area; homes around 4,000 sq ft generally run ${PRICES_2026.fullInterior4000} inside. A two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}, and larger homes with extensive millwork are quoted after a walkthrough. We provide free written estimates.`
             },
             {
               question: "Do you paint large Memorial homes?",

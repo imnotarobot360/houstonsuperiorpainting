@@ -149,7 +149,7 @@ export default function ExteriorPaintColorsKatyTxPage() {
       <p>
         Same Hardie band as the rest of our{" "}
         <Link href="/exterior-house-painting-houston-cost-guide">Houston exterior cost table</Link>:{" "}
-        <strong>{PRICES_2026.exteriorPerSqFt} per sq ft</strong> of floor area, about{" "}
+        prices are project-specific, with budgets of about{" "}
         <strong>{PRICES_2026.exterior2000OneStory}</strong> for a 2,000 sq ft one-story, and about{" "}
         <strong>{PRICES_2026.exterior2500TwoStory}</strong> for a 2,500 sq ft two-story. Sun-faded west walls sometimes
         need an extra prime on bare chalk. That is a site call, not an automatic upcharge.

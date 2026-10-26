@@ -175,7 +175,7 @@ export function Header({ overHero = false }: { overHero?: boolean }) {
               href={ESTIMATE_PATH}
               className="font-manrope text-sm font-semibold bg-secondary text-secondary-foreground px-5 py-2.5 rounded-md hover:bg-secondary/90 transition-colors"
             >
-              Get My Free Estimate
+              Request My Free Estimate
             </Link>
           </div>
 
@@ -302,7 +302,7 @@ export function Header({ overHero = false }: { overHero?: boolean }) {
                 className="font-manrope text-center text-sm font-semibold bg-secondary text-secondary-foreground px-5 py-3 rounded-md mt-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Get My Free Estimate
+                Request My Free Estimate
               </Link>
             </nav>
           </div>

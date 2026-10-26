@@ -71,7 +71,7 @@ export function ServicePageTemplate({
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/painting-estimate-houston">Get Free Estimate</Link>
+              <Link href="/painting-estimate-houston">Request My Free Estimate</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-primary-foreground !bg-transparent !text-primary-foreground hover:!bg-primary-foreground hover:!text-primary" asChild>
               <a href="tel:+13465945960" aria-label="Call Houston Superior Painting at 346-594-5960" className="flex items-center gap-2">

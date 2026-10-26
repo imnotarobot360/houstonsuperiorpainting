@@ -10,9 +10,9 @@ import { BeforeAfterShowcase } from "@/components/luxury/before-after"
 /* ─────────────────────────  TRUST  ───────────────────────── */
 
 const stats = [
-  { value: `${BUSINESS.trust.projectsCompleted}+`, label: "Projects Completed" },
+  { value: `${BUSINESS.founded}`, label: "Founded" },
   { value: `${BUSINESS.trust.warrantyYears}-Year`, label: "Workmanship Warranty" },
-  { value: "$2M", label: "Liability Insured" },
+  { value: "Insured", label: "Proof on Request" },
   { value: "White-Glove", label: "Client Experience" },
 ]
 
@@ -32,7 +32,7 @@ export function LuxuryTrust() {
         </Reveal>
 
         <Reveal className="mt-14 pt-10 border-t border-border flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
-          <span className="font-cormorant text-lg text-graphite italic">Preferred Application Partner</span>
+          <span className="font-cormorant text-lg text-graphite italic">Products named in your estimate</span>
           <div className="flex items-center gap-10">
             <Image src="/images/sherwin-williams-logo.png" alt="Sherwin-Williams preferred painting contractor" width={130} height={40} className="h-8 w-auto object-contain opacity-80" />
             <Image src="/images/benjamin-moore-logo.png" alt="Benjamin Moore preferred painting contractor" width={130} height={40} className="h-8 w-auto object-contain opacity-80" />
@@ -71,7 +71,7 @@ export function LuxuryServices() {
             Tailored finishes for exceptional homes
           </h2>
           <p className="mt-5 font-cormorant text-xl text-graphite leading-relaxed">
-            From flawless walls to specialty plaster and cabinetry, every project begins with
+            From smooth walls to specialty plaster and cabinetry, every project begins with
             meticulous preparation and ends with a finish designed to last.
           </p>
         </Reveal>
@@ -239,7 +239,7 @@ export function LuxuryTestimonials() {
           <h2 className="font-display text-3xl sm:text-5xl text-foreground leading-tight text-balance">
             Trusted inside Houston&apos;s finest homes
           </h2>
-          <p className="mt-5 font-manrope text-sm text-graphite">Each office has its own Google profile. Ratings as listed on Google:</p>
+          <p className="mt-5 font-manrope text-sm text-graphite">Read verified customer reviews on each location&apos;s Google profile:</p>
         </Reveal>
 
         <div className="mb-14">
@@ -396,7 +396,7 @@ export function LuxuryCTA() {
 /* Small icon trust row used under the hero (optional accent) */
 export function LuxuryAssurance() {
   const items = [
-    { icon: ShieldCheck, label: "$2M Liability + Workers' Comp" },
+    { icon: ShieldCheck, label: "Insured · Proof on Request" },
     { icon: Award, label: `${BUSINESS.trust.warrantyYears}-Year Workmanship Warranty` },
     { icon: Sparkles, label: "Premium Materials Only" },
   ]

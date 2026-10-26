@@ -9,7 +9,7 @@ import { OfficeReviewBadge, ReviewsInline, ReviewsLink } from "@/components/offi
  * `hideRating` is kept for older callers and has the same effect as omitting `office`.
  */
 export function TrustBar({ office }: { office?: string; hideRating?: boolean } = {}) {
-  const { projectsCompleted, warrantyYears } = BUSINESS.trust
+  const { warrantyYears } = BUSINESS.trust
 
   return (
     <div className="bg-primary text-primary-foreground py-2 text-sm">
@@ -26,7 +26,7 @@ export function TrustBar({ office }: { office?: string; hideRating?: boolean } =
           <span className="hidden sm:inline text-primary-foreground/50">|</span>
           <div className="hidden md:flex items-center gap-1.5">
             <Clock className="h-4 w-4" />
-            <span>{projectsCompleted}+ Projects</span>
+            <span>Since {BUSINESS.founded}</span>
           </div>
           <span className="hidden md:inline text-primary-foreground/50">|</span>
           <div className="flex items-center gap-1.5">

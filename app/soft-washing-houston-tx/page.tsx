@@ -226,7 +226,7 @@ export default function SoftWashingHoustonPage() {
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Safe for Painted Surfaces</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> No High-Pressure Damage</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Biodegradable Solutions</li>
-                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> $2M Liability + Workers' Comp</li>
+                  <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Insured · Proof on Request</li>
                   <li className="flex items-center gap-1.5"><span className="text-emerald-600">✓</span> Written Scope &amp; Price</li>
                 </ul>
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">

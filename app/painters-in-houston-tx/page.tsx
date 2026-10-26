@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { q: "How much do painters in Houston TX charge?", a: `Interior painting in Houston typically costs ${PRICES_2026.interiorPerSqFt} per square foot. A 2,500 sq ft home averages ${PRICES_2026.fullInterior2500}. Exterior painting ranges from ${PRICES_2026.exteriorPerHome} depending on siding type, number of stories, and surface condition. We provide free, detailed estimates. ${BUSINESS.paymentPolicy.sentence}` },
+  { q: "How much do painters in Houston TX charge?", a: `Interior painting in Houston typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area. A 2,500 sq ft home averages ${PRICES_2026.fullInterior2500}. Exterior painting ranges from ${PRICES_2026.exteriorPerHome} depending on siding type, number of stories, and surface condition. We provide free, detailed estimates. ${BUSINESS.paymentPolicy.sentence}` },
   { q: "What services do house painters in Houston offer?", a: "Houston Superior Painting provides interior painting, exterior painting, cabinet refinishing, drywall repair, pressure washing, limewash/German smear, garage epoxy, load-bearing wall removal, and commercial painting. We handle everything from single accent walls to full whole-home repaints." },
   { q: "What areas do you serve as painters in Houston TX?", a: "We proudly serve all of Greater Houston including Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Missouri City, The Woodlands, Memorial, The Heights, Bellaire, River Oaks, Cinco Ranch, and communities across Greater Houston." },
   { q: "How long does a house painting project take in Houston?", a: "It depends on room count, the size of the home, and the prep work needed. We provide a timeline with every estimate so you can plan accordingly." },
@@ -230,7 +230,7 @@ export default function PaintersInHoustonTX() {
               </thead>
               <tbody>
                 {[
-                  ["Interior Painting", `${PRICES_2026.interiorPerSqFt}/sq ft`, PRICES_2026.fullInterior2500],
+                  ["Interior Painting", `${PRICES_2026.interiorPerSqFt} per sq ft of floor area`, PRICES_2026.fullInterior2500],
                   ["Exterior Painting", PRICES_2026.exteriorPerHome, PRICES_2026.exterior2500TwoStory],
                   ["Cabinet Refinishing", PRICES_2026.cabinetsPerKitchen, `${PRICES_2026.cabinetsPerDoor} per door/drawer front`],
                   ["Drywall Repair", PRICES_2026.drywallRepair, "Priced by scope"],

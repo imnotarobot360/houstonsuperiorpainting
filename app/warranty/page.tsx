@@ -4,44 +4,53 @@ import { Footer } from "@/components/footer"
 import { TrustBar } from "@/components/trust-bar"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Check, X, Shield, Phone, Mail, FileText } from "lucide-react"
+import { Check, X, Shield, Phone, Mail } from "lucide-react"
 import Link from "next/link"
+import { BUSINESS, MAIL_HREF, PHONE_HREF } from "@/lib/business"
+
+// Warranty summary (owner brief 2026-10-25, phase 4). Wording comes from
+// BUSINESS.warranty. The site does not describe the warranty as transferable,
+// covering materials, manufacturer defects, normal fading, moisture or substrate
+// failure, wood repairs, or every touch-up: no signed warranty document in the
+// repository confirms those terms. Claim inspection within 7 business days:
+// owner, 2026-10-11 (OWNER_VERIFICATION_REQUIRED.md §13).
+
+const W = BUSINESS.warranty
+const TITLE = "5-Year Workmanship Warranty | Houston Superior Painting"
+const DESCRIPTION =
+  "Qualifying painting projects include a five-year written workmanship warranty. What the summary means, what it excludes, and how to report an issue."
 
 export const metadata: Metadata = {
-  title: "5-Year Painting Warranty — Houston Superior Painting",
-  description: "Our comprehensive 5-year warranty covers peeling, blistering, fading, and workmanship defects. Learn exactly what's covered and how to file a claim.",
-  alternates: {
-    canonical: "https://houstonsuperiorpainting.com/warranty",
-  },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
-    title: "5-Year Painting Warranty — Houston Superior Painting",
-    description: "Our comprehensive 5-year warranty covers peeling, blistering, fading, and workmanship defects. Learn exactly what's covered and how to file a claim.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "https://houstonsuperiorpainting.com/warranty" },
+  openGraph: {
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://houstonsuperiorpainting.com/warranty",
-    siteName: "Houston Superior Painting",
+    siteName: BUSINESS.name,
     type: "website",
   },
 }
 
-const covered = [
-  "Peeling or flaking paint due to improper adhesion",
-  "Blistering caused by moisture trapped during application",
-  "Fading beyond normal weathering (exterior)",
-  "Cracking or checking in the paint film",
-  "Color inconsistency or visible brush/roller marks",
-  "Caulk failure at joints we sealed",
-  "Wood rot repairs performed by our team",
-  "Primer failure or bleed-through",
+// Workmanship issues of the kind the warranty is for. The signed document lists
+// the actual coverage; this is a plain-language summary, not a contract.
+const workmanship = [
+  "Peeling or flaking caused by how our crew prepared or applied the paint",
+  "Visible application defects such as roller or brush marks left by our crew",
+  "Caulk we applied that separates because of how it was applied",
 ]
 
 const notCovered = [
-  "Damage from impact, abuse, or vandalism",
-  "Damage from pressure washing by others",
+  "Damage from impact, abuse or vandalism",
   "Normal weathering and gradual fading over time",
-  "Mildew or algae growth (maintenance issue)",
-  "Structural movement causing cracks",
-  "Issues with surfaces we recommended replacing",
-  "Work performed by other contractors after our project",
-  "Failure to allow adequate cure time before cleaning",
+  "Moisture intrusion, leaks, or substrate and structural movement",
+  "Mildew or algae growth (a maintenance issue)",
+  "Paint or coating product defects, which fall under any manufacturer warranty, not ours",
+  "Surfaces we recommended repairing or replacing that were not repaired",
+  "Work by other contractors after our project",
+  "Garage-floor coatings (see below)",
 ]
 
 export default function WarrantyPage() {
@@ -50,60 +59,63 @@ export default function WarrantyPage() {
       <TrustBar />
       <Header />
       <main>
-        {/* Hero */}
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <Shield className="h-16 w-16 mx-auto mb-6 opacity-90" />
-            <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-4">
-              Our 5-Year Written Workmanship Warranty
-            </h1>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              Houston Superior Painting backs qualifying painting projects with a 5-Year Written Workmanship Warranty. Complete warranty terms are included in the customer's approved estimate and project documents.
+            <Shield className="h-16 w-16 mx-auto mb-6 opacity-90" aria-hidden="true" />
+            <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-4">Our 5-Year Written Workmanship Warranty</h1>
+            <p className="text-xl opacity-90 max-w-2xl mx-auto">{W.summary}</p>
+          </div>
+        </section>
+
+        <section className="py-10 bg-background">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="rounded-lg border border-border bg-muted/40 p-5 text-foreground">
+              <strong>{W.controlsNote}</strong>
             </p>
           </div>
         </section>
 
-        {/* Coverage Details */}
-        <section className="py-16 bg-background">
+        <section className="pb-16 bg-background">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
-              {/* What's Covered */}
               <Card className="border-primary/20">
                 <CardHeader className="bg-primary/5">
                   <CardTitle className="flex items-center gap-3 text-xl">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                      <Check className="h-5 w-5 text-primary" />
-                    </div>
-                    What's Covered
+                    <span className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Check className="h-5 w-5 text-primary" aria-hidden="true" />
+                    </span>
+                    What a workmanship warranty is for
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-6">
                   <ul className="space-y-3">
-                    {covered.map((item) => (
+                    {workmanship.map((item) => (
                       <li key={item} className="flex gap-3">
-                        <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
                         <span className="text-foreground">{item}</span>
                       </li>
                     ))}
                   </ul>
+                  <p className="mt-4 text-sm text-muted-foreground">
+                    Exact coverage, exclusions and conditions are in your signed estimate or warranty document.
+                  </p>
                 </CardContent>
               </Card>
 
-              {/* What's Not Covered */}
               <Card className="border-destructive/20">
                 <CardHeader className="bg-destructive/5">
                   <CardTitle className="flex items-center gap-3 text-xl">
-                    <div className="w-10 h-10 bg-destructive/10 rounded-full flex items-center justify-center">
-                      <X className="h-5 w-5 text-destructive" />
-                    </div>
-                    What's Not Covered
+                    <span className="w-10 h-10 bg-destructive/10 rounded-full flex items-center justify-center">
+                      <X className="h-5 w-5 text-destructive" aria-hidden="true" />
+                    </span>
+                    Generally not covered
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-6">
                   <ul className="space-y-3">
                     {notCovered.map((item) => (
                       <li key={item} className="flex gap-3">
-                        <X className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
+                        <X className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" aria-hidden="true" />
                         <span className="text-foreground">{item}</span>
                       </li>
                     ))}
@@ -114,117 +126,65 @@ export default function WarrantyPage() {
           </div>
         </section>
 
-        {/* Warranty Terms */}
         <section className="py-16 bg-muted/50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-serif text-3xl font-bold text-foreground mb-8 text-center">
-              Warranty Terms & Conditions
-            </h2>
-            
-            <Card className="bg-card">
-              <CardContent className="p-8 prose prose-zinc max-w-none">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Coverage Period</h3>
-                <p className="text-muted-foreground mb-6">
-                  Our warranty begins on the date of project completion and extends for five (5) full years. The warranty is transferable to new homeowners if the property is sold during the coverage period.
-                </p>
-
-                <h3 className="text-xl font-semibold text-foreground mb-4">Warranty Coverage by Service</h3>
-                <ul className="text-muted-foreground space-y-2 mb-6">
-                  <li><strong>Interior Painting:</strong> 5 years on workmanship and materials</li>
-                  <li><strong>Exterior Painting:</strong> 5 years on workmanship; paint manufacturer warranty on materials</li>
-                  <li><strong>Cabinet Refinishing:</strong> 5 years on finish durability and adhesion</li>
-                  <li><strong>Drywall Repair:</strong> 5 years on repairs; painting warranty applies to painted surfaces</li>
-                </ul>
-                <p className="text-muted-foreground mb-6">
-                  Garage floor coating warranties are provided separately by Houston Superior Epoxy. Visit{" "}
-                  <a href="https://houstonsuperiorepoxy.com" className="underline">https://houstonsuperiorepoxy.com</a> for current system and warranty information.
-                </p>
-                <p className="text-muted-foreground mb-6">
-                  Paint and coating products also carry their own manufacturer warranties, which are separate from our workmanship warranty.
-                </p>
-
-                <h3 className="text-xl font-semibold text-foreground mb-4">Conditions for Warranty Coverage</h3>
-                <p className="text-muted-foreground mb-4">
-                  To maintain warranty coverage, homeowners must:
-                </p>
-                <ul className="text-muted-foreground space-y-2 mb-6">
-                  <li>Allow painted surfaces to cure fully (30 days) before washing or cleaning</li>
-                  <li>Maintain normal home conditions (climate control, ventilation)</li>
-                  <li>Report any issues within 30 days of discovery</li>
-                  <li>Provide reasonable access for inspection and repairs</li>
-                  <li>Not alter or repair the painted surfaces themselves or hire others to do so</li>
-                </ul>
-
-                <h3 className="text-xl font-semibold text-foreground mb-4">Sample Warranty Language</h3>
-                <div className="bg-muted/50 p-6 rounded-lg border border-border text-sm text-muted-foreground italic">
-                  <p>
-                    "Houston Superior Painting LLC warrants all labor and materials provided under this contract against defects in workmanship for a period of five (5) years from the date of substantial completion. Should any defect covered by this warranty appear during the warranty period, Houston Superior Painting LLC will, at its sole discretion, repair or repaint the affected area at no charge to the homeowner. This warranty is transferable to subsequent owners of the property. This warranty does not cover damage caused by acts of nature, normal wear and tear, improper maintenance, or alterations made by parties other than Houston Superior Painting LLC."
-                  </p>
-                </div>
-                <p className="text-sm text-muted-foreground mt-4">
-                  This is sample language for reference. The warranty terms in your signed estimate and project documents control.
-                  For insurance documentation, see <Link href="/insurance-and-warranty" className="underline">insurance and warranty</Link>.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-muted-foreground">
+            <h2 className="font-serif text-3xl font-bold text-foreground text-center">Warranty basics</h2>
+            <p>
+              <strong className="text-foreground">Which projects qualify:</strong> qualifying painting projects, as stated in
+              your signed estimate or warranty document. Repairs, carpentry and temporary fixes are covered only if that
+              document says so.
+            </p>
+            <p>
+              <strong className="text-foreground">Products:</strong> paint and coating products may carry their own
+              manufacturer warranties, which are separate from our workmanship warranty.
+            </p>
+            <p>
+              <strong className="text-foreground">Garage floors:</strong> {BUSINESS.sisterBrand.sentence} Visit{" "}
+              <a href={BUSINESS.sisterBrand.url} className="underline">
+                houstonsuperiorepoxy.com
+              </a>
+              .
+            </p>
+            <p>
+              <strong className="text-foreground">Insurance:</strong> {BUSINESS.insuranceProof.en}{" "}
+              <Link href="/insurance-and-warranty" className="underline">
+                Insurance and warranty
+              </Link>
+              .
+            </p>
           </div>
         </section>
 
-        {/* How to File a Claim */}
         <section className="py-16 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-serif text-3xl font-bold text-foreground mb-8 text-center">
-              How to File a Warranty Claim
-            </h2>
-            
+            <h2 className="font-serif text-3xl font-bold text-foreground mb-8 text-center">How to Report a Warranty Issue</h2>
             <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <Card className="bg-card border-border text-center">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                    1
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">Contact Us</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Call, email, or text us with a description of the issue and photos if possible.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-card border-border text-center">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                    2
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">Inspection</h3>
-                  <p className="text-sm text-muted-foreground">
-                    We'll schedule an inspection within 7 business days to assess the issue.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-card border-border text-center">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                    3
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">Resolution</h3>
-                  <p className="text-sm text-muted-foreground">
-                    If covered, we'll repair or repaint the affected area at no cost to you.
-                  </p>
-                </CardContent>
-              </Card>
+              {[
+                { n: 1, t: "Contact us", d: "Call, email or text us with a description of the issue and photos if possible." },
+                { n: 2, t: "Inspection", d: "We schedule an inspection within 7 business days to assess the issue." },
+                { n: 3, t: "Resolution", d: "If the issue is covered under your signed warranty terms, we repair or repaint the affected area as those terms state." },
+              ].map((s) => (
+                <Card key={s.n} className="bg-card border-border text-center">
+                  <CardContent className="pt-6">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                      {s.n}
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2">{s.t}</h3>
+                    <p className="text-sm text-muted-foreground">{s.d}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" asChild>
-                <a href="tel:+13465945960" className="flex items-center gap-2">
-                  <Phone className="h-5 w-5" />
-                  Call (346) 594-5960
+                <a href={PHONE_HREF} className="flex items-center gap-2">
+                  <Phone className="h-5 w-5" aria-hidden="true" />
+                  Call {BUSINESS.phone}
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="mailto:info@houstonsuperiorpainting.com" className="flex items-center gap-2">
-                  <Mail className="h-5 w-5" />
+                <a href={MAIL_HREF} className="flex items-center gap-2">
+                  <Mail className="h-5 w-5" aria-hidden="true" />
                   Email Us
                 </a>
               </Button>
@@ -232,19 +192,12 @@ export default function WarrantyPage() {
           </div>
         </section>
 
-        {/* CTA */}
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-serif text-3xl font-bold mb-4">
-              Ready for a Painting Project You Can Trust?
-            </h2>
-            <p className="text-xl opacity-90 mb-8">
-              Get a free estimate and see why Houston homeowners choose our 5-year warranty protection.
-            </p>
+            <h2 className="font-serif text-3xl font-bold mb-4">Request My Free Estimate</h2>
+            <p className="text-xl opacity-90 mb-8">{BUSINESS.paymentPolicy.sentence}</p>
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/painting-estimate-houston">
-                Get Free Estimate
-              </Link>
+              <Link href="/painting-estimate-houston">Request My Free Estimate</Link>
             </Button>
           </div>
         </section>

@@ -4,18 +4,18 @@ import { BUSINESS } from "@/lib/business"
 const badges = [
   {
     icon: ShieldCheck,
-    title: "Insured & Bonded",
-    subtitle: "$2M liability + workers' comp",
+    title: "Insured",
+    subtitle: "Proof of insurance on request",
   },
   {
     icon: BadgeCheck,
     title: "5-Year Warranty",
-    subtitle: "Written workmanship guarantee",
+    subtitle: "Written workmanship warranty, qualifying projects",
   },
   {
     icon: Award,
-    title: "500+ Projects",
-    subtitle: "Completed across Greater Houston",
+    title: "Founded 2019",
+    subtitle: "Serving Greater Houston",
   },
   {
     // No rating number here: this footer badge renders on every page, and the

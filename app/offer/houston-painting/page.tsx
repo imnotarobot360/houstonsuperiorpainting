@@ -64,7 +64,7 @@ export default function BudgetOfferPage() {
                 "Interior, exterior and kitchen cabinet painting in Houston and surrounding areas",
                 "Free written estimate with the scope, price, deposit and payment schedule before you approve",
                 `${BUSINESS.trust.warrantyYears}-year written workmanship warranty`,
-                `${BUSINESS.trust.liabilityCoverage} general liability + workers' comp`,
+                BUSINESS.insurance.short,
               ].map((t) => (
                 <li key={t} className="flex items-start gap-2">
                   <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />

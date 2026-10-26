@@ -205,7 +205,7 @@ export default function CabinetTransformationsBlog() {
             </p>
 
             <p>
-              Professional cabinet painting changes that. Completely. And for Katy and Sugar Land homeowners, the right color choice transforms a kitchen from dated to distinctive — without a renovation budget or a construction timeline. This article covers the most popular cabinet color transformations we&apos;re seeing in these two markets right now, what makes each one work, and how to decide which direction is right for your home. For budgets, see our breakdown of the <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">cost to paint kitchen cabinets in Houston</Link>, and for local scheduling, our <Link href="/painters-katy-tx">painters in Katy TX</Link> and <Link href="/painters-sugar-land-tx">painters in Sugar Land TX</Link> pages list each office.
+              Professional cabinet painting changes that. Completely. And for Katy and Sugar Land homeowners, the right color choice transforms a kitchen from dated to distinctive — without a renovation budget or a construction timeline. This article covers the most popular cabinet color transformations we&apos;re seeing in these two markets right now, what makes each one work, and how to decide which direction is right for your home. For budgets, see our breakdown of the <Link href="/blog/cost-to-paint-kitchen-cabinets-houston-tx">cost to paint kitchen cabinets in Houston</Link>, and for local scheduling, our <Link href="/painters-katy-tx">painters in Katy TX</Link> and <Link href="/painters-sugar-land-tx">painters in Sugar Land TX</Link> pages cover each area.
             </p>
 
             <h2>Why Katy and Sugar Land Kitchens Are Prime Candidates for Cabinet Painting</h2>

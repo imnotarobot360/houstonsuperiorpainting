@@ -31,7 +31,7 @@ const PAGE_PATH = "/commercial-painting-houston-tx"
 const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
 const TITLE = "Commercial Painting in Houston, TX | Offices, Retail & HOAs"
 const DESCRIPTION =
-  "Commercial painters for Houston offices, retail, HOAs, and multifamily. After-hours crews, $2M insured. Free estimates. (346) 594-5960."
+  "Commercial painters for Houston offices, retail, HOAs, and multifamily. After-hours crews, insured. Free estimates. (346) 594-5960."
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 }
 
 const T = BUSINESS.trust
-const INSURANCE = `${T.liabilityCoverage} general liability plus workers' comp`
+const INSURANCE_SENTENCE = BUSINESS.insurance.sentence
 
 const SERVICE_JSONLD = {
   "@context": "https://schema.org",
@@ -73,7 +73,7 @@ const SERVICE_JSONLD = {
 const FAQS = [
   {
     q: "Can you send a certificate of insurance before the job starts?",
-    a: `Yes. We carry ${INSURANCE} and a current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements, so your property manager, HOA board or facilities team has it before the start date.`,
+    a: `Yes. ${INSURANCE_SENTENCE} Tell us early what your property manager, HOA board or facilities team requires, so it can be arranged before the start date.`,
   },
   {
     q: "Do you paint after hours and on weekends?",
@@ -115,7 +115,7 @@ export default function CommercialPaintingHoustonPage() {
         <QuickAnswer>
           Houston Superior Painting has painted homes and commercial buildings across Greater Houston since{" "}
           {BUSINESS.founded}. We repaint offices, retail, restaurants, HOA and multifamily properties, medical offices and
-          light industrial space, including after hours and on weekends in occupied buildings. We carry {INSURANCE}.{" "}
+          light industrial space, including after hours and on weekends in occupied buildings. {BUSINESS.insurance.short}{" "}
           {BUSINESS.insuranceProof.en} We back the work with a {T.warrantyYears}-year workmanship warranty, and
           put the complete scope, price, deposit and payment schedule in writing before you approve the project. Call <a href={PHONE_HREF}>{BUSINESS.phone}</a>.
         </QuickAnswer>
@@ -245,7 +245,7 @@ export default function CommercialPaintingHoustonPage() {
           <Bullets
             items={[
               <>
-                <strong>Insured:</strong> {INSURANCE}, with a certificate of insurance for managers and HOA boards.
+                <strong>Insured:</strong> {INSURANCE_SENTENCE}
               </>,
               <>
                 <strong>Warranty:</strong> a {T.warrantyYears}-year written workmanship warranty (
@@ -258,7 +258,7 @@ export default function CommercialPaintingHoustonPage() {
                 <strong>Clear written payment terms:</strong> free estimate, with the scope, price, deposit and payment schedule in writing before you approve.
               </>,
               <>
-                <strong>Five offices:</strong>{" "}
+                <strong>Service areas:</strong>{" "}
                 {BUSINESS.locations.map((l, i) => (
                   <span key={l.slug}>
                     {i > 0 && (i === BUSINESS.locations.length - 1 ? " and " : ", ")}

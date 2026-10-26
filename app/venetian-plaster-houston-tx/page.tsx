@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Venetian Plaster Houston TX — Houston Superior Painting',
-    description: 'Authentic hand-troweled Venetian plaster and polished plaster finishes for Houston luxury interiors. Marble-like depth and sheen. 5-year guarantee.',
+    description: 'Authentic hand-troweled Venetian plaster and polished plaster finishes for Houston luxury interiors. Marble-like depth and sheen. 5-year workmanship warranty on qualifying work.',
     url: 'https://houstonsuperiorpainting.com/venetian-plaster-houston-tx',
     siteName: 'Houston Superior Painting',
     type: 'website',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Venetian Plaster Houston TX — Houston Superior Painting',
-    description: 'Authentic hand-troweled Venetian plaster and polished plaster finishes for Houston luxury interiors. 5-year guarantee.',
+    description: 'Authentic hand-troweled Venetian plaster and polished plaster finishes for Houston luxury interiors. 5-year workmanship warranty on qualifying work.',
     images: ['https://houstonsuperiorpainting.com/images/og/og-venetian-plaster.png'],
   },
 }
@@ -84,7 +84,7 @@ const venetianFaqs = [
   },
   {
     question: "Where can Venetian plaster be applied?",
-    answer: "Venetian plaster works beautifully on interior feature walls, full rooms, ceilings, fireplace surrounds, entryways, and columns. It can be applied over properly prepared drywall, masonry, and existing smooth surfaces. We assess each surface during the consultation and prep it for a flawless result."
+    answer: "Venetian plaster works beautifully on interior feature walls, full rooms, ceilings, fireplace surrounds, entryways, and columns. It can be applied over properly prepared drywall, masonry, and existing smooth surfaces. We assess each surface during the consultation and prep it for a smooth result."
   },
   {
     question: "How long does Venetian plaster take to install?",
@@ -196,7 +196,7 @@ const benefits = [
   "A hard, sealed, washable surface that lasts for decades instead of years",
   "Custom sample board approval so you see the exact color and sheen before we start",
   "Same in-house artisan crew start to finish — no rotating subcontractors",
-  "5-year written quality guarantee on every plaster project",
+  "5-year written workmanship warranty on qualifying work",
 ]
 
 const relatedServices = [
@@ -226,7 +226,7 @@ export default function VenetianPlasterHoustonTX() {
               Venetian Plaster Finishes in Houston, TX
             </h1>
             <p className="font-cormorant text-xl md:text-2xl text-soft-white/80 leading-relaxed max-w-3xl mx-auto">
-              Authentic hand-troweled lime plaster with marble-like depth and a burnished sheen — for feature walls, ceilings, and luxury interiors. Free design consultation. 5-year quality guarantee.
+              Authentic hand-troweled lime plaster with marble-like depth and a burnished sheen — for feature walls, ceilings, and luxury interiors. Free design consultation. 5-year workmanship warranty on qualifying work.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button size="lg" variant="secondary" asChild>
@@ -248,7 +248,7 @@ export default function VenetianPlasterHoustonTX() {
             <div className="flex flex-wrap justify-center gap-6 lg:gap-10 text-center text-sm lg:text-base">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-accent" />
-                <span className="font-medium">500+ Houston Homes Painted</span>
+                <span className="font-medium">Serving Houston Since 2019</span>
               </div>
               <div className="flex items-center gap-2">
                 <ReviewsInline className="font-medium" />
@@ -259,7 +259,7 @@ export default function VenetianPlasterHoustonTX() {
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-accent" />
-                <span className="font-medium">$2M Liability + Workers' Comp</span>
+                <span className="font-medium">Insured · Proof on Request</span>
               </div>
             </div>
           </div>
@@ -270,7 +270,7 @@ export default function VenetianPlasterHoustonTX() {
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              Houston Superior Painting creates authentic hand-troweled Venetian plaster across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects run $8–$20 per square foot, and a single feature wall typically takes 2–4 days because each lime-plaster coat must cure before it is troweled and burnished. The breathable finish resists mold in Houston&apos;s humidity and lasts for decades. Every project is backed by our written 5-year quality guarantee. Free consultations at (346) 594-5960.
+              Houston Superior Painting creates authentic hand-troweled Venetian plaster across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects run $8–$20 per square foot, and a single feature wall typically takes 2–4 days because each lime-plaster coat must cure before it is troweled and burnished. The breathable finish resists mold in Houston&apos;s humidity and lasts for decades. Every project is backed by our 5-year written workmanship warranty on qualifying work. Free consultations at (346) 594-5960.
             </p>
           </div>
         </section>

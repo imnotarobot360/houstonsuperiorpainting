@@ -54,7 +54,7 @@ export default function PaintersTheHeightsTX() {
           state="TX"
           heroHeadline="House Painters in The Heights, Houston"
           heroDescription="Interior, exterior and cabinet painting for Heights homes, from early-1900s wood-sided bungalows to new townhomes and custom builds."
-          quickAnswer={`Houston Superior Painting paints homes in The Heights, Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Older wood-sided bungalows usually need more scraping, wood repair and priming than newer homes, which shows up in the estimate. Sherwin-Williams and Benjamin Moore products, insured crews, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          quickAnswer={`Houston Superior Painting paints homes in The Heights, Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Older wood-sided bungalows usually need more scraping, wood repair and priming than newer homes, which shows up in the estimate. Sherwin-Williams and Benjamin Moore products, insured crews, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
           aboutCity={`The Heights is one of Houston's oldest neighborhoods, with many early-1900s bungalows and cottages alongside newer townhomes and custom builds. Parts of it are city-designated historic districts.
 
 Older Heights homes bring specific painting work. Original wood siding and trim often carry many layers of old paint, so prep means scraping loose paint, repairing or replacing soft wood, caulking and priming bare wood before the finish coats. Many of these homes sit on pier-and-beam foundations, and settling can open cracks in interior walls and trim that should be repaired before repainting. Homes built before 1978 may contain lead paint, which federal rules require be disturbed only by an EPA-certified renovation firm, so ask any painter for their certification before scraping or sanding begins.
@@ -67,7 +67,7 @@ If your home is in a city historic district, check with the City of Houston abou
             "Interior crack and settling repair before repainting",
             "New construction experience: townhomes and custom builds",
             "Sherwin-Williams and Benjamin Moore products",
-            "Insured: $2M general liability plus workers' comp",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty"
           ]}
           services={[
@@ -129,7 +129,7 @@ If your home is in a city historic district, check with the City of Houston abou
           faqs={[
             {
               question: "How much does it cost to paint a house in The Heights?",
-              answer: `Interior painting in The Heights typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Older wood-sided homes that need heavy scraping and wood repair cost more. We provide free written estimates.`
+              answer: `Interior painting in The Heights typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Older wood-sided homes that need heavy scraping and wood repair cost more. We provide free written estimates.`
             },
             {
               question: "Do you paint older Heights bungalows?",

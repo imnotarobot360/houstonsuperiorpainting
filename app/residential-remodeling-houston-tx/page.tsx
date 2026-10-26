@@ -106,7 +106,7 @@ const faqs = [
   },
   {
     q: "Are you insured?",
-    a: "Yes. We carry $2M general liability and workers' compensation, and a current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.",
+    a: "Yes. We maintain business insurance. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance before work begins.",
   },
   {
     q: "How does payment work?",
@@ -264,8 +264,8 @@ export default function ResidentialRemodelingHoustonTX() {
           <p>
             Every remodel carries our written {BUSINESS.trust.warrantyYears}-year workmanship warranty. It covers
             peeling, blistering, and flaking and failed repairs caused by our workmanship. It does not cover damage from
-            water intrusion, settling, or surfaces you asked us not to prep. We carry $2M general liability and
-            workers&apos; compensation, and a current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.
+            water intrusion, settling, or surfaces you asked us not to prep. We maintain business insurance;
+            current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance before work begins.
           </p>
         </Section>
 

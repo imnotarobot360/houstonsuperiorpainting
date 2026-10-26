@@ -11,7 +11,7 @@ import { generateLocationBusinessSchema } from "@/components/structured-data"
 
 const TITLE = "House Painters in Fulshear TX | Houston Superior Painting"
 const DESCRIPTION =
-  "Interior, exterior & cabinet painting in Fulshear, TX. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960."
+  "Interior, exterior & cabinet painting in Fulshear, TX. insured, 5-year workmanship warranty. Free estimates: (346) 594-5960."
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -55,7 +55,7 @@ export default function PaintersFulshearTX() {
           state="TX"
           heroHeadline="House Painters in Fulshear, TX"
           heroDescription="Interior, exterior, and cabinet painting for Fulshear homes in Cross Creek Ranch, Fulbrook, Jordan Ranch, Tamarron, and the rest of the area. Insured, with a 5-year workmanship warranty."
-          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Fulshear, TX, including Cross Creek Ranch, Fulbrook on Fulshear Creek, Jordan Ranch, and Tamarron. We are headquartered in Cypress, and our crews work across Greater Houston and Fort Bend County. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We carry $2M general liability + workers' comp and give a 5-year workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
+          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Fulshear, TX, including Cross Creek Ranch, Fulbrook on Fulshear Creek, Jordan Ranch, and Tamarron. We are headquartered in Cypress, and our crews work across Greater Houston and Fort Bend County. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We are insured, with proof available upon request, and qualifying painting projects carry a 5-year written workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
           aboutCity={`Fulshear has grown quickly in recent years, and most of its homes are in newer master-planned communities such as Cross Creek Ranch, Jordan Ranch, and Tamarron. Many of those homes still have the flat builder-grade paint they were built with, which scuffs easily and is hard to clean. A common first project is repainting the main living areas, kitchen, and halls in a washable finish, or refinishing builder-grade cabinets in a new color.
 
 Fulshear has the same Gulf Coast climate as the rest of Greater Houston, and the south- and west-facing walls of a newer home are usually the first to fade and chalk. On an exterior we wash off the chalk, re-caulk the joints where siding meets brick, and prime any bare spots before the finish coats.
@@ -63,7 +63,7 @@ Fulshear has the same Gulf Coast climate as the rest of Greater Houston, and the
 Nearly every Fulshear master-planned community has an HOA that reviews exterior color changes. We can pull your community's approved color list and help with the approval paperwork before work starts.`}
           whyChooseUs={[
             "Free on-site estimate with the scope, price, deposit and payment schedule in writing before you approve",
-            "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty",
             "Sherwin-Williams and Benjamin Moore paints in place of flat builder-grade finishes",
             "Help with HOA color lists and approval paperwork",
@@ -125,7 +125,7 @@ Nearly every Fulshear master-planned community has an HOA that reviews exterior 
           faqs={[
             {
               question: "How much does it cost to paint a house in Fulshear?",
-              answer: `In 2026 interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exteriors run ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
+              answer: `In 2026 interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exteriors run ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
             },
             {
               question: "Do you work with Fulshear HOAs?",
@@ -145,7 +145,7 @@ Nearly every Fulshear master-planned community has an HOA that reviews exterior 
             },
             {
               question: "Are you insured?",
-              answer: "Yes. We carry $2M general liability + workers' comp and can send a certificate of insurance to you or your HOA. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license."
+              answer: "Yes. We maintain business insurance, and current proof of insurance is available upon request. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license."
             }
           ]}
         />

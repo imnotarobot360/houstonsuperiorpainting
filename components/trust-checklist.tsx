@@ -9,7 +9,7 @@ export const INSURANCE_REQUEST_PATH = "/insurance-and-warranty#request-proof-of-
 
 const ITEMS = [
   `${BUSINESS.trust.warrantyYears}-Year Written Workmanship Warranty`,
-  `${BUSINESS.trust.liabilityCoverage} general liability + workers' comp`,
+  BUSINESS.insurance.short,
   "Proof of insurance available upon request",
   "Insurance documentation provided after project approval",
   "Written project scope",

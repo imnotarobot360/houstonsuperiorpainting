@@ -38,7 +38,7 @@ export default function PaintersCypressCreekTX() {
           state="TX"
           heroHeadline="House Painters for the Cypress Creek Area"
           heroDescription="Interior, exterior and cabinet painting for neighborhoods along Cypress Creek in Northwest Houston, Klein and Spring, with prep suited to wooded, shaded lots."
-          quickAnswer={`Houston Superior Painting paints homes along the Cypress Creek corridor in Northwest Houston, Klein and Spring. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Shaded, wooded lots usually need extra washing, caulk and wood repair before painting. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          quickAnswer={`Houston Superior Painting paints homes along the Cypress Creek corridor in Northwest Houston, Klein and Spring. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Shaded, wooded lots usually need extra washing, caulk and wood repair before painting. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
           aboutCity={`Cypress Creek runs across northwest Harris County, and the neighborhoods along it range from established, wooded subdivisions such as Lakewood Forest and Northgate Forest to newer communities such as Gleannloch Farms. Many of the older homes date from the 1970s through the 1990s.
 
 Mature trees and the creek setting shape exterior work. Shade keeps siding and trim damp longer, which encourages mildew and slows drying, and leaves and sap build up on surfaces. Exterior repaints here start with a thorough wash, then caulk replacement, repair of soft or rotted wood, and priming bare spots before the finish coats, scheduled for dry weather.
@@ -50,7 +50,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in nearby Cyp
             "Prep for shaded, wooded lots: washing, mildew treatment, caulk and wood repair",
             "Interior crack and stain repair before repainting",
             "Sherwin-Williams and Benjamin Moore paints",
-            "Insured: $2M general liability plus workers' comp",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty",
             "Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve"
           ]}
@@ -113,7 +113,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in nearby Cyp
           faqs={[
             {
               question: "How much does house painting cost in the Cypress Creek area?",
-              answer: `Interior painting in the Cypress Creek area typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
+              answer: `Interior painting in the Cypress Creek area typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
             },
             {
               question: "Can you paint walls that had water damage?",

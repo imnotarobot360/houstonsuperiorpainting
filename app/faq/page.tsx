@@ -11,14 +11,14 @@ import {
   CORE_SERVICES,
   OFFICE_PAGES,
   officeForPage,
-  officeAddressLine,
+  officeAddressLine, publicAddressLine,
 } from "@/lib/business"
 
 const PAGE_PATH = "/faq"
 const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
 const TITLE = "Houston Painting FAQ: Costs, Insurance, Warranty & Timing"
 const DESCRIPTION =
-  "Answers to common Houston painting questions: 2026 costs, insurance, the 5-year warranty, humidity and timing, our five offices, and how to get a free estimate."
+  "Answers to common Houston painting questions: 2026 costs, insurance, the 5-year warranty, humidity and timing, our service areas, and how to get a free estimate."
 const H1 = "Houston Painting FAQ"
 
 export const metadata: Metadata = {
@@ -39,10 +39,12 @@ const P = PRICES_2026
 const W = BUSINESS.trust.warrantyYears
 const HQ = BUSINESS.primaryAddress
 
-// Offices in HQ-first order, rendered as one plain sentence for the answer text.
+// Areas in HQ-first order. Only the headquarters address is printed; the other
+// locations are not owner-verified as staffed offices (brief 2026-10-25).
 const officeSentence = OFFICE_PAGES.map((p) => {
   const o = officeForPage(p.slug)
-  return o ? `${p.name}: ${officeAddressLine(o)}` : p.name
+  const addr = o ? publicAddressLine(o) : null
+  return addr ? `${p.name}: ${addr}` : p.name
 }).join("; ")
 
 const hoursSentence = BUSINESS.hoursSummary.map((h) => `${h.label} ${h.value}`).join(", ")
@@ -67,7 +69,7 @@ const GROUPS: Group[] = [
     items: [
       {
         q: "How much does it cost to paint a house in Houston in 2026?",
-        a: `Interior painting runs ${P.interiorPerSqFt} per square foot and exterior painting runs ${P.exteriorPerSqFt} per square foot of floor area in 2026. A 2,500 sq ft home costs ${P.fullInterior2500} for the interior and ${P.exterior2500TwoStory} for a two-story exterior. Our prices include labor, prep, and premium paint.`,
+        a: `Interior painting runs about ${P.interiorPerSqFt} per square foot of floor area; exterior painting is priced per project. A 2,500 sq ft home costs ${P.fullInterior2500} for the interior and ${P.exterior2500TwoStory} for a two-story exterior. Our prices include labor, prep, and premium paint.`,
       },
       {
         q: "How much does it cost to paint one room in Houston?",
@@ -75,7 +77,7 @@ const GROUPS: Group[] = [
       },
       {
         q: "How much does exterior house painting cost in Houston?",
-        a: `${P.exteriorPerSqFt} per square foot of floor area, or ${P.exteriorPerHome} per home. A 2,500 sq ft two-story home runs ${P.exterior2500TwoStory}. That includes pressure washing, scraping, caulking, priming, and two coats. Wood rot repair is priced separately.`,
+        a: `Exterior prices are project-specific; most homes budget ${P.exteriorPerHome}. A 2,500 sq ft two-story home runs ${P.exterior2500TwoStory}. That includes pressure washing, scraping, caulking, priming, and two coats. Wood rot repair is priced separately.`,
       },
       {
         q: "How much does it cost to paint kitchen cabinets in Houston?",
@@ -107,7 +109,7 @@ const GROUPS: Group[] = [
       },
       {
         q: "Is Houston Superior Painting insured?",
-        a: `Yes. We carry ${BUSINESS.trust.liabilityCoverage} general liability and workers' compensation. Ask for the certificate of insurance before any painter starts; ours is available upon request and is provided after a project is approved, according to the project requirements.`,
+        a: `Yes. We maintain business insurance, and current proof of insurance is available upon request. Ask for the certificate of insurance before any painter starts; ours is available upon request and is provided after a project is approved, according to the project requirements.`,
       },
       {
         q: `What does the ${W}-year warranty cover?`,
@@ -198,11 +200,11 @@ const GROUPS: Group[] = [
   },
   {
     id: "offices",
-    title: "Offices & service area",
+    title: "Location & service area",
     items: [
       {
-        q: "Where are your offices?",
-        a: `We have five offices. ${officeSentence}. All five use ${BUSINESS.phone}.`,
+        q: "Where are you located?",
+        a: `We are headquartered in Cypress and serve Greater Houston. Areas with their own Google Business Profile: ${officeSentence}. Call ${BUSINESS.phone}.`,
       },
       {
         q: "What areas do you serve?",
@@ -269,10 +271,9 @@ export default function FaqPage() {
 
       <QuickAnswer>
         {BUSINESS.name} is an insured Houston painting contractor founded in {BUSINESS.founded} by{" "}
-        {BUSINESS.founder.name}, with five offices across Greater Houston. Interior painting costs{" "}
-        {P.interiorPerSqFt}/sq ft and exterior painting {P.exteriorPerSqFt}/sq ft in 2026. We carry{" "}
-        {BUSINESS.trust.liabilityCoverage} liability plus workers&apos; comp, put the scope, price, deposit and payment schedule in writing before you approve, and back every job with a{" "}
-        {W}-year workmanship warranty. Call {BUSINESS.phone}.
+        {BUSINESS.founder.name}, serving Greater Houston. Interior painting budgets run about{" "}
+        {P.interiorPerSqFt} per sq ft of floor area; exterior prices are project-specific. {BUSINESS.insurance.short}{" "}
+        {BUSINESS.paymentPolicy.sentence} {BUSINESS.warranty.summary} Call {BUSINESS.phone}.
       </QuickAnswer>
 
       <nav aria-label="FAQ topics" className="container mx-auto px-4 max-w-4xl mb-4">

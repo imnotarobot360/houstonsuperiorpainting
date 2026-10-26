@@ -40,7 +40,7 @@ export default function PaintersMemorialVillagesTX() {
           state="TX"
           heroHeadline="House Painters for the Memorial Villages"
           heroDescription="Interior, exterior and cabinet painting in Bunker Hill, Piney Point, Hedwig, Hunters Creek, Spring Valley and Hilshire Village, with prep suited to shaded, wooded lots."
-          quickAnswer={`Houston Superior Painting paints homes in the six Memorial Villages: Bunker Hill, Piney Point, Hedwig, Hunters Creek, Spring Valley and Hilshire Village. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior4000} for homes around 4,000 sq ft) and a two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}. Each village is its own city, so check local rules for exterior work before scheduling. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          quickAnswer={`Houston Superior Painting paints homes in the six Memorial Villages: Bunker Hill, Piney Point, Hedwig, Hunters Creek, Spring Valley and Hilshire Village. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (${PRICES_2026.fullInterior4000} for homes around 4,000 sq ft) and a two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}. Each village is its own city, so check local rules for exterior work before scheduling. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
           aboutCity={`The Memorial Villages are six small, independent cities in west Houston: Bunker Hill Village, Piney Point Village, Hedwig Village, Hunters Creek Village, Spring Valley Village and Hilshire Village. Homes range from original mid-century ranches on wooded lots to large newer custom builds.
 
 Because each village is its own municipality, rules for contractors and exterior work can differ from one to the next. Check with your village before an exterior project, and we will work within whatever it requires.
@@ -53,7 +53,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
             "Landscape protection during exterior work",
             "Equipment and planning for tall walls, stairwells and detailed trim",
             "Sherwin-Williams and Benjamin Moore products",
-            "Insured: $2M general liability plus workers' comp",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty"
           ]}
           services={[
@@ -115,7 +115,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
           faqs={[
             {
               question: "How much does painting cost in the Memorial Villages?",
-              answer: `Interior painting in the Memorial Villages typically costs ${PRICES_2026.interiorPerSqFt} per square foot; homes around 4,000 sq ft generally run ${PRICES_2026.fullInterior4000} inside. A two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}, and larger homes with extensive millwork are quoted after a walkthrough. We provide free written estimates.`
+              answer: `Interior painting in the Memorial Villages typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area; homes around 4,000 sq ft generally run ${PRICES_2026.fullInterior4000} inside. A two-story exterior around 4,000 sq ft typically runs ${PRICES_2026.exterior4000TwoStory}, and larger homes with extensive millwork are quoted after a walkthrough. We provide free written estimates.`
             },
             {
               question: "Do you serve all six Memorial Villages?",

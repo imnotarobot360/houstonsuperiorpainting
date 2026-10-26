@@ -11,13 +11,13 @@ import { CheckCircle, Phone, Star, Shield, Users, ArrowRight } from "lucide-reac
 
 export const metadata: Metadata = {
   title: 'Wallpaper Removal Houston TX | Repair & Painting',
-  description: 'Professional wallpaper removal in Houston, TX. Clean removal, wall repair and skim coating, and a flawless painted finish. 5-year guarantee.',
+  description: 'Professional wallpaper removal in Houston, TX. Clean removal, wall repair and skim coating, and a smooth painted finish. 5-year workmanship warranty on qualifying work.',
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/wallpaper-removal-houston-tx',
   },
   openGraph: {
     title: 'Wallpaper Removal Houston TX — Houston Superior Painting',
-    description: 'Professional wallpaper removal in Houston, TX. Clean removal, wall repair, and a flawless painted finish. 5-year guarantee.',
+    description: 'Professional wallpaper removal in Houston, TX. Clean removal, wall repair, and a smooth painted finish. 5-year workmanship warranty on qualifying work.',
     url: 'https://houstonsuperiorpainting.com/wallpaper-removal-houston-tx',
     siteName: 'Houston Superior Painting',
     type: 'website',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Wallpaper Removal Houston TX — Houston Superior Painting',
-    description: 'Professional wallpaper removal in Houston. Clean removal, wall repair, and a flawless painted finish. 5-year guarantee.',
+    description: 'Professional wallpaper removal in Houston. Clean removal, wall repair, and a smooth painted finish. 5-year workmanship warranty on qualifying work.',
     images: ['https://houstonsuperiorpainting.com/images/og/og-wallpaper-removal.png'],
   },
 }
@@ -43,7 +43,7 @@ const wallpaperFaqs = [
   },
   {
     question: "Do you repair the walls after removing wallpaper?",
-    answer: "Yes — wall repair is included. Removal almost always leaves behind adhesive residue, torn paper facing, or small gouges. We clean off all glue, patch and skim-coat damaged areas, sand smooth, and prime so the surface is paint-ready and flawless."
+    answer: "Yes — wall repair is included. Removal almost always leaves behind adhesive residue, torn paper facing, or small gouges. We clean off all glue, patch and skim-coat damaged areas, sand smooth, and prime so the surface is paint-ready and smooth."
   },
   {
     question: "Will removing wallpaper damage my drywall?",
@@ -78,7 +78,7 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://houstonsuperiorpainting.com/wallpaper-removal-houston-tx#service",
   "name": "Wallpaper Removal in Houston, TX",
-  "description": "Professional wallpaper removal including controlled steam removal, adhesive cleanup, drywall repair and skim coating, priming, and a flawless painted finish for Houston homes.",
+  "description": "Professional wallpaper removal including controlled steam removal, adhesive cleanup, drywall repair and skim coating, priming, and a smooth painted finish for Houston homes.",
   "serviceType": "Wallpaper Removal",
   "provider": { "@id": "https://houstonsuperiorpainting.com/#organization" },
   "areaServed": [
@@ -122,13 +122,13 @@ const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "Our 5-Step Wallpaper Removal Process",
-  "description": "How Houston Superior Painting removes wallpaper and delivers a flawless painted finish.",
+  "description": "How Houston Superior Painting removes wallpaper and delivers a smooth painted finish.",
   "totalTime": "P2D",
   "step": [
     { "@type": "HowToStep", "position": 1, "name": "Protect the room", "text": "We cover floors, move and wrap furniture, and mask trim and outlets before any removal begins." },
     { "@type": "HowToStep", "position": 2, "name": "Score and steam", "text": "We score the wallpaper and use controlled steam to loosen the adhesive, lifting the paper cleanly without gouging the drywall." },
     { "@type": "HowToStep", "position": 3, "name": "Remove adhesive", "text": "All remaining glue and paste residue is washed off the wall — a step many skip that causes paint failure later." },
-    { "@type": "HowToStep", "position": 4, "name": "Repair and skim coat", "text": "We patch gouges, skim-coat uneven areas, sand smooth, and prime to create a flawless, paint-ready surface." },
+    { "@type": "HowToStep", "position": 4, "name": "Repair and skim coat", "text": "We patch gouges, skim-coat uneven areas, sand smooth, and prime to create a clean, paint-ready surface." },
     { "@type": "HowToStep", "position": 5, "name": "Paint and walkthrough", "text": "We apply your chosen color for a clean modern finish, then walk the finished room with you for sign-off." }
   ]
 }
@@ -158,7 +158,7 @@ const benefits = [
   "Complete adhesive removal so your new paint never bubbles or peels",
   "Skim coating and priming for a truly smooth, modern finish",
   "One crew takes you from dated wallpaper to a freshly painted room",
-  "5-year written quality guarantee on the painted finish",
+  "5-year written workmanship warranty on the painted finish",
 ]
 
 const relatedServices = [
@@ -188,11 +188,11 @@ export default function WallpaperRemovalHoustonTX() {
               Wallpaper Removal in Houston, TX
             </h1>
             <p className="font-cormorant text-xl md:text-2xl text-soft-white/80 leading-relaxed max-w-3xl mx-auto">
-              Clean, damage-free removal, expert wall repair, and a flawless painted finish — from dated wallpaper to a fresh modern room. Free estimates. 5-year quality guarantee.
+              Clean, damage-free removal, expert wall repair, and a smooth painted finish — from dated wallpaper to a fresh modern room. Free estimates. 5-year workmanship warranty on qualifying work.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/painting-estimate-houston">Get My Free Estimate</Link>
+                <Link href="/painting-estimate-houston">Request My Free Estimate</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-primary-foreground !bg-transparent !text-primary-foreground hover:!bg-primary-foreground hover:!text-primary" asChild>
                 <a href="tel:+13465945960" aria-label="Call Houston Superior Painting at 346-594-5960" className="flex items-center gap-2">
@@ -210,7 +210,7 @@ export default function WallpaperRemovalHoustonTX() {
             <div className="flex flex-wrap justify-center gap-6 lg:gap-10 text-center text-sm lg:text-base">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-accent" />
-                <span className="font-medium">500+ Houston Homes Painted</span>
+                <span className="font-medium">Serving Houston Since 2019</span>
               </div>
               <div className="flex items-center gap-2">
                 <ReviewsInline className="font-medium" />
@@ -221,7 +221,7 @@ export default function WallpaperRemovalHoustonTX() {
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-accent" />
-                <span className="font-medium">$2M Liability + Workers' Comp</span>
+                <span className="font-medium">Insured · Proof on Request</span>
               </div>
             </div>
           </div>
@@ -232,7 +232,7 @@ export default function WallpaperRemovalHoustonTX() {
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              Houston Superior Painting removes wallpaper and delivers a flawless painted finish across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects cost $3–$8 per square foot, take 1–2 days per room, and include controlled steam removal, full adhesive cleanup, drywall repair, and painting. Every job is backed by our written 5-year quality guarantee. Free estimates at (346) 594-5960.
+              Houston Superior Painting removes wallpaper and delivers a smooth painted finish across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects cost $3–$8 per square foot, take 1–2 days per room, and include controlled steam removal, full adhesive cleanup, drywall repair, and painting. Every job is backed by our 5-year written workmanship warranty on qualifying painting work. Free estimates at (346) 594-5960.
             </p>
           </div>
         </section>

@@ -22,11 +22,11 @@ export function LocationsSection() {
         <Reveal className="max-w-2xl mb-16">
           <p className="kicker mb-4">Service Areas</p>
           <h2 className="font-display text-3xl sm:text-5xl text-foreground leading-tight text-balance">
-            Five offices, one crew standard
+            One crew standard across Greater Houston
           </h2>
           <p className="mt-5 font-cormorant text-xl text-graphite leading-relaxed">
-            Cypress, Houston, Katy, Sugar Land and Magnolia. Each office runs the same prep-first
-            process, tuned for Gulf Coast humidity. One number reaches all five:{" "}
+            Cypress, Houston, Katy, Sugar Land, Magnolia and the communities around them, with the same prep-first
+            process, tuned for Gulf Coast humidity. One number for every area:{" "}
             <a href={PHONE_HREF} className="text-foreground underline decoration-gold underline-offset-4 hover:text-gold-deep">
               {BUSINESS.phone}
             </a>
@@ -43,9 +43,7 @@ export function LocationsSection() {
                   <ArrowUpRight className="h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
                 </span>
                 <span className="font-manrope text-sm text-muted-foreground leading-relaxed">
-                  {loc.street}
-                  <br />
-                  {loc.city}, {loc.state} {loc.zip}
+                  Serving {loc.city} and surrounding communities
                 </span>
               </Link>
             </li>

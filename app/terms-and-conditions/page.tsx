@@ -1,13 +1,28 @@
 import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { BUSINESS } from "@/lib/business"
 
-export const metadata: Metadata = {
+const PAGE_META = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/terms-and-conditions',
   },
   title: "Terms and Conditions | Houston Superior Painting",
   description: "Terms and Conditions for Houston Superior Painting services. Read our service agreement, warranties, and policies.",
+}
+
+// Own Open Graph block so link previews and og:url match this page, not the
+// homepage defaults in app/layout.tsx (owner brief 2026-10-25, phase 11).
+export const metadata: Metadata = {
+  ...PAGE_META,
+  openGraph: {
+    title: PAGE_META.title,
+    description: PAGE_META.description,
+    url: PAGE_META.alternates.canonical,
+    siteName: "Houston Superior Painting",
+    type: "website",
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+  },
 }
 
 export default function TermsAndConditionsPage() {
@@ -94,7 +109,7 @@ export default function TermsAndConditionsPage() {
 
             <h2>Insurance and Registration</h2>
             <p>
-              Houston Superior Painting LLC is a registered Texas business and is fully insured. We carry general liability insurance and workers&apos; compensation coverage. Proof of insurance is available upon request. The State of Texas does not issue an occupational license for residential painting contractors, and we make no claim to hold one.
+              Houston Superior Painting LLC is a registered Texas business that maintains business insurance. Current proof of insurance is available upon request. The State of Texas does not issue an occupational license for residential painting contractors, and we make no claim to hold one.
             </p>
 
             <h2>Limitation of Liability</h2>
@@ -119,7 +134,7 @@ export default function TermsAndConditionsPage() {
             <ul>
               <li>Phone: (346) 594-5960</li>
               <li>Email: info@houstonsuperiorpainting.com</li>
-              <li>Address: 2617 Bissonnet St #443, Houston, TX 77005</li>
+              <li>Address (headquarters): {BUSINESS.primaryAddress.street}, {BUSINESS.primaryAddress.city}, {BUSINESS.primaryAddress.state} {BUSINESS.primaryAddress.zip}</li>
             </ul>
 
           </div>

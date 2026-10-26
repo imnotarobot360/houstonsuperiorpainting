@@ -43,7 +43,7 @@ export default function BestExteriorPaintHoustonWeather() {
         <div className="container mx-auto px-4 max-w-6xl">
           <nav aria-label="Breadcrumb" className="mb-6"><ol className="flex items-center gap-2 text-sm text-primary-foreground/70"><li><Link href="/" className="hover:text-primary-foreground">Home</Link></li><ChevronRight className="h-3 w-3" /><li className="text-primary-foreground font-medium">Best Exterior Paint Houston</li></ol></nav>
           <h1 className="hero-h1 text-3xl md:text-5xl font-serif font-bold text-primary-foreground mb-6 text-balance">Best Exterior Paint for Houston Weather – 2026 Guide</h1>
-          <p className="text-primary-foreground/90 text-lg md:text-xl max-w-3xl mb-8 leading-relaxed">Paint product recommendations from 500+ Houston painting projects since 2019. Which paints survive the heat, humidity, and storms.</p>
+          <p className="text-primary-foreground/90 text-lg md:text-xl max-w-3xl mb-8 leading-relaxed">Paint product recommendations from Houston painting projects since 2019. Which paints survive the heat, humidity, and storms.</p>
         </div>
       </section>
 
@@ -57,7 +57,7 @@ export default function BestExteriorPaintHoustonWeather() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6">Why Houston Weather Demands Premium Exterior Paint</h2>
-          <p className="text-muted-foreground leading-relaxed mb-6">Houston is one of the hardest environments for exterior paint in the United States. The combination of extreme UV exposure (200+ sunny days/year), average humidity above 75%, temperatures swinging from 35 to 105 degrees, and severe storm seasons creates conditions that destroy cheap paint within 3-4 years. After 500+ Houston projects since 2019, we have learned which products perform and which fail. Premium paint is why our <Link href="/exterior-painting-houston-tx" className="text-primary underline">exterior painting in Houston</Link> holds up to the full 5–7 year repaint cycle, and the <Link href="/exterior-house-painting-houston-cost-guide" className="text-primary underline">exterior house painting cost guide</Link> shows what the upgrade adds to a quote. The same product list goes on homes we paint from our <Link href="/painters-sugar-land-tx" className="text-primary underline">painters in Sugar Land TX</Link> and <Link href="/painters-magnolia-tx" className="text-primary underline">Magnolia TX</Link> offices.</p>
+          <p className="text-muted-foreground leading-relaxed mb-6">Houston is one of the hardest environments for exterior paint in the United States. The combination of extreme UV exposure (200+ sunny days/year), average humidity above 75%, temperatures swinging from 35 to 105 degrees, and severe storm seasons creates conditions that destroy cheap paint within 3-4 years. Since 2019, our Houston projects have shown us which products perform and which fail. Premium paint is why our <Link href="/exterior-painting-houston-tx" className="text-primary underline">exterior painting in Houston</Link> holds up to the full 5–7 year repaint cycle, and the <Link href="/exterior-house-painting-houston-cost-guide" className="text-primary underline">exterior house painting cost guide</Link> shows what the upgrade adds to a quote. The same product list goes on homes we paint from our <Link href="/painters-sugar-land-tx" className="text-primary underline">painters in Sugar Land TX</Link> and <Link href="/painters-magnolia-tx" className="text-primary underline">Magnolia TX</Link> offices.</p>
 
           <h3 className="text-xl font-semibold mb-4">What Houston Weather Does to Exterior Paint</h3>
           <ul className="space-y-3 mb-8">
@@ -168,7 +168,7 @@ export default function BestExteriorPaintHoustonWeather() {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary-foreground mb-4">Need Help Choosing the Right Paint?</h2>
-          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">We provide free color and product consultation with every exterior painting estimate. Let experience from 500+ Houston projects guide your decision.</p>
+          <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">We provide free color and product consultation with every exterior painting estimate. Let our Houston project experience guide your decision.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary/90 transition-colors"><Phone className="h-5 w-5" /> Call {BUSINESS.phone}</a>
             <a href={SMS_HREF} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-foreground/90 transition-colors"><MessageSquare className="h-5 w-5" /> Text Us</a>

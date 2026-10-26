@@ -8,7 +8,7 @@ const SLUG = "interior-painting-houston-tx"
 const URL = serviceUrl(SLUG)
 const TITLE = "Interior Painting Houston TX | 2026 Prices & Process"
 const DESCRIPTION =
-  `Interior painting in Houston costs ${PRICES_2026.interiorPerSqFt}/sq ft in 2026, or ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Two coats, 5-year warranty. Call (346) 594-5960.`
+  `Interior painting in Houston costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area in 2026, or ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Two coats, 5-year warranty. Call (346) 594-5960.`
 const OG_IMAGE = "https://houstonsuperiorpainting.com/images/og/og-interior-painting.jpg"
 
 export const metadata: Metadata = {
@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     q: "Are you insured in Texas?",
-    a: "Texas does not license painters. We carry $2M general liability and workers' compensation, and a current certificate of insurance is available upon request and is provided after a project is approved, according to the project requirements.",
+    a: "Texas does not license painters. We maintain business insurance. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance before work begins.",
   },
   {
     q: "What does the 5-year warranty cover?",
@@ -93,7 +93,7 @@ export default function InteriorPaintingHoustonTX() {
       h1="Interior Painting in Houston, TX"
       quickAnswer={
         <>
-          Interior painting in Houston costs {PRICES_2026.interiorPerSqFt} per square foot in 2026:{" "}
+          Interior painting in Houston costs {PRICES_2026.interiorPerSqFt} per square foot of floor area in 2026:{" "}
           {PRICES_2026.singleRoom} for a single room and {PRICES_2026.fullInterior2500} for a 2,500 sq ft home.{" "}
           {BUSINESS.name} preps, patches, and applies two coats of Sherwin-Williams or Benjamin Moore, backed by a{" "}
           {BUSINESS.trust.warrantyYears}-year workmanship warranty. Free estimates: {BUSINESS.phone}.

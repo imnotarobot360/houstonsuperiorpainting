@@ -1,14 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Check, Info } from "lucide-react"
-import { PRICES_2026 } from "@/lib/business"
+import { BUSINESS, PRICES_2026, PRICING_DISCLAIMER } from "@/lib/business"
 
 // Must agree with PRICES_2026 in lib/business.ts and the /houston-painting-cost-guide tables.
 const pricingData = [
   {
     service: "Interior Painting",
     priceRange: PRICES_2026.interiorPerSqFt,
-    unit: "per sq ft",
+    unit: "per sq ft of floor area",
     examples: [
       `1,500 sq ft home: ${PRICES_2026.fullInterior1500}`,
       `2,500 sq ft home: ${PRICES_2026.fullInterior2500}`,
@@ -103,13 +103,13 @@ export function PricingSection() {
 
         <div className="text-center space-y-4">
           <p className="text-muted-foreground">
-            Every project is unique. Get an exact quote for your home — it&apos;s free and takes just 24 hours.
+            {PRICING_DISCLAIMER}
           </p>
           <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold" asChild>
-            <a href="/painting-estimate-houston">Get Your Free Estimate</a>
+            <a href="/painting-estimate-houston">Request My Free Estimate</a>
           </Button>
           <p className="text-sm text-muted-foreground">
-            No obligation • Clear written payment terms
+            {BUSINESS.paymentPolicy.shortLine}
           </p>
         </div>
       </div>

@@ -7,7 +7,7 @@ import { PRICES_2026 } from "@/lib/business"
 
 const TITLE = "House Painters in Tomball TX | Houston Superior Painting"
 const DESCRIPTION =
-  "Interior, exterior & cabinet painting in Tomball, TX, from our Cypress HQ. $2M general liability + workers' comp, 5-year warranty. Call (346) 594-5960."
+  "Interior, exterior & cabinet painting in Tomball, TX, from our Cypress HQ. insured, 5-year workmanship warranty. Call (346) 594-5960."
 const OG_IMAGE = "https://houstonsuperiorpainting.com/images/og/og-painters-tomball.jpg"
 
 export const metadata: Metadata = {
@@ -57,7 +57,7 @@ export default function PaintersTomballTX() {
           state="TX"
           heroHeadline="House Painters in Tomball, TX"
           heroDescription="Interior, exterior, and cabinet painting for Tomball homes, from older houses near downtown to newer master-planned communities. Insured, with a 5-year workmanship warranty."
-          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Tomball, TX, including Old Town Tomball, Northpointe, Augusta Pines, and Rosehill. We are headquartered in nearby Cypress, and our crews work across Northwest Houston and Greater Houston. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We carry $2M general liability + workers' comp and give a 5-year workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
+          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Tomball, TX, including Old Town Tomball, Northpointe, Augusta Pines, and Rosehill. We are headquartered in nearby Cypress, and our crews work across Northwest Houston and Greater Houston. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We are insured, with proof available upon request, and qualifying painting projects carry a 5-year written workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
           aboutCity={`Tomball started as a railroad town, and its housing still reflects that: older homes near Main Street and downtown, many with wood siding and detailed trim, alongside newer master-planned communities such as Northpointe and Augusta Pines.
 
 Older wood-sided homes need the most prep. We probe siding, trim, and window sills for soft wood, replace what has rotted, scrape loose paint, and prime bare wood before the finish coats, because paint over rot or loose paint fails quickly. Homes built before 1978 may contain lead paint, which federal rules require be disturbed only by an EPA-certified renovation firm, so ask any painter about that before work on an older home begins.
@@ -65,7 +65,7 @@ Older wood-sided homes need the most prep. We probe siding, trim, and window sil
 Tomball has the same heat, humidity, and heavy rain as the rest of Greater Houston, and wooded lots add shade and mildew. We wash off mildew and chalk and let the surfaces dry fully before painting. Tomball is a short drive from our Cypress headquarters.`}
           whyChooseUs={[
             "Free on-site estimate with the scope, price, deposit and payment schedule in writing before you approve",
-            "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty",
             "Sherwin-Williams and Benjamin Moore paints",
             "Wood-rot repair and full prep on older wood-sided homes",
@@ -130,7 +130,7 @@ Tomball has the same heat, humidity, and heavy rain as the rest of Greater Houst
         faqs={[
           {
             question: "How much does it cost to paint a house in Tomball?",
-            answer: `In 2026 interior painting typically runs ${PRICES_2026.interiorPerSqFt} per square foot and exterior painting ${PRICES_2026.exteriorPerSqFt} per square foot. A 2,500 sq ft home interior runs ${PRICES_2026.fullInterior2500}, and a 2,500 sq ft two-story exterior ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
+            answer: `In 2026 interior painting typically runs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, and exterior painting is priced per project. A 2,500 sq ft home interior runs ${PRICES_2026.fullInterior2500}, and a 2,500 sq ft two-story exterior ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
           },
           {
             question: "Do you paint older homes in Old Town Tomball?",

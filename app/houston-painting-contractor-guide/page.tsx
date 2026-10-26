@@ -35,7 +35,7 @@ const DATE_PUBLISHED = "2026-10-08"
 const DATE_MODIFIED = "2026-10-08"
 const DATE_LABEL = "Oct 8, 2026"
 
-const INSURANCE = `${BUSINESS.trust.liabilityCoverage} general liability + workers' comp`
+const INSURANCE = BUSINESS.insurance.short
 const WARRANTY_YEARS = BUSINESS.trust.warrantyYears
 
 // ─── External sources (each URL checked 2026-10-08) ──────────────────
@@ -81,7 +81,7 @@ const FAQS = [
   },
   {
     q: "How much insurance should a Houston painting contractor carry?",
-    a: `Ask for general liability of at least $1M plus workers' compensation, and confirm both are current with the insurer. Houston Superior Painting carries ${INSURANCE}.`,
+    a: `Ask for a current certificate of insurance and confirm it with the insurer named on it. ${BUSINESS.insurance.sentence}`,
   },
   {
     q: "How many painting estimates should I get?",
@@ -260,8 +260,8 @@ export default function HoustonPaintingContractorGuidePage() {
           />
           <p>
             Exterior work also means ladders and heights. Falls are the leading cause of death in construction according to
-            OSHA (<Ext href={SRC.oshaFalls}>OSHA fall prevention</Ext>), which is one more reason a crew&apos;s workers&apos;
-            comp coverage matters to you. See our <Link href="/exterior-painting-houston-tx">exterior painting</Link> page
+            OSHA (<Ext href={SRC.oshaFalls}>OSHA fall prevention</Ext>), which is one more reason to confirm a contractor&apos;s
+            insurance before exterior work starts. See our <Link href="/exterior-painting-houston-tx">exterior painting</Link> page
             for how we scope it.
           </p>
         </Section>
@@ -352,8 +352,8 @@ export default function HoustonPaintingContractorGuidePage() {
 
         <Section title="What drives the price">
           <p>
-            Typical 2026 Houston ranges run {PRICES_2026.interiorPerSqFt} per sq ft for interiors,{" "}
-            {PRICES_2026.exteriorPerSqFt} per sq ft for exteriors, {PRICES_2026.singleRoom} for a single room and{" "}
+            Our budgeting ranges run {PRICES_2026.interiorPerSqFt} per sq ft of floor area for interiors,{" "}
+            {PRICES_2026.exteriorPerHome} for most whole-house exteriors, {PRICES_2026.singleRoom} for a single room and{" "}
             {PRICES_2026.cabinetsPerKitchen} for a kitchen of cabinets. What moves a job within or past those ranges:
           </p>
           <Bullets
@@ -377,7 +377,7 @@ export default function HoustonPaintingContractorGuidePage() {
             painter hurt on your job; without it, an injured worker may look to the homeowner.
           </p>
           <ol>
-            <li>Ask for a certificate of insurance (COI) showing general liability and workers&apos; comp.</li>
+            <li>Ask for a current certificate of insurance (COI) and read which coverages it lists.</li>
             <li>Ask for it to list you as certificate holder and to come straight from the insurer or agent.</li>
             <li>
               Call the insurer or agent at the number on the certificate and confirm the policy is active for the dates of
@@ -386,7 +386,7 @@ export default function HoustonPaintingContractorGuidePage() {
             <li>If the crew includes subcontractors, confirm the COI covers them or that they carry their own.</li>
           </ol>
           <p>
-            Houston Superior Painting carries {INSURANCE}. Proof of insurance is available upon request, and customers who
+            {BUSINESS.insurance.short} Customers who
             approve a project receive our current insurance documentation before work begins (
             <Link href="/insurance-and-warranty#request-proof-of-insurance">request it here</Link>). Step-by-step detail:{" "}
             <Link href="/blog/how-to-verify-painting-contractor-insurance-houston">how to verify a painting contractor&apos;s insurance</Link>.
@@ -423,8 +423,8 @@ export default function HoustonPaintingContractorGuidePage() {
           <Bullets
             items={[
               <>
-                A total well below typical 2026 Houston ranges ({PRICES_2026.exteriorPerSqFt}/sq ft exterior,{" "}
-                {PRICES_2026.interiorPerSqFt}/sq ft interior) with no explanation
+                A total well below our budgeting ranges ({PRICES_2026.exteriorPerHome} for most exteriors,{" "}
+                {PRICES_2026.interiorPerSqFt} per sq ft of floor area for interiors) with no explanation
               </>,
               <>No written scope, just a number</>,
               <>&ldquo;We use quality paint&rdquo; instead of a named product and sheen</>,
@@ -442,8 +442,8 @@ export default function HoustonPaintingContractorGuidePage() {
         <Section title="The 8 questions to ask every Houston painter">
           <ol>
             <li>
-              <strong>Can you email me your certificate of insurance today?</strong> Liability and workers&apos; comp,
-              current dates.
+              <strong>Can you email me your certificate of insurance today?</strong> Current dates, and the
+              coverages listed.
             </li>
             <li>
               <strong>What prep is included?</strong> For exteriors: wash, scrape, sand, caulk, prime bare wood, rot repair.

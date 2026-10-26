@@ -114,8 +114,7 @@ const D: GuideArticleData = {
       body: (
         <>
           <p>
-            Houston Superior Painting carries {T.liabilityCoverage} in general liability coverage and workers&apos;
-            compensation insurance. Proof of current insurance is available on request and is provided after project approval.
+            {BUSINESS.insurance.sentence}
           </p>
           <p>
             Qualifying repaint work includes a {T.warrantyYears}-year written workmanship warranty. Touch-ups, temporary

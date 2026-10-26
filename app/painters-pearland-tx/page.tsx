@@ -11,7 +11,7 @@ import { PRICES_2026 } from "@/lib/business"
 
 const TITLE = "House Painters in Pearland TX | Houston Superior Painting"
 const DESCRIPTION =
-  "Interior, exterior & cabinet painting in Pearland, TX. $2M general liability + workers' comp, 5-year warranty. Free estimates: (346) 594-5960."
+  "Interior, exterior & cabinet painting in Pearland, TX. insured, 5-year workmanship warranty. Free estimates: (346) 594-5960."
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -55,7 +55,7 @@ export default function PaintersPearlandTX() {
           state="TX"
           heroHeadline="House Painters in Pearland, TX"
           heroDescription="Interior, exterior, and cabinet painting for Pearland homes, from Old Pearland to Silverlake and Shadow Creek Ranch. Insured, with a 5-year workmanship warranty."
-          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Pearland, TX, including Silverlake, Shadow Creek Ranch, Southfork, and Southern Trails. We are headquartered in Cypress, and our crews work across Greater Houston. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We carry $2M general liability + workers' comp and give a 5-year workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
+          quickAnswer={`Houston Superior Painting paints interiors, exteriors, and kitchen cabinets and repairs drywall in Pearland, TX, including Silverlake, Shadow Creek Ranch, Southfork, and Southern Trails. We are headquartered in Cypress, and our crews work across Greater Houston. In 2026 a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} and a 2,500 sq ft two-story exterior runs ${PRICES_2026.exterior2500TwoStory}. We are insured, with proof available upon request, and qualifying painting projects carry a 5-year written workmanship warranty. For a free estimate, call (346) 594-5960 or request one online.`}
           aboutCity={`Pearland's housing runs from older homes in Old Pearland to master-planned communities such as Silverlake, Shadow Creek Ranch, and Southern Trails. Older homes tend to have more wood trim and siding to check for rot before paint. In newer two-story homes, the usual projects are replacing flat builder-grade interior paint with a washable finish and repainting sun-faded siding and trim.
 
 Pearland sits south of Houston, closer to the Gulf, with the same heat, humidity, and heavy rain as the rest of the area. South- and west-facing walls fade and chalk first. On an exterior we wash off the chalk and mildew, re-caulk open joints, and prime bare spots so the new coat bonds instead of peeling.
@@ -63,7 +63,7 @@ Pearland sits south of Houston, closer to the Gulf, with the same heat, humidity
 Many Pearland communities have HOAs that review exterior colors. We can pull your community's approved color list and help with the approval paperwork before work starts.`}
           whyChooseUs={[
             "Free on-site estimate with the scope, price, deposit and payment schedule in writing before you approve",
-            "Insured: $2M general liability + workers' comp, with certificates available for your HOA",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty",
             "Sherwin-Williams and Benjamin Moore paints",
             "Help with HOA color lists and approval paperwork",
@@ -126,7 +126,7 @@ Many Pearland communities have HOAs that review exterior colors. We can pull you
           faqs={[
             {
               question: "How much does it cost to paint a house in Pearland?",
-              answer: `In 2026 interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exteriors run ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
+              answer: `In 2026 interior painting typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exteriors run ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. Your free written estimate gives the exact price.`
             },
             {
               question: "Do you work with Pearland HOAs?",
@@ -146,7 +146,7 @@ Many Pearland communities have HOAs that review exterior colors. We can pull you
             },
             {
               question: "Are you insured?",
-              answer: "Yes. We carry $2M general liability + workers' comp and can send a certificate of insurance to you or your HOA. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license."
+              answer: "Yes. We maintain business insurance, and current proof of insurance is available upon request. Texas does not license residential painters, so ask any painter for proof of insurance instead of a license."
             }
           ]}
         />

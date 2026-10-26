@@ -56,7 +56,7 @@ const D: GuideArticleData = {
           <Link href="/blog/orange-peel-vs-knockdown-vs-smooth-walls">orange peel vs. knockdown vs. smooth</Link>,{" "}
           <Link href="/blog/how-painters-match-wall-texture">matching wall texture</Link> and{" "}
           <Link href="/drywall-repair-houston-tx">drywall repair</Link>. Interior painting typically runs{" "}
-          {P.interiorPerSqFt} per square foot as a 2026 planning range; heavy texture is at the higher end.{" "}
+          {P.interiorPerSqFt} per square foot of floor area as a 2026 planning range; heavy texture is at the higher end.{" "}
           {BUSINESS.paymentPolicy.sentence}
         </p>
       ),

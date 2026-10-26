@@ -299,7 +299,7 @@ export default function BenjaminMooreVsSherwinWilliamsPage() {
         start.
       </p>
       <p>
-        We&apos;ve completed 500+ projects across Greater Houston and back every job with a{" "}
+        We&apos;ve painted homes across Greater Houston since 2019 and back qualifying painting projects with a{" "}
         <strong>5-year workmanship warranty</strong>. And you get <strong>clear written payment terms</strong>: the scope, price, deposit and
         payment schedule are in writing before you approve the project.
       </p>

@@ -1,4 +1,5 @@
 import { TrustChecklist } from "@/components/trust-checklist"
+import { BUSINESS } from "@/lib/business"
 import type { Metadata } from 'next'
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
 const homeFaqs = [
   {
     q: "How much does it cost to paint a house in Houston?",
-    a: `Interior painting in Houston typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, and a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} in 2026. Exterior painting runs ${PRICES_2026.exteriorPerSqFt} per square foot of floor area (${PRICES_2026.exteriorPerHome} per home) depending on size, siding type, stories, and condition; a 2,500 sq ft two-story exterior typically runs ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates with itemized costs and no hidden fees.`,
+    a: `Interior painting in Houston typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, and a full interior on a 2,500 sq ft home runs ${PRICES_2026.fullInterior2500} in 2026. Exterior painting is priced per project, with most homes budgeting ${PRICES_2026.exteriorPerHome}, depending on size, siding type, stories, and condition; a 2,500 sq ft two-story exterior typically runs ${PRICES_2026.exterior2500TwoStory}. We provide free detailed estimates with itemized costs and no hidden fees.`,
   },
   {
     q: "How long does exterior paint last in Houston's climate?",
@@ -52,7 +53,7 @@ const homeFaqs = [
   },
   {
     q: "Are you insured for painting in Texas?",
-    a: "Yes, Houston Superior Painting is insured with $2 million general liability coverage. We're also bonded for your protection and carry workers' compensation insurance. Certificates of insurance are available upon request for HOA requirements or property managers.",
+    a: `Yes. ${BUSINESS.insurance.sentence} ${BUSINESS.insurance.licenseNote}`,
   },
   {
     q: "How long does it take to paint a house interior?",
@@ -125,7 +126,7 @@ function HomeKeyLinks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 md:grid-cols-2">
         <div>
           <h2 id="home-key-links" className="font-display text-2xl text-foreground mb-4">
-            Our five painting offices
+            Our service areas
           </h2>
           <ul className="space-y-2 font-manrope text-base">
             {OFFICE_PAGES.map((o) => (

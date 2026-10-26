@@ -371,7 +371,7 @@ export default function ExteriorPaintDurabilityHoustonPage() {
       </ul>
 
       <p>
-        We&apos;ve completed 500+ Houston projects since 2019 and understand what it takes to achieve lasting results 
+        We&apos;ve painted Houston homes since 2019 and understand what it takes to achieve lasting results 
         in our challenging climate.
       </p>
 

@@ -3,9 +3,9 @@ import { JsonLd, ORG_ID } from "@/components/structured-data"
 import { breadcrumbNode } from "@/components/aeo/blocks"
 
 const PAGE_URL = "https://houstonsuperiorpainting.com/contact"
-const TITLE = "Contact Houston Superior Painting | 5 Offices, Free Estimates"
+const TITLE = "Contact Houston Superior Painting | Free Written Estimates"
 const DESCRIPTION =
-  "Contact Houston Superior Painting: five offices in Cypress, Houston, Katy, Sugar Land and Magnolia. Mon–Fri 7–7, Sat 8–4. Call (346) 594-5960 for an estimate."
+  "Contact Houston Superior Painting, serving Cypress, Houston, Katy, Sugar Land, Magnolia and Greater Houston. Mon–Fri 7–7, Sat 8–4. Call (346) 594-5960 for an estimate."
 
 export const metadata: Metadata = {
   title: TITLE,

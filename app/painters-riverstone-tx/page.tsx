@@ -31,7 +31,7 @@ const riverstoneData = {
 
   // Feeds the data-speakable Quick Answer section used for voice and AI answers.
   quickAnswer:
-    `Houston Superior Painting paints homes in Riverstone, which straddles the Sugar Land and Missouri City line. Interiors typically run ${PRICES_2026.interiorPerSqFt} per square foot (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exteriors ${PRICES_2026.exteriorPerHome}. Homes on the lakes often need mildew washing and treatment before priming, and exterior color changes need HOA approval before work starts. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`,
+    `Houston Superior Painting paints homes in Riverstone, which straddles the Sugar Land and Missouri City line. Interiors typically run ${PRICES_2026.interiorPerSqFt} per square foot of floor area (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exteriors ${PRICES_2026.exteriorPerHome}. Homes on the lakes often need mildew washing and treatment before priming, and exterior color changes need HOA approval before work starts. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`,
 
   // Riverstone's distinguishing factor versus Sienna is water: the community is
   // built around lakes, which means more mildew pressure on shaded elevations.
@@ -43,7 +43,7 @@ The lakes affect exterior paint. Shaded walls near water stay damp longer, so mi
 
 Two other things are worth checking before a repaint. Stucco can develop hairline cracks, often at window and door corners, as the ground and wall move; those should be patched and bridged with a flexible coating rather than just painted over. And lawn sprinklers that spray the house can leave a chalky white band of hard-water minerals along the bottom of the wall, which has to be removed before primer so the new paint bonds. Adjusting the spray heads keeps it from coming back.
 
-Exterior color changes go through the community's architectural review before work begins, and some sections have their own added guidelines. We provide color codes and sheen details for your submittal. Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`,
+Exterior color changes go through the community's architectural review before work begins, and some sections have their own added guidelines. We provide color codes and sheen details for your submittal. Houston Superior Painting was founded in 2019 and is headquartered in Cypress and serves Sugar Land and surrounding communities. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`,
 
   neighborhoods: [
     "The Manors at Riverstone",
@@ -97,7 +97,7 @@ Exterior color changes go through the community's architectural review before wo
     "Stucco crack repair before painting",
     "Sherwin-Williams and Benjamin Moore paints",
     "5-year written workmanship warranty",
-    "Insured: $2M general liability plus workers' comp",
+    "Insured: current proof of insurance available upon request",
   ],
 
   faqs: [
@@ -114,7 +114,7 @@ Exterior color changes go through the community's architectural review before wo
     {
       question: "How much does painting cost in Riverstone?",
       answer:
-        `Exterior projects generally run ${PRICES_2026.exteriorPerHome} (a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}) and interiors ${PRICES_2026.interiorPerSqFt} per square foot, depending on size, stucco versus brick, trim, and how much mildew treatment or crack repair is needed. Estimates are free and written.`,
+        `Exterior projects generally run ${PRICES_2026.exteriorPerHome} (a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}) and interiors ${PRICES_2026.interiorPerSqFt} per square foot of floor area, depending on size, stucco versus brick, trim, and how much mildew treatment or crack repair is needed. Estimates are free and written.`,
     },
     {
       question: "Why does mildew keep coming back on my shaded walls?",

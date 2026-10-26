@@ -82,7 +82,7 @@ const benefits = [
 const steps = [
   {
     icon: FileText,
-    title: "Get Your Free Estimate",
+    title: "Request My Free Estimate",
     description: "We visit your home, assess the project, and provide a detailed, itemized quote with no hidden fees.",
   },
   {
@@ -127,7 +127,7 @@ export default function PaintingFinancingPage() {
                 href="/painting-estimate-houston"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-secondary px-8 py-4 font-semibold text-secondary-foreground text-lg shadow-lg transition-colors hover:bg-secondary/90"
               >
-                Get a Free Estimate
+                Request My Free Estimate
               </a>
               <a
                 href={PHONE_HREF}
@@ -196,7 +196,7 @@ export default function PaintingFinancingPage() {
         <section className="py-12 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-              {["Same premium prep on every job", "Sherwin-Williams & Benjamin Moore", "5-year exterior warranty", "$2M liability + workers' comp"].map(
+              {["Same premium prep on every job", "Sherwin-Williams & Benjamin Moore", "5-year exterior warranty", "Insured · proof on request"].map(
                 (point) => (
                   <div key={point} className="flex items-center gap-2 text-foreground">
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
@@ -230,7 +230,7 @@ export default function PaintingFinancingPage() {
                 href="/painting-estimate-houston"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-8 py-4 font-semibold text-primary-foreground text-lg shadow-lg transition-colors hover:bg-primary/90"
               >
-                Get My Free Estimate
+                Request My Free Estimate
               </a>
               <a
                 href={PHONE_HREF}

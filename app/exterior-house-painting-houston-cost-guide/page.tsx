@@ -8,7 +8,7 @@ import { AuthorByline, articleNode, ESTIMATE_PATH } from "@/components/aeo/block
 
 export const metadata: Metadata = {
   title: "Exterior House Painting Cost in Houston: 2026 Price Guide",
-  description: `Exterior house painting in Houston costs ${PRICES_2026.exteriorPerSqFt} per sq ft in 2026, or ${PRICES_2026.exterior2500TwoStory} for a 2,500 sq ft two-story home. Prices by size, siding, and prep.`,
+  description: `Exterior house painting in Houston is priced per project; a 2,500 sq ft two-story home budgets ${PRICES_2026.exterior2500TwoStory}. Prices by size, siding, and prep.`,
   alternates: { canonical: "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide" },
   openGraph: { title: "Exterior House Painting Houston Cost Guide 2026", description: `Full cost breakdown for exterior painting in Houston. ${PRICES_2026.exteriorPerHome} for typical homes.`, url: "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide", type: "article", images: [{ url: "https://houstonsuperiorpainting.com/images/og/og-exterior-painting.jpg", width: 1200, height: 630 }] },
   other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },
@@ -29,7 +29,7 @@ export default function ExteriorHousePaintingHoustonCostGuide() {
       <Header />
       <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [
-        articleNode({ path: "/exterior-house-painting-houston-cost-guide", headline: "Exterior House Painting Houston Cost Guide 2026", description: `Exterior house painting in Houston costs ${PRICES_2026.exteriorPerSqFt} per sq ft in 2026, or ${PRICES_2026.exterior2500TwoStory} for a 2,500 sq ft two-story home.`, datePublished: "2026-05-16" }),
+        articleNode({ path: "/exterior-house-painting-houston-cost-guide", headline: "Exterior House Painting Houston Cost Guide 2026", description: `Exterior house painting in Houston is priced per project; a 2,500 sq ft two-story home budgets ${PRICES_2026.exterior2500TwoStory}.`, datePublished: "2026-05-16" }),
         { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://houstonsuperiorpainting.com/" }, { "@type": "ListItem", "position": 2, "name": "Exterior Painting", "item": "https://houstonsuperiorpainting.com/exterior-painting-houston-tx" }, { "@type": "ListItem", "position": 3, "name": "Cost Guide", "item": "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide" }] },
         { "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
         { "@type": "WebPage", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".hero-h1"] } },
@@ -38,7 +38,7 @@ export default function ExteriorHousePaintingHoustonCostGuide() {
       <section className="relative bg-zinc-900 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-5xl text-center">
           <h1 className="hero-h1 text-3xl md:text-5xl font-serif font-bold mb-6 text-balance">Exterior House Painting Houston Cost Guide 2026</h1>
-          <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto mb-8">Transparent pricing from a company that has completed 500+ Houston painting projects since 2019. No hidden fees, no surprises.</p>
+          <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto mb-8">Budgeting guidance from a Houston painting company working since 2019. No hidden fees, no surprises.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors">Free Exterior Estimate</a>
             <Link href="/exterior-painting-houston-tx" className="inline-flex items-center justify-center gap-2 border border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">Exterior Painting Services</Link>
@@ -49,7 +49,7 @@ export default function ExteriorHousePaintingHoustonCostGuide() {
       <section className="quick-answer bg-amber-50 border-l-4 border-amber-500 py-8">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-xl font-semibold mb-3">Quick Answer</h2>
-          <p className="text-lg leading-relaxed">Exterior house painting in Houston costs {PRICES_2026.exteriorPerSqFt} per square foot in 2026, or {PRICES_2026.exteriorPerHome} for a typical home. A 2,500 sq ft two-story home runs {PRICES_2026.exterior2500TwoStory}. Key factors: home size, siding type, stories, and prep work. Plan on repainting every 5–7 years. Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a> for a free exterior estimate.</p>
+          <p className="text-lg leading-relaxed">Exterior house painting in Houston is priced per project, because elevations, stories, access, siding and repairs change the scope. Most homes budget {PRICES_2026.exteriorPerHome}. A 2,500 sq ft two-story home runs {PRICES_2026.exterior2500TwoStory}. Key factors: home size, siding type, stories, and prep work. Plan on repainting every 5–7 years. Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a> for a free exterior estimate.</p>
         </div>
       </section>
 

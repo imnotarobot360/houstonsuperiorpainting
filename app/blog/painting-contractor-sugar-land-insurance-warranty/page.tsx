@@ -1,9 +1,8 @@
 import Link from "next/link"
 import { GuideArticle, guideMetadata, type GuideArticleData } from "@/components/aeo/guide-article"
 import { Bullets } from "@/components/aeo/blocks"
-import { BUSINESS, officeAddressLine, officeForPage } from "@/lib/business"
+import { BUSINESS } from "@/lib/business"
 
-const OFFICE = officeAddressLine(officeForPage("painters-sugar-land-tx")!)
 
 const D: GuideArticleData = {
   path: "/blog/painting-contractor-sugar-land-insurance-warranty",
@@ -112,8 +111,8 @@ const D: GuideArticleData = {
       a: "Only if it is in writing and the painter will still be around to honor it. Read what is covered and how claims work, not just the number of years.",
     },
     {
-      q: "Do you have an office in Sugar Land?",
-      a: `Yes. Houston Superior Painting's Sugar Land office is at ${OFFICE}. Call ${BUSINESS.phone}.`,
+      q: "Do you work in Sugar Land?",
+      a: `Yes. Houston Superior Painting serves Sugar Land and surrounding communities from its Cypress headquarters, and estimates are done at your home. Call ${BUSINESS.phone}.`,
     },
   ],
   limitations: (

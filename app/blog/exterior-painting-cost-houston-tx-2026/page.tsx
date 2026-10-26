@@ -6,7 +6,7 @@ import { BUSINESS, PRICES_2026, PRICING_DISCLAIMER } from "@/lib/business"
 export const metadata: Metadata = {
   title: "Exterior Painting Cost in Houston TX (2026)",
   description:
-    `Exterior painting in Houston TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026 (${PRICES_2026.exteriorPerSqFt}/sq ft). Real prices by home size, siding type & stories.`,
+    `Exterior painting in Houston TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026 (${PRICES_2026.exteriorPerHome}/sq ft). Real prices by home size, siding type & stories.`,
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/exterior-house-painting-houston-cost-guide",
   },
@@ -35,7 +35,7 @@ const faqs = [
   {
     question: "How much does exterior painting cost per square foot in Houston?",
     answer:
-      `${PRICES_2026.exteriorPerSqFt} per square foot of paintable exterior surface. Note that paintable surface differs from living area — a home usually has more paintable exterior surface than living area.`,
+      `${PRICES_2026.exteriorPerHome} per square foot of paintable exterior surface. Note that paintable surface differs from living area — a home usually has more paintable exterior surface than living area.`,
   },
   {
     question: "How long does an exterior paint job last in Houston?",
@@ -94,7 +94,7 @@ export default function ExteriorPaintingCostHoustonPage() {
   return (
     <BlogPostTemplate
       title="How Much Does Exterior Painting Cost in Houston TX in 2026?"
-      excerpt={`Exterior painting in Houston TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026, or roughly ${PRICES_2026.exteriorPerSqFt} per square foot of paintable surface. Here's the full breakdown by home size, siding type, and stories.`}
+      excerpt={`Exterior painting in Houston TX costs ${PRICES_2026.exteriorPerHome} for most homes in 2026, or roughly ${PRICES_2026.exteriorPerHome} per square foot of paintable surface. Here's the full breakdown by home size, siding type, and stories.`}
       author="Juan Serra"
       authorRole="Owner & Lead Estimator"
       publishDate="June 11, 2026"
@@ -113,7 +113,7 @@ export default function ExteriorPaintingCostHoustonPage() {
         <p className="font-semibold text-lg mb-2">Quick Answer</p>
         <p>
           Exterior painting in Houston TX costs <strong>{PRICES_2026.exteriorPerHome}</strong> for most homes in 2026, or roughly{" "}
-          <strong>{PRICES_2026.exteriorPerSqFt} per square foot</strong> of paintable surface. A typical single-story 2,000 sq ft Houston
+          <strong>{PRICES_2026.exteriorPerHome} per square foot</strong> of paintable surface. A typical single-story 2,000 sq ft Houston
           home runs <strong>{PRICES_2026.exterior2000OneStory}</strong>; a two-story home of the same footprint runs{" "}
           <strong>{PRICES_2026.exterior2000TwoStory}</strong> because of ladder and equipment work. Brick, Hardie board, and stucco each
           price differently — full breakdown below.

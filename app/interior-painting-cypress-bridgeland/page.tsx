@@ -2,11 +2,25 @@ import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
 import { BUSINESS, PRICES_2026 } from "@/lib/business"
 
-export const metadata: Metadata = {
+const PAGE_META = {
   title: "Interior Painting Cypress & Bridgeland, TX | Free Estimate",
   description: "Interior painting in Cypress and Bridgeland, TX: walls, ceilings, trim and doors. Free written estimate, insured, 5-year workmanship warranty.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/interior-painting-cypress-bridgeland",
+  },
+}
+
+// Own Open Graph block so link previews and og:url match this page, not the
+// homepage defaults in app/layout.tsx (owner brief 2026-10-25, phase 11).
+export const metadata: Metadata = {
+  ...PAGE_META,
+  openGraph: {
+    title: PAGE_META.title,
+    description: PAGE_META.description,
+    url: PAGE_META.alternates.canonical,
+    siteName: "Houston Superior Painting",
+    type: "website",
+    images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
   },
 }
 
@@ -27,7 +41,7 @@ export default function InteriorPaintingCypressPage() {
         "Founded in 2019 by owner Juan Serra and headquartered in Cypress, TX.",
         "Prep is written into the estimate: patching, caulking and spot-priming, not just the finish coats.",
         "Furniture moved or covered, floors protected and work areas cleaned each day.",
-        `Insured: ${BUSINESS.trust.liabilityCoverage} general liability plus workers' comp.`,
+        `Insured: current proof of insurance available upon request.`,
         "5-year written workmanship warranty.",
         "Free estimate. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project."
       ]}

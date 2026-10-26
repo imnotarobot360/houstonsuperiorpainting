@@ -12,13 +12,13 @@ import { CheckCircle, Phone, Star, Shield, Users, ArrowRight } from "lucide-reac
 
 export const metadata: Metadata = {
   title: 'Wood Rot Repair Houston TX | Trim, Fascia & Siding',
-  description: 'Wood rot repair and replacement in Houston, TX before painting. Fascia, soffits, trim, siding, and columns. 5-year guarantee. Free estimates.',
+  description: 'Wood rot repair and replacement in Houston, TX before painting. Fascia, soffits, trim, siding, and columns. Free written estimates.',
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/wood-rot-repair-houston-tx',
   },
   openGraph: {
     title: 'Wood Rot Repair Houston TX — Houston Superior Painting',
-    description: 'Wood rot repair and replacement in Houston, TX before painting. Fascia, soffits, trim, siding, and window sills. 5-year guarantee.',
+    description: 'Wood rot repair and replacement in Houston, TX before painting. Fascia, soffits, trim, siding, and window sills. Free written estimates.',
     url: 'https://houstonsuperiorpainting.com/wood-rot-repair-houston-tx',
     siteName: 'Houston Superior Painting',
     type: 'website',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Wood Rot Repair Houston TX — Houston Superior Painting',
-    description: 'Wood rot repair and replacement in Houston before painting. Fascia, soffits, trim, siding, and window sills. 5-year guarantee.',
+    description: 'Wood rot repair and replacement in Houston before painting. Fascia, soffits, trim, siding, and window sills. Free written estimates.',
     images: ['https://houstonsuperiorpainting.com/images/og/og-wood-rot-repair.png'],
   },
 }
@@ -158,7 +158,7 @@ const benefits = [
   "Primed, rot-resistant replacement materials built for Houston humidity",
   "Repaired areas painted to match seamlessly — the fix is invisible",
   "Honest assessment: we only replace what genuinely needs replacing",
-  "5-year written quality guarantee on every project",
+  "Repairs and painting listed line by line in your written estimate",
 ]
 
 const relatedServices = [
@@ -188,11 +188,11 @@ export default function WoodRotRepairHoustonTX() {
               Wood Rot Repair in Houston, TX
             </h1>
             <p className="font-cormorant text-xl md:text-2xl text-soft-white/80 leading-relaxed max-w-3xl mx-auto">
-              Fascia, soffits, trim, siding, and sills repaired and repainted to look original. We fix the moisture source, not just the symptom. Free estimates. 5-year quality guarantee.
+              Fascia, soffits, trim, siding, and sills repaired and repainted to look original. We fix the moisture source, not just the symptom. Free written estimates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/painting-estimate-houston">Get My Free Estimate</Link>
+                <Link href="/painting-estimate-houston">Request My Free Estimate</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-primary-foreground !bg-transparent !text-primary-foreground hover:!bg-primary-foreground hover:!text-primary" asChild>
                 <a href="tel:+13465945960" aria-label="Call Houston Superior Painting at 346-594-5960" className="flex items-center gap-2">
@@ -210,7 +210,7 @@ export default function WoodRotRepairHoustonTX() {
             <div className="flex flex-wrap justify-center gap-6 lg:gap-10 text-center text-sm lg:text-base">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-accent" />
-                <span className="font-medium">500+ Houston Homes Painted</span>
+                <span className="font-medium">Serving Houston Since 2019</span>
               </div>
               <div className="flex items-center gap-2">
                 <ReviewsInline className="font-medium" />
@@ -221,7 +221,7 @@ export default function WoodRotRepairHoustonTX() {
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-accent" />
-                <span className="font-medium">$2M Liability + Workers' Comp</span>
+                <span className="font-medium">Insured · Proof on Request</span>
               </div>
             </div>
           </div>
@@ -232,7 +232,7 @@ export default function WoodRotRepairHoustonTX() {
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              Houston Superior Painting repairs and replaces rotted exterior wood — fascia, soffits, trim, siding, window sills, and columns — across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most repairs cost $300–$2,500, and we correct the moisture source so the rot doesn&apos;t return, then prime and paint to match seamlessly. Backed by our written 5-year quality guarantee. Free estimates at (346) 594-5960.
+              Houston Superior Painting repairs and replaces rotted exterior wood — fascia, soffits, trim, siding, window sills, and columns — across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most repairs cost $300–$2,500, and we correct the moisture source we find so the rot is less likely to return, then prime and paint to match seamlessly. The repainting that follows is covered by our 5-year written workmanship warranty on qualifying painting work. Free estimates at (346) 594-5960.
             </p>
           </div>
         </section>

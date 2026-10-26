@@ -67,7 +67,7 @@ export default function PaintersBellaireTX() {
           state="TX"
           heroHeadline="House Painters in Bellaire, TX"
           heroDescription="From mid-century ranches to new custom builds, we paint Bellaire homes with careful prep, Sherwin-Williams and Benjamin Moore products, and a 5-year written workmanship warranty."
-          quickAnswer={`Houston Superior Painting provides interior, exterior and cabinet painting in Bellaire, TX. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. We paint both older ranch homes and new construction, use Sherwin-Williams and Benjamin Moore products, carry $2M general liability plus workers' comp, and back our work with a 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          quickAnswer={`Houston Superior Painting provides interior, exterior and cabinet painting in Bellaire, TX. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. We paint both older ranch homes and new construction, use Sherwin-Williams and Benjamin Moore products, are insured, with proof available upon request, and back qualifying painting projects with a 5-year written workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
           aboutCity={`Bellaire is an inner-loop city surrounded by Houston, close to the Texas Medical Center, the Galleria and West University. Its housing mixes original mid-century ranch homes with newer two-story custom builds that have replaced many of them, often on fairly narrow lots.
 
 That mix shapes how a paint job is planned. Older ranches often need more prep before any color goes on: failed caulk, weathered wood trim and siding, and decades of earlier coats. Newer builds tend to need less repair but have taller walls, more trim and larger exterior surfaces. On close-set lots, ladders, drop cloths and spray work have to be planned around the house next door.
@@ -79,7 +79,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
             "Experience with both older ranch homes and new construction",
             "Planning for close-set lots: protecting neighboring property during prep and painting",
             "Sherwin-Williams and Benjamin Moore products",
-            "Insured: $2M general liability plus workers' comp",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty",
             "Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve"
           ]}
@@ -142,7 +142,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
           faqs={[
             {
               question: "How much does it cost to paint a house in Bellaire, TX?",
-              answer: `Interior painting in Bellaire typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
+              answer: `Interior painting in Bellaire typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
             },
             {
               question: "Do you paint both older and newer Bellaire homes?",
@@ -162,7 +162,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
             },
             {
               question: "Are you insured?",
-              answer: "Yes. We carry $2M general liability insurance plus workers' compensation. Certificates are available on request."
+              answer: "Yes. We maintain business insurance, and current proof of insurance is available upon request. Certificates are available on request."
             }
           ]}
         />

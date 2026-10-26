@@ -40,9 +40,10 @@ export function LuxuryHero() {
               `.quick-answer` is the Speakable selector. */}
           <p className="quick-answer mt-6 font-manrope text-base sm:text-lg text-soft-white/90 leading-relaxed max-w-2xl">
             {BUSINESS.name} is a residential and commercial painting contractor founded in {BUSINESS.founded} by{" "}
-            {BUSINESS.founder.name}, headquartered in Cypress, TX, and serving Greater Houston from five offices:
-            Cypress, Houston, Katy, Sugar Land, and Magnolia. {BUSINESS.trust.liabilityCoverage} insured,{" "}
-            {BUSINESS.trust.warrantyYears}-year workmanship warranty, free estimates, and clear written payment terms before you approve.{" "}
+            {BUSINESS.founder.name}, headquartered in Cypress, TX, and serving Greater Houston, including
+            Cypress, Houston, Katy, Sugar Land and Magnolia. Insured, with a{" "}
+            {BUSINESS.trust.warrantyYears}-year written workmanship warranty on qualifying painting projects.{" "}
+            {BUSINESS.paymentPolicy.shortLine}{" "}
             <a href={PHONE_HREF} className="font-semibold text-gold hover:underline">
               {BUSINESS.phone}
             </a>
@@ -53,7 +54,7 @@ export function LuxuryHero() {
               href="/painting-estimate-houston"
               className="font-manrope text-sm font-semibold bg-secondary text-secondary-foreground px-8 py-4 rounded-md hover:bg-secondary/90 transition-colors text-center"
             >
-              Get My Free Estimate
+              Request My Free Estimate
             </Link>
             <a
               href={BUSINESS.scheduler.embedUrl}
@@ -79,7 +80,7 @@ export function LuxuryHero() {
               <ReviewsInline className="font-manrope text-sm text-soft-white/90 [&_svg]:text-gold" />
             </div>
             {[
-              "$2M Liability + Workers' Comp",
+              "Insured · Proof on Request",
               `${BUSINESS.trust.warrantyYears}-Year Warranty`,
               "Clear Written Payment Terms",
             ].map((item) => (

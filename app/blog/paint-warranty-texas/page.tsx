@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { BUSINESS } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "What Does a 5-Year Paint Warranty Actually Cover in Texas?",
@@ -252,30 +253,27 @@ export default function PaintWarrantyTexasPage() {
       </ul>
 
       <h2>Houston Superior Painting&apos;s 5-Year Workmanship Warranty</h2>
-      <p>Here&apos;s exactly what our warranty covers — in plain language, not legal boilerplate:</p>
+      <p>{BUSINESS.warranty.summary}</p>
       <ul>
         <li>
-          <strong>Covered:</strong> Any paint adhesion failure, peeling, flaking, or visible application defect on
-          surfaces included in your original scope, for 5 years from project completion date.
+          <strong>What it is for:</strong> workmanship problems such as peeling, flaking or visible application defects
+          caused by how our crew prepared or applied the paint, on surfaces in your written scope.
         </li>
         <li>
-          <strong>Process:</strong> Call or text (346) 594-5960. We schedule a warranty inspection within 7 business
-          days. Covered repairs are completed at no charge within 30 days of confirmation.
+          <strong>Process:</strong> call or text {BUSINESS.phone}. We schedule a warranty inspection within 7 business
+          days, and covered issues are handled as your signed warranty terms state.
         </li>
         <li>
-          <strong>What we use to back it:</strong> Sherwin-Williams, Benjamin Moore and Farrow &amp; Ball products — we never use
-          contractor-grade or private-label paint. The manufacturer&apos;s product warranty complements our workmanship
-          warranty.
+          <strong>Products:</strong> we use {BUSINESS.paintPartners.join(", ")} products, named in your estimate. Any
+          manufacturer product warranty is separate from our workmanship warranty.
         </li>
         <li>
-          <strong>What&apos;s not covered:</strong> Damage from events (storms, leaks not caused by our work), normal
-          color fading, new penetrations, and substrate failure caused by moisture intrusion from other sources.
+          <strong>What&apos;s not covered:</strong> damage from events such as storms or leaks not caused by our work,
+          normal color fading, new penetrations, and moisture or substrate failure.
         </li>
       </ul>
       <p>
-        The warranty is transferable: if you sell your home within the 5-year period, the remaining coverage passes to the
-        new owner. The complete warranty terms are included in your approved estimate and project documents, and those
-        documents control. Learn more on our{" "}
+        {BUSINESS.warranty.controlsNote} Learn more on our{" "}
         <Link href="/warranty">warranty page</Link>.
       </p>
 
@@ -313,7 +311,7 @@ export default function PaintWarrantyTexasPage() {
       <h2>Get a Fully Warranted Paint Job in Houston TX</h2>
       <p>
         Houston Superior Painting provides a 5-year workmanship warranty on all projects — in writing, included with
-        every signed contract, with the scope, price, deposit and payment schedule in writing before you approve. Founded 2019. 500+ completed projects across Greater Houston. The same ownership
+        every signed contract, with the scope, price, deposit and payment schedule in writing before you approve. Founded 2019, serving Greater Houston. The same ownership
         and crew when you need to use your warranty.
       </p>
       <ul>

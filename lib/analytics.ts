@@ -253,6 +253,9 @@ export function trackFormSubmit(formName: string, gaParams: Record<string, unkno
   // without firing a SECOND `generate_lead`, which would inflate the GA4
   // conversion count.
   trackEvent("generate_lead", { conversion: true, event_category: "lead", event_label: formName, ...gaParams })
+  // Brief alias (2026-10-25). Not a conversion: generate_lead stays the one
+  // conversion so the lead is not counted twice.
+  trackEvent("estimate_form_success", { event_category: "lead", event_label: formName, ...gaParams })
   trackPixel("Lead", { content_name: formName })
 }
 

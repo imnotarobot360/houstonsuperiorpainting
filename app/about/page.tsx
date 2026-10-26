@@ -17,7 +17,7 @@ import {
   PHONE_HREF,
   OFFICE_PAGES,
   officeForPage,
-  officeAddressLine,
+  officeAddressLine, publicAddressLine, servingLine,
   officeMapsUrl,
 } from "@/lib/business"
 import { JsonLd, ORG_ID, OWNER_ID, WEBSITE_ID } from "@/components/structured-data"
@@ -161,9 +161,8 @@ export default function AboutPage() {
           <p className="quick-answer text-lg md:text-xl leading-relaxed text-foreground border-l-4 border-gold bg-secondary/10 px-6 py-5 my-10 rounded-r-lg">
             Houston Superior Painting is a residential and commercial painting contractor founded in{" "}
             {BUSINESS.founded} by {BUSINESS.founder.name}. We are headquartered in Cypress, TX, and serve Greater
-            Houston from five offices: Cypress, Houston, Katy, Sugar Land, and Magnolia. We carry{" "}
-            {trust.liabilityCoverage} in general liability insurance plus workers&apos; compensation, back our
-            painting with a {trust.warrantyYears}-year written workmanship warranty, and put the scope, price, deposit and payment schedule in writing before you approve the project.
+            Houston, including Cypress, Houston, Katy, Sugar Land and Magnolia. {BUSINESS.insurance.sentence}{" "}
+            {BUSINESS.warranty.summary} {BUSINESS.paymentPolicy.sentence}
             Call <a href={PHONE_HREF} className="font-semibold text-primary hover:underline">{BUSINESS.phone}</a>.
           </p>
         </div>
@@ -182,7 +181,7 @@ export default function AboutPage() {
             <p>
               <strong className="text-foreground">{BUSINESS.founder.name}</strong> founded Houston Superior Painting
               in {BUSINESS.founded} and is the company&apos;s owner. He runs it from our Cypress headquarters, and the
-              company now serves Greater Houston from five offices.
+              company serves Greater Houston.
             </p>
             <p>
               The company was built on one idea: in Houston&apos;s heat and humidity, paint only lasts as long as the
@@ -221,10 +220,10 @@ export default function AboutPage() {
 
         {/* ─── OFFICES ─── */}
         <section className="container mx-auto px-4 max-w-4xl mb-14" id="offices">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">Our five offices</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">Where we work</h2>
           <p className="text-lg text-foreground/80 mb-6">
-            Each office has its own Google Business Profile and serves the surrounding suburbs. Hours at every
-            office: {BUSINESS.hoursSummary.map((h) => `${h.label} ${h.value}`).join(" · ")}.
+            We serve Greater Houston. Each of these areas has its own Google Business Profile. Estimates happen at your
+            home or business; phone hours: {BUSINESS.hoursSummary.map((h) => `${h.label} ${h.value}`).join(" · ")}.
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
             {OFFICES.map(({ page, office }) => (
@@ -237,12 +236,14 @@ export default function AboutPage() {
                     <span className="ml-2 text-xs font-manrope uppercase tracking-wider text-gold-deep">HQ</span>
                   ) : null}
                 </h3>
-                <p className="flex items-start gap-2 text-foreground/85">
-                  <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" aria-hidden />
-                  <span>{officeAddressLine(office)}</span>
-                </p>
+                {publicAddressLine(office) && (
+                  <p className="flex items-start gap-2 text-foreground/85">
+                    <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" aria-hidden />
+                    <span>Headquarters: {publicAddressLine(office)}</span>
+                  </p>
+                )}
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Serves {office.areaServed.join(", ")}.
+                  {servingLine(office)}, including {office.areaServed.join(", ")}.
                 </p>
                 <a
                   href={officeMapsUrl(office)}
@@ -250,7 +251,7 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
                 >
-                  <Star className="h-4 w-4" aria-hidden /> {office.label} on Google Maps
+                  <Star className="h-4 w-4" aria-hidden /> {office.city} Google Business Profile
                 </a>
               </div>
             ))}
@@ -314,9 +315,8 @@ export default function AboutPage() {
             <li className="flex gap-3">
               <ShieldCheck className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
               <span>
-                <strong className="text-foreground">Insured, not &ldquo;licensed.&rdquo;</strong> We carry{" "}
-                {trust.liabilityCoverage} general liability and workers&apos; compensation, and we are bonded.{" "}
-                {BUSINESS.insuranceProof.en}{" "}
+                <strong className="text-foreground">Insured, not &ldquo;licensed.&rdquo;</strong>{" "}
+                {BUSINESS.insurance.licenseNote} {BUSINESS.insuranceProof.en}{" "}
                 <Link href="/insurance-and-warranty#request-proof-of-insurance" className="text-primary underline underline-offset-2">
                   Request proof of insurance
                 </Link>
@@ -327,8 +327,8 @@ export default function AboutPage() {
             <li className="flex gap-3">
               <Languages className="h-6 w-6 flex-shrink-0 text-primary mt-0.5" aria-hidden />
               <span>
-                <strong className="text-foreground">English and Spanish.</strong> Our office and crews work in both
-                languages. Hablamos español.
+                <strong className="text-foreground">English and Spanish.</strong> We can talk through your project in English or
+                Spanish. Hablamos español.
               </span>
             </li>
           </ul>
@@ -338,14 +338,14 @@ export default function AboutPage() {
         <section className="container mx-auto px-4 max-w-4xl mb-14" id="track-record">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Our track record</h2>
           <p className="text-lg text-foreground/85 leading-relaxed">
-            Since {BUSINESS.founded} we have completed {trust.projectsCompleted}+ painting projects across Greater
+            Since {BUSINESS.founded} we have painted homes and businesses across Greater
             Houston. See before-and-after photos and the full scope of real jobs in our{" "}
             <Link href="/projects" className="text-primary underline underline-offset-2">
               Houston painting projects
             </Link>
             , and read what customers say on{" "}
             <Link href="/reviews" className="text-primary underline underline-offset-2">
-              each office&apos;s Google reviews
+              each location&apos;s Google profile
             </Link>
             .
           </p>

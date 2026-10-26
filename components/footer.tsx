@@ -10,6 +10,8 @@ import {
   SERVICE_AREAS,
   CORE_SERVICES,
   OFFICE_PAGES,
+  publicAddressLine,
+  servingLine,
   officeForPage,
 } from "@/lib/business"
 
@@ -21,7 +23,7 @@ const companyLinks = [
   { label: "Free Painting Estimate", href: "/painting-estimate-houston" },
   { label: `${BUSINESS.trust.warrantyYears}-Year Painting Warranty`, href: "/warranty" },
   { label: "Insurance & Warranty", href: "/insurance-and-warranty" },
-  { label: "Google Reviews by Office", href: "/reviews" },
+  { label: "Google Reviews", href: "/reviews" },
   { label: "Painting Financing", href: "/painting-financing-houston" },
   { label: "Houston Painting FAQ", href: "/faq" },
   { label: "Projects", href: "/projects" },
@@ -113,7 +115,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Locations — the five offices, HQ first */}
+          {/* Locations, HQ first. Street address only for the HQ or a verified
+              office (owner brief 2026-10-25, phase 7); others say "Serving …". */}
           <div>
             <h3 className="font-manrope text-xs font-semibold uppercase tracking-[0.22em] text-gold mb-5">Locations</h3>
             <ul className="space-y-4">
@@ -126,9 +129,15 @@ export function Footer() {
                     </Link>
                     {office && (
                       <p className="text-background/60 leading-snug">
-                        {office.street}
-                        <br />
-                        {office.city}, {office.state} {office.zip}
+                        {publicAddressLine(office) ? (
+                          <>
+                            {office.street}
+                            <br />
+                            {office.city}, {office.state} {office.zip}
+                          </>
+                        ) : (
+                          servingLine(office)
+                        )}
                       </p>
                     )}
                   </li>

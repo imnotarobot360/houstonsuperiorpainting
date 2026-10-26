@@ -29,7 +29,7 @@ const siennaData = {
   heroDescription:
     "Interior, exterior and cabinet painting for Sienna homes in Missouri City, with prep for brick, stucco and siding and help preparing your HOA color submittal.",
 
-  quickAnswer: `Houston Superior Painting paints homes in Sienna, Missouri City. Exterior painting typically runs ${PRICES_2026.exteriorPerHome} per home (a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}), and interior painting ${PRICES_2026.interiorPerSqFt}/sq ft. Sienna's residential association reviews exterior color changes, so get approval before work starts; we provide the color codes and sheens for your submittal. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`,
+  quickAnswer: `Houston Superior Painting paints homes in Sienna, Missouri City. Exterior painting typically runs ${PRICES_2026.exteriorPerHome} per home (a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}), and interior painting ${PRICES_2026.interiorPerSqFt} per sq ft of floor area. Sienna's residential association reviews exterior color changes, so get approval before work starts; we provide the color codes and sheens for your submittal. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`,
 
   // Deliberately written around what is specific to Sienna — its newer
   // housing stock, stucco and masonry elevations, and the association's
@@ -42,7 +42,7 @@ Stucco is the one that most often catches homeowners out. Over time it can chalk
 
 The second Sienna-specific factor is architectural review. The community's residential association reviews exterior color changes, and approval is needed before work begins. We provide manufacturer color codes and sheen details for your submittal, and schedule the job once you have approval.
 
-Many Sienna homes are now due for their first repaint. Original builder paint is often a light coat, so a proper repaint with full surface preparation and two finish coats makes a real difference in how long it lasts. Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`,
+Many Sienna homes are now due for their first repaint. Original builder paint is often a light coat, so a proper repaint with full surface preparation and two finish coats makes a real difference in how long it lasts. Houston Superior Painting was founded in 2019 and is headquartered in Cypress and serves Sugar Land and surrounding communities. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`,
 
   neighborhoods: [
     "Sienna Steep Bank Village",
@@ -103,7 +103,7 @@ Many Sienna homes are now due for their first repaint. Original builder paint is
     "Sherwin-Williams and Benjamin Moore paints",
     "5-year written workmanship warranty",
     "Detailed written estimates",
-    "Insured: $2M general liability plus workers' comp",
+    "Insured: current proof of insurance available upon request",
   ],
 
   faqs: [

@@ -38,19 +38,19 @@ export default function PaintersRosenbergTX() {
           state="TX"
           heroHeadline="House Painters Serving Rosenberg, Texas"
           heroDescription="Interior, exterior and cabinet painting for Rosenberg homes, from older houses near downtown to newer subdivisions across Fort Bend County."
-          quickAnswer={`Houston Superior Painting paints homes in Rosenberg, TX. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Older homes need more prep than new ones, and that shows up in the written estimate. Insured, 5-year workmanship warranty, and clear written payment terms before you approve. Call ${BUSINESS.phone} for a free estimate.`}
+          quickAnswer={`Houston Superior Painting paints homes in Rosenberg, TX. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Older homes need more prep than new ones, and that shows up in the written estimate. Insured, 5-year workmanship warranty, and clear written payment terms before you approve. Call ${BUSINESS.phone} for a free estimate.`}
           aboutCity={`Rosenberg grew up as a railroad town on the Brazos River and is now one of Fort Bend County's faster-growing cities. Older homes near the historic downtown sit alongside newer subdivisions on the city's edges.
 
 Older homes here often have wood siding and trim that need scraping, wood repair, caulk and primer before repainting. Newer homes are usually brick with painted siding, trim and soffits, and tend to need cleaning, caulk touch-up and good coverage on their first repaint. Houston's humidity and summer heat are hard on exterior paint, which is why prep, not just the paint, decides how long a job lasts.
 
 Newer subdivisions often have HOAs that require approval before an exterior color change, so get that approval before the job is scheduled. We can provide the product names and color codes your association asks for.
 
-Houston Superior Painting was founded in 2019 and is headquartered in Cypress, with an office in Sugar Land. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`}
+Houston Superior Painting was founded in 2019 and is headquartered in Cypress and serves Sugar Land and surrounding communities. Every estimate is free and written, with the complete scope, price, deposit and payment schedule before you approve the project.`}
           whyChooseUs={[
             "Written estimates with the full scope spelled out",
             "Thorough preparation: washing, scraping, caulk, wood repair and priming",
             "Sherwin-Williams and Benjamin Moore products",
-            "Insured: $2M general liability plus workers' comp",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty",
             "Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve"
           ]}
@@ -107,7 +107,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress, w
           faqs={[
             {
               question: "How much does it cost to paint a house in Rosenberg, TX?",
-              answer: `Interior painting in Rosenberg typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
+              answer: `Interior painting in Rosenberg typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
             },
             {
               question: "Do you serve all of Rosenberg and surrounding areas?",

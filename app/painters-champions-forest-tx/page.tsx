@@ -38,7 +38,7 @@ export default function PaintersChampionsForestTX() {
           state="TX"
           heroHeadline="House Painters in Champions Forest, TX"
           heroDescription="Interior, exterior and cabinet painting for Champions Forest and the wider Champions area of Northwest Houston, with prep suited to older homes under heavy tree cover."
-          quickAnswer={`Houston Superior Painting paints homes in Champions Forest and the Champions area of Northwest Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt}/sq ft (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Older homes under mature trees usually need extra washing, caulk and wood repair before painting. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
+          quickAnswer={`Houston Superior Painting paints homes in Champions Forest and the Champions area of Northwest Houston. Interior painting typically costs ${PRICES_2026.interiorPerSqFt} per sq ft of floor area (${PRICES_2026.fullInterior2500} for a 2,500 sq ft home) and exterior painting ${PRICES_2026.exteriorPerHome} per home. Older homes under mature trees usually need extra washing, caulk and wood repair before painting. Insured, 5-year workmanship warranty. Call ${BUSINESS.phone} for a free estimate.`}
           aboutCity={`Champions Forest is a wooded Northwest Houston neighborhood near FM 1960, with many homes dating from the 1970s and 1980s. The mature tree canopy that gives the area its character also affects exterior paint.
 
 Heavy shade keeps siding and trim damp longer, which encourages mildew and slows drying, and leaves and sap collect on surfaces. Exterior work here usually starts with a thorough wash, then caulk replacement, repair of any soft or rotted wood, and priming of bare spots before the finish coats. Painting is scheduled for dry weather so coatings can cure properly.
@@ -50,7 +50,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in nearby Cyp
             "Prep for older homes: caulk replacement, wood repair and priming",
             "Washing and mildew treatment before painting under heavy shade",
             "Sherwin-Williams and Benjamin Moore products",
-            "Insured: $2M general liability plus workers' comp",
+            "Insured: current proof of insurance available upon request",
             "5-year written workmanship warranty",
             "Clear written payment terms: scope, price, deposit and payment schedule in writing before you approve"
           ]}
@@ -113,7 +113,7 @@ Houston Superior Painting was founded in 2019 and is headquartered in nearby Cyp
           faqs={[
             {
               question: "How much does house painting cost in Champions Forest?",
-              answer: `Interior painting in Champions Forest typically costs ${PRICES_2026.interiorPerSqFt} per square foot, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
+              answer: `Interior painting in Champions Forest typically costs ${PRICES_2026.interiorPerSqFt} per square foot of floor area, about ${PRICES_2026.fullInterior2500} for a 2,500 sq ft home. Exterior painting runs ${PRICES_2026.exteriorPerHome} per home; a 2,500 sq ft two-story is typically ${PRICES_2026.exterior2500TwoStory}. We provide free written estimates.`
             },
             {
               question: "Do I need HOA approval to repaint in Champions Forest?",
