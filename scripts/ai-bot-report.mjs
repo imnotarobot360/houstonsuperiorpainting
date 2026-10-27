@@ -60,7 +60,8 @@ for (const line of raw.split("\n")) {
   } catch {
     continue
   }
-  const messages = [entry.message, ...(entry.logs || []).map((l) => (typeof l === "string" ? l : l.message))]
+  // `message` repeats the first line of `logs`, so de-duplicate per entry.
+  const messages = new Set([entry.message, ...(entry.logs || []).map((l) => (typeof l === "string" ? l : l.message))])
   for (const m of messages) {
     const at = typeof m === "string" ? m.indexOf('{"aiBotHit"') : -1
     if (at < 0) continue
