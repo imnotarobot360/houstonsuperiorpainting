@@ -55,8 +55,8 @@ function Wordmark({ light }: { light: boolean }) {
       <Image
         src="/images/logo.png"
         alt={`${BUSINESS.name} logo`}
-        width={4267}
-        height={3000}
+        width={171}
+        height={120}
         priority
         className={`h-12 sm:h-14 w-auto transition-all duration-500 ${
           light ? "brightness-0 invert" : ""

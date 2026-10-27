@@ -46,8 +46,8 @@ export function Footer() {
               <Image
                 src="/images/logo.png"
                 alt={`${BUSINESS.name} logo`}
-                width={240}
-                height={72}
+                width={171}
+                height={120}
                 className="h-20 w-auto brightness-0 invert"
               />
             </Link>

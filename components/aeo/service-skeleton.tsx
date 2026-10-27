@@ -126,6 +126,7 @@ export function ServiceSkeleton(d: ServiceSkeletonData) {
                   alt={d.beforeAfter.beforeAlt}
                   width={800}
                   height={600}
+                  sizes="(min-width: 640px) 432px, 100vw"
                   className="w-full h-64 object-cover"
                 />
               </figure>
@@ -138,6 +139,7 @@ export function ServiceSkeleton(d: ServiceSkeletonData) {
                   alt={d.beforeAfter.afterAlt}
                   width={800}
                   height={600}
+                  sizes="(min-width: 640px) 432px, 100vw"
                   className="w-full h-64 object-cover"
                 />
               </figure>
