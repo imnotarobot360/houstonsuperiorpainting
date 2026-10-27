@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
-import { BUSINESS, PRICES_2026 } from "@/lib/business"
+import { PRICES_2026 } from "@/lib/business"
 
 const PAGE_META = {
   title: "Interior Painting Sugar Land, TX | Free Estimate",

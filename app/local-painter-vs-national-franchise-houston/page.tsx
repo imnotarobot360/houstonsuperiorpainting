@@ -1,4 +1,3 @@
-import { reviewSummaryText } from "@/components/office-reviews"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"

@@ -16,15 +16,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { MapPin, Phone } from "lucide-react"
 import { generateBreadcrumbSchema } from "@/components/structured-data"
-import {
-  BUSINESS,
-  OFFICE_PAGES,
-  PHONE_HREF,
-  SERVICE_AREAS,
-  officeAddressLine, publicAddressLine, servingLine,
-  officeForPage,
-  officeMapsUrl,
-} from "@/lib/business"
+import { BUSINESS, OFFICE_PAGES, PHONE_HREF, SERVICE_AREAS, publicAddressLine, servingLine, officeForPage, officeMapsUrl } from "@/lib/business"
 import { NEAREST_OFFICE } from "@/lib/nearest-office"
 
 const OFFICE_SLUGS: readonly string[] = OFFICE_PAGES.map((o) => o.slug)

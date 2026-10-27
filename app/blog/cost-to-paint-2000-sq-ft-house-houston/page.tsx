@@ -2,7 +2,7 @@ import { reviewSummaryText } from "@/components/office-reviews"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
-import { BUSINESS, PRICES_2026 } from "@/lib/business"
+import { PRICES_2026 } from "@/lib/business"
 
 const URL = "https://houstonsuperiorpainting.com/blog/cost-to-paint-2000-sq-ft-house-houston"
 

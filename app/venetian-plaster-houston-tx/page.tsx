@@ -1,5 +1,4 @@
 import { ReviewsInline } from "@/components/office-reviews"
-import { BUSINESS } from "@/lib/business"
 import type { Metadata } from 'next'
 import Link from "next/link"
 import Image from "next/image"

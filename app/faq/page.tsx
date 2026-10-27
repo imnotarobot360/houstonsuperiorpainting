@@ -5,14 +5,7 @@ import { Footer } from "@/components/footer"
 import FAQ, { type FAQItem } from "@/components/faq"
 import { JsonLd } from "@/components/structured-data"
 import { PageHero, QuickAnswer, CtaBlock, breadcrumbNode, ESTIMATE_PATH } from "@/components/aeo/blocks"
-import {
-  BUSINESS,
-  PRICES_2026,
-  CORE_SERVICES,
-  OFFICE_PAGES,
-  officeForPage,
-  officeAddressLine, publicAddressLine,
-} from "@/lib/business"
+import { BUSINESS, PRICES_2026, CORE_SERVICES, OFFICE_PAGES, officeForPage, publicAddressLine } from "@/lib/business"
 
 const PAGE_PATH = "/faq"
 const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`

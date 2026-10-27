@@ -1,6 +1,6 @@
 import { ReviewsInline } from "@/components/office-reviews"
 import Image from "next/image"
-import { Phone, Star, ShieldCheck, BadgeCheck, Check, Clock } from "lucide-react"
+import { Phone, ShieldCheck, BadgeCheck, Check, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Footer } from "@/components/footer"
 import { EstimateLeadForm } from "@/components/estimate-lead-form"

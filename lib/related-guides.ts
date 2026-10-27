@@ -31,6 +31,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Exterior paint colors for Heights homes", href: "/blog/exterior-paint-colors-houston-heights" },
     { label: "Interior painting in The Heights", href: "/interior-painting-the-heights" },
     { label: "Exterior painting in The Heights", href: "/exterior-painting-the-heights" },
+    { label: "Cabinet refinishing in The Heights", href: "/cabinet-refinishing-the-heights" },
   ],
   "/painters-cinco-ranch-tx": [
     { label: "Townhome painting in Cinco Ranch, Cross Creek and Riverstone", href: "/blog/townhome-painting-cinco-ranch-cross-creek-riverstone" },
@@ -54,6 +55,13 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Exterior painting in Richmond", href: "/exterior-painting-richmond" },
   ],
 
+  "/painters-cypress-tx": [
+    { label: "Exterior house painting in Cypress: a guide", href: "/blog/exterior-house-painting-cypress-tx-guide" },
+    { label: "Common exterior paint problems in Cypress", href: "/blog/exterior-painting-cypress-tx-common-problems" },
+  ],
+  "/painters-bellaire-tx": [
+    { label: "Cabinet refinishing in Bellaire and West University", href: "/cabinet-refinishing-bellaire-west-university" },
+  ],
   // Hub pages
   "/load-bearing-wall-removal-houston-tx": [
     { label: "Load-bearing wall removal cost in Houston", href: "/blog/load-bearing-wall-removal-cost-houston" },
@@ -81,6 +89,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Exterior colors for Fulshear homes", href: "/blog/exterior-paint-colors-fulshear-tx" },
     { label: "Exterior colors for Pearland homes", href: "/blog/exterior-paint-colors-pearland-tx" },
     { label: "Exterior colors for Magnolia homes", href: "/blog/exterior-paint-colors-magnolia-tx" },
+    { label: "Best interior paint colors for Houston homes", href: "/blog/best-interior-paint-colors-houston-homes" },
   ],
   "/houston-painting-cost-guide": [
     { label: "Planning a 2027 painting project", href: "/blog/plan-2027-painting-project-houston" },
@@ -88,6 +97,8 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "DIY vs professional painting cost", href: "/blog/diy-vs-professional-painting-cost-houston" },
     { label: "Load-bearing wall removal cost", href: "/blog/load-bearing-wall-removal-cost-houston" },
     { label: "Limewash cost", href: "/blog/limewash-cost-houston" },
+    { label: "Stucco painting cost in Houston", href: "/blog/stucco-painting-cost-houston" },
+    { label: "Wood rot repair cost in Houston", href: "/blog/wood-rot-repair-cost-houston" },
   ],
   "/pressure-washing-houston-tx": [
     { label: "Fence and deck painting in Houston", href: "/blog/fence-deck-painting-houston-tx" },
@@ -150,6 +161,12 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Painting a sunroom", href: "/blog/painting-sunroom-houston" },
     { label: "Arches, niches and curved walls", href: "/blog/painting-arches-niches-houston" },
     { label: "Heavily textured walls", href: "/blog/painting-stucco-texture-interior-walls" },
+    { label: "How to prepare your home for interior painting", href: "/blog/how-to-prepare-home-for-interior-painting" },
+    { label: "Our interior painting process, step by step", href: "/interior-painting-process-houston" },
+    { label: "Can you paint over water stains?", href: "/blog/paint-over-water-stains-houston" },
+    { label: "Why flat paint is a mistake in bathrooms", href: "/blog/flat-paint-bathrooms-mistake" },
+    { label: "Alabaster vs White Dove vs Chantilly Lace", href: "/blog/alabaster-vs-white-dove-vs-chantilly-lace-houston" },
+    { label: "Small painting jobs in Houston", href: "/small-painting-jobs-houston" },
   ],
   "/exterior-painting-houston-tx": [
     { label: "Wood rot repair before exterior painting", href: "/blog/wood-rot-repair-before-painting-houston" },
@@ -175,6 +192,11 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Porch columns and posts", href: "/blog/painting-porch-columns-posts-houston" },
     { label: "Homeowner checklist before exterior painting", href: "/blog/homeowner-checklist-before-exterior-painting" },
     { label: "Painting just the exterior trim", href: "/blog/painting-exterior-trim-only-houston" },
+    { label: "Exterior painting timeline and rain delays", href: "/blog/exterior-painting-timeline-rain-houston" },
+    { label: "Spring rain damage to exterior paint", href: "/blog/spring-rain-damage-houston-exterior-paint" },
+    { label: "Should you paint your house before selling?", href: "/blog/paint-house-before-selling-houston" },
+    { label: "Spray vs brush and roll painting", href: "/blog/spray-vs-brush-roll-painting-houston" },
+    { label: "Local painter vs national franchise", href: "/local-painter-vs-national-franchise-houston" },
   ],
   "/cabinet-refinishing-houston-tx": [
     { label: "Green kitchen cabinets for 2027", href: "/blog/green-kitchen-cabinet-colors-2027-houston" },
@@ -184,6 +206,8 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
     { label: "Should you fill oak grain?", href: "/blog/fill-oak-grain-before-painting-cabinets" },
     { label: "On-site vs. off-site cabinet painting", href: "/blog/cabinet-painting-on-site-vs-off-site" },
     { label: "Painting inside kitchen cabinets", href: "/blog/paint-inside-kitchen-cabinets" },
+    { label: "Paint or replace your kitchen cabinets?", href: "/paint-or-replace-cabinets" },
+    { label: "Cabinet painting cost in Katy", href: "/cabinet-painting-cost-katy" },
   ],
   "/drywall-repair-houston-tx": [
     { label: "Orange peel vs. knockdown vs. smooth walls", href: "/blog/orange-peel-vs-knockdown-vs-smooth-walls" },
@@ -207,6 +231,7 @@ export const RELATED_GUIDES: Record<string, GuideLink[]> = {
   "/fine-finish-painting-houston": [
     { label: "Painting interior doors", href: "/blog/painting-interior-doors-houston" },
     { label: "Latex over oil-based paint", href: "/blog/latex-paint-over-oil-based-paint" },
+    { label: "Venetian plaster in Houston: cost and care", href: "/blog/venetian-plaster-houston-tx" },
   ],
   "/blog/sherwin-williams-color-of-the-year-2027-celery-houston": [
     { label: "Celery vs. Webster Green", href: "/blog/celery-vs-webster-green-2027-color-of-the-year" },

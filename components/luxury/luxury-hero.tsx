@@ -1,7 +1,7 @@
 import { ReviewsInline } from "@/components/office-reviews"
 import Link from "next/link"
 import Image from "next/image"
-import { Star, ShieldCheck, Phone, CalendarDays } from "lucide-react"
+import { ShieldCheck, Phone, CalendarDays } from "lucide-react"
 import { BUSINESS, PHONE_HREF } from "@/lib/business"
 import { QuickEstimateForm } from "@/components/quick-estimate-form"
 

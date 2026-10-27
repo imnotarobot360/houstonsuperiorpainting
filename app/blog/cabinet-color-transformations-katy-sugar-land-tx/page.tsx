@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, Clock, User, Calendar, Phone, Lightbulb, CheckCircle2 } from "lucide-react"
+import { ArrowLeft, Clock, User, Calendar, Phone, Lightbulb } from "lucide-react"
 import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {

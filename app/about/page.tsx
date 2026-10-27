@@ -12,14 +12,7 @@ import type { Metadata } from "next"
 import { MapPin, Phone, ShieldCheck, Languages, ClipboardList, Star } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import {
-  BUSINESS,
-  PHONE_HREF,
-  OFFICE_PAGES,
-  officeForPage,
-  officeAddressLine, publicAddressLine, servingLine,
-  officeMapsUrl,
-} from "@/lib/business"
+import { BUSINESS, PHONE_HREF, OFFICE_PAGES, officeForPage, publicAddressLine, servingLine, officeMapsUrl } from "@/lib/business"
 import { JsonLd, ORG_ID, OWNER_ID, WEBSITE_ID } from "@/components/structured-data"
 import { breadcrumbNode, ESTIMATE_PATH, CtaBlock } from "@/components/aeo/blocks"
 

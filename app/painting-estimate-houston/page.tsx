@@ -3,17 +3,7 @@ import { TrustChecklist } from "@/components/trust-checklist"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import {
-  Phone,
-  Star,
-  ShieldCheck,
-  BadgeCheck,
-  Check,
-  X,
-  FileText,
-  ArrowRight,
-  Plus,
-} from "lucide-react"
+import { Phone, ShieldCheck, BadgeCheck, Check, X, FileText, ArrowRight, Plus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Footer } from "@/components/footer"
 import { EstimateBookingFlow } from "@/components/estimate-booking-flow"

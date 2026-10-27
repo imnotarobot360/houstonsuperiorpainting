@@ -1,6 +1,5 @@
 import { RelatedGuides } from "@/components/related-guides"
 import { ReviewsInline } from "@/components/office-reviews"
-import { BUSINESS } from "@/lib/business"
 import type { Metadata } from 'next'
 import Link from "next/link"
 import { Header } from "@/components/header"

@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import { GeoServicePageTemplate } from "@/components/geo-service-page-template"
-import { BUSINESS } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Brick Painting in Katy, TX | Houston Superior Painting",

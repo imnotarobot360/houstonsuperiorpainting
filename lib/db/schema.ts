@@ -1,4 +1,4 @@
-import { boolean, index, integer, jsonb, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core"
+import { boolean, index, jsonb, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core"
 
 /**
  * Every estimate request from the site, across all four services.

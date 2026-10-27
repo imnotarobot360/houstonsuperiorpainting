@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { GuideArticle, guideMetadata, type GuideArticleData } from "@/components/aeo/guide-article"
-import { Bullets, Steps } from "@/components/aeo/blocks"
+import { Steps } from "@/components/aeo/blocks"
 import { BUSINESS } from "@/lib/business"
 
 // Daily calendar post (lib/blog-schedule.ts), publishes 2026-10-26.

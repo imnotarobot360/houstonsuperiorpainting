@@ -2,7 +2,6 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { BUSINESS, PHONE_HREF, SMS_HREF, PRICES_2026 } from "@/lib/business";
 
 export const metadata: Metadata = {
