@@ -1285,6 +1285,39 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Photos of a Sugar Land, TX home with olive-green painted stucco, dark brown trim and garage door, and brick and stone accents.",
   },
+  {
+    // Job photos supplied by Juan on 2026-10-27: "we paint this commercial job in
+    // austin tx". Juan confirmed the crew painted the exterior walls AND the
+    // lettering/mural, and that the restaurant may be named. Street number on the
+    // door and a neighboring business's sign blurred; ladder and cone cropped out;
+    // near-duplicate shots left out. Austin is outside our listed service areas,
+    // so no relatedServiceAreas. Products, colors and timeline unconfirmed.
+    slug: "austin-citizens-restaurant-exterior",
+    title: "Restaurant Exterior and Lettering in Austin",
+    neighborhood: "Austin, TX",
+    service: "Commercial Painting",
+    serviceSlug: "commercial-painting-houston-tx",
+    propertyType: "Restaurant and cafe",
+    scope: "Exterior walls plus the painted lettering and mural artwork",
+    summary:
+      "The exterior of Citizens All Day, a cafe, restaurant and deli in Austin, TX: teal walls with hand-painted white lettering, menu words, arrows and a kangaroo mural, photographed after the work.",
+    heroImage: "/images/projects/austin-citizens-restaurant-exterior/01-storefront.jpg",
+    afterImage: "/images/projects/austin-citizens-restaurant-exterior/01-storefront.jpg",
+    afterAlt: "Citizens All Day restaurant in Austin with teal painted walls, large white Citizens lettering and a striped awning",
+    gallery: [
+      { src: "/images/projects/austin-citizens-restaurant-exterior/02-long-elevation.jpg", alt: "Long teal street wall with a painted menu band, three striped awnings and a white this-way arrow" },
+      { src: "/images/projects/austin-citizens-restaurant-exterior/03-side-mural.jpg", alt: "Side wall with Citizens lettering, a painted kangaroo hugging a bottle, stars and Brekkie Lunch Dinner Deli lettering" },
+    ],
+    stats: [
+      { label: "Location", value: "Austin, TX" },
+      { label: "Service", value: "Commercial exterior" },
+      { label: "Scope", value: "Walls + lettering" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Restaurant Exterior and Lettering in Austin, TX",
+    metaDescription:
+      "Photos of the Citizens All Day restaurant in Austin, TX: teal exterior walls with hand-painted white lettering, menu words and a kangaroo mural.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */
