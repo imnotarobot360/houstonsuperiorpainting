@@ -103,7 +103,34 @@ export function captureAttribution(): Attribution {
     return { ...fresh, oppref: getOppref() }
   }
 
+  // No campaign params: keep the first external referrer (e.g. https://chatgpt.com/)
+  // so a lead from an AI assistant or search link without UTM tags is not stored
+  // as "direct". First touch only; UTM params above still take precedence.
+  if (!stored.utmSource && !stored.gclid && !stored.referrer) {
+    const referrer = externalReferrer()
+    if (referrer) {
+      const fresh: Attribution = { referrer, landingPage: window.location.pathname }
+      try {
+        sessionStorage.setItem(UTM_STORAGE_KEY, JSON.stringify(fresh))
+      } catch {
+        // Storage disabled: see above.
+      }
+      return { ...fresh, oppref: getOppref() }
+    }
+  }
+
   return { ...stored, oppref: getOppref() }
+}
+
+/** document.referrer when it is another site, else undefined. */
+function externalReferrer(): string | undefined {
+  const ref = document.referrer
+  if (!ref) return undefined
+  try {
+    return new URL(ref).host === window.location.host ? undefined : ref.slice(0, 300)
+  } catch {
+    return undefined
+  }
 }
 
 function getStoredAttribution(): Attribution {

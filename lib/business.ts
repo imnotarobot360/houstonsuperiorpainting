@@ -172,7 +172,7 @@ export const BUSINESS = {
       label: "Magnolia",
       /** Juan confirmed a staffed office customers can visit, 2026-10-25. */
       locationType: "staffed_office" as LocationType,
-      street: "14512 Cottontop Mtn",
+      street: "14512 Cottontop Mountain",
       city: "Magnolia",
       state: "TX",
       zip: "77354",

@@ -244,7 +244,7 @@ export const LOCATIONS: OfficeLocation[] = [
     slug: "magnolia",
     city: "Magnolia",
     gbpName: "Houston Superior Painting - Magnolia",
-    street: "14512 Cottontop Mtn",
+    street: "14512 Cottontop Mountain",
     zip: "77354",
     latitude: null,
     longitude: null,

@@ -12,7 +12,24 @@ import { NextResponse, type NextRequest } from "next/server"
  *
  * Covers both entry points: the live epoxy.* host and the internal /epoxy path.
  */
+// AI crawler / assistant user agents worth counting (owner brief 2026-10-26,
+// ChatGPT Search measurement). One JSON line per request lands in the Vercel
+// runtime logs; scripts/ai-bot-report.mjs pulls them and checks each IP against
+// OpenAI's published ranges, so a spoofed user agent is not counted as OpenAI.
+const AI_BOT_UA = /OAI-SearchBot|ChatGPT-User|GPTBot|OAI-AdsBot|PerplexityBot|Perplexity-User|ClaudeBot|Claude-SearchBot|Claude-User|bingbot/i
+
 export function proxy(request: NextRequest) {
+  const bot = (request.headers.get("user-agent") ?? "").match(AI_BOT_UA)?.[0]
+  if (bot) {
+    console.log(
+      JSON.stringify({
+        aiBotHit: bot,
+        path: request.nextUrl.pathname,
+        ip: (request.headers.get("x-forwarded-for") ?? "").split(",")[0].trim(),
+      }),
+    )
+  }
+
   const isEpoxyHost = request.headers.get("host")?.startsWith("epoxy.") ?? false
   const { pathname } = request.nextUrl
   const isEpoxyPath = pathname === "/epoxy" || pathname.startsWith("/epoxy/")
