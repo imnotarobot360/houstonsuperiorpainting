@@ -5,8 +5,6 @@ import { TrustBar } from "@/components/trust-bar"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LocationPageTemplate } from "@/components/location-page-template"
-import { ProblemSelector } from "@/components/problem-selector"
-import { PricingSection } from "@/components/pricing-section"
 import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 
@@ -187,8 +185,6 @@ Houston Superior Painting was founded in 2019 and is headquartered in Cypress. E
             </p>
           </div>
         </section>
-        <ProblemSelector />
-        <PricingSection />
         <SchedulerSection />
       </main>
       <Footer />

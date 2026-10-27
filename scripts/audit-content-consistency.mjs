@@ -89,7 +89,7 @@ export const RULES = [
   {
     id: "warranty-term",
     why: "Painting warranty is 5 years; not transferable/lifetime/15-year unless documented",
-    re: /(?:15|fifteen)[- ]year (?:warranty|durability|guarantee)|\b(?:\d+|five)[- ]year (?:written )?(?:quality |workmanship )?guarantee|texture-match guarantee|lifetime (?:warranty|guarantee)|satisfaction guarantee|\btransferable\b(?!\[)/i,
+    re: /(?:15|fifteen)[- ]year (?:warranty|durability|guarantee)|\b(?:\d+|five)[- ]year (?:written )?(?:quality |workmanship )?guarantee|texture-match guarantee|lifetime (?:warranty|guarantee)|satisfaction guarantee|warranty on (?:all|every) (?:painting|projects?|jobs?|work)\b|\btransferable\b(?!\[)/i,
   },
   { id: "epoxy-warranty", why: "Epoxy warranties belong to Houston Superior Epoxy only", re: /epoxy[^.\n]{0,80}warrant|warrant[^.\n]{0,80}epoxy/i, unless: /provided separately/i },
   {

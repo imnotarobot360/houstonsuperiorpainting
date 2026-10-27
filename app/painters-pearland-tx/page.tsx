@@ -3,8 +3,6 @@ import { TrustBar } from "@/components/trust-bar"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LocationPageTemplate } from "@/components/location-page-template"
-import { ProblemSelector } from "@/components/problem-selector"
-import { PricingSection } from "@/components/pricing-section"
 import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 import { PRICES_2026 } from "@/lib/business"
@@ -133,16 +131,16 @@ Many Pearland communities have HOAs that review exterior colors. We can pull you
               answer: "Yes. We can pull your community's approved color list and help with the approval paperwork before any exterior work starts, and we can send a certificate of insurance to your HOA."
             },
             {
-              question: "What paint do you use for Pearland exteriors?",
-              answer: "Sherwin-Williams or Benjamin Moore exterior paints suited to heat, humidity, and mildew, such as Sherwin-Williams Duration or SuperPaint. Our 5-year warranty covers peeling, blistering, and flaking caused by our workmanship."
+              question: "Does Pearland's location near the coast change the exterior job?",
+              answer: "Pearland gets the same heat and humidity as Houston plus frequent heavy rain, so mildew on shaded walls and faded south- and west-facing siding are common. We wash and treat mildew, re-caulk open joints and prime bare spots before Sherwin-Williams or Benjamin Moore exterior finish coats, and we schedule around rain."
             },
             {
               question: "Which Pearland areas do you serve?",
               answer: "All of Pearland, including Silverlake, Shadow Creek Ranch, Southfork, Southern Trails, and Old Pearland. Call (346) 594-5960 or request an estimate online to confirm your address."
             },
             {
-              question: "How long does a paint job take in Pearland?",
-              answer: "It depends on the size of the home and how much prep it needs. Your written estimate states the timeline before any work starts, and exterior work can shift a few days for rain."
+              question: "Have you painted homes in Pearland?",
+              answer: "Yes. Our projects page shows a one-story Pearland home with fiber-cement (Hardie) lap and shingle siding repainted sage green, with cream trim, gutters and garage door. Fiber-cement holds paint well when the joints are re-caulked and the surface is washed first."
             },
             {
               question: "Are you insured?",
@@ -150,8 +148,6 @@ Many Pearland communities have HOAs that review exterior colors. We can pull you
             }
           ]}
         />
-        <ProblemSelector />
-        <PricingSection />
         <SchedulerSection />
       </main>
       <Footer />

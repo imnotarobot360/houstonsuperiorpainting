@@ -3,8 +3,6 @@ import { TrustBar } from "@/components/trust-bar"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LocationPageTemplate } from "@/components/location-page-template"
-import { ProblemSelector } from "@/components/problem-selector"
-import { PricingSection } from "@/components/pricing-section"
 import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 import { PRICES_2026 } from "@/lib/business"
@@ -138,12 +136,12 @@ Many Richmond communities have HOAs that review exterior colors. We can pull you
               answer: "Yes. We can pull your community's approved color list and help with the approval paperwork before any exterior work starts, and we can send a certificate of insurance to your HOA."
             },
             {
-              question: "What paint do you use for Richmond exteriors?",
-              answer: "Sherwin-Williams or Benjamin Moore exterior paints suited to heat, humidity, and mildew, such as Sherwin-Williams Duration or SuperPaint. Our 5-year warranty covers peeling, blistering, and flaking caused by our workmanship."
+              question: "Can you paint a tall two-story great room?",
+              answer: "Yes. Tall walls, foyers and stair walls are common in Richmond's newer homes. We plan ladders, planks or scaffolding at the estimate and protect floors and railings; one of our Richmond projects is a two-story great room with crown molding and trim."
             },
             {
-              question: "How long does a paint job take?",
-              answer: "It depends on the size of the home and how much prep it needs. Your written estimate states the timeline before any work starts, and exterior work can shift a few days for rain."
+              question: "Have you painted homes in Richmond?",
+              answer: "Yes. Our projects page shows several Richmond jobs: interiors with a two-story great room and arched hallways, and painted kitchens in sage green and in two-tone white and near-black."
             },
             {
               question: "Are you insured?",
@@ -151,8 +149,6 @@ Many Richmond communities have HOAs that review exterior colors. We can pull you
             }
           ]}
         />
-        <ProblemSelector />
-        <PricingSection />
         <SchedulerSection />
       </main>
       <Footer />

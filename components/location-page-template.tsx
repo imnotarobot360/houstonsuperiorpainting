@@ -13,8 +13,8 @@ import {
   SERVICE_AREAS,
   CORE_SERVICES,
   PHONE_HREF,
+  isVerifiedOffice,
   officeAddressLine,
-  publicAddressLine,
 } from "@/lib/business"
 import { nearestOfficeFor } from "@/lib/nearest-office"
 import Image from "next/image"
@@ -245,22 +245,35 @@ export function LocationPageTemplate({
         </section>
 
         {/* Nearest location + core services. Visible text only: these pages have
-            no location of their own, so nothing here goes into schema. A street
-            address is printed only for the HQ or a verified office (owner brief
-            2026-10-25, phase 7). */}
+            no location of their own, so nothing here goes into schema. Office
+            wording and the street address only for a staffed office (owner brief
+            2026-10-25, phase 7; all five confirmed by Juan the same day). */}
         <section className="mb-12 bg-card rounded-xl p-8 border border-border">
           {nearestOffice && (
             <div className="mb-8">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4 flex items-center gap-3">
                 <Building2 className="h-6 w-6 text-accent flex-shrink-0" />
-                Nearby Service Area
+                {isVerifiedOffice(nearestOffice) ? "Your Nearest Office" : "Nearby Service Area"}
               </h2>
               <p className="text-foreground leading-relaxed">
-                {city} is next to our{" "}
-                <Link href={`/${nearestOffice.pageSlug}`} className="text-primary font-medium hover:underline">
-                  {nearestOffice.city} service area
-                </Link>
-                {publicAddressLine(nearestOffice) ? <> (headquarters: {officeAddressLine(nearestOffice)})</> : null}.
+                {isVerifiedOffice(nearestOffice) ? (
+                  <>
+                    The closest {BUSINESS.name} office to {city} is our{" "}
+                    <Link href={`/${nearestOffice.pageSlug}`} className="text-primary font-medium hover:underline">
+                      {nearestOffice.city}
+                      {"isHeadquarters" in nearestOffice && nearestOffice.isHeadquarters ? " headquarters" : " office"}
+                    </Link>{" "}
+                    at {officeAddressLine(nearestOffice)}.
+                  </>
+                ) : (
+                  <>
+                    {city} is next to our{" "}
+                    <Link href={`/${nearestOffice.pageSlug}`} className="text-primary font-medium hover:underline">
+                      {nearestOffice.city} service area
+                    </Link>
+                    .
+                  </>
+                )}{" "}
                 Estimates are done at your home. To schedule one, call{" "}
                 <a href={PHONE_HREF} className="text-primary font-medium hover:underline">{BUSINESS.phone}</a>.
               </p>
@@ -465,7 +478,7 @@ export function LocationPageTemplate({
             Ready to Transform Your {city} Home?
           </h2>
           <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
-            Get a free, no-obligation estimate for your {city} home, backed by a {BUSINESS.trust.warrantyYears}-year workmanship warranty on all painting.
+            Get a free, no-obligation estimate for your {city} home, with a {BUSINESS.trust.warrantyYears}-year written workmanship warranty on qualifying painting projects.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">

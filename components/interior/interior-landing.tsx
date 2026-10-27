@@ -25,7 +25,7 @@ import { cn } from "@/lib/utils"
 const PROOF_POINTS = [
   "Instant ballpark price — before you give any contact details",
   "Written line-item estimate, never a lump sum",
-  `${BUSINESS.trust.warrantyYears}-year written warranty on every job`,
+  `${BUSINESS.trust.warrantyYears}-year written workmanship warranty on qualifying painting`,
   "Furniture moved and floors covered before we open a can",
 ]
 

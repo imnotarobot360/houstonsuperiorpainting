@@ -3,8 +3,6 @@ import { TrustBar } from "@/components/trust-bar"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LocationPageTemplate } from "@/components/location-page-template"
-import { ProblemSelector } from "@/components/problem-selector"
-import { PricingSection } from "@/components/pricing-section"
 import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 import { BUSINESS, PRICES_2026 } from "@/lib/business"
@@ -149,8 +147,6 @@ If your home is in a city historic district, check with the City of Houston abou
             }
           ]}
         />
-        <ProblemSelector />
-        <PricingSection />
         <SchedulerSection />
       </main>
       <Footer />

@@ -4,8 +4,6 @@ import { TrustBar } from "@/components/trust-bar"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LocationPageTemplate } from "@/components/location-page-template"
-import { ProblemSelector } from "@/components/problem-selector"
-import { PricingSection } from "@/components/pricing-section"
 import { SchedulerSection } from "@/components/scheduler-section"
 import { generateLocationBusinessSchema } from "@/components/structured-data"
 
@@ -149,8 +147,6 @@ Nearly every Fulshear master-planned community has an HOA that reviews exterior 
             }
           ]}
         />
-        <ProblemSelector />
-        <PricingSection />
         <SchedulerSection />
       </main>
       <Footer />
