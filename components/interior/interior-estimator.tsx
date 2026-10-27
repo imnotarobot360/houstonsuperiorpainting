@@ -606,7 +606,7 @@ export function InteriorEstimator() {
             </div>
 
             <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-muted-foreground">
-              <input
+              <input name="smsConsent" value="true"
                 type="checkbox"
                 checked={contact.smsConsent}
                 onChange={(e) => setContact((c) => ({ ...c, smsConsent: e.target.checked }))}
@@ -749,7 +749,7 @@ export function InteriorEstimator() {
             </div>
           ) : (
             <>
-              <input
+              <input name="photos"
                 ref={fileInput}
                 type="file"
                 accept="image/*,.heic,.heif"

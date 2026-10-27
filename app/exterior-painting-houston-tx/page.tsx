@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: "Are you insured in Texas?",
-    a: "Texas does not license painters. We maintain business insurance. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance before work begins.",
+    a: "Texas does not license painters. We maintain business insurance. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance according to the project requirements.",
   },
   {
     q: "What does the 5-year warranty cover?",

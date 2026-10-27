@@ -24,39 +24,66 @@ function newPublicToken() {
   return Array.from(bytes, (b) => b.toString(16).padStart(2, "0")).join("")
 }
 
+/**
+ * True for a plain HTML form post (JavaScript off or failed to load). Browsers
+ * send Accept: text/html for a form navigation; fetch() does not. Those posts
+ * get a redirect instead of JSON (owner brief 2026-10-27). The office email for
+ * them is not sent from the browser, so the lead stays unemailed and the
+ * /api/leads/unemailed cron picks it up.
+ */
+function isHtmlPost(request: NextRequest) {
+  return (request.headers.get("accept") ?? "").includes("text/html")
+}
+
+/** Redirect target for a failed HTML post: a page with the phone number. */
+function notSent(request: NextRequest, lang: string, reason: string) {
+  const url = new URL("/estimate/not-sent", request.url)
+  url.searchParams.set("reason", reason)
+  if (lang === "es") url.searchParams.set("lang", "es")
+  return NextResponse.redirect(url, 303)
+}
+
 function str(form: FormData, key: string, max = 500) {
   const value = form.get(key)
   return typeof value === "string" ? value.trim().slice(0, max) : ""
 }
 
 export async function POST(request: NextRequest) {
+  const html = isHtmlPost(request)
+  let lang = "en"
   try {
     const form = await request.formData()
+    lang = str(form, "lang", 5) === "es" ? "es" : "en"
 
     // ── Validate ────────────────────────────────────────────────────────────
     // Honeypot: a hidden field people never see. Bots that fill it get a quiet
     // success so they don't retry, and nothing is stored.
     if (str(form, "website", 200)) {
+      if (html) return NextResponse.redirect(new URL("/estimate/not-sent?reason=received", request.url), 303)
       return NextResponse.json({ ok: true, publicToken: null })
     }
 
     const service = str(form, "service", 40)
     const config = getLeadForm(service)
     if (!config) {
+      if (html) return notSent(request, lang, "invalid")
       return NextResponse.json({ ok: false, error: "Unknown service." }, { status: 400 })
     }
 
     const name = str(form, "name", 120)
     const phone = str(form, "phone", 40)
     if (name.length < 2) {
+      if (html) return notSent(request, lang, "name")
       return NextResponse.json({ ok: false, error: "Please enter your name." }, { status: 400 })
     }
     if (phone.replace(/\D/g, "").length < 10) {
+      if (html) return notSent(request, lang, "phone")
       return NextResponse.json({ ok: false, error: "Please enter a valid phone number." }, { status: 400 })
     }
 
     const email = str(form, "email", 200)
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      if (html) return notSent(request, lang, "email")
       return NextResponse.json({ ok: false, error: "Please enter a valid email address." }, { status: 400 })
     }
 
@@ -96,12 +123,27 @@ export async function POST(request: NextRequest) {
     } catch {
       answers = {}
     }
+    // A plain HTML post has no answers JSON: take the allowed answers from
+    // same-named form fields instead (e.g. projectType, colorName).
+    if (!form.has("answers")) {
+      for (const q of config.questions) {
+        const v = str(form, q.id, 200)
+        if (v) answers[q.id] = v
+      }
+      if (lang === "es" && config.questions.some((q) => q.id === "language")) answers.language = "Spanish"
+    }
 
     let attribution: Record<string, unknown> = {}
     try {
       attribution = JSON.parse(str(form, "attribution", 4000) || "{}") as Record<string, unknown>
     } catch {
       attribution = {}
+    }
+    if (!form.has("attribution")) {
+      // Without JavaScript there is no stored attribution; keep what the request shows.
+      const ref = request.headers.get("referer")
+      const landingPage = ref && URL.canParse(ref) ? new URL(ref).pathname : undefined
+      attribution = { landingPage, formLocation: str(form, "formLocation", 60) }
     }
     const attr = (key: string) => {
       const value = attribution[key]
@@ -162,9 +204,11 @@ export async function POST(request: NextRequest) {
       })
       .returning({ publicToken: leads.publicToken })
 
+    if (html) return NextResponse.redirect(new URL(`/estimate/confirmed/${row.publicToken}`, request.url), 303)
     return NextResponse.json({ ok: true, publicToken: row.publicToken, photoCount: photoPaths.length })
   } catch (err) {
     console.error("[v0] lead insert failed:", err)
+    if (html) return notSent(request, lang, "error")
     return NextResponse.json(
       { ok: false, error: "We couldn't save that. Please call us and we'll take your details." },
       { status: 500 },

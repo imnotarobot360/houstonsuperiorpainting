@@ -33,11 +33,17 @@ export function proxy(request: NextRequest) {
   const isEpoxyHost = request.headers.get("host")?.startsWith("epoxy.") ?? false
   const { pathname } = request.nextUrl
   const isEpoxyPath = pathname === "/epoxy" || pathname.startsWith("/epoxy/")
+  // The Spanish homepage needs <html lang="es-US"> in the server HTML (owner
+  // brief 2026-10-27). The root layout cannot see the pathname, so tag it here.
+  const isSpanish = pathname === "/es" || pathname.startsWith("/es/")
 
-  if (!isEpoxyHost && !isEpoxyPath) return NextResponse.next()
+  if (!isEpoxyHost && !isEpoxyPath && !isSpanish && !request.headers.has("x-site-lang")) return NextResponse.next()
 
   const headers = new Headers(request.headers)
-  headers.set("x-epoxy-site", "1")
+  // Always overwrite: a client-sent x-site-lang must never reach the layout.
+  headers.delete("x-site-lang")
+  if (isSpanish) headers.set("x-site-lang", "es-US")
+  if (isEpoxyHost || isEpoxyPath) headers.set("x-epoxy-site", "1")
 
   // Do NOT rewrite the epoxy host onto /epoxy here. next.config.mjs already
   // does that in its beforeFiles rewrites, and middleware runs BEFORE those —

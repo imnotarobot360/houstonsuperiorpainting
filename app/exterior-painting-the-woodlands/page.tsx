@@ -30,7 +30,7 @@ export default function ExteriorPaintingTheWoodlandsPage() {
       h1={"Exterior House Painters in The Woodlands, TX"}
       heroSubheading={"Exterior painting for homes under The Woodlands' tree canopy, prepared for shade, moisture and Houston heat, with color information ready for your Design Review Committee application."}
       introLocal={"The Woodlands' heavy tree cover keeps many homes shaded and damp, which encourages mildew, algae and wood rot on siding and trim, especially on the shaded sides of the house. Exterior color changes are reviewed by The Woodlands' Residential Design Review Committee, so settle the color before scheduling. Homes range from wood-sided houses in the earlier villages to brick, stucco and fiber-cement in newer ones, and each surface needs its own prep."}
-      serviceOverview={"Exterior painting in The Woodlands includes washing the house, scraping loose paint, repairing or replacing rotted wood, caulking open joints, spot-priming bare areas and applying the finish coats to siding, trim, doors and fascia. Plants, walkways and windows are covered while we work. We use Sherwin-Williams and Benjamin Moore exterior paints, with the product listed on your written estimate, and every job carries our 5-year written workmanship warranty."}
+      serviceOverview={"Exterior painting in The Woodlands includes washing the house, scraping loose paint, repairing or replacing rotted wood, caulking open joints, spot-priming bare areas and applying the finish coats to siding, trim, doors and fascia. Plants, walkways and windows are covered while we work. We use Sherwin-Williams and Benjamin Moore exterior paints, with the product listed on your written estimate, and qualifying painting projects carry our 5-year written workmanship warranty."}
       whyChooseUs={[
         "Washing, scraping, caulking and spot-priming are part of the scope, not add-ons.",
         "Wood repair, if your home needs it, is listed and priced in the written estimate.",
@@ -62,7 +62,7 @@ export default function ExteriorPaintingTheWoodlandsPage() {
         },
         {
           question: "What warranty do you offer?",
-          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+          answer: "Qualifying painting projects include a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
         },
       ]}
       testimonials={[

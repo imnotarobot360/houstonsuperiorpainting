@@ -128,7 +128,7 @@ const D: GuideArticleData = {
   path: "/blog/benjamin-moore-color-trends-2027-houston",
   title: "Benjamin Moore Color Trends 2027: Colors for Houston Homes",
   description:
-    "All eight Benjamin Moore Color Trends 2027 colors, from Webster Green to White Down: undertones, LRV, best rooms, trim colors and how each looks in Houston light.",
+    "All eight Benjamin Moore Color Trends 2027 colors, Webster Green to White Down: undertones, LRV, best rooms, trim pairings and Houston light.",
   h1: "Benjamin Moore Color Trends 2027: the best colors for Houston homes",
   eyebrow: "Color guide",
   published: "2026-10-25",

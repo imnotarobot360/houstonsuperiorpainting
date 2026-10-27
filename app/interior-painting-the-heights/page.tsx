@@ -67,7 +67,7 @@ export default function InteriorPaintingHeightsPage() {
         },
         {
           question: "What does the warranty cover?",
-          answer: "Every project comes with a 5-year written workmanship warranty. The terms are written out with your estimate, so you can read them before you approve anything.",
+          answer: "Qualifying painting projects include a five-year written workmanship warranty, subject to the coverage, exclusions and conditions in the signed estimate or warranty document. The terms are written out with your estimate, so you can read them before you approve anything.",
         },
         {
           question: "When do I pay?",

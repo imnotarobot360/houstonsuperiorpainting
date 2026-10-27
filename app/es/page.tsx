@@ -12,7 +12,8 @@ import { BUSINESS, PHONE_HREF } from "@/lib/business"
 // calls and texts). One page with a section per service, linked by anchors.
 // Insurance and warranty sentences are the owner-approved Spanish wording from
 // BUSINESS / the brief. "Houston Superior Painting" is never translated. The root
-// layout sets <html lang="en">, so this page's content is wrapped in lang="es".
+// layout serves this page as <html lang="es-US"> (proxy.ts tags /es); <main lang="es">
+// stays as a second signal.
 // No reviews or customer quotes are translated here.
 
 const PATH = "/es"

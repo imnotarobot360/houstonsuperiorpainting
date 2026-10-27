@@ -30,7 +30,7 @@ export default function InteriorPaintingTheWoodlandsPage() {
       h1={"Interior Painters in The Woodlands, TX"}
       heroSubheading={"Interior painting for homes across The Woodlands' villages, from older homes in Grogan's Mill and Panther Creek to newer builds in Creekside Park."}
       introLocal={"The Woodlands' villages span several decades of construction. Homes in the earlier villages, such as Grogan's Mill and Panther Creek, often have years of touch-ups, older oil-based trim and dated colors, while newer homes in Creekside Park and Sterling Ridge tend to have flat builder-grade paint and tall, open rooms. Oil-based trim needs a bonding primer before it will hold water-based paint, and tall rooms need the right equipment; both are planned for in the written estimate."}
-      serviceOverview={"Interior painting in The Woodlands covers walls, ceilings, trim, doors and closets. Prep comes first: furniture moved or covered, floors protected, holes and cracks patched, gaps caulked and stains spot-primed. We apply Sherwin-Williams or Benjamin Moore paint, and the product line and sheen for each surface are listed on your written estimate. The schedule is also set in writing before work starts, and every job carries our 5-year written workmanship warranty."}
+      serviceOverview={"Interior painting in The Woodlands covers walls, ceilings, trim, doors and closets. Prep comes first: furniture moved or covered, floors protected, holes and cracks patched, gaps caulked and stains spot-primed. We apply Sherwin-Williams or Benjamin Moore paint, and the product line and sheen for each surface are listed on your written estimate. The schedule is also set in writing before work starts, and qualifying painting projects carry our 5-year written workmanship warranty."}
       whyChooseUs={[
         "A written estimate that lists the rooms, surfaces, prep and products, so you can compare bids line by line.",
         "Prep before paint: patching, caulking and spot-priming are part of the scope, not extras.",
@@ -62,7 +62,7 @@ export default function InteriorPaintingTheWoodlandsPage() {
         },
         {
           question: "What warranty do you offer?",
-          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+          answer: "Qualifying painting projects include a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
         },
       ]}
       testimonials={[

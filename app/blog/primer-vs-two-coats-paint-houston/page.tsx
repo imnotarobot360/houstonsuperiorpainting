@@ -15,7 +15,7 @@ const D: GuideArticleData = {
   path: "/blog/primer-vs-two-coats-paint-houston",
   title: "Primer vs Two Coats of Paint: Which Do You Really Need?",
   description:
-    "Do you need primer or just two coats of paint? A Houston painter explains when primer is a must, when two coats are enough, and what \"paint and primer in one\" means.",
+    "Primer or two coats of paint? A Houston painter explains when primer is a must, when two coats are enough, and what \"paint and primer in one\" means.",
   h1: "Do you need primer or two coats of paint? A Houston painter explains",
   eyebrow: "Paint guide",
   published: "2026-10-14",
@@ -180,7 +180,7 @@ const D: GuideArticleData = {
             the planned coats, so you know what you are paying for. {BUSINESS.paymentPolicy.sentence}
           </p>
           <p>
-            Every project comes with a free written estimate, our 5-year written workmanship warranty on qualifying painting projects, and proof of insurance upon request. Related services:{" "}
+            You get a free written estimate and proof of insurance upon request, and qualifying painting projects include our 5-year written workmanship warranty. Related services:{" "}
             <Link href="/interior-painting-houston-tx">interior painting</Link>,{" "}
             <Link href="/exterior-painting-houston-tx">exterior painting</Link>,{" "}
             <Link href="/cabinet-refinishing-houston-tx">cabinet painting</Link>,{" "}

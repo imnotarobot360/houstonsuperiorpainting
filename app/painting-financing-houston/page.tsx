@@ -6,16 +6,16 @@ import { BUSINESS, PHONE_HREF } from "@/lib/business"
 import { CreditCard, CalendarClock, ShieldCheck, CheckCircle, Phone, FileText, Paintbrush } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Painting Financing in Houston, TX | Paint Now, Pay Over Time",
+  title: "Painting Financing Options in Houston, TX",
   description:
-    "Flexible painting financing for Houston, Katy & Cypress homeowners. Affordable monthly payments on interior, exterior & cabinet projects. Free estimates.",
+    "Painting financing options may be available through a third-party provider for Houston, Katy & Cypress homeowners. Ask for current terms at your free estimate.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/painting-financing-houston",
   },
   openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Painting Financing in Houston, TX | Houston Superior Painting",
     description:
-      "Paint now and pay over time with flexible monthly payment plans for Houston homeowners. Apply in minutes.",
+      "Financing options may be available through a third-party provider for Houston painting projects. Ask for current terms during your estimate.",
     type: "website",
   },
 }
@@ -26,7 +26,7 @@ const serviceSchema = {
   "@id": "https://houstonsuperiorpainting.com/painting-financing-houston#service",
   name: "Painting Financing in Houston, TX",
   description:
-    "Flexible financing and monthly payment plans for interior painting, exterior painting, and cabinet refinishing projects across the Greater Houston area.",
+    "Financing options may be available through a third-party provider for interior painting, exterior painting and cabinet refinishing projects across Greater Houston.",
   serviceType: "Home Improvement Financing",
   provider: { "@id": "https://houstonsuperiorpainting.com/#organization" },
   areaServed: [
@@ -41,41 +41,41 @@ const serviceSchema = {
 const financingFaqs = [
   {
     q: "Do you offer financing for painting projects in Houston?",
-    a: "Yes. Houston Superior Painting offers flexible financing so you can complete your interior, exterior, or cabinet painting project now and pay over time with affordable monthly payments. Financing is available for homeowners throughout Houston, Katy, Cypress, Sugar Land, and surrounding areas.",
+    a: "Financing options may be available through a third-party provider. Availability, approval, loan amount, APR and repayment terms depend on the applicant and provider. Ask for current terms during your estimate. Ask about it for interior, exterior or cabinet projects anywhere we work, including Houston, Katy, Cypress, Sugar Land and surrounding areas.",
   },
   {
     q: "How do I apply for painting financing?",
-    a: "Applying is simple. After your free estimate, we'll walk you through a quick application that takes just a few minutes. Many homeowners receive a decision the same day, and once approved you can schedule your project right away.",
+    a: "Ask about financing during your free estimate. If it is available for your project, you apply with the third-party provider, which decides approval and terms. Your project price, scope and payment schedule are set in your written estimate.",
   },
   {
     q: "What types of projects can I finance?",
-    a: "You can finance any of our services, including full interior painting, exterior painting, cabinet refinishing, drywall repair, and larger remodeling projects. Financing is especially popular for whole-home repaints and exterior projects.",
+    a: "Ask about financing for any of our services, including interior painting, exterior painting, cabinet refinishing, drywall repair and larger remodeling projects. Whether financing is available, and on what terms, depends on the applicant and the provider.",
   },
   {
     q: "Is there a payment due before work begins?",
-    a: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project. Financing lets you spread the cost over time; ask about terms at your estimate.",
+    a: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project. Ask about current financing terms during your estimate.",
   },
   {
     q: "Will financing affect the quality or warranty of my paint job?",
-    a: "Not at all. Every project receives the same old-school preparation, premium Sherwin-Williams and Benjamin Moore products, and 5-year exterior workmanship warranty — whether you pay in full or finance over time.",
+    a: "No. The preparation, products and warranty on your project are set in your written estimate, whether you pay directly or use financing. Qualifying painting projects include a five-year written workmanship warranty, subject to the coverage, exclusions and conditions in the signed estimate or warranty document.",
   },
 ]
 
 const benefits = [
   {
     icon: CalendarClock,
-    title: "Affordable Monthly Payments",
-    description: "Break your project into manageable monthly payments instead of one large lump sum.",
+    title: "Third-Party Financing",
+    description: "Financing options may be available through a third-party provider, so you can ask about paying over time.",
   },
   {
     icon: CreditCard,
-    title: "Quick, Simple Application",
-    description: "Apply in just a few minutes after your free estimate — many homeowners get a same-day decision.",
+    title: "Terms Set by the Provider",
+    description: "Financing options may be available through a third-party provider. Availability, approval, loan amount, APR and repayment terms depend on the applicant and provider. Ask for current terms during your estimate.",
   },
   {
     icon: ShieldCheck,
     title: "Clear Written Payment Terms",
-    description: "Financing lets you spread the cost over time; ask about terms at your estimate.",
+    description: "Your written estimate states the scope, total price, deposit and payment schedule before you approve the project.",
   },
 ]
 
@@ -87,13 +87,13 @@ const steps = [
   },
   {
     icon: CreditCard,
-    title: "Apply for Financing",
-    description: "Complete a quick application in minutes and choose the monthly payment plan that works best for you.",
+    title: "Ask About Financing",
+    description: "If financing is available for your project, you apply with the third-party provider, which decides approval, amount, APR and repayment terms.",
   },
   {
     icon: Paintbrush,
     title: "We Get to Work",
-    description: "Once approved, we schedule your project and deliver the same premium prep and finish — paid over time.",
+    description: "Once you approve the written estimate, we schedule your project with the same preparation and finish whether you pay directly or finance.",
   },
 ]
 
@@ -111,16 +111,16 @@ export default function PaintingFinancingPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-card px-4 py-2 rounded-full border border-border shadow-sm mb-6">
               <CreditCard className="h-4 w-4 text-primary" />
-              <span className="text-sm text-muted-foreground">Flexible financing for Houston homeowners</span>
+              <span className="text-sm text-muted-foreground">Financing options for Houston homeowners</span>
             </div>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance mb-6">
               Painting Financing in <span className="text-primary">Houston, Katy &amp; Cypress</span>
             </h1>
-            <p className="text-xl font-semibold text-secondary mb-4">Paint Now, Pay Over Time.</p>
+            <p className="text-xl font-semibold text-secondary mb-4">Ask About Paying Over Time.</p>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto text-pretty mb-8">
-              Don&apos;t put off the project you&apos;ve been planning. With flexible financing, you can repaint your
-              home today and pay in affordable monthly installments &mdash; with a free estimate, clear written payment terms before you approve,
-              and the same premium quality on every job.
+              Financing options may be available through a third-party provider. Availability, approval, loan amount,
+              APR and repayment terms depend on the applicant and provider. Ask for current terms during your free
+              estimate; your written estimate states the price and payment schedule before you approve.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -149,7 +149,7 @@ export default function PaintingFinancingPage() {
                 Why Finance Your Painting Project?
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Financing makes it easy to invest in your home now while keeping your monthly budget comfortable.
+                What to know before you ask about financing.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -172,7 +172,7 @@ export default function PaintingFinancingPage() {
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-4 text-balance">How Financing Works</h2>
               <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto text-pretty">
-                From estimate to finished project in three simple steps.
+                From estimate to finished project.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -196,7 +196,7 @@ export default function PaintingFinancingPage() {
         <section className="py-12 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-              {["Same premium prep on every job", "Sherwin-Williams & Benjamin Moore", "5-year exterior warranty", "Insured · proof on request"].map(
+              {["Same premium prep on every job", "Sherwin-Williams & Benjamin Moore", "5-year workmanship warranty (qualifying projects)", "Insured · proof on request"].map(
                 (point) => (
                   <div key={point} className="flex items-center gap-2 text-foreground">
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
@@ -222,8 +222,8 @@ export default function PaintingFinancingPage() {
               Ready to Start Your Project?
             </h2>
             <p className="text-lg opacity-90 mb-8 text-pretty">
-              Get a free, no-obligation estimate and find out how affordable your dream paint job can be with monthly
-              financing.
+              Get a free, no-obligation written estimate and ask whether third-party financing is available for your
+              project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

@@ -10,7 +10,7 @@ import { AuthorByline, articleNode, ESTIMATE_PATH } from "@/components/aeo/block
 
 export const metadata: Metadata = {
   title: "Interior Painting Cost in Houston 2026 | Price Guide",
-  description: `Transparent 2026 interior painting costs in Houston: ${PRICES_2026.interiorPerSqFt} per sq ft of floor area. Full breakdown by room, project type, and factors. Free quotes: 346-594-5960.`,
+  description: `Transparent 2026 interior painting costs in Houston: ${PRICES_2026.interiorPerSqFt} per sq ft of floor area, broken down by room and project type. Free quotes: 346-594-5960.`,
   alternates: { canonical: "https://houstonsuperiorpainting.com/interior-painting-cost-houston" },
   openGraph: { title: "Interior Painting Cost Houston 2026 | Full Price Guide", description: `Transparent 2026 interior painting costs in Houston: ${PRICES_2026.interiorPerSqFt} per sq ft of floor area.`, url: "https://houstonsuperiorpainting.com/interior-painting-cost-houston", type: "article", images: [{ url: "https://houstonsuperiorpainting.com/images/og/og-interior-painting.jpg", width: 1200, height: 630 }] },
   other: { "geo.region": "US-TX", "geo.placename": "Houston", "geo.position": "29.9012;-95.6293", ICBM: "29.9012, -95.6293" },

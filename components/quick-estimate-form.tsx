@@ -242,22 +242,22 @@ export function QuickEstimateForm({
             <div className="grid gap-3 sm:grid-cols-2">
               <div>
                 <label htmlFor={id("email")} className="mb-1 block text-sm">{t.email}</label>
-                <input id={id("email")} type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className={input} />
+                <input id={id("email")} name="email" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className={input} />
               </div>
               <div>
                 <label htmlFor={id("address")} className="mb-1 block text-sm">{t.address}</label>
-                <input id={id("address")} autoComplete="street-address" value={address} onChange={(e) => setAddress(e.target.value)} className={input} />
+                <input id={id("address")} name="address" autoComplete="street-address" value={address} onChange={(e) => setAddress(e.target.value)} className={input} />
               </div>
               <div>
                 <label htmlFor={id("timeframe")} className="mb-1 block text-sm">{t.timeframe}</label>
-                <select id={id("timeframe")} value={timeframe} onChange={(e) => setTimeframe(e.target.value)} className={input}>
+                <select id={id("timeframe")} name="timeframe" value={timeframe} onChange={(e) => setTimeframe(e.target.value)} className={input}>
                   <option value="">{t.chooseShort}</option>
                   {TIMEFRAMES.map((v) => <option key={v} value={v}>{opt(v)}</option>)}
                 </select>
               </div>
               <div>
                 <label htmlFor={id("contact")} className="mb-1 block text-sm">{t.method}</label>
-                <select id={id("contact")} value={contactMethod} onChange={(e) => setContactMethod(e.target.value)} className={input}>
+                <select id={id("contact")} name="contactMethod" value={contactMethod} onChange={(e) => setContactMethod(e.target.value)} className={input}>
                   <option value="">{t.chooseShort}</option>
                   {CONTACT_METHODS.map((v) => <option key={v} value={v}>{opt(v)}</option>)}
                 </select>
@@ -265,12 +265,13 @@ export function QuickEstimateForm({
             </div>
             <div>
               <label htmlFor={id("desc")} className="mb-1 block text-sm">{t.desc}</label>
-              <textarea id={id("desc")} rows={3} value={description} onChange={(e) => setDescription(e.target.value)} className={input} />
+              <textarea id={id("desc")} name="description" rows={3} value={description} onChange={(e) => setDescription(e.target.value)} className={input} />
             </div>
             <div>
               <label htmlFor={id("photos")} className="mb-1 block text-sm">{t.photos(MAX_PHOTOS)}</label>
               <input
                 id={id("photos")}
+                name="photos"
                 type="file"
                 accept="image/*"
                 multiple
@@ -313,7 +314,13 @@ export function QuickEstimateForm({
   }
 
   return (
+    // method/action make the form work without JavaScript: /api/leads answers a
+    // plain HTML post with a redirect (owner brief 2026-10-27). With JavaScript,
+    // submit() takes over and posts with fetch exactly as before.
     <form
+      method="post"
+      action="/api/leads"
+      encType="multipart/form-data"
       onSubmit={submit}
       onFocus={markStarted}
       noValidate
@@ -321,15 +328,20 @@ export function QuickEstimateForm({
       aria-label={title}
     >
       <p className="font-display text-xl sm:text-2xl">{title}</p>
+      <input type="hidden" name="service" value="quick" />
+      <input type="hidden" name="lang" value={lang} />
+      <input type="hidden" name="formLocation" value={location} />
+      {colorName && <input type="hidden" name="colorName" value={colorName} />}
       <div className="mt-4 space-y-3">
         <div>
           <label htmlFor={id("name")} className="mb-1 block text-sm font-medium">{t.name}</label>
-          <input id={id("name")} required autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} className={input} />
+          <input id={id("name")} name="name" required autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} className={input} />
         </div>
         <div>
           <label htmlFor={id("phone")} className="mb-1 block text-sm font-medium">{t.phone}</label>
           <input
             id={id("phone")}
+            name="phone"
             required
             type="tel"
             inputMode="tel"
@@ -342,7 +354,7 @@ export function QuickEstimateForm({
         </div>
         <div>
           <label htmlFor={id("type")} className="mb-1 block text-sm font-medium">{t.type}</label>
-          <select id={id("type")} required value={projectType} onChange={(e) => setProjectType(e.target.value)} className={input}>
+          <select id={id("type")} name="projectType" required value={projectType} onChange={(e) => setProjectType(e.target.value)} className={input}>
             <option value="">{t.choose}</option>
             {QUICK_PROJECT_TYPES.map((v) => <option key={v} value={v}>{opt(v)}</option>)}
           </select>
@@ -350,10 +362,10 @@ export function QuickEstimateForm({
         {/* Honeypot: hidden from people and assistive tech, filled by bots. */}
         <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
           <label htmlFor={id("website")}>Website</label>
-          <input id={id("website")} tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} />
+          <input id={id("website")} name="website" tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} />
         </div>
         <label className={`flex cursor-pointer items-start gap-2 text-xs leading-relaxed ${muted}`}>
-          <input type="checkbox" checked={smsConsent} onChange={(e) => setSmsConsent(e.target.checked)} className="mt-0.5 size-4 shrink-0" />
+          <input type="checkbox" name="smsConsent" value="true" checked={smsConsent} onChange={(e) => setSmsConsent(e.target.checked)} className="mt-0.5 size-4 shrink-0" />
           <span>{t.sms}</span>
         </label>
       </div>

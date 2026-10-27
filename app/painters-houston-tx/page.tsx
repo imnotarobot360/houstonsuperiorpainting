@@ -36,7 +36,7 @@ const PAGE_PATH = "/painters-houston-tx"
 const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
 const TITLE = "Houston Painting Company: Interior, Exterior & Cabinets"
 const DESCRIPTION =
-  "Interior, exterior and cabinet painting for Houston homes: prep-first process, documented Houston projects, free written estimates with clear payment terms. (346) 594-5960."
+  "Interior, exterior and cabinet painting for Houston homes: prep-first process, documented local projects and free written estimates. (346) 594-5960."
 
 export const metadata: Metadata = {
   title: TITLE,

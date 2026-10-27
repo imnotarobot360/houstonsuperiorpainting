@@ -106,7 +106,7 @@ const faqs = [
   },
   {
     q: "Are you insured?",
-    a: "Yes. We maintain business insurance. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance before work begins.",
+    a: "Yes. We maintain business insurance. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance according to the project requirements.",
   },
   {
     q: "How does payment work?",
@@ -265,7 +265,7 @@ export default function ResidentialRemodelingHoustonTX() {
             Every remodel carries our written {BUSINESS.trust.warrantyYears}-year workmanship warranty. It covers
             peeling, blistering, and flaking and failed repairs caused by our workmanship. It does not cover damage from
             water intrusion, settling, or surfaces you asked us not to prep. We maintain business insurance;
-            current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance before work begins.
+            current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance according to the project requirements.
           </p>
         </Section>
 

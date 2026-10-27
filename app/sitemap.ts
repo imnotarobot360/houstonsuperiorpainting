@@ -131,6 +131,8 @@ const EXCLUDED = new Set([
   // so listing it here keeps the sitemap from contradicting that directive —
   // Google flags "Submitted URL marked noindex" as an error otherwise.
   'estimate-confirmed',
+  // No-JavaScript lead fallback page for a request that wasn't saved (noindex).
+  'estimate/not-sent',
   // Exterior paint visualizer: noindex until the owner approves its launch.
   'paint-visualizer',
 ])

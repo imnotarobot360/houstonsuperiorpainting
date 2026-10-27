@@ -127,7 +127,7 @@ Nearly every Fulshear master-planned community has an HOA that reviews exterior 
             },
             {
               question: "Do you work with Fulshear HOAs?",
-              answer: "Yes. We can pull your community's approved color list and help with the approval paperwork before any exterior work starts, and we can send a certificate of insurance to your HOA."
+              answer: "Yes. We can pull your community's approved color list and help with the approval paperwork before any exterior work starts, and when your HOA requires one, approved customers may receive a certificate of insurance according to the project requirements."
             },
             {
               question: "Can you replace builder-grade paint?",

@@ -91,6 +91,11 @@ export const RULES = [
     why: "Painting warranty is 5 years; not transferable/lifetime/15-year unless documented",
     re: /(?:15|fifteen)[- ]year (?:warranty|durability|guarantee)|\b(?:\d+|five)[- ]year (?:written )?(?:quality |workmanship )?guarantee|texture-match guarantee|lifetime (?:warranty|guarantee)|satisfaction guarantee|warranty on (?:all|every) (?:painting|projects?|jobs?|work)\b|\btransferable\b(?!\[)/i,
   },
+  {
+    id: "warranty-scope",
+    why: "The warranty covers qualifying painting projects, not every project or job (owner brief 2026-10-27)",
+    re: /\b(?:every|each|all)\s+(?:painting\s+)?(?:projects?|jobs?)\s+(?:comes?\s+with|carr(?:y|ies)|includes?|(?:is|are)\s+backed\s+by|gets?)\b[^.<"]{0,60}warrant/i,
+  },
   { id: "epoxy-warranty", why: "Epoxy warranties belong to Houston Superior Epoxy only", re: /epoxy[^.\n]{0,80}warrant|warrant[^.\n]{0,80}epoxy/i, unless: /provided separately/i },
   {
     id: "hardcoded-rating",

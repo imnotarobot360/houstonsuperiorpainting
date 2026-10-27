@@ -330,7 +330,7 @@ export function EstimateBookingFlow() {
             Where is the project?
           </label>
           <p className="mt-1.5 text-sm text-muted-foreground">Your ZIP code lets us show times for your area.</p>
-          <input
+          <input name="zip"
             id="eb-zip"
             inputMode="numeric"
             autoComplete="postal-code"
@@ -407,11 +407,11 @@ export function EstimateBookingFlow() {
 
           <div className="flex flex-col gap-1.5">
             <label htmlFor="eb-name" className="text-sm font-medium text-foreground">Name</label>
-            <input id="eb-name" autoComplete="name" value={contact.name} onChange={(e) => setContact((c) => ({ ...c, name: e.target.value }))} className={input} />
+            <input name="name" id="eb-name" autoComplete="name" value={contact.name} onChange={(e) => setContact((c) => ({ ...c, name: e.target.value }))} className={input} />
           </div>
           <div className="flex flex-col gap-1.5">
             <label htmlFor="eb-phone" className="text-sm font-medium text-foreground">Phone</label>
-            <input
+            <input name="phone"
               id="eb-phone"
               type="tel"
               inputMode="tel"
@@ -425,13 +425,13 @@ export function EstimateBookingFlow() {
             <label htmlFor="eb-email" className="text-sm font-medium text-foreground">
               Email <span className="font-normal text-muted-foreground">(optional)</span>
             </label>
-            <input id="eb-email" type="email" autoComplete="email" value={contact.email} onChange={(e) => setContact((c) => ({ ...c, email: e.target.value }))} className={input} />
+            <input name="email" id="eb-email" type="email" autoComplete="email" value={contact.email} onChange={(e) => setContact((c) => ({ ...c, email: e.target.value }))} className={input} />
           </div>
           <div className="flex flex-col gap-1.5">
             <label htmlFor="eb-address" className="text-sm font-medium text-foreground">
               Street address {!slot && <span className="font-normal text-muted-foreground">(optional)</span>}
             </label>
-            <input
+            <input name="address"
               id="eb-address"
               autoComplete="street-address"
               placeholder="Street address"
@@ -443,10 +443,10 @@ export function EstimateBookingFlow() {
           </div>
           <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
             <label htmlFor="eb-website">Website</label>
-            <input id="eb-website" tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} />
+            <input name="website" id="eb-website" tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} />
           </div>
           <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-muted-foreground">
-            <input
+            <input name="smsConsent" value="true"
               type="checkbox"
               checked={contact.smsConsent}
               onChange={(e) => setContact((c) => ({ ...c, smsConsent: e.target.checked }))}
@@ -598,7 +598,7 @@ function Done({
               <label htmlFor="eb-photos" className="mb-1 block text-sm font-medium text-foreground">
                 Photos (private, up to 6)
               </label>
-              <input id="eb-photos" type="file" accept="image/*,.heic,.heif" multiple onChange={(e) => setFiles(e.target.files)} className="block w-full text-sm text-muted-foreground" />
+              <input name="photos" id="eb-photos" type="file" accept="image/*,.heic,.heif" multiple onChange={(e) => setFiles(e.target.files)} className="block w-full text-sm text-muted-foreground" />
               <p className="mt-1 text-xs text-muted-foreground">{config.photoPrompt}</p>
             </div>
           </div>

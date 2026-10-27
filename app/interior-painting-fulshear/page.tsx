@@ -30,7 +30,7 @@ export default function InteriorPaintingFulshearPage() {
       h1={"Interior Painters in Fulshear, TX"}
       heroSubheading={"Interior painting for Fulshear homes, from newer builds in Cross Creek Ranch and Jordan Ranch to established homes in Fulbrook and Weston Lakes."}
       introLocal={"Much of Fulshear's housing is newer construction in master-planned communities such as Cross Creek Ranch, Jordan Ranch and Fulbrook on Fulshear Creek. Newer homes commonly have flat builder-grade paint that marks easily, plus nail pops and corner cracks as the house settles in its first few years. A repaint is a good time to fix those and move to a more washable finish in kitchens, hallways and kids' rooms. Open-plan homes with tall ceilings and stairwells also need extension equipment or scaffolding, which we account for in the estimate."}
-      serviceOverview={"Interior painting in Fulshear covers walls, ceilings, trim, doors and closets. Prep comes first: furniture moved or covered, floors protected, holes and cracks patched, gaps caulked and stains spot-primed. We apply Sherwin-Williams or Benjamin Moore paint, and the product line and sheen for each surface are listed on your written estimate. The schedule is also set in writing before work starts, and every job carries our 5-year written workmanship warranty."}
+      serviceOverview={"Interior painting in Fulshear covers walls, ceilings, trim, doors and closets. Prep comes first: furniture moved or covered, floors protected, holes and cracks patched, gaps caulked and stains spot-primed. We apply Sherwin-Williams or Benjamin Moore paint, and the product line and sheen for each surface are listed on your written estimate. The schedule is also set in writing before work starts, and qualifying painting projects carry our 5-year written workmanship warranty."}
       whyChooseUs={[
         "A written estimate that lists the rooms, surfaces, prep and products, so you can compare bids line by line.",
         "Prep before paint: patching, caulking and spot-priming are part of the scope, not extras.",
@@ -62,7 +62,7 @@ export default function InteriorPaintingFulshearPage() {
         },
         {
           question: "What warranty do you offer?",
-          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+          answer: "Qualifying painting projects include a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
         },
       ]}
       testimonials={[

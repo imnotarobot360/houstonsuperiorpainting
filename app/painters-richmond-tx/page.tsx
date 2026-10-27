@@ -133,7 +133,7 @@ Many Richmond communities have HOAs that review exterior colors. We can pull you
             },
             {
               question: "Do you work with Richmond HOAs?",
-              answer: "Yes. We can pull your community's approved color list and help with the approval paperwork before any exterior work starts, and we can send a certificate of insurance to your HOA."
+              answer: "Yes. We can pull your community's approved color list and help with the approval paperwork before any exterior work starts, and when your HOA requires one, approved customers may receive a certificate of insurance according to the project requirements."
             },
             {
               question: "Can you paint a tall two-story great room?",

@@ -16,7 +16,7 @@ const PAGE_PATH = "/reviews"
 const PAGE_URL = `${SITE}${PAGE_PATH}`
 const TITLE = "Customer Reviews on Google | Houston Superior Painting"
 const DESCRIPTION =
-  "Read verified customer reviews of Houston Superior Painting on Google, with a link to each of our Google Business Profiles: Houston, Cypress, Katy, Sugar Land and Magnolia."
+  "Verified Google reviews of Houston Superior Painting, with a link to each office's Google Business Profile: Houston, Cypress, Katy, Sugar Land and Magnolia."
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -136,12 +136,17 @@ export function CommercialRequestForm({ location = "commercial_page" }: { locati
   const field = (key: keyof typeof f, label: string, extra: React.InputHTMLAttributes<HTMLInputElement> = {}) => (
     <div>
       <label htmlFor={id(key)} className="mb-1 block text-sm font-medium text-foreground">{label}</label>
-      <input id={id(key)} value={f[key]} onChange={set(key)} className={input} {...extra} />
+      <input id={id(key)} name={key} value={f[key]} onChange={set(key)} className={input} {...extra} />
     </div>
   )
 
   return (
+    // method/action: works without JavaScript too (/api/leads redirects a plain
+    // HTML post; owner brief 2026-10-27). With JavaScript, submit() posts via fetch.
     <form
+      method="post"
+      action="/api/leads"
+      encType="multipart/form-data"
       onSubmit={submit}
       onFocus={() => {
         if (!started.current) {
@@ -153,6 +158,8 @@ export function CommercialRequestForm({ location = "commercial_page" }: { locati
       className="relative rounded-2xl border border-border bg-card p-5 sm:p-6"
       aria-label="Commercial painting request"
     >
+      <input type="hidden" name="service" value="commercial" />
+      <input type="hidden" name="formLocation" value={location} />
       <div className="grid gap-3 sm:grid-cols-2">
         {field("name", "Contact name", { required: true, autoComplete: "name" })}
         {field("company", "Company", { autoComplete: "organization" })}
@@ -161,7 +168,7 @@ export function CommercialRequestForm({ location = "commercial_page" }: { locati
         <div className="sm:col-span-2">{field("address", "Property address", { autoComplete: "street-address" })}</div>
         <div>
           <label htmlFor={id("propertyType")} className="mb-1 block text-sm font-medium text-foreground">Property type</label>
-          <select id={id("propertyType")} required value={f.propertyType} onChange={set("propertyType")} className={input}>
+          <select id={id("propertyType")} name="propertyType" required value={f.propertyType} onChange={set("propertyType")} className={input}>
             <option value="">Choose…</option>
             {COMMERCIAL_PROPERTY_TYPES.map((t) => <option key={t}>{t}</option>)}
           </select>
@@ -169,7 +176,7 @@ export function CommercialRequestForm({ location = "commercial_page" }: { locati
         {field("squareFootage", "Approximate square footage", { inputMode: "numeric" })}
         <div>
           <label htmlFor={id("occupancy")} className="mb-1 block text-sm font-medium text-foreground">Occupied or vacant</label>
-          <select id={id("occupancy")} value={f.occupancy} onChange={set("occupancy")} className={input}>
+          <select id={id("occupancy")} name="occupancy" value={f.occupancy} onChange={set("occupancy")} className={input}>
             <option value="">Choose…</option>
             <option>Occupied</option>
             <option>Vacant</option>
@@ -178,11 +185,11 @@ export function CommercialRequestForm({ location = "commercial_page" }: { locati
         {field("schedule", "Preferred schedule", { placeholder: "e.g. weekends, after 6 pm, by March" })}
         <div className="sm:col-span-2">
           <label htmlFor={id("description")} className="mb-1 block text-sm font-medium text-foreground">Project description</label>
-          <textarea id={id("description")} rows={4} value={f.description} onChange={set("description")} className={input} />
+          <textarea id={id("description")} name="description" rows={4} value={f.description} onChange={set("description")} className={input} />
         </div>
         <div>
           <label htmlFor={id("contactMethod")} className="mb-1 block text-sm font-medium text-foreground">Preferred contact method</label>
-          <select id={id("contactMethod")} value={f.contactMethod} onChange={set("contactMethod")} className={input}>
+          <select id={id("contactMethod")} name="contactMethod" value={f.contactMethod} onChange={set("contactMethod")} className={input}>
             <option value="">Choose…</option>
             {CONTACT_METHODS.map((t) => <option key={t}>{t}</option>)}
           </select>
@@ -191,6 +198,7 @@ export function CommercialRequestForm({ location = "commercial_page" }: { locati
           <label htmlFor={id("photos")} className="mb-1 block text-sm font-medium text-foreground">Photos (optional, private)</label>
           <input
             id={id("photos")}
+            name="photos"
             type="file"
             accept="image/*"
             multiple
@@ -204,7 +212,7 @@ export function CommercialRequestForm({ location = "commercial_page" }: { locati
       </div>
       <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
         <label htmlFor={id("website")}>Website</label>
-        <input id={id("website")} tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} />
+        <input id={id("website")} name="website" tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} />
       </div>
 
       {error && <p className="mt-3 text-sm text-red-600" role="alert">{error}</p>}

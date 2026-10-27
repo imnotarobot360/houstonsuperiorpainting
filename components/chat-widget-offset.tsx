@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 import { useHidesInterruptions } from "@/lib/focused-routes"
-import { CHAT_LOADED_EVENT } from "@/components/chat-launcher"
+import { CHAT_LOADED_EVENT, useChatShouldYield } from "@/components/chat-launcher"
 
 /**
  * The LeadConnector chat widget renders inside a shadow root and pins itself
@@ -21,6 +21,18 @@ const OFFSET_STYLE = `
 
 export function ChatWidgetOffset() {
   const focused = useHidesInterruptions()
+  const yieldToContent = useChatShouldYield()
+
+  // Once loaded, the widget's own bubble steps aside the same way the launcher
+  // does: never over a form, its consent text or the footer. An open chat
+  // panel is left alone.
+  useEffect(() => {
+    const host = document.querySelector<HTMLElement>("chat-widget")
+    if (!host) return
+    const api = (window as unknown as { leadConnector?: { chatWidget?: { isActive?: () => boolean } } }).leadConnector?.chatWidget
+    const open = api?.isActive?.() ?? false
+    host.style.visibility = yieldToContent && !open ? "hidden" : ""
+  }, [yieldToContent])
 
   /**
    * Hide the widget on focused routes.

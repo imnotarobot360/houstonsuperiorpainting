@@ -90,8 +90,8 @@ export default function TermsAndConditionsPage() {
 
             <h2>Warranty</h2>
             <ul>
-              <li>All painting projects include a 5-year warranty on labor and materials. This covers exterior painting, interior painting, and cabinet refinishing alike.</li>
-              <li>Warranties cover peeling, blistering, and flaking due to workmanship under normal conditions.</li>
+              <li>Qualifying painting projects include a five-year written workmanship warranty, subject to the coverage, exclusions and conditions in the signed estimate or warranty document.</li>
+              <li>The workmanship warranty addresses peeling, blistering and flaking caused by our workmanship under normal conditions, as defined in the signed warranty.</li>
               <li>Warranties do not cover damage from accidents, abuse, settling, structural movement, or acts of nature.</li>
             </ul>
 

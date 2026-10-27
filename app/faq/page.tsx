@@ -11,7 +11,7 @@ const PAGE_PATH = "/faq"
 const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
 const TITLE = "Houston Painting FAQ: Costs, Insurance, Warranty & Timing"
 const DESCRIPTION =
-  "Answers to common Houston painting questions: 2026 costs, insurance, the 5-year warranty, humidity and timing, our service areas, and how to get a free estimate."
+  "Answers to common Houston painting questions: 2026 costs, insurance, the 5-year warranty, humidity and timing, service areas and free estimates."
 const H1 = "Houston Painting FAQ"
 
 export const metadata: Metadata = {
@@ -231,7 +231,7 @@ const GROUPS: Group[] = [
       },
       {
         q: "Do you offer financing?",
-        a: "Yes. Financing is available for painting projects; terms are on our painting financing page.",
+        a: "Financing options may be available through a third-party provider. Availability, approval, loan amount, APR and repayment terms depend on the applicant and provider. Ask for current terms during your estimate.",
       },
     ],
     related: [

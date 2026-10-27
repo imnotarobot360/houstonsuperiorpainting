@@ -528,7 +528,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     metaTitle: "Two-Story Great Room Painting in Richmond, TX",
     metaDescription:
-      "Photos of a completed interior painting job in Richmond, TX: a two-story great room with tall walls and crown molding, the foyer and stair wall, and the dining room.",
+      "Photos of an interior painting job in Richmond, TX: a two-story great room with crown molding, plus the foyer, stair wall and dining room.",
   },
   {
     // Job photos supplied by Juan on 2026-10-12; he confirmed the sage kitchen and

@@ -30,7 +30,7 @@ export default function InteriorPaintingMemorialPage() {
       h1={"Interior Painting in Memorial, Houston, TX"}
       heroSubheading={"Interior painting for Memorial homes, with the patching, caulking and priming done before paint goes on, and a 5-year written warranty."}
       introLocal={"Memorial mixes older ranch-style and traditional homes with large newer rebuilds, and includes the separate Memorial Villages such as Hunters Creek, Piney Point and Bunker Hill. Older homes usually need more repair before painting (cracked drywall or plaster, gaps at trim, old oil-based finishes), while newer homes tend to have tall ceilings, detailed millwork and open stairwells. You can see a whole-home interior repaint we completed in Memorial further down this page."}
-      serviceOverview={"Interior painting in Memorial covers walls, ceilings, trim, doors and closets. Prep comes first: furniture moved or covered, floors protected, holes and cracks patched, gaps caulked and stains spot-primed. We apply Sherwin-Williams or Benjamin Moore paint, and the product line and sheen for each surface are listed on your written estimate. The schedule is also set in writing before work starts, and every job carries our 5-year written workmanship warranty."}
+      serviceOverview={"Interior painting in Memorial covers walls, ceilings, trim, doors and closets. Prep comes first: furniture moved or covered, floors protected, holes and cracks patched, gaps caulked and stains spot-primed. We apply Sherwin-Williams or Benjamin Moore paint, and the product line and sheen for each surface are listed on your written estimate. The schedule is also set in writing before work starts, and qualifying painting projects carry our 5-year written workmanship warranty."}
       whyChooseUs={[
         "A written estimate that lists the rooms, surfaces, prep and products, so you can compare bids line by line.",
         "Prep before paint: patching, caulking and spot-priming are part of the scope, not extras.",
@@ -62,7 +62,7 @@ export default function InteriorPaintingMemorialPage() {
         },
         {
           question: "What warranty do you offer?",
-          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+          answer: "Qualifying painting projects include a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
         },
       ]}
       testimonials={[

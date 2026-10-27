@@ -8,10 +8,10 @@
 :root {
   /* ─── Luxury brand palette ───────────────────────────────
      Midnight #0D1117 · Warm Gold #C6A86A · Champagne #F6F3ED
-     Soft White #FAFAF8 · Graphite #2B2B2B · Orange CTA #F37021 */
+     Soft White #FAFAF8 · Graphite #2B2B2B · Orange CTA #C2410C (was #F37021) */
   --midnight: #0d1117;
   --gold: #c6a86a;
-  --gold-deep: #ad8f4f;
+  --gold-deep: #86692c; /* was #ad8f4f; darkened 2026-10-27 for 4.5:1 text on light backgrounds */
   --champagne: #f6f3ed;
   --soft-white: #fafaf8;
   --graphite: #2b2b2b;
@@ -25,7 +25,7 @@
   --popover-foreground: #14181f;
   --primary: #0d1117;
   --primary-foreground: #fafaf8;
-  --secondary: #f37021;
+  --secondary: #c2410c; /* was #f37021; darkened 2026-10-27 so white text passes 4.5:1 (owner approved) */
   --secondary-foreground: #ffffff;
   --muted: #f6f3ed;
   --muted-foreground: #6b6760;

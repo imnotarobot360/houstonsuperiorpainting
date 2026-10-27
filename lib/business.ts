@@ -261,7 +261,7 @@ export const BUSINESS = {
   // compensation, bonding or specialty coverage without current documents.
   insurance: {
     sentence:
-      "Houston Superior Painting maintains business insurance. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance before work begins.",
+      "Houston Superior Painting maintains business insurance. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance according to the project requirements.",
     short: "Current proof of insurance available upon request.",
     licenseNote:
       "Texas does not issue a state painting-contractor license. Customers may request current proof of business insurance.",
@@ -324,8 +324,8 @@ export const BUSINESS = {
 
   // Insurance wording (owner brief 2026-10-25), English and Spanish.
   insuranceProof: {
-    en: "Current proof of insurance is available upon request. When required, approved customers may receive a certificate of insurance before work begins.",
-    es: "Hay comprobante vigente de seguro disponible cuando lo solicite. Cuando el proyecto lo requiera, los clientes aprobados pueden recibir un certificado de seguro antes de comenzar el trabajo.",
+    en: "Current proof of insurance is available upon request. When required, approved customers may receive a certificate of insurance according to the project requirements.",
+    es: "Hay comprobante vigente de seguro disponible cuando lo solicite. Cuando el proyecto lo requiera, los clientes aprobados pueden recibir un certificado de seguro según los requisitos del proyecto.",
   },
 
   // Specialty finishes Juan confirmed we offer (2026-10-07), beyond the

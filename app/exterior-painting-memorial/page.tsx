@@ -30,7 +30,7 @@ export default function ExteriorPaintingMemorialPage() {
       h1={"Exterior Painting in Memorial, Houston, TX"}
       heroSubheading={"Exterior painting for Memorial homes, prepared for Houston's sun, humidity and storms and backed by a 5-year written warranty."}
       introLocal={"Memorial's mature trees shade many homes, which keeps siding and trim damp and invites mildew and wood rot, while unshaded south- and west-facing walls take the brunt of the sun. Homes range from older brick ranches with wood trim to large newer rebuilds with stucco, stone and fiber-cement. Exterior work in the Memorial Villages may also be subject to that village's or your HOA's rules, so check before you choose colors."}
-      serviceOverview={"Exterior painting in Memorial includes washing the house, scraping loose paint, repairing or replacing rotted wood, caulking open joints, spot-priming bare areas and applying the finish coats to siding, trim, doors and fascia. Plants, walkways and windows are covered while we work. We use Sherwin-Williams and Benjamin Moore exterior paints, with the product listed on your written estimate, and every job carries our 5-year written workmanship warranty."}
+      serviceOverview={"Exterior painting in Memorial includes washing the house, scraping loose paint, repairing or replacing rotted wood, caulking open joints, spot-priming bare areas and applying the finish coats to siding, trim, doors and fascia. Plants, walkways and windows are covered while we work. We use Sherwin-Williams and Benjamin Moore exterior paints, with the product listed on your written estimate, and qualifying painting projects carry our 5-year written workmanship warranty."}
       whyChooseUs={[
         "Washing, scraping, caulking and spot-priming are part of the scope, not add-ons.",
         "Wood repair, if your home needs it, is listed and priced in the written estimate.",
@@ -62,7 +62,7 @@ export default function ExteriorPaintingMemorialPage() {
         },
         {
           question: "What warranty do you offer?",
-          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+          answer: "Qualifying painting projects include a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
         },
       ]}
       testimonials={[

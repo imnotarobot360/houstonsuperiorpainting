@@ -269,7 +269,7 @@ export default function VenetianPlasterHoustonTX() {
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              Houston Superior Painting creates authentic hand-troweled Venetian plaster across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects run $8–$20 per square foot, and a single feature wall typically takes 2–4 days because each lime-plaster coat must cure before it is troweled and burnished. The breathable finish resists mold in Houston&apos;s humidity and lasts for decades. Every project is backed by our 5-year written workmanship warranty on qualifying work. Free consultations at (346) 594-5960.
+              Houston Superior Painting creates authentic hand-troweled Venetian plaster across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects run $8–$20 per square foot, and a single feature wall typically takes 2–4 days because each lime-plaster coat must cure before it is troweled and burnished. The breathable finish resists mold in Houston&apos;s humidity and lasts for decades. Qualifying projects are backed by our 5-year written workmanship warranty. Free consultations at (346) 594-5960.
             </p>
           </div>
         </section>

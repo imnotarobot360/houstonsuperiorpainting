@@ -10,7 +10,7 @@ import { CheckCircle, Phone, Star, Shield, Users, ArrowRight } from "lucide-reac
 
 export const metadata: Metadata = {
   title: 'Wallpaper Removal Houston TX | Repair & Painting',
-  description: 'Professional wallpaper removal in Houston, TX. Clean removal, wall repair and skim coating, and a smooth painted finish. 5-year workmanship warranty on qualifying work.',
+  description: 'Wallpaper removal in Houston, TX: clean removal, wall repair, skim coating and a smooth painted finish. 5-year workmanship warranty on qualifying work.',
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/wallpaper-removal-houston-tx',
   },
@@ -231,7 +231,7 @@ export default function WallpaperRemovalHoustonTX() {
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              Houston Superior Painting removes wallpaper and delivers a smooth painted finish across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects cost $3–$8 per square foot, take 1–2 days per room, and include controlled steam removal, full adhesive cleanup, drywall repair, and painting. Every job is backed by our 5-year written workmanship warranty on qualifying painting work. Free estimates at (346) 594-5960.
+              Houston Superior Painting removes wallpaper and delivers a smooth painted finish across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects cost $3–$8 per square foot, take 1–2 days per room, and include controlled steam removal, full adhesive cleanup, drywall repair, and painting. Qualifying painting projects are backed by our 5-year written workmanship warranty. Free estimates at (346) 594-5960.
             </p>
           </div>
         </section>

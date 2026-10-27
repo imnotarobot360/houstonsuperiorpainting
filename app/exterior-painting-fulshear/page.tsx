@@ -30,7 +30,7 @@ export default function ExteriorPaintingFulshearPage() {
       h1={"Exterior House Painters in Fulshear, TX"}
       heroSubheading={"Exterior painting for Fulshear homes, prepared for Houston's sun, humidity and storms and planned around your HOA's color rules."}
       introLocal={"Fulshear's master-planned communities, including Cross Creek Ranch, Fulbrook and Jordan Ranch, typically have HOA guidelines for exterior colors, so the color decision usually starts with your HOA's approved palette or application process. Many homes here combine fiber-cement siding, stucco, brick or stone, and each surface needs its own prep and primer. Even on newer homes, caulk at trim and window joints shrinks and opens up in the heat, which is where water gets in."}
-      serviceOverview={"Exterior painting in Fulshear includes washing the house, scraping loose paint, repairing or replacing rotted wood, caulking open joints, spot-priming bare areas and applying the finish coats to siding, trim, doors and fascia. Plants, walkways and windows are covered while we work. We use Sherwin-Williams and Benjamin Moore exterior paints, with the product listed on your written estimate, and every job carries our 5-year written workmanship warranty."}
+      serviceOverview={"Exterior painting in Fulshear includes washing the house, scraping loose paint, repairing or replacing rotted wood, caulking open joints, spot-priming bare areas and applying the finish coats to siding, trim, doors and fascia. Plants, walkways and windows are covered while we work. We use Sherwin-Williams and Benjamin Moore exterior paints, with the product listed on your written estimate, and qualifying painting projects carry our 5-year written workmanship warranty."}
       whyChooseUs={[
         "Washing, scraping, caulking and spot-priming are part of the scope, not add-ons.",
         "Wood repair, if your home needs it, is listed and priced in the written estimate.",
@@ -62,7 +62,7 @@ export default function ExteriorPaintingFulshearPage() {
         },
         {
           question: "What warranty do you offer?",
-          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+          answer: "Qualifying painting projects include a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
         },
       ]}
       testimonials={[

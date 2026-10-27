@@ -39,21 +39,16 @@ export function PopularServicesByArea() {
         </h2>
         <ul className="divide-y divide-border border-y border-border font-manrope text-sm">
           {rows.map((r) => (
-            <li key={r.service} className="grid gap-2 py-4 sm:grid-cols-[1.1fr_0.8fr_1.6fr_1fr_auto] sm:items-center sm:gap-4">
+            <li key={r.service} className="grid gap-2 py-4 sm:grid-cols-[1.1fr_0.8fr_1.6fr_1fr] sm:items-center sm:gap-4">
               <Link href={r.serviceHref} className={`font-semibold ${link}`}>
                 {r.service}
               </Link>
-              <Link href={r.areaHref} className={link}>
-                Painters in {r.area}
-              </Link>
+              <span className="text-muted-foreground">{r.area}</span>
               <Link href={`/projects/${r.project!.slug}`} className={link}>
                 Project: {r.project!.title}
               </Link>
               <Link href={r.costHref} className={link}>
                 {r.costLabel}
-              </Link>
-              <Link href="/painting-estimate-houston" className="font-semibold text-primary underline-offset-4 hover:underline">
-                Free estimate
               </Link>
             </li>
           ))}

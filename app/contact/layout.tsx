@@ -5,7 +5,7 @@ import { breadcrumbNode } from "@/components/aeo/blocks"
 const PAGE_URL = "https://houstonsuperiorpainting.com/contact"
 const TITLE = "Contact Houston Superior Painting | Free Written Estimates"
 const DESCRIPTION =
-  "Contact Houston Superior Painting, serving Cypress, Houston, Katy, Sugar Land, Magnolia and Greater Houston. Mon–Fri 7–7, Sat 8–4. Call (346) 594-5960 for an estimate."
+  "Contact Houston Superior Painting in Cypress, Houston, Katy, Sugar Land and Magnolia. Call (346) 594-5960 or request a free written estimate online."
 
 export const metadata: Metadata = {
   title: TITLE,

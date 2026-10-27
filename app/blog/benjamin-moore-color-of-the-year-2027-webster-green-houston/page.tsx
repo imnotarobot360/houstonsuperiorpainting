@@ -21,7 +21,7 @@ const D: GuideArticleData = {
   path: "/blog/benjamin-moore-color-of-the-year-2027-webster-green-houston",
   title: "Benjamin Moore Color of the Year 2027: Webster Green HC-130",
   description:
-    "Webster Green HC-130 is Benjamin Moore's 2027 Color of the Year: a deep, confident green. How it looks in Houston light, where to use it, and what pairs with it.",
+    "Webster Green HC-130 is Benjamin Moore's 2027 Color of the Year, a deep green. How it looks in Houston light, where to use it and what pairs with it.",
   h1: "Benjamin Moore Color of the Year 2027: Webster Green HC-130 in Houston homes",
   eyebrow: "Color guide",
   published: "2026-10-21",

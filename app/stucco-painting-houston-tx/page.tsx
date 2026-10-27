@@ -15,7 +15,7 @@ const STUCCO_PROJECTS = LOCAL_PROOF_PROJECTS.filter((p) => p.serviceSlug === "st
 
 export const metadata: Metadata = {
   title: 'Stucco Painting & Repair Houston TX | Houston Superior Painting',
-  description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings that flex with heat and humidity. 5-year workmanship warranty on qualifying work. Free estimates.',
+  description: 'Stucco painting and crack repair in Houston, TX, with elastomeric coatings that flex with heat and humidity. 5-year workmanship warranty on qualifying work.',
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/stucco-painting-houston-tx',
   },
@@ -236,7 +236,7 @@ export default function StuccoPaintingHoustonTX() {
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-xl font-semibold text-foreground mb-3">Quick Answer</h2>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              Houston Superior Painting provides expert stucco painting and crack repair across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects cost $2,500–$8,000, take 3–5 days for a typical single-story home, and use flexible elastomeric coatings that bridge cracks and waterproof the surface against Houston&apos;s climate. Every job is backed by our 5-year written workmanship warranty on qualifying painting work. Free estimates at (346) 594-5960.
+              Houston Superior Painting provides expert stucco painting and crack repair across Houston, Katy, Cypress, Sugar Land, Richmond, Fulshear, Pearland, Memorial, The Heights, and The Woodlands. Most projects cost $2,500–$8,000, take 3–5 days for a typical single-story home, and use flexible elastomeric coatings that bridge cracks and waterproof the surface against Houston&apos;s climate. Qualifying painting projects are backed by our 5-year written workmanship warranty. Free estimates at (346) 594-5960.
             </p>
           </div>
         </section>

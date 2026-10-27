@@ -40,7 +40,7 @@ export function FinishSystem({ className = "" }: { className?: string }) {
     <section aria-labelledby="finish-system-title" className={`py-16 md:py-20 ${className}`}>
       <div className="container mx-auto max-w-5xl px-4">
         <div className="max-w-2xl">
-          <p className="font-manrope text-xs font-semibold uppercase tracking-[0.22em] text-gold">How we work</p>
+          <p className="font-manrope text-xs font-semibold uppercase tracking-[0.22em] text-gold-deep">How we work</p>
           <h2 id="finish-system-title" className="mt-3 font-display text-3xl md:text-4xl font-bold text-foreground text-balance">
             The Houston Superior Finish System
           </h2>

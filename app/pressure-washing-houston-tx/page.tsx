@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pressure Washing Houston TX — Houston Superior Painting",
-  description: "Professional pressure washing in Houston TX. Driveways, siding, decks, fences, roofs. Soft wash and power wash. $150–$1,200 depending on the job. Free estimates.",
+  description: "Pressure washing in Houston, TX for driveways, siding, decks, fences and roofs, with soft washing where needed. $150–$1,200 depending on the job.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/pressure-washing-houston-tx",
   },
@@ -206,7 +206,7 @@ export default function PressureWashingHoustonPage() {
                 { title: "Plant-Safe Process", body: "Pre-wet landscape, cover delicate plants, biodegradable detergents at safe concentrations, post-wash rinse. Zero plant damage claims." },
                 { title: "Pre-Paint Specialists", body: "We prep more surfaces for painting than for cleaning. We know exactly how to wash a wall so paint bonds for 8–10 years." },
                 { title: "Same-Day Service Available", body: "Small jobs (driveway, deck) often available same-day or next-day during peak season." },
-                { title: "Insured", body: "Current proof of insurance is available upon request. When required, approved customers may receive a certificate of insurance before work begins." },
+                { title: "Insured", body: "Current proof of insurance is available upon request. When required, approved customers may receive a certificate of insurance according to the project requirements." },
               ].map((item) => (
                 <div key={item.title} className="bg-white border border-zinc-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
                   <h3 className="text-lg font-semibold mb-2">{item.title}</h3>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { headers } from 'next/headers'
 import { ChatLauncher } from '@/components/chat-launcher'
 import { PaintingSiteChrome } from '@/components/painting-site-chrome'
 import { SiteMain } from '@/components/site-main'
@@ -20,15 +21,20 @@ const inter = Inter({
   variable: '--font-inter'
 });
 
+// Display fonts are not preloaded (owner brief 2026-10-27, mobile speed): the
+// first screen's text is Manrope/Inter, and with display: swap (next/font's
+// default) headings render in the fallback until these arrive.
 const playfair = Playfair_Display({ 
   subsets: ["latin"],
-  variable: '--font-playfair'
+  variable: '--font-playfair',
+  preload: false,
 });
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ['400', '500', '600'],
-  variable: '--font-cormorant'
+  variable: '--font-cormorant',
+  preload: false,
 });
 
 const manrope = Manrope({
@@ -94,13 +100,16 @@ export const metadata: Metadata = {
 
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // proxy.ts sets x-site-lang only for /es, so the Spanish page is served with
+  // lang="es-US" in the HTML itself rather than patched after hydration.
+  const lang = (await headers()).get("x-site-lang") === "es-US" ? "es-US" : "en"
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${manrope.variable} bg-background`}>
+    <html lang={lang} className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${manrope.variable} bg-background`}>
       <head>
         {/* ChatGPT Ads pixel. Placed first in <head> per OpenAI's guidance so a
             conversion firing early in page load isn't dropped. Site-wide on

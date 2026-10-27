@@ -30,7 +30,7 @@ export default function ExteriorPaintingRichmondPage() {
       h1={"Exterior House Painters in Richmond, TX"}
       heroSubheading={"Exterior painting for Richmond homes, with the washing, wood repair and caulking that Houston's heat, humidity and storms make necessary."}
       introLocal={"Richmond has everything from older frame houses near the historic downtown to brick-and-siding homes in master-planned communities such as Pecan Grove, Greatwood and Long Meadow Farms. On most of these homes paint fails first where water and sun hit hardest: fascia, window trim, the bottoms of siding boards and the south- and west-facing walls. We check those areas before quoting and price any repairs into the written estimate, rather than painting over soft wood or open joints."}
-      serviceOverview={"Exterior painting in Richmond includes washing the house, scraping loose paint, repairing or replacing rotted wood, caulking open joints, spot-priming bare areas and applying the finish coats to siding, trim, doors and fascia. Plants, walkways and windows are covered while we work. We use Sherwin-Williams and Benjamin Moore exterior paints, with the product listed on your written estimate, and every job carries our 5-year written workmanship warranty."}
+      serviceOverview={"Exterior painting in Richmond includes washing the house, scraping loose paint, repairing or replacing rotted wood, caulking open joints, spot-priming bare areas and applying the finish coats to siding, trim, doors and fascia. Plants, walkways and windows are covered while we work. We use Sherwin-Williams and Benjamin Moore exterior paints, with the product listed on your written estimate, and qualifying painting projects carry our 5-year written workmanship warranty."}
       whyChooseUs={[
         "Washing, scraping, caulking and spot-priming are part of the scope, not add-ons.",
         "Wood repair, if your home needs it, is listed and priced in the written estimate.",
@@ -62,7 +62,7 @@ export default function ExteriorPaintingRichmondPage() {
         },
         {
           question: "What warranty do you offer?",
-          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+          answer: "Qualifying painting projects include a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
         },
       ]}
       testimonials={[

@@ -140,7 +140,7 @@ export function BudgetFunnelForm() {
             <label htmlFor="bo-photos" className="mb-1 block text-sm font-semibold text-foreground">
               Optional: add photos of the area (private)
             </label>
-            <input
+            <input name="photos"
               id="bo-photos"
               type="file"
               accept="image/*"
@@ -225,7 +225,7 @@ export function BudgetFunnelForm() {
           <label htmlFor="bo-zip" className="mb-4 block font-display text-2xl text-foreground">
             Where is the project?
           </label>
-          <input
+          <input name="zip"
             id="bo-zip"
             inputMode="numeric"
             autoComplete="postal-code"
@@ -273,11 +273,11 @@ export function BudgetFunnelForm() {
           <div className="space-y-3">
             <div>
               <label htmlFor="bo-name" className="mb-1 block text-sm font-medium text-foreground">Name</label>
-              <input id="bo-name" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} className={input} />
+              <input name="name" id="bo-name" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} className={input} />
             </div>
             <div>
               <label htmlFor="bo-phone" className="mb-1 block text-sm font-medium text-foreground">Phone</label>
-              <input
+              <input name="phone"
                 id="bo-phone"
                 type="tel"
                 inputMode="tel"
@@ -289,7 +289,7 @@ export function BudgetFunnelForm() {
             </div>
             <div>
               <label htmlFor="bo-email" className="mb-1 block text-sm font-medium text-foreground">Email (optional)</label>
-              <input id="bo-email" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className={input} />
+              <input name="email" id="bo-email" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className={input} />
             </div>
             <div>
               <label htmlFor="bo-details" className="mb-1 block text-sm font-medium text-foreground">
@@ -306,10 +306,10 @@ export function BudgetFunnelForm() {
             </div>
             <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
               <label htmlFor="bo-website">Website</label>
-              <input id="bo-website" tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} />
+              <input name="website" id="bo-website" tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} />
             </div>
             <label className="flex cursor-pointer items-start gap-2 text-xs leading-relaxed text-muted-foreground">
-              <input type="checkbox" checked={smsConsent} onChange={(e) => setSmsConsent(e.target.checked)} className="mt-0.5 size-4 shrink-0" />
+              <input name="smsConsent" value="true" type="checkbox" checked={smsConsent} onChange={(e) => setSmsConsent(e.target.checked)} className="mt-0.5 size-4 shrink-0" />
               <span>Text me about my estimate. Message rates may apply; reply STOP any time.</span>
             </label>
           </div>

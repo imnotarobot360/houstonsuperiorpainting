@@ -20,7 +20,7 @@ import { FinishSystem } from "@/components/finish-system"
 import { QuickEstimateForm } from "@/components/quick-estimate-form"
 import { PopularServicesByArea } from "@/components/popular-services-by-area"
 import Link from "next/link"
-import { OFFICE_PAGES, PRICES_2026 } from "@/lib/business"
+import { PRICES_2026 } from "@/lib/business"
 
 export const metadata: Metadata = {
   alternates: {
@@ -73,7 +73,7 @@ const homeFaqs = [
   },
   {
     q: "How does payment work?",
-    a: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project. We accept all major credit cards and checks, and offer financing options for larger projects.",
+    a: "The estimate is free. Your written estimate identifies the complete scope, total price, required deposit and payment schedule before you approve the project. We accept all major credit cards and checks. Financing options may be available through a third-party provider; ask for current terms during your estimate.",
   },
 ]
 
@@ -116,30 +116,16 @@ export default function Home() {
 
 /**
  * Compact internal-link block for the homepage linking map
- * (docs/aeo-seo-plan-2026-09.md): the five office city pages with keyword
- * anchors, plus the cost guide, About, and the estimate page. The six core
+ * (docs/aeo-seo-plan-2026-09.md): the cost guide, About, and the estimate page.
+ * The office city pages are linked from <LocationsSection> just above. The six core
  * service pages are already linked from LuxuryServices above.
  */
 function HomeKeyLinks() {
   return (
     <section aria-labelledby="home-key-links" className="bg-background py-14">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 md:grid-cols-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div>
-          <h2 id="home-key-links" className="font-display text-2xl text-foreground mb-4">
-            Our service areas
-          </h2>
-          <ul className="space-y-2 font-manrope text-base">
-            {OFFICE_PAGES.map((o) => (
-              <li key={o.slug}>
-                <Link href={`/${o.slug}`} className="text-foreground underline-offset-4 hover:text-gold-deep hover:underline">
-                  House painters in {o.name.replace(" (HQ)", "")}, TX{o.name.includes("(HQ)") ? " (headquarters)" : ""}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h2 className="font-display text-2xl text-foreground mb-4">Plan your painting project</h2>
+          <h2 id="home-key-links" className="font-display text-2xl text-foreground mb-4">Plan your painting project</h2>
           <ul className="space-y-2 font-manrope text-base">
             <li>
               <Link href="/houston-painting-cost-guide" className="text-foreground underline-offset-4 hover:text-gold-deep hover:underline">

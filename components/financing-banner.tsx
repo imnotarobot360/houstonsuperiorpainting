@@ -11,11 +11,11 @@ export function FinancingBanner() {
             </div>
             <div>
               <h2 className="font-serif text-2xl lg:text-3xl font-bold text-primary-foreground text-balance">
-                Paint Now, Pay Over Time
+                Ask About Financing
               </h2>
               <p className="text-primary-foreground/80 mt-1 max-w-xl text-pretty">
-                Flexible financing options for Houston homeowners &mdash; with affordable monthly
-                payments and plans available for projects of every size.
+                Financing options may be available through a third-party provider. Approval and terms
+                depend on the applicant and provider.
               </p>
             </div>
           </div>

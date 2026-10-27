@@ -98,10 +98,12 @@ const FAQS: { q: string; text: string; a?: ReactNode }[] = [
   },
   {
     q: "Do you offer financing?",
-    text: "Yes. See Painting Financing.",
+    text: "Financing options may be available through a third-party provider. Availability, approval, loan amount, APR and repayment terms depend on the applicant and provider. Ask for current terms during your estimate.",
     a: (
       <p>
-        Yes. See <Link href="/painting-financing-houston">Painting Financing</Link>.
+        Financing options may be available through a third-party provider. Availability, approval, loan amount, APR and
+        repayment terms depend on the applicant and provider. Ask for current terms during your estimate. See{" "}
+        <Link href="/painting-financing-houston">painting financing</Link>.
       </p>
     ),
   },

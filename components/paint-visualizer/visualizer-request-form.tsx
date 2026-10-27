@@ -302,6 +302,8 @@ export function VisualizerRequestForm({
           <label className="flex cursor-pointer items-start gap-2 text-sm text-foreground">
             <input
               type="checkbox"
+              name="consent"
+              value="true"
               checked={consent}
               onChange={(e) => setConsent(e.target.checked)}
               className="mt-0.5 size-4 shrink-0"
@@ -320,7 +322,7 @@ export function VisualizerRequestForm({
               : "The Street View image is not attached; we'll open the same view from the address and camera angle on this card."}
           </p>
           <label className="flex cursor-pointer items-start gap-2 text-xs leading-relaxed text-muted-foreground">
-            <input type="checkbox" checked={smsConsent} onChange={(e) => setSmsConsent(e.target.checked)} className="mt-0.5 size-4 shrink-0" />
+            <input name="smsConsent" value="true" type="checkbox" checked={smsConsent} onChange={(e) => setSmsConsent(e.target.checked)} className="mt-0.5 size-4 shrink-0" />
             <span>Text me about my estimate. Message rates may apply; reply STOP any time. (Optional)</span>
           </label>
         </div>
@@ -373,6 +375,7 @@ export function VisualizerRequestForm({
             </label>
             <input
               id={`pv-${k}`}
+              name={k}
               type={type}
               inputMode={k === "phone" ? "tel" : undefined}
               autoComplete={ac}
@@ -410,13 +413,13 @@ export function VisualizerRequestForm({
 
       <div className="mt-4">
         <label htmlFor="pv-notes" className="mb-1 block text-sm font-medium text-foreground">Anything else we should know? (optional)</label>
-        <textarea id="pv-notes" rows={3} maxLength={200} value={notes} onChange={(e) => setNotes(e.target.value)} className={`${input} border-border`} />
+        <textarea name="notes" id="pv-notes" rows={3} maxLength={200} value={notes} onChange={(e) => setNotes(e.target.value)} className={`${input} border-border`} />
       </div>
 
       {/* Honeypot: hidden from people and assistive tech, filled by bots. */}
       <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
         <label htmlFor="pv-website">Website</label>
-        <input id="pv-website" tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} />
+        <input name="website" id="pv-website" tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} />
       </div>
 
       <button

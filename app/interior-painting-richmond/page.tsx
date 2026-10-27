@@ -30,7 +30,7 @@ export default function InteriorPaintingRichmondPage() {
       h1={"Interior Painters in Richmond, TX"}
       heroSubheading={"Interior painting for Richmond homes, from older houses near the historic downtown to newer builds in communities like Pecan Grove, Greatwood and Long Meadow Farms."}
       introLocal={"Richmond mixes older homes near its historic downtown with newer houses in master-planned communities such as Pecan Grove, Greatwood and Long Meadow Farms. Older homes often need more prep before paint goes on: settled cracks patched, gaps at trim caulked and stains primed. Newer homes often have flat builder-grade paint that scuffs easily and benefits from a more washable finish. We look at the walls before quoting, so the estimate reflects the prep your home actually needs."}
-      serviceOverview={"Interior painting in Richmond covers walls, ceilings, trim, doors and closets. Prep comes first: furniture moved or covered, floors protected, holes and cracks patched, gaps caulked and stains spot-primed. We apply Sherwin-Williams or Benjamin Moore paint, and the product line and sheen for each surface are listed on your written estimate. The schedule is also set in writing before work starts, and every job carries our 5-year written workmanship warranty."}
+      serviceOverview={"Interior painting in Richmond covers walls, ceilings, trim, doors and closets. Prep comes first: furniture moved or covered, floors protected, holes and cracks patched, gaps caulked and stains spot-primed. We apply Sherwin-Williams or Benjamin Moore paint, and the product line and sheen for each surface are listed on your written estimate. The schedule is also set in writing before work starts, and qualifying painting projects carry our 5-year written workmanship warranty."}
       whyChooseUs={[
         "A written estimate that lists the rooms, surfaces, prep and products, so you can compare bids line by line.",
         "Prep before paint: patching, caulking and spot-priming are part of the scope, not extras.",
@@ -62,7 +62,7 @@ export default function InteriorPaintingRichmondPage() {
         },
         {
           question: "What warranty do you offer?",
-          answer: "Every project comes with a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
+          answer: "Qualifying painting projects include a 5-year written workmanship warranty, which you receive in writing at the final walkthrough.",
         },
       ]}
       testimonials={[
