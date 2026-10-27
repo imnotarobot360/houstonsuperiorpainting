@@ -1255,6 +1255,36 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Photos of a Pearland, TX home after exterior painting: sage-green lap and shingle siding with cream trim, gutters and garage door.",
   },
+  {
+    // Job photos supplied by Juan on 2026-10-27: "stucco house in Sugar Land texas".
+    // A security-company yard sign blurred; a mid-job patio photo (plastic sheeting,
+    // paint can) left out. Scope, products and colors unconfirmed.
+    slug: "sugar-land-stucco-exterior",
+    title: "Stucco Exterior Painting in Sugar Land",
+    neighborhood: "Sugar Land, TX",
+    service: "Stucco Painting",
+    serviceSlug: "stucco-painting-houston-tx",
+    summary:
+      "A one-story Sugar Land home with olive-green stucco, dark brown trim, gable accent boards and garage door, and brick and stone accents, photographed after the work.",
+    heroImage: "/images/projects/sugar-land-stucco-exterior/01-front-elevation.jpg",
+    afterImage: "/images/projects/sugar-land-stucco-exterior/01-front-elevation.jpg",
+    afterAlt: "Sugar Land one-story home with olive-green stucco, dark brown gable boards and garage door, and brick arches",
+    gallery: [
+      { src: "/images/projects/sugar-land-stucco-exterior/02-front-entry.jpg", alt: "Recessed front entry with olive-green stucco walls and dark brown trim around a wood door" },
+      { src: "/images/projects/sugar-land-stucco-exterior/03-garage-side.jpg", alt: "Long garage-side stucco wall in olive green with a dark brown gable and garage door" },
+      { src: "/images/projects/sugar-land-stucco-exterior/04-rear-corner.jpg", alt: "Rear corner of the home with olive-green stucco and wide dark brown window surrounds" },
+      { src: "/images/projects/sugar-land-stucco-exterior/05-rear-elevation.jpg", alt: "Rear elevation with olive-green stucco, dark brown window surrounds and cream downspouts" },
+    ],
+    stats: [
+      { label: "Location", value: "Sugar Land, TX" },
+      { label: "Service", value: "Stucco exterior" },
+      { label: "Finish", value: "Olive, dark brown trim" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    metaTitle: "Stucco Exterior Painting in Sugar Land, TX",
+    metaDescription:
+      "Photos of a Sugar Land, TX home with olive-green painted stucco, dark brown trim and garage door, and brick and stone accents.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */
