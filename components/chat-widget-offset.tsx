@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import { useHidesInterruptions } from "@/lib/focused-routes"
+import { CHAT_LOADED_EVENT } from "@/components/chat-launcher"
 
 /**
  * The LeadConnector chat widget renders inside a shadow root and pins itself
@@ -25,8 +26,8 @@ export function ChatWidgetOffset() {
    * Hide the widget on focused routes.
    *
    * This is done here rather than by not rendering the <Script>, because
-   * `strategy="lazyOnload"` means the widget may already have injected itself
-   * before a client-side navigation reaches this page — and React can't unmount
+   * once <ChatLauncher> has loaded the widget it stays in the DOM across
+   * client-side navigations — and React can't unmount
    * DOM that a third-party script created outside the React tree.
    *
    * So the host element is toggled directly. `<chat-widget>` is a custom
@@ -53,15 +54,12 @@ export function ChatWidgetOffset() {
       return true
     }
 
-    if (apply()) return
-
-    // The widget is lazy-loaded, so it may not exist yet on first paint.
-    let tries = 0
-    const timer = window.setInterval(() => {
-      tries += 1
-      if (apply() || tries > 40) window.clearInterval(timer)
-    }, 250)
-    return () => window.clearInterval(timer)
+    // The widget loads only when <ChatLauncher> is tapped, so it usually does
+    // not exist yet; apply once it announces itself.
+    const onLoaded = () => apply()
+    window.addEventListener(CHAT_LOADED_EVENT, onLoaded)
+    apply()
+    return () => window.removeEventListener(CHAT_LOADED_EVENT, onLoaded)
   }, [focused])
 
   useEffect(() => {
@@ -80,15 +78,24 @@ export function ChatWidgetOffset() {
       return true
     }
 
-    if (inject()) return
-
-    // The widget script loads asynchronously — poll briefly until it exists.
-    const timer = window.setInterval(() => {
-      attempts += 1
-      if (inject() || attempts > 40) window.clearInterval(timer)
-    }, 250)
-
-    return () => window.clearInterval(timer)
+    // The shadow root can appear a moment after the host: poll briefly once
+    // <ChatLauncher> reports the widget loaded.
+    let timer: number | undefined
+    const onLoaded = () => {
+      window.clearInterval(timer)
+      attempts = 0
+      if (inject()) return
+      timer = window.setInterval(() => {
+        attempts += 1
+        if (inject() || attempts > 40) window.clearInterval(timer)
+      }, 250)
+    }
+    window.addEventListener(CHAT_LOADED_EVENT, onLoaded)
+    inject()
+    return () => {
+      window.removeEventListener(CHAT_LOADED_EVENT, onLoaded)
+      window.clearInterval(timer)
+    }
   }, [])
 
   return null

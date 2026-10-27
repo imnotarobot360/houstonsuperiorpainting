@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
+import { ChatLauncher } from '@/components/chat-launcher'
 import { PaintingSiteChrome } from '@/components/painting-site-chrome'
 import { SiteMain } from '@/components/site-main'
 import { Inter, Playfair_Display, Cormorant_Garamond, Manrope } from 'next/font/google'
@@ -132,20 +132,14 @@ export default function RootLayout({
         <GoogleAnalytics />
         <MetaPixel />
         {process.env.NODE_ENV === 'production' && <Analytics />}
-        {/* Loaded via next/script so the widget injects itself client-side.
-            A raw <script> was server-rendered and then mutated by loader.js
-            (it adds its own data-loader-instance attribute), which caused a
-            React hydration mismatch on every page. */}
-        {/* Gated: this widget is branded for the painting company, so it must not
+        {/* LeadConnector chat: a lightweight button that loads the real widget
+            only when tapped (page speed, owner decision 2026-10-27). The widget
+            injects itself client-side, so there is no server-rendered <script>
+            for loader.js to mutate (that caused hydration mismatches before).
+            Gated: this widget is branded for the painting company, so it must not
             appear on the epoxy subdomain. Epoxy has its own call/text/form CTAs. */}
         <PaintingSiteChrome>
-          <Script
-            src="https://widgets.leadconnectorhq.com/loader.js"
-            data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-            data-widget-id="69d7dae8b5c4e01d38ac3431"
-            data-source="WEB_USER"
-            strategy="lazyOnload"
-          />
+          <ChatLauncher />
         </PaintingSiteChrome>
       </body>
     </html>
