@@ -1318,6 +1318,43 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Photos of the Citizens All Day restaurant in Austin, TX: teal exterior walls with hand-painted white lettering, menu words and a kangaroo mural.",
   },
+  {
+    // Job photos supplied by Juan on 2026-10-27: "interior painting in Weston Lakes,
+    // fulshear". Mid-job shots (paint can and rollers on the counter, boxes, a
+    // worker in a doorway, paper on the floor) left out or cropped; near-duplicates
+    // left out. Whether the cabinets, island and wainscot panels were part of our
+    // scope is unconfirmed, so only the interior painting is claimed. Products,
+    // colors and timeline unconfirmed.
+    slug: "weston-lakes-interior-repaint",
+    title: "Interior Painting in a Weston Lakes Home",
+    neighborhood: "Weston Lakes, Fulshear, TX",
+    service: "Interior Painting",
+    serviceSlug: "interior-painting-houston-tx",
+    summary:
+      "A whole-home interior repaint in Weston Lakes near Fulshear: a navy dining room and study above white wainscoting, light gray living areas, bedrooms and halls with white trim, photographed after the work.",
+    heroImage: "/images/projects/weston-lakes-interior-repaint/01-dining-room-wainscoting.jpg",
+    afterImage: "/images/projects/weston-lakes-interior-repaint/01-dining-room-wainscoting.jpg",
+    afterAlt: "Weston Lakes dining room with navy walls above white panel wainscoting, white crown molding and a hardwood floor",
+    gallery: [
+      { src: "/images/projects/weston-lakes-interior-repaint/02-wainscoting-detail.jpg", alt: "Close view of navy wall paint meeting white chair rail and picture-frame wainscot panels" },
+      { src: "/images/projects/weston-lakes-interior-repaint/03-foyer-and-hall.jpg", alt: "Foyer with a navy dining wall, white door casing and a light hallway leading past the staircase" },
+      { src: "/images/projects/weston-lakes-interior-repaint/04-family-room.jpg", alt: "Family room with light gray walls, white trim around four windows and white built-ins beside the fireplace" },
+      { src: "/images/projects/weston-lakes-interior-repaint/05-bedroom.jpg", alt: "Bedroom with light gray walls, white crown molding, baseboards and window casings" },
+      { src: "/images/projects/weston-lakes-interior-repaint/06-study-built-ins.jpg", alt: "Study with navy walls and ceiling, white crown molding and white built-in desk cabinets" },
+      { src: "/images/projects/weston-lakes-interior-repaint/07-kitchen.jpg", alt: "Kitchen with light walls, white crown molding and white cabinets beside a navy island" },
+      { src: "/images/projects/weston-lakes-interior-repaint/08-upstairs-hall.jpg", alt: "Upstairs hallway with light gray walls, white doors and white baseboards" },
+    ],
+    stats: [
+      { label: "Location", value: "Weston Lakes" },
+      { label: "Service", value: "Interior" },
+      { label: "Finish", value: "Navy, light gray, white trim" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    relatedServiceAreas: ["painters-fulshear-tx"],
+    metaTitle: "Interior Painting in Weston Lakes, Fulshear, TX",
+    metaDescription:
+      "Photos of an interior repaint in Weston Lakes near Fulshear, TX: navy dining room and study over white wainscoting, light gray rooms and white trim.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */
