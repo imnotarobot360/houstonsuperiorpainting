@@ -290,8 +290,12 @@ export const BUSINESS = {
   },
 
   // ─── Brands / partners ─────────────────────────────────
-  // Brands we use. Juan confirmed Farrow & Ball 2026-10-07. These are products
-  // we apply, not partner programs: never say "preferred contractor/partner".
+  // Brands we use. Juan confirmed Farrow & Ball 2026-10-07 (and again 2026-10-27).
+  // Owner briefs 2026-10-27: Sherwin-Williams and Benjamin Moore formally granted
+  // a preferred-contractor designation. Say exactly "Sherwin-Williams / Benjamin
+  // Moore Preferred Painting Contractor designation"; never present it as a
+  // certification of every project, a product warranty, an endorsement of every
+  // service, or proof of being better than competitors. Never "partner".
   paintPartners: ["Sherwin-Williams", "Benjamin Moore", "Farrow & Ball"],
 
   // Cabinet, trim and door coatings. Owner 2026-10-14 (reverses the Oct 12

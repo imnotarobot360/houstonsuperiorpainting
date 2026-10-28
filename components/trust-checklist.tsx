@@ -7,21 +7,22 @@ import { BUSINESS } from "@/lib/business"
 export const INSURANCE_PATH = "/insurance-and-warranty"
 export const INSURANCE_REQUEST_PATH = "/insurance-and-warranty#request-proof-of-insurance"
 
+// One insurance line only (owner brief 2026-10-27: the Cypress page showed
+// "Current proof of insurance…" and "Proof of insurance…" side by side).
 const ITEMS = [
-  `${BUSINESS.trust.warrantyYears}-Year Written Workmanship Warranty`,
+  `${BUSINESS.trust.warrantyYears}-year written workmanship warranty on qualifying painting projects`,
   BUSINESS.insurance.short,
-  "Proof of insurance available upon request",
-  "Insurance documentation provided after project approval",
-  "Written project scope",
+  "Certificate of insurance for approved projects when required",
+  "Written estimate with scope, total price, deposit and payment schedule",
   "Clear product specifications",
   "Final walkthrough",
 ]
 
 export function TrustChecklist({ className = "" }: { className?: string }) {
   return (
-    <section aria-label="What every project includes" className={`container mx-auto px-4 max-w-4xl mb-14 ${className}`}>
+    <section aria-label="What to expect from us" className={`container mx-auto px-4 max-w-4xl mb-14 ${className}`}>
       <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-5">What every project includes</h2>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-5">What to expect from us</h2>
         <ul className="grid gap-3 sm:grid-cols-2">
           {ITEMS.map((item) => (
             <li key={item} className="flex items-start gap-2.5 text-base text-foreground">

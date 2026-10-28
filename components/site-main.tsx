@@ -19,5 +19,7 @@ import { useHidesStickyCta } from "@/lib/focused-routes"
 export function SiteMain({ children }: { children: React.ReactNode }) {
   const focused = useHidesStickyCta()
 
-  return <div className={focused ? undefined : "pb-20 md:pb-0"}>{children}</div>
+  // 5rem clears the bar itself; the safe-area inset matches the bar's own
+  // bottom padding on phones with a home indicator.
+  return <div className={focused ? undefined : "pb-[calc(5rem+env(safe-area-inset-bottom))] md:pb-0"}>{children}</div>
 }

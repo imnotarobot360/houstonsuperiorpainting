@@ -93,6 +93,15 @@ export const siteGraphSchema = {
       email: BUSINESS.email,
       foundingDate: String(BUSINESS.founded),
       foundingLocation: { "@type": "Place", name: "Cypress, Texas" },
+      // Headquarters (shown in the footer on every page).
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: BUSINESS.primaryAddress.street,
+        addressLocality: BUSINESS.primaryAddress.city,
+        addressRegion: BUSINESS.primaryAddress.state,
+        postalCode: BUSINESS.primaryAddress.zip,
+        addressCountry: BUSINESS.primaryAddress.country,
+      },
       founder: { "@id": OWNER_ID },
       slogan: BUSINESS.slogan,
       knowsLanguage: ["en", "es"],

@@ -14,7 +14,7 @@ const OFFSET_STYLE = `
   @media (max-width: 767px) {
     .lc_text-widget,
     .lc_text-widget--bubble {
-      bottom: 88px !important;
+      bottom: calc(88px + env(safe-area-inset-bottom)) !important;
     }
   }
 `

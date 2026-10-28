@@ -34,8 +34,8 @@ export function LuxuryTrust() {
         <Reveal className="mt-14 pt-10 border-t border-border flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
           <span className="font-cormorant text-lg text-graphite italic">Products named in your estimate</span>
           <div className="flex items-center gap-10">
-            <Image src="/images/sherwin-williams-logo.png" alt="Sherwin-Williams preferred painting contractor" width={130} height={40} className="h-8 w-auto object-contain opacity-80" />
-            <Image src="/images/benjamin-moore-logo.png" alt="Benjamin Moore preferred painting contractor" width={130} height={40} className="h-8 w-auto object-contain opacity-80" />
+            <Image src="/images/sherwin-williams-logo.png" alt="Sherwin-Williams Preferred Painting Contractor designation" width={130} height={40} className="h-8 w-auto object-contain opacity-80" />
+            <Image src="/images/benjamin-moore-logo.png" alt="Benjamin Moore Preferred Painting Contractor designation" width={130} height={40} className="h-8 w-auto object-contain opacity-80" />
           </div>
         </Reveal>
       </div>

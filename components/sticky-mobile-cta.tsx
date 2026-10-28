@@ -46,7 +46,7 @@ export function StickyMobileCTA() {
   if (useHidesStickyCta()) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden grid grid-cols-3 bg-card shadow-2xl border-t border-border">
+    <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden grid grid-cols-3 bg-card shadow-2xl border-t border-border pb-[env(safe-area-inset-bottom)]">
       <a
         href={PHONE_HREF}
         data-contact-location="mobile_sticky_bar"

@@ -88,3 +88,46 @@ URL Inspection steps for each URL:
 - [ ] **Bing Places:** the Houston description says "heart of Katy", and Sugar Land and Magnolia are missing. Fix the description and add the two offices (Bing can import them from Google Business Profile).
 - [ ] **Google Business Profiles** (all five): replace "Open 24 hours" with the real hours, and set each profile's website link to its office page (Sugar Land currently uses `http://`). Fix the ".." in the Houston profile name, and decide whether the Magnolia profile name needs the city suffix like the others.
 - [ ] **houstonsuperiorpaintingmagnoliatx.com:** uses the Magnolia address with phone (832) 764-2774 and another company's social links. Find out who runs it; if it isn't authorized, report it.
+
+---
+
+## 7. Additions from the 2026-10-27 second brief
+
+Correct values for every listing: **Houston Superior Painting** · founder **Juan Serra** · founded **2019** · **(346) 594-5960** · https://houstonsuperiorpainting.com · HQ 14150 Huffmeister Rd, Suite 410, Cypress, TX 77429 · Texas does not issue a statewide painting-contractor license (never "licensed") · no bonding or coverage-amount claims · no "no upfront cost" wording.
+
+Evidence to have ready for any correction request: a utility bill or business document showing the business name and address, the Google Business Profile link for the office, the website contact page, and access to the business phone or email for verification.
+
+| Listing | URL | Incorrect | Correct | How to fix |
+|---|---|---|---|---|
+| Old Weebly site | **URL unknown — Juan to supply** | Old phone, "licensed/bonded" wording, "no upfront cost" claims, old company info | Values above | Sign in to Weebly/Square → Unpublish or Delete; if not possible, Settings → SEO → "Hide site from search engines" and remove the wording; if it uses a domain Juan owns, 301 it to houstonsuperiorpainting.com |
+| Poyst | https://www.poyst.com/business/houston-superior-painting | Name "Houston Superior Painting..", phone (346) 812-3392 | "Houston Superior Painting", (346) 594-5960 | Claim the listing ("Is this your business?"), verify by phone/email, edit; otherwise use the site's contact/report form and keep a screenshot |
+| BuildZoom | **Not found in search 2026-10-27 — Juan to supply the URL** | Old phone; painting-license wording | (346) 594-5960; remove license wording (Texas has no statewide painting license) | Claim the profile on BuildZoom ("Claim this business" / contractor login) and edit; or email BuildZoom support with the evidence above |
+| CitiesProfessionals | **Not found in search 2026-10-27 — Juan to supply the URL** | Founder listed as "JJ Semo" | Founder: Juan Serra | Use the listing's claim/edit or contact form; attach proof of ownership (Texas SOS filing or business document naming Juan Serra) |
+| Giphy channel | https://giphy.com/channel/hsuperiorpaint | Phone (346) 521-4992; bio says "licensed, bonded, and insured" and "no up-front costs" | (346) 594-5960; "Insured. Free written estimates." | Sign in to the Giphy channel → Edit profile |
+| Lantern (AI directory) | https://lantern.llc/b/houston-superior-painting-houston | Phone (346) 812-4492 | (346) 594-5960 | Use the page's claim/correction link or contact Lantern support |
+| Unmanaged Yelp result | (search yelp.com for "Houston Superior Painting" Houston) | Seen 2026-10-26: 1.0 stars from 2 reviews, phone (346) 521-4992 | Values above | **First confirm it is this business.** If it is: "Edit business info" → correct phone/website, or "Report" as incorrect/duplicate. Do not claim it or start a Yelp program without a separate decision; never solicit or buy reviews |
+
+## 8. Search Console and Bing (owner actions, not automated)
+
+### Resubmit the sitemap — Google Search Console
+1. https://search.google.com/search-console → property `https://houstonsuperiorpainting.com`.
+2. **Indexing → Sitemaps** → enter `sitemap.xml` → **Submit** (resubmitting is fine; it prompts a re-read).
+3. Check the status reads "Success" and "Discovered pages" ≈ the sitemap count (212 on 2026-10-27).
+
+### Priority URLs to inspect and request indexing (about 10/day)
+Day 1: `/`, `/about`, `/insurance-and-warranty`, `/warranty`, `/reviews`, `/painting-financing-houston`, `/faq`, `/projects`, `/blog`, `/es`
+Day 2: `/painters-cypress-tx`, `/painters-houston-tx`, `/painters-katy-tx`, `/painters-sugar-land-tx`, `/painters-magnolia-tx`, `/interior-painting-houston-tx`, `/exterior-painting-houston-tx`, `/cabinet-refinishing-houston-tx`, `/commercial-painting-houston-tx`, `/houston-painting-cost-guide`
+
+For each: paste the full URL in the top bar → **Test live URL** → confirm "URL is available to Google" → **Request indexing**.
+
+### Monitor
+- **Indexing → Pages**: watch "Crawled – currently not indexed" and "Duplicate, Google chose different canonical than user". Open each, note the URLs, and send them over; don't noindex or redirect anything without review.
+- Old snippets (JJ Semo, 500+, $2M, no-upfront) clear as Google recrawls; if one persists after recrawl, **Removals → Clear cached URL**.
+
+### Bing Webmaster Tools
+1. https://www.bing.com/webmasters → add the site (fastest: **Import from Google Search Console**).
+2. **Sitemaps** → submit `https://houstonsuperiorpainting.com/sitemap.xml`.
+3. **URL Inspection** → request indexing for the Day 1 list (Bing allows a daily quota).
+4. Bing Places for Business: fix the Houston description ("heart of Katy") and add the Sugar Land and Magnolia offices (can import from Google Business Profile).
+
+No Google Business Profile was changed by this work, and none should be merged, suspended or renamed as part of it.

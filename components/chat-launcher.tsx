@@ -138,7 +138,7 @@ export function ChatLauncher() {
       disabled={state === "loading"}
       aria-hidden={yieldToContent && state === "idle" ? true : undefined}
       tabIndex={yieldToContent && state === "idle" ? -1 : undefined}
-      className={`${yieldToContent && state === "idle" ? "pointer-events-none translate-y-4 opacity-0" : "opacity-100"} fixed right-5 bottom-[88px] md:bottom-5 z-40 flex h-[58px] w-[58px] items-center justify-center rounded-full bg-[#188bf6] text-white shadow-lg transition-all duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#188bf6] disabled:cursor-wait`}
+      className={`${yieldToContent && state === "idle" ? "pointer-events-none translate-y-4 opacity-0" : "opacity-100"} fixed right-5 bottom-[calc(88px+env(safe-area-inset-bottom))] md:bottom-5 z-40 flex h-[58px] w-[58px] items-center justify-center rounded-full bg-[#188bf6] text-white shadow-lg transition-all duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#188bf6] disabled:cursor-wait`}
     >
       {state === "loading" ? (
         <span className="h-6 w-6 animate-spin rounded-full border-2 border-white/40 border-t-white" aria-hidden="true" />

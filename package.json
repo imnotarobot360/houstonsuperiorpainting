@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "test": "node --test --disable-warning=MODULE_TYPELESS_PACKAGE_JSON \"tests/*.test.mjs\"",
     "audit:content": "node scripts/audit-content-consistency.mjs",
+    "sitemap:dates": "node scripts/generate-content-dates.mjs",
     "report:ai-bots": "node scripts/ai-bot-report.mjs"
   },
   "dependencies": {

@@ -1,0 +1,213 @@
+page,words,max_similarity,most_similar_to,group,recommendation
+/projects/heights-charcoal-kitchen-cabinets,127,0.63,/projects/heights-white-beadboard-kitchen-cabinets,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, or change search intent
+/projects/heights-white-beadboard-kitchen-cabinets,133,0.63,/projects/heights-charcoal-kitchen-cabinets,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, or change search intent
+/projects/katy-tan-stucco-exterior,127,0.61,/projects/katy-white-stucco-exterior,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, or change search intent
+/projects/katy-white-stucco-exterior,128,0.61,/projects/katy-tan-stucco-exterior,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, or change search intent
+/projects/cypress-two-tone-kitchen-cabinets,125,0.58,/projects/cypress-white-teal-kitchen-cabinets,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/cypress-white-teal-kitchen-cabinets,133,0.58,/projects/cypress-two-tone-kitchen-cabinets,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/heights-painted-brick-bungalow,136,0.54,/projects/heights-exterior-siding-repaint,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/heights-exterior-siding-repaint,131,0.54,/projects/heights-painted-brick-bungalow,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/bellaire-white-glass-front-cabinets,121,0.54,/projects/sienna-white-kitchen-cabinets,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/sienna-white-kitchen-cabinets,122,0.54,/projects/bellaire-white-glass-front-cabinets,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/richmond-interior-arches-repaint,135,0.50,/projects/richmond-interior-repaint,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/richmond-interior-repaint,125,0.50,/projects/richmond-interior-arches-repaint,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/richmond-two-story-great-room,136,0.49,/projects/richmond-interior-repaint,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/houston-retail-center-exterior,123,0.49,/projects/houston-storefront-exterior,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/houston-storefront-exterior,120,0.49,/projects/houston-retail-center-exterior,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/katy-white-navy-kitchen-cabinets,131,0.48,/projects/sienna-white-kitchen-cabinets,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/richmond-two-tone-kitchen-cabinets,127,0.47,/projects/richmond-sage-green-kitchen-cabinets,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/richmond-sage-green-kitchen-cabinets,142,0.47,/projects/richmond-two-tone-kitchen-cabinets,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/exterior-painting-katy-cinco-ranch,1131,0.47,/exterior-painting-sugar-land,service-location,Keep and strengthen: add verified local project evidence, unique FAQ, unique photos
+/exterior-painting-sugar-land,1069,0.47,/exterior-painting-katy-cinco-ranch,service-location,Keep and strengthen: add verified local project evidence, unique FAQ, unique photos
+/cabinet-refinishing-sugar-land,1041,0.47,/cabinet-refinishing-cypress-bridgeland,service-location,Keep and strengthen: add verified local project evidence, unique FAQ, unique photos
+/cabinet-refinishing-cypress-bridgeland,1052,0.47,/cabinet-refinishing-sugar-land,service-location,Keep and strengthen: add verified local project evidence, unique FAQ, unique photos
+/projects/bellaire-painted-brick-ranch,125,0.46,/projects/katy-tan-stucco-exterior,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/exterior-painting-cypress-bridgeland,1092,0.46,/exterior-painting-sugar-land,service-location,Keep and strengthen: add verified local project evidence, unique FAQ, unique photos
+/projects/fulshear-interior-repaint,134,0.46,/projects/richmond-interior-arches-repaint,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/cabinet-refinishing-katy-cinco-ranch,1110,0.46,/cabinet-refinishing-sugar-land,service-location,Keep and strengthen: add verified local project evidence, unique FAQ, unique photos
+/projects/magnolia-exterior-siding-repaint,126,0.46,/projects/pearland-exterior-hardie-repaint,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/projects/pearland-exterior-hardie-repaint,128,0.46,/projects/magnolia-exterior-siding-repaint,project,Keep (distinct real job; similarity is shared template text) - add owner-confirmed scope, colors, timeline or repairs, unique FAQ, unique photos
+/interior-painting-katy-cinco-ranch,1132,0.45,/interior-painting-sugar-land,service-location,Keep
+/interior-painting-sugar-land,1085,0.45,/interior-painting-katy-cinco-ranch,service-location,Keep
+/interior-painting-bellaire-west-university,1053,0.44,/interior-painting-the-heights,service-location,Keep
+/interior-painting-the-heights,1047,0.44,/interior-painting-bellaire-west-university,service-location,Keep
+/interior-painting-cypress-bridgeland,1072,0.44,/interior-painting-sugar-land,service-location,Keep
+/exterior-painting-bellaire-west-university,1058,0.44,/exterior-painting-the-heights,service-location,Keep
+/exterior-painting-the-heights,1035,0.44,/exterior-painting-bellaire-west-university,service-location,Keep
+/projects/west-university-painted-brick-exterior,126,0.41,/projects/bellaire-painted-brick-ranch,project,Keep
+/cabinet-refinishing-bellaire-west-university,991,0.41,/cabinet-refinishing-the-heights,service-location,Keep
+/cabinet-refinishing-the-heights,1034,0.41,/cabinet-refinishing-bellaire-west-university,service-location,Keep
+/projects/sugar-land-stucco-exterior,126,0.40,/projects/west-university-stucco-exterior,project,Keep
+/projects/west-university-stucco-exterior,122,0.40,/projects/sugar-land-stucco-exterior,project,Keep
+/interior-painting-memorial,1058,0.40,/interior-painting-richmond,service-location,Keep
+/interior-painting-richmond,1141,0.40,/interior-painting-memorial,service-location,Keep
+/painters-champions-forest-tx,1039,0.38,/painters-cypress-creek-tx,city,Keep
+/painters-cypress-creek-tx,1032,0.38,/painters-champions-forest-tx,city,Keep
+/interior-painting-the-woodlands,1059,0.37,/interior-painting-memorial,service-location,Keep
+/contact,531,0.37,/sms-consent,other,Keep
+/sms-consent,413,0.37,/contact,other,Keep
+/exterior-painting-fulshear,1126,0.36,/exterior-painting-richmond,service-location,Keep
+/exterior-painting-richmond,1098,0.36,/exterior-painting-fulshear,service-location,Keep
+/painters-fulshear-tx,1230,0.36,/painters-pearland-tx,city,Keep
+/painters-pearland-tx,1205,0.36,/painters-fulshear-tx,city,Keep
+/painters-richmond-tx,1270,0.36,/painters-pearland-tx,city,Keep
+/interior-painting-fulshear,1137,0.35,/interior-painting-the-woodlands,service-location,Keep
+/painters-cinco-ranch-tx,1067,0.34,/painters-rosenberg-tx,city,Keep
+/painters-rosenberg-tx,977,0.34,/painters-cinco-ranch-tx,city,Keep
+/projects/austin-citizens-restaurant-exterior,139,0.34,/projects/houston-storefront-exterior,project,Keep
+/exterior-painting-memorial,1036,0.33,/interior-painting-memorial,service-location,Keep
+/exterior-painting-the-woodlands,1035,0.32,/exterior-painting-memorial,service-location,Keep
+/projects/weston-lakes-closet-cabinets,144,0.32,/projects/bellaire-white-glass-front-cabinets,project,Keep
+/painters-missouri-city-tx,1028,0.32,/painters-rosenberg-tx,city,Keep
+/painters-energy-corridor-tx,1033,0.31,/painters-cypress-creek-tx,city,Keep
+/projects/weston-lakes-interior-repaint,141,0.31,/projects/fulshear-interior-repaint,project,Keep
+/projects/cypress-commercial-office-repaint,123,0.30,/projects/houston-retail-center-exterior,project,Keep
+/painters-memorial-villages-tx,1079,0.27,/painters-energy-corridor-tx,city,Keep
+/cabinet-refinishing-memorial,1004,0.27,/exterior-painting-memorial,service-location,Keep
+/painters-river-oaks-tx,1131,0.27,/painters-memorial-villages-tx,city,Keep
+/painters-the-woodlands-tx,1132,0.26,/painters-tomball-tx,city,Keep
+/painters-tomball-tx,1166,0.26,/painters-the-woodlands-tx,city,Keep
+/painters-memorial-tx,1211,0.25,/painters-river-oaks-tx,city,Keep
+/painters-bellaire-tx,1215,0.25,/painters-the-heights-tx,city,Keep
+/painters-the-heights-tx,1210,0.25,/painters-bellaire-tx,city,Keep
+/luxury-exterior-painting-river-oaks,904,0.25,/luxury-house-painters-houston,service-location,Keep
+/luxury-house-painters-houston,942,0.25,/luxury-exterior-painting-river-oaks,service,Keep
+/brick-painting-katy,920,0.23,/exterior-painting-katy-cinco-ranch,service-location,Keep
+/brick-painting-memorial,1006,0.23,/exterior-painting-memorial,service-location,Keep
+/painters-sienna-tx,1121,0.21,/painters-riverstone-tx,city,Keep
+/painters-riverstone-tx,1252,0.21,/painters-sienna-tx,city,Keep
+/painters-magnolia-tx,872,0.20,/painters-katy-tx,city,Keep
+/painters-katy-tx,964,0.20,/painters-magnolia-tx,city,Keep
+/exterior-painting-houston-tx,1614,0.19,/interior-painting-houston-tx,service,Keep
+/interior-painting-houston-tx,1590,0.19,/exterior-painting-houston-tx,service,Keep
+/cabinet-refinishing-houston-tx,1441,0.18,/interior-painting-houston-tx,service,Keep
+/painters-cypress-tx,975,0.18,/painters-magnolia-tx,city,Keep
+/blog/pressure-washing-cost-houston,621,0.18,/blog/soft-washing-cost-houston,blog,Keep
+/blog/soft-washing-cost-houston,546,0.18,/blog/pressure-washing-cost-houston,blog,Keep
+/blog/limewash-cost-houston,515,0.18,/blog/stucco-painting-cost-houston,blog,Keep
+/blog/stucco-painting-cost-houston,548,0.18,/blog/limewash-cost-houston,blog,Keep
+/blog/exterior-paint-colors-katy-tx,514,0.18,/blog/exterior-paint-colors-fulshear-tx,blog,Keep
+/blog/exterior-paint-colors-fulshear-tx,467,0.18,/blog/exterior-paint-colors-katy-tx,blog,Keep
+/drywall-repair-houston-tx,1328,0.18,/cabinet-refinishing-houston-tx,service,Keep
+/painters-sugar-land-tx,1054,0.18,/painters-magnolia-tx,city,Keep
+/blog/drywall-repair-cost-houston,525,0.18,/blog/limewash-cost-houston,blog,Keep
+/blog/wood-rot-repair-cost-houston,575,0.17,/blog/drywall-repair-cost-houston,blog,Keep
+/,1957,0.17,/reviews,other,Keep
+/reviews,599,0.17,/,other,Keep
+/blog/wallpaper-removal-cost-houston,575,0.17,/blog/limewash-cost-houston,blog,Keep
+/blog/load-bearing-wall-removal-cost-houston,623,0.16,/blog/limewash-cost-houston,blog,Keep
+/projects/west-university-kitchen-cabinet-refinishing,333,0.16,/projects/cypress-two-tone-kitchen-cabinets,project,Keep
+/projects/river-oaks-exterior-restoration,330,0.16,/projects/west-university-painted-brick-exterior,project,Keep
+/blog/exterior-paint-colors-magnolia-tx,517,0.15,/blog/exterior-paint-colors-pearland-tx,blog,Keep
+/blog/exterior-paint-colors-pearland-tx,466,0.15,/blog/exterior-paint-colors-magnolia-tx,blog,Keep
+/faq,1432,0.15,/sms-consent,other,Keep
+/projects/bellaire-stucco-repair-elastomeric-coating,314,0.14,/projects/west-university-stucco-exterior,project,Keep
+/projects/memorial-whole-home-interior-repaint,355,0.14,/projects/richmond-interior-repaint,project,Keep
+/blog/exterior-paint-colors-sugar-land-tx,511,0.14,/blog/exterior-paint-colors-katy-tx,blog,Keep
+/blog/exterior-paint-colors-houston-heights,514,0.13,/blog/exterior-paint-colors-magnolia-tx,blog,Keep
+/blog/townhome-painting-cinco-ranch-cross-creek-riverstone,644,0.12,/blog/exterior-paint-colors-pearland-tx,blog,Keep
+/projects/cypress-wood-rot-repair-exterior-repaint,331,0.12,/projects/heights-wallpaper-removal-modern-repaint,project,Keep
+/projects/heights-wallpaper-removal-modern-repaint,317,0.12,/projects/cypress-wood-rot-repair-exterior-repaint,project,Keep
+/blog/pressure-washing-before-painting,345,0.12,/blog/stucco-painting-houston-guide,blog,Keep
+/blog/stucco-painting-houston-guide,429,0.12,/blog/pressure-washing-before-painting,blog,Keep
+/blog/drywall-repair-before-painting,392,0.11,/blog/pressure-washing-before-painting,blog,Keep
+/cost-to-paint-a-room-houston,855,0.11,/blog/limewash-cost-houston,service,Keep
+/commercial-painting-cost-per-square-foot-houston,957,0.10,/blog/limewash-cost-houston,service,Keep
+/exterior-house-painting-houston-cost-guide,999,0.09,/interior-painting-cost-houston,other,Keep
+/interior-painting-cost-houston,1202,0.09,/exterior-house-painting-houston-cost-guide,service,Keep
+/blog/what-to-expect-painting-estimate,426,0.09,/blog/pressure-washing-before-painting,blog,Keep
+/blog/colors-that-go-with-celery-sw-6421,907,0.09,/blog/sherwin-williams-color-of-the-year-2027-celery-houston,blog,Keep
+/blog/sherwin-williams-color-of-the-year-2027-celery-houston,1240,0.09,/blog/colors-that-go-with-celery-sw-6421,blog,Keep
+/blog/where-to-use-celery-sw-6421,769,0.09,/blog/colors-that-go-with-celery-sw-6421,blog,Keep
+/blog/paint-preparation-houston-climate,535,0.09,/blog/stucco-painting-houston-guide,blog,Keep
+/fine-finish-painting-houston,884,0.08,/,service,Keep
+/blog/exterior-painting-timeline-rain-houston,655,0.08,/blog/exterior-paint-colors-houston-heights,blog,Keep
+/blog/how-to-verify-painting-contractor-insurance-houston,879,0.08,/blog/painting-contractor-sugar-land-insurance-warranty,blog,Keep
+/blog/painting-contractor-sugar-land-insurance-warranty,757,0.08,/blog/how-to-verify-painting-contractor-insurance-houston,blog,Keep
+/blog/sherwin-williams-rewild-2027-colors-houston,802,0.08,/blog/where-to-use-celery-sw-6421,blog,Keep
+/blog/painting-brick-houston,776,0.07,/blog/exterior-paint-colors-houston-heights,blog,Keep
+/small-painting-jobs-houston,774,0.07,/blog/limewash-cost-houston,service,Keep
+/blog/best-paint-colors-houston-homes-2027,896,0.07,/blog/celery-vs-webster-green-2027-color-of-the-year,blog,Keep
+/blog/celery-vs-webster-green-2027-color-of-the-year,825,0.07,/blog/best-paint-colors-houston-homes-2027,blog,Keep
+/houston-painting-cost-guide,1239,0.07,/blog/stucco-painting-cost-houston,other,Keep
+/blog/benjamin-moore-color-of-the-year-2027-webster-green-houston,1067,0.07,/blog/where-to-use-celery-sw-6421,blog,Keep
+/blog/why-paint-peels-bubbles-houston,688,0.07,/blog/limewash-cost-houston,blog,Keep
+/blog/stay-home-during-interior-painting-houston,720,0.07,/blog/limewash-cost-houston,blog,Keep
+/blog/popcorn-ceiling-removal-houston,720,0.07,/blog/drywall-repair-before-painting,blog,Keep
+/painters-houston-tx,1440,0.07,/projects,city,Keep
+/projects,1392,0.07,/painters-houston-tx,other,Keep
+/blog/alabaster-vs-white-dove-vs-chantilly-lace-houston,670,0.07,/blog/exterior-paint-colors-pearland-tx,blog,Keep
+/residential-remodeling-houston-tx,1290,0.07,/interior-painting-houston-tx,service,Keep
+/blog/green-kitchen-cabinet-colors-2027-houston,768,0.07,/blog/limewash-cost-houston,blog,Keep
+/blog/cabinet-colors-2026-houston-greige-green-black,608,0.07,/blog/exterior-paint-colors-pearland-tx,blog,Keep
+/blog/compare-commercial-painting-bids-houston,1071,0.07,/commercial-painting-cost-per-square-foot-houston,blog,Keep
+/about,1028,0.07,/faq,other,Keep
+/blog/paint-house-before-selling-houston,783,0.07,/blog/stay-home-during-interior-painting-houston,blog,Keep
+/blog/commercial-office-painting-houston,791,0.07,/blog/limewash-cost-houston,blog,Keep
+/color-visualizer,481,0.07,/painters-magnolia-tx,other,Keep
+/blog/cabinet-paint-cure-time-houston,1014,0.06,/blog/cabinet-painting-company-houston-guide,blog,Keep
+/blog/cabinet-painting-company-houston-guide,899,0.06,/blog/cabinet-paint-cure-time-houston,blog,Keep
+/blog/exterior-house-painting-cypress-tx-guide,892,0.06,/blog/limewash-cost-houston,blog,Keep
+/blog/paint-before-moving-in-houston,1107,0.06,/blog/green-kitchen-cabinet-colors-2027-houston,blog,Keep
+/commercial-painting-houston-tx,1461,0.06,/commercial-painting-cost-per-square-foot-houston,service,Keep
+/warranty,363,0.06,/painters-houston-tx,other,Keep
+/blog/benjamin-moore-color-trends-2027-houston,1247,0.06,/blog/celery-vs-webster-green-2027-color-of-the-year,blog,Keep
+/blog/paint-over-water-stains-houston,1140,0.06,/blog/green-kitchen-cabinet-colors-2027-houston,blog,Keep
+/blog/benjamin-moore-vs-sherwin-williams,1442,0.05,/blog/emerald-vs-duration-paint,blog,Keep
+/blog/emerald-vs-duration-paint,1605,0.05,/blog/benjamin-moore-vs-sherwin-williams,blog,Keep
+/stucco-painting-houston-tx,850,0.05,/wallpaper-removal-houston-tx,service,Keep
+/wallpaper-removal-houston-tx,782,0.05,/stucco-painting-houston-tx,service,Keep
+/blog/cost-to-paint-2000-sq-ft-house-houston,1556,0.05,/blog/benjamin-moore-vs-sherwin-williams,blog,Keep
+/pressure-washing-houston-tx,1047,0.05,/soft-washing-houston-tx,service,Keep
+/soft-washing-houston-tx,911,0.05,/pressure-washing-houston-tx,service,Keep
+/insurance-and-warranty,573,0.04,/about,other,Keep
+/blog/hardieplank-painting-houston,1556,0.04,/blog/exterior-paint-colors-fulshear-tx,blog,Keep
+/blog/primer-vs-two-coats-paint-houston,1501,0.04,/blog/green-kitchen-cabinet-colors-2027-houston,blog,Keep
+/interior-painting-process-houston,1734,0.04,/interior-painting-cost-houston,service,Keep
+/blog/cost-to-paint-kitchen-cabinets-houston-tx,1290,0.04,/blog/cabinet-colors-2026-houston-greige-green-black,blog,Keep
+/wood-rot-repair-houston-tx,1083,0.04,/stucco-painting-houston-tx,service,Keep
+/blog/spray-vs-brush-roll-painting-houston,1090,0.04,/blog/stucco-painting-houston-guide,blog,Keep
+/blog/diy-vs-professional-painting-cost-houston,1256,0.04,/blog/what-to-expect-painting-estimate,blog,Keep
+/painting-financing-houston,536,0.04,/faq,service,Keep
+/blog/limewash-vs-german-smear-houston,1538,0.04,/blog/exterior-paint-colors-houston-heights,blog,Keep
+/paint-color-consultation-houston,909,0.04,/blog/limewash-cost-houston,service,Keep
+/blog/how-long-does-exterior-paint-last-houston,1738,0.03,/blog/stucco-painting-houston-guide,blog,Keep
+/blog/best-time-to-paint-house-houston,1581,0.03,/blog/pressure-washing-before-painting,blog,Keep
+/local-painter-vs-national-franchise-houston,1070,0.03,/about,service,Keep
+/venetian-plaster-houston-tx,1311,0.03,/stucco-painting-houston-tx,service,Keep
+/blog/how-long-does-interior-painting-take-in-houston,1660,0.03,/blog/drywall-repair-before-painting,blog,Keep
+/residential-painters-houston,792,0.03,/painters-rosenberg-tx,service,Keep
+/blog/fence-deck-painting-houston-tx,1887,0.03,/blog/stucco-painting-houston-guide,blog,Keep
+/blog/exterior-painting-cost-katy-tx,1727,0.03,/blog/pressure-washing-before-painting,blog,Keep
+/privacy-policy,611,0.03,/sms-consent,other,Keep
+/painting-estimate-houston,1042,0.03,/painters-cypress-tx,service,Keep
+/blog/how-to-prepare-home-for-interior-painting,1733,0.03,/blog/popcorn-ceiling-removal-houston,blog,Keep
+/blog/cabinet-refinishing-vs-replacement-houston,1704,0.03,/blog/pressure-washing-before-painting,blog,Keep
+/blog/paint-warranty-texas,2030,0.03,/blog/what-to-expect-painting-estimate,blog,Keep
+/blog/best-exterior-colors-homes-the-woodlands-tx,1917,0.03,/blog/exterior-paint-colors-pearland-tx,blog,Keep
+/terms-and-conditions,669,0.03,/warranty,other,Keep
+/blog/painters-near-me-katy-tx,2726,0.03,/blog/paint-warranty-texas,blog,Keep
+/limewash-brick-painting-houston-tx,1889,0.02,/residential-painters-houston,service,Keep
+/service-areas,260,0.02,/about,other,Keep
+/cabinet-painting-cost-katy,739,0.02,/fine-finish-painting-houston,service-location,Keep
+/blog/venetian-plaster-houston-tx,2578,0.02,/blog/pressure-washing-before-painting,blog,Keep
+/load-bearing-wall-removal-houston-tx,1131,0.02,/pressure-washing-houston-tx,service,Keep
+/houston-painting-contractor-guide,3103,0.02,/local-painter-vs-national-franchise-houston,other,Keep
+/blog,3173,0.02,/blog/emerald-vs-duration-paint,other,Keep
+/blog/cabinet-color-transformations-katy-sugar-land-tx,1579,0.02,/blog/why-diy-cabinet-painting-fails-houston-tx,blog,Keep
+/blog/why-diy-cabinet-painting-fails-houston-tx,1453,0.02,/blog/cabinet-color-transformations-katy-sugar-land-tx,blog,Keep
+/blog/exterior-painting-cypress-tx-common-problems,1877,0.02,/blog/how-houston-weather-damages-exterior-paint,blog,Keep
+/blog/how-houston-weather-damages-exterior-paint,1765,0.02,/blog/exterior-painting-cypress-tx-common-problems,blog,Keep
+/signs-home-needs-exterior-painting,728,0.01,/exterior-house-painting-houston-cost-guide,other,Keep
+/blog/navy-kitchen-island-cabinet-color-houston-tx,1439,0.01,/blog/cabinet-color-transformations-katy-sugar-land-tx,blog,Keep
+/best-paint-colors-houston-homes,857,0.01,/paint-color-consultation-houston,other,Keep
+/how-often-paint-house-houston,1439,0.01,/signs-home-needs-exterior-painting,service,Keep
+/paint-or-replace-cabinets,539,0.01,/cabinet-painting-cost-katy,other,Keep
+/blog/spring-rain-damage-houston-exterior-paint,1636,0.01,/blog,blog,Keep
+/blog/hoa-exterior-paint-rules-houston-suburbs,1584,0.01,/blog,blog,Keep
+/best-exterior-paint-houston-weather,1441,0.01,/blog/how-long-does-exterior-paint-last-houston,other,Keep
+/blog/best-interior-paint-colors-houston-homes,1848,0.01,/blog,blog,Keep
+/blog/paint-finishes-matte-eggshell-satin-semi-gloss,824,0.01,/blog/where-to-use-celery-sw-6421,blog,Keep
+/accent-wall-ideas-houston,854,0.00,/paint-or-replace-cabinets,service,Keep
+/blog/flat-paint-bathrooms-mistake,628,0.00,/blog/how-to-prepare-home-for-interior-painting,blog,Keep
+/es,925,0.00,,other,Keep
