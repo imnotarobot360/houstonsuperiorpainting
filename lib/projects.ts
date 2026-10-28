@@ -1355,6 +1355,38 @@ export const PROJECTS: CaseStudy[] = [
     metaDescription:
       "Photos of an interior repaint in Weston Lakes near Fulshear, TX: navy dining room and study over white wainscoting, light gray rooms and white trim.",
   },
+  {
+    // Job photos supplied by Juan on 2026-10-27: "closet cabinet paint in weston
+    // lakes, fulshear". People reflected in the glass blurred; an arm at the photo
+    // edge cropped out; one photo with a reflected person left out. Only the closet
+    // cabinets are claimed (the shuttered doors and trim are unconfirmed). Products,
+    // color name and timeline unconfirmed.
+    slug: "weston-lakes-closet-cabinets",
+    title: "Closet Cabinet Painting in Weston Lakes",
+    neighborhood: "Weston Lakes, Fulshear, TX",
+    service: "Cabinet Painting",
+    serviceSlug: "cabinet-refinishing-houston-tx",
+    scope: "Built-in closet cabinets",
+    summary:
+      "Built-in walk-in closet cabinets in a Weston Lakes home near Fulshear painted a deep charcoal gray: glass-front upper doors, raised-panel drawer banks and fluted pilasters, photographed after the work.",
+    heroImage: "/images/projects/weston-lakes-closet-cabinets/01-closet-cabinet-wall.jpg",
+    afterImage: "/images/projects/weston-lakes-closet-cabinets/01-closet-cabinet-wall.jpg",
+    afterAlt: "Walk-in closet with charcoal gray built-in cabinets, glass-front upper doors and raised-panel drawers",
+    gallery: [
+      { src: "/images/projects/weston-lakes-closet-cabinets/02-glass-front-cabinets.jpg", alt: "Charcoal gray glass-front closet cabinets with a raised-panel pilaster and three rows of drawers" },
+      { src: "/images/projects/weston-lakes-closet-cabinets/03-cabinet-run-and-doors.jpg", alt: "Long run of charcoal gray closet cabinets leading to gray double doors" },
+    ],
+    stats: [
+      { label: "Location", value: "Weston Lakes" },
+      { label: "Service", value: "Cabinet painting" },
+      { label: "Finish", value: "Charcoal gray" },
+      { label: "Warranty", value: "5 years" },
+    ],
+    relatedServiceAreas: ["painters-fulshear-tx"],
+    metaTitle: "Closet Cabinet Painting in Weston Lakes, Fulshear, TX",
+    metaDescription:
+      "Photos of walk-in closet cabinets painted charcoal gray in Weston Lakes near Fulshear, TX: glass-front doors, raised-panel drawers and pilasters.",
+  },
 ]
 
 /** Projects whose photos are job photos: the only ones city pages may cite as local proof. */
