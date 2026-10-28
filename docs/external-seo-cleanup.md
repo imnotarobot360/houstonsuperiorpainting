@@ -12,7 +12,7 @@ Correct details, for every listing:
   - Sugar Land → /painters-sugar-land-tx
   - Magnolia → /painters-magnolia-tx
 - **Addresses:** exactly as in `lib/business.ts` (five offices).
-- **Hours:** to be confirmed by Juan. The website says Mon–Fri 7 AM – 7 PM, Sat 8 AM – 4 PM, Sun closed. The Google profiles say "Open 24 hours". Pick one and use it everywhere.
+- **Hours (Juan confirmed 2026-10-27):** Mon–Fri 7 AM – 7 PM, Sat 8 AM – 4 PM, Sun closed. The website already uses these; the five Google profiles still say "Open 24 hours" and must be changed to match.
 
 ---
 
@@ -86,7 +86,7 @@ URL Inspection steps for each URL:
 - [ ] **Manta:** lists suite "#405" and the old phone. Claim it and correct it.
 - [ ] **Apple Maps** (Apple Business Connect): the Houston listing is unclaimed and has no phone. Claim it and add (346) 594-5960.
 - [ ] **Bing Places:** the Houston description says "heart of Katy", and Sugar Land and Magnolia are missing. Fix the description and add the two offices (Bing can import them from Google Business Profile).
-- [ ] **Google Business Profiles** (all five): replace "Open 24 hours" with the real hours, and set each profile's website link to its office page (Sugar Land currently uses `http://`). Fix the ".." in the Houston profile name, and decide whether the Magnolia profile name needs the city suffix like the others.
+- [ ] **Google Business Profiles** (all five): replace "Open 24 hours" with Mon–Fri 7 AM – 7 PM, Sat 8 AM – 4 PM, Sun closed (Juan confirmed 2026-10-27), and set each profile's website link to its office page (Sugar Land currently uses `http://`). Fix the ".." in the Houston profile name, and decide whether the Magnolia profile name needs the city suffix like the others.
 - [ ] **houstonsuperiorpaintingmagnoliatx.com:** uses the Magnolia address with phone (832) 764-2774 and another company's social links. Find out who runs it; if it isn't authorized, report it.
 
 ---

@@ -185,6 +185,8 @@ export const BUSINESS = {
   ],
 
   // ─── Hours (single source of truth — use everywhere) ───
+  // Juan confirmed these are the real customer-facing hours, 2026-10-27. The
+  // Google profiles still showed "Open 24 hours" then; they are to be updated to match.
   hours: {
     monday:    { open: "07:00", close: "19:00", display: "7:00 AM – 7:00 PM" },
     tuesday:   { open: "07:00", close: "19:00", display: "7:00 AM – 7:00 PM" },
