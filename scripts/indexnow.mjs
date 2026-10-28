@@ -36,3 +36,8 @@ const res = await fetch("https://api.indexnow.org/indexnow", {
   body: JSON.stringify({ host: HOST, key: KEY, keyLocation: `${SITE}/${KEY}.txt`, urlList: urls.slice(0, 10000) }),
 })
 console.log(`IndexNow responded ${res.status} ${res.statusText} (200/202 = accepted)`)
+if (res.status === 403) {
+  // Seen on the first submission (2026-10-27): the key file was live, but the
+  // engines had not verified the new key yet. A retry minutes later returned 200.
+  console.log("403 = key not verified yet. If the key file is live, wait a few minutes and run again.")
+}
