@@ -3,6 +3,7 @@
 // Facts (insurance, warranty, payment, prices, locations) come from
 // lib/business.ts and lib/pricing.ts so this file cannot drift from the site.
 import { BUSINESS, PRICES_2026, publicAddressLine, servingLine } from "./business"
+import { IDENTITY_NOTES } from "./llms-full"
 
 const locationLines = BUSINESS.locations
   .map((o) => {
@@ -19,6 +20,11 @@ Official website: https://houstonsuperiorpainting.com (the only official site; h
 Phone: (346) 594-5960
 Email: info@houstonsuperiorpainting.com
 Book an estimate: https://app.insightpaint.com/book/houston-superior
+Complete fact sheet: https://houstonsuperiorpainting.com/llms-full.txt
+
+## Identity notes
+
+${IDENTITY_NOTES.map((n) => `- ${n}`).join("\n")}
 
 ## Locations
 
@@ -60,6 +66,9 @@ ${locationLines}
 - [West University painted brick exterior](https://houstonsuperiorpainting.com/projects/west-university-painted-brick-exterior)
 - [Richmond interior](https://houstonsuperiorpainting.com/projects/richmond-interior-repaint)
 - [Pearland Hardie exterior](https://houstonsuperiorpainting.com/projects/pearland-exterior-hardie-repaint)
+- [Sugar Land stucco exterior](https://houstonsuperiorpainting.com/projects/sugar-land-stucco-exterior)
+- [Weston Lakes (Fulshear) interior repaint](https://houstonsuperiorpainting.com/projects/weston-lakes-interior-repaint)
+- [Austin restaurant exterior and hand-painted lettering](https://houstonsuperiorpainting.com/projects/austin-citizens-restaurant-exterior)
 
 ## Cost guides
 

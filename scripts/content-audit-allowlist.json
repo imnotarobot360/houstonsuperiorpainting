@@ -39,5 +39,11 @@
     "file": "app/blog/painting-contractor-sugar-land-insurance-warranty/page.tsx",
     "contains": "which Texas does not require most private employers to carry",
     "reason": "Neutral consumer fact (Texas does not require most private employers to carry workers' compensation), sourced to TDI. No claim about our coverage."
+  },
+  {
+    "rule": "other-phone",
+    "file": "lib/llms-full.ts",
+    "contains": "are not numbers for",
+    "reason": "AEO audit 2026-10-27: AI answers displayed wrong numbers for us. This line names them only to say they are NOT ours, beside the one real number (346) 594-5960. Served in llms.txt / llms-full.txt for AI disambiguation."
   }
 ]

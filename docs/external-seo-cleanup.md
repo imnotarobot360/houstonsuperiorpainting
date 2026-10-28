@@ -131,3 +131,24 @@ For each: paste the full URL in the top bar → **Test live URL** → confirm "U
 4. Bing Places for Business: fix the Houston description ("heart of Katy") and add the Sugar Land and Magnolia offices (can import from Google Business Profile).
 
 No Google Business Profile was changed by this work, and none should be merged, suspended or renamed as part of it.
+
+### IndexNow (Bing and others; added 2026-10-27)
+The site now has an IndexNow key file. After a deploy that changes pages, run from the repo:
+`pnpm indexnow -- --dry-run` (lists URLs changed in the last 7 days), then `pnpm indexnow` to send them. Use `--all` once after setup. Google does not use IndexNow; use Search Console for Google.
+
+## 9. AEO audit (Perplexity, 2026-10-27): off-site actions
+
+The audit found the website itself in good shape; the gap is off-site. In priority order:
+
+1. **Wrong phone in AI answers: (346) 812-4492.** ChatGPT showed it for the Houston office. The audit traces it to a different Houston painter (S&L Painting, Nextdoor), and the Lantern directory also lists it under our name: https://lantern.llc/b/houston-superior-painting-houston. Correct Lantern first. In ChatGPT, use the thumbs-down / "report" on a wrong answer and state the correct number. The site now says plainly (contact page, llms.txt, llms-full.txt) that (346) 594-5960 is the only number.
+2. **Wrong founder in AI answers.** ChatGPT cited a page titled "Meet JJ Semo & The Team". Fix the CitiesProfessionals listing (section 7) and report wrong answers the same way. The site's AI files now state the founder and owner is Juan Serra.
+3. **BBB.** The profile exists and is NOT accredited; the site never claims accreditation (checked 2026-10-27) and the AI files now say so. Decide whether accreditation is worth paying for; if yes, apply, then tell Claude so the site can be updated.
+4. **Reviews per office.** AI shortlists favored competitors with 100–560 Google reviews; Houston has 25. Ask every satisfied customer for a review on **the profile of the office that served them**. Never offer anything in exchange; never write reviews.
+5. **Directories the AI engines cited.** Claim and correct the existing ones before adding new ones:
+   - Very Good Painters (Cypress listing, ranked #453 of 641): https://www.verygoodpainters.com/texas/houston-tx/houston-superior-painting-cypress-houston-tx (claim, correct details, add photos)
+   - PainterGrade: https://paintergrade.com/houston (check the listing's details)
+   - HoustonTopRated and ContractorCREDS: unclaimed profiles; claim and correct
+   - Best Pick Reports: invitation/vetting based; apply if wanted
+   - Angi: decide first whether you want to be on it (an unmanaged profile hurts more than none)
+6. **X (Twitter) account.** Grok searches X. Optional: create @ for the business, use the same name, phone and website, and post finished-project photos occasionally.
+7. **Quarterly check.** Ask ChatGPT, Gemini, Perplexity and Grok the audit's four questions (best painters in Houston; interior cost for 2,000 sq ft; painter in Katy; "Is Houston Superior Painting good?"). Note wrong facts and which sources they cite.

@@ -103,6 +103,11 @@ export default function ContactPage() {
                         <a href={PHONE_HREF} className="text-muted-foreground hover:text-primary transition-colors">
                           {BUSINESS.phone}
                         </a>
+                        {/* AEO audit 2026-10-27: AI answers showed other numbers for us. */}
+                        <p className="mt-1 text-sm text-muted-foreground">
+                          This is our only phone number, for all five offices. If a directory shows a different number,
+                          it is out of date.
+                        </p>
                       </div>
                     </div>
                   </CardContent>
