@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { PRICES_2026 } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Painters Near Me in Katy TX: Costs, What to Ask, Red Flags",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-06-07",
     authors: ["Juan Serra"],
-    images: ["/images/blog/painters-near-me-katy-tx.png"],
+    images: blogOgImages("painters-near-me-katy-tx", { src: "/images/blog/painters-near-me-katy-tx.png" }),
   },
   twitter: {
     card: "summary_large_image",

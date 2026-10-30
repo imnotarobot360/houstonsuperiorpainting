@@ -9,6 +9,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { PRICES_2026 } from "@/lib/business"
 import { ArrowLeft, Clock, User, Calendar, Phone, Lightbulb } from "lucide-react"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
+
+// Featured photo (lib/blog-images.ts), falling back to this page's original image.
+const FEATURED = blogImage("navy-kitchen-island-cabinet-color-houston-tx", { src: "/images/blog/navy-kitchen-island-houston.png", alt: "A kitchen with white upper cabinets and a bold navy blue painted island in a Houston home" })
 
 export const metadata: Metadata = {
   title: "Navy Kitchen Island Paint Color Ideas | Houston TX Homes",
@@ -24,18 +28,13 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-05-29T00:00:00Z",
     authors: ["Juan Serra"],
-    images: [{
-      url: "https://houstonsuperiorpainting.com/images/blog/navy-kitchen-island-houston.png",
-      width: 1200,
-      height: 630,
-      alt: "Navy Kitchen Island Cabinet Color in a Houston Home",
-    }],
+    images: blogOgImages("navy-kitchen-island-cabinet-color-houston-tx", { src: "/images/blog/navy-kitchen-island-houston.png", alt: "Navy Kitchen Island Cabinet Color in a Houston Home" }),
   },
   twitter: {
     card: "summary_large_image",
     title: "Navy Kitchen Island Paint Color Ideas | Houston TX Homes",
     description: "The navy kitchen island trend is everywhere in Houston — and it works. Here's why it looks so good, how to pull it off, and what to pair it with.",
-    images: ["https://houstonsuperiorpainting.com/images/blog/navy-kitchen-island-houston.png"],
+    images: [blogImage("navy-kitchen-island-cabinet-color-houston-tx", { src: "/images/blog/navy-kitchen-island-houston.png" }).url],
   },
 }
 
@@ -90,7 +89,7 @@ export default function NavyIslandBlog() {
             "@type": "Article",
             "headline": "The Navy Kitchen Island Trend Houston Homeowners Are Loving Right Now",
             "description": "The navy kitchen island trend is everywhere in Houston — and it works. Here's why it looks so good, how to pull it off, and what to pair it with.",
-            "image": "https://houstonsuperiorpainting.com/images/blog/navy-kitchen-island-houston.png",
+            "image": FEATURED.url,
             "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
@@ -186,8 +185,8 @@ export default function NavyIslandBlog() {
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-video rounded-xl overflow-hidden mb-8">
               <Image
-                src="/images/blog/navy-kitchen-island-houston.png"
-                alt="A kitchen with white upper cabinets and a bold navy blue painted island in a Houston home"
+                src={FEATURED.src}
+                alt={FEATURED.alt}
                 fill
                 className="object-cover"
                 priority

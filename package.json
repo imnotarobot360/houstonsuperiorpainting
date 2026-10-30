@@ -10,6 +10,8 @@
     "test": "node --test --disable-warning=MODULE_TYPELESS_PACKAGE_JSON \"tests/*.test.mjs\"",
     "audit:content": "node scripts/audit-content-consistency.mjs",
     "sitemap:dates": "node scripts/generate-content-dates.mjs",
+    "blog:photos": "node scripts/blog-photos/generate.mjs",
+    "blog:photos:add": "node scripts/blog-photos/ingest.mjs",
     "indexnow": "node scripts/indexnow.mjs",
     "report:ai-bots": "node scripts/ai-bot-report.mjs"
   },

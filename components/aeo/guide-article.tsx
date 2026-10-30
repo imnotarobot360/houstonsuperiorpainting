@@ -6,6 +6,7 @@
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { notFound } from "next/navigation"
 import { isLivePath, scheduledFor } from "@/lib/blog-schedule"
 import { relatedGuidesFor } from "@/lib/related-guides"
@@ -16,6 +17,7 @@ import { JsonLd } from "@/components/structured-data"
 import { PageHero, QuickAnswer, Section, LinkGrid, CtaBlock, breadcrumbNode, articleNode, ESTIMATE_PATH, SITE } from "@/components/aeo/blocks"
 import { TrustChecklist } from "@/components/trust-checklist"
 import { BUSINESS, PHONE_HREF } from "@/lib/business"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
 
 export type GuideArticleData = {
   path: string
@@ -64,9 +66,16 @@ export function guideMetadata(input: Pick<GuideArticleData, "path" | "title" | "
       publishedTime: d.published,
       modifiedTime: d.updated,
       authors: [BUSINESS.founder.name],
-      images: [{ url: BUSINESS.ogImage, width: 1200, height: 630, alt: BUSINESS.name }],
+      // The post's featured photo (lib/blog-images.ts); non-blog guides and
+      // posts without a photo yet fall back to their card or the site image.
+      images: d.path.startsWith("/blog/") ? blogOgImages(d.path, { alt: d.h1 }) : [{ url: BUSINESS.ogImage, width: 1200, height: 630, alt: BUSINESS.name }],
     },
-    twitter: { card: "summary_large_image", title: d.h1, description: d.description },
+    twitter: {
+      card: "summary_large_image",
+      title: d.h1,
+      description: d.description,
+      images: d.path.startsWith("/blog/") ? [blogImage(d.path, { alt: d.h1 }).url] : [BUSINESS.ogImage],
+    },
   }
 }
 
@@ -75,6 +84,7 @@ export function GuideArticle({ d: input }: { d: GuideArticleData }) {
   // Scheduled posts (lib/blog-schedule.ts) stay hidden until their date.
   if (!isLivePath(d.path)) notFound()
   const parent = d.breadcrumbParent ?? { name: "Blog", path: "/blog" }
+  const featured = d.path.startsWith("/blog/") ? blogImage(d.path) : null
   return (
     <>
       <JsonLd
@@ -87,6 +97,7 @@ export function GuideArticle({ d: input }: { d: GuideArticleData }) {
               description: d.description,
               datePublished: d.published,
               dateModified: d.updated,
+              image: featured?.isPhoto ? featured.url : undefined,
             }),
             breadcrumbNode([
               { name: "Home", path: "/" },
@@ -113,6 +124,16 @@ export function GuideArticle({ d: input }: { d: GuideArticleData }) {
             )}
           </p>
         </PageHero>
+
+        {/* Featured photo. A post still on its title card shows nothing here:
+            the card only repeats the heading above. */}
+        {featured?.isPhoto && (
+          <figure className="container mx-auto px-4 max-w-4xl -mt-6 mb-10">
+            <div className="relative aspect-video overflow-hidden rounded-2xl border border-border bg-muted">
+              <Image src={featured.src} alt={featured.alt} fill priority sizes="(min-width: 896px) 864px, 100vw" className="object-cover" />
+            </div>
+          </figure>
+        )}
 
         <QuickAnswer>{d.quickAnswer}</QuickAnswer>
 

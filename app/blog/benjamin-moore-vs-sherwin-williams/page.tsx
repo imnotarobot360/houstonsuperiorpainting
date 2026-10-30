@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { blogOgImages } from "@/lib/blog-images"
 
 const URL = "https://houstonsuperiorpainting.com/blog/benjamin-moore-vs-sherwin-williams"
 
@@ -10,14 +11,7 @@ export const metadata: Metadata = {
     "Benjamin Moore vs Sherwin-Williams — a Houston painting contractor compares quality, price, product lines, and which brand works best for your home.",
   alternates: { canonical: URL },
   openGraph: {
-    images: [
-      {
-        url: "https://houstonsuperiorpainting.com/images/blog/sherwin-williams-vs-benjamin-moore.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Benjamin Moore and Sherwin-Williams paint cans on a job site in Houston TX",
-      },
-    ],
+    images: blogOgImages("benjamin-moore-vs-sherwin-williams", { src: "/images/blog/sherwin-williams-vs-benjamin-moore.jpg", alt: "Benjamin Moore and Sherwin-Williams paint cans on a job site in Houston TX" }),
     title: "Benjamin Moore vs Sherwin-Williams: A Houston Painter's Honest Comparison",
     description:
       "Price, product lines, where to buy, and what holds up best on Houston homes — an honest comparison from a local painting contractor.",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Drywall Repair Before Painting: Why It Matters",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/drywall-repair-before-painting',
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+  openGraph: { images: blogOgImages("drywall-repair-before-painting", { src: "/images/og-cover.jpg", alt: "Houston Superior Painting" }),
     title: "Drywall Repair Before Painting: Why It Matters",
     description: "Fix cracks and holes before painting for a professional finish.",
     type: "article",

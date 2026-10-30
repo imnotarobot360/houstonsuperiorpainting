@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { BUSINESS } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "What Does a 5-Year Paint Warranty Actually Cover in Texas?",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-06-07",
     authors: ["Juan Serra"],
-    images: ["/images/blog/paint-warranty-texas.png"],
+    images: blogOgImages("paint-warranty-texas", { src: "/images/blog/paint-warranty-texas.png" }),
   },
   twitter: {
     card: "summary_large_image",

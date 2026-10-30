@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { PRICES_2026 } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Exterior Painting Cost in Katy TX | 2026 Price Guide",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-06-07",
     authors: ["Juan Serra"],
-    images: ["/images/blog/exterior-painting-cost-katy-tx.png"],
+    images: blogOgImages("exterior-painting-cost-katy-tx", { src: "/images/blog/exterior-painting-cost-katy-tx.png" }),
   },
   twitter: {
     card: "summary_large_image",

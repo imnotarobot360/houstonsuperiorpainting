@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 const URL = "https://houstonsuperiorpainting.com/blog/exterior-paint-colors-sugar-land-tx"
 
@@ -15,14 +16,7 @@ export const metadata: Metadata = {
     "Exterior paint colors that work in Sugar Land — Riverstone, Telfair, New Territory, and First Colony — plus HOA chip rules and 2026 cost.",
   alternates: { canonical: URL },
   openGraph: {
-    images: [
-      {
-        url: `https://houstonsuperiorpainting.com${IMAGE}`,
-        width: 1200,
-        height: 630,
-        alt: IMAGE_ALT,
-      },
-    ],
+    images: blogOgImages("exterior-paint-colors-sugar-land-tx", { src: IMAGE }),
     title: "Best Exterior Paint Colors in Sugar Land TX (2026)",
     description:
       "Exterior paint colors that work in Sugar Land — Riverstone, Telfair, New Territory, and First Colony — plus HOA chip rules and 2026 cost.",

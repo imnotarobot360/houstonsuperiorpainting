@@ -8,6 +8,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Clock, User, Calendar, Phone, AlertTriangle, CheckCircle2 } from "lucide-react"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
+
+// Featured photo (lib/blog-images.ts), falling back to this page's original image.
+const FEATURED = blogImage("why-diy-cabinet-painting-fails-houston-tx", { src: "/images/blog/diy-cabinet-painting-fails.png", alt: "A professional painter spraying a cabinet door flat on a spray rack for a factory-smooth finish" })
 
 export const metadata: Metadata = {
   title: "Why DIY Cabinet Painting Fails in Houston TX | What Pros Do",
@@ -23,18 +27,13 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-05-30T00:00:00Z",
     authors: ["Juan Serra"],
-    images: [{
-      url: "https://houstonsuperiorpainting.com/images/blog/diy-cabinet-painting-fails.png",
-      width: 1200,
-      height: 630,
-      alt: "Professional cabinet painting process vs DIY in Houston TX",
-    }],
+    images: blogOgImages("why-diy-cabinet-painting-fails-houston-tx", { src: "/images/blog/diy-cabinet-painting-fails.png", alt: "Professional cabinet painting process vs DIY in Houston TX" }),
   },
   twitter: {
     card: "summary_large_image",
     title: "Why DIY Cabinet Painting Fails in Houston TX | What Pros Do",
     description: "DIY cabinet painting in Houston almost always disappoints. Here's exactly why it fails — and the things professional painters do that make the difference.",
-    images: ["https://houstonsuperiorpainting.com/images/blog/diy-cabinet-painting-fails.png"],
+    images: [blogImage("why-diy-cabinet-painting-fails-houston-tx", { src: "/images/blog/diy-cabinet-painting-fails.png" }).url],
   },
 }
 
@@ -89,7 +88,7 @@ export default function DIYCabinetBlog() {
             "@type": "Article",
             "headline": "Why DIY Cabinet Painting Disappoints in Houston TX — And What Professionals Do Differently",
             "description": "DIY cabinet painting in Houston almost always disappoints. Here's exactly why it fails — and the things professional painters do that make the difference.",
-            "image": "https://houstonsuperiorpainting.com/images/blog/diy-cabinet-painting-fails.png",
+            "image": FEATURED.url,
             "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
@@ -185,8 +184,8 @@ export default function DIYCabinetBlog() {
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-video rounded-xl overflow-hidden mb-8">
               <Image
-                src="/images/blog/diy-cabinet-painting-fails.png"
-                alt="A professional painter spraying a cabinet door flat on a spray rack for a factory-smooth finish"
+                src={FEATURED.src}
+                alt={FEATURED.alt}
                 fill
                 className="object-cover"
                 priority

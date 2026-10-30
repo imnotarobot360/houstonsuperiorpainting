@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "What to Expect During a Painting Estimate (2026 Guide)",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/what-to-expect-painting-estimate',
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+  openGraph: { images: blogOgImages("what-to-expect-painting-estimate", { src: "/images/og-cover.jpg", alt: "Houston Superior Painting" }),
     title: "What to Expect During a Painting Estimate (2026 Guide)",
     description: "Understanding the painting estimate process for Houston homeowners.",
     type: "article",

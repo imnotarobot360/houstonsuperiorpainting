@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Stucco Painting in Houston: Complete Guide (2026 Guide)",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog/stucco-painting-houston-guide',
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+  openGraph: { images: blogOgImages("stucco-painting-houston-guide", { src: "/images/og-cover.jpg", alt: "Houston Superior Painting" }),
     title: "Stucco Painting in Houston: Complete Guide (2026 Guide)",
     description: "Everything homeowners need to know about painting stucco in Houston.",
     type: "article",

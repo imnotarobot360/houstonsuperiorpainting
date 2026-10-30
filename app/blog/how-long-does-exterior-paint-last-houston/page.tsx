@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "How Long Does Exterior Paint Last in Houston?",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-05-10",
     authors: ["Juan Serra"],
-    images: ["/images/blog/exterior-paint-durability-houston.jpg"],
+    images: blogOgImages("how-long-does-exterior-paint-last-houston", { src: "/images/blog/exterior-paint-durability-houston.jpg" }),
   },
   twitter: {
     card: "summary_large_image",

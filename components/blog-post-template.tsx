@@ -1,5 +1,7 @@
-"use client"
-
+// Server component (was "use client" only to read window.location for the
+// share links; the canonical URL is the right share target anyway). Being on
+// the server lets it read the featured-photo data (lib/blog-images.ts) without
+// shipping it to the browser.
 import Image from "next/image"
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -7,6 +9,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, User, ArrowLeft, Share2, Facebook, Linkedin } from "lucide-react"
 import { AUTHOR_REF, PUBLISHER_REF } from "@/components/structured-data"
+import { blogImage } from "@/lib/blog-images"
 
 interface FAQ {
   question: string
@@ -49,8 +52,11 @@ export function BlogPostTemplate({
   faqs = [],
   relatedPosts = []
 }: BlogPostProps) {
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : `https://houstonsuperiorpainting.com/blog/${slug}`
   const canonicalUrl = `https://houstonsuperiorpainting.com/blog/${slug}`
+  const shareUrl = canonicalUrl
+  // The post's featured photo when it has one (lib/blog-images.ts), else the
+  // image the page passed in.
+  const featured = blogImage(slug, { src: featuredImage, alt: featuredImageAlt })
   
   // Convert date format for schema
   const isoDate = new Date(publishDate).toISOString().split('T')[0]
@@ -63,7 +69,7 @@ export function BlogPostTemplate({
     "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
     "headline": title,
     "description": excerpt,
-    "image": `https://houstonsuperiorpainting.com${featuredImage}`,
+    "image": featured.url,
     "datePublished": isoDate,
     "dateModified": isoDate,
     // Author is a REFERENCE to the single canonical Person (Juan Serra, @id
@@ -173,9 +179,10 @@ export function BlogPostTemplate({
         <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
           <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl">
             <Image
-              src={featuredImage}
-              alt={featuredImageAlt}
+              src={featured.src}
+              alt={featured.alt}
               fill
+              sizes="(min-width: 768px) 720px, 100vw"
               className="object-cover"
               priority
             />
@@ -322,9 +329,10 @@ export function BlogPostTemplate({
                   >
                     <div className="relative aspect-video">
                       <Image
-                        src={post.image}
-                        alt={post.title}
+                        src={blogImage(post.href, { src: post.image }).src}
+                        alt={blogImage(post.href, { src: post.image, alt: post.title }).alt}
                         fill
+                        sizes="(min-width: 1024px) 320px, (min-width: 768px) 50vw, 100vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>

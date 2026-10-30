@@ -12,6 +12,7 @@ v0 also opens PRs against this repo, so run `git pull` before starting work.
 - `pnpm test`: unit tests, including the content-consistency audit (`scripts/audit-content-consistency.mjs`, also `pnpm audit:content`; CI: `.github/workflows/content-consistency.yml`). Exceptions only in `scripts/content-audit-allowlist.json`, each with a reason.
 - `pnpm lint`: ESLint (`eslint.config.mjs`, Next.js core-web-vitals + TypeScript); must have 0 errors
 - `pnpm sitemap:dates`: regenerates `lib/content-dates.json` (sitemap <lastmod>) from git history. Vercel builds are shallow, so the sitemap reads only this snapshot: run it AFTER committing content changes, then commit the snapshot in a second commit, before pushing. The push one-liner given to Juan does this.
+- `pnpm blog:photos` / `pnpm blog:photos:add`: blog featured photos (`scripts/blog-photos/`, guide `docs/blog-photos.md`). Every post needs a description in `data/blog-photos.json` (alt text + generation prompt; a test enforces it). Photos are 1600x900 in `public/images/blog/photos/`; `lib/blog-images.ts` is the one lookup for cards, article pages, OG, JSON-LD and the sitemap.
 - `pnpm report:ai-bots [window]`: AI crawler hits from Vercel logs, OpenAI IPs verified
 - `pnpm build`: must pass before pushing
 - Deploy: `git push origin main`

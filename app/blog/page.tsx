@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import { PRICES_2026 } from "@/lib/business"
 import { displayDate, liveScheduledPosts } from "@/lib/blog-schedule"
+import { blogImage } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Painting Tips & Advice Blog | Houston Superior Painting",
@@ -833,7 +834,12 @@ export default function BlogPage() {
     image: p.image,
     featured: false,
   }))
-  const blogPosts = [...scheduled, ...staticBlogPosts]
+  // Each card shows the post's featured photo (lib/blog-images.ts); a post
+  // without one yet keeps the image listed here.
+  const blogPosts = [...scheduled, ...staticBlogPosts].map((post) => {
+    const img = blogImage(post.slug, { src: post.image, alt: post.title })
+    return { ...post, image: img.src, imageAlt: img.alt }
+  })
   const featuredPost = blogPosts.find(post => post.featured)
   const regularPosts = blogPosts.filter(post => post !== featuredPost)
   return (
@@ -867,8 +873,9 @@ export default function BlogPage() {
                 <div className="relative aspect-video lg:aspect-auto">
                   <Image
                     src={featuredPost.image}
-                    alt={featuredPost.title}
+                    alt={featuredPost.imageAlt}
                     fill
+                    sizes="(min-width: 1024px) 576px, 100vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     priority
                   />
@@ -921,8 +928,9 @@ export default function BlogPage() {
                 <div className="relative aspect-video">
                   <Image
                     src={post.image}
-                    alt={post.title}
+                    alt={post.imageAlt}
                     fill
+                    sizes="(min-width: 1024px) 360px, (min-width: 768px) 50vw, 100vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

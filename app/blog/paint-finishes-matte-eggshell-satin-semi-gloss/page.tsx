@@ -4,6 +4,11 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Phone, Calendar, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
+import Image from "next/image"
+
+// Featured photo (lib/blog-images.ts); shown once the post has one.
+const FEATURED = blogImage("paint-finishes-matte-eggshell-satin-semi-gloss")
 
 export const metadata: Metadata = {
   title: "Paint Finishes: Matte, Eggshell, Satin & Semi-Gloss",
@@ -11,7 +16,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/paint-finishes-matte-eggshell-satin-semi-gloss",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+  openGraph: { images: blogOgImages("paint-finishes-matte-eggshell-satin-semi-gloss", { src: "/images/og-cover.jpg", alt: "Houston Superior Painting" }),
     title: "Paint Finishes Explained: Matte, Eggshell, Satin & Semi-Gloss",
     description: "Which paint finish is best for your Houston home? Compare matte, eggshell, satin, and semi-gloss sheens.",
     url: "https://houstonsuperiorpainting.com/blog/paint-finishes-matte-eggshell-satin-semi-gloss",
@@ -54,6 +59,7 @@ const jsonLd = {
     {
       "@type": "Article",
       headline: "Paint Finishes Explained: Matte, Eggshell, Satin & Semi-Gloss",
+      ...(FEATURED.isPhoto ? { image: FEATURED.url } : {}),
       description: "Which paint finish is best for your Houston home? Compare matte, eggshell, satin, and semi-gloss sheens.",
       author: { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", name: "Juan Serra" },
       publisher: { "@id": "https://houstonsuperiorpainting.com/#organization" },
@@ -115,6 +121,12 @@ export default function PaintFinishesGuidePage() {
               <span>8 min read</span>
             </div>
           </header>
+
+          {FEATURED.isPhoto && (
+            <div className="relative aspect-video overflow-hidden rounded-xl border border-border bg-muted mb-8">
+              <Image src={FEATURED.src} alt={FEATURED.alt} fill priority sizes="(min-width: 896px) 864px, 100vw" className="object-cover" />
+            </div>
+          )}
 
           <div className="quick-answer bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg mb-8">
             <p className="font-semibold text-foreground mb-2">Quick Answer</p>

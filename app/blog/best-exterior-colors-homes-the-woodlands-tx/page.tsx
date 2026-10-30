@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Best Exterior Colors for Homes in The Woodlands TX",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-05-24",
     authors: ["Juan Serra"],
-    images: ["/images/blog/best-exterior-colors-woodlands.jpg"],
+    images: blogOgImages("best-exterior-colors-homes-the-woodlands-tx", { src: "/images/blog/best-exterior-colors-woodlands.jpg" }),
   },
   twitter: {
     card: "summary_large_image",

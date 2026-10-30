@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Spray vs. Brush & Roll Painting in Houston TX",
@@ -17,21 +18,14 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-07-16T08:00:00Z",
     authors: ["Juan Serra"],
-    images: [
-      {
-        url: "https://houstonsuperiorpainting.com/images/blog/spray-vs-brush-roll-painting-houston.png",
-        width: 1200,
-        height: 630,
-        alt: "A painter using an airless sprayer on exterior siding next to a painter rolling an interior wall",
-      },
-    ],
+    images: blogOgImages("spray-vs-brush-roll-painting-houston", { src: "/images/blog/spray-vs-brush-roll-painting-houston.png", alt: "A painter using an airless sprayer on exterior siding next to a painter rolling an interior wall" }),
   },
   twitter: {
     card: "summary_large_image",
     title: "Spray vs. Brush and Roll: Which Is Best for Houston Homes?",
     description:
       "When spraying beats rolling and when it doesn't — a Houston painter's honest guide to choosing the right application method.",
-    images: ["https://houstonsuperiorpainting.com/images/blog/spray-vs-brush-roll-painting-houston.png"],
+    images: [blogImage("spray-vs-brush-roll-painting-houston", { src: "/images/blog/spray-vs-brush-roll-painting-houston.png" }).url],
   },
 }
 

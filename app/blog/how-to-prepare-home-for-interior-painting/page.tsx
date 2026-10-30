@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "How to Prepare Your Home for Interior Painting",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/how-to-prepare-home-for-interior-painting",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+  openGraph: { images: blogOgImages("how-to-prepare-home-for-interior-painting", { src: "/images/og-cover.jpg", alt: "Houston Superior Painting" }),
     title: "How to Prepare Your Home for Interior Painting in Houston TX",
     description:
       "What to do before interior painters arrive, what your painter handles, and what to expect during and after the job.",

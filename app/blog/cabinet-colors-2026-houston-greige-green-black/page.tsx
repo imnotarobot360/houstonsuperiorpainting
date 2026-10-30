@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 const URL = "https://houstonsuperiorpainting.com/blog/cabinet-colors-2026-houston-greige-green-black"
 
@@ -11,14 +12,7 @@ export const metadata: Metadata = {
     "Houston cabinet colors beyond navy in 2026 — greige, muted green, and a black island. Pairings, sheen, and what holds up in a humid kitchen.",
   alternates: { canonical: URL },
   openGraph: {
-    images: [
-      {
-        url: "https://houstonsuperiorpainting.com/images/blog/cabinet-transformations-katy-sugar-land.png",
-        width: 1200,
-        height: 630,
-        alt: "White shaker kitchen cabinets with black bar pulls and a white quartz island",
-      },
-    ],
+    images: blogOgImages("cabinet-colors-2026-houston-greige-green-black", { src: "/images/blog/cabinet-transformations-katy-sugar-land.png", alt: "White shaker kitchen cabinets with black bar pulls and a white quartz island" }),
     title: "Kitchen Cabinet Colors in Houston for 2026: Greige, Green, and Black Islands",
     description:
       "Houston cabinet colors beyond navy in 2026 — greige, muted green, and a black island. Pairings, sheen, and what holds up in a humid kitchen.",

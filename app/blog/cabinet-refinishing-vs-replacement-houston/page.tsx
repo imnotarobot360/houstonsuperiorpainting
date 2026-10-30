@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { PRICES_2026 } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Cabinet Refinishing vs Replacement in Houston: Cost Guide",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-05-09",
     authors: ["Juan Serra"],
-    images: ["/images/blog/cabinet-refinishing-vs-replacement.jpg"],
+    images: blogOgImages("cabinet-refinishing-vs-replacement-houston", { src: "/images/blog/cabinet-refinishing-vs-replacement.jpg" }),
   },
   twitter: {
     card: "summary_large_image",

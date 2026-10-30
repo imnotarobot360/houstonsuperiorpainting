@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Venetian Plaster Houston TX: Cost, Process & Uses",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/venetian-plaster-houston-tx",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+  openGraph: { images: blogOgImages("venetian-plaster-houston-tx", { src: "/images/og-cover.jpg", alt: "Houston Superior Painting" }),
     title: "Venetian Plaster Houston TX: Cost, Process & Uses",
     description:
       "2026 Venetian plaster pricing, the hand-applied process, where it works in Houston homes, and how it holds up in humidity.",

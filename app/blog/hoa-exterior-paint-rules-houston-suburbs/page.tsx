@@ -8,6 +8,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Clock, User, Calendar, Phone, ClipboardCheck, FileText, CheckCircle2, AlertTriangle } from "lucide-react"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
+
+// Featured photo (lib/blog-images.ts), falling back to this page's original image.
+const FEATURED = blogImage("hoa-exterior-paint-rules-houston-suburbs", { src: "/images/blog/hoa-paint-rules-houston.png", alt: "A master-planned community home in a Houston suburb with HOA-approved exterior colors" })
 
 export const metadata: Metadata = {
   title: "HOA Exterior Paint Rules in Houston Suburbs (2026 Guide)",
@@ -23,18 +27,13 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-05-27T00:00:00Z",
     authors: ["Juan Serra"],
-    images: [{
-      url: "https://houstonsuperiorpainting.com/images/blog/hoa-paint-rules-houston.png",
-      width: 1200,
-      height: 630,
-      alt: "HOA Exterior Paint Rules in Houston Suburbs",
-    }],
+    images: blogOgImages("hoa-exterior-paint-rules-houston-suburbs", { src: "/images/blog/hoa-paint-rules-houston.png", alt: "HOA Exterior Paint Rules in Houston Suburbs" }),
   },
   twitter: {
     card: "summary_large_image",
     title: "HOA Exterior Paint Rules in Katy, Sugar Land & The Woodlands TX",
     description: "HOA painting rules in Houston suburbs can be tricky. Here's what homeowners in Katy, Sugar Land, Cypress, and The Woodlands need to know before they paint.",
-    images: ["https://houstonsuperiorpainting.com/images/blog/hoa-paint-rules-houston.png"],
+    images: [blogImage("hoa-exterior-paint-rules-houston-suburbs", { src: "/images/blog/hoa-paint-rules-houston.png" }).url],
   },
 }
 
@@ -89,7 +88,7 @@ export default function HOAPaintRulesBlog() {
             "@type": "Article",
             "headline": "HOA Exterior Paint Rules in Houston Suburbs: What Homeowners Need to Know Before They Paint",
             "description": "HOA painting rules in Houston suburbs can be tricky. Here's what homeowners in Katy, Sugar Land, Cypress, and The Woodlands need to know before they paint.",
-            "image": "https://houstonsuperiorpainting.com/images/blog/hoa-paint-rules-houston.png",
+            "image": FEATURED.url,
             "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
@@ -185,8 +184,8 @@ export default function HOAPaintRulesBlog() {
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-video rounded-xl overflow-hidden mb-8">
               <Image
-                src="/images/blog/hoa-paint-rules-houston.png"
-                alt="A master-planned community home in a Houston suburb with HOA-approved exterior colors"
+                src={FEATURED.src}
+                alt={FEATURED.alt}
                 fill
                 className="object-cover"
                 priority

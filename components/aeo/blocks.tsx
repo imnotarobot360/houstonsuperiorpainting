@@ -305,7 +305,7 @@ export function breadcrumbNode(items: { name: string; path: string }[]) {
 }
 
 /** Article node with the owner as author (guide pages). */
-export function articleNode(opts: { path: string; headline: string; description: string; datePublished?: string; dateModified?: string }) {
+export function articleNode(opts: { path: string; headline: string; description: string; datePublished?: string; dateModified?: string; image?: string }) {
   return {
     "@type": "Article",
     "@id": `${SITE}${opts.path}#article`,
@@ -317,6 +317,7 @@ export function articleNode(opts: { path: string; headline: string; description:
     dateModified: opts.dateModified ?? UPDATED_ISO,
     mainEntityOfPage: `${SITE}${opts.path}`,
     inLanguage: "en-US",
+    ...(opts.image ? { image: opts.image } : {}),
   }
 }
 

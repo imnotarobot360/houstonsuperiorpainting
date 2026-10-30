@@ -7,6 +7,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, Clock, User, Calendar, CheckCircle2, Palette, Sun, Home, AlertTriangle, Brush } from "lucide-react"
 import { PRICES_2026 } from "@/lib/business"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
+
+// Featured photo (lib/blog-images.ts), falling back to this page's original image.
+const FEATURED = blogImage("best-interior-paint-colors-houston-homes", { src: "/images/blog/best-interior-colors-houston.png", alt: "Beautiful Houston home interior with warm paint colors" })
 
 export const metadata: Metadata = {
   title: "Best Interior Paint Colors for Houston Homes | 2026 Guide",
@@ -20,12 +24,7 @@ export const metadata: Metadata = {
     url: "https://houstonsuperiorpainting.com/blog/best-interior-paint-colors-houston-homes",
     siteName: "Houston Superior Painting",
     type: "article",
-    images: [{
-      url: "https://houstonsuperiorpainting.com/images/blog/best-interior-colors-houston.png",
-      width: 1200,
-      height: 630,
-      alt: "Best Interior Paint Colors for Houston Homes",
-    }],
+    images: blogOgImages("best-interior-paint-colors-houston-homes", { src: "/images/blog/best-interior-colors-houston.png", alt: "Best Interior Paint Colors for Houston Homes" }),
   },
 }
 
@@ -164,8 +163,8 @@ export default function BestInteriorPaintColorsHoustonHomes() {
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/blog/best-interior-colors-houston.png"
-                alt="Beautiful Houston home interior with warm paint colors"
+                src={FEATURED.src}
+                alt={FEATURED.alt}
                 fill
                 className="object-cover"
                 priority

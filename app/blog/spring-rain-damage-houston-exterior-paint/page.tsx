@@ -7,6 +7,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Clock, User, Calendar, Phone, Lightbulb } from "lucide-react"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
+
+// Featured photo (lib/blog-images.ts), falling back to this page's original image.
+const FEATURED = blogImage("spring-rain-damage-houston-exterior-paint", { src: "/images/blog/spring-rain-damage-houston.png", alt: "Spring rain damage on a Houston home's exterior paint and trim" })
 
 export const metadata: Metadata = {
   title: "Spring Rain Damage to Houston Exterior Paint | Inspect Now",
@@ -22,18 +26,13 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-05-31T00:00:00Z",
     authors: ["Juan Serra"],
-    images: [{
-      url: "https://houstonsuperiorpainting.com/images/blog/spring-rain-damage-houston.png",
-      width: 1200,
-      height: 630,
-      alt: "Spring rain damage on Houston home exterior paint",
-    }],
+    images: blogOgImages("spring-rain-damage-houston-exterior-paint", { src: "/images/blog/spring-rain-damage-houston.png", alt: "Spring rain damage on Houston home exterior paint" }),
   },
   twitter: {
     card: "summary_large_image",
     title: "Spring Rain Damage to Houston Exterior Paint — What to Inspect Right Now",
     description: "Houston's spring rains hit your home's exterior hard. Here's what to look for right now — and what to do before summer heat makes it worse.",
-    images: ["https://houstonsuperiorpainting.com/images/blog/spring-rain-damage-houston.png"],
+    images: [blogImage("spring-rain-damage-houston-exterior-paint", { src: "/images/blog/spring-rain-damage-houston.png" }).url],
   },
 }
 
@@ -62,7 +61,7 @@ export default function SpringRainDamageBlog() {
             "@type": "Article",
             "headline": "Spring Rain Damage to Houston Exterior Paint — What to Inspect Right Now",
             "description": "Houston's spring rains hit your home's exterior hard. Here's what to look for right now — and what to do before summer heat makes it worse.",
-            "image": "https://houstonsuperiorpainting.com/images/blog/spring-rain-damage-houston.png",
+            "image": FEATURED.url,
             "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
@@ -195,8 +194,8 @@ export default function SpringRainDamageBlog() {
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-video rounded-xl overflow-hidden mb-8">
               <Image
-                src="/images/blog/spring-rain-damage-houston.png"
-                alt="Spring rain damage on a Houston home's exterior paint and trim"
+                src={FEATURED.src}
+                alt={FEATURED.alt}
                 fill
                 className="object-cover"
                 priority

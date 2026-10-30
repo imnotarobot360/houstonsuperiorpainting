@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { BUSINESS, PHONE_HREF } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 const URL = "https://houstonsuperiorpainting.com/blog/alabaster-vs-white-dove-vs-chantilly-lace-houston"
 
@@ -11,14 +12,7 @@ export const metadata: Metadata = {
     "Which white works in Houston light — Benjamin Moore Alabaster, White Dove, or Chantilly Lace. A local painter’s comparison for walls, trim, and cabinets.",
   alternates: { canonical: URL },
   openGraph: {
-    images: [
-      {
-        url: "https://houstonsuperiorpainting.com/images/blog/best-interior-colors-houston.png",
-        width: 1200,
-        height: 630,
-        alt: "Living room with warm off-white walls, white trim and crown molding, and neutral furniture",
-      },
-    ],
+    images: blogOgImages("alabaster-vs-white-dove-vs-chantilly-lace-houston", { src: "/images/blog/best-interior-colors-houston.png", alt: "Living room with warm off-white walls, white trim and crown molding, and neutral furniture" }),
     title: "Alabaster vs White Dove vs Chantilly Lace in Houston Light",
     description:
       "Which white works in Houston light — Alabaster, White Dove, or Chantilly Lace — for walls, trim, and cabinets.",

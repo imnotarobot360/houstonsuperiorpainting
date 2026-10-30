@@ -5,6 +5,11 @@ import { Footer } from "@/components/footer"
 import { Phone, Calendar, ChevronRight, AlertTriangle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { PRICES_2026 } from "@/lib/business"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
+import Image from "next/image"
+
+// Featured photo (lib/blog-images.ts); shown once the post has one.
+const FEATURED = blogImage("flat-paint-bathrooms-mistake")
 
 export const metadata: Metadata = {
   title: "Why Flat Paint Should Never Be Used in Bathrooms",
@@ -12,7 +17,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/flat-paint-bathrooms-mistake",
   },
-  openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
+  openGraph: { images: blogOgImages("flat-paint-bathrooms-mistake", { src: "/images/og-cover.jpg", alt: "Houston Superior Painting" }),
     title: "Why Flat Paint Should Never Be Used in Bathrooms",
     description: "Flat paint in bathrooms leads to mold, peeling, and staining. Learn why semi-gloss is the only finish that works.",
     url: "https://houstonsuperiorpainting.com/blog/flat-paint-bathrooms-mistake",
@@ -47,6 +52,7 @@ const jsonLd = {
     {
       "@type": "Article",
       headline: "Why Flat Paint Should Never Be Used in Bathrooms",
+      ...(FEATURED.isPhoto ? { image: FEATURED.url } : {}),
       description: "Flat paint in bathrooms leads to mold, peeling, and staining in Houston's humid climate.",
       author: { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", name: "Juan Serra" },
       publisher: { "@id": "https://houstonsuperiorpainting.com/#organization" },
@@ -112,6 +118,12 @@ export default function FlatPaintBathroomsMistakePage() {
               <span>5 min read</span>
             </div>
           </header>
+
+          {FEATURED.isPhoto && (
+            <div className="relative aspect-video overflow-hidden rounded-xl border border-border bg-muted mb-8">
+              <Image src={FEATURED.src} alt={FEATURED.alt} fill priority sizes="(min-width: 896px) 864px, 100vw" className="object-cover" />
+            </div>
+          )}
 
           <div className="quick-answer bg-destructive/10 border-l-4 border-destructive p-6 rounded-r-lg mb-8">
             <div className="flex items-start gap-3">

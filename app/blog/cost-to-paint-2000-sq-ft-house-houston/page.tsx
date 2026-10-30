@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { PRICES_2026 } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 const URL = "https://houstonsuperiorpainting.com/blog/cost-to-paint-2000-sq-ft-house-houston"
 
@@ -12,14 +13,7 @@ export const metadata: Metadata = {
     "How much does it cost to paint a 2,000 sq ft house in Houston? See 2026 interior and exterior price ranges, what drives cost, and how to get an accurate quote.",
   alternates: { canonical: URL },
   openGraph: {
-    images: [
-      {
-        url: "https://houstonsuperiorpainting.com/images/blog/house-painting-cost-houston.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Two-story brick and siding home in Cypress TX after exterior painting",
-      },
-    ],
+    images: blogOgImages("cost-to-paint-2000-sq-ft-house-houston", { src: "/images/blog/house-painting-cost-houston.jpg", alt: "Two-story brick and siding home in Cypress TX after exterior painting" }),
     title: "How Much Does It Cost to Paint a 2,000 Sq Ft House in Houston? (2026 Guide)",
     description:
       "2026 interior and exterior price ranges for a 2,000 sq ft Houston home, what drives the cost, and red flags to watch for on a quote.",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { PRICES_2026 } from "@/lib/business"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Cost to Paint Kitchen Cabinets in Houston TX (2026)",
@@ -18,21 +19,14 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-07-16T08:00:00Z",
     authors: ["Juan Serra"],
-    images: [
-      {
-        url: "https://houstonsuperiorpainting.com/images/blog/cost-to-paint-kitchen-cabinets-houston.png",
-        width: 1200,
-        height: 630,
-        alt: "Freshly painted white shaker kitchen cabinets in a modern Houston kitchen",
-      },
-    ],
+    images: blogOgImages("cost-to-paint-kitchen-cabinets-houston-tx", { src: "/images/blog/cost-to-paint-kitchen-cabinets-houston.png", alt: "Freshly painted white shaker kitchen cabinets in a modern Houston kitchen" }),
   },
   twitter: {
     card: "summary_large_image",
     title: "How Much Does It Cost to Paint Kitchen Cabinets in Houston? (2026)",
     description:
       "A Houston painter's honest breakdown of cabinet painting costs in 2026 — pricing by kitchen size, what affects your quote, and refinish vs. replace.",
-    images: ["https://houstonsuperiorpainting.com/images/blog/cost-to-paint-kitchen-cabinets-houston.png"],
+    images: [blogImage("cost-to-paint-kitchen-cabinets-houston-tx", { src: "/images/blog/cost-to-paint-kitchen-cabinets-houston.png" }).url],
   },
 }
 

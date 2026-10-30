@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { PRICES_2026 } from "@/lib/business"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "DIY vs. Professional Painting Cost in Houston (2026)",
@@ -18,21 +19,14 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-07-16T08:00:00Z",
     authors: ["Juan Serra"],
-    images: [
-      {
-        url: "https://houstonsuperiorpainting.com/images/blog/diy-vs-professional-painting-houston.png",
-        width: 1200,
-        height: 630,
-        alt: "A homeowner painting a wall with a roller beside a professional painting crew with equipment",
-      },
-    ],
+    images: blogOgImages("diy-vs-professional-painting-cost-houston", { src: "/images/blog/diy-vs-professional-painting-houston.png", alt: "A homeowner painting a wall with a roller beside a professional painting crew with equipment" }),
   },
   twitter: {
     card: "summary_large_image",
     title: "DIY vs. Hiring a Pro Painter in Houston: The Real Cost (2026)",
     description:
       "The honest math on DIY versus professional painting in Houston — materials, tools, time, and hidden costs.",
-    images: ["https://houstonsuperiorpainting.com/images/blog/diy-vs-professional-painting-houston.png"],
+    images: [blogImage("diy-vs-professional-painting-cost-houston", { src: "/images/blog/diy-vs-professional-painting-houston.png" }).url],
   },
 }
 

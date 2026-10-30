@@ -6,6 +6,10 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Clock, User, ArrowLeft, Phone, Calendar, Sun, Droplets, CloudRain, Thermometer, AlertTriangle, CheckCircle2 } from "lucide-react"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
+
+// Featured photo (lib/blog-images.ts), falling back to this page's original image.
+const FEATURED = blogImage("how-houston-weather-damages-exterior-paint", { src: "/images/blog/houston-weather-paint-damage.png", alt: "Peeling, blistered, and faded exterior paint on a Houston home caused by heat, humidity, and UV exposure" })
 
 export const metadata: Metadata = {
   title: "How Houston Weather Damages Exterior Paint | What to Know",
@@ -21,18 +25,13 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-05-25T00:00:00.000Z",
     authors: ["Juan Serra"],
-    images: [{
-      url: "https://houstonsuperiorpainting.com/images/blog/houston-weather-paint-damage.png",
-      width: 1200,
-      height: 630,
-      alt: "How Houston Weather Damages Exterior Paint",
-    }],
+    images: blogOgImages("how-houston-weather-damages-exterior-paint", { src: "/images/blog/houston-weather-paint-damage.png", alt: "How Houston Weather Damages Exterior Paint" }),
   },
   twitter: {
     card: "summary_large_image",
     title: "How Houston Weather Damages Exterior Paint | What to Know",
     description: "Houston's heat, humidity, and storms are relentless on exterior paint. Here's exactly how weather damages your home's finish.",
-    images: ["https://houstonsuperiorpainting.com/images/blog/houston-weather-paint-damage.png"],
+    images: [blogImage("how-houston-weather-damages-exterior-paint", { src: "/images/blog/houston-weather-paint-damage.png" }).url],
   },
 }
 
@@ -61,7 +60,7 @@ export default function HoustonWeatherDamagesExteriorPaint() {
             "@type": "Article",
             "headline": "How Houston Weather Damages Exterior Paint",
             "description": "Houston's heat, humidity, and storms are relentless on exterior paint. Here's exactly how weather damages your home's finish — and how to fight back.",
-            "image": "https://houstonsuperiorpainting.com/images/blog/houston-weather-paint-damage.png",
+            "image": FEATURED.url,
             "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra" },
             "publisher": {
               "@type": "Organization",
@@ -183,8 +182,8 @@ export default function HoustonWeatherDamagesExteriorPaint() {
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/blog/houston-weather-paint-damage.png"
-                alt="Peeling, blistered, and faded exterior paint on a Houston home caused by heat, humidity, and UV exposure"
+                src={FEATURED.src}
+                alt={FEATURED.alt}
                 fill
                 className="object-cover"
                 priority

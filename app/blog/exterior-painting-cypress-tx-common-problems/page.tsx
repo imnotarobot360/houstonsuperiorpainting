@@ -7,6 +7,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Clock, User, Calendar, Phone, AlertTriangle, Droplets, Sun, ThermometerSun } from "lucide-react"
+import { blogImage, blogOgImages } from "@/lib/blog-images"
+
+// Featured photo (lib/blog-images.ts), falling back to this page's original image.
+const FEATURED = blogImage("exterior-painting-cypress-tx-common-problems", { src: "/images/blog/exterior-painting-cypress-problems.jpg", alt: "Cracked and peeling exterior paint on the siding and trim of a Cypress TX home showing common weather damage" })
 
 export const metadata: Metadata = {
   title: "Exterior Painting in Cypress TX | Common Problems & Fixes",
@@ -22,18 +26,13 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-05-25T00:00:00Z",
     authors: ["Juan Serra"],
-    images: [{
-      url: "https://houstonsuperiorpainting.com/images/blog/exterior-painting-cypress-problems.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Exterior Painting in Cypress TX - Common Problems",
-    }],
+    images: blogOgImages("exterior-painting-cypress-tx-common-problems", { src: "/images/blog/exterior-painting-cypress-problems.jpg", alt: "Exterior Painting in Cypress TX - Common Problems" }),
   },
   twitter: {
     card: "summary_large_image",
     title: "Exterior Painting in Cypress TX | Common Problems & Fixes",
     description: "Cypress TX homeowners face unique exterior paint problems. Here's what causes them, what to watch for, and how to protect your home's finish.",
-    images: ["https://houstonsuperiorpainting.com/images/blog/exterior-painting-cypress-problems.jpg"],
+    images: [blogImage("exterior-painting-cypress-tx-common-problems", { src: "/images/blog/exterior-painting-cypress-problems.jpg" }).url],
   },
 }
 
@@ -62,7 +61,7 @@ export default function ExteriorPaintingCypressProblemsBlog() {
             "@type": "Article",
             "headline": "Exterior Painting in Cypress TX: Common Problems Homeowners Face",
             "description": "Cypress TX homeowners face unique exterior paint problems. Here's what causes them, what to watch for, and how to protect your home's finish.",
-            "image": "https://houstonsuperiorpainting.com/images/blog/exterior-painting-cypress-problems.jpg",
+            "image": FEATURED.url,
             "author": { "@type": "Person", "@id": "https://houstonsuperiorpainting.com/about#juan-serra", "name": "Juan Serra", "url": "https://houstonsuperiorpainting.com/about" },
             "publisher": {
               "@type": "Organization",
@@ -195,8 +194,8 @@ export default function ExteriorPaintingCypressProblemsBlog() {
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-video rounded-xl overflow-hidden mb-8">
               <Image
-                src="/images/blog/exterior-painting-cypress-problems.jpg"
-                alt="Cracked and peeling exterior paint on the siding and trim of a Cypress TX home showing common weather damage"
+                src={FEATURED.src}
+                alt={FEATURED.alt}
                 fill
                 className="object-cover"
                 priority

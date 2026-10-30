@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Limewash vs German Smear for Houston Brick Homes",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-05-08",
     authors: ["Juan Serra"],
-    images: ["/images/blog/limewash-vs-german-smear.jpg"],
+    images: blogOgImages("limewash-vs-german-smear-houston", { src: "/images/blog/limewash-vs-german-smear.jpg" }),
   },
   twitter: {
     card: "summary_large_image",

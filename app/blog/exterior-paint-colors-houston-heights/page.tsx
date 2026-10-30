@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { BUSINESS, PRICES_2026 } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 const URL = "https://houstonsuperiorpainting.com/blog/exterior-paint-colors-houston-heights"
 
@@ -15,14 +16,7 @@ export const metadata: Metadata = {
     "Exterior colors for Houston Heights bungalows and new-builds — painted brick, historic trim, and what to leave alone.",
   alternates: { canonical: URL },
   openGraph: {
-    images: [
-      {
-        url: `https://houstonsuperiorpainting.com${IMAGE}`,
-        width: 1200,
-        height: 630,
-        alt: IMAGE_ALT,
-      },
-    ],
+    images: blogOgImages("exterior-paint-colors-houston-heights", { src: IMAGE }),
     title: "Exterior Paint Colors in the Houston Heights (2026)",
     description:
       "Exterior colors for Houston Heights bungalows and new-builds — painted brick, historic trim, and what to leave alone.",

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { BUSINESS, PRICES_2026 } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 const URL = "https://houstonsuperiorpainting.com/blog/townhome-painting-cinco-ranch-cross-creek-riverstone"
 
@@ -15,14 +16,7 @@ export const metadata: Metadata = {
     "How townhome and patio-home painting works in Cinco Ranch, Cross Creek Ranch, and Riverstone — HOA approval, shared walls, access, and 2026 cost.",
   alternates: { canonical: URL },
   openGraph: {
-    images: [
-      {
-        url: `https://houstonsuperiorpainting.com${IMAGE}`,
-        width: 1200,
-        height: 630,
-        alt: IMAGE_ALT,
-      },
-    ],
+    images: blogOgImages("townhome-painting-cinco-ranch-cross-creek-riverstone", { src: IMAGE }),
     title: "Townhome Painting: Cinco Ranch, Cross Creek & Riverstone",
     description:
       "How townhome and patio-home painting works in Cinco Ranch, Cross Creek Ranch, and Riverstone — HOA approval, shared walls, access, and 2026 cost.",

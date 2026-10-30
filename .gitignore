@@ -27,3 +27,6 @@ yarn-error.log*
 # misc
 .DS_Store
 *.pem
+
+# Owner photo drop folder (scripts/blog-photos/ingest.mjs)
+blog-photos-inbox/

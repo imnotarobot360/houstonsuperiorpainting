@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 const URL = "https://houstonsuperiorpainting.com/blog/popcorn-ceiling-removal-houston"
 
@@ -11,14 +12,7 @@ export const metadata: Metadata = {
     "What popcorn ceiling removal and repaint costs in Houston, how the process works, and when to skim instead of scrape. 2026 price ranges from a local painter.",
   alternates: { canonical: URL },
   openGraph: {
-    images: [
-      {
-        url: "https://houstonsuperiorpainting.com/images/blog/drywall-repair-guide.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Painter in a respirator sanding patched drywall before painting",
-      },
-    ],
+    images: blogOgImages("popcorn-ceiling-removal-houston", { src: "/images/blog/drywall-repair-guide.jpg", alt: "Painter in a respirator sanding patched drywall before painting" }),
     title: "Popcorn Ceiling Removal and Painting in Houston: Cost and Process (2026)",
     description:
       "What popcorn ceiling removal and repaint costs in Houston, how the process works, and when to skim instead of scrape.",

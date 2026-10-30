@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 const URL = "https://houstonsuperiorpainting.com/blog/hardieplank-painting-houston"
 
@@ -18,14 +19,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: URL },
   openGraph: {
-    images: [
-      {
-        url: `https://houstonsuperiorpainting.com${IMAGE}`,
-        width: 1200,
-        height: 630,
-        alt: IMAGE_ALT,
-      },
-    ],
+    images: blogOgImages("hardieplank-painting-houston", { src: IMAGE }),
     title: "How to Paint HardiePlank in Houston: Prep, Paint, and What Lasts",
     description: DESCRIPTION,
     url: URL,

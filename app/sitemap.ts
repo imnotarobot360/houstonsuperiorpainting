@@ -6,6 +6,7 @@ import { execFileSync } from 'node:child_process'
 import { PROJECTS } from '@/lib/projects'
 import CONTENT_DATES from '@/lib/content-dates.json'
 import nextConfig from '../next.config.mjs'
+import { blogImage } from '@/lib/blog-images'
 
 // next.config.mjs is plain ESM, so its inferred type doesn't guarantee the
 // optional `redirects()` factory is present. Narrow it locally instead of
@@ -287,6 +288,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ...(lastModified ? { lastModified } : {}),
       changeFrequency,
       priority,
+      // Blog posts list their featured photo so Google can discover it
+      // (lib/blog-images.ts). Posts still on a title card list nothing.
+      ...(route.startsWith('blog/') && blogImage(route).isPhoto ? { images: [blogImage(route).url] } : {}),
     }
   })
 

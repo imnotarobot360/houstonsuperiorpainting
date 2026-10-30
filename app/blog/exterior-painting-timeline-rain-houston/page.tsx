@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { BUSINESS, PHONE_HREF } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 const URL = "https://houstonsuperiorpainting.com/blog/exterior-painting-timeline-rain-houston"
 
@@ -18,14 +19,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: URL },
   openGraph: {
-    images: [
-      {
-        url: `https://houstonsuperiorpainting.com${IMAGE}`,
-        width: 1200,
-        height: 630,
-        alt: IMAGE_ALT,
-      },
-    ],
+    images: blogOgImages("exterior-painting-timeline-rain-houston", { src: IMAGE }),
     title: "How Long Exterior Painting Takes in Houston — and What Happens If It Rains",
     description: DESCRIPTION,
     url: URL,

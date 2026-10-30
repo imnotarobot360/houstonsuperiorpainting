@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { BlogPostTemplate } from "@/components/blog-post-template"
 import { BUSINESS, PHONE_HREF, PRICES_2026 } from "@/lib/business"
+import { blogOgImages } from "@/lib/blog-images"
 
 const URL = "https://houstonsuperiorpainting.com/blog/exterior-paint-colors-fulshear-tx"
 
@@ -15,14 +16,7 @@ export const metadata: Metadata = {
     "Exterior paint colors for Fulshear and Cross Creek Ranch west — new Hardie homes, HOA palettes, and what fades in open sun.",
   alternates: { canonical: URL },
   openGraph: {
-    images: [
-      {
-        url: `https://houstonsuperiorpainting.com${IMAGE}`,
-        width: 1200,
-        height: 630,
-        alt: IMAGE_ALT,
-      },
-    ],
+    images: blogOgImages("exterior-paint-colors-fulshear-tx", { src: IMAGE }),
     title: "Best Exterior Paint Colors in Fulshear TX (2026)",
     description:
       "Exterior paint colors for Fulshear and Cross Creek Ranch west — new Hardie homes, HOA palettes, and what fades in open sun.",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { BlogPostTemplate } from "@/components/blog-post-template"
+import { blogOgImages } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "How Long Does Interior Painting Take in Houston?",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-06-07",
     authors: ["Juan Serra"],
-    images: ["/images/blog/how-long-interior-painting-houston.jpg"],
+    images: blogOgImages("how-long-does-interior-painting-take-in-houston", { src: "/images/blog/how-long-interior-painting-houston.jpg" }),
   },
   twitter: {
     card: "summary_large_image",
