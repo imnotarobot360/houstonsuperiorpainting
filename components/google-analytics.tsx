@@ -109,9 +109,12 @@ export function GoogleAnalytics() {
 
   return (
     <>
+      {/* Owner brief 2026-11-05, phase 7 (TBT): gtag.js waits until the page has
+          loaded. The inline stub below runs right away and is tiny, so events
+          fired before gtag.js arrives queue in dataLayer and are sent later. */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
       <Script id="ga4-init" strategy="afterInteractive">
         {`
