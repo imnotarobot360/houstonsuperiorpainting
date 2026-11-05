@@ -378,7 +378,7 @@ export function LuxuryCTA() {
   return (
     <section className="relative bg-midnight py-28 sm:py-36 overflow-hidden">
       <div className="absolute inset-0 opacity-[0.07]">
-        <Image src="/images/luxury/hero-estate.png" alt="" fill className="object-cover" />
+        <Image src="/images/luxury/hero-estate.png" alt="Two-story Houston home exterior at dusk after painting" fill className="object-cover" />
       </div>
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <Reveal>

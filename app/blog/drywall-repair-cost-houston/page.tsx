@@ -5,7 +5,7 @@ import { PRICES_2026 as P } from "@/lib/business"
 
 const D: GuideArticleData = {
   path: "/blog/drywall-repair-cost-houston",
-  title: "Drywall Repair Cost in Houston (2026) | Patches to Water Damage",
+  title: "Houston Drywall Repair Cost (2026): Patches to Water Damage",
   description: `Drywall repair in Houston costs ${P.drywallRepair} in 2026, from small patches to water damage. What moves the price: size, texture matching, water damage and paint.`,
   h1: "Drywall repair cost in Houston (2026)",
   eyebrow: "Cost guide",

@@ -13,13 +13,13 @@ const IMAGE_ALT = "Pearland home with sage-green lap siding, a shingle-siding ac
 export const metadata: Metadata = {
   title: "Best Exterior Paint Colors in Pearland TX (2026)",
   description:
-    "Exterior paint colors for Pearland, Shadow Creek Ranch, and Silverlake — HOA chips, Hardie, and 2026 cost.",
+    "Exterior paint colors for Pearland, Shadow Creek Ranch, and Silverlake — HOA chips, Hardie, and 2026 cost. Free written estimate: (346) 594-5960.",
   alternates: { canonical: URL },
   openGraph: {
     images: blogOgImages("exterior-paint-colors-pearland-tx", { src: IMAGE }),
     title: "Best Exterior Paint Colors in Pearland TX (2026)",
     description:
-      "Exterior paint colors for Pearland, Shadow Creek Ranch, and Silverlake — HOA chips, Hardie, and 2026 cost.",
+      "Exterior paint colors for Pearland, Shadow Creek Ranch, and Silverlake — HOA chips, Hardie, and 2026 cost. Free written estimate: (346) 594-5960.",
     url: URL,
     type: "article",
     publishedTime: "2026-10-07",
@@ -65,7 +65,7 @@ export default function ExteriorPaintColorsPearlandTxPage() {
     <BlogPostTemplate
       slug="exterior-paint-colors-pearland-tx"
       title="Best Exterior Paint Colors in Pearland TX (2026)"
-      excerpt="Exterior paint colors for Pearland, Shadow Creek Ranch, and Silverlake — HOA chips, Hardie, and 2026 cost."
+      excerpt="Exterior paint colors for Pearland, Shadow Creek Ranch, and Silverlake — HOA chips, Hardie, and 2026 cost. Free written estimate: (346) 594-5960."
       author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="October 7, 2026"

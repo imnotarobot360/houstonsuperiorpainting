@@ -292,7 +292,7 @@ export function EstimateBookingFlow() {
                   >
                     <Image
                       src={config.heroImage || "/placeholder.svg"}
-                      alt=""
+                      alt={config.heroImageAlt}
                       width={64}
                       height={64}
                       className="h-16 w-16 flex-shrink-0 rounded-lg object-cover"

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: PAGE_URL, siteName: BUSINESS.name, type: "website" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: PAGE_URL, siteName: BUSINESS.name, type: "website", images: [{ url: BUSINESS.ogImage, width: 1200, height: 630, alt: BUSINESS.name }] },
 }
 
 export default function ReviewsPage() {
@@ -49,7 +49,7 @@ export default function ReviewsPage() {
 
         <Section title="Our Google profiles">
           <div className="not-prose">
-            <OfficeReviewCards />
+            <OfficeReviewCards onReviewsPage />
           </div>
         </Section>
 

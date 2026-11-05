@@ -41,8 +41,8 @@ const fmtDate = (iso: string) =>
   new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" })
 
 /** Rating figures for a profile, or null when they may not be printed. */
-function numbersFor(p: Shown): { rating: number; count: number; checked: string } | null {
-  if (!SHOW_RATING_NUMBERS || p.verification !== "checked-on-google" || !p.lastVerified) return null
+function numbersFor(p: Shown, onReviewsPage = false): { rating: number; count: number; checked: string } | null {
+  if (!(SHOW_RATING_NUMBERS || (onReviewsPage && p.showOnReviewsPage)) || p.verification !== "checked-on-google" || !p.lastVerified) return null
   if (p.rating == null || p.reviewCount == null) return null
   const age = (Date.now() - new Date(`${p.lastVerified}T12:00:00Z`).getTime()) / 86400000
   if (age > MAX_AGE_DAYS) return null
@@ -135,11 +135,11 @@ export function OfficeQuotes({ pageSlug }: { pageSlug: string }) {
 }
 
 /** Card grid for /reviews and the homepage: one card per Google Business Profile. */
-export function OfficeReviewCards() {
+export function OfficeReviewCards({ onReviewsPage = false }: { onReviewsPage?: boolean }) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {SHOWN_PROFILES.map((p) => {
-        const n = numbersFor(p)
+        const n = numbersFor(p, onReviewsPage)
         return (
           <div key={p.locationSlug} className="rounded-xl border border-border bg-card p-5">
             <p className="font-semibold text-foreground">{p.label}</p>
@@ -148,7 +148,7 @@ export function OfficeReviewCards() {
                 <Star className="h-5 w-5 fill-gold text-gold" aria-hidden="true" />
                 {n.rating.toFixed(1)}
                 <span className="text-base font-normal text-muted-foreground">
-                  · {n.count} Google reviews, checked {n.checked}
+                  · {n.count} Google reviews · checked {n.checked}
                 </span>
               </p>
             ) : (

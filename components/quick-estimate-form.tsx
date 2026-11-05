@@ -38,6 +38,7 @@ const TEXT = {
     heading: "Get a free written estimate",
     name: "Name",
     phone: "Phone number",
+    phonePlaceholder: "Your phone number",
     type: "Project type",
     choose: "Choose a project type…",
     chooseShort: "Choose…",
@@ -69,6 +70,7 @@ const TEXT = {
     heading: "Pida su estimado gratis",
     name: "Nombre",
     phone: "Teléfono",
+    phonePlaceholder: "Su número de teléfono",
     type: "Tipo de proyecto",
     choose: "Elija un tipo de proyecto…",
     chooseShort: "Elija…",
@@ -346,7 +348,7 @@ export function QuickEstimateForm({
             type="tel"
             inputMode="tel"
             autoComplete="tel"
-            placeholder="(346) 555-0123"
+            placeholder={t.phonePlaceholder}
             value={phone}
             onChange={(e) => setPhone(formatUsPhone(e.target.value))}
             className={input}

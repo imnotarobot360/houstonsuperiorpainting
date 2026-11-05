@@ -6,14 +6,14 @@ import { blogOgImages } from "@/lib/blog-images"
 export const metadata: Metadata = {
   title: "Fence & Deck Painting Houston TX: What to Know",
   description:
-    "Houston's heat and humidity destroy unprotected fences and decks fast. What homeowners should know about paint vs.",
+    "Fence and deck painting in Houston: paint vs. stain, pressure-treated wood timing, prep, and how long coatings last. Free estimate: (346) 594-5960.",
   alternates: {
     canonical: "https://houstonsuperiorpainting.com/blog/fence-deck-painting-houston-tx",
   },
   openGraph: { images: blogOgImages("fence-deck-painting-houston-tx", { src: "/images/og-cover.jpg", alt: "Houston Superior Painting" }),
     title: "Fence & Deck Painting Houston TX: What to Know",
     description:
-      "Paint vs. stain, pressure-treated wood timing, prep requirements, and how long fence and deck coatings last in Houston's climate.",
+      "Fence and deck painting in Houston: paint vs. stain, pressure-treated wood timing, prep, and how long coatings last. Free estimate: (346) 594-5960.",
     type: "article",
     publishedTime: "2026-06-15",
     authors: ["Juan Serra"],

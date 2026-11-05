@@ -5,13 +5,13 @@ import { Footer } from '@/components/footer'
 import { ServicePageTemplate } from '@/components/service-page-template'
 
 export const metadata: Metadata = {
-  title: 'Limewash & Brick Painting Houston TX | Houston Superior Painting',
+  title: 'Limewash & Brick Painting in Houston, TX',
   description: 'Professional limewash and brick painting in Houston TX. German smear, authentic European finishes. Breathable, elegant, long-lasting. Free estimates.',
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/limewash-brick-painting-houston-tx',
   },
   openGraph: {
-    title: 'Limewash & Brick Painting Houston TX | Houston Superior Painting',
+    title: 'Limewash & Brick Painting in Houston, TX',
     description: 'Professional limewash and brick painting in Houston TX. German smear, authentic European finishes. Breathable, elegant, long-lasting.',
     url: 'https://houstonsuperiorpainting.com/limewash-brick-painting-houston-tx',
     siteName: 'Houston Superior Painting',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Limewash & Brick Painting Houston TX | Houston Superior Painting',
+    title: 'Limewash & Brick Painting in Houston, TX',
     description: 'Professional limewash and brick painting in Houston TX. German smear, authentic European finishes.',
     images: ['https://houstonsuperiorpainting.com/images/og/og-limewash-brick.jpg'],
   },

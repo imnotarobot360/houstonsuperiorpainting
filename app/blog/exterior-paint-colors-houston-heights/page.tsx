@@ -13,13 +13,13 @@ const IMAGE_ALT = "Two-story painted white brick home with navy shutters and a n
 export const metadata: Metadata = {
   title: "Exterior Paint Colors in the Houston Heights (2026)",
   description:
-    "Exterior colors for Houston Heights bungalows and new-builds — painted brick, historic trim, and what to leave alone.",
+    "Exterior colors for Houston Heights bungalows and new-builds — painted brick, historic trim, and what to leave alone. Free estimate: (346) 594-5960.",
   alternates: { canonical: URL },
   openGraph: {
     images: blogOgImages("exterior-paint-colors-houston-heights", { src: IMAGE }),
     title: "Exterior Paint Colors in the Houston Heights (2026)",
     description:
-      "Exterior colors for Houston Heights bungalows and new-builds — painted brick, historic trim, and what to leave alone.",
+      "Exterior colors for Houston Heights bungalows and new-builds — painted brick, historic trim, and what to leave alone. Free estimate: (346) 594-5960.",
     url: URL,
     type: "article",
     publishedTime: "2026-10-07",
@@ -66,7 +66,7 @@ export default function ExteriorPaintColorsHoustonHeightsPage() {
     <BlogPostTemplate
       slug="exterior-paint-colors-houston-heights"
       title="Best Exterior Paint Colors in the Houston Heights (2026)"
-      excerpt="Exterior colors for Houston Heights bungalows and new-builds — painted brick, historic trim, and what to leave alone."
+      excerpt="Exterior colors for Houston Heights bungalows and new-builds — painted brick, historic trim, and what to leave alone. Free estimate: (346) 594-5960."
       author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="October 7, 2026"

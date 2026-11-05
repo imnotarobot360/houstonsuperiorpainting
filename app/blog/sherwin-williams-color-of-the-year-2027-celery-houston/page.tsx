@@ -31,7 +31,7 @@ const PALETTE: [string, string][] = [
 
 const D: GuideArticleData = {
   path: "/blog/sherwin-williams-color-of-the-year-2027-celery-houston",
-  title: "Sherwin-Williams Celery SW 6421: 2027 Color of the Year Guide",
+  title: "Celery SW 6421: Sherwin-Williams 2027 Color of the Year",
   description:
     "Celery SW 6421 is Sherwin-Williams' 2027 Color of the Year, an airy, herbal green. How it looks in Houston light and what pairs with it.",
   h1: "Celery SW 6421: Sherwin-Williams' 2027 Color of the Year in Houston homes",

@@ -11,13 +11,13 @@ import { blogImage } from "@/lib/blog-images"
 
 export const metadata: Metadata = {
   title: "Painting Tips & Advice Blog | Houston Superior Painting",
-  description: "Expert painting tips, color advice, and home improvement insights from Houston's trusted painting professionals.",
+  description: "Houston painting blog: cost guides, paint color advice, and prep and product tips for Houston homes, from Houston Superior Painting. (346) 594-5960.",
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/blog',
   },
   openGraph: { images: [{ url: "https://houstonsuperiorpainting.com/images/og-cover.jpg", width: 1200, height: 630, alt: "Houston Superior Painting" }],
     title: "Painting Tips & Advice Blog | Houston Superior Painting",
-    description: "Expert painting tips, color advice, and home improvement insights from Houston's trusted painting professionals.",
+    description: "Houston painting blog: cost guides, paint color advice, and prep and product tips for Houston homes, from Houston Superior Painting. (346) 594-5960.",
     type: "website",
   },
 }
@@ -988,7 +988,7 @@ export default function BlogPage() {
             "@context": "https://schema.org",
             "@type": "Blog",
             "name": "Houston Superior Painting Blog",
-            "description": "Expert painting tips, color advice, and home improvement insights from Houston's trusted painting professionals.",
+            "description": "Houston painting blog: cost guides, paint color advice, and prep and product tips for Houston homes, from Houston Superior Painting. (346) 594-5960.",
             "url": "https://houstonsuperiorpainting.com/blog",
             "publisher": {
               "@type": "Organization",

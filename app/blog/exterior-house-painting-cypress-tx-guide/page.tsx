@@ -4,7 +4,7 @@ import { Bullets, Steps } from "@/components/aeo/blocks"
 
 const D: GuideArticleData = {
   path: "/blog/exterior-house-painting-cypress-tx-guide",
-  title: "Exterior House Painting in Cypress, TX: Prep, Products & Pricing",
+  title: "Exterior House Painting in Cypress, TX: Prep & Pricing",
   description:
     "How Cypress shade, mildew and humidity affect exterior paint, the prep that makes it last, products to ask for, HOA approvals and how pricing is built.",
   h1: "Exterior house painting in Cypress: preparation, products and pricing",

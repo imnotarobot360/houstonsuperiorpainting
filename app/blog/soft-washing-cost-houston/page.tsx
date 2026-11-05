@@ -5,7 +5,7 @@ import { PRICES_2026 as P } from "@/lib/business"
 
 const D: GuideArticleData = {
   path: "/blog/soft-washing-cost-houston",
-  title: "Soft Washing Cost in Houston (2026) | One- and Two-Story Homes",
+  title: "Houston Soft Washing Cost (2026): 1- and 2-Story Homes",
   description: `Soft washing a Houston home costs ${P.softWashOneStory} for a one-story and ${P.softWashTwoStory} for a two-story in 2026. What it removes, what moves the price, and when to do it.`,
   h1: "Soft washing cost in Houston (2026)",
   eyebrow: "Cost guide",

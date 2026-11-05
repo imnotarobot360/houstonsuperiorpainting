@@ -12,7 +12,7 @@ import { BUSINESS } from "@/lib/business"
 
 const D: GuideArticleData = {
   path: "/blog/celery-vs-webster-green-2027-color-of-the-year",
-  title: "Celery SW 6421 vs. Webster Green HC-130: 2027 Colors Compared",
+  title: "Celery SW 6421 vs Webster Green HC-130: 2027 Compared",
   description:
     "Sherwin-Williams' Celery and Benjamin Moore's Webster Green are both greens, but one is light and airy and one is deep. How they differ and where each works.",
   h1: "Celery SW 6421 vs. Webster Green HC-130: comparing the 2027 Colors of the Year",

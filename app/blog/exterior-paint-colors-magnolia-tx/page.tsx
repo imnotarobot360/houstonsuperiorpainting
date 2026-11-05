@@ -13,13 +13,13 @@ const IMAGE_ALT = "Two-story Magnolia home with green lap siding, yellow trim, a
 export const metadata: Metadata = {
   title: "Best Exterior Paint Colors in Magnolia TX (2026)",
   description:
-    "Exterior colors for Magnolia TX homes — pine shade, mildew on north walls, Hardie and wood mix, and 2026 paint cost.",
+    "Exterior colors for Magnolia TX homes — pine shade, mildew on north walls, Hardie and wood mix, and 2026 paint cost. Free estimate: (346) 594-5960.",
   alternates: { canonical: URL },
   openGraph: {
     images: blogOgImages("exterior-paint-colors-magnolia-tx", { src: IMAGE }),
     title: "Best Exterior Paint Colors in Magnolia TX (2026)",
     description:
-      "Exterior colors for Magnolia TX homes — pine shade, mildew on north walls, Hardie and wood mix, and 2026 paint cost.",
+      "Exterior colors for Magnolia TX homes — pine shade, mildew on north walls, Hardie and wood mix, and 2026 paint cost. Free estimate: (346) 594-5960.",
     url: URL,
     type: "article",
     publishedTime: "2026-10-07",
@@ -65,7 +65,7 @@ export default function ExteriorPaintColorsMagnoliaTxPage() {
     <BlogPostTemplate
       slug="exterior-paint-colors-magnolia-tx"
       title="Best Exterior Paint Colors in Magnolia TX (2026)"
-      excerpt="Exterior colors for Magnolia TX homes — pine shade, mildew on north walls, Hardie and wood mix, and 2026 paint cost."
+      excerpt="Exterior colors for Magnolia TX homes — pine shade, mildew on north walls, Hardie and wood mix, and 2026 paint cost. Free estimate: (346) 594-5960."
       author="Juan Serra"
       authorRole="Owner, Houston Superior Painting"
       publishDate="October 7, 2026"

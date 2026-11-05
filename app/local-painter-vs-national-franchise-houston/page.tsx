@@ -23,7 +23,7 @@ import { BUSINESS, CORE_SERVICES } from "@/lib/business"
 
 const PAGE_PATH = "/local-painter-vs-national-franchise-houston"
 const PAGE_URL = `https://houstonsuperiorpainting.com${PAGE_PATH}`
-const TITLE = "Local Painter vs National Franchise in Houston | What to Compare"
+const TITLE = "Houston Local Painter vs National Franchise: What to Compare"
 const DESCRIPTION =
   "Local painting company or national franchise? What Houston homeowners should compare: warranty, prep, insurance, supervision, products, payment and reviews."
 const H1 = "Local Painting Company vs National Franchise: What Houston Homeowners Should Compare"

@@ -18,6 +18,8 @@ export type ReviewProfile = {
   /** ISO date the rating/count were last checked, and by whom. */
   lastVerified: string | null
   verification: "owner-stated" | "checked-on-google" | "unverified"
+  /** Print rating and count on the /reviews cards even while numbers are off sitewide (owner screenshot of the profile). */
+  showOnReviewsPage?: boolean
   notes?: string
 }
 
@@ -39,9 +41,11 @@ export const REVIEW_PROFILES: ReviewProfile[] = [
     url: "https://maps.app.goo.gl/G2cRQy8Cth7UM6d6A",
     locationSlug: "cypress-huffmeister",
     rating: 5.0,
-    reviewCount: 5,
-    lastVerified: "2026-10-26",
+    reviewCount: 10,
+    // Owner screenshot of the Cypress profile, 2026-11-05.
+    lastVerified: "2026-11-05",
     verification: "checked-on-google",
+    showOnReviewsPage: true,
   },
   {
     platform: "Google Business Profile",

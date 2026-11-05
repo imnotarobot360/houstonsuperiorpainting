@@ -153,7 +153,7 @@ export const PROJECTS: CaseStudy[] = [
         "From the consultation to the final walkthrough, the experience felt genuinely white-glove. The prep work on our Memorial home was extraordinary.",
       name: "Catherine R., Memorial",
     },
-    metaTitle: "Memorial Whole-Home Interior Repaint | Houston Superior Painting",
+    metaTitle: "Memorial Whole-Home Interior Repaint | Case Study",
     metaDescription:
       "See how we repainted a 4,200 sq ft Memorial home with a cohesive whole-home palette, careful prep, and crisp trim. Before & after case study.",
   },
@@ -214,7 +214,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     results:
       "The home regained its presence on the street with a clean, even finish and crisp trim lines. More importantly, the failed caulk and rot were corrected, protecting the substrate through Houston's next several storm seasons.",
-    metaTitle: "River Oaks Exterior Paint Restoration | Houston Superior Painting",
+    metaTitle: "River Oaks Exterior Paint Restoration | Case Study",
     metaDescription:
       "A River Oaks exterior restoration with rot repair, re-caulking, and a premium weather-resistant finish for Houston humidity. Before & after case study.",
   },
@@ -275,7 +275,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     results:
       "The kitchen now looks fully renovated. The sprayed enamel finish is smooth and hard-wearing, the dated orange tone is gone, and the homeowners kept their quality cabinet boxes — saving tens of thousands versus replacement.",
-    metaTitle: "West U Kitchen Cabinet Refinishing | Houston Superior Painting",
+    metaTitle: "West U Kitchen Cabinet Refinishing | Case Study",
     metaDescription:
       "See a West University kitchen transformed with sprayed, factory-smooth cabinet refinishing — no brush marks, no grain. Before & after case study.",
   },
@@ -395,7 +395,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     results:
       "The bungalow's main rooms are now smooth, bright, and contemporary. With the adhesive fully removed and walls skim-coated, the new finish is durable and free of the bubbling that plagues quick wallpaper paint-overs.",
-    metaTitle: "Heights Wallpaper Removal & Repaint | Houston Superior Painting",
+    metaTitle: "Heights Wallpaper Removal & Repaint | Case Study",
     metaDescription:
       "See a Houston Heights bungalow transformed: dated wallpaper removed, walls skim-coated smooth, and a modern palette applied. Before & after case study.",
   },
@@ -616,7 +616,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     metaTitle: "Exterior Painting Project in The Heights, Houston",
     metaDescription:
-      "Photos of a completed exterior painting job on a two-story home in The Heights, Houston: siding, trim, porch and front entry.",
+      "Photos of a completed exterior painting job on a two-story home in The Heights, Houston: siding, trim, porch and front entry. Free estimate: (346) 594-5960.",
   },
   {
     // Job photos supplied by Juan on 2026-10-07 (exterior painting in The
@@ -833,7 +833,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     metaTitle: "Painted Brick Exterior in West University, Houston",
     metaDescription:
-      "Photos of a West University, Houston home with its brick painted white: the arched entry, front steps and garage elevation.",
+      "Photos of a West University, Houston home with its brick painted white: the arched entry, front steps and garage elevation. Free estimate: (346) 594-5960.",
   },
   {
     // Job photos supplied by Juan on 2026-10-07: kitchen cabinets in Cypress, TX.
@@ -862,7 +862,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     metaTitle: "Two-Tone Kitchen Cabinets in Cypress, TX",
     metaDescription:
-      "Photos of a Cypress, TX kitchen with blue painted lower cabinets and island and white painted uppers.",
+      "Photos of a Cypress, TX kitchen with blue painted lower cabinets and island and white painted uppers. Free written estimate: (346) 594-5960.",
   },
   {
     // Job photos supplied by Juan on 2026-10-11: "cabinets in cypress". A photo with
@@ -904,7 +904,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     metaTitle: "White Kitchen Cabinets and Teal Island in Cypress, TX",
     metaDescription:
-      "Photos of a Cypress, TX kitchen with white raised-panel cabinets, a white range hood and a teal island.",
+      "Photos of a Cypress, TX kitchen with white raised-panel cabinets, a white range hood and a teal island. Free written estimate: (346) 594-5960.",
   },
   {
     // Job photos supplied by Juan on 2026-10-12: "exterior house in bellaire". Cropped tight to
@@ -933,7 +933,7 @@ export const PROJECTS: CaseStudy[] = [
       { label: "Warranty", value: "5 years" },
     ],
     metaTitle: "Painted Brick Ranch Exterior in Bellaire, TX",
-    metaDescription: "Photos of a Bellaire ranch home with gray painted brick and white trim, windows and porch post.",
+    metaDescription: "Photos of a Bellaire ranch home with gray painted brick and white trim, windows and porch post. Call (346) 594-5960 for a free written estimate.",
   },
   {
     // Job photos supplied by Juan on 2026-10-12: "exterior painting in katy" (two houses; Juan
@@ -962,7 +962,7 @@ export const PROJECTS: CaseStudy[] = [
       { label: "Warranty", value: "5 years" },
     ],
     metaTitle: "Tan Stucco Exterior Painting in Katy, TX",
-    metaDescription: "Photos of a Katy, TX home with tan painted stucco, dark brown trim and shutters, and a stone turret entry.",
+    metaDescription: "Photos of a Katy, TX home with tan painted stucco, dark brown trim and shutters, and a stone turret entry. Free written estimate: (346) 594-5960.",
   },
   {
     // Second Katy house from the same 2026-10-12 batch. House number blurred; a parked car
@@ -995,7 +995,7 @@ export const PROJECTS: CaseStudy[] = [
       { label: "Warranty", value: "5 years" },
     ],
     metaTitle: "White Stucco Exterior Painting in Katy, TX",
-    metaDescription: "Photos of a Katy, TX home with white painted stucco, white trim and gutters, and a rear patio with a pergola.",
+    metaDescription: "Photos of a Katy, TX home with white painted stucco, white trim and gutters, and a rear patio with a pergola. Free estimate: (346) 594-5960.",
   },
   {
     // Job photos supplied by Juan on 2026-10-12: "exterior paint, stucco in west university".
@@ -1028,7 +1028,7 @@ export const PROJECTS: CaseStudy[] = [
       { label: "Warranty", value: "5 years" },
     ],
     metaTitle: "Stucco Exterior Painting in West University, Houston",
-    metaDescription: "Photos of a West University home with white painted stucco, stone accents and dark trim.",
+    metaDescription: "Photos of a West University home with white painted stucco, stone accents and dark trim. Houston Superior Painting · free written estimate: (346) 594-5960.",
   },
   {
     // Job photos supplied by Juan on 2026-10-12: "cabinets in bellaire". Two photos cropped
@@ -1061,7 +1061,7 @@ export const PROJECTS: CaseStudy[] = [
       { label: "Warranty", value: "5 years" },
     ],
     metaTitle: "White Glass-Front Kitchen Cabinets in Bellaire, TX",
-    metaDescription: "Photos of a Bellaire kitchen with white glass-front upper cabinets and white beadboard base cabinets.",
+    metaDescription: "Photos of a Bellaire kitchen with white glass-front upper cabinets and white beadboard base cabinets. Free written estimate: (346) 594-5960.",
   },
   {
     // Job photos supplied by Juan on 2026-10-11: "cabinets in sienna". Uppers photo
@@ -1099,7 +1099,7 @@ export const PROJECTS: CaseStudy[] = [
       { label: "Warranty", value: "5 years" },
     ],
     metaTitle: "White Kitchen Cabinets in Sienna, TX",
-    metaDescription: "Photos of a Sienna, TX kitchen with white raised-panel cabinets, black hardware and black granite counters.",
+    metaDescription: "Photos of a Sienna, TX kitchen with white raised-panel cabinets, black hardware and black granite counters. Free written estimate: (346) 594-5960.",
   },
   {
     // Job photos supplied by Juan on 2026-10-11: "cabinets in the heights" (two
@@ -1128,7 +1128,7 @@ export const PROJECTS: CaseStudy[] = [
       { label: "Warranty", value: "5 years" },
     ],
     metaTitle: "Charcoal Kitchen Cabinets in The Heights, Houston",
-    metaDescription: "Photos of a Heights, Houston kitchen with charcoal shaker cabinets and a white waterfall island.",
+    metaDescription: "Photos of a Heights, Houston kitchen with charcoal shaker cabinets and a white waterfall island. Call (346) 594-5960 for a free written estimate.",
   },
   {
     // Second Heights kitchen (same 2026-10-11 batch). Island photo cropped to remove
@@ -1156,7 +1156,7 @@ export const PROJECTS: CaseStudy[] = [
       { label: "Warranty", value: "5 years" },
     ],
     metaTitle: "White Beadboard Kitchen Cabinets in The Heights, Houston",
-    metaDescription: "Photos of a Heights, Houston kitchen with white beadboard cabinets, a beadboard island and built-ins.",
+    metaDescription: "Photos of a Heights, Houston kitchen with white beadboard cabinets, a beadboard island and built-ins. Free written estimate: (346) 594-5960.",
   },
   {
     // Job photos supplied by Juan on 2026-10-11: "cabinets in katy". Kitchen photo
@@ -1194,7 +1194,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     metaTitle: "White and Navy Kitchen Cabinets in Katy, TX",
     metaDescription:
-      "Photos of a Katy, TX kitchen with white shaker cabinets and a navy island, plus white living-room built-ins.",
+      "Photos of a Katy, TX kitchen with white shaker cabinets and a navy island, plus white living-room built-ins. Free written estimate: (346) 594-5960.",
   },
   {
     // Job photos supplied by Juan on 2026-10-08: exterior painting in Magnolia,
@@ -1224,7 +1224,7 @@ export const PROJECTS: CaseStudy[] = [
     ],
     metaTitle: "Exterior Painting Project in Magnolia, TX",
     metaDescription:
-      "Photos of a two-story Magnolia, TX home with green lap siding and yellow trim on a wooded lot, after exterior painting.",
+      "Photos of a two-story Magnolia, TX home with green lap siding and yellow trim on a wooded lot, after exterior painting. Free estimate: (346) 594-5960.",
   },
   {
     // Job photos supplied by Juan on 2026-10-08: exterior painting in Pearland,

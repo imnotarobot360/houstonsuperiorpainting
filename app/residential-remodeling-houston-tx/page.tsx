@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     url: URL,
     siteName: BUSINESS.name,
     type: "website",
+    images: [{ url: BUSINESS.ogImage, width: 1200, height: 630, alt: BUSINESS.name }],
   },
   twitter: { card: "summary", title: TITLE, description: DESCRIPTION },
 }

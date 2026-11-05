@@ -12,7 +12,7 @@ import { BUSINESS, PHONE_HREF, PRICES_2026, SMS_HREF } from "@/lib/business"
 const CANONICAL = "https://houstonsuperiorpainting.com/interior-painting-process-houston"
 
 export const metadata: Metadata = {
-  title: "Our 8-Step Interior Painting Process | Houston Superior Painting",
+  title: "Interior Painting Process in Houston: Our 8 Steps",
   description:
     "See our professional 8-step interior painting process: full home protection, surface prep, sanding, priming, and two finish coats.",
   alternates: { canonical: CANONICAL },

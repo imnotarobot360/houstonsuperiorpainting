@@ -14,13 +14,13 @@ import { CheckCircle, Phone, Star, Shield, Clock, Users, ArrowRight } from "luci
 const STUCCO_PROJECTS = LOCAL_PROOF_PROJECTS.filter((p) => p.serviceSlug === "stucco-painting-houston-tx")
 
 export const metadata: Metadata = {
-  title: 'Stucco Painting & Repair Houston TX | Houston Superior Painting',
+  title: 'Stucco Painting & Repair Houston | Houston Superior Painting',
   description: 'Stucco painting and crack repair in Houston, TX, with elastomeric coatings that flex with heat and humidity. 5-year workmanship warranty on qualifying work.',
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/stucco-painting-houston-tx',
   },
   openGraph: {
-    title: 'Stucco Painting & Repair Houston TX | Houston Superior Painting',
+    title: 'Stucco Painting & Repair Houston | Houston Superior Painting',
     description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings that flex with Houston heat and humidity. 5-year workmanship warranty on qualifying work.',
     url: 'https://houstonsuperiorpainting.com/stucco-painting-houston-tx',
     siteName: 'Houston Superior Painting',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stucco Painting & Repair Houston TX | Houston Superior Painting',
+    title: 'Stucco Painting & Repair Houston | Houston Superior Painting',
     description: 'Expert stucco painting and crack repair in Houston, TX. Elastomeric coatings, crack repair, 5-year workmanship warranty on qualifying work.',
     images: ['https://houstonsuperiorpainting.com/images/og/og-stucco-painting.png'],
   },
