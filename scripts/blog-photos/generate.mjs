@@ -54,19 +54,51 @@ if (flag("--dry-run") || todo.length === 0) {
   process.exit(0)
 }
 
-const KEY = process.env.OPENAI_API_KEY
+const looksReal = (k) => /^sk-[A-Za-z0-9_-]{20,}$/.test((k ?? "").trim())
+let KEY = process.env.OPENAI_API_KEY
+// No key (or a placeholder) set: ask for it here. It is kept in memory only.
+if (!looksReal(KEY) && process.stdin.isTTY) {
+  const { createInterface } = await import("node:readline/promises")
+  const rl = createInterface({ input: process.stdin, output: process.stdout })
+  console.log("Paste your OpenAI API key (from https://platform.openai.com/api-keys) and press Enter.")
+  KEY = (await rl.question("Key: ")).trim().replace(/^["']|["']$/g, "")
+  rl.close()
+}
 if (!KEY) {
   console.error("Set OPENAI_API_KEY first (see the top of this file).")
   process.exit(1)
 }
+if (!looksReal(KEY)) {
+  console.error('OPENAI_API_KEY is not a real key (it should start with "sk-" and be about 50+ characters, with no "..." in it).')
+  console.error("Copy your key from https://platform.openai.com/api-keys and set it again.")
+  process.exit(1)
+}
+
+// "fetch failed" hides the real reason (DNS, proxy, firewall, timeout) in e.cause.
+const why = (e) => [e.message, e.cause?.code, e.cause?.message].filter(Boolean).join(" | ")
+
+// Free check before spending anything: can we reach OpenAI, and is the key valid?
+try {
+  const res = await fetch("https://api.openai.com/v1/models", { headers: { Authorization: `Bearer ${KEY.trim()}` } })
+  if (!res.ok) {
+    const json = await res.json().catch(() => ({}))
+    console.error(`OpenAI refused the key (HTTP ${res.status}): ${json?.error?.message ?? "unknown error"}`)
+    process.exit(1)
+  }
+} catch (e) {
+  console.error(`Could not reach api.openai.com: ${why(e)}`)
+  console.error("Check the internet connection, VPN, proxy or antivirus web filter, then run again.")
+  process.exit(1)
+}
 
 let stop = false
+let netFails = 0
 async function one(slug) {
   for (let attempt = 1; attempt <= 3 && !stop; attempt++) {
     try {
       const res = await fetch("https://api.openai.com/v1/images/generations", {
         method: "POST",
-        headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
+        headers: { Authorization: `Bearer ${KEY.trim()}`, "Content-Type": "application/json" },
         body: JSON.stringify({ model: MODEL, prompt: prompt(all[slug]), size: "1536x1024", quality: QUALITY, n: 1 }),
       })
       const json = await res.json()
@@ -76,12 +108,15 @@ async function one(slug) {
         ? Buffer.from(item.b64_json, "base64")
         : Buffer.from(await (await fetch(item.url)).arrayBuffer())
       await savePhoto(buf, slug)
+      netFails = 0
       console.log(`  ok    ${slug}`)
       return true
     } catch (e) {
-      console.log(`  ${attempt < 3 ? "retry" : "FAIL "} ${slug}: ${e.message}`)
+      console.log(`  ${attempt < 3 ? "retry" : "FAIL "} ${slug}: ${why(e)}`)
       // Account problems will not fix themselves: stop instead of burning retries.
       if (/billing|quota|api key|organization must be verified/i.test(e.message)) stop = true
+      // Network down mid-run: stop after a run of failures instead of trying all 169.
+      else if (e.message === "fetch failed" && ++netFails >= 6) stop = true
       else await new Promise((r) => setTimeout(r, 3000 * attempt))
     }
   }
@@ -95,5 +130,5 @@ await Promise.all(
     while (queue.length && !stop) if (await one(queue.shift())) ok++
   }),
 )
-console.log(`${ok}/${todo.length} generated.${stop ? " Stopped early: fix the account problem above and run again." : ""}`)
+console.log(`${ok}/${todo.length} generated.${stop ? " Stopped early: fix the problem above and run again (finished photos are kept)." : ""}`)
 writeManifest()
