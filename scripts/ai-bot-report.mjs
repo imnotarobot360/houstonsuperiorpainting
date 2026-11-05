@@ -44,12 +44,17 @@ for (const [bot, url] of Object.entries(OPENAI_LISTS)) {
   }
 }
 
-const vercel = process.platform === "win32" ? "vercel.cmd" : "vercel"
-const raw = execFileSync(
-  vercel,
-  ["logs", "-p", PROJECT, "-S", SCOPE, "--environment", "production", "--since", SINCE, "-n", "5000", "--json", "--non-interactive"],
-  { encoding: "utf8", maxBuffer: 64 * 1024 * 1024, shell: process.platform === "win32" },
-)
+// Use a global `vercel` if there is one, otherwise `npx vercel` (the owner's PC
+// has no global install).
+const win = process.platform === "win32"
+const logArgs = ["logs", "-p", PROJECT, "-S", SCOPE, "--environment", "production", "--since", SINCE, "-n", "5000", "--json", "--non-interactive"]
+const opts = { encoding: "utf8", maxBuffer: 64 * 1024 * 1024, shell: win, stdio: ["ignore", "pipe", "pipe"] }
+let raw
+try {
+  raw = execFileSync(win ? "vercel.cmd" : "vercel", logArgs, opts)
+} catch {
+  raw = execFileSync(win ? "npx.cmd" : "npx", ["vercel", ...logArgs], opts)
+}
 
 const hits = []
 for (const line of raw.split("\n")) {
@@ -60,6 +65,8 @@ for (const line of raw.split("\n")) {
   } catch {
     continue
   }
+  // Newer Vercel CLIs wrap each entry: {"type":"log","data":{...}}.
+  if (entry.type === "log" && entry.data) entry = entry.data
   // `message` repeats the first line of `logs`, so de-duplicate per entry.
   const messages = new Set([entry.message, ...(entry.logs || []).map((l) => (typeof l === "string" ? l : l.message))])
   for (const m of messages) {
@@ -90,6 +97,7 @@ console.log(`AI crawler hits on production, last ${SINCE}: ${hits.length}`)
 if (!hits.length) console.log("(none in the retained logs; Vercel log retention may be shorter than the window)")
 for (const [key, r] of [...rows].sort((a, b) => b[1].hits - a[1].hits)) {
   const top = [...r.paths].sort((a, b) => b[1] - a[1]).slice(0, 5).map(([p, n]) => `${p} (${n})`).join(", ")
-  const st = [...r.statuses].map(([s, n]) => `${s}×${n}`).join(" ")
-  console.log(`- ${key}: ${r.hits} hits, last ${r.last}, status ${st}\n    top paths: ${top}`)
+  // The proxy's log line carries no response status in newer log formats.
+  const st = [...r.statuses].filter(([s]) => s != null).map(([s, n]) => `${s}×${n}`).join(" ")
+  console.log(`- ${key}: ${r.hits} hits, last ${r.last}${st ? `, status ${st}` : ""}\n    top paths: ${top}`)
 }
