@@ -1,5 +1,851 @@
 {
-  "photos": {},
+  "photos": {
+    "after-hours-commercial-painting-houston": {
+      "src": "/images/blog/photos/after-hours-commercial-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "agreeable-gray-vs-accessible-beige-houston": {
+      "src": "/images/blog/photos/agreeable-gray-vs-accessible-beige-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "alabaster-vs-white-dove-vs-chantilly-lace-houston": {
+      "src": "/images/blog/photos/alabaster-vs-white-dove-vs-chantilly-lace-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "bedroom-paint-colors-for-sleep-houston": {
+      "src": "/images/blog/photos/bedroom-paint-colors-for-sleep-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "benjamin-moore-color-of-the-year-2027-webster-green-houston": {
+      "src": "/images/blog/photos/benjamin-moore-color-of-the-year-2027-webster-green-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "benjamin-moore-color-trends-2027-houston": {
+      "src": "/images/blog/photos/benjamin-moore-color-trends-2027-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "benjamin-moore-vs-sherwin-williams": {
+      "src": "/images/blog/photos/benjamin-moore-vs-sherwin-williams.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "best-exterior-colors-homes-the-woodlands-tx": {
+      "src": "/images/blog/photos/best-exterior-colors-homes-the-woodlands-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "best-interior-paint-colors-houston-homes": {
+      "src": "/images/blog/photos/best-interior-paint-colors-houston-homes.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "best-paint-bathrooms-laundry-rooms-houston": {
+      "src": "/images/blog/photos/best-paint-bathrooms-laundry-rooms-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "best-paint-colors-houston-homes-2027": {
+      "src": "/images/blog/photos/best-paint-colors-houston-homes-2027.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "best-time-to-paint-house-houston": {
+      "src": "/images/blog/photos/best-time-to-paint-house-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "black-interior-trim-doors-houston": {
+      "src": "/images/blog/photos/black-interior-trim-doors-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "cabinet-color-transformations-katy-sugar-land-tx": {
+      "src": "/images/blog/photos/cabinet-color-transformations-katy-sugar-land-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "cabinet-colors-2026-houston-greige-green-black": {
+      "src": "/images/blog/photos/cabinet-colors-2026-houston-greige-green-black.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "cabinet-paint-cure-time-houston": {
+      "src": "/images/blog/photos/cabinet-paint-cure-time-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "cabinet-painting-company-houston-guide": {
+      "src": "/images/blog/photos/cabinet-painting-company-houston-guide.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "cabinet-painting-on-site-vs-off-site": {
+      "src": "/images/blog/photos/cabinet-painting-on-site-vs-off-site.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "cabinet-refinishing-vs-replacement-houston": {
+      "src": "/images/blog/photos/cabinet-refinishing-vs-replacement-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "can-you-paint-exterior-in-winter-houston": {
+      "src": "/images/blog/photos/can-you-paint-exterior-in-winter-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "caulking-before-exterior-painting-houston": {
+      "src": "/images/blog/photos/caulking-before-exterior-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "ceiling-paint-color-white-vs-color": {
+      "src": "/images/blog/photos/ceiling-paint-color-white-vs-color.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "celery-vs-webster-green-2027-color-of-the-year": {
+      "src": "/images/blog/photos/celery-vs-webster-green-2027-color-of-the-year.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "colors-that-go-with-celery-sw-6421": {
+      "src": "/images/blog/photos/colors-that-go-with-celery-sw-6421.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "commercial-office-painting-houston": {
+      "src": "/images/blog/photos/commercial-office-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "compare-commercial-painting-bids-houston": {
+      "src": "/images/blog/photos/compare-commercial-painting-bids-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "cost-paint-ceilings-trim-doors-houston": {
+      "src": "/images/blog/photos/cost-paint-ceilings-trim-doors-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "cost-to-paint-2000-sq-ft-house-houston": {
+      "src": "/images/blog/photos/cost-to-paint-2000-sq-ft-house-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "cost-to-paint-kitchen-cabinets-houston-tx": {
+      "src": "/images/blog/photos/cost-to-paint-kitchen-cabinets-houston-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "dining-room-paint-colors-houston": {
+      "src": "/images/blog/photos/dining-room-paint-colors-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "diy-vs-professional-painting-cost-houston": {
+      "src": "/images/blog/photos/diy-vs-professional-painting-cost-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "do-painters-move-furniture": {
+      "src": "/images/blog/photos/do-painters-move-furniture.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "drywall-repair-before-painting": {
+      "src": "/images/blog/photos/drywall-repair-before-painting.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "drywall-repair-cost-houston": {
+      "src": "/images/blog/photos/drywall-repair-cost-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "emerald-vs-duration-paint": {
+      "src": "/images/blog/photos/emerald-vs-duration-paint.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "evergreen-fog-sw-9130-houston": {
+      "src": "/images/blog/photos/evergreen-fog-sw-9130-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-house-painting-cypress-tx-guide": {
+      "src": "/images/blog/photos/exterior-house-painting-cypress-tx-guide.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-paint-color-mistakes-houston": {
+      "src": "/images/blog/photos/exterior-paint-color-mistakes-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-paint-colors-fulshear-tx": {
+      "src": "/images/blog/photos/exterior-paint-colors-fulshear-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-paint-colors-houston-heights": {
+      "src": "/images/blog/photos/exterior-paint-colors-houston-heights.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-paint-colors-katy-tx": {
+      "src": "/images/blog/photos/exterior-paint-colors-katy-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-paint-colors-magnolia-tx": {
+      "src": "/images/blog/photos/exterior-paint-colors-magnolia-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-paint-colors-pearland-tx": {
+      "src": "/images/blog/photos/exterior-paint-colors-pearland-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-paint-colors-sugar-land-tx": {
+      "src": "/images/blog/photos/exterior-paint-colors-sugar-land-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-paint-sheen-houston": {
+      "src": "/images/blog/photos/exterior-paint-sheen-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-painting-cost-katy-tx": {
+      "src": "/images/blog/photos/exterior-painting-cost-katy-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-painting-cypress-tx-common-problems": {
+      "src": "/images/blog/photos/exterior-painting-cypress-tx-common-problems.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "exterior-painting-timeline-rain-houston": {
+      "src": "/images/blog/photos/exterior-painting-timeline-rain-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "fence-deck-painting-houston-tx": {
+      "src": "/images/blog/photos/fence-deck-painting-houston-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "fill-oak-grain-before-painting-cabinets": {
+      "src": "/images/blog/photos/fill-oak-grain-before-painting-cabinets.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "flat-paint-bathrooms-mistake": {
+      "src": "/images/blog/photos/flat-paint-bathrooms-mistake.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "freeze-damage-exterior-paint-caulk-houston": {
+      "src": "/images/blog/photos/freeze-damage-exterior-paint-caulk-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "front-door-paint-houston-sun": {
+      "src": "/images/blog/photos/front-door-paint-houston-sun.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "garage-door-painting-houston": {
+      "src": "/images/blog/photos/garage-door-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "green-kitchen-cabinet-colors-2027-houston": {
+      "src": "/images/blog/photos/green-kitchen-cabinet-colors-2027-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "haint-blue-porch-ceiling-houston": {
+      "src": "/images/blog/photos/haint-blue-porch-ceiling-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "hang-holiday-decorations-without-damaging-paint": {
+      "src": "/images/blog/photos/hang-holiday-decorations-without-damaging-paint.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "hardieplank-painting-houston": {
+      "src": "/images/blog/photos/hardieplank-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "hoa-exterior-paint-rules-houston-suburbs": {
+      "src": "/images/blog/photos/hoa-exterior-paint-rules-houston-suburbs.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "hoa-multifamily-painting-houston": {
+      "src": "/images/blog/photos/hoa-multifamily-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "homeowner-checklist-before-exterior-painting": {
+      "src": "/images/blog/photos/homeowner-checklist-before-exterior-painting.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "how-houston-weather-damages-exterior-paint": {
+      "src": "/images/blog/photos/how-houston-weather-damages-exterior-paint.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "how-long-before-using-freshly-painted-room": {
+      "src": "/images/blog/photos/how-long-before-using-freshly-painted-room.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "how-long-does-exterior-paint-last-houston": {
+      "src": "/images/blog/photos/how-long-does-exterior-paint-last-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "how-long-does-interior-painting-take-in-houston": {
+      "src": "/images/blog/photos/how-long-does-interior-painting-take-in-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "how-long-does-leftover-paint-last": {
+      "src": "/images/blog/photos/how-long-does-leftover-paint-last.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "how-much-paint-for-a-room": {
+      "src": "/images/blog/photos/how-much-paint-for-a-room.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "how-painters-match-wall-texture": {
+      "src": "/images/blog/photos/how-painters-match-wall-texture.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "how-to-clean-painted-walls": {
+      "src": "/images/blog/photos/how-to-clean-painted-walls.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "how-to-prepare-home-for-interior-painting": {
+      "src": "/images/blog/photos/how-to-prepare-home-for-interior-painting.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "how-to-test-paint-samples": {
+      "src": "/images/blog/photos/how-to-test-paint-samples.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "how-to-verify-painting-contractor-insurance-houston": {
+      "src": "/images/blog/photos/how-to-verify-painting-contractor-insurance-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "interior-painting-before-holidays-houston": {
+      "src": "/images/blog/photos/interior-painting-before-holidays-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "kitchen-wall-paint-washable-houston": {
+      "src": "/images/blog/photos/kitchen-wall-paint-washable-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "latex-paint-over-oil-based-paint": {
+      "src": "/images/blog/photos/latex-paint-over-oil-based-paint.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "limewash-cost-houston": {
+      "src": "/images/blog/photos/limewash-cost-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "limewash-vs-german-smear-houston": {
+      "src": "/images/blog/photos/limewash-vs-german-smear-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "load-bearing-wall-removal-cost-houston": {
+      "src": "/images/blog/photos/load-bearing-wall-removal-cost-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "low-voc-zero-voc-paint-houston": {
+      "src": "/images/blog/photos/low-voc-zero-voc-paint-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "medical-dental-office-painting-houston": {
+      "src": "/images/blog/photos/medical-dental-office-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "naval-sw-6244-houston": {
+      "src": "/images/blog/photos/naval-sw-6244-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "navy-kitchen-island-cabinet-color-houston-tx": {
+      "src": "/images/blog/photos/navy-kitchen-island-cabinet-color-houston-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "north-vs-south-facing-room-paint-colors-houston": {
+      "src": "/images/blog/photos/north-vs-south-facing-room-paint-colors-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "nursery-kids-room-painting": {
+      "src": "/images/blog/photos/nursery-kids-room-painting.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "office-painting-holiday-shutdown-houston": {
+      "src": "/images/blog/photos/office-painting-holiday-shutdown-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "open-floor-plan-paint-colors-houston": {
+      "src": "/images/blog/photos/open-floor-plan-paint-colors-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "orange-peel-vs-knockdown-vs-smooth-walls": {
+      "src": "/images/blog/photos/orange-peel-vs-knockdown-vs-smooth-walls.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "paint-before-moving-in-houston": {
+      "src": "/images/blog/photos/paint-before-moving-in-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "paint-colors-small-rooms-houston": {
+      "src": "/images/blog/photos/paint-colors-small-rooms-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "paint-dark-walls-lighter-color": {
+      "src": "/images/blog/photos/paint-dark-walls-lighter-color.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "paint-finishes-matte-eggshell-satin-semi-gloss": {
+      "src": "/images/blog/photos/paint-finishes-matte-eggshell-satin-semi-gloss.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "paint-house-before-selling-houston": {
+      "src": "/images/blog/photos/paint-house-before-selling-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "paint-inside-kitchen-cabinets": {
+      "src": "/images/blog/photos/paint-inside-kitchen-cabinets.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "paint-laminate-thermofoil-cabinets": {
+      "src": "/images/blog/photos/paint-laminate-thermofoil-cabinets.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "paint-over-water-stains-houston": {
+      "src": "/images/blog/photos/paint-over-water-stains-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "paint-preparation-houston-climate": {
+      "src": "/images/blog/photos/paint-preparation-houston-climate.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "paint-stained-wood-trim-houston": {
+      "src": "/images/blog/photos/paint-stained-wood-trim-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "paint-warranty-texas": {
+      "src": "/images/blog/photos/paint-warranty-texas.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painters-near-me-katy-tx": {
+      "src": "/images/blog/photos/painters-near-me-katy-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-after-foundation-repair-houston": {
+      "src": "/images/blog/photos/painting-after-foundation-repair-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-arches-niches-houston": {
+      "src": "/images/blog/photos/painting-arches-niches-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-bathroom-vanity-houston": {
+      "src": "/images/blog/photos/painting-bathroom-vanity-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-brick-fireplace-houston": {
+      "src": "/images/blog/photos/painting-brick-fireplace-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-brick-houston": {
+      "src": "/images/blog/photos/painting-brick-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-built-ins-bookshelves-houston": {
+      "src": "/images/blog/photos/painting-built-ins-bookshelves-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-cedar-wood-siding-houston": {
+      "src": "/images/blog/photos/painting-cedar-wood-siding-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-concrete-porch-steps-houston": {
+      "src": "/images/blog/photos/painting-concrete-porch-steps-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-contractor-sugar-land-insurance-warranty": {
+      "src": "/images/blog/photos/painting-contractor-sugar-land-insurance-warranty.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-exterior-trim-only-houston": {
+      "src": "/images/blog/photos/painting-exterior-trim-only-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-garage-walls-houston": {
+      "src": "/images/blog/photos/painting-garage-walls-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-gutters-downspouts-houston": {
+      "src": "/images/blog/photos/painting-gutters-downspouts-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-hallways-high-traffic-houston": {
+      "src": "/images/blog/photos/painting-hallways-high-traffic-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-high-ceilings-foyers-stairwells-houston": {
+      "src": "/images/blog/photos/painting-high-ceilings-foyers-stairwells-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-home-office-houston": {
+      "src": "/images/blog/photos/painting-home-office-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-interior-doors-houston": {
+      "src": "/images/blog/photos/painting-interior-doors-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-media-game-room-houston": {
+      "src": "/images/blog/photos/painting-media-game-room-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-metal-railings-gates-houston": {
+      "src": "/images/blog/photos/painting-metal-railings-gates-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-pergola-patio-cover-houston": {
+      "src": "/images/blog/photos/painting-pergola-patio-cover-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-porch-columns-posts-houston": {
+      "src": "/images/blog/photos/painting-porch-columns-posts-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-shiplap-board-and-batten-houston": {
+      "src": "/images/blog/photos/painting-shiplap-board-and-batten-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-shutters-houston": {
+      "src": "/images/blog/photos/painting-shutters-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-stair-railings-banisters-spindles": {
+      "src": "/images/blog/photos/painting-stair-railings-banisters-spindles.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-stucco-texture-interior-walls": {
+      "src": "/images/blog/photos/painting-stucco-texture-interior-walls.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-sunroom-houston": {
+      "src": "/images/blog/photos/painting-sunroom-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-two-story-house-exterior-houston": {
+      "src": "/images/blog/photos/painting-two-story-house-exterior-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-vinyl-siding-houston": {
+      "src": "/images/blog/photos/painting-vinyl-siding-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-wood-ceiling-beams-houston": {
+      "src": "/images/blog/photos/painting-wood-ceiling-beams-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "painting-wood-paneling-houston": {
+      "src": "/images/blog/photos/painting-wood-paneling-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "plan-2027-painting-project-houston": {
+      "src": "/images/blog/photos/plan-2027-painting-project-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "popcorn-ceiling-removal-houston": {
+      "src": "/images/blog/photos/popcorn-ceiling-removal-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "pressure-washing-before-painting": {
+      "src": "/images/blog/photos/pressure-washing-before-painting.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "pressure-washing-cost-houston": {
+      "src": "/images/blog/photos/pressure-washing-cost-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "primer-vs-two-coats-paint-houston": {
+      "src": "/images/blog/photos/primer-vs-two-coats-paint-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "rental-turnover-painting-houston": {
+      "src": "/images/blog/photos/rental-turnover-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "repainting-builder-grade-paint-new-home-houston": {
+      "src": "/images/blog/photos/repainting-builder-grade-paint-new-home-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "repose-gray-vs-agreeable-gray-houston": {
+      "src": "/images/blog/photos/repose-gray-vs-agreeable-gray-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "restaurant-retail-painting-houston": {
+      "src": "/images/blog/photos/restaurant-retail-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "revere-pewter-vs-edgecomb-gray-houston": {
+      "src": "/images/blog/photos/revere-pewter-vs-edgecomb-gray-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "sea-salt-sw-6204-houston": {
+      "src": "/images/blog/photos/sea-salt-sw-6204-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "sherwin-williams-color-of-the-year-2027-celery-houston": {
+      "src": "/images/blog/photos/sherwin-williams-color-of-the-year-2027-celery-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "sherwin-williams-rewild-2027-colors-houston": {
+      "src": "/images/blog/photos/sherwin-williams-rewild-2027-colors-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "should-trim-be-same-color-as-walls": {
+      "src": "/images/blog/photos/should-trim-be-same-color-as-walls.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "should-you-paint-closets": {
+      "src": "/images/blog/photos/should-you-paint-closets.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "soffit-fascia-painting-houston": {
+      "src": "/images/blog/photos/soffit-fascia-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "soft-washing-cost-houston": {
+      "src": "/images/blog/photos/soft-washing-cost-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "spray-vs-brush-roll-painting-houston": {
+      "src": "/images/blog/photos/spray-vs-brush-roll-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "spring-exterior-painting-checklist-houston": {
+      "src": "/images/blog/photos/spring-exterior-painting-checklist-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "spring-rain-damage-houston-exterior-paint": {
+      "src": "/images/blog/photos/spring-rain-damage-houston-exterior-paint.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "stay-home-during-interior-painting-houston": {
+      "src": "/images/blog/photos/stay-home-during-interior-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "stucco-painting-cost-houston": {
+      "src": "/images/blog/photos/stucco-painting-cost-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "stucco-painting-houston-guide": {
+      "src": "/images/blog/photos/stucco-painting-houston-guide.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "townhome-painting-cinco-ranch-cross-creek-riverstone": {
+      "src": "/images/blog/photos/townhome-painting-cinco-ranch-cross-creek-riverstone.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "tricorn-black-sw-6258-houston": {
+      "src": "/images/blog/photos/tricorn-black-sw-6258-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "trim-door-colors-red-brick-house-houston": {
+      "src": "/images/blog/photos/trim-door-colors-red-brick-house-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "two-tone-walls-wainscoting-houston": {
+      "src": "/images/blog/photos/two-tone-walls-wainscoting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "urbane-bronze-sw-7048-houston": {
+      "src": "/images/blog/photos/urbane-bronze-sw-7048-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "venetian-plaster-houston-tx": {
+      "src": "/images/blog/photos/venetian-plaster-houston-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "wallpaper-removal-cost-houston": {
+      "src": "/images/blog/photos/wallpaper-removal-cost-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "warehouse-industrial-painting-houston": {
+      "src": "/images/blog/photos/warehouse-industrial-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "what-to-expect-painting-estimate": {
+      "src": "/images/blog/photos/what-to-expect-painting-estimate.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "where-to-use-celery-sw-6421": {
+      "src": "/images/blog/photos/where-to-use-celery-sw-6421.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "why-diy-cabinet-painting-fails-houston-tx": {
+      "src": "/images/blog/photos/why-diy-cabinet-painting-fails-houston-tx.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "why-paint-peels-bubbles-houston": {
+      "src": "/images/blog/photos/why-paint-peels-bubbles-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "why-paint-touch-ups-dont-match": {
+      "src": "/images/blog/photos/why-paint-touch-ups-dont-match.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "why-white-painted-cabinets-turn-yellow": {
+      "src": "/images/blog/photos/why-white-painted-cabinets-turn-yellow.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "why-winter-good-time-interior-painting-houston": {
+      "src": "/images/blog/photos/why-winter-good-time-interior-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "window-trim-sill-painting-houston": {
+      "src": "/images/blog/photos/window-trim-sill-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "wood-rot-repair-before-painting-houston": {
+      "src": "/images/blog/photos/wood-rot-repair-before-painting-houston.jpg",
+      "width": 1600,
+      "height": 900
+    },
+    "wood-rot-repair-cost-houston": {
+      "src": "/images/blog/photos/wood-rot-repair-cost-houston.jpg",
+      "width": 1600,
+      "height": 900
+    }
+  },
   "fallbacks": {
     "after-hours-commercial-painting-houston": "/images/blog/art/after-hours-commercial-painting-houston.png",
     "agreeable-gray-vs-accessible-beige-houston": "/images/blog/art/agreeable-gray-vs-accessible-beige-houston.png",

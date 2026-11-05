@@ -20,9 +20,9 @@ A post without a photo keeps its current image (the title card or older picture)
 You need an OpenAI API key with billing enabled (https://platform.openai.com/api-keys). In PowerShell, from `C:\sites\houstonsuperiorpainting`:
 
 ```powershell
-node scripts/blog-photos/generate.mjs --dry-run    # shows how many and the estimated cost
-node scripts/blog-photos/generate.mjs --limit 3    # make 3 first and look at them
-node scripts/blog-photos/generate.mjs              # make the rest
+node --use-system-ca scripts/blog-photos/generate.mjs --dry-run    # shows how many and the estimated cost
+node --use-system-ca scripts/blog-photos/generate.mjs --limit 3    # make 3 first and look at them
+node --use-system-ca scripts/blog-photos/generate.mjs              # make the rest
 ```
 
 The script asks you to paste your key (it starts with `sk-`); it is kept in memory only, never saved. You can also set it first with `$env:OPENAI_API_KEY = "sk-...your key..."`. The script checks the key and the connection for free before making anything.
@@ -32,7 +32,7 @@ About $0.06 per photo at the default quality (about $10–11 for all 169). Photo
 **Review before pushing.** Open `public/images/blog/photos/` and look at each photo. If one is wrong (odd hands, text in the image, doesn't match the article), adjust its description in `data/blog-photos.json` and redo just that one:
 
 ```powershell
-node scripts/blog-photos/generate.mjs --only why-paint-touch-ups-dont-match --force
+node --use-system-ca scripts/blog-photos/generate.mjs --only why-paint-touch-ups-dont-match --force
 ```
 
 These photos are illustrative. They are not pictures of Houston Superior Painting jobs; real job photos belong on the Projects pages.

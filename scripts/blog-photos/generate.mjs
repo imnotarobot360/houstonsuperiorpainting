@@ -21,7 +21,8 @@ import { PHOTO_DIR, savePhoto, scenes, writeManifest } from "./lib.mjs"
 const args = process.argv.slice(2)
 const flag = (n) => args.includes(n)
 const val = (n) => (args.includes(n) ? args[args.indexOf(n) + 1] : undefined)
-const MODEL = process.env.OPENAI_IMAGE_MODEL || "gpt-image-1"
+// Picked after the key check from the models this account can use (see below).
+let MODEL = process.env.OPENAI_IMAGE_MODEL || "gpt-image-1"
 const QUALITY = process.env.OPENAI_IMAGE_QUALITY || "medium"
 // Approximate USD per 1536x1024 image for gpt-image-1, for the estimate only.
 const PRICE = { low: 0.016, medium: 0.063, high: 0.25 }
@@ -47,7 +48,7 @@ const prompt = (scene) =>
   "No text, letters, numbers, signs, logos, brand names, labels or watermarks anywhere in the image. No recognizable faces."
 
 const cost = (todo.length * (PRICE[QUALITY] ?? 0.07)).toFixed(2)
-console.log(`${todo.length} photo(s) to generate with ${MODEL} (${QUALITY}); estimated cost about $${cost}`)
+console.log(`${todo.length} photo(s) to generate (${QUALITY}); estimated cost about ${cost}`)
 if (flag("--dry-run") || todo.length === 0) {
   todo.slice(0, 10).forEach((s) => console.log(`  ${s}: ${all[s]}`))
   if (todo.length > 10) console.log(`  ...and ${todo.length - 10} more`)
@@ -80,11 +81,28 @@ const why = (e) => [e.message, e.cause?.code, e.cause?.message].filter(Boolean).
 // Free check before spending anything: can we reach OpenAI, and is the key valid?
 try {
   const res = await fetch("https://api.openai.com/v1/models", { headers: { Authorization: `Bearer ${KEY.trim()}` } })
+  const json = await res.json().catch(() => ({}))
   if (!res.ok) {
-    const json = await res.json().catch(() => ({}))
     console.error(`OpenAI refused the key (HTTP ${res.status}): ${json?.error?.message ?? "unknown error"}`)
     process.exit(1)
   }
+  // Image model names change over time and not every account has every one,
+  // so use the newest image model this key can actually see.
+  const ids = (json.data ?? []).map((m) => m.id)
+  const images = ids.filter((id) => /^gpt-image|^dall-e-3$/.test(id)).sort().reverse()
+  const wanted = process.env.OPENAI_IMAGE_MODEL
+  const pick =
+    (wanted && ids.includes(wanted) && wanted) ||
+    images.find((id) => /^gpt-image-[\d.]+$/.test(id)) ||
+    images.find((id) => id.startsWith("gpt-image")) ||
+    images.find((id) => id === "dall-e-3")
+  if (!pick) {
+    console.error("This OpenAI account has no image model available. Image models it can see: none.")
+    console.error("At https://platform.openai.com/settings/organization/general, verify the organization, then run again.")
+    process.exit(1)
+  }
+  MODEL = pick
+  console.log(`Using ${MODEL} (image models on this account: ${images.join(", ")})`)
 } catch (e) {
   console.error(`Could not reach api.openai.com: ${why(e)}`)
   console.error("Check the internet connection, VPN, proxy or antivirus web filter, then run again.")
@@ -99,7 +117,11 @@ async function one(slug) {
       const res = await fetch("https://api.openai.com/v1/images/generations", {
         method: "POST",
         headers: { Authorization: `Bearer ${KEY.trim()}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ model: MODEL, prompt: prompt(all[slug]), size: "1536x1024", quality: QUALITY, n: 1 }),
+        body: JSON.stringify(
+          MODEL === "dall-e-3"
+            ? { model: MODEL, prompt: prompt(all[slug]), size: "1792x1024", quality: QUALITY === "high" ? "hd" : "standard", response_format: "b64_json", n: 1 }
+            : { model: MODEL, prompt: prompt(all[slug]), size: "1536x1024", quality: QUALITY, n: 1 },
+        ),
       })
       const json = await res.json()
       if (!res.ok) throw new Error(json?.error?.message || `HTTP ${res.status}`)
@@ -114,7 +136,7 @@ async function one(slug) {
     } catch (e) {
       console.log(`  ${attempt < 3 ? "retry" : "FAIL "} ${slug}: ${why(e)}`)
       // Account problems will not fix themselves: stop instead of burning retries.
-      if (/billing|quota|api key|organization must be verified/i.test(e.message)) stop = true
+      if (/billing|quota|api key|organization must be verified|does not exist|not have access/i.test(e.message)) stop = true
       // Network down mid-run: stop after a run of failures instead of trying all 169.
       else if (e.message === "fetch failed" && ++netFails >= 6) stop = true
       else await new Promise((r) => setTimeout(r, 3000 * attempt))
