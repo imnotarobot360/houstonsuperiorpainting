@@ -8,7 +8,7 @@ import { IDENTITY_NOTES } from "./llms-full"
 const locationLines = BUSINESS.locations
   .map((o) => {
     const addr = publicAddressLine(o)
-    return `- ${o.label}: ${addr ?? servingLine(o)} — https://houstonsuperiorpainting.com/${o.pageSlug}`
+    return `- ${o.label}: ${addr ?? servingLine(o)} · ${o.phone} — https://houstonsuperiorpainting.com/${o.pageSlug}`
   })
   .join("\n")
 

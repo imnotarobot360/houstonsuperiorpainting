@@ -52,7 +52,7 @@ export const LOCATIONS: OfficeLocation[] = [
     slug: "cypress",
     city: "Cypress",
     gbpName: "Houston Superior Painting - Cypress",
-    street: "14150 Huffmeister Rd, Suite 410",
+    street: "14150 Huffmeister Rd suite 410",
     zip: "77429",
     latitude: 29.9745,
     longitude: -95.6445,

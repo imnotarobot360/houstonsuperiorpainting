@@ -18,7 +18,7 @@ Houston Superior Painting, founded in 2019 by Juan Serra and headquartered in Cy
 | Legal name | Houston Superior Painting LLC |
 | Founded | 2019 |
 | Owner | Juan Serra, Owner |
-| Headquarters | 14150 Huffmeister Rd, Suite 410, Cypress, TX 77429 |
+| Headquarters | 14150 Huffmeister Rd suite 410, Cypress, TX 77429 |
 | Phone | (346) 594-5960 |
 | Email | info@houstonsuperiorpainting.com |
 | Website | https://houstonsuperiorpainting.com |

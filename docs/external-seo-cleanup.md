@@ -93,7 +93,7 @@ URL Inspection steps for each URL:
 
 ## 7. Additions from the 2026-10-27 second brief
 
-Correct values for every listing: **Houston Superior Painting** · founder **Juan Serra** · founded **2019** · **(346) 594-5960** · https://houstonsuperiorpainting.com · HQ 14150 Huffmeister Rd, Suite 410, Cypress, TX 77429 · Texas does not issue a statewide painting-contractor license (never "licensed") · no bonding or coverage-amount claims · no "no upfront cost" wording.
+Correct values for every listing: **Houston Superior Painting** · founder **Juan Serra** · founded **2019** · **(346) 594-5960** · https://houstonsuperiorpainting.com · HQ 14150 Huffmeister Rd suite 410, Cypress, TX 77429 · Texas does not issue a statewide painting-contractor license (never "licensed") · no bonding or coverage-amount claims · no "no upfront cost" wording.
 
 Evidence to have ready for any correction request: a utility bill or business document showing the business name and address, the Google Business Profile link for the office, the website contact page, and access to the business phone or email for verification.
 

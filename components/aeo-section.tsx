@@ -27,7 +27,7 @@ export function AEOSection() {
           </h3>
           <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-muted-foreground leading-relaxed list-none pl-0 mb-2">
             <li><strong className="text-foreground">Founded:</strong> 2019 by Juan Serra</li>
-            <li><strong className="text-foreground">Headquarters:</strong> 14150 Huffmeister Rd, Suite 410, Cypress, TX 77429</li>
+            <li><strong className="text-foreground">Headquarters:</strong> 14150 Huffmeister Rd suite 410, Cypress, TX 77429</li>
             <li><strong className="text-foreground">Phone:</strong> {BUSINESS.phone}</li>
             <li><strong className="text-foreground">Reviews:</strong> {reviewSummaryText()}</li>
             <li><strong className="text-foreground">Warranty:</strong> {warrantyYears}-year written workmanship warranty on qualifying painting projects</li>

@@ -181,7 +181,8 @@ export function officeLocalBusinessSchema(office: Office) {
     "@id": `${pageUrl}#location`,
     name: BUSINESS.name,
     url: pageUrl,
-    telephone: BUSINESS.phoneE164,
+    // This office's own number (lib/business.ts locations), not the company line.
+    telephone: office.phoneE164,
     email: BUSINESS.email,
     image: BUSINESS.ogImage,
     logo: BUSINESS.logo,

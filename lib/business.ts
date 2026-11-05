@@ -73,7 +73,7 @@ export const BUSINESS = {
   // Geocoded from the street address; confirm against the Google Business
   // Profile pin, since a mismatch weakens local ranking signals.
   primaryAddress: {
-    street: "14150 Huffmeister Rd, Suite 410",
+    street: "14150 Huffmeister Rd suite 410",
     city: "Cypress",
     state: "TX",
     zip: "77429",
@@ -90,6 +90,10 @@ export const BUSINESS = {
   locations: [
     {
       slug: "houston-bissonnet",
+      /** This office's own number, used in its LocalBusiness schema and "Visit our office" block. */
+      // TODO verify against Houston GBP. Not (346) 812-4492: docs/external-seo-cleanup.md traces that number to another painter.
+      phone: "(346) 594-5960",
+      phoneE164: "+1-346-594-5960",
       /** The city page this office's Google Business Profile points to. */
       pageSlug: "painters-houston-tx",
       // GBP "Share" link, supplied by the owner 2026-10-10.
@@ -108,6 +112,10 @@ export const BUSINESS = {
     },
     {
       slug: "katy-fm1463",
+      /** This office's own number, used in its LocalBusiness schema and "Visit our office" block. */
+      // TODO verify against Katy GBP ((346) 545-5556 appears on one directory only).
+      phone: "(346) 594-5960",
+      phoneE164: "+1-346-594-5960",
       /** The city page this office's Google Business Profile points to. */
       pageSlug: "painters-katy-tx",
       // GBP "Share" link, supplied by the owner 2026-10-10.
@@ -126,6 +134,10 @@ export const BUSINESS = {
     },
     {
       slug: "cypress-huffmeister",
+      /** This office's own number, used in its LocalBusiness schema and "Visit our office" block. */
+      // VERIFIED against the Cypress GBP 2026-11-05.
+      phone: "(346) 594-5960",
+      phoneE164: "+1-346-594-5960",
       /** The city page this office's Google Business Profile points to. */
       pageSlug: "painters-cypress-tx",
       // GBP "Share" link, supplied by the owner 2026-10-10.
@@ -133,7 +145,7 @@ export const BUSINESS = {
       label: "Cypress (headquarters)",
       /** Juan confirmed a staffed office customers can visit, 2026-10-25. */
       locationType: "staffed_office" as LocationType,
-      street: "14150 Huffmeister Rd, Suite 410",
+      street: "14150 Huffmeister Rd suite 410",
       city: "Cypress",
       state: "TX",
       zip: "77429",
@@ -146,6 +158,10 @@ export const BUSINESS = {
     },
     {
       slug: "sugar-land-university",
+      /** This office's own number, used in its LocalBusiness schema and "Visit our office" block. */
+      // TODO verify against Sugar Land GBP.
+      phone: "(346) 594-5960",
+      phoneE164: "+1-346-594-5960",
       /** The city page this office's Google Business Profile points to. */
       pageSlug: "painters-sugar-land-tx",
       // GBP "Share" link, supplied by the owner 2026-10-10.
@@ -165,6 +181,10 @@ export const BUSINESS = {
     },
     {
       slug: "magnolia-cottontop",
+      /** This office's own number, used in its LocalBusiness schema and "Visit our office" block. */
+      // TODO verify against Magnolia GBP.
+      phone: "(346) 594-5960",
+      phoneE164: "+1-346-594-5960",
       /** The city page this office's Google Business Profile points to. */
       pageSlug: "painters-magnolia-tx",
       // GBP "Share" link, supplied by the owner 2026-10-10.
@@ -187,6 +207,7 @@ export const BUSINESS = {
   // ─── Hours (single source of truth — use everywhere) ───
   // Juan confirmed these are the real customer-facing hours, 2026-10-27. The
   // Google profiles still showed "Open 24 hours" then; they are to be updated to match.
+  // GBP hours must be changed from "24 hours" to match this. Never put 24 hours in schema.
   hours: {
     monday:    { open: "07:00", close: "19:00", display: "7:00 AM – 7:00 PM" },
     tuesday:   { open: "07:00", close: "19:00", display: "7:00 AM – 7:00 PM" },

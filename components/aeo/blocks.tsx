@@ -256,8 +256,9 @@ export function OfficeNap({ office }: { office: Office }) {
         </p>
         <p className="flex items-center gap-2">
           <Phone className="h-5 w-5 text-primary" />
-          <a href={PHONE_HREF} className="font-medium text-foreground hover:text-primary">
-            {BUSINESS.phone}
+          {/* This office's own number; the header, footer and CTAs keep the company line. */}
+          <a href={`tel:${office.phoneE164.replace(/-/g, "")}`} className="font-medium text-foreground hover:text-primary">
+            {office.phone}
           </a>
         </p>
         <div className="flex items-start gap-2 text-foreground/90">
