@@ -37,9 +37,14 @@ const cormorant = Cormorant_Garamond({
   preload: false,
 });
 
+// display: "optional" (owner decision 2026-11-05, mobile LCP): the homepage LCP
+// is Manrope text, and with "swap" it was re-painted when the font arrived, so
+// LCP waited on the font. With "optional" a slow first visit keeps the fallback
+// font for that page view; fast connections and repeat visits still get Manrope.
 const manrope = Manrope({
   subsets: ["latin"],
-  variable: '--font-manrope'
+  variable: '--font-manrope',
+  display: 'optional',
 });
 
 export const metadata: Metadata = {
