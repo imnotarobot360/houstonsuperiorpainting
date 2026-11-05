@@ -30,6 +30,16 @@ export function proxy(request: NextRequest) {
     )
   }
 
+  // next.config.mjs sets skipTrailingSlashRedirect so its redirects see the
+  // slash first; every other /path/ is sent to /path here, as Next did before.
+  if (request.nextUrl.pathname.length > 1 && request.nextUrl.pathname.endsWith("/")) {
+    // A plain URL: NextURL re-adds the trailing slash when formatted, which
+    // would redirect /about/ to itself.
+    const url = new URL(request.url)
+    url.pathname = url.pathname.replace(/\/+$/, "")
+    return NextResponse.redirect(url, 308)
+  }
+
   const isEpoxyHost = request.headers.get("host")?.startsWith("epoxy.") ?? false
   const { pathname } = request.nextUrl
   const isEpoxyPath = pathname === "/epoxy" || pathname.startsWith("/epoxy/")

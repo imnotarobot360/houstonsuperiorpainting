@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Trailing slashes are stripped in proxy.ts instead, AFTER these redirects run,
+  // so a redirect listed with a trailing-slash source is one hop, not two
+  // (/old-page/ -> /old-page -> /new-page). Brief 2026-11-05, phase 3.
+  skipTrailingSlashRedirect: true,
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -172,6 +176,10 @@ const nextConfig = {
       // that would be a two-hop chain, which bleeds authority on each hop.
       { source: '/garage-epoxy', destination: 'https://houstonsuperiorepoxy.com/', permanent: true },
       { source: '/residential-exterior-painting', destination: '/exterior-painting-houston-tx', permanent: true },
+      { source: '/residential-exterior-painting/', destination: '/exterior-painting-houston-tx', permanent: true },
+      // Old URL still indexed and 404ing (brief 2026-11-05).
+      { source: '/commercial-exterior-painting', destination: '/commercial-painting-houston-tx', permanent: true },
+      { source: '/commercial-exterior-painting/', destination: '/commercial-painting-houston-tx', permanent: true },
       { source: '/commercial-interior-painting', destination: '/commercial-painting-houston-tx', permanent: true },
       { source: '/trim-painting', destination: '/interior-painting-houston-tx', permanent: true },
       { source: '/garage-door-painting', destination: '/exterior-painting-houston-tx', permanent: true },
