@@ -22,7 +22,10 @@ export function StickyCTA() {
   const focused = useHidesStickyCta()
   const [pastHero, setPastHero] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
-  const overContent = useOverlapsContent(ref, !focused)
+  // While hovered or keyboard-focused the pill widens to show its label; don't
+  // re-test then, or the wider box hides itself under the visitor's cursor.
+  const [engaged, setEngaged] = useState(false)
+  const overContent = useOverlapsContent(ref, !focused && !engaged)
 
   useEffect(() => {
     const onScroll = () => setPastHero(window.scrollY > 700)
@@ -43,8 +46,12 @@ export function StickyCTA() {
     <div
       ref={ref}
       data-floating-ui
+      onPointerEnter={() => setEngaged(true)}
+      onPointerLeave={() => setEngaged(false)}
+      onFocus={() => setEngaged(true)}
+      onBlur={() => setEngaged(false)}
       className={`hidden lg:flex fixed bottom-6 left-3 z-40 flex-col items-start gap-2 transition-all duration-300 ${
-        visible ? "opacity-100 translate-y-0" : "pointer-events-none opacity-0 translate-y-4"
+        visible ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
     >
       <a
@@ -52,7 +59,7 @@ export function StickyCTA() {
         data-contact-location="desktop_sticky_cta"
         aria-label={`Call ${BUSINESS.name} at ${BUSINESS.phone}`}
         title={`Call ${BUSINESS.phone}`}
-        className={`${pill} bg-primary px-3.5 text-primary-foreground hover:bg-primary/90 focus-visible:outline-primary`}
+        className={`${pill} bg-primary px-3.5 text-primary-foreground ring-1 ring-gold/50 hover:bg-primary/90 focus-visible:outline-primary`}
       >
         <Phone className="h-4 w-4 shrink-0" aria-hidden="true" />
         <span className={label}>{BUSINESS.phone}</span>
