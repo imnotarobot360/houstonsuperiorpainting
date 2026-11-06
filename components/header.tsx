@@ -51,14 +51,17 @@ const navLinks = [
 
 function Wordmark({ light }: { light: boolean }) {
   return (
-    <Link href="/" className="flex items-center" aria-label={`${BUSINESS.name} home`}>
+    <Link href="/" className="flex shrink-0 items-center" aria-label={`${BUSINESS.name} home`}>
+      {/* logo-header.png is logo.png with its empty margins trimmed (owner UI
+          brief 2026-11-05): the same artwork, but the lettering is ~2.2x larger
+          at the same height, so it stays legible in the compact header. */}
       <Image
-        src="/images/logo.png"
+        src="/images/logo-header.png"
         alt={`${BUSINESS.name} logo`}
-        width={171}
-        height={120}
+        width={1200}
+        height={453}
         priority
-        className={`h-12 sm:h-14 w-auto transition-all duration-500 ${
+        className={`h-10 sm:h-12 w-auto transition-[filter] duration-300 ${
           light ? "brightness-0 invert" : ""
         }`}
       />
@@ -97,15 +100,17 @@ export function Header({ overHero = false }: { overHero?: boolean }) {
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         transparent
           ? "bg-transparent py-4"
-          : "bg-background/80 backdrop-blur-xl border-b border-border py-2 shadow-[0_1px_30px_rgba(13,17,23,0.06)]"
+          : // Near-solid once scrolled (was /80): over the dark CTA, footer and
+            // photos an 80% wash went grey and the colour logo lost contrast.
+            "bg-background/95 backdrop-blur-xl border-b border-border py-2 shadow-[0_1px_30px_rgba(13,17,23,0.06)]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between gap-6 h-16">
           <Wordmark light={light} />
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-9">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
             {navLinks.slice(0, 2).map((l) => (
               <Link key={l.href} href={l.href} className={`${linkBase} ${linkColor}`}>
                 {l.title}
@@ -166,14 +171,16 @@ export function Header({ overHero = false }: { overHero?: boolean }) {
             <a
               href={PHONE_HREF}
               aria-label={`Call ${BUSINESS.name} at ${BUSINESS.phone}`}
-              className={`flex items-center gap-2 ${linkBase} ${linkColor}`}
+              className={`flex items-center gap-2 whitespace-nowrap ${linkBase} ${linkColor}`}
             >
               <Phone className="h-4 w-4" />
-              <span>{BUSINESS.phone}</span>
+              {/* Icon-only from 1024 to 1279px so the larger logo fits (the
+                  link keeps its aria-label); the number returns at xl. */}
+              <span className="hidden xl:inline">{BUSINESS.phone}</span>
             </a>
             <Link
               href={ESTIMATE_PATH}
-              className="font-manrope text-sm font-semibold bg-secondary text-secondary-foreground px-5 py-2.5 rounded-md hover:bg-secondary/90 transition-colors"
+              className="whitespace-nowrap font-manrope text-sm font-semibold bg-secondary text-secondary-foreground px-5 py-2.5 rounded-md hover:bg-secondary/90 transition-colors"
             >
               Request My Free Estimate
             </Link>
