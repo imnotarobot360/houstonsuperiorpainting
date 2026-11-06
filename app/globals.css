@@ -201,6 +201,15 @@
   html {
     scroll-behavior: smooth;
   }
+  /* Owner UI brief 2026-11-05: phones have a fixed Call / Text / Quote bar at
+     the bottom. Keep focused form fields, the submit button and #anchors above
+     it instead of scrolling them behind it (the hero form's submit button sat
+     under the bar after typing in the last field). Only where the bar renders. */
+  @media (max-width: 767px) {
+    html:has(.mobile-sticky-bar) {
+      scroll-padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+    }
+  }
   body {
     @apply bg-background text-foreground;
     -webkit-font-smoothing: antialiased;
@@ -210,11 +219,19 @@
   }
 }
 
-@layer utilities {
-  /* Gold eyebrow / kicker label used across luxury sections */
+/* Gold eyebrow / kicker label used across luxury sections. In the components
+   layer (was utilities) so a colour utility on the element wins: on dark
+   sections `kicker text-gold` now really renders gold (#c6a86a, ~8.6:1 on
+   midnight). Before, .kicker's gold-deep overrode it and the hero eyebrow was
+   3.7:1 on navy (owner UI brief 2026-11-05, WCAG AA). Light sections keep
+   gold-deep (4.5:1+ on cream/white). */
+@layer components {
   .kicker {
     @apply font-manrope text-xs font-semibold uppercase tracking-[0.25em] text-gold-deep;
   }
+}
+
+@layer utilities {
 
   /* Apple-style fade-up reveal driven by IntersectionObserver (.is-visible) */
   .reveal {

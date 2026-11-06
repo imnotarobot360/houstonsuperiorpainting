@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import { useOverlapsContent } from "@/lib/use-overlaps-content"
 import { MessageCircle } from "lucide-react"
 import { useHidesInterruptions } from "@/lib/focused-routes"
 
@@ -98,8 +99,13 @@ function loadWidget() {
 
 export function ChatLauncher() {
   const focused = useHidesInterruptions()
-  const yieldToContent = useChatShouldYield()
+  const nearCta = useChatShouldYield()
   const [state, setState] = useState<"idle" | "loading" | "done">("idle")
+  // Owner UI brief 2026-11-05: also step aside while any text, image or control
+  // is under the button, so it never covers content at any viewport size.
+  const ref = useRef<HTMLButtonElement>(null)
+  const overContent = useOverlapsContent(ref, !focused && state === "idle")
+  const yieldToContent = nearCta || overContent
 
   if (focused || state === "done") return null
 
@@ -130,7 +136,9 @@ export function ChatLauncher() {
 
   return (
     <button
+      ref={ref}
       type="button"
+      data-floating-ui
       onClick={() => start(true)}
       onPointerEnter={(e) => e.pointerType === "mouse" && start(false)}
       onFocus={() => start(false)}
