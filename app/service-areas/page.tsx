@@ -123,7 +123,7 @@ export default function ServiceAreasPage() {
                       Painters in {office.city}, TX
                     </Link>
                   </h3>
-                  <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-gold-deep mb-3">
                     {office.label}
                   </p>
                   <p className="flex items-start gap-2 text-foreground">

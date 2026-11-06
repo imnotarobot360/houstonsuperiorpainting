@@ -63,7 +63,7 @@ const serviceCards = [
 
 export function LuxuryServices() {
   return (
-    <section id="services" className="scroll-mt-24 bg-background py-24 sm:py-32">
+    <section id="services" className="scroll-mt-24 bg-background py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="max-w-2xl mb-16">
           <p className="kicker mb-4">Our Craft</p>
@@ -109,7 +109,7 @@ export function LuxuryServices() {
 
 export function LuxuryBeforeAfter() {
   return (
-    <section className="bg-champagne py-24 sm:py-32">
+    <section className="bg-champagne py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center max-w-2xl mx-auto mb-14">
           <p className="kicker mb-4">The Transformation</p>
@@ -141,7 +141,7 @@ const steps = [
 
 export function LuxuryProcess() {
   return (
-    <section className="bg-midnight py-24 sm:py-32">
+    <section className="bg-midnight py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="max-w-2xl mb-16">
           <p className="kicker mb-4 text-gold">The Process</p>
@@ -178,7 +178,7 @@ const projects = [
 
 export function LuxuryProjects() {
   return (
-    <section id="projects" className="scroll-mt-24 bg-background py-24 sm:py-32">
+    <section id="projects" className="scroll-mt-24 bg-background py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
           <div className="max-w-2xl">
@@ -232,7 +232,7 @@ const testimonials = PUBLISHED_REVIEWS.map((r) => ({ quote: r.excerpt, name: r.n
 
 export function LuxuryTestimonials() {
   return (
-    <section id="reviews" className="scroll-mt-24 bg-champagne py-24 sm:py-32">
+    <section id="reviews" className="scroll-mt-24 bg-champagne py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center max-w-2xl mx-auto mb-14">
           <p className="kicker mb-4">Client Experiences</p>
@@ -332,7 +332,7 @@ const insights = [
 
 export function LuxuryInsights() {
   return (
-    <section className="bg-background py-24 sm:py-32">
+    <section className="bg-background py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
           <div className="max-w-2xl">
@@ -376,7 +376,7 @@ export function LuxuryInsights() {
 
 export function LuxuryCTA() {
   return (
-    <section className="relative bg-midnight py-28 sm:py-36 overflow-hidden">
+    <section className="relative bg-midnight py-20 md:py-24 overflow-hidden">
       <div className="absolute inset-0 opacity-[0.07]">
         <Image src="/images/luxury/hero-estate.png" alt="Two-story Houston home exterior at dusk after painting" fill className="object-cover" />
       </div>

@@ -14,7 +14,7 @@ import { LOCATIONS } from "@/lib/locations"
  */
 export function LocationsSection() {
   return (
-    <section id="areas" className="scroll-mt-24 bg-champagne py-24 sm:py-32">
+    <section id="areas" className="scroll-mt-24 bg-champagne py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="max-w-2xl mb-16">
           <p className="kicker mb-4">Service Areas</p>

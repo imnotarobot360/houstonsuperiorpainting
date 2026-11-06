@@ -381,7 +381,7 @@ export default function PaintingEstimatePage() {
                     <span className="font-semibold text-foreground">{line.label}</span>
                   </div>
                   <p className="text-sm leading-relaxed text-muted-foreground">{line.detail}</p>
-                  <p className="inline-flex items-start gap-2 text-sm leading-relaxed text-muted-foreground/80">
+                  <p className="inline-flex items-start gap-2 text-sm leading-relaxed text-muted-foreground">
                     <X
                       className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-destructive"
                       aria-hidden="true"
@@ -453,7 +453,7 @@ export default function PaintingEstimatePage() {
                     </div>
 
                     <div className="flex flex-1 flex-col p-5">
-                      <p className="font-manrope text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
+                      <p className="font-manrope text-[11px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
                         {project.service}
                       </p>
                       <h3 className="mt-2 font-display text-lg font-semibold leading-snug text-foreground text-pretty">

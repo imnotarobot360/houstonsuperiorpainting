@@ -69,7 +69,7 @@ export default async function ConfirmedPage({ params }: { params: Promise<{ toke
       <main className="min-h-screen bg-background">
         <div className="mx-auto flex max-w-2xl flex-col gap-8 px-4 py-12 sm:px-6 lg:py-16">
           <div className="flex flex-col gap-3">
-            <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-accent">
+            <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-gold-deep">
               <Check className="size-4" aria-hidden="true" />
               {appointment ? "Appointment confirmed" : "Request received"}
             </span>
@@ -101,7 +101,7 @@ export default async function ConfirmedPage({ params }: { params: Promise<{ toke
               in the detail list. */}
           {appointment && (
             <div className="flex flex-col gap-1 rounded-2xl border border-accent bg-card p-6">
-              <span className="text-sm font-semibold uppercase tracking-widest text-accent">Your appointment</span>
+              <span className="text-sm font-semibold uppercase tracking-widest text-gold-deep">Your appointment</span>
               <p className="font-serif text-2xl leading-tight text-foreground text-balance">{appointment}</p>
               <p className="text-sm leading-relaxed text-muted-foreground text-pretty">
                 Central Time · about 30 minutes. Need to move it? Just call and we&apos;ll reschedule.

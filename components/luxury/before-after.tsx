@@ -105,14 +105,14 @@ export function BeforeAfter({ beforeSrc, afterSrc, beforeAlt, afterAlt }: Before
     >
       {/* After (full) */}
       <Image src={afterSrc} alt={afterAlt} fill sizes="(max-width:768px) 100vw, 80vw" className="object-cover" />
-      <span className="absolute bottom-4 right-4 z-20 font-manrope text-[0.6rem] uppercase tracking-[0.25em] bg-midnight/70 text-gold px-3 py-1.5 rounded">
+      <span className="absolute bottom-4 right-4 z-20 font-manrope text-[0.6rem] uppercase tracking-[0.25em] bg-midnight/85 text-gold px-3 py-1.5 rounded">
         After
       </span>
 
       {/* Before (clipped via clip-path so the image never distorts) */}
       <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
         <Image src={beforeSrc} alt={beforeAlt} fill sizes="(max-width:768px) 100vw, 80vw" className="object-cover" />
-        <span className="absolute bottom-4 left-4 z-20 font-manrope text-[0.6rem] uppercase tracking-[0.25em] bg-midnight/70 text-soft-white px-3 py-1.5 rounded">
+        <span className="absolute bottom-4 left-4 z-20 font-manrope text-[0.6rem] uppercase tracking-[0.25em] bg-midnight/85 text-soft-white px-3 py-1.5 rounded">
           Before
         </span>
       </div>

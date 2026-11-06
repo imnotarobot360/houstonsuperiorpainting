@@ -209,7 +209,7 @@ export function Footer() {
           <div className="flex flex-wrap justify-center gap-x-2 gap-y-1 text-sm">
             {SERVICE_AREAS.map((area, i) => (
               <Fragment key={area.slug}>
-                {i > 0 && <span className="text-background/40">•</span>}
+                {i > 0 && <span aria-hidden="true" className="text-background/40">•</span>}
                 <Link
                   href={`/${area.slug}`}
                   className="text-background/60 hover:text-background transition-colors"
