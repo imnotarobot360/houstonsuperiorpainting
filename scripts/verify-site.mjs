@@ -129,6 +129,20 @@ if (!org) fail("homepage has no Organization schema")
 else if (orgLocations !== OFFICES.filter((o) => o.verified).length) fail(`Organization schema lists ${orgLocations} locations; only verified offices may be listed`)
 const lbPages = [...pages].filter(([, r]) => flat(jsonld(r.text)).some((n) => /LocalBusiness|HousePainter/.test([].concat(n["@type"]).join(",")))).map(([p]) => p)
 console.log(`LocalBusiness pages: ${lbPages.join(" ")}`)
+// Owner schema brief 2026-11-07: the homepage carries one HousePainter for the
+// company (HQ address, linked to the Organization); everything else that has
+// LocalBusiness must be a verified office page.
+const allowedLb = new Set(["/", ...OFFICES.filter((o) => o.verified).map((o) => o.page)])
+for (const p of lbPages) if (!allowedLb.has(p)) fail(`${p} has LocalBusiness schema but is neither / nor a verified office`)
+const homeBiz = flat(jsonld(pages.get("/")?.text || "")).filter((n) => n["@id"] === "https://houstonsuperiorpainting.com/#business")
+if (homeBiz.length !== 1) fail(`homepage has ${homeBiz.length} #business nodes (want 1)`)
+else {
+  const b = homeBiz[0]
+  if (b.parentOrganization?.["@id"] !== "https://houstonsuperiorpainting.com/#organization") fail("homepage #business is not linked to the Organization")
+  if (!(org?.subOrganization || []).some((x) => x["@id"] === b["@id"])) fail("Organization does not reference #business")
+  if (!/14150 Huffmeister/.test(b.address?.streetAddress || "")) fail("homepage #business address is not the Cypress HQ")
+  if (b.aggregateRating || b.review) fail("homepage #business must not carry aggregateRating/review")
+}
 
 // 5. Warranty: 5-year everywhere, never 1-year / lifetime
 const warrantyBad = /\b(one|1)[- ]year (transferable |workmanship )?warranty|lifetime (workmanship )?warranty|\b(two|three|2|3)[- ]year (workmanship )?warranty/i

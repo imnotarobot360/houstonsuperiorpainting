@@ -118,7 +118,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: {
     canonical: URL,
-    languages: { "en-us": `${BUSINESS.url}/`, "es-US": URL, "x-default": `${BUSINESS.url}/` },
+    languages: { "en-US": `${BUSINESS.url}/`, "es-US": URL, "x-default": `${BUSINESS.url}/` },
   },
   openGraph: {
     title: TITLE,

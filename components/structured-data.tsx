@@ -2,6 +2,7 @@
 // Sitewide: Organization + WebSite + Person. LocalBusiness only on the 5 office city pages.
 
 import { BUSINESS, SERVICE_AREAS, isVerifiedOffice, officeForPage, officeMapsUrl, type Office } from "@/lib/business"
+import { REVIEW_PROFILES } from "@/data/review-profiles"
 
 // Places in SERVICE_AREAS that are neighborhoods / master-planned communities
 // rather than incorporated or census-designated places. Typing River Oaks or
@@ -116,13 +117,14 @@ export const siteGraphSchema = {
       // Only owner-verified staffed offices get their own LocalBusiness node
       // (owner brief 2026-10-25). Houston Superior Epoxy is a separate sister
       // brand and is not listed as a sub-organization.
-      ...(BUSINESS.locations.some(isVerifiedOffice)
-        ? {
-            subOrganization: BUSINESS.locations.filter(isVerifiedOffice).map((l) => ({
-              "@id": `${BUSINESS.url}/${l.pageSlug}#location`,
-            })),
-          }
-        : {}),
+      // The homepage HousePainter (#business, homeBusinessSchema) plus the
+      // office nodes; each points back here with parentOrganization.
+      subOrganization: [
+        { "@id": "https://houstonsuperiorpainting.com/#business" },
+        ...BUSINESS.locations.filter(isVerifiedOffice).map((l) => ({
+          "@id": `${BUSINESS.url}/${l.pageSlug}#location`,
+        })),
+      ],
       sameAs: SAME_AS,
     },
     {
@@ -206,6 +208,57 @@ export function officeLocalBusinessSchema(office: Office) {
     })),
     priceRange: "$$",
     knowsLanguage: ["en", "es"],
+  }
+}
+
+/**
+ * Homepage-only HousePainter (LocalBusiness) for the company as a whole, at its
+ * Cypress headquarters (owner schema brief 2026-11-07). Emitted on "/" only —
+ * never sitewide (that is what told Google every page was the Cypress office).
+ * NAP comes from the same BUSINESS fields as the office pages, so it can't
+ * drift from them. Linked both ways with the sitewide Organization:
+ * parentOrganization here, subOrganization there. No aggregateRating.
+ */
+export const BUSINESS_ID = "https://houstonsuperiorpainting.com/#business"
+
+const HOME_AREAS = [
+  "Houston", "Cypress", "Katy", "Sugar Land", "Magnolia", "The Woodlands",
+  "Richmond", "Fulshear", "Pearland", "Memorial", "The Heights",
+]
+
+export function homeBusinessSchema() {
+  const hq = BUSINESS.primaryAddress
+  return {
+    "@context": "https://schema.org",
+    "@type": "HousePainter",
+    "@id": BUSINESS_ID,
+    name: BUSINESS.name,
+    url: BUSINESS.url,
+    telephone: BUSINESS.phoneE164,
+    email: BUSINESS.email,
+    image: BUSINESS.ogImage,
+    logo: BUSINESS.logo,
+    parentOrganization: { "@id": ORG_ID },
+    founder: { "@id": OWNER_ID },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: hq.street,
+      addressLocality: hq.city,
+      addressRegion: hq.state,
+      postalCode: hq.zip,
+      addressCountry: hq.country,
+    },
+    geo: { "@type": "GeoCoordinates", latitude: hq.latitude, longitude: hq.longitude },
+    openingHoursSpecification: OFFICE_HOURS,
+    priceRange: "$$",
+    areaServed: HOME_AREAS.map((name) => ({
+      "@type": NEIGHBORHOOD_AREAS.has(name) ? "Neighborhood" : "City",
+      name,
+    })),
+    knowsLanguage: ["en", "es"],
+    // The Google Business Profiles linked in the homepage's "Read verified
+    // customer reviews on Google" strip.
+    sameAs: REVIEW_PROFILES.map((p) => p.url).filter((u): u is string => Boolean(u)),
   }
 }
 

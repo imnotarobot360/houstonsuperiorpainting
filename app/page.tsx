@@ -21,13 +21,14 @@ import { QuickEstimateForm } from "@/components/quick-estimate-form"
 import { PopularServicesByArea } from "@/components/popular-services-by-area"
 import Link from "next/link"
 import { PRICES_2026 } from "@/lib/business"
+import { JsonLd, homeBusinessSchema } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://houstonsuperiorpainting.com/',
     // Spanish page /es (owner brief 2026-10-14); reciprocal hreflang.
     languages: {
-      'en-us': 'https://houstonsuperiorpainting.com/',
+      'en-US': 'https://houstonsuperiorpainting.com/',
       'es-US': 'https://houstonsuperiorpainting.com/es',
       'x-default': 'https://houstonsuperiorpainting.com/',
     },
@@ -80,6 +81,8 @@ const homeFaqs = [
 export default function Home() {
   return (
     <>
+      {/* Homepage-only HousePainter (owner schema brief 2026-11-07). */}
+      <JsonLd data={homeBusinessSchema()} />
       <Header overHero />
       <main>
       <LuxuryHero />

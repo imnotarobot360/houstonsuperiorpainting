@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { JsonLd } from "@/components/structured-data"
+import { JsonLd, ORG_ID, WEBSITE_ID } from "@/components/structured-data"
 import { PageHero, QuickAnswer, Section, CtaBlock, breadcrumbNode, ESTIMATE_PATH, SITE } from "@/components/aeo/blocks"
 import { OfficeReviewCards, SHOWN_PROFILES } from "@/components/office-reviews"
 import { PUBLISHED_REVIEWS } from "@/data/reviews"
@@ -31,10 +31,26 @@ export default function ReviewsPage() {
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          ...breadcrumbNode([
-            { name: "Home", path: "/" },
-            { name: "Reviews", path: PAGE_PATH },
-          ]),
+          "@graph": [
+            // The page itself (owner schema brief 2026-11-07). Deliberately no
+            // Review/AggregateRating: self-serving review markup on our own
+            // pages is against Google's rules. The quotes stay plain text.
+            {
+              "@type": "CollectionPage",
+              "@id": `${PAGE_URL}#webpage`,
+              url: PAGE_URL,
+              name: TITLE,
+              description: DESCRIPTION,
+              inLanguage: "en-US",
+              isPartOf: { "@id": WEBSITE_ID },
+              about: { "@id": ORG_ID },
+              significantLink: SHOWN_PROFILES.map((p) => p.url),
+            },
+            breadcrumbNode([
+              { name: "Home", path: "/" },
+              { name: "Reviews", path: PAGE_PATH },
+            ]),
+          ],
         }}
       />
       <Header />
