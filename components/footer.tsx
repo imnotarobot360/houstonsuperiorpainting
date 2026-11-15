@@ -221,6 +221,37 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Parent group (owner 2026-11-15). The sentence is rendered with the
+            live member sites linked; Remodeling stays plain text until its
+            site launches (BUSINESS.group.members[].live). */}
+        <div className="mt-8 pt-6 border-t border-background/10 flex flex-col items-center gap-3 text-center">
+          {BUSINESS.group.logo && (
+            <Image
+              src={BUSINESS.group.logo}
+              alt={`${BUSINESS.group.name} logo`}
+              width={600}
+              height={200}
+              className="h-12 w-auto"
+            />
+          )}
+          <p className="max-w-2xl text-sm text-background/70">
+            {BUSINESS.name} is part of <span className="font-semibold text-background/90">{BUSINESS.group.name}</span>, alongside{" "}
+            {BUSINESS.group.members.map((m, i) => (
+              <Fragment key={m.name}>
+                {i > 0 && " and "}
+                {m.live ? (
+                  <a href={m.url} target="_blank" rel="noopener" className="underline underline-offset-2 hover:text-background">
+                    {m.name}
+                  </a>
+                ) : (
+                  m.name
+                )}
+              </Fragment>
+            ))}
+            .
+          </p>
+        </div>
+
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-background/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">

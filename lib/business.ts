@@ -312,6 +312,22 @@ export const BUSINESS = {
       "Garage-floor coating services and warranty terms are provided separately by our sister company, Houston Superior Epoxy.",
   },
 
+  // ─── Parent group (owner 2026-11-15) ───────────────────
+  // Shown in the footer on every page and as parentOrganization in the schema.
+  // Members are named only; their services, prices and phones stay off this
+  // site (same rule as sisterBrand). A member is linked only once its site is
+  // live: Remodeling is "Coming Soon" (owner: leave it unlinked for now) — set
+  // `live: true` when it launches. `logo` stays null until the owner sends the
+  // Houston Superior Groups logo; then drop the file in public/images and set it.
+  group: {
+    name: "Houston Superior Groups",
+    logo: null as string | null,
+    members: [
+      { name: "Houston Superior Epoxy", url: "https://houstonsuperiorepoxy.com", live: true },
+      { name: "Houston Superior Remodeling", url: "https://houstonsuperiorremodeling.com", live: false },
+    ],
+  },
+
   // ─── Brands / partners ─────────────────────────────────
   // Brands we use. Juan confirmed Farrow & Ball 2026-10-07 (and again 2026-10-27).
   // Owner briefs 2026-10-27: Sherwin-Williams and Benjamin Moore formally granted

@@ -104,6 +104,19 @@ export const siteGraphSchema = {
         addressCountry: BUSINESS.primaryAddress.country,
       },
       founder: { "@id": OWNER_ID },
+      // Parent group (owner 2026-11-15). Members named only; Remodeling gets a
+      // url once its site is live (BUSINESS.group.members[].live).
+      parentOrganization: {
+        "@type": "Organization",
+        "@id": "https://houstonsuperiorpainting.com/#group",
+        name: BUSINESS.group.name,
+        ...(BUSINESS.group.logo ? { logo: `${BUSINESS.url}${BUSINESS.group.logo}` } : {}),
+        subOrganization: BUSINESS.group.members.map((m) => ({
+          "@type": "Organization",
+          name: m.name,
+          ...(m.live ? { url: m.url } : {}),
+        })),
+      },
       slogan: BUSINESS.slogan,
       knowsLanguage: ["en", "es"],
       areaServed: AREA_SERVED,
