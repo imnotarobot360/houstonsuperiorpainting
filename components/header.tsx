@@ -51,19 +51,28 @@ const navLinks = [
 
 function Wordmark({ light }: { light: boolean }) {
   return (
-    <Link href="/" className="flex shrink-0 items-center" aria-label={`${BUSINESS.name} home`}>
-      {/* logo-header.png is logo.png with its empty margins trimmed (owner UI
-          brief 2026-11-05): the same artwork, but the lettering is ~2.2x larger
-          at the same height, so it stays legible in the compact header. */}
+    <Link href="/" className="relative flex shrink-0 items-center" aria-label={`${BUSINESS.name} home`}>
+      {/* New logo (owner, 2026-11-15). logo-dark.png is the artwork as designed
+          (white HOUSTON) for the transparent header over the dark hero;
+          logo-light.png is the same artwork with HOUSTON in navy for the solid
+          light header. Both are rendered and cross-faded so scrolling never
+          waits on an image download. */}
       <Image
-        src="/images/logo-header.png"
+        src="/images/logo-light.png"
         alt={`${BUSINESS.name} logo`}
         width={1200}
-        height={453}
+        height={454}
         priority
-        className={`h-10 sm:h-12 w-auto transition-[filter] duration-300 ${
-          light ? "brightness-0 invert" : ""
-        }`}
+        className={`h-10 sm:h-12 w-auto transition-opacity duration-300 ${light ? "opacity-0" : "opacity-100"}`}
+      />
+      <Image
+        src="/images/logo-dark.png"
+        alt=""
+        aria-hidden="true"
+        width={1200}
+        height={454}
+        priority
+        className={`absolute inset-y-0 left-0 my-auto h-10 sm:h-12 w-auto transition-opacity duration-300 ${light ? "opacity-100" : "opacity-0"}`}
       />
     </Link>
   )

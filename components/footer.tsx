@@ -44,11 +44,11 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-dark.png"
                 alt={`${BUSINESS.name} logo`}
-                width={171}
-                height={120}
-                className="h-20 w-auto brightness-0 invert"
+                width={1200}
+                height={454}
+                className="h-16 w-auto"
               />
             </Link>
             <p className="font-cormorant text-xl text-soft-white/80 leading-relaxed italic">

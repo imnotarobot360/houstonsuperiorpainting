@@ -250,16 +250,16 @@ export default function PaintingEstimatePage() {
       <header className="border-b border-border bg-card">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-3">
           <Link href="/" className="flex items-center gap-2.5">
+            {/* New wordmark (owner, 2026-11-15) already spells out the name, so
+                the text beside it is kept for screen readers only. */}
             <Image
-              src="/images/logo.png"
+              src="/images/logo-light.png"
               alt={`${BUSINESS.name} logo`}
-              width={40}
-              height={40}
-              className="h-9 w-9 object-contain"
+              width={1200}
+              height={454}
+              className="h-9 w-auto"
             />
-            <span className="font-display text-sm font-bold leading-tight text-foreground sm:text-base">
-              {BUSINESS.name}
-            </span>
+            <span className="sr-only">{BUSINESS.name}</span>
           </Link>
           <a
             href={PHONE_HREF}
