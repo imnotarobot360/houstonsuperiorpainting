@@ -3,7 +3,9 @@ import Link from "next/link"
 import { ShieldCheck } from "lucide-react"
 import { LandingViewTracker } from "@/components/landing-view-tracker"
 import { FreeEstimateForm } from "@/components/free-estimate/free-estimate-form"
-import { BUSINESS, PHONE_HREF, publicAddressLine } from "@/lib/business"
+import { EstimateBookingFlow } from "@/components/estimate-booking-flow"
+import { PriceTable } from "@/components/aeo/blocks"
+import { BUSINESS, PHONE_HREF, PRICES_2026, PRICING_DISCLAIMER, publicAddressLine } from "@/lib/business"
 import { FREE_ESTIMATE_COPY, FREE_ESTIMATE_PATHS, SERVICE_AREA_LINE, type Lang } from "@/lib/free-estimate-copy"
 
 /**
@@ -20,7 +22,11 @@ const HOURS_ES: Record<string, string> = { "Mon–Fri": "Lun–Vie", Saturday: "
 export function FreeEstimateLanding({ lang }: { lang: Lang }) {
   const t = FREE_ESTIMATE_COPY[lang]
   const other: Lang = lang === "en" ? "es" : "en"
-  const book = BUSINESS.scheduler.embedUrl
+  // English books on-page with the tracked booking flow, so Google Ads sees the
+  // appointment_booked conversion; the Spanish page keeps the InsightPaint link.
+  const onPage = lang === "en"
+  const book = onPage ? "#estimate-funnel" : BUSINESS.scheduler.embedUrl
+  const ext = onPage ? {} : { target: "_blank", rel: "noopener" }
   const offices = [...BUSINESS.locations].sort((a, b) => {
     const ia = OFFICE_ORDER.indexOf(a.slug)
     const ib = OFFICE_ORDER.indexOf(b.slug)
@@ -67,7 +73,7 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
               <h1 className="font-display text-[clamp(32px,5vw,52px)] font-extrabold leading-[1.1] text-balance">{t.h1}</h1>
               <p className="text-lg leading-relaxed text-white/85">{t.sub}</p>
               <div className="flex flex-wrap items-center gap-4">
-                <a href={book} target="_blank" rel="noopener" className={cta}>
+                <a href={book} {...ext} className={cta}>
                   {t.cta}
                 </a>
                 <a href="#estimate-form" className="text-[15px] font-medium text-white underline-offset-4 hover:underline">
@@ -75,15 +81,21 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
                 </a>
               </div>
             </div>
-            <Image
-              src="/images/blog/choose-best-painters-houston.jpg"
-              alt={t.heroAlt}
-              width={1024}
-              height={1024}
-              priority
-              sizes="(min-width: 1024px) 520px, 100vw"
-              className="aspect-[4/3] w-full min-w-0 flex-[1_1_360px] rounded-xl object-cover"
-            />
+            {onPage ? (
+              <div className="w-full min-w-0 flex-[1_1_360px] text-foreground">
+                <EstimateBookingFlow />
+              </div>
+            ) : (
+              <Image
+                src="/images/blog/choose-best-painters-houston.jpg"
+                alt={t.heroAlt}
+                width={1024}
+                height={1024}
+                priority
+                sizes="(min-width: 1024px) 520px, 100vw"
+                className="aspect-[4/3] w-full min-w-0 flex-[1_1_360px] rounded-xl object-cover"
+              />
+            )}
           </div>
         </section>
 
@@ -97,6 +109,26 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
             ))}
           </ul>
         </section>
+
+        {onPage && (
+          <section className="mx-auto flex max-w-[820px] flex-col gap-3 px-5 pt-14">
+            <h2 className={h2}>What painting costs in Houston</h2>
+            <PriceTable
+              head={["Project", "Typical range"]}
+              rows={[
+                ["Interior, one room (walls)", PRICES_2026.singleRoom],
+                ["Interior, per sq ft of floor area", PRICES_2026.interiorPerSqFt],
+                ["Whole interior, 2,000 sq ft home", PRICES_2026.fullInterior2000],
+                ["Kitchen cabinets", PRICES_2026.cabinetsPerKitchen],
+                ["Exterior, typical home (example)", PRICES_2026.exteriorPerHome],
+              ]}
+              note={PRICING_DISCLAIMER}
+            />
+            <a href="#estimate-funnel" className="font-semibold text-midnight underline underline-offset-4">
+              Get your exact price: book a free written estimate
+            </a>
+          </section>
+        )}
 
         <section className="mx-auto flex max-w-6xl flex-col gap-7 px-5 py-16">
           <h2 className={h2}>{t.whyTitle}</h2>
@@ -164,7 +196,7 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
         <section className="bg-midnight text-white">
           <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-5 px-5 py-14">
             <h2 className="flex-[1_1_420px] font-display text-[28px] leading-tight">{t.finalTitle}</h2>
-            <a href={book} target="_blank" rel="noopener" className={cta}>
+            <a href={book} {...ext} className={cta}>
               {t.cta}
             </a>
           </div>
@@ -224,7 +256,7 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
 
       {/* Phones: book and call stay one tap away. */}
       <div className="fixed inset-x-0 bottom-0 z-40 flex gap-2.5 border-t border-border bg-white px-3 pb-[calc(10px+env(safe-area-inset-bottom))] pt-2.5 md:hidden">
-        <a href={book} target="_blank" rel="noopener" className="inline-flex min-h-12 flex-1 items-center justify-center rounded-lg bg-secondary text-[15px] font-bold text-secondary-foreground">
+        <a href={book} {...ext} className="inline-flex min-h-12 flex-1 items-center justify-center rounded-lg bg-secondary text-[15px] font-bold text-secondary-foreground">
           {t.stickyBook}
         </a>
         <a
