@@ -10,7 +10,7 @@ export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-JHH1X8LD8E"
 
 // Same convention as GA_ID: a Meta Pixel ID ships in the page source anyway,
 // so an env override is a convenience, not a secret.
-export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "1089287971750305"
+export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "1429407921920455"
 
 type GtagArgs = [string, string, Record<string, unknown>?]
 
