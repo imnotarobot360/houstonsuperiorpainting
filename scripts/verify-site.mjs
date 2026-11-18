@@ -209,8 +209,9 @@ const warrantyText = visible(pages.get("/warranty")?.text || "")
 if (/15 years on delamination|Garage Floor Epoxy:/i.test(warrantyText)) fail("/warranty still lists the epoxy 15-year warranty")
 if (!pages.has("/insurance-and-warranty")) fail("/insurance-and-warranty not in sitemap")
 if (!/budgeting guidance, last reviewed/.test(visible(pages.get("/houston-painting-cost-guide")?.text || ""))) fail("cost guide missing the pricing disclaimer")
-// Insurance, bonding and counts the owner brief (2026-10-25) does not allow.
-const trustBad = /\$2\s?M\b|\$2 million|workers['’]?\s?comp|bonded (and|&) insured|insured (and|&) bonded|(?<![\d,$])500\+|houstonsuperiorpainting\.net|\btransferable\b|lifetime warranty|satisfaction guarantee|\b4\.9\b(?! ?(?:%|sq|ft|in|gal|hours?))/i
+// Counts and claims the owner brief (2026-10-25) does not allow. Insured and
+// bonded, $2M liability and workers' comp were approved 2026-11-18.
+const trustBad = /(?<![\d,$])500\+|houstonsuperiorpainting\.net|\btransferable\b|lifetime warranty|satisfaction guarantee|\b4\.9\b(?! ?(?:%|sq|ft|in|gal|hours?))/i
 // Consumer-education sentences allowed by scripts/content-audit-allowlist.json.
 const trustAllowed = /workers.{0,2}compensation covers a|workers.{0,2}compensation for employers|which texas does not require most private employers/i
 const trustGlobal = new RegExp(trustBad.source, "gi")

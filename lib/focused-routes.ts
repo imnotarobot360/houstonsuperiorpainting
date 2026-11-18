@@ -52,6 +52,9 @@ const INTERRUPTION_FREE_PREFIXES = ["/chatgpt/", "/offer/"]
  */
 const STICKY_CTA_FREE_PATHS = new Set<string>([
   "/painting-estimate-houston",
+  // These carry their own phone/book bar (owner brief 2026-11-18).
+  "/offer/free-estimate",
+  "/offer/estimado-gratis",
 ])
 
 /** Trailing slashes normalised so "/foo/" matches "/foo". */

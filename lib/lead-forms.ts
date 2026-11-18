@@ -45,7 +45,45 @@ export const COMMERCIAL_PROPERTY_TYPES = [
 export const TIMEFRAMES = ["As soon as possible", "Within 1 month", "1–3 months", "Just planning"] as const
 export const CONTACT_METHODS = ["Phone call", "Text message", "Email"] as const
 
-export const LEAD_FORMS: Record<"quick" | "commercial" | "budget" | "visualizer", LeadFormConfig> = {
+/** Free written estimate landing page (/offer/free-estimate, owner brief 2026-11-18). */
+export const FREE_ESTIMATE_PROJECT_TYPES = [
+  "Exterior painting",
+  "Interior painting",
+  "Cabinets",
+  "Drywall & texture",
+  "Brick painting / Limewash",
+  "Deck or fence",
+  "Front door",
+  "Stain & varnish",
+  "Commercial interior",
+  "Not sure yet",
+] as const
+
+export const FREE_ESTIMATE_AREAS = [
+  "Whole exterior",
+  "Trim / siding",
+  "Whole interior",
+  "Specific rooms",
+  "Kitchen cabinets",
+  "Other",
+] as const
+
+export const LEAD_FORMS: Record<"quick" | "commercial" | "budget" | "visualizer" | "free", LeadFormConfig> = {
+  // Free written estimate ad landing page (/offer/free-estimate and
+  // /offer/estimado-gratis, owner brief 2026-11-18). Stored values stay English.
+  free: {
+    service: "free",
+    label: "Free written estimate (ad landing page)",
+    questions: [
+      { id: "projectType", question: "Project type" },
+      { id: "areas", question: "Area(s) to paint" },
+      { id: "timeframe", question: "Desired timeframe" },
+      { id: "contactMethod", question: "Preferred contact method" },
+      { id: "description", question: "Project description" },
+      { id: "promoConsent", question: "Opted in to tips and seasonal updates" },
+      { id: "language", question: "Preferred language" },
+    ],
+  },
   // Exterior paint visualizer (/paint-visualizer, owner brief 2026-10-16). The
   // answers are built by buildAnswers() in lib/visualizer/request.ts.
   visualizer: {

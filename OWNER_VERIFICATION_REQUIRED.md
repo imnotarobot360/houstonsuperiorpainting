@@ -22,14 +22,14 @@ Last reviewed: 2026-10-25 (owner brief "site trust / SEO consistency"; earlier r
 | Workmanship warranty | Five-year written workmanship warranty on qualifying painting projects, subject to the signed terms (`BUSINESS.warranty`) | owner brief 2026-10-25 |
 | Booking | scheduler at https://app.insightpaint.com/book/houston-superior (Juan, 2026-10-08: switched from app.houstonsuperiorgroups.com, same system). "Book an Appointment" buttons on the homepage hero and the estimate page; embedded on /contact | owner |
 | Payment policy | Free written estimates; the approved estimate states scope, deposit requirements and payment schedule before work begins (`BUSINESS.paymentPolicy`). No "no upfront" style promises. | owner brief 2026-10-25 |
-| Insurance | Business insurance; current proof on request; COI before work when required (`BUSINESS.insurance`). ~~$2M general liability + workers' comp~~: needs a current COI showing limits and a WC policy before it can return. | owner brief 2026-10-25 |
+| Insurance | Insured and bonded, $2 million liability insurance and workers' compensation; current proof on request; COI before work when required (`BUSINESS.insurance`). Owner confirmed the documents are on file. | owner, 2026-11-18 (was removed 2026-10-25) |
 | Paint brands | Sherwin-Williams, Benjamin Moore, Farrow & Ball | owner, 2026-10-07 |
 | Specialty finishes | Venetian plaster, Roman Clay, limewash, faux, metallic, lacquer, grasscloth | owner, 2026-10-07 |
 | Residential remodeling | offered (page built from existing services: wall removal, drywall, carpentry/rot, wallpaper, painting) | owner, 2026-10-08 |
 | Five locations | Cypress (HQ), Houston, Katy, Sugar Land, Magnolia. All set to `owner_verification_required`: described as service areas, not offices, until each is confirmed as a staffed office (see §1). | owner brief 2026-10-25 |
 | Google rating | ~~4.9 with 200+ Google reviews~~: removed. Reviews link to each Google profile; numbers only if checked programmatically (`SHOW_RATING_NUMBERS`). | owner brief 2026-10-25 |
 | Projects completed | ~~500+~~: removed; needs a job-count record (ERP export). | owner brief 2026-10-25 |
-| Bonded | ~~bonded and insured~~: removed; needs a surety bond document. | owner brief 2026-10-25 |
+| Bonded | Bonded: approved again by the owner, bond document on file with the owner. | owner, 2026-11-18 (was removed 2026-10-25) |
 | Preferred Application Partner | ~~authorized~~: removed; needs the manufacturer's written program confirmation. | owner brief 2026-10-25 |
 | Competitor comparison | the CertaPro page was replaced by a neutral local-vs-franchise guide; no competitor is named on the site | 2026-10-08 |
 | BBB | listed, **not accredited**, not rated (bbb.org, checked 2026-10-07) | public record |

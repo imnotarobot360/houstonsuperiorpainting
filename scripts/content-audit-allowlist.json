@@ -1,16 +1,5 @@
 [
   {
-    "rule": "workers-comp",
-    "file": "app/blog/how-to-verify-painting-contractor-insurance-houston/page.tsx",
-    "reason": "Consumer education on how to verify ANY contractor's insurance, citing the Texas Department of Insurance. It makes no claim about Houston Superior Painting's coverage."
-  },
-  {
-    "rule": "workers-comp",
-    "file": "app/blog/painting-contractor-sugar-land-insurance-warranty/page.tsx",
-    "contains": "Texas Department of Insurance: Workers' compensation for employers",
-    "reason": "Source citation (TDI page title), not a coverage claim."
-  },
-  {
     "rule": "superlative",
     "file": "*",
     "contains": "quote: \"",
@@ -27,18 +16,6 @@
     "file": "data/reviews.ts",
     "contains": "Flawless, durable",
     "reason": "Review record with publish: false and verification: unverified; it never renders. Kept so the owner can verify or delete it."
-  },
-  {
-    "rule": "workers-comp",
-    "file": "app/houston-painting-contractor-guide/page.tsx",
-    "contains": "Workers&apos; compensation covers a",
-    "reason": "Explains what workers' compensation is in the consumer guide's insurance section. It makes no claim about Houston Superior Painting's coverage."
-  },
-  {
-    "rule": "workers-comp",
-    "file": "app/blog/painting-contractor-sugar-land-insurance-warranty/page.tsx",
-    "contains": "which Texas does not require most private employers to carry",
-    "reason": "Neutral consumer fact (Texas does not require most private employers to carry workers' compensation), sourced to TDI. No claim about our coverage."
   },
   {
     "rule": "other-phone",

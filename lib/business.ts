@@ -257,11 +257,15 @@ export const BUSINESS = {
     // Texas does not issue a state occupational license for painting
     // contractors, so the site must never claim to be "licensed."
     // Owner brief 2026-10-25: policy limits, workers' compensation, bonding and
-    // customer/project counts are NOT published until a current document
-    // (insurance policy, bond, job records) is stored or referenced in the repo.
-    // The old fields (liabilityCoverage "$2M", bonded, projectsCompleted 500,
-    // crewExperienceYears 15) were removed so nothing can render them.
+    // customer/project counts were NOT published until confirmed.
+    // Owner update 2026-11-18 (Juan, funnel brief + chat): the company is insured
+    // and bonded, with $2 million liability insurance and workers' compensation,
+    // and the current documents are on file with the owner. Approved for all
+    // pages via BUSINESS.insurance. Customer/project counts stay unpublished.
     insured: true,
+    bonded: true,
+    liabilityCoverage: "$2 million",
+    workersComp: true,
     // Checked 2026-10-07 on bbb.org: the profile (file opened 2026-10-05) says
     // "NOT BBB Accredited" and "Not Rated". Do not claim accreditation.
     bbbAccredited: false,
@@ -280,12 +284,19 @@ export const BUSINESS = {
       "Free written estimates are available. Before work begins, your approved estimate states the scope, deposit requirements and payment schedule.",
   },
 
-  // Insurance wording (owner brief 2026-10-25). Do not publish limits, workers'
-  // compensation, bonding or specialty coverage without current documents.
+  // Insurance wording. Owner update 2026-11-18: insured and bonded, $2 million
+  // liability insurance and workers' compensation are approved (documents on
+  // file with the owner). Use these strings; never "licensed" (Texas does not
+  // license painters) and never other limits or specialty coverage.
   insurance: {
     sentence:
-      "Houston Superior Painting maintains business insurance. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance according to the project requirements.",
-    short: "Current proof of insurance available upon request.",
+      "Houston Superior Painting is insured and bonded, with $2 million in liability insurance and workers' compensation coverage. Current proof of insurance is available upon request, and when required, approved customers may receive a certificate of insurance according to the project requirements.",
+    short: "We are insured and bonded, with $2 million in liability insurance and workers' compensation coverage.",
+    badge: "Insured & Bonded · $2M Liability + Workers' Comp",
+    sentenceEs:
+      "Houston Superior Painting está asegurada y con fianza (insured and bonded), con $2 millones en seguro de responsabilidad civil y cobertura de workers' compensation. Hay comprobante vigente de seguro disponible cuando lo solicite.",
+    shortEs: "Estamos asegurados y con fianza, con $2 millones en seguro de responsabilidad civil y cobertura de workers' compensation.",
+    badgeEs: "Asegurados y con fianza · $2M de responsabilidad civil + workers' comp",
     licenseNote:
       "Texas does not issue a state painting-contractor license. Customers may request current proof of business insurance.",
   },

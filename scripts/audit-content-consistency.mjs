@@ -2,7 +2,7 @@
 //
 // Scans the site source for claims the owner has not documented, outdated facts
 // and contradictions: wrong owner name, other phone numbers, the .net domain,
-// payment promises, state-license / bonding / workers' comp / policy-limit
+// payment promises, state-license
 // claims, review-count and customer-count claims, superlatives, partner claims,
 // warranty lengths other than five years, epoxy warranties, AggregateRating.
 //
@@ -70,14 +70,10 @@ export const RULES = [
     re: /state[- ]licensed|licensed (?:and|&) (?:insured|bonded)|fully licensed|licensed (?:painter|painting contractor|contractor)s?\b(?! (?:in texas|does|doesn))/i,
     unless: /does not|doesn(?:'|’)t|no state|not issue|isn(?:'|’)t|there is no|vs\.? ?unlicensed|unlicensed|licensed-vs|"Are you licensed|claims? to be|say(?:s)? (?:they|you)/i,
   },
-  {
-    id: "bonded",
-    why: "Bonding is not documented",
-    // Company bonding claims only; "bonding primer" and paint adhesion are not claims.
-    re: /insured,? (?:and|&|&amp;) bonded|bonded,? (?:and|&|&amp;) insured|\b(?:we are|we're|we’re|fully|also) bonded|licensed,? bonded|bonded for your protection|\bbonded:\s*true/i,
-  },
-  { id: "workers-comp", why: "Workers' comp is not documented", re: /workers(?:['’]|&apos;|&#39;)?\s?comp/i },
-  { id: "policy-limit", why: "Policy limits are not documented", re: /\$2\s?M\b|\$2 million|2,000,000/i },
+  // Insured and bonded, $2 million liability and workers' compensation were
+  // approved by the owner 2026-11-18 (BUSINESS.insurance). "Licensed, bonded"
+  // stays blocked: Texas does not license painters.
+  { id: "licensed-bonded", why: "Texas issues no state painting license", re: /licensed,? bonded/i },
   { id: "review-count", why: "No hard-coded aggregate review counts", re: /\b(?:200|170|150)\+\s*(?:google |five[- ]star |5[- ]star )?reviews?|200 plus reviews/i },
   { id: "customer-count", why: "Customer/project counts are not documented", re: /(?<![\d,])500\+|(?<![\d,])500 plus|projectsCompleted/i },
   {

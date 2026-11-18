@@ -26,9 +26,9 @@ test("content audit: rules catch the claims the brief prohibits", () => {
     const r = RULES.find((x) => x.id === id)
     return r.re.test(line) && !(r.unless && r.unless.test(line))
   }
-  assert.ok(caught("policy-limit", "Insured with $2M general liability"))
-  assert.ok(caught("workers-comp", "plus workers' comp"))
-  assert.ok(caught("bonded", "We are licensed, bonded and insured"))
+  // Insured and bonded, $2M liability and workers' comp: approved 2026-11-18.
+  assert.ok(caught("licensed-bonded", "We are licensed, bonded and insured"))
+  assert.ok(!caught("licensed-bonded", "We are insured and bonded"))
   assert.ok(caught("state-license", "Fully licensed painters"))
   assert.ok(caught("payment-promise", "No money upfront"))
   assert.ok(caught("warranty-term", "transferable to a new owner"))
@@ -41,7 +41,7 @@ test("content audit: rules catch the claims the brief prohibits", () => {
   assert.ok(caught("warranty-scope", "Every project comes with a 5-year written workmanship warranty"))
   assert.ok(caught("warranty-scope", "and every job carries our 5-year warranty"))
   assert.ok(!caught("warranty-scope", "Qualifying painting projects include a five-year written workmanship warranty"))
-  assert.ok(!caught("bonded", "a bonding primer"))
+  assert.ok(!caught("licensed-bonded", "a bonding primer"))
   assert.ok(!caught("customer-count", "4,500+ sq ft"))
   assert.ok(!caught("state-license", "Texas does not issue a state painting-contractor license"))
 })
