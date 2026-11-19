@@ -4,7 +4,7 @@ import { ReviewsInline } from "@/components/office-reviews"
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { BadgeCheck, Check, Clock, Phone, ShieldCheck, Star } from "lucide-react"
+import { BadgeCheck, Check, Clock, Phone, ShieldCheck } from "lucide-react"
 import { FunnelFooter } from "@/components/funnel-footer"
 import { FunnelHeader } from "@/components/funnel-header"
 import { LandingViewTracker } from "@/components/landing-view-tracker"
@@ -80,11 +80,6 @@ export function InteriorLanding() {
               </p>
 
               <div className="flex items-center gap-3">
-                <div className="flex" aria-hidden="true">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-4 fill-accent text-accent" />
-                  ))}
-                </div>
                 <p className="text-sm text-muted-foreground">
                   <ReviewsInline />
                 </p>
@@ -92,8 +87,8 @@ export function InteriorLanding() {
 
               <div className="overflow-hidden rounded-2xl border border-border">
                 <Image
-                  src="/images/luxury/project-interior.png"
-                  alt="Freshly painted Houston living room with clean trim lines"
+                  src="/images/interior-after-1.jpg"
+                  alt="Memorial living room with fresh warm-white walls after interior repainting"
                   width={900}
                   height={600}
                   priority
@@ -113,7 +108,7 @@ export function InteriorLanding() {
               <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-6">
                 <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                   <ShieldCheck className="size-4 text-accent" aria-hidden="true" />
-                  Insured · proof of insurance on request
+                  {BUSINESS.insurance.badge}
                 </span>
                 <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                   <BadgeCheck className="size-4 text-accent" aria-hidden="true" />
@@ -123,7 +118,7 @@ export function InteriorLanding() {
             </div>
 
             {/* Estimator */}
-            <div id="estimator" className="w-full scroll-mt-24 lg:sticky lg:top-20 lg:w-[26rem] xl:w-[28rem]">
+            <div id="estimator" ref={estimatorRef} className="w-full scroll-mt-24 lg:sticky lg:top-20 lg:w-[26rem] xl:w-[28rem]">
               <div className="mb-4 flex flex-col gap-2 rounded-2xl border border-border bg-card/60 p-5">
                 <h2 className="font-serif text-xl leading-tight text-foreground text-balance">
                   Get your free estimate in about 60 seconds

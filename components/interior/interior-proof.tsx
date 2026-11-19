@@ -1,6 +1,6 @@
 import { ReviewsInline } from "@/components/office-reviews"
 import Image from "next/image"
-import { BadgeCheck, Brush, CalendarCheck, ClipboardList, Quote, ShieldCheck, Sparkles, Star } from "lucide-react"
+import { BadgeCheck, Brush, CalendarCheck, ClipboardList, Quote, ShieldCheck, Sparkles } from "lucide-react"
 import { BUSINESS } from "@/lib/business"
 
 /**
@@ -56,6 +56,25 @@ const PROCESS = [
     title: "Daylight walkthrough",
     detail: `We correct every flagged detail before sign-off, backed by a ${BUSINESS.trust.warrantyYears}-year written warranty.`,
   },
+]
+
+// FAQ (owner brief 2026-11-19): no prices and no new claims; the warranty and
+// insurance answers come straight from lib/business.ts.
+const FAQS = [
+  {
+    q: "How much does interior painting cost?",
+    a: "The estimator above gives you a ballpark in about a minute. Your final price is a written line-item estimate after we measure.",
+  },
+  {
+    q: "Do you move furniture?",
+    a: "Yes. We move furniture and cover floors before work starts.",
+  },
+  {
+    q: "How long does it take?",
+    a: "It depends on the rooms and the prep they need. We confirm the schedule with your written estimate.",
+  },
+  { q: "What does the warranty cover?", a: BUSINESS.warranty.summary },
+  { q: "Are you insured?", a: BUSINESS.insurance.sentence },
 ]
 
 export function InteriorProof() {
@@ -151,11 +170,6 @@ export function InteriorProof() {
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
           <div className="mx-auto mb-10 flex max-w-2xl flex-col items-center gap-3 text-center">
             <div className="flex items-center gap-2">
-              <div className="flex" aria-hidden="true">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="size-5 fill-accent text-accent" />
-                ))}
-              </div>
               <ReviewsInline className="text-sm font-semibold text-foreground" />
             </div>
             <h2 className="font-serif text-3xl leading-tight text-foreground text-balance sm:text-4xl">
@@ -181,6 +195,28 @@ export function InteriorProof() {
         </div>
       </section>
 
+      {/* ── FAQ ────────────────────────────────────────────────────────────── */}
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:py-20">
+          <h2 className="mb-8 text-center font-serif text-3xl leading-tight text-foreground text-balance sm:text-4xl">
+            Common questions
+          </h2>
+          <div className="flex flex-col gap-3">
+            {FAQS.map((faq) => (
+              <details key={faq.q} className="group rounded-2xl border border-border bg-card p-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-foreground [&::-webkit-details-marker]:hidden">
+                  {faq.q}
+                  <span aria-hidden="true" className="text-xl text-accent transition-transform group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground text-pretty">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Guarantee band ─────────────────────────────────────────────────── */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-16">
@@ -192,7 +228,7 @@ export function InteriorProof() {
               <ul className="flex flex-wrap gap-x-6 gap-y-2">
                 <li className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                   <ShieldCheck className="size-4 text-accent" aria-hidden="true" />
-                  Insured · proof of insurance on request
+                  {BUSINESS.insurance.badge}
                 </li>
                 <li className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                   <BadgeCheck className="size-4 text-accent" aria-hidden="true" />

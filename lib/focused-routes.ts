@@ -48,13 +48,18 @@ const INTERRUPTION_FREE_PREFIXES = ["/chatgpt/", "/offer/"]
  * silently capture future marketing pages that do want the global CTAs, and
  * that failure mode — a page quietly missing its phone button — is invisible
  * until someone notices conversions dropped. The /chatgpt/* funnels are
- * intentionally absent: they need the sticky bar.
+ * intentionally absent: they need the sticky bar — except the interior one,
+ * listed below.
  */
 const STICKY_CTA_FREE_PATHS = new Set<string>([
   "/painting-estimate-houston",
   // These carry their own phone/book bar (owner brief 2026-11-18).
   "/offer/free-estimate",
   "/offer/estimado-gratis",
+  // InteriorLanding has its own sticky bar (it scrolls to the estimator). The
+  // global one stacked on top of it and sent paid visitors to
+  // /painting-estimate-houston (owner brief 2026-11-19).
+  "/chatgpt/interior-painting-houston",
 ])
 
 /** Trailing slashes normalised so "/foo/" matches "/foo". */
