@@ -4,6 +4,7 @@ import { BadgeCheck, Check, Clock, ShieldCheck } from "lucide-react"
 import { EstimateFunnel } from "@/components/estimate-funnel"
 import { FunnelFooter } from "@/components/funnel-footer"
 import { FunnelHeader } from "@/components/funnel-header"
+import { FunnelStickyBar } from "@/components/funnel-sticky-bar"
 import { LandingViewTracker } from "@/components/landing-view-tracker"
 import { BUSINESS } from "@/lib/business"
 import type { FunnelConfig } from "@/lib/funnel-config"
@@ -21,7 +22,9 @@ export function EstimateLanding({ config }: { config: FunnelConfig }) {
           rate. Renders nothing. */}
       <LandingViewTracker service={config.service} />
 
-      <main className="min-h-screen bg-soft-white">
+      {/* pb-24 leaves room for the fixed phone bar so it never covers the
+          footer's legal links. */}
+      <main className="min-h-screen bg-soft-white pb-24 lg:pb-0">
         {/* Sticky, tracked, and no nav links. The phone number used to sit in an
             untracked inline bar here, so calls driven by ad spend were invisible
             in reporting. */}
@@ -92,7 +95,7 @@ export function EstimateLanding({ config }: { config: FunnelConfig }) {
                 offset slid the funnel underneath it. This column's sticky does
                 work — its parent is the tall two-column flex row, so there is
                 real distance to travel. */}
-            <div className="w-full lg:sticky lg:top-20 lg:w-[26rem] xl:w-[28rem]">
+            <div id="estimate" className="w-full scroll-mt-24 lg:sticky lg:top-20 lg:w-[26rem] xl:w-[28rem]">
               {/* The single most important thing a visitor can learn above the
                   fold is that they can book a time themselves, right now,
                   without waiting for a callback. Previously that only became
@@ -125,6 +128,8 @@ export function EstimateLanding({ config }: { config: FunnelConfig }) {
       {/* Minimal legal footer, not the 240-line site footer. Keeping the full
           one here handed paid visitors a sitemap's worth of exits. */}
       <FunnelFooter tone="midnight" />
+
+      <FunnelStickyBar targetId="estimate" service={config.service} />
     </>
   )
 }
