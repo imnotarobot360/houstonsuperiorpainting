@@ -449,7 +449,7 @@ export function InteriorEstimator() {
             type="button"
             disabled={(answers.includes ?? []).length === 0}
             onClick={continueIncludes}
-            className="rounded-xl bg-primary px-5 py-3.5 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="rounded-xl bg-secondary px-5 py-3.5 text-base font-semibold text-secondary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             Continue
           </button>
@@ -514,7 +514,7 @@ export function InteriorEstimator() {
           <button
             type="button"
             onClick={() => setPhase("contact")}
-            className="flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="flex items-center justify-center gap-2 rounded-xl bg-secondary px-5 py-3.5 text-base font-semibold text-secondary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             Get my detailed quote
             <ArrowRight className="size-4" aria-hidden="true" />
@@ -636,7 +636,7 @@ export function InteriorEstimator() {
           <button
             type="submit"
             disabled={!canAdvanceContact || submitting}
-            className="flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="flex items-center justify-center gap-2 rounded-xl bg-secondary px-5 py-3.5 text-base font-semibold text-secondary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {submitting && <Loader2 className="size-4 animate-spin" aria-hidden="true" />}
             {submitting ? "Sending…" : "Get my free estimate"}
@@ -806,7 +806,7 @@ export function InteriorEstimator() {
                 type="button"
                 disabled={photos.length === 0 || savingPhotos}
                 onClick={uploadPhotos}
-                className="flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="flex items-center justify-center gap-2 rounded-xl bg-secondary px-5 py-3.5 text-base font-semibold text-secondary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 {savingPhotos && <Loader2 className="size-4 animate-spin" aria-hidden="true" />}
                 {savingPhotos ? "Uploading…" : "Attach photos"}

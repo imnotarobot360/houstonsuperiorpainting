@@ -58,34 +58,36 @@ export function InteriorLanding() {
 
       {/* pb-24 leaves room for the fixed mobile CTA bar so it never covers the
           footer's legal links. */}
-      <main className="min-h-screen bg-background pb-24 lg:pb-0">
-        <FunnelHeader service="interior" />
+      <main className="min-h-screen bg-soft-white pb-24 lg:pb-0">
+        <FunnelHeader service="interior" tone="midnight" />
 
         {/* ── Hero + estimator ─────────────────────────────────────────────── */}
-        <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:py-16">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-14">
+        {/* Midnight hero, gold eyebrow and orange CTAs match /offer/free-estimate
+            (owner 2026-11-19). */}
+        <section className="bg-midnight text-white">
+          <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-10 sm:px-6 lg:flex-row lg:items-start lg:gap-14 lg:py-16">
             {/* Pitch */}
             <div className="flex flex-1 flex-col gap-6">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              <span className="font-manrope text-[13px] font-semibold uppercase tracking-[0.12em] text-gold">
                 Interior painting · Houston
               </span>
 
-              <h1 className="font-serif text-4xl leading-[1.1] text-foreground text-balance sm:text-5xl">
+              <h1 className="font-display text-[clamp(32px,5vw,52px)] font-extrabold leading-[1.1] text-white text-balance">
                 See your interior painting price in about 60 seconds
               </h1>
 
-              <p className="max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">
+              <p className="max-w-xl text-lg leading-relaxed text-white/85 text-pretty">
                 Answer a few quick questions and get an instant ballpark — then we&apos;ll come measure, walk the rooms
                 with you, and put a written line-item price in your hands.
               </p>
 
               <div className="flex items-center gap-3">
-                <p className="text-sm text-muted-foreground">
-                  <ReviewsInline />
+                <p className="text-sm text-white/80">
+                  <ReviewsInline linkClassName="text-white underline underline-offset-4 hover:text-gold" />
                 </p>
               </div>
 
-              <div className="overflow-hidden rounded-2xl border border-border">
+              <div className="overflow-hidden rounded-xl">
                 <Image
                   src="/images/interior-after-1.jpg"
                   alt="Memorial living room with fresh warm-white walls after interior repainting"
@@ -99,19 +101,19 @@ export function InteriorLanding() {
               <ul className="flex flex-col gap-3">
                 {PROOF_POINTS.map((point) => (
                   <li key={point} className="flex items-start gap-3">
-                    <Check className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
-                    <span className="text-base leading-relaxed text-foreground text-pretty">{point}</span>
+                    <Check className="mt-0.5 size-5 shrink-0 text-gold" aria-hidden="true" />
+                    <span className="text-base leading-relaxed text-white text-pretty">{point}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-6">
-                <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                  <ShieldCheck className="size-4 text-accent" aria-hidden="true" />
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/15 pt-6">
+                <span className="inline-flex items-center gap-2 text-sm text-white/80">
+                  <ShieldCheck className="size-4 text-gold" aria-hidden="true" />
                   {BUSINESS.insurance.badge}
                 </span>
-                <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                  <BadgeCheck className="size-4 text-accent" aria-hidden="true" />
+                <span className="inline-flex items-center gap-2 text-sm text-white/80">
+                  <BadgeCheck className="size-4 text-gold" aria-hidden="true" />
                   {BUSINESS.trust.yearsInBusiness} years in Houston
                 </span>
               </div>
@@ -119,12 +121,12 @@ export function InteriorLanding() {
 
             {/* Estimator */}
             <div id="estimator" ref={estimatorRef} className="w-full scroll-mt-24 lg:sticky lg:top-20 lg:w-[26rem] xl:w-[28rem]">
-              <div className="mb-4 flex flex-col gap-2 rounded-2xl border border-border bg-card/60 p-5">
-                <h2 className="font-serif text-xl leading-tight text-foreground text-balance">
+              <div className="mb-4 flex flex-col gap-2 rounded-2xl bg-white p-5 text-foreground">
+                <h2 className="font-display text-xl leading-tight text-midnight text-balance">
                   Get your free estimate in about 60 seconds
                 </h2>
                 <p className="flex items-start gap-2 text-sm leading-relaxed text-muted-foreground text-pretty">
-                  <Clock className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
+                  <Clock className="mt-0.5 size-4 shrink-0 text-gold-deep" aria-hidden="true" />
                   Answer a few quick questions and see your ballpark price instantly — then book your own time, no
                   waiting for a callback.
                 </p>
@@ -143,7 +145,7 @@ export function InteriorLanding() {
 
               <InteriorEstimator />
 
-              <p className="mt-4 text-center text-xs leading-relaxed text-muted-foreground text-pretty">
+              <p className="mt-4 text-center text-xs leading-relaxed text-white/70 text-pretty">
                 Free estimate · No obligation · No payment required to book. We&apos;ll only use your details to prepare
                 this estimate.
               </p>
@@ -154,7 +156,7 @@ export function InteriorLanding() {
         <InteriorProof />
       </main>
 
-      <FunnelFooter />
+      <FunnelFooter tone="midnight" />
 
       {/* ── Sticky mobile CTA ────────────────────────────────────────────────
           Scrolls to the estimator rather than leaving the page. The call button
@@ -163,7 +165,7 @@ export function InteriorLanding() {
       <div
         aria-hidden={estimatorVisible}
         className={cn(
-          "fixed inset-x-0 bottom-0 z-40 border-t border-border bg-card/95 p-3 backdrop-blur transition-transform duration-300 lg:hidden",
+          "fixed inset-x-0 bottom-0 z-40 border-t border-border bg-white px-3 pb-[calc(10px+env(safe-area-inset-bottom))] pt-2.5 transition-transform duration-300 lg:hidden",
           estimatorVisible ? "pointer-events-none translate-y-full" : "translate-y-0",
         )}
       >
@@ -171,7 +173,7 @@ export function InteriorLanding() {
           <button
             type="button"
             onClick={scrollToEstimator}
-            className="flex-1 rounded-xl bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="min-h-12 flex-1 rounded-lg bg-secondary px-4 text-center text-[15px] font-bold text-secondary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             Get my free estimate
           </button>
@@ -180,7 +182,7 @@ export function InteriorLanding() {
             data-contact-location="interior_sticky_bar"
             data-contact-service="interior"
             aria-label={`Call ${BUSINESS.phone}`}
-            className="inline-flex size-12 shrink-0 items-center justify-center rounded-xl border border-border text-foreground hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="inline-flex min-h-12 min-w-12 shrink-0 items-center justify-center rounded-lg bg-midnight px-4 text-white hover:bg-midnight/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <Phone className="size-5" aria-hidden="true" />
           </a>

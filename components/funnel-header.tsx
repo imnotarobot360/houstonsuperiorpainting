@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Phone } from "lucide-react"
 import { BUSINESS, PHONE_HREF } from "@/lib/business"
 
@@ -8,8 +9,12 @@ import { BUSINESS, PHONE_HREF } from "@/lib/business"
  * to the homepage. On paid traffic every outbound link is a lead you paid for
  * and lost, so the only action here is the phone number.
  *
- * The business name is plain text rather than an anchor for exactly that
- * reason — a clickable logo is the most-used escape hatch on a landing page.
+ * The business name / logo is never an anchor for exactly that reason — a
+ * clickable logo is the most-used escape hatch on a landing page.
+ *
+ * `tone="midnight"` matches the /offer/free-estimate funnel (owner 2026-11-19):
+ * midnight bar with the light-on-dark logo. The default stays the light text
+ * header the other /chatgpt funnels use.
  *
  * The phone tap is tracked, but not from here: the delegated `tel:` handler in
  * `GoogleAnalytics` catches every phone link on the page, so this one only
@@ -17,7 +22,27 @@ import { BUSINESS, PHONE_HREF } from "@/lib/business"
  * header a server component and, more importantly, avoids the double-count an
  * `onClick` here would cause.
  */
-export function FunnelHeader({ service }: { service: string }) {
+export function FunnelHeader({ service, tone = "light" }: { service: string; tone?: "light" | "midnight" }) {
+  if (tone === "midnight") {
+    return (
+      <header className="sticky top-0 z-40 bg-midnight text-white">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3">
+          <Image src="/images/logo-dark.png" alt={BUSINESS.name} width={127} height={48} priority className="h-10 w-auto sm:h-12" />
+          <a
+            href={PHONE_HREF}
+            data-contact-location="funnel_header"
+            data-contact-service={service}
+            className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-white px-4 text-[15px] font-semibold hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          >
+            <Phone className="size-4 text-gold" aria-hidden="true" />
+            <span className="hidden sm:inline">{BUSINESS.phone}</span>
+            <span className="sm:hidden">Call</span>
+          </a>
+        </div>
+      </header>
+    )
+  }
+
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">

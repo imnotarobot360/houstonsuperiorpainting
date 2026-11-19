@@ -81,12 +81,12 @@ export function InteriorProof() {
   return (
     <>
       {/* ── Before / after ─────────────────────────────────────────────────── */}
-      <section className="border-t border-border bg-card/40">
+      <section className="border-t border-border bg-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
           <div className="mx-auto mb-10 flex max-w-2xl flex-col gap-3 text-center">
             {/* Memorial case study in lib/projects.ts; photos and figures confirmed by Juan 2026-10-25. */}
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Real Houston project</span>
-            <h2 className="font-serif text-3xl leading-tight text-foreground text-balance sm:text-4xl">
+            <span className="font-manrope text-[13px] font-semibold uppercase tracking-[0.12em] text-gold-deep">Real Houston project</span>
+            <h2 className="font-display text-[clamp(26px,4vw,34px)] leading-tight text-midnight text-balance sm:text-4xl">
               A dated Memorial home, brought back to life
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground text-pretty">
@@ -119,7 +119,7 @@ export function InteriorProof() {
                   className="h-64 w-full object-cover sm:h-72"
                 />
               </div>
-              <figcaption className="text-center text-sm font-medium uppercase tracking-widest text-accent">
+              <figcaption className="text-center text-sm font-medium uppercase tracking-widest text-gold-deep">
                 After
               </figcaption>
             </figure>
@@ -127,7 +127,7 @@ export function InteriorProof() {
 
           <figure className="mx-auto mt-8 flex max-w-2xl flex-col items-center gap-3 text-center">
             <Quote className="size-7 text-primary/30" aria-hidden="true" />
-            <blockquote className="font-serif text-xl leading-relaxed text-foreground text-balance">
+            <blockquote className="font-display text-xl leading-relaxed text-midnight text-balance">
               &ldquo;From the consultation to the final walkthrough, the experience felt genuinely white-glove. The prep
               work on our Memorial home was extraordinary.&rdquo;
             </blockquote>
@@ -142,8 +142,8 @@ export function InteriorProof() {
       <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
           <div className="mx-auto mb-10 flex max-w-2xl flex-col gap-3 text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">How it works</span>
-            <h2 className="font-serif text-3xl leading-tight text-foreground text-balance sm:text-4xl">
+            <span className="font-manrope text-[13px] font-semibold uppercase tracking-[0.12em] text-gold-deep">How it works</span>
+            <h2 className="font-display text-[clamp(26px,4vw,34px)] leading-tight text-midnight text-balance sm:text-4xl">
               What you get, start to finish
             </h2>
           </div>
@@ -152,12 +152,12 @@ export function InteriorProof() {
             {PROCESS.map((step, i) => (
               <li key={step.title} className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-6">
                 <div className="flex items-center gap-3">
-                  <span className="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <span className="flex size-10 items-center justify-center rounded-full bg-midnight text-white">
                     <step.icon className="size-5" aria-hidden="true" />
                   </span>
                   <span className="text-sm font-semibold text-muted-foreground">Step {i + 1}</span>
                 </div>
-                <h3 className="font-serif text-lg leading-tight text-foreground text-balance">{step.title}</h3>
+                <h3 className="font-display text-lg leading-tight text-midnight text-balance">{step.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground text-pretty">{step.detail}</p>
               </li>
             ))}
@@ -166,13 +166,13 @@ export function InteriorProof() {
       </section>
 
       {/* ── Reviews ────────────────────────────────────────────────────────── */}
-      <section className="border-t border-border bg-card/40">
+      <section className="border-t border-border bg-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
           <div className="mx-auto mb-10 flex max-w-2xl flex-col items-center gap-3 text-center">
             <div className="flex items-center gap-2">
               <ReviewsInline className="text-sm font-semibold text-foreground" />
             </div>
-            <h2 className="font-serif text-3xl leading-tight text-foreground text-balance sm:text-4xl">
+            <h2 className="font-display text-[clamp(26px,4vw,34px)] leading-tight text-midnight text-balance sm:text-4xl">
               Houston homeowners keep saying the same thing
             </h2>
           </div>
@@ -186,7 +186,7 @@ export function InteriorProof() {
                 <figcaption className="border-t border-border pt-4">
                   <p className="font-semibold text-foreground">{review.name}</p>
                   <p className="text-sm text-muted-foreground">{review.location}</p>
-                  <p className="mt-1 text-sm text-primary">{review.project}</p>
+                  <p className="mt-1 text-sm font-semibold text-midnight">{review.project}</p>
                   <p className="mt-1 text-xs text-muted-foreground">Customer testimonial, published with permission.</p>
                 </figcaption>
               </figure>
@@ -198,15 +198,15 @@ export function InteriorProof() {
       {/* ── FAQ ────────────────────────────────────────────────────────────── */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:py-20">
-          <h2 className="mb-8 text-center font-serif text-3xl leading-tight text-foreground text-balance sm:text-4xl">
+          <h2 className="mb-8 text-center font-display text-[clamp(26px,4vw,34px)] leading-tight text-midnight text-balance sm:text-4xl">
             Common questions
           </h2>
           <div className="flex flex-col gap-3">
             {FAQS.map((faq) => (
               <details key={faq.q} className="group rounded-2xl border border-border bg-card p-5">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-foreground [&::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-midnight [&::-webkit-details-marker]:hidden">
                   {faq.q}
-                  <span aria-hidden="true" className="text-xl text-accent transition-transform group-open:rotate-45">
+                  <span aria-hidden="true" className="text-xl text-gold-deep transition-transform group-open:rotate-45">
                     +
                   </span>
                 </summary>
@@ -222,20 +222,20 @@ export function InteriorProof() {
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-16">
           <div className="flex flex-col items-start gap-6 rounded-2xl border border-border bg-card p-8 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex flex-col gap-2">
-              <h2 className="font-serif text-2xl leading-tight text-foreground text-balance">
+              <h2 className="font-display text-2xl leading-tight text-midnight text-balance">
                 Backed in writing, not just in words
               </h2>
               <ul className="flex flex-wrap gap-x-6 gap-y-2">
                 <li className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                  <ShieldCheck className="size-4 text-accent" aria-hidden="true" />
+                  <ShieldCheck className="size-4 text-gold-deep" aria-hidden="true" />
                   {BUSINESS.insurance.badge}
                 </li>
                 <li className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                  <BadgeCheck className="size-4 text-accent" aria-hidden="true" />
+                  <BadgeCheck className="size-4 text-gold-deep" aria-hidden="true" />
                   {BUSINESS.trust.yearsInBusiness} years in Houston
                 </li>
                 <li className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                  <Sparkles className="size-4 text-accent" aria-hidden="true" />
+                  <Sparkles className="size-4 text-gold-deep" aria-hidden="true" />
                   {BUSINESS.trust.warrantyYears}-year written warranty
                 </li>
               </ul>
