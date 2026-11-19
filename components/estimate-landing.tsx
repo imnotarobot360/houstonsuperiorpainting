@@ -1,6 +1,6 @@
 import { ReviewsInline } from "@/components/office-reviews"
 import Image from "next/image"
-import { BadgeCheck, Check, Clock, ShieldCheck, Star } from "lucide-react"
+import { BadgeCheck, Check, Clock, ShieldCheck } from "lucide-react"
 import { EstimateFunnel } from "@/components/estimate-funnel"
 import { FunnelFooter } from "@/components/funnel-footer"
 import { FunnelHeader } from "@/components/funnel-header"
@@ -21,41 +21,38 @@ export function EstimateLanding({ config }: { config: FunnelConfig }) {
           rate. Renders nothing. */}
       <LandingViewTracker service={config.service} />
 
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-soft-white">
         {/* Sticky, tracked, and no nav links. The phone number used to sit in an
             untracked inline bar here, so calls driven by ad spend were invisible
             in reporting. */}
-        <FunnelHeader service={config.service} />
+        <FunnelHeader service={config.service} tone="midnight" />
 
-        <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:py-16">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-14">
+        {/* Midnight hero, gold eyebrow and white logo match /offer/free-estimate
+            (owner 2026-11-19). */}
+        <section className="bg-midnight text-white">
+          <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-10 sm:px-6 lg:flex-row lg:items-start lg:gap-14 lg:py-16">
             {/* ── Pitch ────────────────────────────────────────────────── */}
             <div className="flex flex-1 flex-col gap-6">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{config.eyebrow}</span>
+              <span className="font-manrope text-[13px] font-semibold uppercase tracking-[0.12em] text-gold">{config.eyebrow}</span>
 
-              <h1 className="font-serif text-4xl leading-[1.1] text-foreground text-balance sm:text-5xl">
+              <h1 className="font-display text-[clamp(32px,5vw,52px)] font-extrabold leading-[1.1] text-white text-balance">
                 {config.h1}
               </h1>
 
-              <p className="max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">{config.subhead}</p>
+              <p className="max-w-xl text-lg leading-relaxed text-white/85 text-pretty">{config.subhead}</p>
 
               <div className="flex items-center gap-3">
-                <div className="flex" aria-hidden="true">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-4 fill-accent text-accent" />
-                  ))}
-                </div>
                 {/* Rating and review count are two different claims and must
                     read as two different claims. The previous wording — "4.9
                     from 200+ Houston homeowners" — asserted that 200+ homeowners
                     produced that average, which the review count does not
                     establish and which we cannot substantiate. */}
-                <p className="text-sm text-muted-foreground">
-                  <ReviewsInline />
+                <p className="text-sm text-white/80">
+                  <ReviewsInline linkClassName="text-white underline underline-offset-4 hover:text-gold" />
                 </p>
               </div>
 
-              <div className="overflow-hidden rounded-2xl border border-border">
+              <div className="overflow-hidden rounded-xl">
                 <Image
                   src={config.heroImage}
                   alt={config.heroImageAlt}
@@ -69,22 +66,22 @@ export function EstimateLanding({ config }: { config: FunnelConfig }) {
               <ul className="flex flex-col gap-3">
                 {config.proofPoints.map((point) => (
                   <li key={point} className="flex items-start gap-3">
-                    <Check className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
-                    <span className="text-base leading-relaxed text-foreground text-pretty">{point}</span>
+                    <Check className="mt-0.5 size-5 shrink-0 text-gold" aria-hidden="true" />
+                    <span className="text-base leading-relaxed text-white text-pretty">{point}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-6">
-                <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                  <ShieldCheck className="size-4 text-accent" aria-hidden="true" />
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/15 pt-6">
+                <span className="inline-flex items-center gap-2 text-sm text-white/80">
+                  <ShieldCheck className="size-4 text-gold" aria-hidden="true" />
                   {/* Never "licensed" — Texas issues no residential painting
                       licence, so insured/bonded are the honest credentials.
                       See the note in lib/business.ts. */}
                   {BUSINESS.insurance.badge}
                 </span>
-                <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                  <BadgeCheck className="size-4 text-accent" aria-hidden="true" />
+                <span className="inline-flex items-center gap-2 text-sm text-white/80">
+                  <BadgeCheck className="size-4 text-gold" aria-hidden="true" />
                   {BUSINESS.trust.yearsInBusiness} years in Houston
                 </span>
               </div>
@@ -101,12 +98,12 @@ export function EstimateLanding({ config }: { config: FunnelConfig }) {
                   without waiting for a callback. Previously that only became
                   apparent on the final step, so anyone who assumed "request a
                   quote" meant "wait for a salesperson" left before finding out. */}
-              <div className="mb-4 flex flex-col gap-2 rounded-2xl border border-border bg-card/60 p-5">
-                <h2 className="font-serif text-xl leading-tight text-foreground text-balance">
+              <div className="mb-4 flex flex-col gap-2 rounded-2xl bg-white p-5 text-foreground">
+                <h2 className="font-display text-xl leading-tight text-midnight text-balance">
                   Get your free estimate in about 60 seconds
                 </h2>
                 <p className="flex items-start gap-2 text-sm leading-relaxed text-muted-foreground text-pretty">
-                  <Clock className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
+                  <Clock className="mt-0.5 size-4 shrink-0 text-gold-deep" aria-hidden="true" />
                   Answer a few quick questions, then choose your own appointment time on the spot — no waiting for a
                   callback.
                 </p>
@@ -117,7 +114,7 @@ export function EstimateLanding({ config }: { config: FunnelConfig }) {
               {/* "No deposit" implied money changes hands later in the process
                   and invited the question of when. What people actually want to
                   know is whether booking costs anything — so answer that. */}
-              <p className="mt-4 text-center text-xs leading-relaxed text-muted-foreground text-pretty">
+              <p className="mt-4 text-center text-xs leading-relaxed text-white/70 text-pretty">
                 Free estimate · No obligation · No payment required to book. We&apos;ll only use your details to
                 prepare this estimate.
               </p>
@@ -127,7 +124,7 @@ export function EstimateLanding({ config }: { config: FunnelConfig }) {
       </main>
       {/* Minimal legal footer, not the 240-line site footer. Keeping the full
           one here handed paid visitors a sitemap's worth of exits. */}
-      <FunnelFooter />
+      <FunnelFooter tone="midnight" />
     </>
   )
 }
