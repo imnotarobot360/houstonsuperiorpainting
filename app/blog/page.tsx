@@ -820,6 +820,14 @@ const staticBlogPosts = [
   },
 ]
 
+const CARD_COUNT = 12
+
+/** "October 19, 2026" -> "2026-10-19" for schema.org dates (UTC, no TZ drift). */
+function isoDate(display: string): string | undefined {
+  const t = Date.parse(`${display} UTC`)
+  return Number.isNaN(t) ? undefined : new Date(t).toISOString().slice(0, 10)
+}
+
 export default function BlogPage() {
   // Scheduled posts (lib/blog-schedule.ts) appear on their publish date; this
   // page renders per request, so no deploy is needed on the day.
@@ -842,6 +850,12 @@ export default function BlogPage() {
   })
   const featuredPost = blogPosts.find(post => post.featured)
   const regularPosts = blogPosts.filter(post => post !== featuredPost)
+  // Audit 2026-11-22: /blog rendered ~100 photo cards (930 KB of HTML, most of
+  // it repeated again in the RSC payload). The newest posts keep their photo
+  // cards; every older post stays one plain crawlable link away in the list
+  // below, so no post loses its internal link and no pagination URLs appear.
+  const cardPosts = regularPosts.slice(0, CARD_COUNT)
+  const listPosts = regularPosts.slice(CARD_COUNT)
   return (
     <>
       <Header />
@@ -919,7 +933,7 @@ export default function BlogPage() {
             Latest Articles
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularPosts.map((post) => (
+            {cardPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
@@ -958,6 +972,29 @@ export default function BlogPage() {
               </Link>
             ))}
           </div>
+
+          {listPosts.length > 0 && (
+            <div className="mt-16">
+              <h2 className="text-2xl lg:text-3xl font-display font-bold mb-6">All Articles</h2>
+              <ul className="grid gap-x-10 border-t border-border md:grid-cols-2">
+                {listPosts.map((post) => (
+                  <li key={post.slug} className="border-b border-border">
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="group flex flex-col gap-1 py-4"
+                    >
+                      <span className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                        {post.title}
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        {post.category} · {post.publishDate}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </section>
 
         {/* Newsletter / CTA Section */}
@@ -998,11 +1035,12 @@ export default function BlogPage() {
                 "url": "https://houstonsuperiorpainting.com/images/logo.png"
               }
             },
-            "blogPost": blogPosts.map(post => ({
+            // Newest posts only; the rest are linked on the page.
+            "blogPost": [...(featuredPost ? [featuredPost] : []), ...cardPosts].map(post => ({
               "@type": "BlogPosting",
               "headline": post.title,
               "description": post.excerpt,
-              "datePublished": post.publishDate,
+              "datePublished": isoDate(post.publishDate),
               "author": {
                 "@type": "Person",
                 "name": post.author

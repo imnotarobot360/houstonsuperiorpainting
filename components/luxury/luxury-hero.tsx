@@ -22,7 +22,12 @@ export function LuxuryHero() {
       <div className="absolute inset-0 bg-midnight/20" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-20 grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-center">
-        <div className="max-w-3xl">
+        {/* Phones: the estimate buttons are pulled above the entity paragraph
+            with CSS order (audit 2026-11-22: at 375x812 the sticky bar covered
+            the primary CTA at the first fold). DOM order is unchanged, so the
+            .quick-answer paragraph still precedes them for crawlers; sm+ is
+            plain block layout as before. */}
+        <div className="max-w-3xl flex flex-col sm:block">
           <p className="kicker mb-6 text-gold">Houston&apos;s Premier Painting Studio</p>
           <h1 className="font-display text-soft-white text-4xl sm:text-6xl lg:text-7xl leading-[1.05] text-balance">
             Houston&apos;s Prep-First
@@ -38,7 +43,7 @@ export function LuxuryHero() {
           </h2>
           {/* Entity blurb (AEO): who we are in one paragraph, visible above the fold.
               `.quick-answer` is the Speakable selector. */}
-          <p className="quick-answer mt-6 font-manrope text-base sm:text-lg text-soft-white/90 leading-relaxed max-w-2xl">
+          <p className="quick-answer order-1 sm:order-none mt-6 font-manrope text-base sm:text-lg text-soft-white/90 leading-relaxed max-w-2xl">
             {BUSINESS.name} is a residential and commercial painting contractor founded in {BUSINESS.founded} by{" "}
             {BUSINESS.founder.name}, headquartered in Cypress, TX, and serving Greater Houston, including
             Cypress, Houston, Katy, Sugar Land and Magnolia. Insured, with a{" "}
@@ -49,7 +54,7 @@ export function LuxuryHero() {
             </a>
             .
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4">
             <Link
               href="/painting-estimate-houston"
               className="font-manrope text-sm font-semibold bg-secondary text-secondary-foreground px-8 py-4 rounded-md hover:bg-secondary/90 transition-colors text-center"
@@ -75,7 +80,7 @@ export function LuxuryHero() {
           </div>
 
           {/* Trust strip — credibility above the fold */}
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+          <div className="order-1 sm:order-none mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
             <div className="flex items-center gap-2">
               <ReviewsInline className="font-manrope text-sm text-soft-white/90 [&_svg]:text-gold" />
             </div>
