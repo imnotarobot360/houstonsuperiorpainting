@@ -19,6 +19,7 @@ import { formatAttribution, getAttribution } from "@/lib/attribution"
 import { WEB3FORMS_ACCESS_KEY } from "@/lib/quote-submit"
 import { trackEvent, trackFunnelStep, trackLeadCreated } from "@/lib/analytics"
 import { BookingCalendar } from "@/components/booking-calendar"
+import { GoogleRatingBadge } from "@/components/google-rating-badge"
 import {
   INCLUDE_OPTIONS,
   PREP_OPTIONS,
@@ -86,7 +87,13 @@ export function InteriorEstimator() {
       firstRender.current = false
       return
     }
-    rootRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+    // Owner brief 2026-11-22: keep "Step X of 5" and the progress bar in view —
+    // the card's top lands ~80px below the viewport top (under the sticky
+    // header). The ref was never attached before, so this was a no-op.
+    const node = rootRef.current
+    if (!node) return
+    const top = node.getBoundingClientRect().top + window.scrollY - 80
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" })
   }, [phase, qStep])
 
   const [contact, setContact] = useState({
@@ -376,7 +383,22 @@ export function InteriorEstimator() {
   const progressPct = ((qStep + 1) / TOTAL_QUESTIONS) * 100
 
   return (
-    <div className="min-w-0 rounded-2xl border border-border bg-card p-6 shadow-lg sm:p-8">
+    <div ref={rootRef} className="min-w-0 rounded-2xl border border-border bg-card p-5 shadow-lg sm:p-8">
+      {/* Phones: the separate intro card is hidden (it repeated the H1), so its
+          microline lives here. */}
+      {phase === "questions" && qStep === 0 && (
+        <p className="mb-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-medium text-foreground lg:hidden">
+          <span>About 60 seconds</span>
+          <span aria-hidden="true" className="text-muted-foreground">
+            &middot;
+          </span>
+          <span>Free estimate</span>
+          <span aria-hidden="true" className="text-muted-foreground">
+            &middot;
+          </span>
+          <span>No obligation</span>
+        </p>
+      )}
       {showProgress && (
         <div className="mb-6 flex flex-col gap-2">
           <div className="flex items-center justify-between text-xs font-medium uppercase tracking-widest text-muted-foreground">
@@ -493,6 +515,12 @@ export function InteriorEstimator() {
               <p className="mt-2 font-serif text-4xl font-bold text-foreground sm:text-5xl" aria-live="polite">
                 {formatInteriorRange(range)}
               </p>
+              <p className="mt-2 text-base font-semibold text-foreground">
+                Most likely around {formatUsd(mostLikely(range))}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-pretty">
+                Includes prep, Sherwin-Williams paint, furniture moving and cleanup.
+              </p>
             </div>
           ) : (
             <div className="rounded-2xl border border-border bg-muted/40 p-6 text-center">
@@ -516,7 +544,7 @@ export function InteriorEstimator() {
             onClick={() => setPhase("contact")}
             className="flex items-center justify-center gap-2 rounded-xl bg-secondary px-5 py-3.5 text-base font-semibold text-secondary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            Get my detailed quote
+            Lock in my free on-site estimate
             <ArrowRight className="size-4" aria-hidden="true" />
           </button>
         </div>
@@ -532,6 +560,7 @@ export function InteriorEstimator() {
             if (canAdvanceContact && !submitting) void submitLead()
           }}
         >
+          <GoogleRatingBadge className="self-start" />
           <div className="flex flex-col gap-1.5">
             <h2 className="font-serif text-2xl leading-tight text-foreground text-balance">
               Where should we send your estimate?
@@ -574,6 +603,19 @@ export function InteriorEstimator() {
               />
             </div>
 
+            <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-muted-foreground">
+              <input name="smsConsent" value="true"
+                type="checkbox"
+                checked={contact.smsConsent}
+                onChange={(e) => setContact((c) => ({ ...c, smsConsent: e.target.checked }))}
+                className="mt-0.5 size-4 shrink-0 rounded border-border accent-primary"
+              />
+              <span>
+                Text me about my estimate at this number. Message rates may apply, and you can reply STOP any time.
+              </span>
+            </label>
+
+
             <div className="flex flex-col gap-4 sm:flex-row">
               <div className="flex flex-col gap-1.5 sm:w-36">
                 <label htmlFor="ie-zip" className="text-sm font-medium text-foreground">
@@ -605,17 +647,6 @@ export function InteriorEstimator() {
               </div>
             </div>
 
-            <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-muted-foreground">
-              <input name="smsConsent" value="true"
-                type="checkbox"
-                checked={contact.smsConsent}
-                onChange={(e) => setContact((c) => ({ ...c, smsConsent: e.target.checked }))}
-                className="mt-0.5 size-4 shrink-0 rounded border-border accent-primary"
-              />
-              <span>
-                Text me about my estimate at this number. Message rates may apply, and you can reply STOP any time.
-              </span>
-            </label>
           </div>
 
           {error && (
@@ -641,6 +672,7 @@ export function InteriorEstimator() {
             {submitting && <Loader2 className="size-4 animate-spin" aria-hidden="true" />}
             {submitting ? "Sending…" : "Get my free estimate"}
           </button>
+          <p className="text-center text-sm font-medium text-foreground">No spam. No sales calls. One estimate, that&apos;s it.</p>
           <p className="text-center text-xs leading-relaxed text-muted-foreground text-pretty">
             We&apos;ll only use your details to prepare this estimate.
           </p>
@@ -901,6 +933,15 @@ export function InteriorEstimator() {
       )}
     </div>
   )
+}
+
+/** Midpoint of the range, rounded to the nearest $50. */
+function mostLikely(range: { low: number; high: number }): number {
+  return Math.round((range.low + range.high) / 2 / 50) * 50
+}
+
+function formatUsd(n: number): string {
+  return n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 })
 }
 
 // ── Shared single-select question ─────────────────────────────────────────────

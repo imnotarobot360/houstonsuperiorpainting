@@ -1,6 +1,6 @@
 "use client"
 
-import { ReviewsInline } from "@/components/office-reviews"
+import { GoogleRatingBadge } from "@/components/google-rating-badge"
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
@@ -65,63 +65,44 @@ export function InteriorLanding() {
         {/* Midnight hero, gold eyebrow and orange CTAs match /offer/free-estimate
             (owner 2026-11-19). */}
         <section className="bg-midnight text-white">
-          <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-10 sm:px-6 lg:flex-row lg:items-start lg:gap-14 lg:py-16">
-            {/* Pitch */}
-            <div className="flex flex-1 flex-col gap-6">
-              <span className="font-manrope text-[13px] font-semibold uppercase tracking-[0.12em] text-gold">
+          {/* Owner brief 2026-11-22: on phones the estimator sits directly under
+              the H1 + a one-line subheadline so Step 1's answers are visible at
+              390x844 without scrolling; the photo, bullets and trust row follow
+              it. Desktop keeps the pitch left / estimator right layout: a
+              two-column grid where the estimator spans both pitch rows. */}
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 pb-10 pt-5 sm:px-6 lg:grid-cols-[minmax(0,1fr)_26rem] lg:grid-rows-[auto_1fr] lg:gap-x-14 lg:gap-y-6 lg:py-16 xl:grid-cols-[minmax(0,1fr)_28rem]">
+            {/* Pitch, top: eyebrow, H1, subheadline, rating badge */}
+            <div className="flex flex-col gap-3 lg:col-start-1 lg:row-start-1 lg:gap-6">
+              <span className="hidden font-manrope text-[13px] font-semibold uppercase tracking-[0.12em] text-gold lg:block">
                 Interior painting · Houston
               </span>
 
-              <h1 className="font-display text-[clamp(32px,5vw,52px)] font-extrabold leading-[1.1] text-white text-balance">
+              <h1 className="font-display text-[clamp(28px,5vw,52px)] font-extrabold leading-[1.1] text-white text-balance">
                 See your interior painting price in about 60 seconds
               </h1>
 
-              <p className="max-w-xl text-lg leading-relaxed text-white/85 text-pretty">
+              <p className="text-[15px] leading-snug text-white/85 lg:hidden">
+                Answer 5 quick taps, see your price instantly, no contact info needed.
+              </p>
+              <p className="hidden max-w-xl text-lg leading-relaxed text-white/85 text-pretty lg:block">
                 Answer a few quick questions and get an instant ballpark — then we&apos;ll come measure, walk the rooms
                 with you, and put a written line-item price in your hands.
               </p>
 
-              <div className="flex items-center gap-3">
-                <p className="text-sm text-white/80">
-                  <ReviewsInline linkClassName="text-white underline underline-offset-4 hover:text-gold" />
-                </p>
-              </div>
-
-              <div className="overflow-hidden rounded-xl">
-                <Image
-                  src="/images/interior-after-1.jpg"
-                  alt="Memorial living room with fresh warm-white walls after interior repainting"
-                  width={900}
-                  height={600}
-                  priority
-                  className="h-auto w-full object-cover"
-                />
-              </div>
-
-              <ul className="flex flex-col gap-3">
-                {PROOF_POINTS.map((point) => (
-                  <li key={point} className="flex items-start gap-3">
-                    <Check className="mt-0.5 size-5 shrink-0 text-gold" aria-hidden="true" />
-                    <span className="text-base leading-relaxed text-white text-pretty">{point}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/15 pt-6">
-                <span className="inline-flex items-center gap-2 text-sm text-white/80">
-                  <ShieldCheck className="size-4 text-gold" aria-hidden="true" />
-                  {BUSINESS.insurance.badge}
-                </span>
-                <span className="inline-flex items-center gap-2 text-sm text-white/80">
-                  <BadgeCheck className="size-4 text-gold" aria-hidden="true" />
-                  {BUSINESS.trust.yearsInBusiness} years in Houston
-                </span>
+              <div className="hidden lg:block">
+                <GoogleRatingBadge tone="dark" />
               </div>
             </div>
 
             {/* Estimator */}
-            <div id="estimator" ref={estimatorRef} className="w-full scroll-mt-24 lg:sticky lg:top-20 lg:w-[26rem] xl:w-[28rem]">
-              <div className="mb-4 flex flex-col gap-2 rounded-2xl bg-white p-5 text-foreground">
+            <div
+              id="estimator"
+              ref={estimatorRef}
+              className="w-full scroll-mt-24 lg:sticky lg:top-20 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start"
+            >
+              {/* Desktop only: on phones this repeated the H1, so its microline
+                  moved inside the estimator card. */}
+              <div className="mb-4 hidden flex-col gap-2 rounded-2xl bg-white p-5 text-foreground lg:flex">
                 <h2 className="font-display text-xl leading-tight text-midnight text-balance">
                   Get your free estimate in about 60 seconds
                 </h2>
@@ -150,13 +131,50 @@ export function InteriorLanding() {
                 this estimate.
               </p>
             </div>
+
+            {/* Pitch, bottom: photo, bullets, trust row (below the estimator on phones) */}
+            <div className="flex flex-col gap-6 pt-4 lg:col-start-1 lg:row-start-2 lg:pt-0">
+              <div className="lg:hidden">
+                <GoogleRatingBadge tone="dark" />
+              </div>
+
+              <div className="overflow-hidden rounded-xl">
+                <Image
+                  src="/images/interior-after-1.jpg"
+                  alt="Memorial living room with fresh warm-white walls after interior repainting"
+                  width={900}
+                  height={600}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+
+              <ul className="flex flex-col gap-3">
+                {PROOF_POINTS.map((point) => (
+                  <li key={point} className="flex items-start gap-3">
+                    <Check className="mt-0.5 size-5 shrink-0 text-gold" aria-hidden="true" />
+                    <span className="text-base leading-relaxed text-white text-pretty">{point}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/15 pt-6">
+                <span className="inline-flex items-center gap-2 text-sm text-white/80">
+                  <ShieldCheck className="size-4 text-gold" aria-hidden="true" />
+                  {BUSINESS.insurance.badge}
+                </span>
+                <span className="inline-flex items-center gap-2 text-sm text-white/80">
+                  <BadgeCheck className="size-4 text-gold" aria-hidden="true" />
+                  {BUSINESS.trust.yearsInBusiness} years in Houston
+                </span>
+              </div>
+            </div>
           </div>
         </section>
 
         <InteriorProof />
       </main>
 
-      <FunnelFooter tone="midnight" />
+      <FunnelFooter tone="midnight" googleProfiles />
 
       {/* ── Sticky mobile CTA ────────────────────────────────────────────────
           Scrolls to the estimator rather than leaving the page. The call button

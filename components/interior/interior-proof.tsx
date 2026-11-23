@@ -1,6 +1,8 @@
-import { ReviewsInline } from "@/components/office-reviews"
 import Image from "next/image"
-import { BadgeCheck, Brush, CalendarCheck, ClipboardList, Quote, ShieldCheck, Sparkles } from "lucide-react"
+import { BadgeCheck, Brush, CalendarCheck, ClipboardList, Quote, ShieldCheck, Sparkles, Star } from "lucide-react"
+import { BeforeAfterSlider } from "@/components/epoxy/before-after-slider"
+import { GoogleRatingBadge } from "@/components/google-rating-badge"
+import { PUBLISHED_REVIEWS } from "@/data/reviews"
 import { BUSINESS } from "@/lib/business"
 
 /**
@@ -11,29 +13,31 @@ import { BUSINESS } from "@/lib/business"
  * components/testimonials.tsx — so nothing is invented for the ad page.
  */
 
-// Interior reviews confirmed real by the owner (2026-10-01; CLAUDE.md). No Google
-// source URL is on file, so they are labeled as testimonials published with
-// permission, not as Google reviews, and show no star rating (brief 2026-10-25).
-const REVIEWS = [
-  {
-    name: "Sarah Mitchell",
-    location: "Heights, Houston",
-    project: "Full interior repaint",
-    text: "Absolutely phenomenal work. The team was professional, punctual, and left our home spotless. The attention to detail on our trim work was impressive.",
-  },
-  {
-    name: "Michael Thompson",
-    location: "Memorial, Houston",
-    project: "Whole-house interior",
-    text: "Fast, clean, and professional. They finished our 4-bedroom house in just 3 days. The team was courteous and the quality speaks for itself.",
-  },
-  {
-    name: "Emily Chen",
-    location: "Sugar Land, TX",
-    project: "Living room transformation",
-    text: "The color consultation was a game-changer. They helped us choose the perfect palette and executed flawlessly. Our living room has never looked better.",
-  },
-]
+// Reviews (owner brief 2026-11-22): the old hard-coded interior testimonials
+// were placeholders and are gone. Only data/reviews.ts entries that are
+// published, owner-confirmed or source-verified, and have an excerpt render;
+// ones with a Google source come first.
+const SHOWN_REVIEWS = PUBLISHED_REVIEWS.filter(
+  (r) => r.verification === "source-verified" || r.verification === "owner-confirmed",
+).sort((x, y) => Number(Boolean(y.sourceUrl)) - Number(Boolean(x.sourceUrl)))
+
+/** About 220 characters, cut at a word boundary, with an ellipsis. */
+function trimExcerpt(text: string, max = 220): string {
+  const t = text.trim()
+  if (t.length <= max) return t
+  const cut = t.slice(0, max)
+  return `${cut.slice(0, cut.lastIndexOf(" ")).replace(/[s,;:.–—-]+$/, "")}…`
+}
+
+/** Default Memorial before/after photos; pass props to swap in other jobs. */
+const DEFAULT_PHOTOS = {
+  beforeSrc: "/images/interior-before-1.png",
+  afterSrc: "/images/interior-after-1.png",
+  beforeAlt: "Memorial living room with dated tan walls before interior repainting",
+  afterAlt: "Memorial living room with fresh warm-white walls after interior repainting",
+}
+
+type InteriorProofProps = Partial<typeof DEFAULT_PHOTOS>
 
 const PROCESS = [
   {
@@ -77,7 +81,8 @@ const FAQS = [
   { q: "Are you insured?", a: BUSINESS.insurance.sentence },
 ]
 
-export function InteriorProof() {
+export function InteriorProof(props: InteriorProofProps = {}) {
+  const photos = { ...DEFAULT_PHOTOS, ...props }
   return (
     <>
       {/* ── Before / after ─────────────────────────────────────────────────── */}
@@ -94,12 +99,22 @@ export function InteriorProof() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          {/* Phones: drag slider. md and up: side by side. */}
+          <div className="md:hidden">
+            <BeforeAfterSlider
+              beforeSrc={photos.beforeSrc}
+              afterSrc={photos.afterSrc}
+              beforeAlt={photos.beforeAlt}
+              afterAlt={photos.afterAlt}
+            />
+          </div>
+
+          <div className="hidden gap-4 md:grid md:grid-cols-2">
             <figure className="flex flex-col gap-2">
               <div className="overflow-hidden rounded-2xl border border-border">
                 <Image
-                  src="/images/interior-before-1.png"
-                  alt="Memorial living room with dated tan walls before interior repainting"
+                  src={photos.beforeSrc}
+                  alt={photos.beforeAlt}
                   width={800}
                   height={600}
                   className="h-64 w-full object-cover sm:h-72"
@@ -112,8 +127,8 @@ export function InteriorProof() {
             <figure className="flex flex-col gap-2">
               <div className="overflow-hidden rounded-2xl border border-border">
                 <Image
-                  src="/images/interior-after-1.png"
-                  alt="Memorial living room with fresh warm-white walls after interior repainting"
+                  src={photos.afterSrc}
+                  alt={photos.afterAlt}
                   width={800}
                   height={600}
                   className="h-64 w-full object-cover sm:h-72"
@@ -169,29 +184,50 @@ export function InteriorProof() {
       <section className="border-t border-border bg-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
           <div className="mx-auto mb-10 flex max-w-2xl flex-col items-center gap-3 text-center">
-            <div className="flex items-center gap-2">
-              <ReviewsInline className="text-sm font-semibold text-foreground" />
-            </div>
+            <GoogleRatingBadge />
             <h2 className="font-display text-[clamp(26px,4vw,34px)] leading-tight text-midnight text-balance sm:text-4xl">
               Houston homeowners keep saying the same thing
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            {REVIEWS.map((review) => (
-              <figure key={review.name} className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6">
-                <blockquote className="flex-1 text-base leading-relaxed text-foreground text-pretty">
-                  &ldquo;{review.text}&rdquo;
-                </blockquote>
-                <figcaption className="border-t border-border pt-4">
-                  <p className="font-semibold text-foreground">{review.name}</p>
-                  <p className="text-sm text-muted-foreground">{review.location}</p>
-                  <p className="mt-1 text-sm font-semibold text-midnight">{review.project}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">Customer testimonial, published with permission.</p>
-                </figcaption>
-              </figure>
+          {/* Phones: first 3 in a horizontal swipe row. md and up: a grid of up to 6. */}
+          <ul className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-3">
+            {SHOWN_REVIEWS.slice(0, 6).map((review, i) => (
+              <li
+                key={review.name}
+                className={`w-[85%] shrink-0 snap-start md:w-auto ${i >= 3 ? "hidden md:block" : ""}`}
+              >
+                <figure className="flex h-full flex-col gap-4 rounded-2xl border border-border bg-card p-6">
+                  {review.sourceUrl && (
+                    <span className="flex" aria-label="5 out of 5 stars on Google">
+                      {Array.from({ length: 5 }).map((_, s) => (
+                        <Star key={s} className="size-4 fill-gold text-gold" aria-hidden="true" />
+                      ))}
+                    </span>
+                  )}
+                  <blockquote className="flex-1 text-base leading-relaxed text-foreground text-pretty">
+                    &ldquo;{trimExcerpt(review.excerpt)}&rdquo;
+                  </blockquote>
+                  <figcaption className="flex items-end justify-between gap-3 border-t border-border pt-4">
+                    <span>
+                      <span className="block font-semibold text-foreground">{review.name}</span>
+                      <span className="block text-sm text-muted-foreground">{review.area}</span>
+                    </span>
+                    {review.sourceUrl && (
+                      <a
+                        href={review.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 text-xs font-semibold text-midnight underline underline-offset-4 hover:text-gold-deep"
+                      >
+                        Read on Google
+                      </a>
+                    )}
+                  </figcaption>
+                </figure>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
