@@ -14,8 +14,8 @@ const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, "data/blog-photos-ma
 const config = fs.readFileSync(path.join(ROOT, "next.config.mjs"), "utf8")
 const redirected = new Set([...config.matchAll(/source:\s*'\/blog\/([^']+)'/g)].map((m) => m[1]))
 const posts = fs
-  .readdirSync(path.join(ROOT, "app/blog"), { withFileTypes: true })
-  .filter((d) => d.isDirectory() && !d.name.startsWith("[") && fs.existsSync(path.join(ROOT, "app/blog", d.name, "page.tsx")))
+  .readdirSync(path.join(ROOT, "app/(site)/blog"), { withFileTypes: true })
+  .filter((d) => d.isDirectory() && !d.name.startsWith("[") && fs.existsSync(path.join(ROOT, "app/(site)/blog", d.name, "page.tsx")))
   .map((d) => d.name)
   .filter((slug) => !redirected.has(slug))
 

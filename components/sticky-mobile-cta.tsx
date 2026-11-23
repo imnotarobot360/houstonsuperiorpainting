@@ -2,7 +2,7 @@
 
 // components/StickyMobileCTA.tsx
 // Always-visible mobile bottom bar with Call + Text + Quote CTAs.
-// Mount once in app/layout.tsx. Hidden on desktop.
+// Mounted once by components/root/painting-root-layout.tsx. Hidden on desktop.
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"

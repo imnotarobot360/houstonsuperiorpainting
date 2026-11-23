@@ -19,7 +19,7 @@ import { fileURLToPath } from "node:url"
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
 const SCAN = ["app", "components", "lib", "data", "public/llms.txt", "public/robots.txt"]
 const SKIP_DIRS = new Set(["node_modules", ".next", "_to_delete"])
-// Imported only by app/epoxy/page.tsx, whose route 301s to houstonsuperiorepoxy.com,
+// Imported only by app/(epoxy)/epoxy/page.tsx, whose route 301s to houstonsuperiorepoxy.com,
 // so it is never served from this site.
 const SKIP_PREFIXES = ["components/epoxy/"]
 const EXT = /\.(tsx?|mjs|js|json|md|txt)$/
@@ -137,6 +137,9 @@ function loadAllowlist() {
  * Page files whose route is a 301 source in next.config.mjs are never served
  * (the redirect wins), so their copy cannot reach visitors or crawlers.
  */
+// app/(site)/about/page.tsx -> app/about/page.tsx: route groups are not in the URL.
+const withoutRouteGroups = (file) => file.replace(/\/\([^/)]+\)/g, "")
+
 async function deadPageFiles() {
   const { default: config } = await import(new URL("../next.config.mjs", import.meta.url))
   const sources = new Set((await config.redirects()).map((r) => r.source))
@@ -150,7 +153,7 @@ export async function audit({ useAllowlist = true } = {}) {
   const allow = useAllowlist ? loadAllowlist() : []
   const hits = []
   for (const file of files) {
-    if (file === "data/sw-colors.json" || file.startsWith("data/aeo/") || dead.has(file)) continue
+    if (file === "data/sw-colors.json" || file.startsWith("data/aeo/") || dead.has(withoutRouteGroups(file))) continue
     if (SKIP_PREFIXES.some((p) => file.startsWith(p))) continue
     const lines = fs.readFileSync(path.join(ROOT, file), "utf8").split(/\r?\n/)
     lines.forEach((line, i) => {

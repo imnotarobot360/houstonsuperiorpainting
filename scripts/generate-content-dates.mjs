@@ -33,17 +33,26 @@ const outFile = path.join(repoRoot, 'lib', 'content-dates.json')
 
 const PAGE_RE = /^page\.(tsx|ts|jsx|js|mdx)$/
 
-/** Last commit date that touched a path, or null when history is unavailable. */
+/**
+ * Last commit date that changed a file's CONTENT, or null when history is
+ * unavailable. Follows renames and skips pure moves (status R100), so moving
+ * pages into the app/(site) route group (2026-11-22) does not restamp every
+ * page with the date of the move.
+ */
 function gitDate(relPath) {
   try {
-    const out = execFileSync('git', ['log', '-1', '--format=%cI', '--', relPath], {
-      encoding: 'utf8',
-      stdio: ['ignore', 'pipe', 'ignore'],
-      cwd: repoRoot,
-    }).trim()
-    if (!out) return null
-    const d = new Date(out)
-    return Number.isNaN(d.getTime()) ? null : d.toISOString()
+    const out = execFileSync(
+      'git',
+      ['log', '--follow', '-M', '--format=%x00%cI', '--name-status', '--', relPath],
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], cwd: repoRoot, maxBuffer: 64 * 1024 * 1024 },
+    )
+    for (const block of out.split('\0').slice(1)) {
+      const [date, ...rest] = block.split('\n').map((l) => l.trim()).filter(Boolean)
+      if (rest.some((l) => l.startsWith('R100'))) continue
+      const d = new Date(date)
+      return Number.isNaN(d.getTime()) ? null : d.toISOString()
+    }
+    return null
   } catch {
     return null
   }
@@ -52,7 +61,8 @@ function gitDate(relPath) {
 /**
  * Walk app/ and record route -> ISO date for every page file.
  * Mirrors sitemap.ts's traversal rules so the keys line up: dynamic segments,
- * route groups, private folders and api/ are skipped.
+ * private folders and api/ are skipped; route groups are walked through
+ * without adding to the route.
  */
 function walk(dir, prefix, acc) {
   const entries = fs.readdirSync(dir, { withFileTypes: true })
@@ -68,9 +78,12 @@ function walk(dir, prefix, acc) {
   for (const entry of entries) {
     if (!entry.isDirectory()) continue
     const name = entry.name
+    if (name.startsWith('(')) {
+      walk(path.join(dir, name), prefix, acc)
+      continue
+    }
     if (
       name.startsWith('[') ||
-      name.startsWith('(') ||
       name.startsWith('_') ||
       name === 'api'
     ) {

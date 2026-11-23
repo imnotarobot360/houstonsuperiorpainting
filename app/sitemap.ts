@@ -159,9 +159,9 @@ const EXCLUDED_TREES = new Set([
  * Google reports the others as "Alternate page with proper canonical tag".
  * Only literal canonical strings are checked; computed ones are trusted.
  */
-function isSelfCanonical(appDir: string, route: string): boolean {
+function isSelfCanonical(pagePath: string, route: string): boolean {
   try {
-    const src = fs.readFileSync(path.join(appDir, route, 'page.tsx'), 'utf8')
+    const src = fs.readFileSync(pagePath, 'utf8')
     const m = src.match(/canonical:\s*["'`]https:\/\/houstonsuperiorpainting\.com\/?([^"'`$]*)["'`]/)
     if (!m) return true
     return m[1].replace(/\/$/, '') === route
@@ -211,14 +211,16 @@ function isRedirectOnlyPage(filePath: string): boolean {
 
 /**
  * Recursively walk the /app directory and collect every static route that has
- * a page file. Dynamic routes ([slug]), route groups ((group)), private
- * folders (_folder) and API routes are skipped so the sitemap stays in sync
+ * a page file. Dynamic routes ([slug]), private folders (_folder) and API
+ * routes are skipped; route groups are walked through so the sitemap stays in sync
  * with the filesystem automatically — no manual list to maintain.
  */
+type CollectedRoute = { route: string; lastModified: Date | null; pagePath: string }
+
 function collectRoutes(
   dir: string,
   prefix: string,
-  acc: { route: string; lastModified: Date | null }[],
+  acc: CollectedRoute[],
   excluded: Set<string>,
 ) {
   const entries = fs.readdirSync(dir, { withFileTypes: true })
@@ -242,17 +244,23 @@ function collectRoutes(
         const pub = new Date(`${scheduled.publishOn}T12:00:00Z`)
         if (!lastModified || lastModified < pub) lastModified = pub
       }
-      acc.push({ route: prefix, lastModified })
+      acc.push({ route: prefix, lastModified, pagePath })
     }
   }
 
   for (const entry of entries) {
     if (!entry.isDirectory()) continue
     const name = entry.name
-    // Skip dynamic segments, route groups, private folders, and api.
+    // Route groups ((site), (es), (epoxy)) are not part of the URL: descend
+    // into them with the same prefix. Every page lives inside one, since each
+    // group has its own root layout.
+    if (name.startsWith('(')) {
+      collectRoutes(path.join(dir, name), prefix, acc, excluded)
+      continue
+    }
+    // Skip dynamic segments, private folders, and api.
     if (
       name.startsWith('[') ||
-      name.startsWith('(') ||
       name.startsWith('_') ||
       name === 'api' ||
       // Don't descend into deliberately-noindexed subtrees.
@@ -271,14 +279,16 @@ function collectRoutes(
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const appDir = path.join(process.cwd(), 'app')
-  const collected: { route: string; lastModified: Date | null }[] = []
+  // The English painting site's route group (app/(site)/layout.tsx).
+  const siteDir = path.join(appDir, '(site)')
+  const collected: CollectedRoute[] = []
   // Union of the hand-listed exclusions and every literal redirect source
   // declared in next.config.mjs.
   const excluded = new Set([...EXCLUDED, ...(await redirectedRoutes())])
   collectRoutes(appDir, '', collected, excluded)
 
   const entries: MetadataRoute.Sitemap = collected
-    .filter(({ route }) => isSelfCanonical(appDir, route))
+    .filter(({ route, pagePath }) => isSelfCanonical(pagePath, route))
     .map(({ route, lastModified }) => {
     const { priority, changeFrequency } = routeMeta(route)
     return {
@@ -303,7 +313,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((t): t is number => typeof t === 'number')
   const blogIndexLastModified = blogDates.length
     ? new Date(Math.max(...blogDates))
-    : contentDateFor('blog', path.join(appDir, 'blog', 'page.tsx'))
+    : contentDateFor('blog', path.join(siteDir, 'blog', 'page.tsx'))
   entries.push({
     url: `${baseUrl}/blog`,
     ...(blogIndexLastModified ? { lastModified: blogIndexLastModified } : {}),
@@ -315,7 +325,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // collectRoutes() skips. Add each one explicitly from the project data.
   const projectsPageDate = contentDateFor(
     'projects/[slug]',
-    path.join(appDir, 'projects', '[slug]', 'page.tsx'),
+    path.join(siteDir, 'projects', '[slug]', 'page.tsx'),
   )
   for (const project of PROJECTS) {
     // Each project's own date from the snapshot (its entry in lib/projects.ts

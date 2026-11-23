@@ -19,7 +19,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const WRITE = process.argv.includes('--write')
-const appDir = path.join(process.cwd(), 'app')
+const appDir = path.join(process.cwd(), 'app', '(site)')
 
 /** Extract a balanced `{...}` object literal starting at the first `{` after `from`. */
 function extractObject(src, from) {

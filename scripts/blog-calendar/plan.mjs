@@ -48,7 +48,7 @@ const all = [...BLOG_SCHEDULE, ...PLANNED_POSTS]
 const taken = new Set(all.map((p) => p.slug))
 for (const [slug] of TOPICS) {
   if (taken.has(slug)) throw new Error(`already on the calendar: ${slug}`)
-  if (fs.existsSync(path.join(ROOT, "app/blog", slug)) || fs.existsSync(path.join(ROOT, "app", slug))) throw new Error(`page exists: ${slug}`)
+  if (fs.existsSync(path.join(ROOT, "app/(site)/blog", slug)) || fs.existsSync(path.join(ROOT, "app/(site)", slug))) throw new Error(`page exists: ${slug}`)
 }
 const start = new Date(all.at(-1).publishOn + "T12:00:00Z").getTime() + 86400000
 const entries = TOPICS.map(([slug, title, excerpt, category, readTime, image, keyword], i) => ({

@@ -5,7 +5,7 @@ const path = require("path")
 const R = path.resolve(__dirname, "../..") + "/"
 const gen = fs.readFileSync(R + "scripts/blog-art/generate.mjs", "utf8")
 const slugs = [...gen.matchAll(/slug: "([^"]+)"|T\("([^"]+)"/g)].map((m) => m[1] || m[2])
-for (const f of ["lib/blog-schedule.ts", "app/blog/page.tsx"]) {
+for (const f of ["lib/blog-schedule.ts", "app/(site)/blog/page.tsx"]) {
   let s = fs.readFileSync(R + f, "utf8")
   let n = 0
   for (const slug of slugs) {

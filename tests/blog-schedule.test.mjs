@@ -5,7 +5,7 @@ import fs from "node:fs"
 import { BLOG_SCHEDULE, PLANNED_POSTS, houstonPublishDate, isLivePath, liveScheduledPosts, displayDate } from "../lib/blog-schedule.ts"
 
 const ALL = [...BLOG_SCHEDULE, ...PLANNED_POSTS]
-const page = (slug) => fs.existsSync(new URL(`../app/blog/${slug}/page.tsx`, import.meta.url))
+const page = (slug) => fs.existsSync(new URL(`../app/(site)/blog/${slug}/page.tsx`, import.meta.url))
 
 test("calendar: one post per day across scheduled and planned, unique slugs", () => {
   assert.equal(new Set(ALL.map((p) => p.slug)).size, ALL.length)
@@ -53,7 +53,7 @@ test("display date", () => {
 test("calendar: no post links to a post that publishes later (it would 404 on the day)", () => {
   const date = new Map(ALL.map((p) => [p.slug, p.publishOn]))
   for (const p of BLOG_SCHEDULE) {
-    const src = fs.readFileSync(new URL(`../app/blog/${p.slug}/page.tsx`, import.meta.url), "utf8")
+    const src = fs.readFileSync(new URL(`../app/(site)/blog/${p.slug}/page.tsx`, import.meta.url), "utf8")
     for (const m of src.matchAll(/href[=:]\s*["{`]+\/blog\/([a-z0-9-]+)/g)) {
       const target = date.get(m[1])
       if (target) assert.ok(target <= p.publishOn, `${p.slug} (${p.publishOn}) links to ${m[1]} (${target})`)

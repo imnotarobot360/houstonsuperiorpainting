@@ -30,7 +30,7 @@ v0 also opens PRs against this repo, so run `git pull` before starting work.
 - Service pages (interior, exterior, cabinets, drywall): `components/aeo/service-skeleton.tsx`
 - The 5 location city pages (Cypress HQ, Houston, Katy, Sugar Land, Magnolia): `components/aeo/office-city-page.tsx`
 - The 18 other city pages: `components/location-page-template.tsx`
-- Blog posts: `components/blog-post-template.tsx` (BlogPosting + FAQPage schema, author = Juan Serra). Add every new post to `app/blog/page.tsx`.
+- Blog posts: `components/blog-post-template.tsx` (BlogPosting + FAQPage schema, author = Juan Serra). Add every new post to `app/(site)/blog/page.tsx`.
 - Shared blocks (QuickAnswer, PriceTable, CtaBlock, OfficeNap, AuthorByline): `components/aeo/blocks.tsx`
 - FAQ: `components/faq.tsx`. Answers must be plain strings so the FAQPage schema matches the visible text. One FAQPage per page.
 

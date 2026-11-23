@@ -4,6 +4,11 @@ const nextConfig = {
   // so a redirect listed with a trailing-slash source is one hop, not two
   // (/old-page/ -> /old-page -> /new-page). Brief 2026-11-05, phase 3.
   skipTrailingSlashRedirect: true,
+  experimental: {
+    // app/global-not-found.tsx: the app has several root layouts (route
+    // groups), so a URL that matches no route needs a 404 with its own <html>.
+    globalNotFound: true,
+  },
   typescript: {
     ignoreBuildErrors: true,
   },

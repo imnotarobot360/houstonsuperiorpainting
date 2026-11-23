@@ -16,7 +16,7 @@ const blocks = s.slice(pa, pb).split(/\n(?=  \{\n)/).filter((b) => b.trim())
 const moved = []
 while (blocks.length) {
   const slug = blocks[0].match(/slug: "([^"]+)"/)[1]
-  if (!fs.existsSync(path.join(ROOT, "app/blog", slug, "page.tsx"))) break
+  if (!fs.existsSync(path.join(ROOT, "app/(site)/blog", slug, "page.tsx"))) break
   moved.push(blocks.shift())
 }
 if (!moved.length) {

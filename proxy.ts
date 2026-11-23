@@ -1,16 +1,13 @@
 import { NextResponse, type NextRequest } from "next/server"
 
 /**
- * Tags requests bound for the Houston Superior Epoxy property.
+ * Runs before page rendering: logs AI-crawler hits and strips trailing slashes.
  *
- * Server components cannot read the current pathname from headers() — Next 16
- * exposes no next-url / x-invoke-path header — so the root layout has no way to
- * tell on its own that it is rendering the epoxy subdomain. This proxy runs
- * before rendering, where the URL *is* available, and stamps a request header
- * that <PaintingSiteChrome> reads to suppress the painting brand's chrome and
- * LocalBusiness schema.
- *
- * Covers both entry points: the live epoxy.* host and the internal /epoxy path.
+ * It used to stamp x-site-lang (/es) and x-epoxy-site (epoxy host, /epoxy) on
+ * the request for the root layout to read via headers(). That made every page
+ * on the site dynamic and uncacheable (audit 2026-11-22), so /es and /epoxy now
+ * have their own root layouts (app/(es), app/(epoxy)) and nothing is tagged.
+ * The epoxy host -> /epoxy rewrite lives in next.config.mjs, not here.
  */
 // AI crawler / assistant user agents worth counting (owner brief 2026-10-26,
 // ChatGPT Search measurement). One JSON line per request lands in the Vercel
@@ -40,30 +37,14 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(url, 308)
   }
 
-  const isEpoxyHost = request.headers.get("host")?.startsWith("epoxy.") ?? false
-  const { pathname } = request.nextUrl
-  const isEpoxyPath = pathname === "/epoxy" || pathname.startsWith("/epoxy/")
-  // The Spanish homepage needs <html lang="es-US"> in the server HTML (owner
-  // brief 2026-10-27). The root layout cannot see the pathname, so tag it here.
-  const isSpanish = pathname === "/es" || pathname.startsWith("/es/")
-
-  if (!isEpoxyHost && !isEpoxyPath && !isSpanish && !request.headers.has("x-site-lang")) return NextResponse.next()
-
-  const headers = new Headers(request.headers)
-  // Always overwrite: a client-sent x-site-lang must never reach the layout.
-  headers.delete("x-site-lang")
-  if (isSpanish) headers.set("x-site-lang", "es-US")
-  if (isEpoxyHost || isEpoxyPath) headers.set("x-epoxy-site", "1")
-
   // Do NOT rewrite the epoxy host onto /epoxy here. next.config.mjs already
   // does that in its beforeFiles rewrites, and middleware runs BEFORE those —
   // so rewriting "/" to "/epoxy" here makes the config's '/:path' rule match the
-  // result and rewrite it again to "/epoxy/epoxy", which 404s. This function
-  // only tags the request so the layout can swap in the epoxy chrome.
-  return NextResponse.next({ request: { headers } })
+  // result and rewrite it again to "/epoxy/epoxy", which 404s.
+  return NextResponse.next()
 }
 
 export const config = {
-  // Skip static assets and image optimization — they never render the layout.
+  // Skip static assets and image optimization — nothing here applies to them.
   matcher: ["/((?!_next/static|_next/image|favicon.png|images/).*)"],
 }
