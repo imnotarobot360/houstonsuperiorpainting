@@ -155,6 +155,11 @@ export const BUSINESS = {
       longitude: -95.6444,
       areaServed: ["Cypress", "Tomball", "Spring", "Champions Forest", "The Woodlands"],
       isHeadquarters: true,
+      // Owner 2026-11-22: the Cypress GBP's website link is the HOMEPAGE, so the
+      // homepage #business node is this office's one schema identity. The
+      // Cypress city page references it instead of describing the same
+      // address as a second LocalBusiness (audit 2026-11-22, P2).
+      gbpLinksToHome: true,
     },
     {
       slug: "sugar-land-university",

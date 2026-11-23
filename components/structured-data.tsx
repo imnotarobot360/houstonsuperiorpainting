@@ -2,7 +2,6 @@
 // Sitewide: Organization + WebSite + Person. LocalBusiness only on the 5 office city pages.
 
 import { BUSINESS, SERVICE_AREAS, isVerifiedOffice, officeForPage, officeMapsUrl, type Office } from "@/lib/business"
-import { REVIEW_PROFILES } from "@/data/review-profiles"
 
 // Places in SERVICE_AREAS that are neighborhoods / master-planned communities
 // rather than incorporated or census-designated places. Typing River Oaks or
@@ -134,7 +133,7 @@ export const siteGraphSchema = {
       // office nodes; each points back here with parentOrganization.
       subOrganization: [
         { "@id": "https://houstonsuperiorpainting.com/#business" },
-        ...BUSINESS.locations.filter(isVerifiedOffice).map((l) => ({
+        ...BUSINESS.locations.filter((l) => isVerifiedOffice(l) && !isHomeIdentity(l)).map((l) => ({
           "@id": `${BUSINESS.url}/${l.pageSlug}#location`,
         })),
       ],
@@ -188,6 +187,11 @@ export const PUBLISHER_REF = { "@id": ORG_ID } as const
  * Business Profile exactly. No aggregateRating: a hard-coded rating that
  * drifts from Google is a manual-action risk.
  */
+/** The office whose Google Business Profile links to the homepage (Cypress HQ). */
+export function isHomeIdentity(office: Office): boolean {
+  return "gbpLinksToHome" in office && office.gbpLinksToHome === true
+}
+
 export function officeLocalBusinessSchema(office: Office) {
   const pageUrl = `${BUSINESS.url}/${office.pageSlug}`
   return {
@@ -241,6 +245,7 @@ const HOME_AREAS = [
 
 export function homeBusinessSchema() {
   const hq = BUSINESS.primaryAddress
+  const hqOffice = BUSINESS.locations.find(isHomeIdentity)
   return {
     "@context": "https://schema.org",
     "@type": "HousePainter",
@@ -271,7 +276,9 @@ export function homeBusinessSchema() {
     knowsLanguage: ["en", "es"],
     // The Google Business Profiles linked in the homepage's "Read verified
     // customer reviews on Google" strip.
-    sameAs: REVIEW_PROFILES.map((p) => p.url).filter((u): u is string => Boolean(u)),
+    // This node is the Cypress HQ's identity (its GBP links to "/"), so it is
+    // sameAs that profile only; the other offices are their own entities.
+    ...(hqOffice?.mapsUrl ? { hasMap: hqOffice.mapsUrl, sameAs: [hqOffice.mapsUrl] } : {}),
   }
 }
 
@@ -462,6 +469,18 @@ export function generateLocationBusinessSchema(options: {
 }) {
   const office = officeForPage(options.slug)
   // LocalBusiness only for an owner-verified staffed office (brief 2026-10-25, phase 7).
+  // The Cypress HQ's identity is the homepage #business node (its GBP links to
+  // "/"); its city page points at that node instead of repeating the address.
+  if (office && isVerifiedOffice(office) && isHomeIdentity(office)) {
+    const pageUrl = `${BUSINESS.url}/${office.pageSlug}`
+    return {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      about: { "@id": BUSINESS_ID },
+    }
+  }
   if (office && isVerifiedOffice(office)) return officeLocalBusinessSchema(office)
 
   const servedNames = options.areas && options.areas.length > 0 ? options.areas : [options.city]

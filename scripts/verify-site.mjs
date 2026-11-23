@@ -13,7 +13,10 @@ const PROD = "https://houstonsuperiorpainting.com"
 // all five as staffed offices on 2026-10-25. Keep `verified` in step with
 // isVerifiedOffice() in lib/business.ts.
 const OFFICES = [
-  { city: "Cypress", street: "14150 Huffmeister", page: "/painters-cypress-tx", hq: true, verified: true },
+  // homeIdentity (owner 2026-11-22): the Cypress GBP links to "/", so the
+  // homepage #business node IS the Cypress office; its city page has no
+  // LocalBusiness of its own, only a WebPage about #business.
+  { city: "Cypress", street: "14150 Huffmeister", page: "/painters-cypress-tx", hq: true, verified: true, homeIdentity: true },
   { city: "Houston", street: "2617 Bissonnet", page: "/painters-houston-tx", verified: true },
   { city: "Katy", street: "3230 FM 1463", page: "/painters-katy-tx", verified: true },
   { city: "Sugar Land", street: "18722 University Blvd", page: "/painters-sugar-land-tx", verified: true },
@@ -116,7 +119,11 @@ for (const o of OFFICES) {
     for (const [path, t] of allVisible) if (t.includes(o.street)) fail(`${path} prints the unverified ${o.city} street address`)
     if (llms.text.includes(o.street)) fail(`llms.txt prints the unverified ${o.city} street address`)
   }
-  if (o.verified && lb.length !== 1) fail(`${o.page} has ${lb.length} LocalBusiness nodes`)
+  if (o.homeIdentity) {
+    if (lb.length) fail(`${o.page} has ${lb.length} LocalBusiness nodes; its identity is the homepage #business`)
+    const about = p ? flat(jsonld(p.text)).some((n) => n.about?.["@id"] === "https://houstonsuperiorpainting.com/#business") : false
+    if (!about) fail(`${o.page} does not reference the homepage #business`)
+  } else if (o.verified && lb.length !== 1) fail(`${o.page} has ${lb.length} LocalBusiness nodes`)
   if (!o.verified && lb.length) fail(`${o.page} has LocalBusiness schema but is not a verified office`)
   if (!home.includes(o.city)) fail(`homepage does not mention ${o.city}`)
 }
@@ -126,7 +133,7 @@ for (const o of OFFICES) if (!footerText.includes(o.city)) fail(`footer missing 
 const org = flat(jsonld(pages.get("/")?.text || "")).find((n) => n["@type"] === "Organization")
 const orgLocations = (org?.subOrganization || []).filter((x) => /#location$/.test(x["@id"] || "")).length
 if (!org) fail("homepage has no Organization schema")
-else if (orgLocations !== OFFICES.filter((o) => o.verified).length) fail(`Organization schema lists ${orgLocations} locations; only verified offices may be listed`)
+else if (orgLocations !== OFFICES.filter((o) => o.verified && !o.homeIdentity).length) fail(`Organization schema lists ${orgLocations} locations; only verified offices may be listed`)
 const lbPages = [...pages].filter(([, r]) => flat(jsonld(r.text)).some((n) => /LocalBusiness|HousePainter/.test([].concat(n["@type"]).join(",")))).map(([p]) => p)
 console.log(`LocalBusiness pages: ${lbPages.join(" ")}`)
 // Owner schema brief 2026-11-07: the homepage carries one HousePainter for the
@@ -142,6 +149,7 @@ else {
   if (!(org?.subOrganization || []).some((x) => x["@id"] === b["@id"])) fail("Organization does not reference #business")
   if (!/14150 Huffmeister/.test(b.address?.streetAddress || "")) fail("homepage #business address is not the Cypress HQ")
   if (b.aggregateRating || b.review) fail("homepage #business must not carry aggregateRating/review")
+  if (JSON.stringify(b.sameAs || []) !== JSON.stringify(["https://maps.app.goo.gl/G2cRQy8Cth7UM6d6A"])) fail("homepage #business sameAs must be the Cypress GBP only")
 }
 
 // 5. Warranty: 5-year everywhere, never 1-year / lifetime
