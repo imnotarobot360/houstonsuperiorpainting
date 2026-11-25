@@ -130,8 +130,7 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
                     (lib/google-rating.ts) and the approved payment wording —
                     no promise about paying nothing before work (jobs take a deposit). */}
                 <p className="text-[15px] font-semibold leading-relaxed text-midnight">
-                  {GOOGLE_RATING.toFixed(1)}★ from {GOOGLE_REVIEW_COUNT} Google reviews · 5-year written warranty · Insured &amp; bonded · No
-                  payment to book your estimate
+                  {`${GOOGLE_RATING.toFixed(1)}★ from ${GOOGLE_REVIEW_COUNT} Google reviews · 5-year written warranty · Insured & bonded · No payment to book your estimate`}
                 </p>
               </div>
             </div>
