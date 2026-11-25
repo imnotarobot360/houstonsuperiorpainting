@@ -20,6 +20,7 @@ declare global {
     dataLayer?: unknown[]
     fbq?: {
       (method: "track" | "trackCustom", event: string, params?: Record<string, unknown>): void
+      (method: "track" | "trackCustom", event: string, params: Record<string, unknown>, options: { eventID: string }): void
       (method: "init", pixelId: string): void
       callMethod?: (...args: unknown[]) => void
       queue?: unknown[]
@@ -140,9 +141,12 @@ export function trackPixel(
   event: string,
   params: Record<string, unknown> = {},
   standard = true,
+  /** Meta dedup id (fbq's 4th argument), e.g. the lead's publicToken. */
+  eventId?: string,
 ) {
   if (typeof window === "undefined" || typeof window.fbq !== "function") return
-  window.fbq(standard ? "track" : "trackCustom", event, params)
+  if (eventId) window.fbq(standard ? "track" : "trackCustom", event, params, { eventID: eventId })
+  else window.fbq(standard ? "track" : "trackCustom", event, params)
 }
 
 // Semantic conversion helpers used across the site.
@@ -248,7 +252,7 @@ export function trackFunnelStep(
   trackEvent(name, { event_category: "estimate_funnel", service, ...params })
 }
 
-export function trackFormSubmit(formName: string, gaParams: Record<string, unknown> = {}) {
+export function trackFormSubmit(formName: string, gaParams: Record<string, unknown> = {}, eventId?: string) {
   // `gaParams` lets a caller add its own dimensions (the funnel passes `service`)
   // without firing a SECOND `generate_lead`, which would inflate the GA4
   // conversion count.
@@ -256,7 +260,8 @@ export function trackFormSubmit(formName: string, gaParams: Record<string, unkno
   // Brief alias (2026-10-25). Not a conversion: generate_lead stays the one
   // conversion so the lead is not counted twice.
   trackEvent("estimate_form_success", { event_category: "lead", event_label: formName, ...gaParams })
-  trackPixel("Lead", { content_name: formName })
+  // eventID (2026-11-25): Meta dedups on it if a server-side Lead is ever added.
+  trackPixel("Lead", { content_name: formName }, true, eventId)
 }
 
 /**
@@ -288,9 +293,9 @@ export async function trackLeadCreated(options: {
 }) {
   const { formName, email, zip, city, amountCents } = options
 
-  trackFormSubmit(formName, options.gaParams)
-
   const eventId = options.eventId ?? newEventId("lead")
+
+  trackFormSubmit(formName, options.gaParams, eventId)
 
   // Browser side — instant, but lossy.
   measureOpenAI(OPENAI_EVENTS.leadCreated, {}, { event_id: eventId })

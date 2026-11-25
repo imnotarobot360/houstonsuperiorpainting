@@ -3,7 +3,9 @@ import Link from "next/link"
 import { ShieldCheck } from "lucide-react"
 import { LandingViewTracker } from "@/components/landing-view-tracker"
 import { FreeEstimateForm } from "@/components/free-estimate/free-estimate-form"
-import { EstimateBookingFlow } from "@/components/estimate-booking-flow"
+import { ShortEstimateForm } from "@/components/free-estimate/short-estimate-form"
+import { OfferStickyBar } from "@/components/free-estimate/offer-sticky-bar"
+import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@/lib/google-rating"
 import { PriceTable } from "@/components/aeo/blocks"
 import { BUSINESS, PHONE_HREF, PRICES_2026, PRICING_DISCLAIMER, publicAddressLine } from "@/lib/business"
 import { FREE_ESTIMATE_COPY, FREE_ESTIMATE_PATHS, SERVICE_AREA_LINE, type Lang } from "@/lib/free-estimate-copy"
@@ -22,10 +24,12 @@ const HOURS_ES: Record<string, string> = { "Mon–Fri": "Lun–Vie", Saturday: "
 export function FreeEstimateLanding({ lang }: { lang: Lang }) {
   const t = FREE_ESTIMATE_COPY[lang]
   const other: Lang = lang === "en" ? "es" : "en"
-  // English books on-page with the tracked booking flow, so Google Ads sees the
-  // appointment_booked conversion; the Spanish page keeps the InsightPaint link.
+  // English (Meta ad traffic): every booking CTA scrolls to the short hero form
+  // (#estimate-form), which captures name + phone + ZIP first (owner brief
+  // 2026-11-25: 21 scheduler clicks, 0 finished — the scheduler asks for a
+  // street address at step 2). The Spanish page keeps the InsightPaint link.
   const onPage = lang === "en"
-  const book = onPage ? "#estimate-funnel" : BUSINESS.scheduler.embedUrl
+  const book = onPage ? "#estimate-form" : BUSINESS.scheduler.embedUrl
   const ext = onPage ? {} : { target: "_blank", rel: "noopener" }
   const offices = [...BUSINESS.locations].sort((a, b) => {
     const ia = OFFICE_ORDER.indexOf(a.slug)
@@ -67,23 +71,32 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
 
       <main>
         <section className="bg-midnight text-white">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-10 px-5 pb-16 pt-10">
-            <div className="flex min-w-0 flex-[1_1_440px] flex-col gap-5">
-              <p className="font-manrope text-[13px] font-semibold uppercase tracking-[0.12em] text-gold">{t.eyebrow}</p>
-              <h1 className="font-display text-[clamp(32px,5vw,52px)] font-extrabold leading-[1.1] text-balance">{t.h1}</h1>
-              <p className="text-lg leading-relaxed text-white/85">{t.sub}</p>
-              <div className="flex flex-wrap items-center gap-4">
-                <a href={book} {...ext} className={cta}>
-                  {t.cta}
-                </a>
-                <a href="#estimate-form" className="text-[15px] font-medium text-white underline-offset-4 hover:underline">
-                  {t.cta2}
-                </a>
-              </div>
+          <div className={`mx-auto flex max-w-6xl flex-wrap items-center gap-10 px-5 pb-16 ${onPage ? "gap-y-4 pt-4 md:pt-10" : "pt-10"}`}>
+            <div className={`flex min-w-0 flex-[1_1_440px] flex-col ${onPage ? "gap-3 md:gap-5" : "gap-5"}`}>
+              <p className={`font-manrope text-[13px] font-semibold uppercase tracking-[0.12em] text-gold ${onPage ? "hidden md:block" : ""}`}>{t.eyebrow}</p>
+              <h1 className={`font-display font-extrabold leading-[1.1] text-balance ${onPage ? "text-[clamp(26px,5vw,52px)]" : "text-[clamp(32px,5vw,52px)]"}`}>{t.h1}</h1>
+              <p className={`text-lg leading-relaxed text-white/85 ${onPage ? "hidden md:block" : ""}`}>{t.sub}</p>
+              {onPage ? (
+                // Phones: the form sits right under the H1, so this button would only point at it.
+                <div className="hidden flex-wrap items-center gap-4 md:flex">
+                  <a href={book} className={cta}>
+                    {t.cta}
+                  </a>
+                </div>
+              ) : (
+                <div className="flex flex-wrap items-center gap-4">
+                  <a href={book} {...ext} className={cta}>
+                    {t.cta}
+                  </a>
+                  <a href="#estimate-form" className="text-[15px] font-medium text-white underline-offset-4 hover:underline">
+                    {t.cta2}
+                  </a>
+                </div>
+              )}
             </div>
             {onPage ? (
-              <div className="w-full min-w-0 flex-[1_1_360px] text-foreground">
-                <EstimateBookingFlow />
+              <div id="estimate-form" className="w-full min-w-0 flex-[1_1_360px] scroll-mt-4">
+                <ShortEstimateForm />
               </div>
             ) : (
               <Image
@@ -98,6 +111,32 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
             )}
           </div>
         </section>
+
+        {onPage && (
+          // Matches the Meta ad creative (03_cabinets_two_tone), photo only.
+          <section className="bg-white">
+            <div className="mx-auto flex max-w-6xl flex-col items-center gap-5 px-5 py-10 md:flex-row md:gap-10">
+              <Image
+                src="/images/offer/cabinets-two-tone-before-after.jpg"
+                alt="Kitchen cabinets before (orange oak) and after repainting in a two-tone white and charcoal finish"
+                width={638}
+                height={787}
+                sizes="(min-width: 768px) 360px, 100vw"
+                className="h-auto w-full max-w-[360px] rounded-xl"
+              />
+              <div className="flex flex-col gap-3 text-center md:text-left">
+                <h2 className={h2}>Don&apos;t replace your cabinets. Repaint them.</h2>
+                {/* Owner brief 2026-11-25 trust line, with the verified figures
+                    (lib/google-rating.ts) and the approved payment wording —
+                    no promise about paying nothing before work (jobs take a deposit). */}
+                <p className="text-[15px] font-semibold leading-relaxed text-midnight">
+                  {GOOGLE_RATING.toFixed(1)}★ from {GOOGLE_REVIEW_COUNT} Google reviews · 5-year written warranty · Insured &amp; bonded · No
+                  payment to book your estimate
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="border-b border-border bg-white">
           <ul className="mx-auto grid max-w-6xl gap-4 px-5 py-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -124,7 +163,7 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
               ]}
               note={PRICING_DISCLAIMER}
             />
-            <a href="#estimate-funnel" className="font-semibold text-midnight underline underline-offset-4">
+            <a href="#estimate-form" className="font-semibold text-midnight underline underline-offset-4">
               Get your exact price: book a free written estimate
             </a>
           </section>
@@ -170,11 +209,13 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
           </ol>
         </section>
 
-        <section id="estimate-form" className="scroll-mt-4 bg-midnight">
-          <div className="mx-auto max-w-[720px] px-5 py-16">
-            <FreeEstimateForm lang={lang} />
-          </div>
-        </section>
+        {!onPage && (
+          <section id="estimate-form" className="scroll-mt-4 bg-midnight">
+            <div className="mx-auto max-w-[720px] px-5 py-16">
+              <FreeEstimateForm lang={lang} />
+            </div>
+          </section>
+        )}
 
         <section className="bg-white">
           <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-12">
@@ -254,7 +295,11 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
         </div>
       </footer>
 
-      {/* Phones: book and call stay one tap away. */}
+      {/* Phones: book and call stay one tap away. English: the bar scrolls to the
+          hero form and hides while it is on screen. */}
+      {onPage ? (
+        <OfferStickyBar bookLabel={t.stickyBook} callLabel={t.stickyCall} />
+      ) : (
       <div className="fixed inset-x-0 bottom-0 z-40 flex gap-2.5 border-t border-border bg-white px-3 pb-[calc(10px+env(safe-area-inset-bottom))] pt-2.5 md:hidden">
         <a href={book} {...ext} className="inline-flex min-h-12 flex-1 items-center justify-center rounded-lg bg-secondary text-[15px] font-bold text-secondary-foreground">
           {t.stickyBook}
@@ -268,6 +313,7 @@ export function FreeEstimateLanding({ lang }: { lang: Lang }) {
           {t.stickyCall}
         </a>
       </div>
+      )}
     </div>
   )
 }
